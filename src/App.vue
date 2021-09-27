@@ -1,14 +1,17 @@
 <template>
-  <div>
+  <v-app>
+      <v-content>
+    <v-container-fluid >
     <header>
       <Navigation />
     </header>
     <transition name="slide" mode="out-in">
       <question-card />
     </transition>
-
-    <random-card />
-  </div>
+     
+    </v-container-fluid>
+     </v-content>
+  </v-app>
 </template>
 <script>
 import QuestionCard from "./components/QuestionCard.vue";

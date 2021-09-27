@@ -20,6 +20,7 @@
           </button>
         </li>
       </ul>
+    
     </div>
   </div>
 </template>
@@ -103,8 +104,8 @@ export default {
 <style scoped>
 .card {
   display: block;
-  width: 150px;
-  height: 190px;
+  width: 250px;
+  height: 310px;
   padding: 80px 50px;
   border-radius: 9px;
   line-height: 25px;
