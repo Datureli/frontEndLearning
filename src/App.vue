@@ -6,7 +6,7 @@
       <Navigation />
     </header>
     <transition name="slide" mode="out-in">
-      <question-card />
+
     </transition>
      
     </v-container-fluid>
@@ -14,13 +14,12 @@
   </v-app>
 </template>
 <script>
-import QuestionCard from "./components/QuestionCard.vue";
 import Navigation from "./components/Navigation.vue";
 export default {
   name: "App",
   components: {
     Navigation,
-    QuestionCard,
+
   },
 };
 </script>

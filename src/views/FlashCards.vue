@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container-fluid >
     <button @click="randomizeQuestionCard()">randomize</button>
     <div class="displayCards">
       <ul>
@@ -22,7 +22,7 @@
       </ul>
     
     </div>
-  </div>
+  </v-container-fluid>
 </template>
 
 <script>
@@ -105,7 +105,7 @@ export default {
 .card {
   display: block;
   width: 250px;
-  height: 310px;
+  height: 330px;
   padding: 80px 50px;
   border-radius: 9px;
   line-height: 25px;

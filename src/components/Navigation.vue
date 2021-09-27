@@ -1,5 +1,5 @@
 <template>
-      <v-container-fluid>
+  <v-container-fluid>
     <v-card class="overflow-hidden">
       <v-app-bar
         color="#6A76AB"
@@ -37,12 +37,13 @@
 
         <template v-slot:extension>
           <v-tabs align-with-title>
-             <v-tab>
+            <v-tab>
               <router-link
                 :to="{ name: 'Home' }"
                 class="text-decoration-none white--text"
                 >postać</router-link
-              ></v-tab >
+              ></v-tab
+            >
             <v-tab>
               <router-link
                 :to="{ name: 'About' }"
@@ -50,28 +51,27 @@
                 >walka</router-link
               ></v-tab
             >
-                    
-           
-            <v-tab>Tab 3</v-tab>
-             
+
+           <v-tab>
+              <router-link
+                :to="{ name: 'IntoFlashCards' }"
+                class="text-decoration-none white--text"
+                >Flash Cards</router-link
+              ></v-tab
+            >
           </v-tabs>
         </template>
       </v-app-bar>
-  
-        <v-container style="height: 1000px;">
-            <router-view></router-view>
-        </v-container>
-    
+
+      <v-container style="height: 1000px;">
+        <router-view></router-view>
+      </v-container>
     </v-card>
-    </v-container-fluid>
+  </v-container-fluid>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
-
-</style>
+<style></style>
