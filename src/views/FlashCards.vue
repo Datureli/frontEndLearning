@@ -1,5 +1,9 @@
 <template>
-  <v-container-fluid >
+<v-slide-y-transition>
+  <v-container-fluid
+  transition="scale-transition"
+      origin="center center"
+   >
     <button @click="randomizeQuestionCard()">randomize</button>
     <div class="displayCards">
       <ul>
@@ -23,6 +27,7 @@
     
     </div>
   </v-container-fluid>
+  </v-slide-y-transition>
 </template>
 
 <script>

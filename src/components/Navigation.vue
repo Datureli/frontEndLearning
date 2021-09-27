@@ -56,6 +56,7 @@
               <router-link
                 :to="{ name: 'IntoFlashCards' }"
                 class="text-decoration-none white--text"
+        
                 >Flash Cards</router-link
               ></v-tab
             >
