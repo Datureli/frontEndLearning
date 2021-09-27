@@ -64,7 +64,7 @@
         </template>
       </v-app-bar>
 
-      <v-container style="height: 1000px;">
+      <v-container style="height: 400px;">
         <router-view></router-view>
       </v-container>
     </v-card>

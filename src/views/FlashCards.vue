@@ -1,15 +1,12 @@
 <template>
-<v-slide-y-transition>
   <v-container-fluid
-  transition="scale-transition"
-      origin="center center"
    >
-    <button @click="randomizeQuestionCard()">randomize</button>
-    <div class="displayCards">
-      <ul>
+
+    <div class="d-flex">
+      <ul class="mx-auto">
         <li
           ref="card"
-          v-for="(question, index) in questions.slice(0, 6)"
+          v-for="(question, index) in questions.slice(0, 3)"
           :key="index"
           class="card"
         >
@@ -19,15 +16,22 @@
               {{ question.change ? question.answer : question.question }}
             </p>
           </transition>
-          <button @click="toggleQuestion(question)">
+          <button @click="toggleQuestion(question)"
+          class="mt-8">
             {{ question.change ? "Back" : "Show answer" }}
           </button>
         </li>
+        
       </ul>
-    
+      <div>
+      <v-icon @click="randomizeQuestionCard()"
+    large
+    class="mx-auto"
+    > mdi-cube</v-icon>
+      </div>
+  
     </div>
   </v-container-fluid>
-  </v-slide-y-transition>
 </template>
 
 <script>

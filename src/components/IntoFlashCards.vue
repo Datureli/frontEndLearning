@@ -15,7 +15,7 @@
             ułatwia systematyczną naukę haseł
           </div>
         
-            <v-btn rounded color="success" class="mt-4" transition="scroll-y-transition">
+            <v-btn rounded color="success" class="mt-4">
               <router-link  :to="{ name: 'FlashCards' }"
               class="text-decoration-none white--text">
                 Learn More
