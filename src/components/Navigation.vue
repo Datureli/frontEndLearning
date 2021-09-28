@@ -19,8 +19,6 @@
 
         <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-        <v-app-bar-title>Title</v-app-bar-title>
-
         <v-spacer></v-spacer>
 
         <v-btn icon>
@@ -48,7 +46,7 @@
               <router-link
                 :to="{ name: 'About' }"
                 class="text-decoration-none white--text"
-                >walka</router-link
+                >Pytania rekrutacyjne</router-link
               ></v-tab
             >
 
