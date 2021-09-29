@@ -1,5 +1,5 @@
 <template>
-  <v-container-fluid class="d-flex">
+  <v-container-fluid class="d-flex d-sm-grid">
     <first-column />
     <middle-column />
     <right-column />

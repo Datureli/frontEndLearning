@@ -1,19 +1,24 @@
 <template>
   <v-card
-    class="mx-auto grid"
-    tile
-    width="300"
-    height="300"
+    class="mt-10"
+    width="200"
     outlined
     color="transparent"
   >
     <div class="d-grid">
       <div>
-        <v-icon>mdi-arrow-up-bold</v-icon>
+        <v-icon
+ 
+      style="font-size: 155px;"
+      
+        >mdi-arrow-up-bold</v-icon>
       </div>
       <v-spacer></v-spacer>
       <div>
-        <v-icon>mdi-arrow-down-bold</v-icon>
+        <v-icon
+         class="ml-15"
+    style="font-size: 155px;"
+        >mdi-arrow-down-bold</v-icon>
       </div>
     </div>
   </v-card>
@@ -22,18 +27,15 @@
 <script>
 export default {
   data: () => ({
-    selectedItem: 0,
-    items: [
-      { text: "My Files", icon: "mdi-folder" },
-      { text: "Shared with me", icon: "mdi-account-multiple" },
-      { text: "Starred", icon: "mdi-star" },
-      { text: "Recent", icon: "mdi-history" },
-      { text: "Offline", icon: "mdi-check-circle" },
-      { text: "Uploads", icon: "mdi-upload" },
-      { text: "Backups", icon: "mdi-cloud-upload" },
-    ],
+    methods: {
+    nextQuestion() {
+
+    },
+    prevQuestion() {
+
+    }
+    }
   }),
 };
 </script>
 
-<style></style>
