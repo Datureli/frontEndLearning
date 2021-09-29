@@ -58,6 +58,14 @@
                 >Flash Cards</router-link
               ></v-tab
             >
+               <v-tab>
+              <router-link
+                :to="{ name: 'IntoFlashCards' }"
+                class="text-decoration-none white--text"
+        
+                >Materiały</router-link
+              ></v-tab
+            >
           </v-tabs>
         </template>
       </v-app-bar>
