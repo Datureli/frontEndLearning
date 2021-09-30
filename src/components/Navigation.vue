@@ -5,10 +5,10 @@
         color="#6A76AB"
         dark
         shrink-on-scroll
-        prominent
+        height="100"
         src="https://picsum.photos/1920/1080?random"
-        fade-img-on-scroll
-        scroll-target="#scrolling-techniques-3"
+        :collapse="!collapseOnScroll"
+        :collapse-on-scroll="collapseOnScroll"
       >
         <template v-slot:img="{ props }">
           <v-img
@@ -34,7 +34,7 @@
         </v-btn>
 
         <template v-slot:extension>
-          <v-tabs align-with-title>
+          <v-tabs class="mx-auto" align-with-title>
             <v-tab>
               <router-link
                 :to="{ name: 'Home' }"
@@ -50,35 +50,36 @@
               ></v-tab
             >
 
-           <v-tab>
+            <v-tab>
               <router-link
                 :to="{ name: 'IntoFlashCards' }"
                 class="text-decoration-none white--text"
-        
                 >Flash Cards</router-link
               ></v-tab
             >
-               <v-tab>
+            <v-tab>
               <router-link
-                :to="{ name: 'IntoFlashCards' }"
+                :to="{ name: 'Materials' }"
                 class="text-decoration-none white--text"
-        
                 >Materiały</router-link
               ></v-tab
             >
           </v-tabs>
+          <v-checkbox v-model="collapseOnScroll" color="blue"></v-checkbox>
         </template>
       </v-app-bar>
 
-      <v-container style="height: 400px;">
+
         <router-view></router-view>
-      </v-container>
+    
     </v-card>
   </v-container-fluid>
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    collapseOnScroll: true,
+  }),
+};
 </script>
-
-<style></style>

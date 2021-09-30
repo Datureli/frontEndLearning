@@ -4,7 +4,9 @@
       <v-list-item>
         <v-icon>mdi-home</v-icon>
 
-        <v-list-item-title class="mr-8">Html</v-list-item-title>
+        <v-list-item-title
+        @click="htmlOnClick"
+        class="mr-8">Html</v-list-item-title>
       </v-list-item>
 
       <v-list-item>
@@ -54,7 +56,13 @@ export default {
       ["Update", "mdi-update"],
       ["Delete", "mdi-delete"],
     ],
+ 
   }),
+     methods: {
+      htmlOnClick() {
+      this.$emit('htmlIsClicked')
+      }
+    }
 };
 </script>
 
