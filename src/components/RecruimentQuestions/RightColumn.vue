@@ -1,6 +1,6 @@
 <template>
   <v-card
-    class="mt-10"
+    class="mt-10 mx-auto"
     width="200"
     outlined
     color="transparent"
@@ -16,7 +16,7 @@
       <v-spacer></v-spacer>
       <div>
         <v-icon
-         class="ml-15"
+         class="mx-auto"
     style="font-size: 155px;"
         >mdi-arrow-down-bold</v-icon>
       </div>

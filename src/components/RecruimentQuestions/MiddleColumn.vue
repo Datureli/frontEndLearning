@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto" max-width="580">
+  <v-card class="mx-auto" max-width="600">
     <v-toolbar
       outlined
       color="transparent"
@@ -55,11 +55,6 @@ export default {
         answer:
           "Have any ideas about what we should get Heidi for her birthday?",
         title: "Trevor Hansen",
-      },
-      {
-        question: "Recipe to try",
-        answer: "We should eat this: Grate, Squash, Corn, and tomatillo Tacos.",
-        title: "Britta Holt",
       },
     ],
   }),
