@@ -4,9 +4,8 @@
     <v-list>
       <v-list-item>
         <v-icon>mdi-home</v-icon>
-<router-link :to="{ name: 'Html'}">
+<router-link :to="{ name: 'HtmlQuestions'}">
         <v-list-item-title
-        @click="htmlOnClick"
         class="mr-8">Html</v-list-item-title>
         </router-link>
       </v-list-item>

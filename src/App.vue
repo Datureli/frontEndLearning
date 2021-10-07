@@ -10,8 +10,11 @@
     </transition>
      
     </v-container-fluid>
+  
      </v-content>
+      
   </v-app>
+  
 </template>
 <script>
 import Navigation from "./components/Navigation.vue";

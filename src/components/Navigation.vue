@@ -34,7 +34,7 @@
         </v-btn>
 
         <template v-slot:extension>
-          <v-tabs class="mx-auto" align-with-title>
+          <v-tabs  align-with-title>
             <v-tab>
               <router-link
                 :to="{ name: 'Home' }"

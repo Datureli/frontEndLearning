@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <router-link to="/about/html">Semantyka</router-link>
-        <router-link to="/about/html">Dobre praktyki</router-link>
-        <router-link to="/about/html">Teoria</router-link>
-        <router-link to="/about/html">Praktyka</router-link>
+    <div class="mx-auto">
+        <router-link :to="{name: 'Semanthic'}" class="text-decoration-none black--text mr-5">Semantyka</router-link>
+        <router-link to="/about/html" class="text-decoration-none black--text mr-5">Dobre praktyki</router-link>
+        <router-link to="/about/html" class="text-decoration-none black--text mr-5">Teoria</router-link>
+        <router-link to="/about/html" class="text-decoration-none black--text mr-5">Praktyka</router-link>
     </div>
 </template>
