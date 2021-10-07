@@ -1,13 +1,16 @@
 <template>
-  <v-card width="300" outlined color="transparent">
+  <v-card width="300" outlined color="transparent" elevation="0">
+
     <v-list>
       <v-list-item>
         <v-icon>mdi-home</v-icon>
-
+<router-link :to="{ name: 'Html'}">
         <v-list-item-title
         @click="htmlOnClick"
         class="mr-8">Html</v-list-item-title>
+        </router-link>
       </v-list-item>
+      
 
       <v-list-item>
         <v-icon>mdi-account-circle</v-icon>

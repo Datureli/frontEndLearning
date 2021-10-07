@@ -6,7 +6,8 @@
       dark
       elevation="0"
       class="text--primary mx auto"
-      >Choose category
+      >  <h2>{{ $route.params.id }}</h2>
+      <router-view></router-view>
     </v-toolbar>
 
     <v-list two-line>
