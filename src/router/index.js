@@ -30,6 +30,7 @@ const routes = [
       }
     ]
   },
+  
 {
   path: 'semanthic',
         component: Semanthic,

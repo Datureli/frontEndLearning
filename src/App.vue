@@ -6,9 +6,7 @@
       <Navigation />
     </header>
     <transition name="slide" mode="out-in">
-
     </transition>
-     
     </v-container-fluid>
   
      </v-content>

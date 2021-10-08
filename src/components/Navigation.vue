@@ -1,14 +1,12 @@
 <template>
   <v-container-fluid>
-    <v-card class="overflow-hidden">
+    <v-card class="overflow-hidden mx-auto">
       <v-app-bar
         color="#6A76AB"
         dark
         shrink-on-scroll
-        height="100"
+        height="20"
         src="https://picsum.photos/1920/1080?random"
-        :collapse="!collapseOnScroll"
-        :collapse-on-scroll="collapseOnScroll"
       >
         <template v-slot:img="{ props }">
           <v-img
@@ -34,7 +32,7 @@
         </v-btn>
 
         <template v-slot:extension>
-          <v-tabs  align-with-title>
+          <v-tabs fixed-tabs class="mx-auto" align-with-title>
             <v-tab>
               <router-link
                 :to="{ name: 'Home' }"
@@ -73,11 +71,14 @@
         <router-view></router-view>
     
     </v-card>
+    <bottom-navbar />
   </v-container-fluid>
 </template>
 
 <script>
+import BottomNavbar from './BottomNavbar.vue';
 export default {
+  components: { BottomNavbar },
   data: () => ({
     collapseOnScroll: true,
   }),
