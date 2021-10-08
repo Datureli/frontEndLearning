@@ -68,7 +68,8 @@
       </v-app-bar>
 
 
-        <router-view></router-view>
+     <router-view></router-view>
+
     
     </v-card>
     <bottom-navbar />
