@@ -1,6 +1,6 @@
 <template>
   <v-app>
-      <v-content>
+      <v-content class="gradient">
     <v-container-fluid >
     <header>
       <Navigation />
@@ -10,7 +10,6 @@
     </v-container-fluid>
   
      </v-content>
-      
   </v-app>
   
 </template>
@@ -31,10 +30,14 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 header {
   width: 100%;
   height: 60px;
 }
+
+.gradient {
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
 </style>

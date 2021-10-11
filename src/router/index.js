@@ -19,7 +19,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/about/:id',
+    path: '/about/',
     name: 'About',
     component: About,
     children: [
@@ -27,15 +27,19 @@ const routes = [
         path: 'htmlquestions',
         component: HtmlQuestions,
         name: 'HtmlQuestions',
-      }
+        children: [
+          {
+            path: 'semanthic',
+                  component: Semanthic,
+                  name: 'Semanthic',
+          },
+        ]
+      },
+
     ]
   },
-  
-{
-  path: 'semanthic',
-        component: Semanthic,
-        name: 'Semanthic',
-},
+
+
   {
     path: '/flashcards',
     name: 'FlashCards',

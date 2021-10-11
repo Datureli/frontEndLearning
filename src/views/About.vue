@@ -1,9 +1,9 @@
 <template>
-  <v-container class="d-flex d-sm-grid" height="880" outlined color="transparent">
+  <v-container-fluid class="d-flex d-sm-grid gradient" height="880">
     <first-column />
     <middle-column />
     <right-column />
-  </v-container>
+  </v-container-fluid>
 </template>
 
 

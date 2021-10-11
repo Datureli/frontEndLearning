@@ -63,7 +63,6 @@
               ></v-tab
             >
           </v-tabs>
-          <v-checkbox v-model="collapseOnScroll" color="blue"></v-checkbox>
         </template>
       </v-app-bar>
 

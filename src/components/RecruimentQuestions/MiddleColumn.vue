@@ -1,34 +1,30 @@
 <template>
-  <v-card class="mx-auto" max-width="600">
+  <v-card class="mx-auto mt-4" height="320" color="pink" max-width="550" >
     <v-toolbar
       outlined
       color="transparent"
       dark
       elevation="0"
       class="text--primary mx auto"
-      >  <h2>{{ $route.params.id }}</h2>
+      >  
       <router-view></router-view>
     </v-toolbar>
 
 
-    <v-list two-line>
-      <v-list-item-group v-model="selected" active-class="pink--text" multiple>
-        <template v-for="(item, index) in items">
+        <v-card class="text-h1" height="200" v-for="(item,index) in items.slice(0,1)" :key="index">
           <v-list-item :key="item.question">
-            <v-list-item-content>
-              <v-list-item-subtitle
-                class="text--primary"
+            <v-list-item-content >
+              <v-list-item-subtitle 
+                class="text--primary text-h3 "
                 v-text="item.question"
               ></v-list-item-subtitle>
 
-              <v-list-item-subtitle v-text="item.answer"></v-list-item-subtitle>
+              <v-list-item-subtitle class="text-h5 text-wrap"  v-text="item.answer"></v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
 
-          <v-divider v-if="index < items.length - 1" :key="index"></v-divider>
-        </template>
-      </v-list-item-group>
-    </v-list>
+        </v-card>
+  
   </v-card>
 </template>
 
@@ -63,4 +59,4 @@ export default {
 };
 </script>
 
-<style></style>
+
