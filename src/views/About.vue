@@ -1,5 +1,5 @@
 <template>
-  <v-container-fluid class="d-flex d-sm-grid gradient" height="880">
+  <v-container-fluid class="d-flex d-sm-grid gradient mx-auto" style="height: 450px;">
     <first-column />
     <middle-column />
     <right-column />

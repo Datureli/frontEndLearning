@@ -1,15 +1,19 @@
 <template>
   <v-app>
+    <v-resize>
+       <v-row>
+         <v-col>
       <v-main class="gradient">
-    <v-container-fluid >
     <header>
       <Navigation />
     </header>
     <transition name="slide" mode="out-in">
     </transition>
-    </v-container-fluid>
   
      </v-main>
+     </v-col>
+     </v-row>
+     </v-resize>
   </v-app>
   
 </template>

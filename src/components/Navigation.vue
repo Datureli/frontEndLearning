@@ -3,9 +3,6 @@
     <v-card class="overflow-hidden mx-auto">
       <v-app-bar
         color="#6A76AB"
-        dark
-        shrink-on-scroll
-        height="20"
         src="https://picsum.photos/1920/1080?random"
       >
         <template v-slot:img="{ props }">
@@ -66,10 +63,7 @@
         </template>
       </v-app-bar>
 
-
      <router-view></router-view>
-
-    
     </v-card>
     <bottom-navbar />
   </v-container-fluid>

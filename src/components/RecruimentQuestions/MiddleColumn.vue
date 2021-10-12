@@ -1,36 +1,32 @@
 <template>
-  <v-card class="mx-auto mt-4" height="320" color="blue" max-width="550" >
-    <v-toolbar
-      outlined
-      color="transparent"
-      dark
-      elevation="0"
-      class="text--primary mx auto"
-      >  
-      next
-      prev
+  <v-card class="mx-auto mt-15" height="320" color="blue" max-width="650">
+    <v-toolbar color="transparent" elevation="0" class="text--primary mx auto">
+      <v-btn @click="randomizeQuestionCard()">next</v-btn>
+      <v-btn @click="nextItem()">prev</v-btn>
       <router-view></router-view>
     </v-toolbar>
 
+    <v-card
+      class="text-h1"
+      @click="randomizeQuestionCard()"
+      height="260"
+      v-for="(item, index) in items.slice(0, 1)"
+      :key="index"
+    >
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-subtitle
+            class="text--primary text-h4 text-wrap "
+            v-text="item.question"
+          ></v-list-item-subtitle>
 
-        <v-card class="text-h1"
-         @click="randomizeQuestionCard()" 
-         height="260"
-          v-for="(item,index) in items.slice(0,1)" 
-          :key="index">
-          <v-list-item :key="item.question">
-            <v-list-item-content >
-              <v-list-item-subtitle 
-                class="text--primary text-h3 "
-                v-text="item.question"
-              ></v-list-item-subtitle>
-
-              <v-list-item-subtitle class="text-h5 text-wrap"  v-text="item.answer"></v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-
-        </v-card>
-  
+          <v-list-item-subtitle
+            class="text-h5 text-wrap"
+            v-text="item.answer"
+          ></v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+    </v-card>
   </v-card>
 </template>
 
@@ -55,21 +51,22 @@ export default {
         title: "Sandra Adams",
       },
       {
-        question: "Birthday gift",
-        answer:
-          "Have any ideas about what we should get Heidi for her birthday?",
-        title: "Trevor Hansen",
+        question: "Do czego służy znacznik Main?",
+        answer: "Znacznik Main służy do umieszczania głównej części strony",
       },
     ],
   }),
   methods: {
-      randomizeQuestionCard() {
+    randomizeQuestionCard() {
       this.items.sort(function() {
         return Math.round(Math.random()) - 0.5;
       });
     },
-  }
+    nextItem() {
+      this.items.sort(function() {
+        return Math.round(Math.random()) - 1;
+      });
+    },
+  },
 };
 </script>
-
-
