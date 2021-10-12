@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto mt-4" height="320" color="pink" max-width="550" >
+  <v-card class="mx-auto mt-4" height="320" color="blue" max-width="550" >
     <v-toolbar
       outlined
       color="transparent"
@@ -7,11 +7,17 @@
       elevation="0"
       class="text--primary mx auto"
       >  
+      next
+      prev
       <router-view></router-view>
     </v-toolbar>
 
 
-        <v-card class="text-h1" height="200" v-for="(item,index) in items.slice(0,1)" :key="index">
+        <v-card class="text-h1"
+         @click="randomizeQuestionCard()" 
+         height="260"
+          v-for="(item,index) in items.slice(0,1)" 
+          :key="index">
           <v-list-item :key="item.question">
             <v-list-item-content >
               <v-list-item-subtitle 
@@ -56,6 +62,13 @@ export default {
       },
     ],
   }),
+  methods: {
+      randomizeQuestionCard() {
+      this.items.sort(function() {
+        return Math.round(Math.random()) - 0.5;
+      });
+    },
+  }
 };
 </script>
 

@@ -1,7 +1,12 @@
 <template>
-  <v-card width="300" class="ml-5" outlined color="transparent" elevation="0">
+  <v-card width="270" class="ml-5" outlined color="transparent" elevation="0">
 
     <v-list color="transparent" >
+          <v-list-item-group
+        v-model="selectedItem"
+        color="primary"
+         active-class="blue--text"
+      >
       <v-list-item >
         <v-icon>mdi-home</v-icon>
 <router-link :to="{ name: 'HtmlQuestions'}" class="text-deocration-none mx-auto"  style="text-decoration: none; color: inherit;">
@@ -50,6 +55,7 @@
         Scss
         </router-link>
       </v-list-item>
+       </v-list-item-group>
     </v-list>
   </v-card>
 </template>

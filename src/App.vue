@@ -1,6 +1,6 @@
 <template>
   <v-app>
-      <v-content class="gradient">
+      <v-main class="gradient">
     <v-container-fluid >
     <header>
       <Navigation />
@@ -9,7 +9,7 @@
     </transition>
     </v-container-fluid>
   
-     </v-content>
+     </v-main>
   </v-app>
   
 </template>
