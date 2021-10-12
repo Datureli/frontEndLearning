@@ -63,9 +63,7 @@ export default {
       });
     },
     nextItem() {
-      this.items.sort(function() {
-        return Math.round(Math.random()) - 1;
-      });
+
     },
   },
 };
