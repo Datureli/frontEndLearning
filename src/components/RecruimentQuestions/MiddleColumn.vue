@@ -11,7 +11,7 @@
       v-for="(item, index) in items.slice(0, 1)"
       :key="item"
     >
-      <v-btn @click="nextCos()">next</v-btn>
+      <v-btn @click.native="nextCos()">next</v-btn>
       <v-btn @click="move(index, index - 1)">prev</v-btn>
       <v-list-item>
         <v-list-item-content>
