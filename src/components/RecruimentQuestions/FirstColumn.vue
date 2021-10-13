@@ -1,5 +1,5 @@
 <template>
-  <v-card width="285" class="ml-5 mt-10" outlined color="transparent" elevation="0">
+  <v-card width="320" class="ml-5 mt-10" outlined color="transparent" elevation="0">
 
     <v-list color="transparent" >
           <v-list-item-group

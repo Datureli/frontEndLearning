@@ -1,7 +1,7 @@
 <template>
   <v-card
     class="mt-15 mx-auto"
-    width="250"
+    width="310"
     outlined
     color="transparent"
   >

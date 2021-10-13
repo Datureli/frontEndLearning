@@ -1,8 +1,6 @@
 <template>
-  <v-card class="mx-auto mt-15" height="320" color="blue" max-width="650">
+  <v-card class="mx-auto mt-15" height="320" color="blue" max-width="750">
     <v-toolbar color="transparent" elevation="0" class="text--primary mx auto">
-      <v-btn @click="randomizeQuestionCard()">next</v-btn>
-      <v-btn @click="nextItem()">prev</v-btn>
       <router-view></router-view>
     </v-toolbar>
 
@@ -11,8 +9,10 @@
       @click="randomizeQuestionCard()"
       height="260"
       v-for="(item, index) in items.slice(0, 1)"
-      :key="index"
+      :key="item"
     >
+      <v-btn @click="nextCos()">next</v-btn>
+      <v-btn @click="move(index, index - 1)">prev</v-btn>
       <v-list-item>
         <v-list-item-content>
           <v-list-item-subtitle
@@ -36,8 +36,8 @@ export default {
     selected: [2],
     items: [
       {
-        question: "Brunch this weekend?",
-        answer: `I'll be in your neighborhood doing errands this weekend. Do you want to hang out?`,
+        question: "Do czego służy atrybut role?",
+        answer: `Jest to znacznik, który określa znaczenie elementu. Głównie do celów dostępności (ang. accessibility). Jest częścią specyfikacji ARIA. Został też dodany do HTML5.`,
         title: "Ali Connors",
       },
       {
@@ -62,8 +62,25 @@ export default {
         return Math.round(Math.random()) - 0.5;
       });
     },
-    nextItem() {
-
+    nextItem() {},
+    move(from, to) {
+      this.items.move(from, to);
+    },
+    nextCos() {
+      var copy = this.items.slice(0);
+      return function() {
+         if (copy.length < 1) { copy = array.slice(0); }
+    var index = Math.floor(Math.random() * copy.length);
+    var item = copy[index];
+    copy.splice(index, 1);
+    return item;
+      }
+    }
+  },
+  computed: {
+    move(from, to) {
+      this.splice(to, 0, this.splice(from, 1)[0]);
+      return this;
     },
   },
 };

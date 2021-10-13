@@ -3,7 +3,7 @@
     <v-card class="overflow-hidden mx-auto">
       <v-app-bar
         color="#6A76AB"
-        src="https://picsum.photos/1920/1080?random"
+
       >
         <template v-slot:img="{ props }">
           <v-img

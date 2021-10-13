@@ -2,9 +2,8 @@
   <v-container-fluid>
     <v-card class="overflow-hidden">
       <v-app-bar
-      height="70"
+      height="150"
         color="#6A76AB"
-        src="https://picsum.photos/1920/1080?random"
       >
 
         <template v-slot:img="{ props }">
