@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    <v-resize>
        <v-row>
          <v-col>
       <v-main class="gradient">
@@ -13,7 +12,6 @@
      </v-main>
      </v-col>
      </v-row>
-     </v-resize>
   </v-app>
   
 </template>

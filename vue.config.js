@@ -5,9 +5,5 @@ module.exports = {
   devServer: {
     host: 'localhost'
   },
-  configureWebpack: {
-    plugins: [
-      new MyAwesomeWebpackPlugin()
-    ]
-  }
+  
 }

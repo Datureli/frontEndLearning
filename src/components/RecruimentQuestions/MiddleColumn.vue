@@ -6,13 +6,13 @@
 
     <v-card
       class="text-h1"
-      @click="randomizeQuestionCard()"
       height="260"
+      :value="index"
       v-for="(item, index) in items.slice(0, 1)"
-      :key="item"
+      :key="index"
     >
-      <v-btn @click.native="nextCos()">next</v-btn>
-      <v-btn @click="move(index, index - 1)">prev</v-btn>
+      <v-btn @click="randomizeQuestionCard()">next</v-btn>
+      <v-btn @click="move()">prev</v-btn>
       <v-list-item>
         <v-list-item-content>
           <v-list-item-subtitle
@@ -33,11 +33,11 @@
 <script>
 export default {
   data: () => ({
-    selected: [2],
     items: [
       {
         question: "Do czego służy atrybut role?",
-        answer: `Jest to znacznik, który określa znaczenie elementu. Głównie do celów dostępności (ang. accessibility). Jest częścią specyfikacji ARIA. Został też dodany do HTML5.`,
+        answer: `Jest to znacznik, który określa znaczenie elementu.
+         Głównie do celów dostępności (ang. accessibility). Jest częścią specyfikacji ARIA. Został też dodany do HTML5.`,
         title: "Ali Connors",
       },
       {
@@ -62,25 +62,10 @@ export default {
         return Math.round(Math.random()) - 0.5;
       });
     },
-    nextItem() {},
-    move(from, to) {
-      this.items.move(from, to);
-    },
-    nextCos() {
-      var copy = this.items.slice(0);
-      return function() {
-         if (copy.length < 1) { copy = array.slice(0); }
-    var index = Math.floor(Math.random() * copy.length);
-    var item = copy[index];
-    copy.splice(index, 1);
-    return item;
-      }
-    }
-  },
-  computed: {
-    move(from, to) {
-      this.splice(to, 0, this.splice(from, 1)[0]);
-      return this;
+    move() {
+      this.items.sort(function() {
+        return Math.round(Math.random()) + 0.5;
+      });
     },
   },
 };

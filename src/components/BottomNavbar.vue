@@ -2,7 +2,7 @@
   <v-container-fluid>
     <v-card class="overflow-hidden">
       <v-app-bar
-      height="150"
+      style="height: calc(54vw / 9);"
         color="#6A76AB"
       >
 
