@@ -15,6 +15,12 @@ const routes = [
     component: () => import("../views/About.vue"),
     children: [
       {
+        path: "cssquestions",
+        component: () =>
+          import("../components/RecruimentQuestions/CssQuestions.vue"),
+        name: "CssQuestions",
+      },
+      {
         path: "htmlquestions",
         component: () =>
           import("../components/RecruimentQuestions/htmlQuestions.vue"),

@@ -1,7 +1,6 @@
 <template>
-  <v-container>
     <v-card
-      class="mx-auto d-flex"
+      class="mx-auto mt-10 d-flex"
       max-width="944"
       max-height="800"
       height="350"
@@ -32,7 +31,6 @@
         max-width="350"
       ></v-img>
     </v-card>
-  </v-container>
 </template>
 
 <style></style>

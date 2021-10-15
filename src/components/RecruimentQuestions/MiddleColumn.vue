@@ -1,38 +1,39 @@
 <template>
-  <v-card class="mx-auto mt-15" height="320" color="blue" max-width="750">
+  <v-card class="mx-auto mt-10" height="100" color="blue" max-width="750">
     <v-toolbar color="transparent" elevation="0" class="text--primary mx auto">
-      <router-view></router-view>
     </v-toolbar>
+    <router-view></router-view>
+    <CssQuestions v-if="this.$route.path === '/about/cssquestions'" />
 
-    <v-card
-      class="text-h1"
-      height="260"
-      :value="index"
-      v-for="(item, index) in items.slice(0, 1)"
-      :key="index"
-    >
-      <v-btn @click="randomizeQuestionCard()">next</v-btn>
-      <v-btn @click="move()">prev</v-btn>
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-subtitle
-            class="text--primary text-h4 text-wrap "
-            v-text="item.question"
-          ></v-list-item-subtitle>
+    <v-carousel v-if="this.$route.path === '/about/htmlquestions'">
+      <v-carousel-item v-for="(item, index) in items" :key="index">
+        <v-sheet :items="item" height="300" tile>
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-subtitle
+                class="text--primary text-h4 text-wrap "
+                v-text="item.question"
+              ></v-list-item-subtitle>
 
-          <v-list-item-subtitle
-            class="text-h5 text-wrap"
-            v-text="item.answer"
-          ></v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-    </v-card>
+              <v-list-item-subtitle
+                class="text-h5 text-wrap"
+                v-text="item.answer"
+              ></v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+        </v-sheet>
+      </v-carousel-item>
+    </v-carousel>
   </v-card>
 </template>
 
 <script>
+import CssQuestions from "./CssQuestions.vue";
 export default {
   data: () => ({
+    components: {
+      CssQuestions,
+    },
     items: [
       {
         question: "Do czego służy atrybut role?",
@@ -60,11 +61,6 @@ export default {
     randomizeQuestionCard() {
       this.items.sort(function() {
         return Math.round(Math.random()) - 0.5;
-      });
-    },
-    move() {
-      this.items.sort(function() {
-        return Math.round(Math.random()) + 0.5;
       });
     },
   },

@@ -1,8 +1,9 @@
 <template>
   <div class="triangle d-flex mt-15">
     <v-spacer></v-spacer>
+    
      <materialCard> 
-      <Slot title="tab1">Video</Slot>
+      <Slot title="tab1" class="tab1">Video</Slot>
     </materialCard>
       <materialCard> 
       <Slot title="tab2">Książki</Slot>
@@ -20,8 +21,7 @@ import Slot from '../components/Slot.vue';
 export default {
   data() {
     return {
-      posts: ["dsadsa"],
-      title: pypypy,
+      
     };
   },
   components: {
@@ -42,5 +42,10 @@ export default {
     #afa565 50%,
     #dbd8c1 100%
   );
+}
+.tab1 {
+  color: rebeccapurple;
+  margin-top: 20vh;
+  height: 200px;
 }
 </style>
