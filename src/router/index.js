@@ -21,6 +21,42 @@ const routes = [
         name: "CssQuestions",
       },
       {
+        path: "javascript",
+        component: () =>
+          import("../components/RecruimentQuestions/JavascriptQuestions.vue"),
+        name: "JavascriptQuestions",
+      },
+      {
+        path: "vue",
+        component: () =>
+          import("../components/RecruimentQuestions/VueQuestions.vue"),
+        name: "VueQuestions",
+      },
+      {
+        path: "react",
+        component: () =>
+          import("../components/RecruimentQuestions/ReactQuestions.vue"),
+        name: "ReactQuestions",
+      },
+      {
+        path: "bootstrap",
+        component: () =>
+          import("../components/RecruimentQuestions/BootstrapQuestions.vue"),
+        name: "BootstrapQuestions",
+      },
+      {
+        path: "scssquestions",
+        component: () =>
+          import("../components/RecruimentQuestions/ScssQuestions.vue"),
+        name: "ScssQuestions",
+      },
+      {
+        path: "general",
+        component: () =>
+          import("../components/RecruimentQuestions/GeneralQuestions.vue"),
+        name: "GeneralQuestions",
+      },
+      {
         path: "htmlquestions",
         component: () =>
           import("../components/RecruimentQuestions/htmlQuestions.vue"),

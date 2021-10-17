@@ -1,5 +1,11 @@
 <template>
-    <v-carousel>
+  <v-card class="mx-auto mt-10" height="100" color="blue" max-width="750">
+    <v-toolbar color="transparent" elevation="0" class="text--primary mx auto">
+    </v-toolbar>
+    <router-view></router-view>
+    <CssQuestions v-if="this.$route.path === '/about/cssquestions'" />
+
+    <v-carousel v-if="this.$route.path === '/about/htmlquestions'">
       <v-carousel-item v-for="(item, index) in items" :key="index">
         <v-sheet :items="item" height="300" tile>
           <v-list-item>
@@ -18,11 +24,16 @@
         </v-sheet>
       </v-carousel-item>
     </v-carousel>
+  </v-card>
 </template>
 
 <script>
+import CssQuestions from "./CssQuestions.vue";
 export default {
   data: () => ({
+    components: {
+      CssQuestions,
+    },
     items: [
       {
         question: "Do czego służy atrybut role?",
@@ -46,6 +57,12 @@ export default {
       },
     ],
   }),
+  methods: {
+    randomizeQuestionCard() {
+      this.items.sort(function() {
+        return Math.round(Math.random()) - 0.5;
+      });
+    },
+  },
 };
 </script>
-

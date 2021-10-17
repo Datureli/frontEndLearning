@@ -65,7 +65,7 @@
 
      <router-view></router-view>
     </v-card>
-    <bottom-navbar />
+
   </v-container-fluid>
 </template>
 

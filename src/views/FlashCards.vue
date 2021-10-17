@@ -1,7 +1,5 @@
 <template>
-  <v-container-fluid
-   >
-
+  <v-container-fluid>
     <div class="d-flex">
       <ul class="mx-auto">
         <li
@@ -16,20 +14,16 @@
               {{ question.change ? question.answer : question.question }}
             </p>
           </transition>
-          <button @click="toggleQuestion(question)"
-          class="mt-8">
+          <button @click="toggleQuestion(question)" class="mt-8">
             {{ question.change ? "Back" : "Show answer" }}
           </button>
         </li>
-        
       </ul>
       <div>
-      <v-icon @click="randomizeQuestionCard()"
-    large
-    class="mx-auto"
-    > mdi-cube</v-icon>
+        <v-icon @click="randomizeQuestionCard()" large class="mx-auto">
+          mdi-cube</v-icon
+        >
       </div>
-  
     </div>
   </v-container-fluid>
 </template>

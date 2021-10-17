@@ -1,27 +1,26 @@
 <template>
   <v-app>
-       <v-row>
-         <v-col>
-      <v-main class="gradient">
-    <header>
-      <Navigation />
-    </header>
-    <transition name="slide" mode="out-in">
-    </transition>
-  
-     </v-main>
-     </v-col>
-     </v-row>
+    <v-row>
+      <v-col>
+        <v-main class="gradient">
+          <header>
+            <Navigation />
+          </header>
+          <transition name="slide" mode="out-in"> </transition>
+        </v-main>
+      </v-col>
+    </v-row>
+        <bottom-navbar />
   </v-app>
-  
 </template>
 <script>
 import Navigation from "./components/Navigation.vue";
+import BottomNavbar from './components/BottomNavbar.vue'
 export default {
   name: "App",
   components: {
     Navigation,
-
+    BottomNavbar
   },
 };
 </script>
@@ -39,7 +38,10 @@ header {
 }
 
 .gradient {
-background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
 }
-
 </style>

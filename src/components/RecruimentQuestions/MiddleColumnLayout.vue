@@ -3,12 +3,8 @@
     <v-toolbar color="transparent" elevation="0" class="text--primary mx auto">
     </v-toolbar>
     <router-view></router-view>
-    <CssQuestions v-if="this.$route.path === '/about/cssquestions'" />
-    <htmlQuestions v-if="this.$route.path === '/about/htmlquestions'" />
 
-    <v-carousel>
-      <v-carousel-item v-for="(item, index) in items" :key="index">
-        <v-sheet :items="item" height="320" tile>
+        <v-sheet :items="item" height="300" tile>
           <v-list-item>
             <v-list-item-content>
               <v-list-item-subtitle
@@ -23,20 +19,5 @@
             </v-list-item-content>
           </v-list-item>
         </v-sheet>
-      </v-carousel-item>
-    </v-carousel>
   </v-card>
 </template>
-
-<script>
-import htmlQuestions from './htmlQuestions.vue'
-import CssQuestions from "./CssQuestions.vue";
-export default {
-  data: () => ({
-    components: {
-      htmlQuestions,
-      CssQuestions,
-    },
-  }),
-};
-</script>

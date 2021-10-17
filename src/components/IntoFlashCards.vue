@@ -2,7 +2,6 @@
     <v-card
       class="mx-auto mt-10 d-flex"
       max-width="944"
-      max-height="800"
       height="350"
       elevation="10"
     >
