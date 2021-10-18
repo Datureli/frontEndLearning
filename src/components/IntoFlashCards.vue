@@ -1,6 +1,5 @@
 <template>
     <v-card
-      filled
       class="mx-auto mt-15 d-flex"
       max-width="944"
       height="370"

@@ -1,25 +1,11 @@
 <template>
   <v-container-fluid>
     <v-card class="overflow-hidden mx-auto">
-      <v-app-bar
-        color="#6A76AB"
-
-      >
-        <template v-slot:img="{ props }">
-          <v-img
-            v-bind="props"
-            gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
-          ></v-img>
-        </template>
-
+      <v-app-bar color="#6A76AB">
         <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
         <v-spacer></v-spacer>
-
-        <v-btn icon>
-          <v-icon>mdi-magnify</v-icon>
-        </v-btn>
-
+        <search-bar />
         <v-btn icon>
           <v-icon>mdi-heart</v-icon>
         </v-btn>
@@ -34,7 +20,7 @@
               <router-link
                 :to="{ name: 'Home' }"
                 class="text-decoration-none white--text"
-                >postać</router-link
+                >Home</router-link
               ></v-tab
             >
             <v-tab>
@@ -46,12 +32,32 @@
             >
 
             <v-tab>
-              <router-link
-                :to="{ name: 'IntoFlashCards' }"
-                class="text-decoration-none white--text"
-                >Flash Cards</router-link
-              ></v-tab
-            >
+              <div class="text-center">
+                <v-menu offset-y>
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-tab
+                      v-bind="attrs"
+                      v-on="on"
+                      class="text-decoration-none white--text"
+                    >
+                      Gry
+                    </v-tab>
+                  </template>
+                  <v-list>
+                    <router-link
+                      v-for="(item, index) in items"
+                      :key="index"
+                      :to="item.routeUrl"
+                      class="text-decoration-none white--text"
+                    >
+                      <v-list-item>
+                        <v-list-item-title>{{ item.title }}</v-list-item-title>
+                      </v-list-item>
+                    </router-link>
+                  </v-list>
+                </v-menu>
+              </div>
+            </v-tab>
             <v-tab>
               <router-link
                 :to="{ name: 'Materials' }"
@@ -63,18 +69,20 @@
         </template>
       </v-app-bar>
 
-     <router-view></router-view>
+      <router-view></router-view>
     </v-card>
-
   </v-container-fluid>
 </template>
 
 <script>
-import BottomNavbar from './BottomNavbar.vue';
+import SearchBar from "./SearchBar.vue";
 export default {
-  components: { BottomNavbar },
+  components: { SearchBar },
   data: () => ({
-    collapseOnScroll: true,
+    items: [
+      { title: "Fiszki", routeUrl: "/intoflashcards" },
+      { title: "Quiz", routeUrl: "/quiz" },
+    ],
   }),
 };
 </script>

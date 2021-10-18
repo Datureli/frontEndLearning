@@ -84,6 +84,11 @@ const routes = [
     component: () => import("../components/IntoFlashCards.vue"),
   },
   {
+    path: "quiz",
+    name: "Quiz",
+    component: () => import("../components/Quiz.vue"),
+  },
+  {
     path: "/materials",
     name: "Materials",
     component: () => import("../views/Materials.vue"),
