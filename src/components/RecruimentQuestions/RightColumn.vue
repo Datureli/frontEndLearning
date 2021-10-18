@@ -1,41 +1,9 @@
 <template>
-  <v-card
-    class="mt-15 mx-auto"
-    width="310"
-    outlined
-    color="transparent"
-  >
-    <div class="d-grid">
-      <div>
-        <v-icon
- 
-      style="font-size: 155px;"
-      
-        >mdi-arrow-up-bold</v-icon>
-      </div>
+  <v-card class="mt-5 d-grid" width="310" outlined color="transparent">
+        <v-icon style="font-size: 155px;">mdi-heart</v-icon>
       <v-spacer></v-spacer>
-      <div>
-        <v-icon
-         class="mx-auto"
-    style="font-size: 155px;"
-        >mdi-arrow-down-bold</v-icon>
-      </div>
-    </div>
+        <v-icon class="mx-auto" style="font-size: 155px;" 
+          >mdi-dice-multiple</v-icon
+        >
   </v-card>
 </template>
-
-<script>
-export default {
-  data: () => ({
-    methods: {
-    nextQuestion() {
-
-    },
-    prevQuestion() {
-
-    }
-    }
-  }),
-};
-</script>
-
