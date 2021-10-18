@@ -57,6 +57,12 @@ const routes = [
         name: "GeneralQuestions",
       },
       {
+        path: "stupidquestions",
+        component: () =>
+          import("../components/RecruimentQuestions/StupidQuestions.vue"),
+        name: "StupidQuestions",
+      },
+      {
         path: "htmlquestions",
         component: () =>
           import("../components/RecruimentQuestions/htmlQuestions.vue"),

@@ -82,7 +82,8 @@
           >
             Scss
           </router-link>
-        </v-list-item>      <v-list-item>
+        </v-list-item>
+        <v-list-item>
           <v-icon>mdi-account-circle</v-icon>
           <router-link
             :to="{ name: 'GeneralQuestions' }"
@@ -91,6 +92,18 @@
           >
             Ogólne
           </router-link>
+          
+        </v-list-item>
+        <v-list-item>
+          <v-icon>mdi-account-circle</v-icon>
+          <router-link
+            :to="{ name: 'StupidQuestions' }"
+            class="text-deocration-none mx-auto"
+            style="text-decoration: none; color: inherit;"
+          >
+            Pytania o ciebie
+          </router-link>
+          
         </v-list-item>
       </v-list-item-group>
     </v-list>

@@ -30,34 +30,30 @@
                 >Pytania rekrutacyjne</router-link
               ></v-tab
             >
+            <v-menu offset-y>
+              <template v-slot:activator="{ on, attrs }">
+                <v-tab
+                  v-bind="attrs"
+                  v-on="on"
+                  class="text-decoration-none white--text"
+                >
+                  Gry
+                </v-tab>
+              </template>
+              <v-list>
+                <router-link
+                  v-for="(item, index) in items"
+                  :key="index"
+                  :to="item.routeUrl"
+                  class="text-decoration-none white--text"
+                >
+                  <v-list-item>
+                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                  </v-list-item>
+                </router-link>
+              </v-list>
+            </v-menu>
 
-            <v-tab>
-              <div class="text-center">
-                <v-menu offset-y>
-                  <template v-slot:activator="{ on, attrs }">
-                    <v-tab
-                      v-bind="attrs"
-                      v-on="on"
-                      class="text-decoration-none white--text"
-                    >
-                      Gry
-                    </v-tab>
-                  </template>
-                  <v-list>
-                    <router-link
-                      v-for="(item, index) in items"
-                      :key="index"
-                      :to="item.routeUrl"
-                      class="text-decoration-none white--text"
-                    >
-                      <v-list-item>
-                        <v-list-item-title>{{ item.title }}</v-list-item-title>
-                      </v-list-item>
-                    </router-link>
-                  </v-list>
-                </v-menu>
-              </div>
-            </v-tab>
             <v-tab>
               <router-link
                 :to="{ name: 'Materials' }"

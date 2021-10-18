@@ -1,8 +1,9 @@
 <template>
     <v-card
-      class="mx-auto mt-15 d-flex"
+      outlined
+      class="mx-auto mb-15 mt-15 d-flex"
       max-width="944"
-      height="370"
+      height="380"
       elevation="10"
     >
       <div class="ml-15 mt-15">
