@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto mt-10" height="100" color="blue" width="750">
+  <v-card class="mx-auto mt-10" height="80" color="blue" width="750">
     <v-toolbar color="transparent" elevation="0" class="text--primary mx auto">
     </v-toolbar>
     <router-view></router-view>
@@ -8,7 +8,7 @@
 
     <v-carousel>
       <v-carousel-item v-for="(item, index) in items" :key="index">
-        <v-sheet :items="item" height="320" tile>
+        <v-sheet :items="item" height="330" tile>
           <v-list-item>
             <v-list-item-content>
               <v-list-item-subtitle
