@@ -99,6 +99,11 @@ const routes = [
     name: "Materials",
     component: () => import("../views/Materials.vue"),
   },
+  {
+    path: "/interview",
+    name: "Interview",
+    component: () => import("../components/IntervievSimulation/InterviewSimulation.vue")
+  }
 ];
 
 const router = new VueRouter({

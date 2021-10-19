@@ -4,15 +4,14 @@
     </v-toolbar>
     <router-view></router-view>
 
- 
     <CssQuestions v-if="this.$route.path === '/about/cssquestions'" />
     <htmlQuestions v-if="this.$route.path === '/about/htmlquestions'" />
-  
+    <VueQuestions v-if="this.$route.path === '/about/vuequestions'" />
   </v-card>
 </template>
 
 <script>
-import htmlQuestions from './htmlQuestions.vue'
+import htmlQuestions from "./htmlQuestions.vue";
 import CssQuestions from "./CssQuestions.vue";
 export default {
   data: () => ({

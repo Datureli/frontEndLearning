@@ -5,7 +5,10 @@
         <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
         <v-spacer></v-spacer>
-        <search-bar />
+        <v-btn color="transparent" outlined>
+          <Login />
+        </v-btn>
+
         <v-btn icon>
           <v-icon>mdi-heart</v-icon>
         </v-btn>
@@ -61,6 +64,13 @@
                 >Materiały</router-link
               ></v-tab
             >
+                  <v-tab>
+              <router-link
+                :to="{ name: 'Interview' }"
+                class="text-decoration-none white--text"
+                >Interview</router-link
+              ></v-tab
+            >
           </v-tabs>
         </template>
       </v-app-bar>
@@ -71,9 +81,9 @@
 </template>
 
 <script>
-import SearchBar from "./SearchBar.vue";
+import Login from "./Login.vue";
 export default {
-  components: { SearchBar },
+  components: { Login },
   data: () => ({
     items: [
       { title: "Fiszki", routeUrl: "/intoflashcards" },
