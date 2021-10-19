@@ -11,6 +11,7 @@
           login
         </v-btn>
       </template>
+   
       <v-card>
         <v-toolbar dark color="primary">
           <v-toolbar-title>Login</v-toolbar-title>
@@ -59,14 +60,17 @@
                 >Login</v-btn
               >
             </v-card-actions>
-            <v-card-text class="text-center">
+            <v-card-text  class="text-center">
               Not a member yet?
-              <router-link :to="{ name: 'signup' }">
+              <router-link :to="{ name: 'SignUp' }">
                 Sign up
               </router-link>
               now.
+
             </v-card-text>
+            
           </v-card>
+          
           <v-card-title> </v-card-title>
         </v-container>
       </v-card>
@@ -77,6 +81,7 @@
 <script>
 export default {
   data: () => ({
+    logOrRegister: true,
     dialog: false,
     username: null,
     password: null,
@@ -98,6 +103,9 @@ export default {
     logOut() {
       this.loggedIn = false;
     },
+    logOrRegisters() {
+      this.logOrRegister = !this.logOrRegister
+    }
   },
 };
 </script>

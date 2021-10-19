@@ -103,6 +103,16 @@ const routes = [
     path: "/interview",
     name: "Interview",
     component: () => import("../components/IntervievSimulation/InterviewSimulation.vue")
+  },
+  {
+    path: "/signup",
+    name: "SignUp",
+    component: () => import("../components/SignUp.vue")
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: () => import("../components/Login.vue"),
   }
 ];
 

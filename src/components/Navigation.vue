@@ -7,6 +7,11 @@
         <v-spacer></v-spacer>
         <v-btn color="transparent" outlined>
           <Login />
+        
+        </v-btn>
+           <v-btn color="transparent" outlined>
+          <SignUp />
+        
         </v-btn>
 
         <v-btn icon>
@@ -82,8 +87,9 @@
 
 <script>
 import Login from "./Login.vue";
+import SignUp from "./SignUp.vue"
 export default {
-  components: { Login },
+  components: { Login,SignUp },
   data: () => ({
     items: [
       { title: "Fiszki", routeUrl: "/intoflashcards" },
