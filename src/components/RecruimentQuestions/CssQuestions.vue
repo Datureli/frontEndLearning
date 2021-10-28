@@ -1,7 +1,14 @@
 <template>
   <v-carousel class="mx-auto">
-    <v-carousel-item  v-for="(cssItem, index) in cssItems" :key="index">
-      <v-sheet :cssItems="cssItem" height="330" tile>
+    <v-carousel-item v-for="(cssItem, index) in cssItems" :key="index">
+      <v-sheet
+        :cssItems="cssItem"
+        height="330"
+        style="-webkit-box-shadow: inset 1px 0px 47px 3px rgba(66, 68, 90, 1);
+-moz-box-shadow: inset 1px 0px 47px 3px rgba(66, 68, 90, 1);
+box-shadow: inset 1px 0px 47px 3px rgba(66, 68, 90, 1);"
+        tile
+      >
         <v-list-item>
           <v-list-item-content>
             <v-list-item-subtitle
