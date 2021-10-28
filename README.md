@@ -1,3 +1,9 @@
+# Pagination
+
+1.reset pagination on prev/next button
+2.display content only one on pagination
+
+
 # lernfisz
 
 ## Project setup

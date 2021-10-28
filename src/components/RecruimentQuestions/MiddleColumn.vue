@@ -15,6 +15,7 @@ import htmlQuestions from "./htmlQuestions.vue";
 import CssQuestions from "./CssQuestions.vue";
 export default {
   data: () => ({
+    page: 1,
     components: {
       htmlQuestions,
       CssQuestions,

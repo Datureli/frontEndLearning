@@ -1,7 +1,8 @@
 <template>
   <v-container-fluid>
     <v-card class="overflow-hidden mx-auto">
-      <v-app-bar color="#6A76AB">
+      <v-app-bar style="background-color: #000000;
+background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);">
         <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
         <v-spacer></v-spacer>
@@ -14,8 +15,8 @@
         
         </v-btn>
 
-        <v-btn icon>
-          <v-icon>mdi-heart</v-icon>
+        <v-btn color="transparent" >
+          <v-icon color="red">mdi-heart</v-icon>
         </v-btn>
 
         <v-btn icon>

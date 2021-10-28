@@ -6,12 +6,12 @@
       hide-overlay
       transition="dialog-bottom-transition"
     >
-      <template  v-slot:activator="{ on, attrs }">
+      <template v-slot:activator="{ on, attrs }">
         <v-btn color="transparent" dark v-bind="attrs" v-on="on">
           login
         </v-btn>
       </template>
-   
+
       <v-card>
         <v-toolbar dark color="primary">
           <v-toolbar-title>Login</v-toolbar-title>
@@ -23,11 +23,39 @@
           </v-toolbar-items>
         </v-toolbar>
         <v-container>
-          <div v-if="loggedIn">
-            <h1>You are succesfuly loggin in {{ username }}</h1>
+          <div v-show="elementVisible && loggedIn">
+            <h1>Welcome to your user panel {{ username }}</h1>
             <v-btn @click="logOut">Logout</v-btn>
           </div>
-          <v-card v-else width="460" class="mx-auto mt-15 pr-4 pl-4">
+  <v-card v-show="loggedIn && !elementVisible"
+    height="300"
+    width="300"
+  >
+    <v-navigation-drawer
+      absolute
+      dark
+      src="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
+      width="100%"
+      permanent
+    >
+      <v-list>
+        <v-list-item
+          v-for="([icon, text], i) in items"
+          :key="i"
+          link
+        >
+          <v-list-item-icon>
+            <v-icon>{{ icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ text }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+  </v-card>
+          <v-card v-if="!loggedIn" width="460" class="mx-auto mt-15 pr-4 pl-4">
             <v-card-title>
               <h1 class="display-1 mx-auto">Login</h1>
             </v-card-title>
@@ -60,17 +88,15 @@
                 >Login</v-btn
               >
             </v-card-actions>
-            <v-card-text  class="text-center">
+            <v-card-text class="text-center">
               Not a member yet?
               <router-link :to="{ name: 'SignUp' }">
                 Sign up
               </router-link>
               now.
-
             </v-card-text>
-            
           </v-card>
-          
+
           <v-card-title> </v-card-title>
         </v-container>
       </v-card>
@@ -81,6 +107,12 @@
 <script>
 export default {
   data: () => ({
+          items: [
+        ['mdi-email', 'Inbox'],
+        ['mdi-account-supervisor-circle', 'Supervisors'],
+        ['mdi-clock-start', 'Clock-in'],
+      ],
+    elementVisible: true,
     logOrRegister: true,
     dialog: false,
     username: null,
@@ -104,8 +136,11 @@ export default {
       this.loggedIn = false;
     },
     logOrRegisters() {
-      this.logOrRegister = !this.logOrRegister
-    }
+      this.logOrRegister = !this.logOrRegister;
+    },
+  },
+  created() {
+    setTimeout(() => (this.elementVisible = false), 5000);
   },
 };
 </script>

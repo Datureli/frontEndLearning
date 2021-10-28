@@ -17,7 +17,7 @@
           <router-link
             :to="{ name: 'HtmlQuestions' }"
             class="text-deocration-none mx-auto"
-            style="text-decoration: none; color: inherit;"
+            style="text-decoration: none; color: #a55c1b;"
           >
             Html
           </router-link>
@@ -28,7 +28,7 @@
           <router-link
             :to="{ name: 'CssQuestions' }"
             class="text-deocration-none mx-auto"
-            style="text-decoration: none; color: inherit;"
+            style="text-decoration: none; color: #a55c1b;"
           >
             Css
           </router-link>
@@ -38,7 +38,7 @@
           <router-link
             :to="{ name: 'HtmlQuestions' }"
             class="text-deocration-none mx-auto"
-            style="text-decoration: none; color: inherit;"
+            style="text-decoration: none; color: #a55c1b;"
           >
             Javascript
           </router-link>
@@ -48,7 +48,7 @@
           <router-link
             :to="{ name: 'VueQuestions' }"
             class="text-deocration-none mx-auto"
-            style="text-decoration: none; color: inherit;"
+            style="text-decoration: none; color: #a55c1b;"
           >
             Vue
           </router-link>
@@ -58,7 +58,7 @@
           <router-link
             :to="{ name: 'HtmlQuestions' }"
             class="text-deocration-none mx-auto"
-            style="text-decoration: none; color: inherit;"
+            style="text-decoration: none; color: #a55c1b;"
           >
             React
           </router-link>
@@ -68,7 +68,7 @@
           <router-link
             :to="{ name: 'HtmlQuestions' }"
             class="text-deocration-none mx-auto"
-            style="text-decoration: none; color: inherit;"
+            style="text-decoration: none; color: #a55c1b;"
           >
             Bootstrap
           </router-link>
@@ -78,7 +78,7 @@
           <router-link
             :to="{ name: 'HtmlQuestions' }"
             class="text-deocration-none mx-auto"
-            style="text-decoration: none; color: inherit;"
+            style="text-decoration: none; color: #a55c1b;"
           >
             Scss
           </router-link>
@@ -88,7 +88,7 @@
           <router-link
             :to="{ name: 'GeneralQuestions' }"
             class="text-deocration-none mx-auto"
-            style="text-decoration: none; color: inherit;"
+            style="text-decoration: none; color: #a55c1b;"
           >
             Ogólne
           </router-link>
@@ -99,7 +99,7 @@
           <router-link
             :to="{ name: 'StupidQuestions' }"
             class="text-deocration-none mx-auto"
-            style="text-decoration: none; color: inherit;"
+            style="text-decoration: none; color: #a55c1b;"
           >
             Pytania o ciebie
           </router-link>
