@@ -1,5 +1,5 @@
 <template>
-  <v-carousel class="mx-auto">
+  <v-carousel @change="page = 1" class="mx-auto">
     <v-carousel-item v-for="(cssItem, index) in cssItems" :key="index">
       <v-sheet
         :cssItems="cssItem"

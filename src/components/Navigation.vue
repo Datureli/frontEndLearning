@@ -1,21 +1,21 @@
 <template>
   <v-container-fluid>
     <v-card class="overflow-hidden mx-auto">
-      <v-app-bar style="background-color: #000000;
-background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);">
+      <v-app-bar
+        style="background-color: #000000;
+background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
+      >
         <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
         <v-spacer></v-spacer>
         <v-btn color="transparent" outlined>
           <Login />
-        
         </v-btn>
-           <v-btn color="transparent" outlined>
+        <v-btn color="transparent" outlined>
           <SignUp />
-        
         </v-btn>
 
-        <v-btn color="transparent" >
+        <v-btn color="transparent">
           <v-icon color="red">mdi-heart</v-icon>
         </v-btn>
 
@@ -70,7 +70,7 @@ background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);">
                 >Materiały</router-link
               ></v-tab
             >
-                  <v-tab>
+            <v-tab>
               <router-link
                 :to="{ name: 'Interview' }"
                 class="text-decoration-none white--text"
@@ -88,9 +88,9 @@ background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);">
 
 <script>
 import Login from "./Login.vue";
-import SignUp from "./SignUp.vue"
+import SignUp from "./SignUp.vue";
 export default {
-  components: { Login,SignUp },
+  components: { Login, SignUp },
   data: () => ({
     items: [
       { title: "Fiszki", routeUrl: "/intoflashcards" },
