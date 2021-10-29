@@ -1,6 +1,7 @@
 <template>
   <v-row justify="center">
     <v-dialog
+    class="ma-0 pa-0"
       v-model="dialog"
       fullscreen
       hide-overlay
@@ -13,7 +14,7 @@
       </template>
 
       <v-card>
-        <v-toolbar dark color="primary">
+        <v-toolbar class="mb-0" dark color="#2c3e50">
           <v-toolbar-title>Login</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-toolbar-items>
@@ -22,39 +23,39 @@
             </v-btn>
           </v-toolbar-items>
         </v-toolbar>
+         <v-card
+            after-sticky
+            v-show="loggedIn && !elementVisible"
+            height="38em"
+            width="310"
+           
+          >
+            <v-navigation-drawer
+              absolute
+              dark
+              src="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
+              width="100%"
+              permanent
+            >
+              <v-list>
+                <v-list-item v-for="([icon, text], i) in items" :key="i" link>
+                  <v-list-item-icon>
+                    <v-icon>{{ icon }}</v-icon>
+                  </v-list-item-icon>
+
+                  <v-list-item-content>
+                    <v-list-item-title>{{ text }}</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list>
+            </v-navigation-drawer>
+          </v-card>
         <v-container>
           <div v-show="elementVisible && loggedIn">
             <h1>Welcome to your user panel {{ username }}</h1>
             <v-btn @click="logOut">Logout</v-btn>
           </div>
-  <v-card v-show="loggedIn && !elementVisible"
-    height="300"
-    width="300"
-  >
-    <v-navigation-drawer
-      absolute
-      dark
-      src="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
-      width="100%"
-      permanent
-    >
-      <v-list>
-        <v-list-item
-          v-for="([icon, text], i) in items"
-          :key="i"
-          link
-        >
-          <v-list-item-icon>
-            <v-icon>{{ icon }}</v-icon>
-          </v-list-item-icon>
-
-          <v-list-item-content>
-            <v-list-item-title>{{ text }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-  </v-card>
+         
           <v-card v-if="!loggedIn" width="460" class="mx-auto mt-15 pr-4 pl-4">
             <v-card-title>
               <h1 class="display-1 mx-auto">Login</h1>
@@ -107,11 +108,11 @@
 <script>
 export default {
   data: () => ({
-          items: [
-        ['mdi-email', 'Inbox'],
-        ['mdi-account-supervisor-circle', 'Supervisors'],
-        ['mdi-clock-start', 'Clock-in'],
-      ],
+    items: [
+      ["mdi-email", "Inbox"],
+      ["mdi-account-supervisor-circle", "Supervisors"],
+      ["mdi-clock-start", "Clock-in"],
+    ],
     elementVisible: true,
     logOrRegister: true,
     dialog: false,
