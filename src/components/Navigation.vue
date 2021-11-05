@@ -77,6 +77,13 @@ background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
                 >Interview</router-link
               ></v-tab
             >
+                 <v-tab>
+              <router-link
+                :to="{ name: 'English' }"
+                class="text-decoration-none white--text"
+                >Angielski</router-link
+              ></v-tab
+            >
           </v-tabs>
         </template>
       </v-app-bar>

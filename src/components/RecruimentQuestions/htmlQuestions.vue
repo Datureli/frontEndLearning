@@ -28,12 +28,10 @@ export default {
         question: "Do czego służy atrybut role?",
         answer: `Jest to znacznik, który określa znaczenie elementu.
          Głównie do celów dostępności (ang. accessibility). Jest częścią specyfikacji ARIA. Został też dodany do HTML5.`,
-        title: "Ali Connors",
       },
       {
-        question: "Summer BBQ",
-        answer: `Wish I could come, but I'm out of town this weekend.`,
-        title: "me, Scrott, Jennifer",
+        question: "Czym jest Web Socket?",
+        answer: 'Web sockets to technologia następnej generacji do dwukierunkowej komunikacji dla aplikacji internetowych, która działa na jednym gnieździe i jest wystawiona za pomocą interfejsu napisanego w JavaScript dla przeglądarek zgodnych z HTML5,Po uzyskaniu połączenia gniazda z serwerem WWW, możesz wysyłać dane z przeglądarki do serwera po wywołaniu metody send() oraz odbierać dane z serwera dzięki obsłudze zdarzenia onmessage'
       },
       {
         question: "Oui oui",

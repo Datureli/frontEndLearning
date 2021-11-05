@@ -1,11 +1,18 @@
 <template>
-  <v-card class="mx-auto mt-13" height="80" color="blue" width="750">
+  <v-card class="mx-auto mt-13" height="80" color="#0C2136" width="750">
     <v-toolbar color="transparent" elevation="0" class="text--primary mx auto">
     </v-toolbar>
-    <router-view></router-view>
+    <v-sheet
+      height="350"
+      style="box-shadow: inset 1px 0px 47px 3px rgba(66, 68, 90, 1);"
+      tile
+    >
+      <router-view></router-view>
+      <CssQuestions v-if="this.$route.path === '/about/cssquestions'" />
+      <JavascriptQuestions v-if="this.$route.path === '/about/javascript'" />
+    </v-sheet>
 
-    <CssQuestions v-if="this.$route.path === '/about/cssquestions'" />
-    <htmlQuestions v-if="this.$route.path === '/about/htmlquestions'" />
+    <HtmlQuestions v-if="this.$route.path === '/about/htmlquestions'" />
     <VueQuestions v-if="this.$route.path === '/about/vuequestions'" />
   </v-card>
 </template>

@@ -1,51 +1,49 @@
 <template>
-  <v-carousel @change="page = 1" class="mx-auto">
+  <v-carousel @change="page = 1">
     <v-carousel-item v-for="(cssItem, index) in cssItems" :key="index">
-      <v-sheet
-        :cssItems="cssItem"
-        height="330"
-        style="-webkit-box-shadow: inset 1px 0px 47px 3px rgba(66, 68, 90, 1);
--moz-box-shadow: inset 1px 0px 47px 3px rgba(66, 68, 90, 1);
-box-shadow: inset 1px 0px 47px 3px rgba(66, 68, 90, 1);"
-        tile
-      >
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-subtitle
-              class="text--primary text-h4 text-wrap "
-              v-text="cssItem.question"
-            ></v-list-item-subtitle>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-subtitle
+            class="text--primary  text-h4 text-wrap "
+            v-text="cssItem.question"
+          ></v-list-item-subtitle>
 
-            <v-list-item-subtitle
-              class="text-h5 text-wrap"
-              v-if="page === 1"
-              v-text="cssItem.answer"
-            ></v-list-item-subtitle>
-            <v-list-item-subtitle
-              class="text-h5 text-wrap"
-              v-if="page === 2"
-              v-text="cssItem.secondAnswer"
-            ></v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-      </v-sheet>
-      <div class="text-center">
-        <v-pagination
-          v-model="page"
-          :length="3"
-          prev-icon="mdi-menu-left"
-          next-icon="mdi-menu-right"
-        ></v-pagination>
-      </div>
+          <v-list-item-subtitle
+            class="text-h5 text-wrap"
+            v-if="page === 1"
+            v-text="cssItem.answer"
+          ></v-list-item-subtitle>
+          <v-list-item-subtitle
+            class="text-h5 text-wrap"
+            v-if="page === 2"
+            v-text="cssItem.secondAnswer"
+          ></v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+      <v-pagination
+        style="position: absolute; bottom: 30%; right:35%"
+        v-model="page"
+        :length="3"
+      ></v-pagination>
     </v-carousel-item>
   </v-carousel>
 </template>
 
 <script>
 export default {
+  props: {
+    page: {
+      type: Number,
+    },
+  },
+  methods: {
+    sortedArray() {
+      return this.arrays.sort((a, b) => a.name - b.name);
+    },
+  },
   data() {
     return {
-      page: 1,
+      cssPage: this.page,
       cssItems: [
         {
           answerNumbers: 2,
