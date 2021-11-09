@@ -26,36 +26,43 @@ background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
             </v-btn>
           </v-toolbar-items>
         </v-toolbar>
-        <v-card
-          after-sticky
-          v-show="loggedIn && !elementVisible"
-          height="38em"
-          width="310"
-        >
-          <v-navigation-drawer
-            absolute
-            dark
-            src="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
-            width="100%"
-            permanent
+        <div class="d-flex">
+          <v-card
+            after-sticky
+            v-show="loggedIn && !elementVisible"
+            height="38em"
+            width="310"
           >
-            <v-list>
-              <v-list-item v-for="([icon, text], i) in items" :key="i" link>
-                <v-list-item-icon>
-                  <v-icon>{{ icon }}</v-icon>
-                </v-list-item-icon>
+            <v-navigation-drawer
+              absolute
+              dark
+              color="#2c3e50"
+              width="100%"
+              height="100%"
+            >
+              <v-list>
+                <v-list-item v-for="([icon, text], i) in items" :key="i" link>
+                  <v-list-item-icon>
+                    <v-icon>{{ icon }}</v-icon>
+                  </v-list-item-icon>
 
-                <v-list-item-content>
-                  <v-list-item-title>{{ text }}</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list>
-          </v-navigation-drawer>
-        </v-card>
+                  <v-list-item-content>
+                    <v-list-item-title>{{ text }}</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+                <v-btn @click="logOut">Logout</v-btn>
+              </v-list>
+            </v-navigation-drawer>
+          </v-card>
+          <v-card width="100%" v-show="loggedIn && !elementVisible">
+            <h1>dsandsnaasdisadondsaosko</h1>
+          </v-card>
+        </div>
+
         <v-container>
           <div v-show="elementVisible && loggedIn">
-            <h1>Welcome to your user panel {{ username }}</h1>
-            <v-btn @click="logOut">Logout</v-btn>
+            <h1 class="mt-10">Welcome to your user panel {{ username }}</h1>
+            <login-animation />
           </div>
 
           <v-card
@@ -105,20 +112,17 @@ background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
               now.
             </v-card-text>
           </v-card>
-
         </v-container>
-         <login-animation />
       </v-card>
-     
     </v-dialog>
   </v-row>
 </template>
 
 <script>
-import loginAnimation from './LoginAnimation.vue'
+import loginAnimation from "./LoginAnimation.vue";
 export default {
   components: {
-    loginAnimation
+    loginAnimation,
   },
   data: () => ({
     items: [
@@ -127,7 +131,6 @@ export default {
       ["mdi-clock-start", "Clock-in"],
     ],
     elementVisible: true,
-    logOrRegister: true,
     dialog: false,
     username: null,
     password: null,
@@ -148,9 +151,6 @@ export default {
     },
     logOut() {
       this.loggedIn = false;
-    },
-    logOrRegisters() {
-      this.logOrRegister = !this.logOrRegister;
     },
   },
   created() {

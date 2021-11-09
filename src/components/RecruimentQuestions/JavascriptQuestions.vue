@@ -39,10 +39,9 @@
         ></v-pagination>
         <v-btn
           style="position: absolute; bottom: 30%; right:5%"
-          @click="disablee"
+          @click="disableAnswers"
           >Disable answers</v-btn
         >
-        {{ disable }}
       </div>
     </v-carousel-item>
   </v-carousel>
@@ -63,7 +62,7 @@ export default {
     },
   },
   methods: {
-    disablee() {
+    disableAnswers() {
       this.$store.commit("disable");
     },
   },
