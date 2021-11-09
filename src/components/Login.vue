@@ -1,7 +1,6 @@
 <template>
   <v-row justify="center">
     <v-dialog
-      class="ma-0 pa-0"
       v-model="dialog"
       fullscreen
       hide-overlay
@@ -14,8 +13,8 @@
       </template>
 
       <v-card
-        style="background-color: #000000;
-background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
+        style="background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
+        height="100%"
       >
         <v-toolbar class="mb-0" dark color="#2c3e50">
           <v-toolbar-title>Login</v-toolbar-title>
@@ -34,7 +33,6 @@ background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
             width="310"
           >
             <v-navigation-drawer
-              absolute
               dark
               color="#2c3e50"
               width="100%"
@@ -50,13 +48,11 @@ background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
                     <v-list-item-title>{{ text }}</v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
-                <v-btn @click="logOut">Logout</v-btn>
               </v-list>
+              <v-btn class="mt-15" @click="logOut">Logout</v-btn>
             </v-navigation-drawer>
           </v-card>
-          <v-card width="100%" v-show="loggedIn && !elementVisible">
-            <h1>dsandsnaasdisadondsaosko</h1>
-          </v-card>
+          <MyInformation v-show="loggedIn && !elementVisible" />
         </div>
 
         <v-container>
@@ -77,7 +73,7 @@ background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
             </v-card-title>
             <v-card-text>
               <v-form>
-                <v-text-field
+                <v-text-field 
                   label="Username"
                   v-model="username"
                   :rules="loginRules"
@@ -120,15 +116,21 @@ background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
 
 <script>
 import loginAnimation from "./LoginAnimation.vue";
+import MyInformation from "./MyInformation.vue";
 export default {
   components: {
     loginAnimation,
+    MyInformation,
   },
   data: () => ({
     items: [
       ["mdi-email", "Inbox"],
       ["mdi-account-supervisor-circle", "Supervisors"],
-      ["mdi-clock-start", "Clock-in"],
+      ["mdi-clock-start", "Password"],
+      ["mdi-clock-start", "Payment methods"],
+      ["mdi-clock-start", "Favorite"],
+      ["mdi-clock-start", "Account settings"],
+      ["mdi-clock-start", "Premium"],
     ],
     elementVisible: true,
     dialog: false,
