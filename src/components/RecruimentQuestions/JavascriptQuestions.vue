@@ -55,10 +55,8 @@ export default {
     },
   },
   computed: {
-    disable: {
-      get: function() {
-        return this.$store.state.disable;
-      },
+    disable() {
+      return this.$store.state.disable;
     },
   },
   methods: {

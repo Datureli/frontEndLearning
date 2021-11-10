@@ -4,6 +4,7 @@
       v-model="dialog"
       fullscreen
       hide-overlay
+      @keydown.esc="dialog = false"
       transition="dialog-bottom-transition"
     >
       <template v-slot:activator="{ on, attrs }">
@@ -73,7 +74,7 @@ background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
             </v-card-title>
             <v-card-text>
               <v-form>
-                <v-text-field 
+                <v-text-field
                   label="Username"
                   v-model="username"
                   :rules="loginRules"
@@ -95,7 +96,7 @@ background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
                 block
                 rounded
                 class="mx-auto ma-2"
-                @click="logginIn(loggedIn)"
+                @click="isUserLogin()"
                 color="info"
                 >Login</v-btn
               >
@@ -141,16 +142,17 @@ export default {
     loginRules: [(value) => !!value || "login is required"],
     passwordRules: [(value) => !!value || "password is required"],
   }),
-  methods: {
-    logginIn(loggedIn) {
-      this.$emit("logged", loggedIn);
+  computed: {
+    Login() {
+      return this.$store.state.loginStatus;
+    },
+    isUserLogin() {
       if (this.username.length > 0 && this.password.length > 0) {
         this.loggedIn = true;
       }
-      store.user = this.username;
-      const redirectPath = this.$route.query.redirect || "/";
-      this.$router.push(redirectPath);
     },
+  },
+  methods: {
     logOut() {
       this.loggedIn = false;
     },
