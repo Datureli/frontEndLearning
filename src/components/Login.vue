@@ -63,8 +63,7 @@
           </div>
 
           <v-card
-            style="
-background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
+            style="background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
             v-if="!loggedIn"
             width="460"
             class="mx-auto mt-15 pr-4 pl-4"

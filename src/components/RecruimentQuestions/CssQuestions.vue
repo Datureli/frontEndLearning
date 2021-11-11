@@ -38,17 +38,8 @@ export default {
   },
   computed: {
     cssQuestions() {
-      return this.$store.state.cssQuestions
+      return this.$store.state.questions.cssQuestions
     },
-    cosCss() {
-      var saleProducts = this.$store.state.cssQuestions.map( cssQuestion => {
-        return {
-          name: '**' + this.cssQuestion.name + '**',
-          price: cssQuestion.price
-        }
-      });
-      return saleProducts
-    }
   }
 };
 </script>

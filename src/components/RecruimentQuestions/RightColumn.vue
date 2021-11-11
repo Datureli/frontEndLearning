@@ -8,19 +8,16 @@
     <v-icon class="mx-auto mt-5 mb-5" style="font-size: 130px;">mdi-autorenew</v-icon>
     <v-spacer></v-spacer>
     <v-icon class="mx-auto" style="font-size: 130px;">mdi-dice-multiple</v-icon>
-    <v-btn @click="$emit('clicker',event.target.value)" class="mx-auto" style="font-size: 10px;">dsada</v-btn>
+    <v-btn @click="disableAnswers" class="mx-auto" style="font-size: 10px;">dsada</v-btn>
   </v-card>
 </template>
 
 
 <script>
 export default {
-  data: () =>({
-      computed: {
-    disable: {
-      get: function() {
-        return this.$store.state.disable;
-      },
+  computed: {
+    disable() {
+      return this.$store.state.disable;
     },
   },
   methods: {
@@ -28,6 +25,5 @@ export default {
       this.$store.commit("disable");
     },
   },
-  })
 }
 </script>

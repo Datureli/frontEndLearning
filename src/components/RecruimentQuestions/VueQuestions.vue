@@ -59,7 +59,11 @@ export default {
                  {
         question: 'Wyjaśnij na czym polega przepływ danych w vue',
           answer: 'Vue używa one-way data flow.Dane są przekazywane do komponentu dziecka z komponentu rodzica za pomocą właściwości props'
-      }
+      },
+                     {
+        question: 'czym jest mapState?',
+          answer: 'życie mapState() pozwala na pobranie i przypisanie do lokalnego scope wartości bezpośrednio z sekcji state w store. W ten sposób otrzymujemy czyste dane – bez żadnych modyfikacji. Ma to duży sens, jeśli są to typy proste – jakaś flaga będąca wartością boolean (true/false), np. flaga „loading” itp.'
+      },
     ],
   }),
 };
