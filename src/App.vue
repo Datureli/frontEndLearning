@@ -32,10 +32,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
-header {
-  width: 100%;
-  height: 60px;
-}
 
 .gradient {
 background-color: #a55c1b;

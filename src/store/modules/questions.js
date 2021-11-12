@@ -22,7 +22,7 @@ export default {
       {
         question: "Jakie zadeklarować zmienną w javascript?",
         answer:
-          "Aby zadeklarować zmienną, powinniśmy posłużyć się jednym ze słów kluczowych.Do stworzenia zmiennej w JavaScript przez lata używało się słowa kluczowego var.Wraz z ewolucją javascriptu.Wraz z pojawieniem się ES6 (ECMAScript 2015) wprowadzono nowe sposoby deklaracji zmiennych za pomocą słów kluczowych let i const.",
+          "Aby zadeklarować zmienną, powinniśmy posłużyć się jednym ze słów kluczowych var,let oraz const.",
         secondAnswer:
           "wielu programistów zaleca stosować już const i let. Dzięki nim nasze skrypty stają się nie tylko bardziej optymalne pod względem zarządzania pamięcią, ale i potencjalnie unikamy niektórych problematycznych sytuacji.Pod zmienne możemy podstawić dowolne wartości jakie będziemy chcieli",
         thirdPartOfAnswer:
@@ -85,8 +85,7 @@ export default {
       },
       {
         question: "Opisz typy danych w javascript",
-        answer:
-          "W JavaScript dane możemy podzielić na dwie grupy: typy proste oraz złożone.Typy prymitywne:Number,string,bigInt,boolean,undefined,null,symbol a złożone:Object (w tym Array, Map i Set).Kolejną charakterystyczną cechą rozróżniającą typy prymitywne od obiektów jest to, że te pierwsze w przeciwieństwie do obiektów są niemutowalne. Mutowalnymi określamy takie dane, którym w czasie ich istnienia możemy zmieniać części składowe:",
+        answer:"W JavaScript dane możemy podzielić na dwie grupy: typy proste oraz złożone.Typy prymitywne:Number,string,bigInt,boolean,undefined,null,symbol a złożone:Object (w tym Array, Map i Set).Kolejną charakterystyczną cechą rozróżniającą typy prymitywne od obiektów jest to, że te pierwsze w przeciwieństwie do obiektów są niemutowalne. Mutowalnymi określamy takie dane, którym w czasie ich istnienia możemy zmieniać części składowe:",
         secondAnswer:
           "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
       },
