@@ -1,5 +1,5 @@
 export default {
-  namespaced: true,
+namespaced: true,
 
   state: {
     cssQuestions: [
@@ -85,42 +85,71 @@ export default {
       },
       {
         question: "Opisz typy danych w javascript",
-        answer:"W JavaScript dane możemy podzielić na dwie grupy: typy proste oraz złożone.Typy prymitywne:Number,string,bigInt,boolean,undefined,null,symbol a złożone:Object (w tym Array, Map i Set).Kolejną charakterystyczną cechą rozróżniającą typy prymitywne od obiektów jest to, że te pierwsze w przeciwieństwie do obiektów są niemutowalne. Mutowalnymi określamy takie dane, którym w czasie ich istnienia możemy zmieniać części składowe:",
+        answer:"W JavaScript dane możemy podzielić na dwie grupy: typy proste(prymitywne) oraz złożone.Do typów prymitywnych zaliczamy:Number,string,bigInt,boolean,undefined,null,symbol a do złożonych:Object (w tym Array, Map i Set).Kolejną charakterystyczną cechą rozróżniającą typy prymitywne od obiektów jest to, że te pierwsze w przeciwieństwie do obiektów są niemutowalne. Mutowalnymi określamy takie dane, którym w czasie ich istnienia możemy zmieniać części składowe:",
+        secondAnswer:
+          "JavaScript jest językiem dynamicznie typowanym. Oznacza to, że nie musimy deklarować typu zmiennej, ponieważ jest on automatycznie konwertowany do porządanych wartości w czasie wykonywania się skryptu.",
+      },
+      {
+        question: "Czym jest html canvas?",
+        answer:
+          "element języka HTML wprowadzony w HTML 5 pozwalający na dynamiczne, skryptowe renderowanie kształtów i obrazów bitmapowych. Dzięki wprowadzeniu obiektu canvas możliwe stało się tworzenie dynamicznych dwu- i trójwymiarowych animacji czy gier działających w przeglądarkach bez dodatkowych wtyczek.",
         secondAnswer:
           "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
+      },
+      {
+        question: "Wyjaśnij funkcję parseInt()",
+        answer:
+          "Przetwarza argument w postaci łańcucha znaków i zwraca liczbę całkowitą typu integer , o zadanej podstawie.Pozwala przekształcić podany tekst na liczbę całkowitą.",
+        secondAnswer:
+          "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
+      },
+      {
+        question: "Jak dodać element do tablicy?",
+        answer:
+          "by dodać do tablicy element na jej końcu, możemy użyć metody push(element1, element2, ...).Drugą metodą jest po prostu ustawianie elementu na danym indeksie:",
+        secondAnswer:
+          "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
+      },
+      {
+        question: "Jak sprawdzić czy zmienna jest tablicą?",
+        answer:
+          `Żeby sprawdzić czy dana zmienna jest tablicą, powinniśmy skorzystać z metody Array.isArray(). Wynika to z faktu, że tablice w Javascript także są obiektami i typeof zwraca nam "object"`,
+        secondAnswer:
+          "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
+      },
+      {
+        question: "Opisz działanie setTimeout",
+        answer:
+          `setTimeout wywołuje funkcję po określonym czasie opóźnienia.setTimeout oczekuje dwóch argumentów, jednej referencji do funkcji wywołania zwrotnego oraz opóźnienia w milisekundach. setTimeout może również akceptować argumenty po opóźnieniu, a dodatkowe wartości zostaną przekazane do funkcji wywołania zwrotnego. Timer można wyłączyć przy użyciu metody clearTimeout.`,
+        secondAnswer:
+          "Powyższe może się przydać przy opóźnianiu zadań, które mogą spowalniać programowanie oraz blokować następne funkcje. Pamiętajmy, że setTimeout ustawia jedynie minimalny czas, który musi minąć przed wywołaniem. Jeśli silnik jest zajęty czymś innym, to kod może być uruchomiony znacznie później. Co więcej, wartość 0 nie musi być deklarowana - będzie ona domyślna nawet jeśli się ją pominie",
+      },
+      {
+        question: "Do czego służy setInterval?",
+        answer:
+          "Operator warunkowy (tak zwany ternary operator), to tak naprawdę skrócona wersja warunku if:",
+        secondAnswer:
+          "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}Różnica między setTimeout i setInterval polega na tym, że metoda setTimeout() uruchamia wyrażenie tylko raz, a setInterval() robi to regularnie po określonym czasie.",
       },
     ],
   },
 
   getters: {
-    availableProducts(state, getters) {
-      return state.items.filter((product) => product.inventory > 0);
-    },
 
-    productIsInStock() {
-      return (product) => {
-        return product.inventory > 0;
-      };
-    },
   },
 
   mutations: {
-    setQuestions(state, questions) {
-      // update products
-      state.cssQuestions = questions;
-      state.javascriptQuestions = questions;
+    randomQuestion() {
+      setInterval(() => {
+        state.javascriptQuestions.sort(function() {
+          return Math.round(Math.random()) - 0.5;
+        });
+      }, 1000);
     },
   },
   actions: {
-    fetchProducts({ commit }) {
-      return new Promise((resolve, reject) => {
-        // make the call
-        // call setProducts mutation
-        shop.getProducts((products) => {
-          commit("setProducts", products);
-          resolve();
-        });
-      });
-    },
+    randomQuestion (context) {
+      context.commit('randomQuestion')
+    }
   },
 };

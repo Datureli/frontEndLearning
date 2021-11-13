@@ -2,7 +2,7 @@
   <v-sheet
     class="mx-auto mt-12"
     height="400"
-    width="800"
+    width="900"
     style="
 		border: tan solid 12px;
 		border-top: #bda27e solid 12px;
@@ -12,6 +12,7 @@
 		background-image: radial-gradient( circle at left 30%, rgba(34, 34, 34, 0.3), rgba(34, 34, 34, 0.3) 80px, rgba(34, 34, 34, 0.5) 100px, rgba(51, 51, 51, 0.5) 160px, rgba(51, 51, 51, 0.5)), linear-gradient( 215deg, transparent, transparent 100px, #222 260px, #222 320px, transparent), radial-gradient( circle at right, #111, rgba(51, 51, 51, 1));"
     tile
   >
+
     <router-view></router-view>
     <CssQuestions v-if="this.$route.path === '/about/cssquestions'" />
     <JavascriptQuestions v-if="this.$route.path === '/about/javascript'" />
@@ -24,8 +25,23 @@
 <script>
 import htmlQuestions from "./htmlQuestions.vue";
 import CssQuestions from "./CssQuestions.vue";
+import { html2canvas } from 'html2canvas'; 
 export default {
+    mounted() {
+    this.print()
+  },
+  methods: {
+    async print() {
+
+      const options = {
+        type: 'dataURL',
+        useCORS: true
+      }
+      this.output = await html2canvas( options);
+    }
+  },
   data: () => ({
+    output: null,
     page: 1,
     components: {
       htmlQuestions,

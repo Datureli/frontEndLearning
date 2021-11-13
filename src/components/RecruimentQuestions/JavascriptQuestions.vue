@@ -1,5 +1,5 @@
 <template>
-  <v-carousel @change="page = 1">
+  <v-carousel @change="page = 1" class="mt-1">
     <v-carousel-item
       v-for="(javascriptQuestions, index) in javascriptQuestions"
       :key="index"
@@ -24,7 +24,7 @@
             v-text="javascriptQuestions.secondAnswer"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
-           class="white--text text-justify text-h5 text-wrap"
+            class="white--text text-justify text-h5 text-wrap"
             v-if="page === 3"
             v-show="disable"
             v-text="javascriptQuestions.thirdPartOfAnswer"
@@ -39,12 +39,13 @@
         ></v-pagination>
       </div>
       <v-btn @click="randomQuestion">sss</v-btn>
-      <v-btn @click="window.print()">Asss</v-btn>
+      <v-btn @click="randomQuestionV">random</v-btn>
     </v-carousel-item>
   </v-carousel>
 </template>
 
 <script>
+import {mapActions} from 'vuex'
 export default {
   props: {
     page: {
@@ -55,37 +56,20 @@ export default {
     disable() {
       return this.$store.state.disable;
     },
-     javascriptQuestions() {
-      return this.$store.state.questions.javascriptQuestions
+    javascriptQuestions() {
+      return this.$store.state.questions.javascriptQuestions;
     },
   },
+
   methods: {
     randomQuestion() {
-
-      this.javascriptQuestions.sort(function() {
-        return Math.round(Math.random()) - 0.5;
-      });
-    
+          setInterval(() => {
+            this.javascriptQuestions.sort(function() {
+              return Math.round(Math.random()) - 0.5;
+            });
+          }, 1000);
     },
-    shuffle(array) {
-    let counter = array.length;
-
-    // While there are elements in the array
-    while (counter > 0) {
-        // Pick a random index
-        let index = Math.floor(Math.random() * counter);
-
-        // Decrease counter by 1
-        counter--;
-
-        // And swap the last element with it
-        let temp = array[counter];
-        array[counter] = array[index];
-        array[index] = temp;
-    }
-
-    return array;
-}
+  ...mapActions([' randomQuestionV' ])
   },
 };
 </script>

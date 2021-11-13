@@ -36,7 +36,10 @@ export default {
       {
         question: "Oui oui",
         answer: "Do you have Paris recommendations? Have you ever been?",
-        title: "Sandra Adams",
+      },
+           {
+        question: "to czego służy znacznik <pre>?",
+        answer: "Wprowadza tekst preformatowany, czyli napisany czcionką monotypiczną (o stałej szerokości znaku), który uwzględnia dodatkowe spacje, tabulację i znaki końca linii (nie trzeba stosować znaczników <br>) oraz nie jest automatycznie zawijany. Dzięki niemu możesz np. wkleić na stronę WWW tekst, wprost ze zwykłego edytora, bez stosowania dodatkowych znaczników (niestety informacje dotyczące formatowania zostaną pominięte). Należy jednak przy tym pamiętać, aby tekst nie zawierał znaków: "<" oraz ">" (w zamian używaj: &lt; i &gt;).",
       },
       {
         question: "Do czego służy znacznik Main?",
