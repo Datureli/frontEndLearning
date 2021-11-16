@@ -2,6 +2,7 @@ export default {
 namespaced: true,
 
   state: {
+    jsIndex: 0,
     cssQuestions: [
       {
         answerNumbers: 2,
@@ -20,6 +21,7 @@ namespaced: true,
     ],
     javascriptQuestions: [
       {
+        
         question: "Jakie zadeklarować zmienną w javascript?",
         answer:
           "Aby zadeklarować zmienną, powinniśmy posłużyć się jednym ze słów kluczowych var,let oraz const.",
@@ -127,9 +129,21 @@ namespaced: true,
       {
         question: "Do czego służy setInterval?",
         answer:
-          "Operator warunkowy (tak zwany ternary operator), to tak naprawdę skrócona wersja warunku if:",
+          "Ustawia opóźnienie do cyklicznego wywoływania określonej funkcji.Możliwe jest anulowanie wykonania fukcji poprzez wywołanie window.clearInterval().Jeżeli funkcja ma zostać wykonana tylko raz a nie być wykonywana cyklicznie to należy skorzystać z  window.setTimeout().",
         secondAnswer:
           "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}Różnica między setTimeout i setInterval polega na tym, że metoda setTimeout() uruchamia wyrażenie tylko raz, a setInterval() robi to regularnie po określonym czasie.",
+      },
+      {
+        question: "Opisz pętle forEach",
+        answer:
+          "Wykonuje dostarczoną funkcję jeden raz na każdy element tablicy.Metoda forEach wykonuje dostarczoną funkcje callback raz dla każdego elementu tablicy. Funkcja callback wywoływana jest jedynie dla indeksów tablicy, którym została przypisana wartość; nie jest wywoływana dla indeksów, które zostały usunięte i tych, którym nigdy nie została przypisana żadna wartość.Funkcja callback jest wywoływana z trzema argumentami: wartością elementu, jego indeksem i obiektem tablicy, w którym się ten element zawiera.",
+        secondAnswer:
+          "Jeśli parametr thisArg został dostarczony do metody forEach, będzie on wskazywany przez this dla każdego wywołania funkcji callback. W przypadku, gdy nie został on przekazany lub jego wartość jest równa null, this będzie się odnosić do obiektu globalnego połączonego z funkcją callback.Metoda forEach nie modyfikuje tablicy na której jest wywołana.",
+      },
+      {
+        question: "Do czego służy array.indexOf?",
+        answer:
+          "Zwraca pierwszy (najmniejszy) indeks elementu w tablicy równego podanej wartości lub -1, gdy nie znaleziono takiego elementu.",
       },
     ],
   },
@@ -139,16 +153,25 @@ namespaced: true,
   },
 
   mutations: {
-    randomQuestion() {
+    questionLoop(state) {
       setInterval(() => {
         state.javascriptQuestions.sort(function() {
           return Math.round(Math.random()) - 0.5;
         });
       }, 1000);
     },
+    randomQuestion(state) {
+      state.javascriptQuestions.sort(function() {
+        return Math.round(Math.random()) - 0.5;
+      });
+    }
+ 
   },
   actions: {
-    randomQuestion (context) {
+    questionLoop(context) {
+      context.commit('questionLoop')
+    },
+    randomQuestion(context) {
       context.commit('randomQuestion')
     }
   },

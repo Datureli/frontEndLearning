@@ -37,15 +37,20 @@
           v-model="page"
           :length="3"
         ></v-pagination>
+              <v-icon
+        @click="addToFavorite(javascriptQuestions)"
+        color="red"
+     style="position: absolute; bottom: 27%; right:1%; font-size:40px;"
+        >mdi-heart</v-icon
+      >
       </div>
-      <v-btn @click="randomQuestion">sss</v-btn>
-      <v-btn @click="randomQuestionV">random</v-btn>
+
     </v-carousel-item>
+    
   </v-carousel>
 </template>
 
 <script>
-import {mapActions} from 'vuex'
 export default {
   props: {
     page: {
@@ -56,20 +61,21 @@ export default {
     disable() {
       return this.$store.state.disable;
     },
+    favorite() {
+      return this.$store.state.favorite;
+    },
     javascriptQuestions() {
       return this.$store.state.questions.javascriptQuestions;
     },
   },
 
   methods: {
-    randomQuestion() {
-          setInterval(() => {
-            this.javascriptQuestions.sort(function() {
-              return Math.round(Math.random()) - 0.5;
-            });
-          }, 1000);
+    questionLoop() {
+      this.$store.dispatch("questions/questionLoop");
     },
-  ...mapActions([' randomQuestionV' ])
+    addToFavorite(javascriptQuestions) {
+      this.$store.state.favorite.push(javascriptQuestions);
+    },
   },
 };
 </script>

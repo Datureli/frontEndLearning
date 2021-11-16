@@ -14,11 +14,21 @@ export default new Vuex.Store({
   state: {
     //data
     disable: true,
+    favorite: [],
   },
   mutations: {
     disable: (state) => (state.disable = !state.disable),
+    addToFavorite() {
+        state.favorite.push(
+          javascriptQuestions.question,
+          javascriptQuestions.answer
+        )
+      }
   },
   actions: {
+    addToFavorite(context) {
+      context.commit('addToFavorite')
+    }
     // store methods
   },
   getters: {
