@@ -43,31 +43,34 @@
           >mdi-comment-off-outline</v-icon
         >
         <v-icon
-          @click="randomQuestion"
+          @click="randomHtmlQuestion"
           color="brown"
           style="position: absolute; bottom: 26%; right:7%; font-size:45px;"
           >mdi-dice-multiple</v-icon
         >
-        <v-icon
-          @click="questionLoop"
-          color="white"
-          class="mx-auto"
-          style="position: absolute; bottom: 26%; right:12%; font-size:45px;"
-          >mdi-autorenew</v-icon
-        >
-        <v-icon
-          @click="addToFavorite(htmlQuestions)"
-          color="red"
-          style="position: absolute; bottom: 26%; right:1%; font-size:45px;"
-          >mdi-heart</v-icon
-        >
+        <v-button @click="htmlQuestionLoop">
+          <v-icon
+            color="white"
+            class="mx-auto"
+            style="position: absolute; bottom: 26%; right:12%; font-size:45px;"
+            >mdi-autorenew</v-icon
+          >
+        </v-button>
+
+        <v-button @click="addToFavorite(htmlQuestions)">
+          <v-icon
+            color="red"
+            style="position: absolute; bottom: 26%; right:1%; font-size:45px;"
+            >mdi-heart</v-icon
+          >
+        </v-button>
       </div>
     </v-carousel-item>
   </v-carousel>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from "vuex";
 export default {
   props: {
     page: {
@@ -75,27 +78,22 @@ export default {
     },
   },
   computed: {
-    ...mapState([
-      'disable',
-      'favorite',
-    ]),
-    ...mapState(
-      'questions', ['htmlQuestions']
-    ),
+    ...mapState(["disable", "favorite"]),
+    ...mapState("questions", ["htmlQuestions"]),
   },
 
   methods: {
     disableAnswers() {
       this.$store.commit("disable");
     },
-    questionLoop() {
-      this.$store.dispatch("questions/questionLoop");
+    addToFavorite(htmlQuestions) {
+      this.$store.state.favorite.push(htmlQuestions);
     },
-    randomQuestion() {
-      this.$store.dispatch("questions/randomQuestion");
+    htmlQuestionLoop() {
+      this.$store.dispatch("questions/htmlQuestionLoop");
     },
-    questionLoop() {
-      this.$store.dispatch("questions/questionLoop");
+    randomHtmlQuestion() {
+      this.$store.dispatch("questions/randomHtmlQuestion");
     },
   },
 };

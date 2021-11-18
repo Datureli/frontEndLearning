@@ -65,7 +65,7 @@ const routes = [
       {
         path: "htmlquestions",
         component: () =>
-          import("../components/RecruimentQuestions/htmlQuestions.vue"),
+          import("../components/RecruimentQuestions/HtmlQuestions.vue"),
         name: "HtmlQuestions",
         children: [
           {

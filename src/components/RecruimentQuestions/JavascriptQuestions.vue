@@ -48,26 +48,29 @@
           style="position: absolute; bottom: 26%; right:7%; font-size:45px;"
           >mdi-dice-multiple</v-icon
         >
-        <v-icon
-          @click="questionLoop"
-          color="white"
-          class="mx-auto"
-          style="position: absolute; bottom: 26%; right:12%; font-size:45px;"
-          >mdi-autorenew</v-icon
-        >
-        <v-icon
-          @click="addToFavorite(javascriptQuestions)"
-          color="red"
-          style="position: absolute; bottom: 26%; right:1%; font-size:45px;"
-          >mdi-heart</v-icon
-        >
+        <v-button @click="questionLoop()">
+          <v-icon
+            color="white"
+            class="mx-auto"
+            style="position: absolute; bottom: 26%; right:12%; font-size:45px;"
+            >mdi-autorenew</v-icon
+          >
+        </v-button>
+
+        <v-button @click="addToFavorite(javascriptQuestions)">
+          <v-icon
+            color="red"
+            style="position: absolute; bottom: 26%; right:1%; font-size:45px;"
+            >mdi-heart</v-icon
+          >
+        </v-button>
       </div>
     </v-carousel-item>
   </v-carousel>
 </template>
 
 <script>
-import {mapState} from 'vuex'
+import { mapState } from "vuex";
 export default {
   props: {
     page: {
@@ -75,22 +78,15 @@ export default {
     },
   },
   computed: {
-    ...mapState([
-      'disable',
-      'favorite',
-    ]),
-    ...mapState(
-      'questions', ['javascriptQuestions']
-    ),
+    ...mapState(["disable", "favorite"]),
+    ...mapState("questions", ["javascriptQuestions"]),
   },
 
   methods: {
     disableAnswers() {
       this.$store.commit("disable");
     },
-    questionLoop() {
-      this.$store.dispatch("questions/questionLoop");
-    },
+
     addToFavorite(javascriptQuestions) {
       this.$store.state.favorite.push(javascriptQuestions);
     },

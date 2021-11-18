@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import htmlQuestions from "./htmlQuestions.vue";
+import htmlQuestions from "./HtmlQuestions.vue";
 import CssQuestions from "./CssQuestions.vue"; 
 export default {
  components: {

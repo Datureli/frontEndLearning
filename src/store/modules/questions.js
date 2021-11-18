@@ -2,7 +2,6 @@ export default {
 namespaced: true,
 
   state: {
-    jsIndex: 0,
     htmlQuestions: [
       {
         question: "Do czego służy atrybut role?",
@@ -20,11 +19,19 @@ namespaced: true,
            {
         question: "to czego służy znacznik <pre>?",
         answer: "Wprowadza tekst preformatowany, czyli napisany czcionką monotypiczną (o stałej szerokości znaku), który uwzględnia dodatkowe spacje, tabulację i znaki końca linii (nie trzeba stosować znaczników <br>) oraz nie jest automatycznie zawijany. Dzięki niemu możesz np. wkleić na stronę WWW tekst, wprost ze zwykłego edytora, bez stosowania dodatkowych znaczników (niestety informacje dotyczące formatowania zostaną pominięte). Należy jednak przy tym pamiętać, aby tekst nie zawierał znaków: "<" oraz ">" (w zamian używaj: &lt; i &gt;).",
+        thirdPartOfAnswer: ''
       },
       {
         question: "Do czego służy znacznik Main?",
         answer: "Znacznik Main służy do umieszczania głównej części strony",
+        secondAnswer: ''
       },
+      {
+        question: "Na czym polega semantyczny Html?",
+        answer: "Znacznik Main służy do umieszczania głównej części strony",
+        secondAnswer: ''
+      },
+      
     ],
     cssQuestions: [
       {
@@ -195,6 +202,18 @@ namespaced: true,
         });
       }, 1000);
     },
+    htmlQuestionLoop(state) {
+      setInterval(() => {
+        state.htmlQuestions.sort(function() {
+          return Math.round(Math.random()) - 0.5;
+        });
+      }, 1000);
+    },
+    randomHtmlQuestion(state) {
+      state.htmlQuestions.sort(function() {
+        return Math.round(Math.random()) - 0.5;
+      });
+    },
     randomQuestion(state) {
       state.javascriptQuestions.sort(function() {
         return Math.round(Math.random()) - 0.5;
@@ -206,8 +225,14 @@ namespaced: true,
     questionLoop(context) {
       context.commit('questionLoop')
     },
+    htmlQuestionLoop(context) {
+      context.commit('htmlQuestionLoop')
+    },
     randomQuestion(context) {
       context.commit('randomQuestion')
+    },
+    randomHtmlQuestion(context) {
+      context.commit('randomHtmlQuestion')
     }
   },
 };
