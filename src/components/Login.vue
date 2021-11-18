@@ -128,7 +128,7 @@ export default {
       ["mdi-account-supervisor-circle", "Supervisors"],
       ["mdi-clock-start", "Password"],
       ["mdi-clock-start", "Payment methods"],
-      ["mdi-clock-start", "Favorite"],
+      ["mdi-clock-start", "Favorite",],
       ["mdi-clock-start", "Account settings"],
       ["mdi-clock-start", "Premium"],
     ],

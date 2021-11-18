@@ -1,14 +1,14 @@
 <template>
   <v-card
     width="320"
-    class="ml-5 mt-10"
-    outlined
+    class="mt-10"
     color="transparent"
     elevation="0"
   >
     <v-list color="transparent">
       <v-list-item-group
         v-model="selectedItem"
+        style="font-size: 25px"
         color="primary"
         active-class="blue--text"
       >
@@ -27,7 +27,7 @@
           <v-icon>mdi-account-circle</v-icon>
           <router-link
             :to="{ name: 'CssQuestions' }"
-            class="text-deocration-none mx-auto"
+            class="mx-auto"
             style="text-decoration: none; color: #a55c1b;"
           >
             Css
@@ -76,16 +76,6 @@
         <v-list-item>
           <v-icon>mdi-account-circle</v-icon>
           <router-link
-            :to="{ name: 'HtmlQuestions' }"
-            class="text-deocration-none mx-auto"
-            style="text-decoration: none; color: #a55c1b;"
-          >
-            Scss
-          </router-link>
-        </v-list-item>
-        <v-list-item>
-          <v-icon>mdi-account-circle</v-icon>
-          <router-link
             :to="{ name: 'GeneralQuestions' }"
             class="text-deocration-none mx-auto"
             style="text-decoration: none; color: #a55c1b;"
@@ -113,16 +103,7 @@
 <script>
 export default {
   data: () => ({
-    admins: [
-      ["Management", "mdi-account-multiple-outline"],
-      ["Settings", "mdi-cog-outline"],
-    ],
-    cruds: [
-      ["Create", "mdi-plus-outline"],
-      ["Read", "mdi-file-outline"],
-      ["Update", "mdi-update"],
-      ["Delete", "mdi-delete"],
-    ],
+
   }),
   methods: {
     emitCss() {

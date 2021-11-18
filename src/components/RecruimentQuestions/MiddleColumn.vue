@@ -24,29 +24,11 @@
 
 <script>
 import htmlQuestions from "./htmlQuestions.vue";
-import CssQuestions from "./CssQuestions.vue";
-import { html2canvas } from 'html2canvas'; 
+import CssQuestions from "./CssQuestions.vue"; 
 export default {
-    mounted() {
-    this.print()
-  },
-  methods: {
-    async print() {
-
-      const options = {
-        type: 'dataURL',
-        useCORS: true
-      }
-      this.output = await html2canvas( options);
-    }
-  },
-  data: () => ({
-    output: null,
-    page: 1,
-    components: {
+ components: {
       htmlQuestions,
       CssQuestions,
     },
-  }),
 };
 </script>

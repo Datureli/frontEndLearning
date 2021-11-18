@@ -1,5 +1,5 @@
 <template>
-  <div class="triangle d-flex mt-15">
+  <v-card height="430" class="triangle d-flex mt-7">
     <v-spacer></v-spacer>
     
      <materialCard> 
@@ -12,18 +12,13 @@
       <Slot title="tab3">Strony internetowe</Slot>
     </materialCard>
     <v-spacer></v-spacer>
-  </div>
+  </v-card>
 </template>
 
 <script setup>
 import MaterialCard from "../components/MaterialCard.vue";
 import Slot from '../components/Slot.vue';
 export default {
-  data() {
-    return {
-      
-    };
-  },
   components: {
     MaterialCard,
   },

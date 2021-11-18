@@ -3,6 +3,29 @@ namespaced: true,
 
   state: {
     jsIndex: 0,
+    htmlQuestions: [
+      {
+        question: "Do czego służy atrybut role?",
+        answer: `Jest to znacznik, który określa znaczenie elementu.
+         Głównie do celów dostępności (ang. accessibility). Jest częścią specyfikacji ARIA. Został też dodany do HTML5.`,
+      },
+      {
+        question: "Czym jest Web Socket?",
+        answer: 'Web sockets to technologia następnej generacji do dwukierunkowej komunikacji dla aplikacji internetowych, która działa na jednym gnieździe i jest wystawiona za pomocą interfejsu napisanego w JavaScript dla przeglądarek zgodnych z HTML5,Po uzyskaniu połączenia gniazda z serwerem WWW, możesz wysyłać dane z przeglądarki do serwera po wywołaniu metody send() oraz odbierać dane z serwera dzięki obsłudze zdarzenia onmessage'
+      },
+      {
+        question: "Oui oui",
+        answer: "Do you have Paris recommendations? Have you ever been?",
+      },
+           {
+        question: "to czego służy znacznik <pre>?",
+        answer: "Wprowadza tekst preformatowany, czyli napisany czcionką monotypiczną (o stałej szerokości znaku), który uwzględnia dodatkowe spacje, tabulację i znaki końca linii (nie trzeba stosować znaczników <br>) oraz nie jest automatycznie zawijany. Dzięki niemu możesz np. wkleić na stronę WWW tekst, wprost ze zwykłego edytora, bez stosowania dodatkowych znaczników (niestety informacje dotyczące formatowania zostaną pominięte). Należy jednak przy tym pamiętać, aby tekst nie zawierał znaków: "<" oraz ">" (w zamian używaj: &lt; i &gt;).",
+      },
+      {
+        question: "Do czego służy znacznik Main?",
+        answer: "Znacznik Main służy do umieszczania głównej części strony",
+      },
+    ],
     cssQuestions: [
       {
         answerNumbers: 2,
@@ -145,7 +168,19 @@ namespaced: true,
         answer:
           "Zwraca pierwszy (najmniejszy) indeks elementu w tablicy równego podanej wartości lub -1, gdy nie znaleziono takiego elementu.",
       },
+      {
+        question: "Co to są funkcje?",
+        answer:
+          "Funkcje to zbiór zgrupowanych instrukcji, które możemy odpalać poprzez podanie ich nazwy. Każda taka funkcja po wywołaniu wykonuje swój wewnętrzny kod, a następnie może zwrócić nam jakąś wartość.",
+      },
+      {
+        question: "Na czym polega destrukturyzacja?",
+        answer:
+          "Przypisanie destrukturyzujące umożliwia przypisanie własności tablicy lub obiektu do zmiennych z wykorzystaniem składni przypominającej składnię tablic czy literałów obiektowych. Może być ona niezwykle zwięzła, a jednocześnie znacznie czytelniejsza od tradycyjnego kodu służącego do uzyskania dostępu do własności.",
+          secondAnswer: "Nie korzystając z przypisania destrukturyzującego, dostęp do pierwszych trzech elementów tablicy możemy uzyskać w następujący sposób:var first = jakaśTamTablica[0]  var second = jakaśTamTablica[1]; var third = jakaśTamTablica[2];Jeśli natomiast zastosujemy przypisanie destrukturyzujące, ten sam kod można wyrazić w bardziej zwięzły i czytelny sposób:	      var [first, second, third] = jakaśTamTablica;"
+      },
     ],
+   
   },
 
   getters: {

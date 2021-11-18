@@ -1,51 +1,102 @@
 <template>
-  <v-carousel>
-    <v-carousel-item v-for="(item, index) in items" :key="index">
-      <v-sheet height="350" tile>
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-subtitle
-              class="text--primary text-h4 text-wrap "
-              v-text="item.question"
-            ></v-list-item-subtitle>
+  <v-carousel @change="page = 1" class="mt-1">
+    <v-carousel-item
+      v-for="(htmlQuestions, index) in htmlQuestions"
+      :key="index"
+    >
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-subtitle
+            class="text--primary   font-weight-black  text-h4 text-wrap "
+            v-text="htmlQuestions.question"
+          ></v-list-item-subtitle>
 
-            <v-list-item-subtitle
-              class="text-h5 text-wrap"
-              v-text="item.answer"
-            ></v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-      </v-sheet>
+          <v-list-item-subtitle
+            class="white--text text-justify text-h5 text-wrap"
+            v-if="page === 1"
+            v-show="disable"
+            v-text="htmlQuestions.answer"
+          ></v-list-item-subtitle>
+          <v-list-item-subtitle
+            class="white--text text-justify text-h5 text-wrap"
+            v-if="page === 2"
+            v-show="disable"
+            v-text="htmlQuestions.secondAnswer"
+          ></v-list-item-subtitle>
+          <v-list-item-subtitle
+            class="white--text text-justify text-h5 text-wrap"
+            v-if="page === 3"
+            v-show="disable"
+            v-text="htmlQuestions.thirdPartOfAnswer"
+          ></v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+      <div class="d-flex">
+        <v-pagination
+          style="position: absolute; bottom: 25%; right:35%"
+          v-model="page"
+          :length="3"
+        ></v-pagination>
+        <v-icon
+          @click="disableAnswers"
+          style="position: absolute; bottom: 26%; right:17%; font-size:45px;"
+          >mdi-comment-off-outline</v-icon
+        >
+        <v-icon
+          @click="randomQuestion"
+          color="brown"
+          style="position: absolute; bottom: 26%; right:7%; font-size:45px;"
+          >mdi-dice-multiple</v-icon
+        >
+        <v-icon
+          @click="questionLoop"
+          color="white"
+          class="mx-auto"
+          style="position: absolute; bottom: 26%; right:12%; font-size:45px;"
+          >mdi-autorenew</v-icon
+        >
+        <v-icon
+          @click="addToFavorite(htmlQuestions)"
+          color="red"
+          style="position: absolute; bottom: 26%; right:1%; font-size:45px;"
+          >mdi-heart</v-icon
+        >
+      </div>
     </v-carousel-item>
   </v-carousel>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
-  data: () => ({
-    items: [
-      {
-        question: "Do czego służy atrybut role?",
-        answer: `Jest to znacznik, który określa znaczenie elementu.
-         Głównie do celów dostępności (ang. accessibility). Jest częścią specyfikacji ARIA. Został też dodany do HTML5.`,
-      },
-      {
-        question: "Czym jest Web Socket?",
-        answer: 'Web sockets to technologia następnej generacji do dwukierunkowej komunikacji dla aplikacji internetowych, która działa na jednym gnieździe i jest wystawiona za pomocą interfejsu napisanego w JavaScript dla przeglądarek zgodnych z HTML5,Po uzyskaniu połączenia gniazda z serwerem WWW, możesz wysyłać dane z przeglądarki do serwera po wywołaniu metody send() oraz odbierać dane z serwera dzięki obsłudze zdarzenia onmessage'
-      },
-      {
-        question: "Oui oui",
-        answer: "Do you have Paris recommendations? Have you ever been?",
-      },
-           {
-        question: "to czego służy znacznik <pre>?",
-        answer: "Wprowadza tekst preformatowany, czyli napisany czcionką monotypiczną (o stałej szerokości znaku), który uwzględnia dodatkowe spacje, tabulację i znaki końca linii (nie trzeba stosować znaczników <br>) oraz nie jest automatycznie zawijany. Dzięki niemu możesz np. wkleić na stronę WWW tekst, wprost ze zwykłego edytora, bez stosowania dodatkowych znaczników (niestety informacje dotyczące formatowania zostaną pominięte). Należy jednak przy tym pamiętać, aby tekst nie zawierał znaków: "<" oraz ">" (w zamian używaj: &lt; i &gt;).",
-      },
-      {
-        question: "Do czego służy znacznik Main?",
-        answer: "Znacznik Main służy do umieszczania głównej części strony",
-      },
-    ],
-  }),
+  props: {
+    page: {
+      type: Number,
+    },
+  },
+  computed: {
+    ...mapState([
+      'disable',
+      'favorite',
+    ]),
+    ...mapState(
+      'questions', ['htmlQuestions']
+    ),
+  },
+
+  methods: {
+    disableAnswers() {
+      this.$store.commit("disable");
+    },
+    questionLoop() {
+      this.$store.dispatch("questions/questionLoop");
+    },
+    randomQuestion() {
+      this.$store.dispatch("questions/randomQuestion");
+    },
+    questionLoop() {
+      this.$store.dispatch("questions/questionLoop");
+    },
+  },
 };
 </script>
