@@ -22,7 +22,8 @@ export default new Vuex.Store({
       state.favorite.push(
         javascriptQuestions.question,
         javascriptQuestions.answer,
-        htmlQuestions
+        htmlQuestions,
+        vueQuestions
       );
     },
   },
