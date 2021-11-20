@@ -112,12 +112,20 @@ const routes = [
   {
     path: "/login",
     name: "Login",
-    component: () => import("../components/Login.vue"),
+    component: () => import("../components/login/Login.vue"),
+    children: [
+      
+    ]
   },
   {
     path: "/english",
     name: "English",
     component: () => import("../components/EnglishSection/English.vue"),
+  },
+  {
+    path: "/favorite",
+    name: "Favorite",
+    component: () => import("../components/login/FavoriteSection.vue"),
   }
 ];
 

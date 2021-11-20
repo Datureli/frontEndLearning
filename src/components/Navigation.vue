@@ -94,7 +94,7 @@ background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
 </template>
 
 <script>
-import Login from "./Login.vue";
+import Login from "./login/Login.vue";
 import SignUp from "./SignUp.vue";
 export default {
   components: { Login, SignUp },

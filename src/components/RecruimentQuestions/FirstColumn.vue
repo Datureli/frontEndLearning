@@ -99,16 +99,3 @@
     </v-list>
   </v-card>
 </template>
-
-<script>
-export default {
-  data: () => ({
-
-  }),
-  methods: {
-    emitCss() {
-      this.$emit("css");
-    },
-  },
-};
-</script>

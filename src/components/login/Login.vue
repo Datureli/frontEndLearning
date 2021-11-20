@@ -6,6 +6,7 @@
       hide-overlay
       @keydown.esc="dialog = false"
       transition="dialog-bottom-transition"
+      height="100%"
     >
       <template v-slot:activator="{ on, attrs }">
         <v-btn color="transparent" dark v-bind="attrs" v-on="on">
@@ -39,21 +40,103 @@
               width="100%"
               height="100%"
             >
-              <v-list>
-                <v-list-item v-for="([icon, text], i) in items" :key="i" link>
-                  <v-list-item-icon>
-                    <v-icon>{{ icon }}</v-icon>
-                  </v-list-item-icon>
+              <v-list color="transparent">
+                <v-list-item-group
+                  v-model="selectedItem"
+                  style="font-size: 20px"
+                  color="primary"
+                  active-class="blue--text"
+                >
+                  <v-list-item>
+                    <v-icon>mdi-home</v-icon>
+                    <router-link
+                      :to="{ name: 'HtmlQuestions' }"
+                      class="text-deocration-none mx-auto"
+                      style="text-decoration: none;"
+                    >
+                      Html
+                    </router-link>
+                  </v-list-item>
 
-                  <v-list-item-content>
-                    <v-list-item-title>{{ text }}</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
+                  <v-list-item>
+                    <v-icon>mdi-account-circle</v-icon>
+                    <router-link
+                      :to="{ name: 'CssQuestions' }"
+                      class="mx-auto"
+                      style="text-decoration: none;"
+                    >
+                      Css
+                    </router-link>
+                  </v-list-item>
+                  <v-list-item>
+                    <v-icon>mdi-account-circle</v-icon>
+                    <router-link
+                      :to="{ name: 'JavascriptQuestions' }"
+                      class="text-deocration-none mx-auto"
+                      style="text-decoration: none;"
+                    >
+                      Javascript
+                    </router-link>
+                  </v-list-item>
+                  <v-list-item>
+                    <v-icon>mdi-account-circle</v-icon>
+                    <router-link
+                      :to="{ name: 'VueQuestions' }"
+                      class="text-deocration-none mx-auto"
+                      style="text-decoration: none;"
+                    >
+                      Vue
+                    </router-link>
+                  </v-list-item>
+                  <v-list-item>
+                    <v-icon>mdi-account-circle</v-icon>
+                    <router-link
+                      :to="{ name: 'HtmlQuestions' }"
+                      class="text-deocration-none mx-auto"
+                      style="text-decoration: none;"
+                    >
+                      React
+                    </router-link>
+                  </v-list-item>
+                  <v-list-item>
+                    <v-icon>mdi-account-circle</v-icon>
+                    <router-link
+                      :to="{ name: 'Favorite' }"
+                      class="text-deocration-none mx-auto"
+                      style="text-decoration: none;"
+                    >
+                      Favorite
+                    </router-link>
+                  </v-list-item>
+                  <v-list-item>
+                    <v-icon>mdi-account-circle</v-icon>
+                    <router-link
+                      :to="{ name: 'GeneralQuestions' }"
+                      class="text-deocration-none mx-auto"
+                      style="text-decoration: none;"
+                    >
+                      Ogólne
+                    </router-link>
+                  </v-list-item>
+                  <v-list-item>
+                    <v-icon>mdi-account-circle</v-icon>
+                    <router-link
+                      :to="{ name: 'StupidQuestions' }"
+                      class="text-deocration-none mx-auto"
+                      style="text-decoration: none;"
+                    >
+                      Pytania o ciebie
+                    </router-link>
+                  </v-list-item>
+                </v-list-item-group>
               </v-list>
+
               <v-btn class="mt-15" @click="logOut">Logout</v-btn>
             </v-navigation-drawer>
           </v-card>
+      
           <MyInformation v-show="loggedIn && !elementVisible" />
+            
         </div>
 
         <v-container>
@@ -115,12 +198,14 @@
 </template>
 
 <script>
+import FavoriteSection from './FavoriteSection.vue';
 import loginAnimation from "./LoginAnimation.vue";
 import MyInformation from "./MyInformation.vue";
 export default {
   components: {
     loginAnimation,
     MyInformation,
+    FavoriteSection,
   },
   data: () => ({
     items: [
@@ -128,7 +213,7 @@ export default {
       ["mdi-account-supervisor-circle", "Supervisors"],
       ["mdi-clock-start", "Password"],
       ["mdi-clock-start", "Payment methods"],
-      ["mdi-clock-start", "Favorite",],
+      ["mdi-clock-start", "Favorite"],
       ["mdi-clock-start", "Account settings"],
       ["mdi-clock-start", "Premium"],
     ],
