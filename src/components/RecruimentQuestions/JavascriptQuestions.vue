@@ -66,6 +66,7 @@
             >mdi-heart</v-icon
           >
         </v-button>
+        
       </div>
     </v-carousel-item>
   </v-carousel>

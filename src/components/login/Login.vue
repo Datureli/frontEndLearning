@@ -9,9 +9,10 @@
       height="100%"
     >
       <template v-slot:activator="{ on, attrs }">
-        <v-btn color="transparent" dark v-bind="attrs" v-on="on">
+        <v-btn v-if="loggedIn === false" color="transparent" dark v-bind="attrs" v-on="on">
           login
         </v-btn>
+        <v-btn v-else>My Account</v-btn>
       </template>
 
       <v-card
