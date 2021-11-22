@@ -1,6 +1,6 @@
 <template>
   <v-sheet
-    class="mx-auto mt-12"
+    class="mx-auto mt-8 "
     height="400"
     width="900"
     style="

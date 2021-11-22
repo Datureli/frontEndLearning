@@ -3,6 +3,8 @@
     <v-carousel-item
       v-for="(htmlQuestions, index) in htmlQuestions"
       :key="index"
+          max-width="700"
+      class="mx-auto"
     >
       <v-list-item>
         <v-list-item-content>

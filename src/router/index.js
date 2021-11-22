@@ -110,11 +110,15 @@ const routes = [
     component: () => import("../components/SignUp.vue")
   },
   {
-    path: "/login",
+    path: "/login/",
     name: "Login",
     component: () => import("../components/login/Login.vue"),
     children: [
-      
+      {
+        path: "favorite",
+        name: "Favorite",
+        component: () => import("../components/login/FavoriteSection.vue"),
+      }
     ]
   },
   {
@@ -122,11 +126,7 @@ const routes = [
     name: "English",
     component: () => import("../components/EnglishSection/English.vue"),
   },
-  {
-    path: "/favorite",
-    name: "Favorite",
-    component: () => import("../components/login/FavoriteSection.vue"),
-  }
+
 ];
 
 const router = new VueRouter({

@@ -232,6 +232,11 @@ namespaced: true,
         question: 'Czym są sunspense components',
           answer: 'życie mapState() pozwala na pobranie i przypisanie do lokalnego scope wartości bezpośrednio z sekcji state w store. W ten sposób otrzymujemy czyste dane – bez żadnych modyfikacji. Ma to duży sens, jeśli są to typy proste – jakaś flaga będąca wartością boolean (true/false), np. flaga „loading” itp.'
       },
+      {
+        question: 'Jaka jest różnica między composition api a option api?',
+          answer: 'Composition API. Udostępnia nowy sposób tworzenia komponentów, który znacząco różni się od podejścia zaprezentowanego w poprzedniej wersji frameworka.Przede wszystkim większa elastyczność w układaniu logiki kodu, jego lepsza reużywalność oraz poprawiona czytelność dzięki mniejszej ilości zagłębień. O jakich dobrodziejstwach mowa? Przede wszystkim większa elastyczność w układaniu logiki kodu, jego lepsza reużywalność oraz poprawiona czytelność dzięki mniejszej ilości zagłębień. Doświadczenie pokazało, że większe aplikacje oparte o Vue.js w wersji 2 były ciężkie do utrzymania, do rozbudowy oraz do diagnozowania błędów. Niektórzy developerzy narzekali też na problemy z reaktywnością. Mając to na uwadze, Evan You postanowił zmienić podejście do sposobu w jaki tworzona jest logika komponentów. W jego działaniach było widać inspiracje innymi popularnymi frameworkami jak React czy Svelte, chociażby poprzez wprowadzenie konstrukcji łudząco podobnych do React Hooks.',
+          secondAnswer: 'Composition api posiada setup hook wewnątrz którego piszemy swój kod.        Wewnątrz setup hook możemy pogrupować części naszego kodu według logicznego porządku.Dzięki composition api nie musimy więc używać Mixinów.'
+      },
     ],
    
   },

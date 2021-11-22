@@ -1,8 +1,10 @@
 <template>
-  <v-carousel @change="page = 1" class="mt-1">
+  <v-carousel @change="page = 1"   @keydown.39="s" >
     <v-carousel-item
       v-for="(vueQuestions, index) in vueQuestions"
       :key="index"
+      max-width="700"
+      class="mx-auto"
     >
       <v-list-item>
         <v-list-item-content>

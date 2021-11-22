@@ -22,7 +22,7 @@
           <v-toolbar-title>Login</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-toolbar-items>
-            <v-btn icon dark @click="dialog = false">
+            <v-btn icon dark @click="closeModal">
               <v-icon>mdi-close</v-icon>
             </v-btn>
           </v-toolbar-items>
@@ -134,9 +134,11 @@
               <v-btn class="mt-15" @click="logOut">Logout</v-btn>
             </v-navigation-drawer>
           </v-card>
-      
-          <MyInformation v-show="loggedIn && !elementVisible" />
-            
+          <FavoriteSection v-if="this.$route.path === '/login/favorite'" />
+          <MyInformation
+            v-show="loggedIn && !elementVisible"
+            v-if="this.$route.path === '/login'"
+          />
         </div>
 
         <v-container>
@@ -176,6 +178,7 @@
             <v-card-actions>
               <v-btn
                 block
+                v-if="loginButton"
                 rounded
                 class="mx-auto ma-2"
                 @click="isUserLogin()"
@@ -198,7 +201,7 @@
 </template>
 
 <script>
-import FavoriteSection from './FavoriteSection.vue';
+import FavoriteSection from "./FavoriteSection.vue";
 import loginAnimation from "./LoginAnimation.vue";
 import MyInformation from "./MyInformation.vue";
 export default {
@@ -208,16 +211,9 @@ export default {
     FavoriteSection,
   },
   data: () => ({
-    items: [
-      ["mdi-email", "Inbox"],
-      ["mdi-account-supervisor-circle", "Supervisors"],
-      ["mdi-clock-start", "Password"],
-      ["mdi-clock-start", "Payment methods"],
-      ["mdi-clock-start", "Favorite"],
-      ["mdi-clock-start", "Account settings"],
-      ["mdi-clock-start", "Premium"],
-    ],
+    showFavorite: false,
     elementVisible: true,
+    loginButton: true,
     dialog: false,
     username: null,
     password: null,
@@ -233,12 +229,19 @@ export default {
     isUserLogin() {
       if (this.username.length > 0 && this.password.length > 0) {
         this.loggedIn = true;
+        this.$router.push({ path: "login" });
       }
+
     },
   },
   methods: {
     logOut() {
       this.loggedIn = false;
+    },
+
+    closeModal() {
+      this.dialog = false;
+      this.$router.push({ path: "/" });
     },
   },
   created() {
