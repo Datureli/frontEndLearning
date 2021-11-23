@@ -3,16 +3,29 @@
     <v-dialog
       v-model="dialog"
       fullscreen
-      hide-overlay
       @keydown.esc="dialog = false"
       transition="dialog-bottom-transition"
-      height="100%"
     >
       <template v-slot:activator="{ on, attrs }">
-        <v-btn v-if="loggedIn === false" color="transparent" dark v-bind="attrs" v-on="on">
+        <v-btn
+          v-if="loggedIn === false"
+          color="transparent"
+          dark
+          v-bind="attrs"
+          v-on="on"
+        >
           login
         </v-btn>
-        <v-btn v-else>My Account</v-btn>
+        <v-btn
+          @click="contModal"
+          v-else
+          v-model="dialog"
+          v-on="on"
+          v-bind="attrs"
+          color="transparent"
+          dark
+          >My Account</v-btn
+        >
       </template>
 
       <v-card
@@ -30,9 +43,9 @@
         </v-toolbar>
         <div class="d-flex">
           <v-card
-            after-sticky
+            elevation="0"
             v-show="loggedIn && !elementVisible"
-            height="38em"
+            height="100%"
             width="310"
           >
             <v-navigation-drawer
@@ -43,13 +56,11 @@
             >
               <v-list color="transparent">
                 <v-list-item-group
-                  v-model="selectedItem"
                   style="font-size: 20px"
                   color="primary"
                   active-class="blue--text"
                 >
                   <v-list-item>
-                    <v-icon>mdi-home</v-icon>
                     <router-link
                       :to="{ name: 'HtmlQuestions' }"
                       class="text-deocration-none mx-auto"
@@ -60,7 +71,6 @@
                   </v-list-item>
 
                   <v-list-item>
-                    <v-icon>mdi-account-circle</v-icon>
                     <router-link
                       :to="{ name: 'CssQuestions' }"
                       class="mx-auto"
@@ -70,7 +80,6 @@
                     </router-link>
                   </v-list-item>
                   <v-list-item>
-                    <v-icon>mdi-account-circle</v-icon>
                     <router-link
                       :to="{ name: 'JavascriptQuestions' }"
                       class="text-deocration-none mx-auto"
@@ -80,7 +89,6 @@
                     </router-link>
                   </v-list-item>
                   <v-list-item>
-                    <v-icon>mdi-account-circle</v-icon>
                     <router-link
                       :to="{ name: 'VueQuestions' }"
                       class="text-deocration-none mx-auto"
@@ -90,7 +98,6 @@
                     </router-link>
                   </v-list-item>
                   <v-list-item>
-                    <v-icon>mdi-account-circle</v-icon>
                     <router-link
                       :to="{ name: 'HtmlQuestions' }"
                       class="text-deocration-none mx-auto"
@@ -100,7 +107,6 @@
                     </router-link>
                   </v-list-item>
                   <v-list-item>
-                    <v-icon>mdi-account-circle</v-icon>
                     <router-link
                       :to="{ name: 'Favorite' }"
                       class="text-deocration-none mx-auto"
@@ -110,7 +116,6 @@
                     </router-link>
                   </v-list-item>
                   <v-list-item>
-                    <v-icon>mdi-account-circle</v-icon>
                     <router-link
                       :to="{ name: 'GeneralQuestions' }"
                       class="text-deocration-none mx-auto"
@@ -120,7 +125,6 @@
                     </router-link>
                   </v-list-item>
                   <v-list-item>
-                    <v-icon>mdi-account-circle</v-icon>
                     <router-link
                       :to="{ name: 'StupidQuestions' }"
                       class="text-deocration-none mx-auto"
@@ -132,7 +136,7 @@
                 </v-list-item-group>
               </v-list>
 
-              <v-btn class="mt-15" @click="logOut">Logout</v-btn>
+              <v-btn class="mt-10 mb-10" @click="logOut">Logout</v-btn>
             </v-navigation-drawer>
           </v-card>
           <FavoriteSection v-if="this.$route.path === '/login/favorite'" />
@@ -232,7 +236,6 @@ export default {
         this.loggedIn = true;
         this.$router.push({ path: "login" });
       }
-
     },
   },
   methods: {
@@ -243,6 +246,9 @@ export default {
     closeModal() {
       this.dialog = false;
       this.$router.push({ path: "/" });
+    },
+    contModal() {
+      this.$router.push({ path: "login" });
     },
   },
   created() {

@@ -9,10 +9,7 @@
 
         <v-spacer></v-spacer>
         <v-btn color="transparent" outlined>
-
-    <Login />
-     
-      
+          <Login />
         </v-btn>
         <v-btn color="transparent" outlined>
           <SignUp />
@@ -80,7 +77,7 @@
                 >Interview</router-link
               ></v-tab
             >
-                 <v-tab>
+            <v-tab>
               <router-link
                 :to="{ name: 'English' }"
                 class="text-decoration-none white--text"

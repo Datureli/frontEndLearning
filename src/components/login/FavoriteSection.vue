@@ -1,7 +1,8 @@
 <template>
-  <v-container class="d-flex">
-    <v-card class="mt-5 ml-5 mx-auto" v-for="(favorite, index) in favorite" :key="index" width="400" height="100" elevation="10">
+  <v-container class="d-grid mx-auto">
+    <v-card class="mt-5 mx-auto" v-for="(favorite, index) in favorite" :key="index" width="90%" height="auto" elevation="10">
     <h1 class="mx-auto">{{ favorite.question }}</h1>  
+    <p>{{favorite.answer}}</p>
 
     </v-card>
   </v-container>
