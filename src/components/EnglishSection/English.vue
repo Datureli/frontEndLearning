@@ -15,7 +15,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://api.wordreference.com/")
+      .get("http://wordreference.com/enpl/")
       .then((response) => (this.info = response.data));
   },
 };

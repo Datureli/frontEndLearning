@@ -1,37 +1,94 @@
 export default {
-namespaced: true,
+  namespaced: true,
 
   state: {
     htmlQuestions: [
       {
-        question: "Do czego służy atrybut role?",
+        question: "Czym jest Html?",
+        answer: `HTML (Hypertext Markup Language) jest to kod używany do tworzenia struktury strony i jej zawartości.jest językiem używanym do tworzenia stron internetowych. Jest to także język znaczników, czyli oprócz głównego tekstu dokument zawiera w sobie informację opisujące go. `,
+      },
+
+      {
+        question: "Czym jest tag <blockquote>?",
+        answer:
+          "Tag <blockquote> określa treść cytowaną ze źródła zewnętrznego (gazeta, praca naukowa itp.",
+        secondAnswer:
+          "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
+      },
+      {
+        question: "Czym jest Html?",
         answer: `Jest to znacznik, który określa znaczenie elementu.
          Głównie do celów dostępności (ang. accessibility). Jest częścią specyfikacji ARIA. Został też dodany do HTML5.`,
       },
       {
-        question: "Czym jest Web Socket?",
-        answer: 'Web sockets to technologia następnej generacji do dwukierunkowej komunikacji dla aplikacji internetowych, która działa na jednym gnieździe i jest wystawiona za pomocą interfejsu napisanego w JavaScript dla przeglądarek zgodnych z HTML5,Po uzyskaniu połączenia gniazda z serwerem WWW, możesz wysyłać dane z przeglądarki do serwera po wywołaniu metody send() oraz odbierać dane z serwera dzięki obsłudze zdarzenia onmessage'
+        question: "Czym jest tag <picture>?",
+        answer: `Tag <picture> zapewnia programistom stron internetowych większą elastyczność w określaniu zasobów obrazu. Zamiast jednego obrazu skalowanego w górę lub w dół to, w zależności od rozmiaru viewportu, można dobrać wiele obrazów tak, żeby dla każdej rozdzielczości ładnie wypełnić okno przeglądarki.`,
+        secondAnswer:
+          "Element <picture> ma dwa różne tagi: jeden lub więcej tagów <source> oraz jeden tag <img>.Tag <source> ma następujące właściwości:srcset (wymagany): określa URL obrazu do wyświetlenia media: akceptuje wszelkie prawidłowe media query, które normalnie byłyby ustawione w CSS      rozmiary: definiuje pojedynczy deskryptor szerokości, media query z deskryptorem szerokości lub rozdzieloną przecinkami listę media query z deskryptorem szerokości type: określa typ MIME",
+        thirdPartOfAnswer:
+          "Przeglądarka użyje wartości atrybutów, aby załadować najbardziej dopasowany obraz. Tag <img> służy do zapewnienia kompatybilności wstecznej, jeśli przeglądarka nie obsługuje tagu <picture>",
       },
       {
-        question: "Oui oui",
-        answer: "Do you have Paris recommendations? Have you ever been?",
+        question: "Czym jest Web Socket?",
+        answer:
+          "Web sockets to technologia następnej generacji do dwukierunkowej komunikacji dla aplikacji internetowych, która działa na jednym gnieździe i jest wystawiona za pomocą interfejsu napisanego w JavaScript dla przeglądarek zgodnych z HTML5,Po uzyskaniu połączenia gniazda z serwerem WWW, możesz wysyłać dane z przeglądarki do serwera po wywołaniu metody send() oraz odbierać dane z serwera dzięki obsłudze zdarzenia onmessage",
       },
-           {
+      {
+        question: "Czym jest tag <article>?",
+        answer:
+          "Tag <article> określa niezależną i osobną treść. Najczęściej  używa się go na blogach. ",
+      },
+      {
+        question: "Objaśnij semantyczny html",
+        answer:
+          "Semantyczny HTML to kod napisany za pomocą tagów które mają określone znaczenie i mogą być odpowiednio interpretowane przez przeglądarkę i developera. Dla odróżnienia tagi które nie są semantyczne są obojętne tzn. nie mówią wprost nic na temat swojej zawartości.Kluczowymi kwestiami stosowania semantycznego html jest accessibility oraz SEO",
+        secondAnswer:
+          "Tagi nie-semantyczne,Do tej grupy należy np. bardzo popularny <div> </div> lub <span> </span>Tagi semantyczne:",
+      },
+
+      {
         question: "to czego służy znacznik <pre>?",
-        answer: "Wprowadza tekst preformatowany, czyli napisany czcionką monotypiczną (o stałej szerokości znaku), który uwzględnia dodatkowe spacje, tabulację i znaki końca linii (nie trzeba stosować znaczników <br>) oraz nie jest automatycznie zawijany. Dzięki niemu możesz np. wkleić na stronę WWW tekst, wprost ze zwykłego edytora, bez stosowania dodatkowych znaczników (niestety informacje dotyczące formatowania zostaną pominięte). Należy jednak przy tym pamiętać, aby tekst nie zawierał znaków: "<" oraz ">" (w zamian używaj: &lt; i &gt;).",
-        thirdPartOfAnswer: ''
+        answer:
+          "Wprowadza tekst preformatowany, czyli napisany czcionką monotypiczną (o stałej szerokości znaku), który uwzględnia dodatkowe spacje, tabulację i znaki końca linii (nie trzeba stosować znaczników <br>) oraz nie jest automatycznie zawijany. Dzięki niemu możesz np. wkleić na stronę WWW tekst, wprost ze zwykłego edytora, bez stosowania dodatkowych znaczników (niestety informacje dotyczące formatowania zostaną pominięte). Należy jednak przy tym pamiętać, aby tekst nie zawierał znaków: " <
+          " oraz " >
+          " (w zamian używaj: &lt; i &gt;).",
+        thirdPartOfAnswer: "",
       },
       {
         question: "Do czego służy znacznik Main?",
-        answer: "Znacznik Main służy do umieszczania głównej części strony",
-        secondAnswer: ''
+        answer:
+          "Tag <main> określa główną treść dokumentu. Może to ułatwić korzystanie ze skrótów klawiszowych, przybliżaniu w przeglądarkach mobilnych i przy innych czynnościach. W dokumencie musi znajdować się jeden element <main>. Element <main> nie może być zagnieżdżony w żadnym z tych elementów: <article>, <aside>, <footer>, <header> lub <nav>.",
+        secondAnswer: "",
+      },
+      {
+        question: "Do czego służy znacznik nav?",
+        answer:
+          "Tag <nav> definiuje zestaw linków nawigacji. W tagu nav powinny się znaleźć podstawowe linki służące do nawigacji, a nie wszystkie linki na stronie.",
+        secondAnswer: "",
+      },
+      {
+        question: "Do czego służy znacznik footer?",
+        answer:
+          "Tag <footer> definiuje stopkę dokumentu lub sekcji i powinien zawierać informacje o stronie, która go zawiera. Ten tag zwykle zawiera informacje o autorze, prawach autorskich, dane kontaktowe, mapę witryny, powrót do góry oraz linki do powiązanych dokumentów,",
+        secondAnswer: "",
+      },
+      {
+        question: "Do czego służy znacznik header?",
+        answer:
+          "Tag <header> reprezentuje kontener na treść wprowadzającą lub zestaw linków nawigacyjnych. Zazwyczaj zawiera logo, linki nawigacyjne lub nagłówki.",
+        secondAnswer: "",
+      },
+      {
+        question: "Czym jest accessibility?(dostępność)",
+        answer:
+          "Accessibility (pl. dostępność) to tworzenie aplikacji w sposób który jest łatwy do interpretacji dla przeglądarki i/lub specjalnych urządzeń przystosowanych przez osoby niepełnosprawne. Po prostu przeglądarka wie kiedy ma do czynienia z obrazkiem, nawigacją czy artykułem. Więcej informacji na ten temat można znaleść np. TUTAJ. ",
+        secondAnswer: "",
       },
       {
         question: "Na czym polega semantyczny Html?",
         answer: "Znacznik Main służy do umieszczania głównej części strony",
-        secondAnswer: ''
+        secondAnswer: "",
       },
-      
     ],
     cssQuestions: [
       {
@@ -48,10 +105,43 @@ namespaced: true,
         answer:
           "To technika pozwalająca na łączenie wielu mniejszych obrazów, wykorzystywanych na stronie www, w jeden większy plik, który przy odpowiedniej pomocy styli CSS pozwoli zaoszczędzić nam pasmo serwera oraz czas ładowania się strony,",
       },
+      {
+        answerNumbers: 1,
+        question: "Rozwiń skrót Css",
+        answer:
+          "Kaskadowe arkusze stylów css służą do definiowania układów graficznych dokumentów HTML.Arkusz stylów CSS zawiera reguły opisujące w jaki sposób przeglądarka internetowa ma wyświetlać zawartość dokumentów HTML lub XML. Za pomocą arkuszy CSS można opisać wiele właściwości prezentacji elementów strony: wybrać kolor tekstu, wypełnienie tła, rodzaj czcionki, ustawić odstępy między elementami czy zdefiniować położenie jednego elementu względem drugiego.",
+      },
+      {
+        answerNumbers: 1,
+        question: "Czym jest model pudełkowy?",
+        answer:
+          "Box model - czyli model pudełkowy - to opis budowy elementów blokowych na stronie www. To słowne określenie pozwala wyobrazić sobie w jaki sposób poszczególne elementy składają się na wielkość całego pudełka. Tymi elementami są marginesy zewnetrzne (w css: margin), obramowanie (w css: border), marginesy wewnętrzne (w css: padding) oraz szerokość (w css: width). Jak się za chwilkę okaże budowa box modelu jest prosta, ale czy na pewno oczywista ... ",
+      },
+      {
+        question: "Opisz zalety Sass",
+        answer:
+          "Sass to preprocesor CSS, który pozwala na znacznie szybszą i wydajniejszą pracę z arkuszami stylów.Preprocesory pozwalają na programowanie wśród arkuszy stylów, co daje ogromne możliwości przyspieszenia pracy.przeglądarki czytają kod CSS, a kod w formacie Sass będzie dla nich niezrozumiały. Rozwiązaniem tego problemu jest kompilacja plików Sass do wyjściowego CSS",
+        secondAnswer:
+          "W Sass możemy używać zmiennych.Zagnieżdzanie.Mixins.DziedziczenieKolejna bardzo mocna cecha. Dzięki dziedziczeniu możemy przekazywać część zastosowanych deklaracji z jednego obiektu na drugi. To z kolei ponownie pozwala nam na podążanie za regułą DRY. Aby dany element odziedziczył cechy swego przodka należy wstawić wyrażenie @extend a następnie selektor z którego mamy dziedziczyć. W przykładzie wykorzystamy klasę alert (która może formatować jakiś komunikat) i dodamy kolejne jej odmiany:",
+        thirdPartOfAnswer:
+          " Do naszej dyspozycji SASS udostępnia operatory typu: +, -, *, /, oraz %. Możliwa jest także konwersja wartości (np z pikseli na procenty).",
+      },
+      {
+        question: "Czym się różni scss od sass?",
+        answer:
+          "Podstawową różnicą jest składnia, pliki scss są zbliżone do składni CSS, natomiast pliki sass do składni języka Ruby.",
+        secondAnswer: "",
+      },
+      {
+        question: "Jaka jest różnica między „resetowaniem” a „normalizowaniem” CSS?",
+        answer:
+          "Resetowanie – ma na celu usunięcie wszystkich domyślnych stylów przeglądarki. Na przykład marginesy, wypełnienia, rozmiary czcionek wszystkich elementów są resetowane. Normalizowanie – zachowuje przydatne style domyślne zamiast cofania wszystkiego. Poprawia również różnice w wyświetlaniu elementów w różnych przeglądarkach.",
+        secondAnswer: "",
+      },
+      
     ],
     javascriptQuestions: [
       {
-        
         question: "Jakie zadeklarować zmienną w javascript?",
         answer:
           "Aby zadeklarować zmienną, powinniśmy posłużyć się jednym ze słów kluczowych var,let oraz const.",
@@ -59,8 +149,14 @@ namespaced: true,
           "wielu programistów zaleca stosować już const i let. Dzięki nim nasze skrypty stają się nie tylko bardziej optymalne pod względem zarządzania pamięcią, ale i potencjalnie unikamy niektórych problematycznych sytuacji.Pod zmienne możemy podstawić dowolne wartości jakie będziemy chcieli",
         thirdPartOfAnswer:
           "Nazwy zmiennych i stałych które deklarujemy nie mogą być byle jakie. Istnieją pewne zasady których musimy się trzymać. I tak:wielkość liter ma znaczenie. Zmienna myTXT to nie to samo co mytxt,nazwa zmiennej nie może zaczynać się od cyfry,,nazwa zmiennej nie może zawierać spacji, kropki, przecinka ani myślnika (można natomiast używać podkreślenia),nazwą zmiennej nie może być słowo kluczowe zarezerwowane przez JavaScript",
+          
       },
-
+      {
+        question: "Czym jest grid?",
+        answer:
+          "Grid to struktura, która pozwala na umieszczanie zawartości zarówno pionowo, jak i poziomo, w spójny i łatwy w zarządzaniu sposób. Grid obejmują dwa kluczowe elementy: wiersze i kolumny",
+        secondAnswer: "",
+      },
       {
         question: "Jaka jest różnica między var,let a const?",
         answer:
@@ -117,7 +213,8 @@ namespaced: true,
       },
       {
         question: "Opisz typy danych w javascript",
-        answer:"W JavaScript dane możemy podzielić na dwie grupy: typy proste(prymitywne) oraz złożone.Do typów prymitywnych zaliczamy:Number,string,bigInt,boolean,undefined,null,symbol a do złożonych:Object (w tym Array, Map i Set).Kolejną charakterystyczną cechą rozróżniającą typy prymitywne od obiektów jest to, że te pierwsze w przeciwieństwie do obiektów są niemutowalne. Mutowalnymi określamy takie dane, którym w czasie ich istnienia możemy zmieniać części składowe:",
+        answer:
+          "W JavaScript dane możemy podzielić na dwie grupy: typy proste(prymitywne) oraz złożone.Do typów prymitywnych zaliczamy:Number,string,bigInt,boolean,undefined,null,symbol a do złożonych:Object (w tym Array, Map i Set).Kolejną charakterystyczną cechą rozróżniającą typy prymitywne od obiektów jest to, że te pierwsze w przeciwieństwie do obiektów są niemutowalne. Mutowalnymi określamy takie dane, którym w czasie ich istnienia możemy zmieniać części składowe:",
         secondAnswer:
           "JavaScript jest językiem dynamicznie typowanym. Oznacza to, że nie musimy deklarować typu zmiennej, ponieważ jest on automatycznie konwertowany do porządanych wartości w czasie wykonywania się skryptu.",
       },
@@ -136,6 +233,13 @@ namespaced: true,
           "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
       },
       {
+        question: "Czym jest tag <time>?",
+        answer:
+          "<time> określa czytelną dla człowieka datę oraz godzinę. Można go również używać do kodowania daty i godziny w sposób możliwy do odczytu maszynowego, dzięki czemu przeglądarki mogą oferować dodawanie przypomnień do kalendarza. <time> pozwala również wyszukiwarkom na generowanie inteligentniejszych wyników wyszukiwania.",
+        secondAnswer:
+          "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
+      },
+      {
         question: "Jak dodać element do tablicy?",
         answer:
           "by dodać do tablicy element na jej końcu, możemy użyć metody push(element1, element2, ...).Drugą metodą jest po prostu ustawianie elementu na danym indeksie:",
@@ -144,15 +248,13 @@ namespaced: true,
       },
       {
         question: "Jak sprawdzić czy zmienna jest tablicą?",
-        answer:
-          `Żeby sprawdzić czy dana zmienna jest tablicą, powinniśmy skorzystać z metody Array.isArray(). Wynika to z faktu, że tablice w Javascript także są obiektami i typeof zwraca nam "object"`,
+        answer: `Żeby sprawdzić czy dana zmienna jest tablicą, powinniśmy skorzystać z metody Array.isArray(). Wynika to z faktu, że tablice w Javascript także są obiektami i typeof zwraca nam "object"`,
         secondAnswer:
           "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
       },
       {
         question: "Opisz działanie setTimeout",
-        answer:
-          `setTimeout wywołuje funkcję po określonym czasie opóźnienia.setTimeout oczekuje dwóch argumentów, jednej referencji do funkcji wywołania zwrotnego oraz opóźnienia w milisekundach. setTimeout może również akceptować argumenty po opóźnieniu, a dodatkowe wartości zostaną przekazane do funkcji wywołania zwrotnego. Timer można wyłączyć przy użyciu metody clearTimeout.`,
+        answer: `setTimeout wywołuje funkcję po określonym czasie opóźnienia.setTimeout oczekuje dwóch argumentów, jednej referencji do funkcji wywołania zwrotnego oraz opóźnienia w milisekundach. setTimeout może również akceptować argumenty po opóźnieniu, a dodatkowe wartości zostaną przekazane do funkcji wywołania zwrotnego. Timer można wyłączyć przy użyciu metody clearTimeout.`,
         secondAnswer:
           "Powyższe może się przydać przy opóźnianiu zadań, które mogą spowalniać programowanie oraz blokować następne funkcje. Pamiętajmy, że setTimeout ustawia jedynie minimalny czas, który musi minąć przed wywołaniem. Jeśli silnik jest zajęty czymś innym, to kod może być uruchomiony znacznie później. Co więcej, wartość 0 nie musi być deklarowana - będzie ona domyślna nawet jeśli się ją pominie",
       },
@@ -176,74 +278,109 @@ namespaced: true,
           "Zwraca pierwszy (najmniejszy) indeks elementu w tablicy równego podanej wartości lub -1, gdy nie znaleziono takiego elementu.",
       },
       {
+        question: "Jaka jest różnica między null a undefined?",
+        answer:
+          "undefined – coś nie zostało zainicjalizowane, null – coś jest aktualnie niedostępne.W JavaScript undefined oznacza, że zmienna została zadeklarowana ale jeszcze nie ma żadnej przypisanej wartości.Null może być reprezentowane jako wartość, bezwartości, inaczej mówiąc możemy przypisać do zmiennej temp pudełko z cyferką 5, albo samo pudełko, samo pudełko jest nullem.",
+          secondAnswer: "Gdy przypiszemy wartość null do zmiennej oznacza to, że zerujemy tą zmienną. Nie chcemy aby posiadała ona jakąkolwiek wartość lub referencję do czegokolwiek. Zmienna empty reprezentuje zamierzony brak wartości.Pomimo tego, że operator typeof zwraca nam typ object, zmienna z wartością null nic nie reprezentuje. Jak już wspominałem wcześniej, to że null zwraca typ object jest błędem z czasów powstawania języka JavaScript.undefined może pojawić się gdy nie inicjalizujemy zmiennej,Łatwiej będzie nam pracować z kodem i znaleźć problem gdy nie będziemy posługiwać się wartością undefined. Gdy trafimy na błąd związany z undefined w konsoli przeglądarki będziemy wiedzieć, że o czymś zapomnieliśmy, odwołujemy się do czegoś co nie istnieje. Zawęzimy opcję szukania problemu gdy nie będziemy się dodatkowo posługiwać undefined, a zostawimy go dla JavaScript.",
+          thirdPartOfAnswer: "Wartość null i undefined reprezentują puste, nieokreślone wartości. Jeżeli porównamy oba typy przez potrójny znak równości i wypiszemy do konsoli, zobaczymy wartość false:"
+      },
+      {
         question: "Co to są funkcje?",
         answer:
           "Funkcje to zbiór zgrupowanych instrukcji, które możemy odpalać poprzez podanie ich nazwy. Każda taka funkcja po wywołaniu wykonuje swój wewnętrzny kod, a następnie może zwrócić nam jakąś wartość.",
       },
       {
+        question: "Opisz pracę z plikiem psd",
+        answer:
+          "PSD, to projekt graficzny bazujacy na programie Adobe Photoshop.Plik ten dostarcza wszystkich niezbędnych grafik, z jakich składa się strona, jak i informacji pozwalających na jej zakodowanie. Dzięki takiej wizualizacji Web Developer jest w stanie bezbłędnie przenieść projekt na kod HTML. Profesjonalne przygotowanie takiego projektu zapobiega problemom, które uniemożliwiają pracę, bądź wydłużają jej czas. ",
+          secondAnswer: "Każdy projekt powinien składać się z uporządkowanych warstw zawierających po jednym elemencie (ikonka, grafika, kształt, tekst). Osadzenie na oddzielnych warstwach (z dodatkowym opisem) znacząco przyśpiesza pracę podczas ustalania atrybutów, jak i wycinania potrzebnych grafik do zamieszczenia na stronie.Jeśli dany element posiada dodatkowy stan (np. rozwinięcie menu po najechaniu myszką albo kliknięcie przycisk) powinien być uwzględniony w projekcie. Developer musi wiedzieć, że coś będzie interaktywne, aby móc to zakodować."
+      },
+      {
         question: "Na czym polega destrukturyzacja?",
         answer:
           "Przypisanie destrukturyzujące umożliwia przypisanie własności tablicy lub obiektu do zmiennych z wykorzystaniem składni przypominającej składnię tablic czy literałów obiektowych. Może być ona niezwykle zwięzła, a jednocześnie znacznie czytelniejsza od tradycyjnego kodu służącego do uzyskania dostępu do własności.",
-          secondAnswer: "Nie korzystając z przypisania destrukturyzującego, dostęp do pierwszych trzech elementów tablicy możemy uzyskać w następujący sposób:var first = jakaśTamTablica[0]  var second = jakaśTamTablica[1]; var third = jakaśTamTablica[2];Jeśli natomiast zastosujemy przypisanie destrukturyzujące, ten sam kod można wyrazić w bardziej zwięzły i czytelny sposób:	      var [first, second, third] = jakaśTamTablica;"
+        secondAnswer:
+          "Nie korzystając z przypisania destrukturyzującego, dostęp do pierwszych trzech elementów tablicy możemy uzyskać w następujący sposób:var first = jakaśTamTablica[0]  var second = jakaśTamTablica[1]; var third = jakaśTamTablica[2];Jeśli natomiast zastosujemy przypisanie destrukturyzujące, ten sam kod można wyrazić w bardziej zwięzły i czytelny sposób:	      var [first, second, third] = jakaśTamTablica;",
+      },
+      {
+        question: "jakie są różnice między arrow function a regular function?",
+        answer:
+          "Funkcja strzałkowa ma krótszą składnię niż zwykłe wyrażenie funkcji oraz nie posiada własnego this, argumentów, super, tudzież właściwości new.target. Taki sposób wyrażenia funkcji najlepiej wykorzystać przy tworzeniu funkcji bez metod, ponadto nie mogą zostać one użyte jako konstruktory.Dwa czynniki, które wpłynęły na wprowadzenie funkcji strzałkowych: krótszy zapis funkcji i brak wiązania this.",
+        secondAnswer:
+          "Przed wprowadzeniem funkcji strzałkowych każda nowa funkcja deniniowała swoją własną wartość this (nowy obiekt w przypadku konstruktora, undefined w wywołaniach funkcji strict mode, obiekt bazowy jeśli funkcja jest wywoływana jako `metoda obiektowa`, itp.). Okazało się to niekorzystne przy obiektowym stylu programowania.Funkcja strzałkowa nie posiada własnego this; używana jest wartość this kontekstu wykonania. W związku z tym, w poniższym kodzie, this użyty w funkcji, który jest przekazywany do setInterval, ma taką samą wartość jak this w funkcji otaczającej:",
       },
     ],
     vueQuestions: [
       {
         question: "Czym jest Vuex?",
-        answer: 'Vuex służy do przechowywania stanów, które są potrzebne wielu komponentom w jednej centralnej lokalizacji.Dzięki Vuex możemy przechowywać stan naszej aplikacji Vue w centralnej lokalizacji.Pozwala nam pobierać i ustawiać stan współdzielenia oraz automatycznie propagować wszelkie zmiany dokonane we wspólnym stanie do wszystkich komponentów.'
+        answer:
+          "Vuex służy do przechowywania stanów, które są potrzebne wielu komponentom w jednej centralnej lokalizacji.Dzięki Vuex możemy przechowywać stan naszej aplikacji Vue w centralnej lokalizacji.Pozwala nam pobierać i ustawiać stan współdzielenia oraz automatycznie propagować wszelkie zmiany dokonane we wspólnym stanie do wszystkich komponentów.",
       },
       {
         question: "Jakie są zalety Vue.js?",
-        answer: 'prostosa - vue js posiada niski próg wejścia.Framework jest również lekki,waży tylko 18-23 kb,Vue js jest szybszym frameworkiem niż Angular czy React',
+        answer:
+          "prostosa - vue js posiada niski próg wejścia.Framework jest również lekki,waży tylko 18-23 kb,Vue js jest szybszym frameworkiem niż Angular czy React",
       },
       {
-        question: 'Czym jest composition api?',
-        answer: 'Jest to nowe API, które pozwala na pisanie komponentów w sposób oparty na funkcjach.Nowe API umożliwia hermetyzację logiki w tzw. „composition functions” i pozwala używać jej ponownie we wszystkich komponentach.  '
+        question: "Czym jest composition api?",
+        answer:
+          "Jest to nowe API, które pozwala na pisanie komponentów w sposób oparty na funkcjach.Nowe API umożliwia hermetyzację logiki w tzw. „composition functions” i pozwala używać jej ponownie we wszystkich komponentach.  ",
       },
       {
-        question: 'Jaka jest różnica między Vue2 a Vue3?',
-        answer: 'Vue 3.0 jest o wiele bardziej wydajne w porównaniu do swojej poprzedniej wersji. Mówimy tutaj o rozmiarze gotowej aplikacji Vue, która jest do 41% lżejsza dzięki użyciu techniki tree-shaking, początkowym renderowaniu, które jest do 55% szybsze, aktualizacjach, które są aż o 133% szybsze oraz o 54% mniejszym zużyciu pamięci.Twórcy Vue.js zaproponowali w nowym wydaniu dwie funkcje dla Single-File Components: script setup oraz style vars.Vue 3.0 zapewnia również lepszą integrację z językiem TypeScript.',
+        question: "Jaka jest różnica między Vue2 a Vue3?",
+        answer:
+          "Vue 3.0 jest o wiele bardziej wydajne w porównaniu do swojej poprzedniej wersji. Mówimy tutaj o rozmiarze gotowej aplikacji Vue, która jest do 41% lżejsza dzięki użyciu techniki tree-shaking, początkowym renderowaniu, które jest do 55% szybsze, aktualizacjach, które są aż o 133% szybsze oraz o 54% mniejszym zużyciu pamięci.Twórcy Vue.js zaproponowali w nowym wydaniu dwie funkcje dla Single-File Components: script setup oraz style vars.Vue 3.0 zapewnia również lepszą integrację z językiem TypeScript.",
       },
       {
-          question: 'Co to są gettery?',
-          answer: 'to są funkcje które zwracają nam stan'
+        question: "Co to są gettery?",
+        answer: "to są funkcje które zwracają nam stan",
       },
       {
-          question: 'co to jest flux?',
-          answer: 'Flux to wzorzec projektowy stworzony do ujednolicenia przepływu danych w aplikacjach, szczególnie tych frontowych. Posiada trzy części: dispatch, store i view.View (ang. widok) to część w której użytkownik komunikuje się z aplikacją.Store to w dużym uproszczeniu obiekt z stanem aplikacji.Dispatcher to centralna część fluxa z której wysłamy prośby o zmianę stanu aplikacji.'
+        question: "co to jest flux?",
+        answer:
+          "Flux to wzorzec projektowy stworzony do ujednolicenia przepływu danych w aplikacjach, szczególnie tych frontowych. Posiada trzy części: dispatch, store i view.View (ang. widok) to część w której użytkownik komunikuje się z aplikacją.Store to w dużym uproszczeniu obiekt z stanem aplikacji.Dispatcher to centralna część fluxa z której wysłamy prośby o zmianę stanu aplikacji.",
       },
       {
-        question: 'Wyjaśnij na czym polega reaktywność w vue',
-          answer: 'Wszystkie właściwości zdefiniowane w instancji vue są reaktywne.Oznacza to ,że jeżeli zajdzie jakaś zmiana to komponent automatycznie się zaktualizuje.Podczas inicjalizacji wszystkie właściwości są konwertowane do getterów oraz setterów,dzięki temu vue wie kiedy należy dokonać aktualizacji'
-      },
-            {
-        question: 'Czym jest single file component?',
-          answer: 'Jest to plik z rozszerzeniem vue. zawierającym komponent vue.W przeciwieństwie do stndardowego podziału plików na style,szkielet oraz logike w odrębnych plików,w single file component wszystko znajduje się w jednym pliku.'
-      },
-                 {
-        question: 'Wyjaśnij na czym polega przepływ danych w vue',
-          answer: 'Vue używa one-way data flow.Dane są przekazywane do komponentu dziecka z komponentu rodzica za pomocą właściwości props'
-      },
-                     {
-        question: 'czym jest mapState?',
-          answer: 'życie mapState() pozwala na pobranie i przypisanie do lokalnego scope wartości bezpośrednio z sekcji state w store. W ten sposób otrzymujemy czyste dane – bez żadnych modyfikacji. Ma to duży sens, jeśli są to typy proste – jakaś flaga będąca wartością boolean (true/false), np. flaga „loading” itp.'
-      },
-                           {
-        question: 'Czym są sunspense components',
-          answer: 'życie mapState() pozwala na pobranie i przypisanie do lokalnego scope wartości bezpośrednio z sekcji state w store. W ten sposób otrzymujemy czyste dane – bez żadnych modyfikacji. Ma to duży sens, jeśli są to typy proste – jakaś flaga będąca wartością boolean (true/false), np. flaga „loading” itp.'
+        question: "Wyjaśnij na czym polega reaktywność w vue",
+        answer:
+          "Wszystkie właściwości zdefiniowane w instancji vue są reaktywne.Oznacza to ,że jeżeli zajdzie jakaś zmiana to komponent automatycznie się zaktualizuje.Podczas inicjalizacji wszystkie właściwości są konwertowane do getterów oraz setterów,dzięki temu vue wie kiedy należy dokonać aktualizacji",
       },
       {
-        question: 'Jaka jest różnica między composition api a option api?',
-          answer: 'Composition API. Udostępnia nowy sposób tworzenia komponentów, który znacząco różni się od podejścia zaprezentowanego w poprzedniej wersji frameworka.Przede wszystkim większa elastyczność w układaniu logiki kodu, jego lepsza reużywalność oraz poprawiona czytelność dzięki mniejszej ilości zagłębień. O jakich dobrodziejstwach mowa? Przede wszystkim większa elastyczność w układaniu logiki kodu, jego lepsza reużywalność oraz poprawiona czytelność dzięki mniejszej ilości zagłębień. Doświadczenie pokazało, że większe aplikacje oparte o Vue.js w wersji 2 były ciężkie do utrzymania, do rozbudowy oraz do diagnozowania błędów. Niektórzy developerzy narzekali też na problemy z reaktywnością. Mając to na uwadze, Evan You postanowił zmienić podejście do sposobu w jaki tworzona jest logika komponentów. W jego działaniach było widać inspiracje innymi popularnymi frameworkami jak React czy Svelte, chociażby poprzez wprowadzenie konstrukcji łudząco podobnych do React Hooks.',
-          secondAnswer: 'Composition api posiada setup hook wewnątrz którego piszemy swój kod.        Wewnątrz setup hook możemy pogrupować części naszego kodu według logicznego porządku.Dzięki composition api nie musimy więc używać Mixinów.'
+        question: "Czym jest single file component?",
+        answer:
+          "Jest to plik z rozszerzeniem vue. zawierającym komponent vue.W przeciwieństwie do stndardowego podziału plików na style,szkielet oraz logike w odrębnych plików,w single file component wszystko znajduje się w jednym pliku.",
+      },
+      {
+        question: "Wyjaśnij na czym polega przepływ danych w vue",
+        answer:
+          "Vue używa one-way data flow.Dane są przekazywane do komponentu dziecka z komponentu rodzica za pomocą właściwości props",
+      },
+      {
+        question: "czym jest mapState?",
+        answer:
+          "życie mapState() pozwala na pobranie i przypisanie do lokalnego scope wartości bezpośrednio z sekcji state w store. W ten sposób otrzymujemy czyste dane – bez żadnych modyfikacji. Ma to duży sens, jeśli są to typy proste – jakaś flaga będąca wartością boolean (true/false), np. flaga „loading” itp.",
+      },
+      {
+        question: "Czym są sunspense components",
+        answer:
+          "życie mapState() pozwala na pobranie i przypisanie do lokalnego scope wartości bezpośrednio z sekcji state w store. W ten sposób otrzymujemy czyste dane – bez żadnych modyfikacji. Ma to duży sens, jeśli są to typy proste – jakaś flaga będąca wartością boolean (true/false), np. flaga „loading” itp.",
+      },
+      {
+        question: "Jaka jest różnica między composition api a option api?",
+        answer:
+          "Composition API. Udostępnia nowy sposób tworzenia komponentów, który znacząco różni się od podejścia zaprezentowanego w poprzedniej wersji frameworka.Przede wszystkim większa elastyczność w układaniu logiki kodu, jego lepsza reużywalność oraz poprawiona czytelność dzięki mniejszej ilości zagłębień. O jakich dobrodziejstwach mowa? Przede wszystkim większa elastyczność w układaniu logiki kodu, jego lepsza reużywalność oraz poprawiona czytelność dzięki mniejszej ilości zagłębień. Doświadczenie pokazało, że większe aplikacje oparte o Vue.js w wersji 2 były ciężkie do utrzymania, do rozbudowy oraz do diagnozowania błędów. Niektórzy developerzy narzekali też na problemy z reaktywnością. Mając to na uwadze, Evan You postanowił zmienić podejście do sposobu w jaki tworzona jest logika komponentów. W jego działaniach było widać inspiracje innymi popularnymi frameworkami jak React czy Svelte, chociażby poprzez wprowadzenie konstrukcji łudząco podobnych do React Hooks.",
+        secondAnswer:
+          "Composition api posiada setup hook wewnątrz którego piszemy swój kod.        Wewnątrz setup hook możemy pogrupować części naszego kodu według logicznego porządku.Dzięki composition api nie musimy więc używać Mixinów.",
+      },
+      {
+        question: "Jaka jest różnica między watch a watchEffect",
+        answer:
+          "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
       },
     ],
-   
   },
 
-  getters: {
-
-  },
+  getters: {},
 
   mutations: {
     questionLoop(state) {
@@ -281,27 +418,26 @@ namespaced: true,
       state.javascriptQuestions.sort(function() {
         return Math.round(Math.random()) - 0.5;
       });
-    }
- 
+    },
   },
   actions: {
     questionLoop(context) {
-      context.commit('questionLoop')
+      context.commit("questionLoop");
     },
     htmlQuestionLoop(context) {
-      context.commit('htmlQuestionLoop')
+      context.commit("htmlQuestionLoop");
     },
     vueQuestionLoop(context) {
-      context.commit('vueQuestionLoop')
+      context.commit("vueQuestionLoop");
     },
     randomQuestion(context) {
-      context.commit('randomQuestion')
+      context.commit("randomQuestion");
     },
     randomHtmlQuestion(context) {
-      context.commit('randomHtmlQuestion')
+      context.commit("randomHtmlQuestion");
     },
     randomVueQuestion(context) {
-      context.commit('randomVueQuestion')
-    }
+      context.commit("randomVueQuestion");
+    },
   },
 };
