@@ -1,6 +1,7 @@
 <template>
   <v-row justify="center">
     <v-dialog
+    eager
       v-model="dialog"
       fullscreen
       @keydown.esc="dialog = false"
@@ -33,7 +34,7 @@
         height="100%"
       >
         <v-toolbar class="mb-0" dark color="#2c3e50">
-          <v-toolbar-title>Login</v-toolbar-title>
+          <v-toolbar-title>Ucz się frontu</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-toolbar-items>
             <v-btn icon dark @click="closeModal">
@@ -42,18 +43,15 @@
           </v-toolbar-items>
         </v-toolbar>
         <div class="d-flex">
-          <v-card
+          <v-sheet
             elevation="0"
             v-show="loggedIn && !elementVisible"
             height="100%"
             width="310"
-          >
-            <v-navigation-drawer
-              dark
+            fill-height
+                    dark
               color="#2c3e50"
-              width="100%"
-              height="100%"
-            >
+          >
               <v-list color="transparent">
                 <v-list-item-group
                   style="font-size: 20px"
@@ -137,8 +135,8 @@
               </v-list>
 
               <v-btn class="mt-10 mb-10" @click="logOut">Logout</v-btn>
-            </v-navigation-drawer>
-          </v-card>
+   
+          </v-sheet>
           <FavoriteSection v-if="this.$route.path === '/login/favorite'" />
           <MyInformation
             v-show="loggedIn && !elementVisible"
@@ -248,6 +246,7 @@ export default {
       this.$router.push({ path: "/" });
     },
     contModal() {
+      this.dialog = true;
       this.$router.push({ path: "login" });
     },
   },

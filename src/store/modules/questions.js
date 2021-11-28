@@ -133,12 +133,12 @@ export default {
         secondAnswer: "",
       },
       {
-        question: "Jaka jest różnica między „resetowaniem” a „normalizowaniem” CSS?",
+        question:
+          "Jaka jest różnica między „resetowaniem” a „normalizowaniem” CSS?",
         answer:
           "Resetowanie – ma na celu usunięcie wszystkich domyślnych stylów przeglądarki. Na przykład marginesy, wypełnienia, rozmiary czcionek wszystkich elementów są resetowane. Normalizowanie – zachowuje przydatne style domyślne zamiast cofania wszystkiego. Poprawia również różnice w wyświetlaniu elementów w różnych przeglądarkach.",
         secondAnswer: "",
       },
-      
     ],
     javascriptQuestions: [
       {
@@ -149,7 +149,6 @@ export default {
           "wielu programistów zaleca stosować już const i let. Dzięki nim nasze skrypty stają się nie tylko bardziej optymalne pod względem zarządzania pamięcią, ale i potencjalnie unikamy niektórych problematycznych sytuacji.Pod zmienne możemy podstawić dowolne wartości jakie będziemy chcieli",
         thirdPartOfAnswer:
           "Nazwy zmiennych i stałych które deklarujemy nie mogą być byle jakie. Istnieją pewne zasady których musimy się trzymać. I tak:wielkość liter ma znaczenie. Zmienna myTXT to nie to samo co mytxt,nazwa zmiennej nie może zaczynać się od cyfry,,nazwa zmiennej nie może zawierać spacji, kropki, przecinka ani myślnika (można natomiast używać podkreślenia),nazwą zmiennej nie może być słowo kluczowe zarezerwowane przez JavaScript",
-          
       },
       {
         question: "Czym jest grid?",
@@ -281,19 +280,45 @@ export default {
         question: "Jaka jest różnica między null a undefined?",
         answer:
           "undefined – coś nie zostało zainicjalizowane, null – coś jest aktualnie niedostępne.W JavaScript undefined oznacza, że zmienna została zadeklarowana ale jeszcze nie ma żadnej przypisanej wartości.Null może być reprezentowane jako wartość, bezwartości, inaczej mówiąc możemy przypisać do zmiennej temp pudełko z cyferką 5, albo samo pudełko, samo pudełko jest nullem.",
-          secondAnswer: "Gdy przypiszemy wartość null do zmiennej oznacza to, że zerujemy tą zmienną. Nie chcemy aby posiadała ona jakąkolwiek wartość lub referencję do czegokolwiek. Zmienna empty reprezentuje zamierzony brak wartości.Pomimo tego, że operator typeof zwraca nam typ object, zmienna z wartością null nic nie reprezentuje. Jak już wspominałem wcześniej, to że null zwraca typ object jest błędem z czasów powstawania języka JavaScript.undefined może pojawić się gdy nie inicjalizujemy zmiennej,Łatwiej będzie nam pracować z kodem i znaleźć problem gdy nie będziemy posługiwać się wartością undefined. Gdy trafimy na błąd związany z undefined w konsoli przeglądarki będziemy wiedzieć, że o czymś zapomnieliśmy, odwołujemy się do czegoś co nie istnieje. Zawęzimy opcję szukania problemu gdy nie będziemy się dodatkowo posługiwać undefined, a zostawimy go dla JavaScript.",
-          thirdPartOfAnswer: "Wartość null i undefined reprezentują puste, nieokreślone wartości. Jeżeli porównamy oba typy przez potrójny znak równości i wypiszemy do konsoli, zobaczymy wartość false:"
+        secondAnswer:
+          "Gdy przypiszemy wartość null do zmiennej oznacza to, że zerujemy tą zmienną. Nie chcemy aby posiadała ona jakąkolwiek wartość lub referencję do czegokolwiek. Zmienna empty reprezentuje zamierzony brak wartości.Pomimo tego, że operator typeof zwraca nam typ object, zmienna z wartością null nic nie reprezentuje. Jak już wspominałem wcześniej, to że null zwraca typ object jest błędem z czasów powstawania języka JavaScript.undefined może pojawić się gdy nie inicjalizujemy zmiennej,Łatwiej będzie nam pracować z kodem i znaleźć problem gdy nie będziemy posługiwać się wartością undefined. Gdy trafimy na błąd związany z undefined w konsoli przeglądarki będziemy wiedzieć, że o czymś zapomnieliśmy, odwołujemy się do czegoś co nie istnieje. Zawęzimy opcję szukania problemu gdy nie będziemy się dodatkowo posługiwać undefined, a zostawimy go dla JavaScript.",
+        thirdPartOfAnswer:
+          "Wartość null i undefined reprezentują puste, nieokreślone wartości. Jeżeli porównamy oba typy przez potrójny znak równości i wypiszemy do konsoli, zobaczymy wartość false:",
       },
       {
         question: "Co to są funkcje?",
         answer:
-          "Funkcje to zbiór zgrupowanych instrukcji, które możemy odpalać poprzez podanie ich nazwy. Każda taka funkcja po wywołaniu wykonuje swój wewnętrzny kod, a następnie może zwrócić nam jakąś wartość.",
+          "Funkcja anonimowa to taka funkcja, która nie ma swojej nazwy. Funkcje takie wykorzystywane są jako funkcje zwrotne, które przekazujemy do innych funkcji.",
+      },
+      {
+        question: "Czym jest funkcja anonimowa?",
+        answer:
+          "Funkcja strzałkowa to skrócony zapis wyrażenia funkcyjnego:",
+      },
+      {
+        question: "Czym jest funkcja strzałkowa?",
+        answer:
+          "Funkcja anonimowa to taka funkcja, która nie ma swojej nazwy. Funkcje takie wykorzystywane są jako funkcje zwrotne, które przekazujemy do innych funkcji.Przy skracaniu zapisu obowiązuje nas kilka dość prostych zasad.         Jeżeli funkcja wymaga tylko jednego parametru, wtedy mogę (ale nie muszę!) pominąć nawiasy:Jeżeli parametrów jest więcej, lub nie ma żadnego, wtedy nawiasy muszą zostać:Jeżeli funkcja ma tylko jedną instrukcję, mogę pominąć też klamry:A dodatkowo jeżeli jedyną instrukcją jest instrukcja return, także i jej możemy się pozbyć:Natomiast jeżeli funkcja ma więcej instrukcji - klamry muszą pozostać:",
+          secondAnswer: "Dodatkowymi cechami, które odróżniają je od klasycznych funkcji są:Funkcje strzałkowe nie mają wiązania this i super. Dlatego nie powinniśmy ich używać do definiowania metod w obiektach i klasachNie posiadają właściwości arguments i new.targetUżycie dla nich call, apply i bind nie da oczekiwanych rezultatów. Wynika to właśnie z faktu, że nie ma tutaj wiązania thisNie można ich używać jako konstruktoryNie wolno używać w nich yield"
+      },
+      {
+        question: "Czym jest wyrażenie funkcyjne?",
+        answer:
+          "wyrażeniem funkcyjnym i jest niczym innym jak podstawieniem funkcji pod zmienną:Wyrażenie i definicja różnią się od siebie nie tylko sposobem zapisu, ale także tym, jak taki kod jest interpretowany przez przeglądarkę.Funkcja stworzona za pomocą deklaracji jest od razu dostępna dla całego skryptu. Wynika to z działania mechanizmu hoistingu (znany ze zmiennych), który przenosi taką deklarację na początek danego zakresu kodu (skryptu lub funkcji)W przypadku wyrażeń funkcyjnych takie odwołanie rzuci nam błędem:.           ",
+        secondAnswer:
+          "Wynika to z faktu, że powyżej podstawiliśmy funkcję pod zmienną, a przecież do takich nie możemy się odwoływać przed ich utworzeniem.Istnieje jeszcze jedna różnica między obydwoma zapisami. Przy stosowaniu deklaracji, dana funkcja zapisywana jest jako klucz obiektu Window (to samo ma miejsce, gdy tworzymy globalną zmienną za pomocą zmiennej var). W przypadku wyrażenia poprzedzonego słowem const/let nie ma to miejsca.",
+      },
+      {
+        question: "Opisz działanie return",
+        answer:
+          "Każda funkcja zwraca jakąś wartość. Domyślnie jest nią undefined. Aby zwrócić naszą wartość, posłużymy się instrukcją return:Instrukcja return nie tylko zwraca wartość, ale i przerywa dalsze działanie danej funkcji.W wielu edytorach kod leżący za return będzie miał przytłumione kolory, co symbolizuje, że taki kod nigdy sie nie wykona:Instrukcji return może być wiele dla jednej funkcji. Zawsze jednak wykonana zostanie tylko jednaInstrukcja return może zwracać dowolną wartość. Może to być tablica:          ",
       },
       {
         question: "Opisz pracę z plikiem psd",
         answer:
           "PSD, to projekt graficzny bazujacy na programie Adobe Photoshop.Plik ten dostarcza wszystkich niezbędnych grafik, z jakich składa się strona, jak i informacji pozwalających na jej zakodowanie. Dzięki takiej wizualizacji Web Developer jest w stanie bezbłędnie przenieść projekt na kod HTML. Profesjonalne przygotowanie takiego projektu zapobiega problemom, które uniemożliwiają pracę, bądź wydłużają jej czas. ",
-          secondAnswer: "Każdy projekt powinien składać się z uporządkowanych warstw zawierających po jednym elemencie (ikonka, grafika, kształt, tekst). Osadzenie na oddzielnych warstwach (z dodatkowym opisem) znacząco przyśpiesza pracę podczas ustalania atrybutów, jak i wycinania potrzebnych grafik do zamieszczenia na stronie.Jeśli dany element posiada dodatkowy stan (np. rozwinięcie menu po najechaniu myszką albo kliknięcie przycisk) powinien być uwzględniony w projekcie. Developer musi wiedzieć, że coś będzie interaktywne, aby móc to zakodować."
+        secondAnswer:
+          "Każdy projekt powinien składać się z uporządkowanych warstw zawierających po jednym elemencie (ikonka, grafika, kształt, tekst). Osadzenie na oddzielnych warstwach (z dodatkowym opisem) znacząco przyśpiesza pracę podczas ustalania atrybutów, jak i wycinania potrzebnych grafik do zamieszczenia na stronie.Jeśli dany element posiada dodatkowy stan (np. rozwinięcie menu po najechaniu myszką albo kliknięcie przycisk) powinien być uwzględniony w projekcie. Developer musi wiedzieć, że coś będzie interaktywne, aby móc to zakodować.",
       },
       {
         question: "Na czym polega destrukturyzacja?",
@@ -374,6 +399,29 @@ export default {
       },
       {
         question: "Jaka jest różnica między watch a watchEffect",
+        answer:
+          "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
+      },
+    ],
+    typescriptQuestion: [
+      {
+        question:
+          "Jaka jest różnica między wyrażeniem(explicity) a niejawnością(implicity)?",
+        answer:
+          "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
+      },
+      {
+        question: "Opisz typ any",
+        answer:
+          "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
+      },
+      {
+        question: "Opisz typ void",
+        answer:
+          "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
+      },
+      {
+        question: "Czym jest interfejs  w typescript",
         answer:
           "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
       },

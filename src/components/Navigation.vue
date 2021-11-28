@@ -5,8 +5,6 @@
         style="background-color: #000000;
         background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
       >
-        <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
         <v-spacer></v-spacer>
         <v-btn color="transparent" outlined>
           <Login />
