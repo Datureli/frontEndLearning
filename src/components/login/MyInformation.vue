@@ -14,8 +14,7 @@
     </v-card>
 
     <v-toolbar class="mb-0" elevation="0" dark color="transparent">
-      <v-toolbar-title>Login</v-toolbar-title>
-      <v-spacer></v-spacer>
+     
     </v-toolbar>
     <v-sheet color="white" class="mx-auto" height="0" width="97%"> </v-sheet>
     <div class="d-flex mt-10">

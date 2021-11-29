@@ -1,7 +1,7 @@
 <template>
   <v-row justify="center">
     <v-dialog
-    eager
+      eager
       v-model="dialog"
       fullscreen
       @keydown.esc="dialog = false"
@@ -43,105 +43,102 @@
           </v-toolbar-items>
         </v-toolbar>
         <div class="d-flex">
-          <v-sheet
-            elevation="0"
+          <v-card
             v-show="loggedIn && !elementVisible"
             height="100%"
             width="310"
-            fill-height
-                    dark
-              color="#2c3e50"
+            dark
+            color="#2c3e50"
           >
-              <v-list color="transparent">
-                <v-list-item-group
-                  style="font-size: 20px"
-                  color="primary"
-                  active-class="blue--text"
-                >
-                  <v-list-item>
-                    <router-link
-                      :to="{ name: 'HtmlQuestions' }"
-                      class="text-deocration-none mx-auto"
-                      style="text-decoration: none;"
-                    >
-                      Html
-                    </router-link>
-                  </v-list-item>
+            <v-list color="transparent">
+              <v-list-item-group
+                style="font-size: 20px"
+                color="primary"
+                active-class="blue--text"
+              >
+                <v-list-item>
+                  <router-link
+                    :to="{ name: 'Login' }"
+                    class="text-deocration-none mx-auto"
+                    style="text-decoration: none;"
+                  >
+                    Profil
+                  </router-link>
+                </v-list-item>
 
-                  <v-list-item>
-                    <router-link
-                      :to="{ name: 'CssQuestions' }"
-                      class="mx-auto"
-                      style="text-decoration: none;"
-                    >
-                      Css
-                    </router-link>
-                  </v-list-item>
-                  <v-list-item>
-                    <router-link
-                      :to="{ name: 'JavascriptQuestions' }"
-                      class="text-deocration-none mx-auto"
-                      style="text-decoration: none;"
-                    >
-                      Javascript
-                    </router-link>
-                  </v-list-item>
-                  <v-list-item>
-                    <router-link
-                      :to="{ name: 'VueQuestions' }"
-                      class="text-deocration-none mx-auto"
-                      style="text-decoration: none;"
-                    >
-                      Vue
-                    </router-link>
-                  </v-list-item>
-                  <v-list-item>
-                    <router-link
-                      :to="{ name: 'HtmlQuestions' }"
-                      class="text-deocration-none mx-auto"
-                      style="text-decoration: none;"
-                    >
-                      React
-                    </router-link>
-                  </v-list-item>
-                  <v-list-item>
-                    <router-link
-                      :to="{ name: 'Favorite' }"
-                      class="text-deocration-none mx-auto"
-                      style="text-decoration: none;"
-                    >
-                      Favorite
-                    </router-link>
-                  </v-list-item>
-                  <v-list-item>
-                    <router-link
-                      :to="{ name: 'GeneralQuestions' }"
-                      class="text-deocration-none mx-auto"
-                      style="text-decoration: none;"
-                    >
-                      Ogólne
-                    </router-link>
-                  </v-list-item>
-                  <v-list-item>
-                    <router-link
-                      :to="{ name: 'StupidQuestions' }"
-                      class="text-deocration-none mx-auto"
-                      style="text-decoration: none;"
-                    >
-                      Pytania o ciebie
-                    </router-link>
-                  </v-list-item>
-                </v-list-item-group>
-              </v-list>
+                <v-list-item>
+                  <router-link
+                    :to="{ name: 'Password' }"
+                    class="mx-auto"
+                    style="text-decoration: none;"
+                  >
+                    Password
+                  </router-link>
+                </v-list-item>
+                <v-list-item>
+                  <router-link
+                    :to="{ name: 'JavascriptQuestions' }"
+                    class="text-deocration-none mx-auto"
+                    style="text-decoration: none;"
+                  >
+                  Messages
+                  </router-link>
+                </v-list-item>
+                <v-list-item>
+                  <router-link
+                    :to="{ name: 'VueQuestions' }"
+                    class="text-deocration-none mx-auto"
+                    style="text-decoration: none;"
+                  >
+                    Friends
+                  </router-link>
+                </v-list-item>
+                <v-list-item>
+                  <router-link
+                    :to="{ name: 'HtmlQuestions' }"
+                    class="text-deocration-none mx-auto"
+                    style="text-decoration: none;"
+                  >
+                    Stwórz pytania
+                  </router-link>
+                </v-list-item>
+                <v-list-item>
+                  <router-link
+                    :to="{ name: 'Favorite' }"
+                    class="text-deocration-none mx-auto"
+                    style="text-decoration: none;"
+                  >
+                    Ulubione
+                  </router-link>
+                </v-list-item>
+                <v-list-item>
+                  <router-link
+                    :to="{ name: 'GeneralQuestions' }"
+                    class="text-deocration-none mx-auto"
+                    style="text-decoration: none;"
+                  >
+                    Osiągnięcia
+                  </router-link>
+                </v-list-item>
+                <v-list-item>
+                  <router-link
+                    :to="{ name: 'StupidQuestions' }"
+                    class="text-deocration-none mx-auto"
+                    style="text-decoration: none;"
+                  >
+                    Ustawienia
+                  </router-link>
+                </v-list-item>
+              </v-list-item-group>
+            </v-list>
 
-              <v-btn class="mt-10 mb-10" @click="logOut">Logout</v-btn>
-   
-          </v-sheet>
+            <v-btn class="mt-10 mb-10" @click="logOut">Logout</v-btn>
+          </v-card>
           <FavoriteSection v-if="this.$route.path === '/login/favorite'" />
           <MyInformation
             v-show="loggedIn && !elementVisible"
-            v-if="this.$route.path === '/login'"
-          />
+            v-if="this.$route.path === '/login'" />
+            <ChangePassword v-if="this.$route.path === '/login/password'" />
         </div>
 
         <v-container>
@@ -207,11 +204,13 @@
 import FavoriteSection from "./FavoriteSection.vue";
 import loginAnimation from "./LoginAnimation.vue";
 import MyInformation from "./MyInformation.vue";
+import ChangePassword from './ChangePassword.vue'
 export default {
   components: {
     loginAnimation,
     MyInformation,
     FavoriteSection,
+    ChangePassword
   },
   data: () => ({
     showFavorite: false,

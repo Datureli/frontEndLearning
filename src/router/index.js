@@ -118,6 +118,11 @@ const routes = [
         path: "favorite",
         name: "Favorite",
         component: () => import("../components/login/FavoriteSection.vue"),
+      },
+      {
+        path: "password",
+        name: "Password",
+        component: () => import("../components/login/ChangePassword.vue"),
       }
     ]
   },
