@@ -148,17 +148,19 @@
           </div>
 
           <v-card
-            style="background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
+            color="darkGradient"
             v-if="!loggedIn"
             width="460"
             class="mx-auto mt-15 pr-4 pl-4"
+         
           >
             <v-card-title>
-              <h1 class="display-1 mx-auto">Login</h1>
+              <h1 class="display-1 mx-auto white--text">Login</h1>
             </v-card-title>
             <v-card-text>
               <v-form>
                 <v-text-field
+                     hide-details="auto"
                   label="Username"
                   v-model="username"
                   :rules="loginRules"

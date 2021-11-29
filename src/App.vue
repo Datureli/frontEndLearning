@@ -37,4 +37,7 @@ export default {
 background-color: #a55c1b;
 background-image: linear-gradient(315deg, #a55c1b 0%, #000000 74%);
 }
+.darkGradient {
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+}
 </style>
