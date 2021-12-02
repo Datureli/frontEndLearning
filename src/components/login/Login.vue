@@ -77,7 +77,7 @@
                 </v-list-item>
                 <v-list-item>
                   <router-link
-                    :to="{ name: 'JavascriptQuestions' }"
+                    :to="{ name: 'Messages' }"
                     class="text-deocration-none mx-auto"
                     style="text-decoration: none;"
                   >
@@ -139,6 +139,7 @@
             v-show="loggedIn && !elementVisible"
             v-if="this.$route.path === '/login'" />
             <ChangePassword v-if="this.$route.path === '/login/password'" />
+            <MessageSection v-if="this.$route.path === '/login/messages'" />
         </div>
 
         <v-container>
@@ -207,12 +208,14 @@ import FavoriteSection from "./FavoriteSection.vue";
 import loginAnimation from "./LoginAnimation.vue";
 import MyInformation from "./MyInformation.vue";
 import ChangePassword from './ChangePassword.vue'
+import MessageSection from './MessageSection.vue'
 export default {
   components: {
     loginAnimation,
     MyInformation,
     FavoriteSection,
-    ChangePassword
+    ChangePassword,
+    MessageSection
   },
   data: () => ({
     showFavorite: false,

@@ -123,6 +123,11 @@ const routes = [
         path: "password",
         name: "Password",
         component: () => import("../components/login/ChangePassword.vue"),
+      },
+      {
+        path: "messages",
+        name: "Messages",
+        component: () => import("../components/login/MessageSection.vue"),
       }
     ]
   },

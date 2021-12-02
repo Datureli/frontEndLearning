@@ -12,10 +12,15 @@
         <v-btn color="transparent" outlined>
           <SignUp />
         </v-btn>
+          <v-btn color="transparent" outlined>
+          <About />
+        </v-btn>
 
         <v-btn @click="pushToFavorite" color="transparent">
           <v-icon color="red">mdi-heart</v-icon>
-           <p class="white--text" v-if="favorite.length > 0">{{favorite.length}}</p> 
+          <p class="white--text" v-if="favorite.length > 0">
+            {{ favorite.length }}
+          </p>
         </v-btn>
 
         <v-btn icon>
@@ -96,22 +101,23 @@
 import { mapState } from "vuex";
 import Login from "./login/Login.vue";
 import SignUp from "./SignUp.vue";
+import About from "../views/About.vue"
 export default {
-  components: { Login, SignUp },
+  components: { Login, SignUp,About },
   data: () => ({
     items: [
       { title: "Fiszki", routeUrl: "/intoflashcards" },
       { title: "Quiz", routeUrl: "/quiz" },
     ],
   }),
-    computed: {
+  computed: {
     ...mapState(["disable", "favorite"]),
     ...mapState("questions", ["javascriptQuestions"]),
   },
   methods: {
     pushToFavorite() {
-      this.$router.push({name: 'login'})
-    }
+      this.$router.push({ name: "login" });
+    },
   },
 };
 </script>

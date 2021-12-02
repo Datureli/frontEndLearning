@@ -1,12 +1,13 @@
 <template>
-  <v-carousel @change="page = 1" class="mt-1">
+  <v-carousel hide-delimiters @change="page = 1" class="mt-1">
     <v-carousel-item
       v-for="(cssQuestions, index) in cssQuestions"
       :key="index"
-          max-width="700"
+      max-width="700"
       class="mx-auto"
+   
     >
-      <v-list-item> 
+      <v-list-item>
         <v-list-item-content>
           <v-list-item-subtitle
             class="text--primary   font-weight-black  text-h4 text-wrap "

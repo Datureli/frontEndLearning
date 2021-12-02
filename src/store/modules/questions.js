@@ -5,6 +5,7 @@ export default {
     htmlQuestions: [
       {
         question: "Czym jest Html?",
+        
         answer: `HTML (Hypertext Markup Language) jest to kod używany do tworzenia struktury strony i jej zawartości.jest językiem używanym do tworzenia stron internetowych. Jest to także język znaczników, czyli oprócz głównego tekstu dokument zawiera w sobie informację opisujące go. `,
       },
 
@@ -184,12 +185,17 @@ export default {
       {
         question: "Opisz warunki if,else-if or else",
         answer:
-          "Powyżej w listingach używałem instrukcji if, która wykonuje dany kod tylko w przypadku, gdy w nawiasach wynikiem będzie prawda.Zwróć tylko uwagę, że przy każdej instrukcji if (w tym else if) musimy podać warunek, natomiast else zawsze jest bez warunku.",
+          "instrukcja if wykonuje dany kod tylko w przypadku, gdy w nawiasach wynikiem będzie prawda.Przy każdej instrukcji if (w tym else if) musimy podać warunek, natomiast else zawsze jest bez warunku.",
       },
       {
         question: "Czym jest ternary operator?",
         answer:
           "Operator warunkowy (tak zwany ternary operator), to tak naprawdę skrócona wersja warunku if:",
+      },
+      {
+        question: "Czym jest IIFE?",
+        answer:
+          "IIFE (Immediately-invoked function expression) - czyli samo wywołujące się wyrażenie funkcyjne to wzorzec funkcji, która sama się wywołuje.",
       },
       {
         question: "Czym jest instrukcja switch?",
@@ -199,7 +205,14 @@ export default {
       {
         question: "Omów pętle for",
         answer:
-          "Operator warunkowy (tak zwany ternary operator), to tak naprawdę skrócona wersja warunku if:",
+          `pętla for jest typowo "manualna". Trzeba ustawić licznik, kiedy ma się zakończyć i jak ma być zwiększany. Dodatkowo ręcznie trzeba się odwoływać do danego elementu w tablicy.`,
+        secondAnswer:
+          "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
+      },
+      {
+        question: "Czym jest dependency injection?",
+        answer:
+          `pętla for jest typowo "manualna". Trzeba ustawić licznik, kiedy ma się zakończyć i jak ma być zwiększany. Dodatkowo ręcznie trzeba się odwoływać do danego elementu w tablicy.`,
         secondAnswer:
           "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
       },
@@ -407,6 +420,24 @@ export default {
       {
         question:
           "Jaka jest różnica między wyrażeniem(explicity) a niejawnością(implicity)?",
+        answer:
+          "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
+      },
+      {
+        question:
+          "czym jest enum?",
+        answer:
+          "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
+      },
+      {
+        question:
+          "czym jest typ unknown?",
+        answer:
+          "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
+      },
+      {
+        question:
+          "czym jest generics?",
         answer:
           "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
       },
