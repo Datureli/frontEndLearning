@@ -6,7 +6,6 @@
     color="transparent"
     tile
   >
-    <router-view></router-view>
     <CssQuestions v-if="this.$route.path === '/about/cssquestions'" />
     <JavascriptQuestions v-if="this.$route.path === '/about/javascript'" />
     <HtmlQuestions v-if="this.$route.path === '/about/htmlquestions'" />
