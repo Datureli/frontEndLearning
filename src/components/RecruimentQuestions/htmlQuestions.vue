@@ -33,44 +33,44 @@
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-
     </v-carousel-item>
-          <v-sheet class="d-flex" relative>
-        <v-icon
-          x-large
-          @click="randomHtmlQuestion"
-          color="brown"
-          style="position: absolute; bottom: 26%; right:87%;"
-          >mdi-dice-multiple</v-icon
-        >
+    <v-sheet class="d-flex" relative>
+      <v-icon
+        x-large
+        @click="randomHtmlQuestion"
+        color="brown"
+        style="position: absolute; bottom: 26%; right:90%;"
+        >mdi-dice-multiple</v-icon
+      >
 
-        <v-icon
-          @click="htmlQuestionLoop"
-          color="white"
-          style="position: absolute; bottom: 26%; right:80%; font-size:45px;"
-          >mdi-autorenew</v-icon
-        >
+      <v-icon
+        x-large
+        @click="htmlQuestionLoop"
+        color="white"
+        style="position: absolute; bottom: 26%; right:85%;"
+        >mdi-autorenew</v-icon
+      >
 
-        <v-pagination
-          style="position: absolute; bottom: 18%; right:35%"
-          v-model="page"
-          :length="3"
-        ></v-pagination>
-        <v-icon
-        absolute
-          x-large
-          @click="disableAnswers"
-          style="position: absolute; bottom: 26%; right:10%;"
-          >mdi-comment-off-outline</v-icon
-        >
+      <v-pagination
+        style="position: absolute; bottom: 18%; right:36%"
+        v-model="page"
+        :length="3"
+      ></v-pagination>
+      <v-icon
+        large
+        @click="disableAnswers"
+        style="position: absolute; bottom: 26%; right:10%;"
+        >mdi-comment-off-outline</v-icon
+      >
 
-        <v-icon
-          @click="addToFavorite(htmlQuestions)"
-          color="red"
-          style="position: absolute; bottom: 26%; right:3%; font-size:45px;"
-          >mdi-heart</v-icon
-        >
-      </v-sheet>
+      <v-icon
+        x-large
+        @click="addToFavorite(htmlQuestions)"
+        color="red"
+        style="position: absolute; bottom: 26%; right:4%;"
+        >mdi-heart</v-icon
+      >
+    </v-sheet>
   </v-carousel>
 </template>
 

@@ -53,6 +53,16 @@
             Vue
           </router-link>
         </v-list-item>
+             <v-list-item>
+          <v-icon>mdi-account-circle</v-icon>
+          <router-link
+            :to="{ name: 'VueQuestions' }"
+            class="text-deocration-none mx-auto"
+            style="text-decoration: none; color: #a55c1b;"
+          >
+            Git
+          </router-link>
+        </v-list-item>
         <v-list-item>
           <v-icon>mdi-account-circle</v-icon>
           <router-link
