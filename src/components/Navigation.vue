@@ -12,9 +12,6 @@
         <v-btn color="transparent" outlined>
           <SignUp />
         </v-btn>
-          <v-btn color="transparent" outlined>
-          <About />
-        </v-btn>
 
         <v-btn @click="pushToFavorite" color="transparent">
           <v-icon color="red">mdi-heart</v-icon>

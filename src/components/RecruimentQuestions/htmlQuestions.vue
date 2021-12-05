@@ -1,15 +1,15 @@
 <template>
-  <v-carousel @change="page = 1" class="mt-1">
+  <v-carousel hide-delimiters @change="page = 1" class="mt-1">
     <v-carousel-item
       v-for="(htmlQuestions, index) in htmlQuestions"
       :key="index"
-          max-width="700"
+      max-width="700"
       class="mx-auto"
     >
       <v-list-item>
         <v-list-item-content>
           <v-list-item-subtitle
-            class="text--primary   font-weight-black  text-h4 text-wrap "
+            class="text--primary mb-5 font-weight-black  text-h4 text-wrap "
             v-text="htmlQuestions.question"
           ></v-list-item-subtitle>
 
@@ -33,41 +33,44 @@
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-      <div class="d-flex">
+
+    </v-carousel-item>
+          <v-sheet class="d-flex" relative>
+        <v-icon
+          x-large
+          @click="randomHtmlQuestion"
+          color="brown"
+          style="position: absolute; bottom: 26%; right:87%;"
+          >mdi-dice-multiple</v-icon
+        >
+
+        <v-icon
+          @click="htmlQuestionLoop"
+          color="white"
+          style="position: absolute; bottom: 26%; right:80%; font-size:45px;"
+          >mdi-autorenew</v-icon
+        >
+
         <v-pagination
-          style="position: absolute; bottom: 25%; right:35%"
+          style="position: absolute; bottom: 18%; right:35%"
           v-model="page"
           :length="3"
         ></v-pagination>
         <v-icon
+        absolute
+          x-large
           @click="disableAnswers"
-          style="position: absolute; bottom: 26%; right:17%; font-size:45px;"
+          style="position: absolute; bottom: 26%; right:10%;"
           >mdi-comment-off-outline</v-icon
         >
-        <v-icon
-          @click="randomHtmlQuestion"
-          color="brown"
-          style="position: absolute; bottom: 26%; right:7%; font-size:45px;"
-          >mdi-dice-multiple</v-icon
-        >
-        <v-button @click="htmlQuestionLoop">
-          <v-icon
-            color="white"
-            class="mx-auto"
-            style="position: absolute; bottom: 26%; right:12%; font-size:45px;"
-            >mdi-autorenew</v-icon
-          >
-        </v-button>
 
-        <v-button @click="addToFavorite(htmlQuestions)">
-          <v-icon
-            color="red"
-            style="position: absolute; bottom: 26%; right:1%; font-size:45px;"
-            >mdi-heart</v-icon
-          >
-        </v-button>
-      </div>
-    </v-carousel-item>
+        <v-icon
+          @click="addToFavorite(htmlQuestions)"
+          color="red"
+          style="position: absolute; bottom: 26%; right:3%; font-size:45px;"
+          >mdi-heart</v-icon
+        >
+      </v-sheet>
   </v-carousel>
 </template>
 
