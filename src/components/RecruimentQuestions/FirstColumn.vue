@@ -13,7 +13,7 @@
         active-class="blue--text"
       >
         <v-list-item>
-          <v-icon>mdi-home</v-icon>
+          <v-icon>mdi-language-html5</v-icon>
           <router-link
             :to="{ name: 'HtmlQuestions' }"
             class="text-deocration-none mx-auto"
@@ -24,7 +24,7 @@
         </v-list-item>
 
         <v-list-item>
-          <v-icon>mdi-account-circle</v-icon>
+          <v-icon>mdi-language-css3</v-icon>
           <router-link
             :to="{ name: 'CssQuestions' }"
             class="mx-auto"
@@ -34,7 +34,7 @@
           </router-link>
         </v-list-item>
         <v-list-item>
-          <v-icon>mdi-account-circle</v-icon>
+          <v-icon>mdi-language-javascript</v-icon>
           <router-link
             :to="{ name: 'JavascriptQuestions' }"
             class="text-deocration-none mx-auto"
@@ -44,7 +44,7 @@
           </router-link>
         </v-list-item>
         <v-list-item>
-          <v-icon>mdi-account-circle</v-icon>
+          <v-icon>mdi-vuejs</v-icon>
           <router-link
             :to="{ name: 'VueQuestions' }"
             class="text-deocration-none mx-auto"
@@ -54,7 +54,7 @@
           </router-link>
         </v-list-item>
              <v-list-item>
-          <v-icon>mdi-account-circle</v-icon>
+          <v-icon>mdi-git</v-icon>
           <router-link
             :to="{ name: 'VueQuestions' }"
             class="text-deocration-none mx-auto"
@@ -64,7 +64,7 @@
           </router-link>
         </v-list-item>
         <v-list-item>
-          <v-icon>mdi-account-circle</v-icon>
+          <v-icon>mdi-react</v-icon>
           <router-link
             :to="{ name: 'HtmlQuestions' }"
             class="text-deocration-none mx-auto"
@@ -74,7 +74,7 @@
           </router-link>
         </v-list-item>
         <v-list-item>
-          <v-icon>mdi-account-circle</v-icon>
+          <v-icon>mdi-language-typescript</v-icon>
           <router-link
             :to="{ name: 'HtmlQuestions' }"
             class="text-deocration-none mx-auto"

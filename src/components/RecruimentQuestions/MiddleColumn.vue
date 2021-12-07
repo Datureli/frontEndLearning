@@ -10,7 +10,7 @@
     <CssQuestions v-if="this.$route.path === '/about/cssquestions'" />
     <JavascriptQuestions v-if="this.$route.path === '/about/javascript'" />
     <HtmlQuestions v-if="this.$route.path === '/about/htmlquestions'" />
-    <VueQuestions v-if="this.$route.path === '/about/vuequestions'" />
+    <VueQuestions v-if="this.$route.path === '/about/vue'" />
   </v-sheet>
 </template>
 
@@ -18,11 +18,13 @@
 import HtmlQuestions from "./HtmlQuestions.vue";
 import CssQuestions from "./CssQuestions.vue";
 import JavascriptQuestions from "./JavascriptQuestions.vue";
+import VueQuestions from './VueQuestions.vue'
 export default {
   components: {
     HtmlQuestions,
     CssQuestions,
     JavascriptQuestions,
+    VueQuestions
   },
 };
 </script>

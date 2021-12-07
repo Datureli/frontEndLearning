@@ -34,41 +34,45 @@
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-      <div class="d-flex">
-        <v-pagination
-          style="position: absolute; bottom: 25%; right:35%"
-          v-model="page"
-          :length="3"
-        ></v-pagination>
-        <v-icon
-          @click="disableAnswers"
-          style="position: absolute; bottom: 26%; right:17%; font-size:45px;"
-          >mdi-comment-off-outline</v-icon
-        >
-        <v-icon
-          @click="randomHtmlQuestion"
-          color="brown"
-          style="position: absolute; bottom: 26%; right:7%; font-size:45px;"
-          >mdi-dice-multiple</v-icon
-        >
-        <v-button @click="htmlQuestionLoop">
-          <v-icon
-            color="white"
-            class="mx-auto"
-            style="position: absolute; bottom: 26%; right:12%; font-size:45px;"
-            >mdi-autorenew</v-icon
-          >
-        </v-button>
-
-        <v-button @click="addToFavorite(cssQuestions)">
-          <v-icon
-            color="red"
-            style="position: absolute; bottom: 26%; right:1%; font-size:45px;"
-            >mdi-heart</v-icon
-          >
-        </v-button>
-      </div>
+     
     </v-carousel-item>
+      <v-sheet class="d-flex" relative>
+      <v-icon
+        x-large
+        @click="randomCssQuestion"
+        color="brown"
+        style="position: absolute; bottom: 26%; right:90%;"
+        >mdi-dice-multiple</v-icon
+      >
+
+      <v-icon
+        x-large
+        @click="cssQuestionLoop"
+        color="white"
+        style="position: absolute; bottom: 26%; right:85%;"
+        >mdi-autorenew</v-icon
+      >
+
+      <v-pagination
+        style="position: absolute; bottom: 18%; right:36%"
+        v-model="page"
+        :length="3"
+      ></v-pagination>
+      <v-icon
+        large
+        @click="disableAnswers"
+        style="position: absolute; bottom: 26%; right:10%;"
+        >mdi-comment-off-outline</v-icon
+      >
+
+      <v-icon
+        x-large
+        @click="addToFavorite(cssQuestions)"
+        color="red"
+        style="position: absolute; bottom: 26%; right:4%;"
+        >mdi-heart</v-icon
+      >
+    </v-sheet>
   </v-carousel>
 </template>
 
@@ -92,11 +96,11 @@ export default {
     addToFavorite(cssQuestions) {
       this.$store.state.favorite.push(cssQuestions);
     },
-    htmlQuestionLoop() {
-      this.$store.dispatch("questions/htmlQuestionLoop");
+   cssQuestionLoop() {
+      this.$store.dispatch("questions/cssQuestionLoop");
     },
-    randomHtmlQuestion() {
-      this.$store.dispatch("questions/randomHtmlQuestion");
+    randomCssQuestion() {
+      this.$store.dispatch("questions/randomCssQuestion");
     },
   },
 };

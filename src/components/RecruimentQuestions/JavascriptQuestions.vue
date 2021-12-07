@@ -1,5 +1,5 @@
 <template>
-  <v-carousel @change="page = 1" class="mt-1">
+  <v-carousel hide-delimiters @change="page = 1" class="mt-1">
     <v-carousel-item
       v-for="(javascriptQuestions, index) in javascriptQuestions"
       :key="index"
@@ -33,42 +33,44 @@
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-      <div class="d-flex">
-        <v-pagination
-          style="position: absolute; bottom: 25%; right:35%"
-          v-model="page"
-          :length="3"
-        ></v-pagination>
-        <v-icon
-          @click="disableAnswers"
-          style="position: absolute; bottom: 26%; right:17%; font-size:45px;"
-          >mdi-comment-off-outline</v-icon
-        >
-        <v-icon
-          @click="randomQuestion"
-          color="brown"
-          style="position: absolute; bottom: 26%; right:7%; font-size:45px;"
-          >mdi-dice-multiple</v-icon
-        >
-        <v-button @click="questionLoop()">
-          <v-icon
-            color="white"
-            class="mx-auto"
-            style="position: absolute; bottom: 26%; right:12%; font-size:45px;"
-            >mdi-autorenew</v-icon
-          >
-        </v-button>
-
-        <v-button @click="addToFavorite(javascriptQuestions)">
-          <v-icon
-            color="red"
-            style="position: absolute; bottom: 26%; right:1%; font-size:45px;"
-            >mdi-heart</v-icon
-          >
-        </v-button>
-        
-      </div>
     </v-carousel-item>
+     <v-sheet class="d-flex" relative>
+      <v-icon
+        x-large
+        @click="randomQuestion"
+        color="brown"
+        style="position: absolute; bottom: 26%; right:90%;"
+        >mdi-dice-multiple</v-icon
+      >
+
+      <v-icon
+        x-large
+        @click="questionLoop"
+        color="white"
+        style="position: absolute; bottom: 26%; right:85%;"
+        >mdi-autorenew</v-icon
+      >
+
+      <v-pagination
+        style="position: absolute; bottom: 18%; right:36%"
+        v-model="page"
+        :length="3"
+      ></v-pagination>
+      <v-icon
+        large
+        @click="disableAnswers"
+        style="position: absolute; bottom: 26%; right:10%;"
+        >mdi-comment-off-outline</v-icon
+      >
+
+      <v-icon
+        x-large
+        @click="addToFavorite(javascriptQuestions)"
+        color="red"
+        style="position: absolute; bottom: 26%; right:4%;"
+        >mdi-heart</v-icon
+      >
+    </v-sheet>
   </v-carousel>
 </template>
 

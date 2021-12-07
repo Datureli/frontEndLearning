@@ -352,17 +352,18 @@ export default {
       {
         question: "Czym jest Vuex?",
         answer:
-          "Vuex służy do przechowywania stanów, które są potrzebne wielu komponentom w jednej centralnej lokalizacji.Dzięki Vuex możemy przechowywać stan naszej aplikacji Vue w centralnej lokalizacji.Pozwala nam pobierać i ustawiać stan współdzielenia oraz automatycznie propagować wszelkie zmiany dokonane we wspólnym stanie do wszystkich komponentów.",
+          "Dzięki Vuex możemy przechowywać stan naszej aplikacji Vue w centralnej lokalizacji.Pozwala nam pobierać i ustawiać stan współdzielenia oraz automatycznie propagować wszelkie zmiany dokonane we wspólnym stanie do wszystkich komponentów.",
       },
       {
         question: "Jakie są zalety Vue.js?",
         answer:
-          "prostosa - vue js posiada niski próg wejścia.Framework jest również lekki,waży tylko 18-23 kb,Vue js jest szybszym frameworkiem niż Angular czy React",
+          "vue js posiada niski próg wejścia.Framework jest również lekki,waży tylko 18-23 kb,Vue js jest szybszym frameworkiem niż Angular czy React,virtual DOM,data binding,komponentyAnimation/Transition: VueJS provides several techniques to implement the transition to HTML components. This framework allows you to add third party animation libraries.templates.",
+          secondAnswer: 'konkurentów React i Angular. Jako React jest oparty na komponentach oraz jednostronnym przepływie danych, i podobnie do Angular posiada proste szablony z dobrą składnią. Vue nie potrzebuje konfiguracji środowiska, Do komunikacji pomiędzy komponentami używa się vuex czyli biblioteki, która zarządza dużą ilością danych jednocześnie.Posiada bardzo szczegołową dokumentacje'
       },
       {
         question: "Czym jest composition api?",
         answer:
-          "Jest to nowe API, które pozwala na pisanie komponentów w sposób oparty na funkcjach.Nowe API umożliwia hermetyzację logiki w tzw. „composition functions” i pozwala używać jej ponownie we wszystkich komponentach.  ",
+          "pozwala na pisanie komponentów w sposób oparty na funkcjach. Usprawnienie to zostało zainspirowane przez React Hooks. Nowe API umożliwia hermetyzację logiki w tzw. „composition functions” i pozwala używać jej ponownie we wszystkich komponentach.   ",
       },
       {
         question: "Jaka jest różnica między Vue2 a Vue3?",
@@ -371,7 +372,7 @@ export default {
       },
       {
         question: "Co to są gettery?",
-        answer: "to są funkcje które zwracają nam stan",
+        answer: "to są funkcje które zwracają nam stan.obiekt.defineProperty API, jeśli jeszcze tego nie wiesz. Ponieważ system reaktywności Vue opiera się na tym API.",
       },
       {
         question: "co to jest flux?",
@@ -401,7 +402,7 @@ export default {
       {
         question: "Czym są sunspense components",
         answer:
-          "życie mapState() pozwala na pobranie i przypisanie do lokalnego scope wartości bezpośrednio z sekcji state w store. W ten sposób otrzymujemy czyste dane – bez żadnych modyfikacji. Ma to duży sens, jeśli są to typy proste – jakaś flaga będąca wartością boolean (true/false), np. flaga „loading” itp.",
+          "Suspense components to nowa funkcja w vue 3 która tworzy",
       },
       {
         question: "Jaka jest różnica między composition api a option api?",
@@ -483,6 +484,18 @@ export default {
         });
       }, 1000);
     },
+    cssQuestionLoop(state) {
+      setInterval(() => {
+        state.cssQuestions.sort(function() {
+          return Math.round(Math.random()) - 0.5;
+        });
+      }, 1000);
+    },
+    randomCssQuestion(state) {
+      state.cssQuestions.sort(function() {
+        return Math.round(Math.random()) - 0.5;
+      });
+    },
     randomHtmlQuestion(state) {
       state.htmlQuestions.sort(function() {
         return Math.round(Math.random()) - 0.5;
@@ -506,6 +519,9 @@ export default {
     htmlQuestionLoop(context) {
       context.commit("htmlQuestionLoop");
     },
+    cssQuestionLoop(context) {
+      context.commit("cssQuestionLoop");
+    },
     vueQuestionLoop(context) {
       context.commit("vueQuestionLoop");
     },
@@ -517,6 +533,9 @@ export default {
     },
     randomVueQuestion(context) {
       context.commit("randomVueQuestion");
+    },
+    randomCssQuestion(context) {
+      context.commit("randomCssQuestion");
     },
   },
 };
