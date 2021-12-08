@@ -1,5 +1,5 @@
 <template>
-  <v-carousel hide-delimiters @change="page = 1" class="mt-1">
+  <v-carousel hide-delimiters @change="page = 1"  class="mt-1">
     <v-carousel-item
       v-for="(vueQuestions, index) in vueQuestions"
       :key="index"
@@ -78,6 +78,7 @@
 <script>
 import { mapState } from "vuex";
 export default {
+  
   props: {
     page: {
       type: Number,

@@ -7,6 +7,7 @@
       @keydown.esc="dialog = false"
       transition="dialog-bottom-transition"
     >
+      {{ registeredUsers }}
       <template v-slot:activator="{ on, attrs }">
         <v-btn
           v-if="loggedIn === false"
@@ -81,7 +82,7 @@
                     class="text-deocration-none mx-auto"
                     style="text-decoration: none;"
                   >
-                  Messages
+                    Messages
                   </router-link>
                 </v-list-item>
                 <v-list-item>
@@ -137,9 +138,10 @@
           <FavoriteSection v-if="this.$route.path === '/login/favorite'" />
           <MyInformation
             v-show="loggedIn && !elementVisible"
-            v-if="this.$route.path === '/login'" />
-            <ChangePassword v-if="this.$route.path === '/login/password'" />
-            <MessageSection v-if="this.$route.path === '/login/messages'" />
+            v-if="this.$route.path === '/login'"
+          />
+          <ChangePassword v-if="this.$route.path === '/login/password'" />
+          <MessageSection v-if="this.$route.path === '/login/messages'" />
         </div>
 
         <v-container>
@@ -153,7 +155,6 @@
             v-if="!loggedIn"
             width="460"
             class="mx-auto mt-15 pr-4 pl-4"
-         
           >
             <v-card-title>
               <h1 class="display-1 mx-auto white--text">Login</h1>
@@ -161,7 +162,7 @@
             <v-card-text>
               <v-form>
                 <v-text-field
-                     hide-details="auto"
+                  hide-details="auto"
                   label="Username"
                   v-model="username"
                   :rules="loginRules"
@@ -204,18 +205,19 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import FavoriteSection from "./FavoriteSection.vue";
 import loginAnimation from "./LoginAnimation.vue";
 import MyInformation from "./MyInformation.vue";
-import ChangePassword from './ChangePassword.vue'
-import MessageSection from './MessageSection.vue'
+import ChangePassword from "./ChangePassword.vue";
+import MessageSection from "./MessageSection.vue";
 export default {
   components: {
     loginAnimation,
     MyInformation,
     FavoriteSection,
     ChangePassword,
-    MessageSection
+    MessageSection,
   },
   data: () => ({
     showFavorite: false,
@@ -230,19 +232,25 @@ export default {
     passwordRules: [(value) => !!value || "password is required"],
   }),
   computed: {
-    Login() {
-      return this.$store.state.loginStatus;
-    },
+    ...mapState("register", ["registeredUsers"]),
     isUserLogin() {
-      if (this.username.length > 0 && this.password.length > 0) {
+      if (
+        this.username.length > 0 &&
+        this.password.length > 0 
+    //    &&    registeredUsers.login == this.username
+      ) {
         this.loggedIn = true;
         this.$router.push({ path: "login" });
       }
     },
   },
+
   methods: {
     logOut() {
       this.loggedIn = false;
+    },
+    addUser() {
+      this.$store.dispatch("register/addUser");
     },
 
     closeModal() {

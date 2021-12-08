@@ -67,14 +67,6 @@ const routes = [
         component: () =>
           import("../components/RecruimentQuestions/HtmlQuestions.vue"),
         name: "HtmlQuestions",
-        children: [
-          {
-            path: "semanthic",
-            component: () =>
-              import("../components/RecruimentQuestions/Semanthic.vue"),
-            name: "Semanthic",
-          },
-        ],
       },
     ],
   },
