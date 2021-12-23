@@ -7,7 +7,6 @@
       @keydown.esc="dialog = false"
       transition="dialog-bottom-transition"
     >
-      {{ registeredUsers }}
       <template v-slot:activator="{ on, attrs }">
         <v-btn
           v-if="loggedIn === false"

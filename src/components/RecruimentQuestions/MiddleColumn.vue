@@ -1,6 +1,8 @@
 <template>
+
   <v-sheet
-    class="mx-auto mt-15 mb-10"
+    class="mx-auto mb-10"
+    style="margin-top: 80px;"
     height="415"
     width="850"
     color="transparent"

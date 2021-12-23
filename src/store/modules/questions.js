@@ -8,6 +8,14 @@ export default {
         
         answer: `HTML (Hypertext Markup Language) jest to kod używany do tworzenia struktury strony i jej zawartości.jest językiem używanym do tworzenia stron internetowych. Jest to także język znaczników, czyli oprócz głównego tekstu dokument zawiera w sobie informację opisujące go. `,
       },
+      {
+        question: "jak wstawić ikonę obok adresu strony www?",
+        
+        answer: `Polecenie to pozwala dodać ikonkę (favicon.ico), która będzie widoczna w przeglądarce przy adresie naszej strony. Typowy rozmiar ikony to 16x16 pikseli. W systemie Windows jest dodatkowa możliwość umieszczenia skrótu na pulpicie - wtedy przydatna może być ikona o rozmiarach 32x32. Format *.ico pozwala zapisać dwie wersje rozmiaru w jednym pliku. Niektóre przeglądarki - nie MSIE 6 - pozwalając również używać innych formatów graficznych, takich jak np. PNG.`,
+        secondAnswer: `<head>
+        <link rel="shortcut icon" href="adres ikony">
+      </head>`
+      },
 
       {
         question: "Czym jest tag <blockquote>?",

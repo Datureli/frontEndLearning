@@ -1,7 +1,7 @@
 <template>
   <v-card
     width="320"
-    class="mt-12 ml-12"
+    class="mt-15 ml-12"
     color="transparent"
     elevation="0"
   >
