@@ -19,12 +19,14 @@
             v-show="disable"
             v-text="htmlQuestions.answer"
           ></v-list-item-subtitle>
-          <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
-            v-if="page === 2"
-            v-show="disable"
-            v-text="htmlQuestions.secondAnswer"
-          ></v-list-item-subtitle>
+
+          <pre v-if="page === 2">
+          <code >
+  
+  <p      v-show="disable">{{htmlQuestions.secondAnswer}}</p> 
+          </code>
+        </pre>
+
           <v-list-item-subtitle
             class="white--text text-justify text-h5 text-wrap"
             v-if="page === 3"
@@ -103,3 +105,16 @@ export default {
   },
 };
 </script>
+<style>
+pre {
+  background: rgb(102, 93, 93);
+  border-left: 5px solid turquoise;
+  border-right: 5px solid turquoise;
+  border-top: 1px solid turquoise;
+  border-bottom: 1px solid turquoise;
+  padding: 0;
+  margin: 0 auto;
+  width: 80%;
+  position: relative;
+}
+</style>
