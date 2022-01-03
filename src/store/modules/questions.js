@@ -6,7 +6,19 @@ export default {
       {
         question: "Czym jest Html?",
         
-        answer: `HTML (Hypertext Markup Language) jest to kod używany do tworzenia struktury strony i jej zawartości.jest językiem używanym do tworzenia stron internetowych. Jest to także język znaczników, czyli oprócz głównego tekstu dokument zawiera w sobie informację opisujące go. `,
+        answer: `HTML (Hypertext Markup Language) to język znaczników służący do prezentacji treści na stronach internetowych, który jest oparty o hiperłącza łączące poszczególne dokumenty pomiędzy sobą. Przeglądarki internetowe jednoznacznie interpretują kod HTML i na jego bazie przedstawiają treść końcowym użytkownikom.`,
+
+        secondAnswer: `<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+  </body>
+</html>`
       },
       {
         question: "jak wstawić ikonę obok adresu strony www?",
@@ -20,13 +32,13 @@ export default {
       {
         question: "Czym jest tag <blockquote>?",
         answer:
-          "Tag <blockquote> określa treść cytowaną ze źródła zewnętrznego (gazeta, praca naukowa itp.",
+          "Tag <blockquote> określa treść cytowaną ze źródła zewnętrznego (gazeta, praca naukowa itp.for         (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
         secondAnswer:
-          `for 
-          dasda
-          (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}`,
+          `<blockquote cite="http://developer.mozilla.org">
+        <p>To jest cytat z Mozilla Developer Center.</p>
+          </blockquote>`,
       },
-      {
+      { 
         question: "Czym jest Html?",
         answer: `Jest to znacznik, który określa znaczenie elementu.
          Głównie do celów dostępności (ang. accessibility). Jest częścią specyfikacji ARIA. Został też dodany do HTML5.`,

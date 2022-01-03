@@ -14,7 +14,6 @@ export default new Vuex.Store({
   },
 
   state: {
-    //data
     disable: true,
     favorite: [],
   },

@@ -1,6 +1,6 @@
 <template>
 <div>
-{{info}}
+{{word}}
 </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://wordreference.com/enpl/")
+      .get("https://api.dictionaryapi.dev/api/v2/entries/en/hello")
       .then((response) => (this.info = response.data));
   },
 };

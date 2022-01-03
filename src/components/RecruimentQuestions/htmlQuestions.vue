@@ -19,12 +19,9 @@
             v-show="disable"
             v-text="htmlQuestions.answer"
           ></v-list-item-subtitle>
-
-          <pre v-if="page === 2">
-          <code >
-  
-  <p      v-show="disable">{{htmlQuestions.secondAnswer}}</p> 
-          </code>
+          <pre v-if="page === 2">      <code> 
+            <p  v-show="disable">{{htmlQuestions.secondAnswer}}</p> 
+            </code>
         </pre>
 
           <v-list-item-subtitle
@@ -87,6 +84,7 @@ export default {
   computed: {
     ...mapState(["disable", "favorite"]),
     ...mapState("questions", ["htmlQuestions"]),
+    
   },
 
   methods: {
@@ -108,13 +106,20 @@ export default {
 <style>
 pre {
   background: rgb(102, 93, 93);
-  border-left: 5px solid turquoise;
-  border-right: 5px solid turquoise;
-  border-top: 1px solid turquoise;
-  border-bottom: 1px solid turquoise;
+  border: 2px solid black;
   padding: 0;
+  text-align: center;
+  justify-content: center;
   margin: 0 auto;
-  width: 80%;
-  position: relative;
+  width: 100%;
+  height: 250px;
+  font-size: 15px;
+}
+code {
+    font-family: "Inconsolata","Monaco","Consolas","Andale Mono","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
+    display: block;
+    font-size: 13px;
+    line-height: 19px;
+    color: #ddd;
 }
 </style>
