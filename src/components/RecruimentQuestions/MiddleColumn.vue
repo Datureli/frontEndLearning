@@ -13,6 +13,7 @@
     <JavascriptQuestions v-if="this.$route.path === '/about/javascript'" />
     <HtmlQuestions v-if="this.$route.path === '/about/htmlquestions'" />
     <VueQuestions v-if="this.$route.path === '/about/vue'" />
+    <GitQuestions v-if="this.$route.path === '/about/gitquestions'" />
   </v-sheet>
 </template>
 
@@ -21,12 +22,14 @@ import HtmlQuestions from "./HtmlQuestions.vue";
 import CssQuestions from "./CssQuestions.vue";
 import JavascriptQuestions from "./JavascriptQuestions.vue";
 import VueQuestions from './VueQuestions.vue'
+import GitQuestions from './GitQuestions.vue'
 export default {
   components: {
     HtmlQuestions,
     CssQuestions,
     JavascriptQuestions,
-    VueQuestions
+    VueQuestions,
+    GitQuestions
   },
 };
 </script>

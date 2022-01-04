@@ -5,7 +5,7 @@ export default {
     htmlQuestions: [
       {
         question: "Czym jest Html?",
-        
+
         answer: `HTML (Hypertext Markup Language) to język znaczników służący do prezentacji treści na stronach internetowych, który jest oparty o hiperłącza łączące poszczególne dokumenty pomiędzy sobą. Przeglądarki internetowe jednoznacznie interpretują kod HTML i na jego bazie przedstawiają treść końcowym użytkownikom.`,
 
         secondAnswer: `<!DOCTYPE html>
@@ -18,27 +18,26 @@ export default {
   </head>
   <body>
   </body>
-</html>`
+</html>`,
       },
       {
         question: "jak wstawić ikonę obok adresu strony www?",
-        
+
         answer: `Polecenie to pozwala dodać ikonkę (favicon.ico), która będzie widoczna w przeglądarce przy adresie naszej strony. Typowy rozmiar ikony to 16x16 pikseli. W systemie Windows jest dodatkowa możliwość umieszczenia skrótu na pulpicie - wtedy przydatna może być ikona o rozmiarach 32x32. Format *.ico pozwala zapisać dwie wersje rozmiaru w jednym pliku. Niektóre przeglądarki - nie MSIE 6 - pozwalając również używać innych formatów graficznych, takich jak np. PNG.`,
         secondAnswer: `<head>
         <link rel="shortcut icon" href="adres ikony">
-      </head>`
+      </head>`,
       },
 
       {
         question: "Czym jest tag <blockquote>?",
         answer:
           "Tag <blockquote> określa treść cytowaną ze źródła zewnętrznego (gazeta, praca naukowa itp.for         (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
-        secondAnswer:
-          `<blockquote cite="http://developer.mozilla.org">
+        secondAnswer: `<blockquote cite="http://developer.mozilla.org">
         <p>To jest cytat z Mozilla Developer Center.</p>
           </blockquote>`,
       },
-      { 
+      {
         question: "Czym jest Html?",
         answer: `Jest to znacznik, który określa znaczenie elementu.
          Głównie do celów dostępności (ang. accessibility). Jest częścią specyfikacji ARIA. Został też dodany do HTML5.`,
@@ -108,7 +107,7 @@ export default {
       {
         question: "Czym jest accessibility?(dostępność)",
         answer:
-          "Accessibility (pl. dostępność) to tworzenie aplikacji w sposób który jest łatwy do interpretacji dla przeglądarki i/lub specjalnych urządzeń przystosowanych przez osoby niepełnosprawne. Po prostu przeglądarka wie kiedy ma do czynienia z obrazkiem, nawigacją czy artykułem. Więcej informacji na ten temat można znaleść np. TUTAJ. ",
+          "Accessibility (pl. dostępność) to tworzenie aplikacji w sposób który jest łatwy do interpretacji dla przeglądarki i/lub specjalnych urządzeń przystosowanych przez osoby niepełnosprawne. Po prostu przeglądarka wie kiedy ma do czynienia z obrazkiem, nawigacją czy artykułem.",
         secondAnswer: "",
       },
       {
@@ -248,22 +247,20 @@ export default {
       },
       {
         question: "Omów pętle for",
-        answer:
-          `pętla for jest typowo "manualna". Trzeba ustawić licznik, kiedy ma się zakończyć i jak ma być zwiększany. Dodatkowo ręcznie trzeba się odwoływać do danego elementu w tablicy.`,
+        answer: `pętla for jest typowo "manualna". Trzeba ustawić licznik, kiedy ma się zakończyć i jak ma być zwiększany. Dodatkowo ręcznie trzeba się odwoływać do danego elementu w tablicy.`,
         secondAnswer:
           "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
       },
       {
         question: "Czym jest dependency injection?",
-        answer:
-          `pętla for jest typowo "manualna". Trzeba ustawić licznik, kiedy ma się zakończyć i jak ma być zwiększany. Dodatkowo ręcznie trzeba się odwoływać do danego elementu w tablicy.`,
+        answer: `pętla for jest typowo "manualna". Trzeba ustawić licznik, kiedy ma się zakończyć i jak ma być zwiększany. Dodatkowo ręcznie trzeba się odwoływać do danego elementu w tablicy.`,
         secondAnswer:
           "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
       },
       {
         question: "Omów pętle while",
         answer:
-          "OZauważ, że w pętli tego typu nie definiujemy ani początkowego licznika, ani nie definiujemy zmiany licznika. Musimy te rzeczy zrobić ręcznie.Pętlę while zazwyczaj stosuje się w sytuacjach, kiedy nie wiemy dokładnie, ile iteracji (powtórzeń) ma się wykonać. Wyobraź sobie, że chcesz wygenerować unikalny numer ID albo jakąś liczbę. Generujesz więc daną rzecz, następnie sprawdzasz czy wynik pasuje do założeń. Jak nie pasuje, generujesz dalej. I tak do skutku aż trafisz.",
+          "W pętli tego typu nie definiujemy ani początkowego licznika, ani nie definiujemy zmiany licznika. Musimy te rzeczy zrobić ręcznie.Pętlę while zazwyczaj stosuje się w sytuacjach, kiedy nie wiemy dokładnie, ile iteracji (powtórzeń) ma się wykonać. Wyobraź sobie, że chcesz wygenerować unikalny numer ID albo jakąś liczbę. Generujesz więc daną rzecz, następnie sprawdzasz czy wynik pasuje do założeń. Jak nie pasuje, generujesz dalej. I tak do skutku aż trafisz.",
         secondAnswer:
           "while (wyrażenie_sprawdzające_zakończenie_pętli) {  ...fragment kodu który będzie powtarzany...}",
       },
@@ -348,15 +345,21 @@ export default {
           "Funkcja anonimowa to taka funkcja, która nie ma swojej nazwy. Funkcje takie wykorzystywane są jako funkcje zwrotne, które przekazujemy do innych funkcji.",
       },
       {
-        question: "Czym jest funkcja anonimowa?",
+        question:
+          "Czym jest podwójny wykrzyknik w javascript?(double exclamation mark)",
         answer:
-          "Funkcja strzałkowa to skrócony zapis wyrażenia funkcyjnego:",
+          "Jest to skrócona wersja sprawdzenia czy zmienna to Boolean(true albo false)",
+      },
+      {
+        question: "Czym jest funkcja anonimowa?",
+        answer: "Funkcja strzałkowa to skrócony zapis wyrażenia funkcyjnego:",
       },
       {
         question: "Czym jest funkcja strzałkowa?",
         answer:
           "Funkcja anonimowa to taka funkcja, która nie ma swojej nazwy. Funkcje takie wykorzystywane są jako funkcje zwrotne, które przekazujemy do innych funkcji.Przy skracaniu zapisu obowiązuje nas kilka dość prostych zasad.         Jeżeli funkcja wymaga tylko jednego parametru, wtedy mogę (ale nie muszę!) pominąć nawiasy:Jeżeli parametrów jest więcej, lub nie ma żadnego, wtedy nawiasy muszą zostać:Jeżeli funkcja ma tylko jedną instrukcję, mogę pominąć też klamry:A dodatkowo jeżeli jedyną instrukcją jest instrukcja return, także i jej możemy się pozbyć:Natomiast jeżeli funkcja ma więcej instrukcji - klamry muszą pozostać:",
-          secondAnswer: "Dodatkowymi cechami, które odróżniają je od klasycznych funkcji są:Funkcje strzałkowe nie mają wiązania this i super. Dlatego nie powinniśmy ich używać do definiowania metod w obiektach i klasachNie posiadają właściwości arguments i new.targetUżycie dla nich call, apply i bind nie da oczekiwanych rezultatów. Wynika to właśnie z faktu, że nie ma tutaj wiązania thisNie można ich używać jako konstruktoryNie wolno używać w nich yield"
+        secondAnswer:
+          "Dodatkowymi cechami, które odróżniają je od klasycznych funkcji są:Funkcje strzałkowe nie mają wiązania this i super. Dlatego nie powinniśmy ich używać do definiowania metod w obiektach i klasachNie posiadają właściwości arguments i new.targetUżycie dla nich call, apply i bind nie da oczekiwanych rezultatów. Wynika to właśnie z faktu, że nie ma tutaj wiązania thisNie można ich używać jako konstruktoryNie wolno używać w nich yield",
       },
       {
         question: "Czym jest wyrażenie funkcyjne?",
@@ -368,19 +371,19 @@ export default {
       {
         question: "Opisz działanie return",
         answer:
-          "Każda funkcja zwraca jakąś wartość. Domyślnie jest nią undefined. Aby zwrócić naszą wartość, posłużymy się instrukcją return:Instrukcja return nie tylko zwraca wartość, ale i przerywa dalsze działanie danej funkcji.W wielu edytorach kod leżący za return będzie miał przytłumione kolory, co symbolizuje, że taki kod nigdy sie nie wykona:Instrukcji return może być wiele dla jednej funkcji. Zawsze jednak wykonana zostanie tylko jednaInstrukcja return może zwracać dowolną wartość. Może to być tablica:          ",
+          "Każda funkcja zwraca jakąś wartość. Domyślnie jest nią undefined.Instrukcja return nie tylko zwraca wartość, ale i przerywa dalsze działanie danej funkcji.W wielu edytorach kod leżący za return będzie miał przytłumione kolory, co symbolizuje, że taki kod nigdy sie nie wykona:Instrukcji return może być wiele dla jednej funkcji. Zawsze jednak wykonana zostanie tylko jedna Instrukcja return może zwracać dowolną wartość.",
       },
       {
         question: "Opisz pracę z plikiem psd",
         answer:
-          "PSD, to projekt graficzny bazujacy na programie Adobe Photoshop.Plik ten dostarcza wszystkich niezbędnych grafik, z jakich składa się strona, jak i informacji pozwalających na jej zakodowanie. Dzięki takiej wizualizacji Web Developer jest w stanie bezbłędnie przenieść projekt na kod HTML. Profesjonalne przygotowanie takiego projektu zapobiega problemom, które uniemożliwiają pracę, bądź wydłużają jej czas. ",
+          "PSD, to projekt graficzny bazujacy na programie Adobe Photoshop.Plik ten dostarcza wszystkich niezbędnych grafik, z jakich składa się strona, jak i informacji pozwalających na jej zakodowanie. Dzięki takiej wizualizacji Web Developer jest w stanie przenieść projekt na kod HTML. Profesjonalne przygotowanie takiego projektu zapobiega problemom, które uniemożliwiają pracę, bądź wydłużają jej czas. ",
         secondAnswer:
           "Każdy projekt powinien składać się z uporządkowanych warstw zawierających po jednym elemencie (ikonka, grafika, kształt, tekst). Osadzenie na oddzielnych warstwach (z dodatkowym opisem) znacząco przyśpiesza pracę podczas ustalania atrybutów, jak i wycinania potrzebnych grafik do zamieszczenia na stronie.Jeśli dany element posiada dodatkowy stan (np. rozwinięcie menu po najechaniu myszką albo kliknięcie przycisk) powinien być uwzględniony w projekcie. Developer musi wiedzieć, że coś będzie interaktywne, aby móc to zakodować.",
       },
       {
         question: "Na czym polega destrukturyzacja?",
         answer:
-          "Przypisanie destrukturyzujące umożliwia przypisanie własności tablicy lub obiektu do zmiennych z wykorzystaniem składni przypominającej składnię tablic czy literałów obiektowych. Może być ona niezwykle zwięzła, a jednocześnie znacznie czytelniejsza od tradycyjnego kodu służącego do uzyskania dostępu do własności.",
+          "Umożliwia przypisanie własności tablicy lub obiektu do zmiennych z wykorzystaniem składni przypominającej składnię tablic czy literałów obiektowych. Może być ona niezwykle zwięzła, a jednocześnie znacznie czytelniejsza od tradycyjnego kodu służącego do uzyskania dostępu do własności.",
         secondAnswer:
           "Nie korzystając z przypisania destrukturyzującego, dostęp do pierwszych trzech elementów tablicy możemy uzyskać w następujący sposób:var first = jakaśTamTablica[0]  var second = jakaśTamTablica[1]; var third = jakaśTamTablica[2];Jeśli natomiast zastosujemy przypisanie destrukturyzujące, ten sam kod można wyrazić w bardziej zwięzły i czytelny sposób:	      var [first, second, third] = jakaśTamTablica;",
       },
@@ -402,7 +405,8 @@ export default {
         question: "Jakie są zalety Vue.js?",
         answer:
           "vue js posiada niski próg wejścia.Framework jest również lekki,waży tylko 18-23 kb,Vue js jest szybszym frameworkiem niż Angular czy React,virtual DOM,data binding,komponentyAnimation/Transition: VueJS provides several techniques to implement the transition to HTML components. This framework allows you to add third party animation libraries.templates.",
-          secondAnswer: 'konkurentów React i Angular. Jako React jest oparty na komponentach oraz jednostronnym przepływie danych, i podobnie do Angular posiada proste szablony z dobrą składnią. Vue nie potrzebuje konfiguracji środowiska, Do komunikacji pomiędzy komponentami używa się vuex czyli biblioteki, która zarządza dużą ilością danych jednocześnie.Posiada bardzo szczegołową dokumentacje'
+        secondAnswer:
+          "konkurentów React i Angular. Jako React jest oparty na komponentach oraz jednostronnym przepływie danych, i podobnie do Angular posiada proste szablony z dobrą składnią. Vue nie potrzebuje konfiguracji środowiska, Do komunikacji pomiędzy komponentami używa się vuex czyli biblioteki, która zarządza dużą ilością danych jednocześnie.Posiada bardzo szczegołową dokumentacje",
       },
       {
         question: "Czym jest composition api?",
@@ -416,7 +420,8 @@ export default {
       },
       {
         question: "Co to są gettery?",
-        answer: "to są funkcje które zwracają nam stan.obiekt.defineProperty API, jeśli jeszcze tego nie wiesz. Ponieważ system reaktywności Vue opiera się na tym API.",
+        answer:
+          "to są funkcje które zwracają nam stan.obiekt.defineProperty API, jeśli jeszcze tego nie wiesz. Ponieważ system reaktywności Vue opiera się na tym API.",
       },
       {
         question: "co to jest flux?",
@@ -469,20 +474,17 @@ export default {
           "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
       },
       {
-        question:
-          "czym jest enum?",
+        question: "czym jest enum?",
         answer:
           "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
       },
       {
-        question:
-          "czym jest typ unknown?",
+        question: "czym jest typ unknown?",
         answer:
           "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
       },
       {
-        question:
-          "czym jest generics?",
+        question: "czym jest generics?",
         answer:
           "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
       },
@@ -500,6 +502,33 @@ export default {
         question: "Czym jest interfejs  w typescript",
         answer:
           "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
+      },
+    ],
+    gitQuestions: [
+      {
+        question: "czym jest git?",
+        answer:
+          "Git to rozproszony system kontroli wersji.Służy on więc do zarządzania historią kodu źródłowego. ",
+        secondAnswer: `pozwala na jednoczesną pracę na tym samym kodzie przez kilka osób, 
+          umożliwia transferowanie i łączenie zmian z różnych branchy w jednym projekcie,
+          pozwala na pracę offline we własnym repozytorium,
+          jest szybki i wydajny.`,
+      },
+      {
+        question: "Czym jest commit?",
+        answer:
+          "Commit – ostateczne zatwierdzenie tymczasowo dokonanych zmian.Kiedy zatwierdzasz zmiany w Gicie, ten zapisuje obiekt zmian (commit), który z kolei zawiera wskaźnik na migawkę zawartości, która w danej chwili znajduje się w poczekalni,  ",
+      },
+      {
+        question: "Czym jest gałąź(branch)?",
+        answer:
+          "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
+      },
+      {
+        question: "Czym jest interfejs  w typescript",
+        answer:
+          "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
+        secondAnswer: "",
       },
     ],
   },
@@ -535,6 +564,13 @@ export default {
         });
       }, 1000);
     },
+    gitQuestionLoop(state) {
+      setInterval(() => {
+        state.gitQuestions.sort(function() {
+          return Math.round(Math.random()) - 0.5;
+        });
+      }, 1000);
+    },
     randomCssQuestion(state) {
       state.cssQuestions.sort(function() {
         return Math.round(Math.random()) - 0.5;
@@ -547,6 +583,11 @@ export default {
     },
     randomVueQuestion(state) {
       state.vueQuestions.sort(function() {
+        return Math.round(Math.random()) - 0.5;
+      });
+    },
+    randomGitQuestion(state) {
+      state.gitQuestions.sort(function() {
         return Math.round(Math.random()) - 0.5;
       });
     },
@@ -569,6 +610,9 @@ export default {
     vueQuestionLoop(context) {
       context.commit("vueQuestionLoop");
     },
+    gitQuestionLoop(context) {
+      context.commit("gitQuestionLoop");
+    },
     randomQuestion(context) {
       context.commit("randomQuestion");
     },
@@ -577,6 +621,9 @@ export default {
     },
     randomVueQuestion(context) {
       context.commit("randomVueQuestion");
+    },
+    randomGitQuestion(context) {
+      context.commit("randomGitQuestion");
     },
     randomCssQuestion(context) {
       context.commit("randomCssQuestion");

@@ -24,7 +24,8 @@ export default new Vuex.Store({
         javascriptQuestions.question,
         javascriptQuestions.answer,
         htmlQuestions,
-        vueQuestions
+        vueQuestions,
+        gitQuestions
       );
     },
   },

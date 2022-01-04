@@ -68,6 +68,12 @@ const routes = [
           import("../components/RecruimentQuestions/HtmlQuestions.vue"),
         name: "HtmlQuestions",
       },
+      {
+        path: "gitquestions",
+        component: () =>
+          import("../components/RecruimentQuestions/GitQuestions.vue"),
+        name: "GitQuestions",
+      },
     ],
   },
 

@@ -1,7 +1,10 @@
 <template>
 <div>
-{{word}}
+{<div v-for="(word,index) in info" :key="word">
+{{word.info}}
+</div>}
 </div>
+
 </template>
 
 <script>
@@ -15,7 +18,7 @@ export default {
   },
   mounted() {
     axios
-      .get("https://api.dictionaryapi.dev/api/v2/entries/en/hello")
+      .get("https://api.dictionaryapi.dev/api/v2/entries/en/<word>")
       .then((response) => (this.info = response.data));
   },
 };

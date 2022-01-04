@@ -56,7 +56,7 @@
              <v-list-item>
           <v-icon>mdi-git</v-icon>
           <router-link
-            :to="{ name: 'VueQuestions' }"
+            :to="{ name: 'GitQuestions' }"
             class="text-deocration-none mx-auto"
             style="text-decoration: none; color: #a55c1b;"
           >
@@ -76,11 +76,11 @@
         <v-list-item>
           <v-icon>mdi-language-typescript</v-icon>
           <router-link
-            :to="{ name: 'HtmlQuestions' }"
+            :to="{ name: 'TypescriptQuestions' }"
             class="text-deocration-none mx-auto"
             style="text-decoration: none; color: #a55c1b;"
           >
-            Bootstrap
+            Typescript
           </router-link>
         </v-list-item>
         <v-list-item>
