@@ -1,5 +1,4 @@
 <template>
-
   <v-sheet
     class="mx-auto mb-10"
     style="margin-top: 80px;"
@@ -21,15 +20,15 @@
 import HtmlQuestions from "./HtmlQuestions.vue";
 import CssQuestions from "./CssQuestions.vue";
 import JavascriptQuestions from "./JavascriptQuestions.vue";
-import VueQuestions from './VueQuestions.vue'
-import GitQuestions from './GitQuestions.vue'
+import VueQuestions from "./VueQuestions.vue";
+import GitQuestions from "./GitQuestions.vue";
 export default {
   components: {
     HtmlQuestions,
     CssQuestions,
     JavascriptQuestions,
     VueQuestions,
-    GitQuestions
+    GitQuestions,
   },
 };
 </script>
