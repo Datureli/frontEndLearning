@@ -57,10 +57,6 @@ import About from "../views/About.vue";
 export default {
   components: { Login, SignUp, About },
   data: () => ({
-    items: [
-      { title: "Fiszki", routeUrl: "/intoflashcards" },
-      { title: "Quiz", routeUrl: "/quiz" },
-    ],
     toolbarItems: [
       {
         title: "Home",
