@@ -66,7 +66,7 @@
         <v-list-item>
           <v-icon>mdi-react</v-icon>
           <router-link
-            :to="{ name: 'HtmlQuestions' }"
+            :to="{ name: '' }"
             class="text-deocration-none mx-auto"
             style="text-decoration: none; color: #a55c1b;"
           >
