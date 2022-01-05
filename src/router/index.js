@@ -62,12 +62,7 @@ const routes = [
           import("../components/RecruimentQuestions/StupidQuestions.vue"),
         name: "StupidQuestions",
       },
-      {
-        path: "htmlquestions",
-        component: () =>
-          import("../components/RecruimentQuestions/HtmlQuestions.vue"),
-        name: "HtmlQuestions",
-      },
+    
       {
         path: "gitquestions",
         component: () =>
