@@ -1,10 +1,5 @@
 <template>
-  <v-card
-    width="320"
-    class="mt-15 ml-12"
-    color="transparent"
-    elevation="0"
-  >
+  <v-card width="320" class="mt-15 ml-12" color="transparent" elevation="0">
     <v-list color="transparent">
       <v-list-item-group
         v-model="selectedItem"
@@ -12,8 +7,9 @@
         color="primary"
         active-class="blue--text"
       >
-        <v-list-item>
+        <v-list-item @click="randomHtmlQuestion">
           <v-icon>mdi-language-html5</v-icon>
+
           <router-link
             :to="{ name: 'HtmlQuestions' }"
             class="text-deocration-none mx-auto"
@@ -23,7 +19,7 @@
           </router-link>
         </v-list-item>
 
-        <v-list-item>
+        <v-list-item @click="randomCssQuestion">
           <v-icon>mdi-language-css3</v-icon>
           <router-link
             :to="{ name: 'CssQuestions' }"
@@ -33,7 +29,7 @@
             Css
           </router-link>
         </v-list-item>
-        <v-list-item>
+        <v-list-item @click="randomQuestion"> 
           <v-icon>mdi-language-javascript</v-icon>
           <router-link
             :to="{ name: 'JavascriptQuestions' }"
@@ -43,7 +39,7 @@
             Javascript
           </router-link>
         </v-list-item>
-        <v-list-item>
+        <v-list-item @click="randomVueQuestion">
           <v-icon>mdi-vuejs</v-icon>
           <router-link
             :to="{ name: 'VueQuestions' }"
@@ -53,7 +49,7 @@
             Vue
           </router-link>
         </v-list-item>
-             <v-list-item>
+        <v-list-item @click="randomGitQuestion">
           <v-icon>mdi-git</v-icon>
           <router-link
             :to="{ name: 'GitQuestions' }"
@@ -92,7 +88,6 @@
           >
             Ogólne
           </router-link>
-          
         </v-list-item>
         <v-list-item>
           <v-icon>mdi-account-circle</v-icon>
@@ -103,9 +98,21 @@
           >
             Pytania o ciebie
           </router-link>
-          
         </v-list-item>
       </v-list-item-group>
     </v-list>
   </v-card>
 </template>
+
+<script>
+import { mapState } from "vuex";
+import { mapActions } from "vuex";
+export default {
+  computed: {
+    ...mapState("questions", ["javascriptQuestions", "htmlQuestions","cssQuestions","vueQuestions","gitQuestions"]),
+  },
+  methods: {
+    ...mapActions("questions", ["randomHtmlQuestion","randomCssQuestion","randomVueQuestion","randomGitQuestion","randomQuestion"]),
+  },
+};
+</script>

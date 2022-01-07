@@ -1,6 +1,5 @@
 <template>
   <v-container-fluid>
-    <v-card class="overflow-hidden mx-auto">
       <v-app-bar
         app
         style="background-color: #000000;
@@ -11,6 +10,34 @@
           @click="drawer = true"
           class="d-flex d-sm-none"
         ></v-app-bar-nav-icon>
+
+        <v-navigation-drawer v-model="drawer" absolute temporary>
+          <v-list nav dense>
+            <v-list-item-group>
+              <v-list-item
+                v-for="(toolbarItem, index) in toolbarItems"
+                :key="toolbarItem"
+              >
+                <v-list-item-title @click="tab = index">{{
+                  toolbarItem.title
+                }}</v-list-item-title>
+              </v-list-item>
+            </v-list-item-group>
+          </v-list>
+        </v-navigation-drawer>
+        <template v-slot:extension>
+          <v-tabs fixed-tabs align-with-title>
+            <v-tab
+              v-model="tab"
+              class="text-decoration-none white--text d-none d-sm-flex overflow-hidden"
+              v-for="toolbarItem in toolbarItems"
+              :key="toolbarItem"
+              :to="toolbarItem.link"
+            >
+              {{ toolbarItem.title }}
+            </v-tab>
+          </v-tabs>
+        </template>
         <v-spacer></v-spacer>
         <v-btn color="transparent" outlined>
           <Login />
@@ -29,23 +56,8 @@
         <v-btn icon>
           <v-icon>mdi-dots-vertical</v-icon>
         </v-btn>
-
-        <template v-slot:extension>
-          <v-tabs fixed-tabs align-with-title>
-            <v-tab
-              class="text-decoration-none white--text"
-              v-for="toolbarItem in toolbarItems"
-              :key="toolbarItem"
-              :to="toolbarItem.link"
-            >
-              {{ toolbarItem.title }}
-            </v-tab>
-          </v-tabs>
-        </template>
       </v-app-bar>
-
-      <router-view></router-view>
-    </v-card>
+    <router-view></router-view>
   </v-container-fluid>
 </template>
 
@@ -57,6 +69,8 @@ import About from "../views/About.vue";
 export default {
   components: { Login, SignUp, About },
   data: () => ({
+    tab: null,
+    drawer: false,
     toolbarItems: [
       {
         title: "Home",
