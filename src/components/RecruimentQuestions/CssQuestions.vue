@@ -5,20 +5,20 @@
       :key="index"
       max-width="700"
       class="mx-auto"
-   
     >
-      <v-list-item>
+      <v-list-item >
         <v-list-item-content>
           <v-list-item-subtitle
-            class="text--primary   font-weight-black  text-h4 text-wrap "
+            class="text--primary font-weight-black text-h4 text-wrap "
             v-text="cssQuestions.question"
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
+  
+            class="white--text text-justify ma-0 text-h5 text-wrap"
             v-if="page === 1"
             v-show="disable"
-            v-text="cssQuestions.answer"
+            v-text="cssQuestions.answer.trim().replace(/\s{2,9999}|\t/g, ' ')"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
             class="white--text text-justify text-h5 text-wrap"
@@ -34,9 +34,9 @@
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-     
     </v-carousel-item>
-      <v-sheet class="d-flex" relative>
+          dsadad    {{word}}
+    <v-sheet class="d-flex" relative>
       <v-icon
         x-large
         @click="randomCssQuestion"
@@ -72,6 +72,7 @@
         style="position: absolute; bottom: 26%; right:4%;"
         >mdi-heart</v-icon
       >
+
     </v-sheet>
   </v-carousel>
 </template>
@@ -79,6 +80,7 @@
 <script>
 import { mapState } from "vuex";
 export default {
+
   props: {
     page: {
       type: Number,
@@ -88,7 +90,6 @@ export default {
     ...mapState(["disable", "favorite"]),
     ...mapState("questions", ["cssQuestions"]),
   },
-
   methods: {
     disableAnswers() {
       this.$store.commit("disable");
@@ -96,7 +97,7 @@ export default {
     addToFavorite(cssQuestions) {
       this.$store.state.favorite.push(cssQuestions);
     },
-   cssQuestionLoop() {
+    cssQuestionLoop() {
       this.$store.dispatch("questions/cssQuestionLoop");
     },
     randomCssQuestion() {

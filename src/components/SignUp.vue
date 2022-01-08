@@ -30,7 +30,7 @@
           <v-card-title>
             <h1 class="display-1 mx-auto">Sign up</h1>
           </v-card-title>
-          <v-form class="" ref="signUpForm" v-model="formValidity">
+          <v-form v-if="isSubmitted" v-model="formValidity">
             <v-text-field
               label="Name"
               type="name"
@@ -87,9 +87,19 @@
               :items="hearOptions"
             ></v-autocomplete>
 
+            <div class="text-center justify-center d-flex">
+              <v-checkbox
+                v-model="agreeToTerms"
+                :rules="agreeToTermsRules"
+                required
+                label="Agree to terms i condition."
+              ></v-checkbox>
+            </div>
+
             <div class="text-center">
               <v-btn
                 class="mx-auto mb-5"
+                @click="submitted"
                 type="submit"
                 color="primary"
                 :disabled="!formValidity"
@@ -97,16 +107,7 @@
               </v-btn>
             </div>
           </v-form>
-        </v-card>
-        <v-card height="100" color="red">
-          <div class="text-center d-flex">
-            <v-checkbox
-              v-model="agreeToTerms"
-              :rules="agreeToTermsRules"
-              required
-              label="Agree to terms i condition."
-            ></v-checkbox>
-          </div>
+          <h1 v-else>congrtulation</h1>
         </v-card>
       </v-card>
     </v-dialog>
@@ -117,9 +118,10 @@
 export default {
   data() {
     return {
+      formValidity: false,
+      isSubmitted: true,
       dialog: false,
       date: new Date().toISOString().substr(0, 10),
-      menu: false,
       modal: false,
       menu2: false,
       agreeToTerms: false,
@@ -133,7 +135,6 @@ export default {
         (value) => !!value || "Name is required",
         (value) =>
           value.match(/[^0-9]/i) || "email should contain only letters",
-        //        (value) => value.match('\\d|\\.') || "email should contain only letters"
       ],
       passwordRules: [
         (value) => !!value || "password is required",
@@ -151,8 +152,12 @@ export default {
           value.indexOf(".") <= value.length - 3 ||
           "Email should contain a valid extension",
       ],
-      formValidity: false,
     };
+  },
+  methods: {
+    submitted() {
+      this.isSubmitted = !this.isSubmitted
+    },
   },
 };
 </script>

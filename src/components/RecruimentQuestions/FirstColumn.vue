@@ -29,7 +29,7 @@
             Css
           </router-link>
         </v-list-item>
-        <v-list-item @click="randomQuestion"> 
+        <v-list-item @click="randomQuestion">
           <v-icon>mdi-language-javascript</v-icon>
           <router-link
             :to="{ name: 'JavascriptQuestions' }"
@@ -109,10 +109,22 @@ import { mapState } from "vuex";
 import { mapActions } from "vuex";
 export default {
   computed: {
-    ...mapState("questions", ["javascriptQuestions", "htmlQuestions","cssQuestions","vueQuestions","gitQuestions"]),
+    ...mapState("questions", [
+      "javascriptQuestions",
+      "htmlQuestions",
+      "cssQuestions",
+      "vueQuestions",
+      "gitQuestions",
+    ]),
   },
   methods: {
-    ...mapActions("questions", ["randomHtmlQuestion","randomCssQuestion","randomVueQuestion","randomGitQuestion","randomQuestion"]),
+    ...mapActions("questions", [
+      "randomHtmlQuestion",
+      "randomCssQuestion",
+      "randomVueQuestion",
+      "randomGitQuestion",
+      "randomQuestion",
+    ]),
   },
 };
 </script>
