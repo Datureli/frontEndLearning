@@ -22,15 +22,16 @@
           </v-toolbar-items>
         </v-toolbar>
         <v-card
+        v-if="isSubmitted" 
           width="600"
           outlined
           elevation="10"
           class="mx-auto mb-5 mt-5 pr-10 pl-10"
         >
-          <v-card-title>
-            <h1 class="display-1 mx-auto">Sign up</h1>
-          </v-card-title>
-          <v-form v-if="isSubmitted" v-model="formValidity">
+          <v-form v-model="formValidity">
+            <v-card-title>
+              <h1 class="display-1 mx-auto">Sign up</h1>
+            </v-card-title>
             <v-text-field
               label="Name"
               type="name"
@@ -107,8 +108,15 @@
               </v-btn>
             </div>
           </v-form>
-          <h1 v-else>congrtulation</h1>
+
+      
         </v-card>
+            <v-card v-else width="400"  class="mt-16 green darken-1 text-center justify-center mx-auto  white--text">
+            <h1>congrtulation</h1>
+            <p class="m-0">email confirmation has been send</p>
+          <v-icon class="mb-5">mdi-checkbox-marked-circle</v-icon>
+          </v-card>
+            
       </v-card>
     </v-dialog>
   </v-row>
@@ -156,7 +164,7 @@ export default {
   },
   methods: {
     submitted() {
-      this.isSubmitted = !this.isSubmitted
+      this.isSubmitted = !this.isSubmitted;
     },
   },
 };
