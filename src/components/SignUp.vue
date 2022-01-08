@@ -35,6 +35,7 @@
             <v-text-field
               label="Name"
               type="name"
+              v-model="name"
               required
               :rules="nameRules"
               prepend-icon="mdi-pencil"
@@ -118,6 +119,7 @@
           </v-card>
             
       </v-card>
+      {{registeredUsers}}
     </v-dialog>
   </v-row>
 </template>
@@ -126,12 +128,15 @@
 export default {
   data() {
     return {
+      registeredUsers: [],
+      name: '',
+      password: '',
       formValidity: false,
       isSubmitted: true,
       dialog: false,
       date: new Date().toISOString().substr(0, 10),
       modal: false,
-      menu2: false,
+      menu2: '',
       agreeToTerms: false,
       agreeToTermsRules: [
         (value) => !!value || "you must agree to terms and conditions",
@@ -142,7 +147,8 @@ export default {
       nameRules: [
         (value) => !!value || "Name is required",
         (value) =>
-          value.match(/[^0-9]/i) || "email should contain only letters",
+          value.match(/[^0-9]/i) || "username should contain only letters",
+     
       ],
       passwordRules: [
         (value) => !!value || "password is required",
@@ -165,6 +171,13 @@ export default {
   methods: {
     submitted() {
       this.isSubmitted = !this.isSubmitted;
+      this.registeredUsers.push(
+        this.name,
+        this.email,
+        this.password,
+        this.birthday,
+        this.menu2
+      )
     },
   },
 };
