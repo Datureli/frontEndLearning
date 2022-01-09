@@ -1,63 +1,80 @@
 <template>
   <v-container-fluid>
-      <v-app-bar
-        app
-        style="background-color: #000000;
+    <v-app-bar
+      app
+      style="background-color: #000000;
         background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
-      >
-        <v-app-bar-nav-icon
-          color="white"
-          @click="drawer = true"
-          class="d-block d-sm-none"
-        ></v-app-bar-nav-icon>
+    >
+      <v-app-bar-nav-icon
+        color="white"
+        @click="drawer = true"
+        class="d-block d-sm-none"
+      ></v-app-bar-nav-icon>
+      <v-dialog v-model="drawer" hide-overlay>
+        <v-navigation-drawer
+          v-model="drawer"
 
-        <v-navigation-drawer v-model="drawer" height="auto" absolute temporary >
-          <v-list nav dense>
+          class="hidden-md-and-up"
+          width="100%"
+          fullscreen
+          absolute
+          style="background-color: #000000;
+        background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
+        >
+          <v-toolbar class="mb-0" dark color="transparent" elevation="0">
+            <v-spacer></v-spacer>
+            <v-toolbar-items>
+              <v-btn icon dark @click="closeModal">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+            </v-toolbar-items>
+          </v-toolbar>
+          <v-list nav class="mt-16 green--text">
             <v-list-item-group>
               <v-list-item
-                v-for="(toolbarItem, index) in toolbarItems"
+                class="white--text text-h4"
+                v-for="toolbarItem in toolbarItems"
                 :key="toolbarItem"
-                   :to="toolbarItem.link"
+                :to="toolbarItem.link"
               >
-                <v-list-item-title @click="tab = index">{{
-                  toolbarItem.title
-                }}</v-list-item-title>
+                <v-list-item-title>{{ toolbarItem.title }}</v-list-item-title>
               </v-list-item>
             </v-list-item-group>
           </v-list>
         </v-navigation-drawer>
-        <template v-slot:extension>
-          <v-tabs fixed-tabs align-with-title>
-            <v-tab
-              v-model="tab"
-              class="text-decoration-none white--text d-none d-sm-flex overflow-hidden"
-              v-for="toolbarItem in toolbarItems"
-              :key="toolbarItem"
-              :to="toolbarItem.link"
-            >
-              {{ toolbarItem.title }}
-            </v-tab>
-          </v-tabs>
-        </template>
-        <v-spacer></v-spacer>
-        <v-btn color="transparent" outlined>
-          <Login />
-        </v-btn>
-        <v-btn color="transparent" outlined>
-          <SignUp />
-        </v-btn>
+      </v-dialog>
+      <template v-slot:extension>
+        <v-tabs fixed-tabs align-with-title>
+          <v-tab
+            v-model="tab"
+            class="text-decoration-none white--text d-none d-sm-flex overflow-hidden"
+            v-for="toolbarItem in toolbarItems"
+            :key="toolbarItem"
+            :to="toolbarItem.link"
+          >
+            {{ toolbarItem.title }}
+          </v-tab>
+        </v-tabs>
+      </template>
+      <v-spacer></v-spacer>
+      <v-btn color="transparent" outlined>
+        <Login />
+      </v-btn>
+      <v-btn color="transparent" outlined>
+        <SignUp />
+      </v-btn>
 
-        <v-btn @click="pushToFavorite" color="transparent">
-          <v-icon color="red">mdi-heart</v-icon>
-          <p class="white--text" v-if="favorite.length > 0">
-            {{ favorite.length }}
-          </p>
-        </v-btn>
+      <v-btn @click="pushToFavorite" color="transparent">
+        <v-icon color="red">mdi-heart</v-icon>
+        <p class="white--text" v-if="favorite.length > 0">
+          {{ favorite.length }}
+        </p>
+      </v-btn>
 
-        <v-btn icon>
-          <v-icon>mdi-dots-vertical</v-icon>
-        </v-btn>
-      </v-app-bar>
+      <v-btn icon>
+        <v-icon>mdi-dots-vertical</v-icon>
+      </v-btn>
+    </v-app-bar>
     <router-view></router-view>
   </v-container-fluid>
 </template>
@@ -102,6 +119,10 @@ export default {
   methods: {
     pushToFavorite() {
       this.$router.push({ name: "login" });
+    },
+    closeModal() {
+      this.drawer = false;
+      this.$router.push({ path: "/" });
     },
   },
 };
