@@ -87,6 +87,7 @@ export default {
   computed: {
     ...mapState(["disable", "favorite"]),
     ...mapState("questions", ["vueQuestions"]),
+    
   },
 
   methods: {

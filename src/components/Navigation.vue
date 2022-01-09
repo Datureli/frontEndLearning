@@ -1,7 +1,6 @@
 <template>
   <v-container-fluid>
     <v-app-bar
-      app
       style="background-color: #000000;
         background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
     >
@@ -33,8 +32,8 @@
             <v-list-item-group>
               <v-list-item
                 class="white--text text-h4"
-                v-for="toolbarItem in toolbarItems"
-                :key="toolbarItem"
+                v-for="(toolbarItem,index) in toolbarItems"
+                :key="index"
                 :to="toolbarItem.link"
               >
                 <v-list-item-title>{{ toolbarItem.title }}</v-list-item-title>
@@ -47,9 +46,9 @@
         <v-tabs fixed-tabs align-with-title>
           <v-tab
             v-model="tab"
-            class="text-decoration-none white--text d-none d-sm-flex overflow-hidden"
-            v-for="toolbarItem in toolbarItems"
-            :key="toolbarItem"
+            class="text-decoration-none white--text d-none d-sm-flex"
+            v-for="(toolbarItem,index) in toolbarItems"
+            :key="index"
             :to="toolbarItem.link"
           >
             {{ toolbarItem.title }}
