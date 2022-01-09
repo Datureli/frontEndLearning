@@ -119,7 +119,6 @@
           </v-card>
             
       </v-card>
-      {{registeredUsers}}
     </v-dialog>
   </v-row>
 </template>

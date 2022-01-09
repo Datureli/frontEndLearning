@@ -8,15 +8,16 @@
         <v-app-bar-nav-icon
           color="white"
           @click="drawer = true"
-          class="d-flex d-sm-none"
+          class="d-block d-sm-none"
         ></v-app-bar-nav-icon>
 
-        <v-navigation-drawer v-model="drawer" absolute temporary>
+        <v-navigation-drawer v-model="drawer" height="auto" absolute temporary >
           <v-list nav dense>
             <v-list-item-group>
               <v-list-item
                 v-for="(toolbarItem, index) in toolbarItems"
                 :key="toolbarItem"
+                   :to="toolbarItem.link"
               >
                 <v-list-item-title @click="tab = index">{{
                   toolbarItem.title
