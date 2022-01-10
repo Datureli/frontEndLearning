@@ -16,19 +16,19 @@
           <v-toolbar-title>Sing up</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-toolbar-items>
-            <v-btn icon dark @click="dialog = false">
+            <v-btn icon dark @click="closeDialog">
               <v-icon>mdi-close</v-icon>
             </v-btn>
           </v-toolbar-items>
         </v-toolbar>
         <v-card
-        v-if="isSubmitted" 
+          v-if="isSubmitted"
           width="600"
           outlined
           elevation="10"
           class="mx-auto mb-5 mt-5 pr-10 pl-10"
         >
-          <v-form v-model="formValidity">
+          <v-form :value="formValidity" @input="updateFormValidity">
             <v-card-title>
               <h1 class="display-1 mx-auto">Sign up</h1>
             </v-card-title>
@@ -36,7 +36,6 @@
               label="Name"
               type="name"
               v-model="name"
-              required
               :rules="nameRules"
               prepend-icon="mdi-pencil"
             >
@@ -109,62 +108,70 @@
               </v-btn>
             </div>
           </v-form>
-
-      
         </v-card>
-            <v-card v-else width="400"  class="mt-16 green darken-1 text-center justify-center mx-auto  white--text">
-            <h1>congrtulation</h1>
-            <p class="m-0">email confirmation has been send</p>
+        <v-card
+          v-else
+          width="400"
+          class="mt-16 green darken-1 text-center justify-center mx-auto  white--text"
+        >
+          <h1>congrtulation</h1>
+          <p class="m-0">email confirmation has been send</p>
           <v-icon class="mb-5">mdi-checkbox-marked-circle</v-icon>
-          </v-card>
-            {{registeredUsers}}
+        </v-card>
+        {{ registeredUsers }}
       </v-card>
     </v-dialog>
   </v-row>
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import { mapActions } from "vuex";
+import { mapState, mapActions } from "vuex";
 export default {
   data() {
     return {
- 
-      agreeToTermsRules: [
-        (value) => !!value || "you must agree to terms and conditions",
-      ],
-      birthday: "",
-      hearOptions: ["Internet", "newspapper", "family", "radio"],
-      email: "",
-      nameRules: [
-        (value) => !!value || "Name is required",
-        (value) =>
-          value.match(/[^0-9]/i) || "username should contain only letters",
-     
-      ],
-      passwordRules: [
-        (value) => !!value || "password is required",
-        (value) =>
-          value.length >= 5 || "password must contain at least 5 characters",
-      ],
-      emailRules: [
-        (value) => !!value || "Email is required",
-        (value) => value.indexOf("@") !== 0 || "Email should have a username",
-        (value) => value.includes("@") || "Email should include an @ symbol",
-        (value) =>
-          value.indexOf(".") - value.indexOf("@") > 1 ||
-          "Email should contain a valid domain",
-        (value) =>
-          value.indexOf(".") <= value.length - 3 ||
-          "Email should contain a valid extension",
-      ],
-    };
+     date: new Date().toISOString().substr(0, 10),
+    }
   },
   methods: {
-      ...mapActions("register",["addUser"])
+    ...mapActions("register", ["addUser","closeDialog"]),
+ 
   },
   computed: {
-    ...mapState("register", ["name","registeredUsers","password","formValidity","isSubmitted","dialog","date","modal","menu2","agreeToTerms",""])
-  }
+      formValidity: {
+    get () {
+      return this.$store.register.state.obj.formValidity
+    },
+    set (value) {
+      this.$store.register.commit('updateMessage', value)
+    },
+      date: {
+     set(value) {
+       this.updateDate(value)
+     },
+     get() {
+       return this.$store.state.register.date
+     }
+   }
+  },
+    ...mapState("register", [
+      "name",
+      "registeredUsers",
+      "password",
+      "formValidity",
+      "isSubmitted",
+      "dialog",
+      "date",
+      "modal",
+      "menu2",
+      "agreeToTerms",
+      "agreeToTermsRules",
+      "birthday",
+      "email",
+      "nameRules",
+      "passwordRules",
+      "emailRules",
+      "hearOptions"
+    ]),
+  },
 };
 </script>

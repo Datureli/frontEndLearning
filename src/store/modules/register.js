@@ -17,24 +17,59 @@ export default {
         userPassword: "keepcalm",
       },
     ],
+    agreeToTermsRules: [
+      (value) => !!value || "you must agree to terms and conditions",
+    ],
+    birthday: "",
+    hearOptions: ["Internet", "newspapper", "family", "radio"],
+    email: "",
+    nameRules: [
+      (value) => !!value || "Name is required",
+      (value) =>
+        value.match(/[^0-9]/i) || "username should contain only letters",
+   
+    ],
+    passwordRules: [
+      (value) => !!value || "password is required",
+      (value) =>
+        value.length >= 5 || "password must contain at least 5 characters",
+    ],
+    emailRules: [
+      (value) => !!value || "Email is required",
+      (value) => value.indexOf("@") !== 0 || "Email should have a username",
+      (value) => value.includes("@") || "Email should include an @ symbol",
+      (value) =>
+        value.indexOf(".") - value.indexOf("@") > 1 ||
+        "Email should contain a valid domain",
+      (value) =>
+        value.indexOf(".") <= value.length - 3 ||
+        "Email should contain a valid extension",
+    ],
   },
 
   mutations: {
+    setValues(state, date) {
+      state.date = Object.assign({}, state.date, date);
+    },
     addUser() {
-      this.isSubmitted = !this.isSubmitted;
+     state.isSubmitted = !state.isSubmitted;
       state.registeredUsers.push(
-        this.name,
-        this.email,
-        this.password,
-        this.birthday,
-        this.menu2
+       state.name,
+       state.email,
+       state.password,
+       state.birthday,
+       state.menu2
       )
     },
+    closeDialog: (state) => (state.dialog = !state.dialog),
   },
 
   actions: {
     addUser(context) {
       context.commit("addUser");
     },
+    closeDialog(context) {
+      context.commit("closeDialog")
+    }
   },
 };
