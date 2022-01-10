@@ -14,12 +14,10 @@
 </template>
 <script>
 import Navigation from "./components/Navigation.vue";
-import BottomNavbar from "./components/BottomNavbar.vue";
 export default {
   name: "App",
   components: {
     Navigation,
-    BottomNavbar,
   },
 };
 </script>
