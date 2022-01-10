@@ -538,6 +538,12 @@ export default {
           "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
         secondAnswer: "",
       },
+      {
+        question: "Jak sprawdzić stan plików?",
+        answer:
+          "Podstawowe narzędzie używane do sprawdzenia stanu plików to polecenie git status. ",
+        secondAnswer: "",
+      },
     ],
   },
 

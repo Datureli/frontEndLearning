@@ -101,7 +101,7 @@
             <div class="text-center">
               <v-btn
                 class="mx-auto mb-5"
-                @click="submitted"
+                @click="addUser"
                 type="submit"
                 color="primary"
                 :disabled="!formValidity"
@@ -117,26 +117,19 @@
             <p class="m-0">email confirmation has been send</p>
           <v-icon class="mb-5">mdi-checkbox-marked-circle</v-icon>
           </v-card>
-            
+            {{registeredUsers}}
       </v-card>
     </v-dialog>
   </v-row>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+import { mapActions } from "vuex";
 export default {
   data() {
     return {
-      registeredUsers: [],
-      name: '',
-      password: '',
-      formValidity: false,
-      isSubmitted: true,
-      dialog: false,
-      date: new Date().toISOString().substr(0, 10),
-      modal: false,
-      menu2: '',
-      agreeToTerms: false,
+ 
       agreeToTermsRules: [
         (value) => !!value || "you must agree to terms and conditions",
       ],
@@ -168,16 +161,10 @@ export default {
     };
   },
   methods: {
-    submitted() {
-      this.isSubmitted = !this.isSubmitted;
-      this.registeredUsers.push(
-        this.name,
-        this.email,
-        this.password,
-        this.birthday,
-        this.menu2
-      )
-    },
+      ...mapActions("register",["addUser"])
   },
+  computed: {
+    ...mapState("register", ["name","registeredUsers","password","formValidity","isSubmitted","dialog","date","modal","menu2","agreeToTerms",""])
+  }
 };
 </script>
