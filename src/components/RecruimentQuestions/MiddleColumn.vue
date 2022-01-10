@@ -3,7 +3,7 @@
     class="mx-auto mb-10"
     style="margin-top: 80px;"
     height="415"
-    width="850"
+    :width="width"
     color="transparent"
     tile
     elevation="10"
@@ -30,5 +30,16 @@ export default {
     VueQuestions,
     GitQuestions,
   },
+  computed: {
+    width() {
+      switch (this.$vuetify.breakpoint.name) {
+           case 'xs': return 550
+          case 'sm': return 700
+          case 'md': return 500
+          case 'lg': return 850
+          case 'xl': return 900
+      }
+    }
+  }
 };
 </script>
