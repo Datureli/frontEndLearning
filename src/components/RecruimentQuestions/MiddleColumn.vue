@@ -1,12 +1,11 @@
 <template>
   <v-sheet
-    class="mx-auto mb-10"
-    style="margin-top: 80px;"
+    class="mx-auto mb-0 mt-lg-16"
     height="415"
     :width="width"
     color="transparent"
     tile
-    elevation="10"
+    :elevation="elevation"
   >
     <CssQuestions v-if="this.$route.path === '/about/cssquestions'" />
     <JavascriptQuestions v-if="this.$route.path === '/about/javascript'" />
@@ -33,13 +32,32 @@ export default {
   computed: {
     width() {
       switch (this.$vuetify.breakpoint.name) {
-           case 'xs': return 550
-          case 'sm': return 700
-          case 'md': return 500
-          case 'lg': return 850
-          case 'xl': return 900
+        case "xs":
+          return 550;
+        case "sm":
+          return 700;
+        case "md":
+          return 500;
+        case "lg":
+          return 850;
+        case "xl":
+          return 900;
       }
-    }
-  }
+    },
+    elevation() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return 0;
+        case "sm":
+          return 0;
+        case "md":
+          return 10;
+        case "lg":
+          return 10;
+        case "xl":
+          return 10;
+      }
+    },
+  },
 };
 </script>

@@ -108,6 +108,13 @@
 import { mapState } from "vuex";
 import { mapActions } from "vuex";
 export default {
+  data() {
+    return {
+      questionCategories: [
+
+      ]
+    }
+  },
   computed: {
     ...mapState("questions", [
       "javascriptQuestions",
