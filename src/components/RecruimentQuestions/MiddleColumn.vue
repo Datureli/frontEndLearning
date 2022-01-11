@@ -1,6 +1,6 @@
 <template>
   <v-sheet
-    class="mx-auto mb-0 mt-lg-16"
+    class="mx-auto mt-xm-5 mb-15 mt-lg-16"
     height="415"
     :width="width"
     color="transparent"
@@ -33,9 +33,9 @@ export default {
     width() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
-          return 550;
+          return 580;
         case "sm":
-          return 700;
+          return 720;
         case "md":
           return 500;
         case "lg":

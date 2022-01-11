@@ -422,6 +422,11 @@ export default {
           "pozwala na pisanie komponentów w sposób oparty na funkcjach. Usprawnienie to zostało zainspirowane przez React Hooks. Nowe API umożliwia hermetyzację logiki w tzw. „composition functions” i pozwala używać jej ponownie we wszystkich komponentach.   ",
       },
       {
+        question: "Wyjaśnij cykl życia w Vue",
+        answer:
+          "pozwala na pisanie komponentów w sposób oparty na funkcjach. Usprawnienie to zostało zainspirowane przez React Hooks. Nowe API umożliwia hermetyzację logiki w tzw. „composition functions” i pozwala używać jej ponownie we wszystkich komponentach.   ",
+      },
+      {
         question: "Jaka jest różnica między Vue2 a Vue3?",
         answer:
           "Vue 3.0 jest o wiele bardziej wydajne w porównaniu do swojej poprzedniej wersji. Mówimy tutaj o rozmiarze gotowej aplikacji Vue, która jest do 41% lżejsza dzięki użyciu techniki tree-shaking, początkowym renderowaniu, które jest do 55% szybsze, aktualizacjach, które są aż o 133% szybsze oraz o 54% mniejszym zużyciu pamięci.Twórcy Vue.js zaproponowali w nowym wydaniu dwie funkcje dla Single-File Components: script setup oraz style vars.Vue 3.0 zapewnia również lepszą integrację z językiem TypeScript.",
@@ -431,6 +436,17 @@ export default {
         answer:
           "to są funkcje które zwracają nam stan.obiekt.defineProperty API, jeśli jeszcze tego nie wiesz. Ponieważ system reaktywności Vue opiera się na tym API.",
       },
+      {
+        question: "Wymień funkcjonalności w Vue",
+        answer:
+          "Raktywność,templates,komponenty,transition,routing",
+      },
+      {
+        question: "Objaśnij cykl życia w Vue",
+        answer:
+          "Raktywność,templates,komponenty,transition,routing",
+      },
+      
       {
         question: "co to jest flux?",
         answer:
