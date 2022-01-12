@@ -2,15 +2,9 @@ export default {
   namespaced: true,
 
   state: {
-    message: 'dsada',
-    name: '',
-    password: '',
-    formValidity: false,
-    isSubmitted: true,
-    dialog: false,
-    date: new Date().toISOString().substr(0, 10),
-    modal: false,
-    menu2: '',
+    name: "",
+    password: "",
+    email: "",
     agreeToTerms: false,
     registeredUsers: [
       {
@@ -21,14 +15,12 @@ export default {
     agreeToTermsRules: [
       (value) => !!value || "you must agree to terms and conditions",
     ],
-    birthday: "",
     hearOptions: ["Internet", "newspapper", "family", "radio"],
-    email: "",
+
     nameRules: [
       (value) => !!value || "Name is required",
       (value) =>
         value.match(/[^0-9]/i) || "username should contain only letters",
-   
     ],
     passwordRules: [
       (value) => !!value || "password is required",
@@ -47,33 +39,37 @@ export default {
         "Email should contain a valid extension",
     ],
   },
-  getters: {
-    agreeToTerms: state => {
-      return state.agreeToTerms
-    },
-      authDate: state => {
-        return state.date
-      }
-    },
   mutations: {
-    updateMessage(state,message) {
-      state.message = message
+    updateMessage(state, message) {
+      state.message = message;
     },
     updateName(state, name) {
-      state.name = name
+      state.name = name;
     },
     updatePassword(state, password) {
-      state.password = password
+      state.password = password;
+    },
+    updateFormValidity(state, formValidity) {
+      state.formValidity = formValidity;
+    },
+    updateAgreeToTerms(state, agreeToTerms) {
+      state.agreeToTerms = agreeToTerms;
+    },
+    updateEmail(state, email) {
+      state.email = email;
+    },
+    updateDialog(state, dialog) {
+      state.dialog = dialog;
     },
     addUser() {
-     state.isSubmitted = !state.isSubmitted;
+      state.isSubmitted = !state.isSubmitted;
       state.registeredUsers.push(
-       state.name,
-       state.email,
-       state.password,
-       state.birthday,
-       state.menu2
-      )
+        state.name,
+        state.email,
+        state.password,
+        state.birthday,
+        state.menu2
+      );
     },
     closeDialog: (state) => (state.dialog = !state.dialog),
   },
@@ -83,7 +79,7 @@ export default {
       context.commit("addUser");
     },
     closeDialog(context) {
-      context.commit("closeDialog")
+      context.commit("closeDialog");
     },
-}
-}
+  },
+};

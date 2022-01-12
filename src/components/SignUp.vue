@@ -16,7 +16,7 @@
           <v-toolbar-title>Sing up</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-toolbar-items>
-            <v-btn icon dark @click="closeDialog">
+            <v-btn icon dark @click="dialog = false">
               <v-icon>mdi-close</v-icon>
             </v-btn>
           </v-toolbar-items>
@@ -35,7 +35,8 @@
             <v-text-field
               label="Name"
               type="name"
-              :value="name" @input="updateName"
+              :value="name"
+              @input="updateName"
               :rules="nameRules"
               prepend-icon="mdi-pencil"
             >
@@ -43,7 +44,8 @@
             <v-text-field
               label="Email"
               type="email"
-              v-model="email"
+              :value="email"
+              @input="updateEmail"
               :rules="emailRules"
               required
               prepend-icon="mdi-email"
@@ -52,7 +54,8 @@
             <v-text-field
               label="Password"
               type="password"
-              :value="password" @input="updatePassword"
+              :value="password"
+              @input="updatePassword"
               required
               :rules="passwordRules"
               prepend-icon="mdi-lock-question"
@@ -60,7 +63,6 @@
             </v-text-field>
 
             <v-menu
-              v-model="menu2"
               :close-on-content-click="false"
               :nudge-right="40"
               transition="scale-transition"
@@ -77,9 +79,7 @@
                   v-on="on"
                 ></v-text-field>
               </template>
-              <v-date-picker
-                v-model="date"
-              ></v-date-picker>
+              <v-date-picker v-model="date"></v-date-picker>
             </v-menu>
             <v-autocomplete
               label="where u hear about us?"
@@ -107,9 +107,6 @@
               </v-btn>
             </div>
           </v-form>
-             {{message}}
-          <input :value="message" @input="updateMessage">
-       
         </v-card>
         <v-card
           v-else
@@ -127,34 +124,33 @@
 </template>
 
 <script>
-import { mapState, mapActions} from "vuex";
+import { mapState } from "vuex";
 export default {
   data() {
     return {
       date: new Date().toISOString().substr(0, 10),
+      isSubmitted: true,
+         dialog: false,
+             formValidity: false,
     };
   },
   methods: {
-    ...mapActions("register", ["addUser", "closeDialog"]),
-    updateMessage(e) {
-      this.$store.commit('register/updateMessage', e.target.value)
-    },
     updateName(e) {
-      this.$store.commit('register/updateName', e.target.value)
+      this.$store.commit("register/updateName", e.target.value);
     },
     updatePassword() {
-      this.$store.commit('register/updatePassword',e.target.value)
-    }
+      this.$store.commit("register/updatePassword", e.target.value);
+    },
+    updateEmail() {
+      this.$store.commit("register/updateEmail", e.target.value);
+    },
   },
   computed: {
-    message() {
-      return this.$store.register.state.message
-    },
     name() {
-      return this.$store.register.state.name
+      return this.$store.register.state.name;
     },
     password() {
-      return this.$store.register.state.password
+      return this.$store.register.state.password;
     },
     ...mapState("register", [
       "agreeToTerms",
@@ -166,10 +162,8 @@ export default {
       "isSubmitted",
       "dialog",
       "date",
-      "modal",
       "menu2",
       "agreeToTermsRules",
-      "birthday",
       "email",
       "nameRules",
       "passwordRules",
