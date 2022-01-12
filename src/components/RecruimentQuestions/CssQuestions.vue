@@ -104,5 +104,5 @@ export default {
       this.$store.dispatch("questions/randomCssQuestion");
     },
   },
-};
+}
 </script>

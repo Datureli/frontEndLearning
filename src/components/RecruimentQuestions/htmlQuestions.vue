@@ -34,41 +34,44 @@
       </v-list-item>
     </v-carousel-item>
     <v-sheet class="d-flex" relative>
-      <v-icon
-        x-large
-        @click="randomHtmlQuestion"
-        color="brown"
-        style="position: absolute; bottom: 26%; right:90%;"
-        >mdi-dice-multiple</v-icon
-      >
+      <v-row justify="spacer-around">
+        <v-icon
+          x-large
+          @click="randomHtmlQuestion"
+          class="d-sm-and-down-none"
+          color="brown"
+          style="position: absolute; bottom: 26%; right:90%;"
+          >mdi-dice-multiple</v-icon
+        >
 
-      <v-icon
-        x-large
-        @click="htmlQuestionLoop"
-        color="white"
-        style="position: absolute; bottom: 26%; right:85%;"
-        >mdi-autorenew</v-icon
-      >
+        <v-icon
+          x-large
+          @click="htmlQuestionLoop"
+          color="white"
+          style="position: absolute; bottom: 26%; right:85%;"
+          >mdi-autorenew</v-icon
+        >
 
-      <v-pagination
-        style="position: absolute; bottom: 18%; right:36%"
-        v-model="page"
-        :length="3"
-      ></v-pagination>
-      <v-icon
-        large
-        @click="disableAnswers"
-        style="position: absolute; bottom: 26%; right:10%;"
-        >mdi-comment-off-outline</v-icon
-      >
+        <v-pagination
+          style="position: absolute; bottom: 18%; right:36%"
+          v-model="page"
+          :length="3"
+        ></v-pagination>
+        <v-icon
+          large
+          @click="disableAnswers"
+          style="position: absolute; bottom: 26%; right:10%;"
+          >mdi-comment-off-outline</v-icon
+        >
 
-      <v-icon
-        x-large
-        @click="addToFavorite(htmlQuestions)"
-        color="red"
-        style="position: absolute; bottom: 26%; right:4%;"
-        >mdi-heart</v-icon
-      >
+        <v-icon
+          x-large
+          @click="addToFavorite(htmlQuestions)"
+          color="red"
+          style="position: absolute; bottom: 26%; right:4%;"
+          >mdi-heart</v-icon
+        >
+      </v-row>
     </v-sheet>
   </v-carousel>
 </template>
@@ -84,7 +87,6 @@ export default {
   computed: {
     ...mapState(["disable", "favorite"]),
     ...mapState("questions", ["htmlQuestions"]),
-    
   },
 
   methods: {
@@ -116,10 +118,11 @@ pre {
   font-size: 15px;
 }
 code {
-    font-family: "Inconsolata","Monaco","Consolas","Andale Mono","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
-    display: block;
-    font-size: 13px;
-    line-height: 19px;
-    color: #ddd;
+  font-family: "Inconsolata", "Monaco", "Consolas", "Andale Mono",
+    "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  display: block;
+  font-size: 13px;
+  line-height: 19px;
+  color: #ddd;
 }
 </style>

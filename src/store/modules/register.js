@@ -46,11 +46,18 @@ export default {
         "Email should contain a valid extension",
     ],
   },
-
-  mutations: {
-    setValues(state, date) {
-      state.date = Object.assign({}, state.date, date);
+  getters: {
+    agreeToTerms: state => {
+      return state.agreeToTerms
     },
+      authDate: state => {
+        return state.date
+      }
+    },
+  mutations: {
+  updateMessage (state, date) {
+    state.obj.date = date
+  },
     addUser() {
      state.isSubmitted = !state.isSubmitted;
       state.registeredUsers.push(
@@ -70,6 +77,6 @@ export default {
     },
     closeDialog(context) {
       context.commit("closeDialog")
-    }
-  },
-};
+    },
+}
+}

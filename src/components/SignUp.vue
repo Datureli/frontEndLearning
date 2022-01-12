@@ -28,7 +28,7 @@
           elevation="10"
           class="mx-auto mb-5 mt-5 pr-10 pl-10"
         >
-          <v-form :value="formValidity" @input="updateFormValidity">
+          <v-form v-model="formValidity">
             <v-card-title>
               <h1 class="display-1 mx-auto">Sign up</h1>
             </v-card-title>
@@ -125,35 +125,27 @@
 </template>
 
 <script>
-import { mapState, mapActions } from "vuex";
+import { mapState, mapActions, mapGetters } from "vuex";
 export default {
   data() {
     return {
-     date: new Date().toISOString().substr(0, 10),
-    }
+      date: new Date().toISOString().substr(0, 10),
+    };
   },
   methods: {
-    ...mapActions("register", ["addUser","closeDialog"]),
- 
+    ...mapActions("register", ["addUser", "closeDialog"]),
   },
   computed: {
-      formValidity: {
+  date: {
     get () {
-      return this.$store.register.state.obj.formValidity
+      return this.$store.register.state.obj.date
     },
     set (value) {
       this.$store.register.commit('updateMessage', value)
-    },
-      date: {
-     set(value) {
-       this.updateDate(value)
-     },
-     get() {
-       return this.$store.state.register.date
-     }
-   }
+    }
   },
     ...mapState("register", [
+      "agreeToTerms",
       "name",
       "registeredUsers",
       "password",
@@ -163,14 +155,13 @@ export default {
       "date",
       "modal",
       "menu2",
-      "agreeToTerms",
       "agreeToTermsRules",
       "birthday",
       "email",
       "nameRules",
       "passwordRules",
       "emailRules",
-      "hearOptions"
+      "hearOptions",
     ]),
   },
 };

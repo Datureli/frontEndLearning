@@ -227,16 +227,15 @@ export default {
     password: null,
     loggedIn: false,
     showPassword: false,
-    loginRules: [(value) => !!value || "login is required"],
-    passwordRules: [(value) => !!value || "password is required"],
+
   }),
   computed: {
+    ...mapState("login",["loginRules","passwordRules","username","password","dialog"]),
     ...mapState("register", ["registeredUsers"]),
     isUserLogin() {
       if (
         this.username.length > 0 &&
         this.password.length > 0 
-    //    &&    registeredUsers.login == this.username
       ) {
         this.loggedIn = true;
         this.$router.push({ path: "login" });

@@ -148,7 +148,7 @@ export default {
         answer:
           "Sass to preprocesor CSS,który pozwala na znacznie szybszą i wydajniejszą pracę z arkuszami stylów.Preprocesory pozwalają na programowanie wśród arkuszy stylów, co daje ogromne możliwości przyspieszenia pracy.przeglądarki czytają kod CSS, a kod w formacie Sass będzie dla nich niezrozumiały. Rozwiązaniem tego problemu jest kompilacja plików Sass do wyjściowego CSS",
         secondAnswer:
-          "W Sass możemy używać zmiennych.Zagnieżdzanie.Mixins.DziedziczenieKolejna bardzo mocna cecha. Dzięki dziedziczeniu możemy przekazywać część zastosowanych deklaracji z jednego obiektu na drugi. To z kolei ponownie pozwala nam na podążanie za regułą DRY. Aby dany element odziedziczył cechy swego przodka należy wstawić wyrażenie @extend a następnie selektor z którego mamy dziedziczyć. W przykładzie wykorzystamy klasę alert (która może formatować jakiś komunikat) i dodamy kolejne jej odmiany:",
+          "W Sass możemy używać zmiennych,Zagnieżdzanie.Mixins.DziedziczenieKolejna bardzo mocna cecha. Dzięki dziedziczeniu możemy przekazywać część zastosowanych deklaracji z jednego obiektu na drugi. To z kolei ponownie pozwala nam na podążanie za regułą DRY. Aby dany element odziedziczył cechy swego przodka należy wstawić wyrażenie @extend a następnie selektor z którego mamy dziedziczyć. W przykładzie wykorzystamy klasę alert (która może formatować jakiś komunikat) i dodamy kolejne jej odmiany:",
         thirdPartOfAnswer:
           " Do naszej dyspozycji SASS udostępnia operatory typu: +, -, *, /, oraz %. Możliwa jest także konwersja wartości (np z pikseli na procenty).",
       },
