@@ -100,7 +100,7 @@
               <v-btn
                 class="mx-auto mb-5"
                 @click="addUser"
-                type="submit"
+                type="button"
                 color="primary"
                 :disabled="!formValidity"
                 >Submit
@@ -129,12 +129,19 @@ export default {
   data() {
     return {
       date: new Date().toISOString().substr(0, 10),
-      isSubmitted: true,
-         dialog: false,
-             formValidity: false,
+      dialog: false,
+         isSubmitted: true,
+      formValidity: false,
     };
   },
   methods: {
+      addUser() {
+        this.$store.dispatch("register/addUser")
+      },
+      addRegister(name,email,password) {
+     
+        this.$store.state.register.registeredUsers.push(updateName)
+      },
     updateName(e) {
       this.$store.commit("register/updateName", e.target.value);
     },
@@ -144,8 +151,13 @@ export default {
     updateEmail() {
       this.$store.commit("register/updateEmail", e.target.value);
     },
+
+
   },
   computed: {
+    email() {
+      return this.$store.register.state.email
+    },
     name() {
       return this.$store.register.state.name;
     },
@@ -154,15 +166,11 @@ export default {
     },
     ...mapState("register", [
       "agreeToTerms",
-      "message",
       "name",
       "registeredUsers",
       "password",
       "formValidity",
       "isSubmitted",
-      "dialog",
-      "date",
-      "menu2",
       "agreeToTermsRules",
       "email",
       "nameRules",

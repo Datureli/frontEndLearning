@@ -6,6 +6,7 @@ export default {
     password: "",
     email: "",
     agreeToTerms: false,
+    isSubmitted: true,
     registeredUsers: [
       {
         login: "Datureli",
@@ -40,9 +41,6 @@ export default {
     ],
   },
   mutations: {
-    updateMessage(state, message) {
-      state.message = message;
-    },
     updateName(state, name) {
       state.name = name;
     },
@@ -58,20 +56,17 @@ export default {
     updateEmail(state, email) {
       state.email = email;
     },
-    updateDialog(state, dialog) {
-      state.dialog = dialog;
-    },
-    addUser() {
+    addUser(state, name, email, password) {
+      state.name = name
+      state.email = email
+      state.password = password
       state.isSubmitted = !state.isSubmitted;
       state.registeredUsers.push(
-        state.name,
-        state.email,
-        state.password,
-        state.birthday,
-        state.menu2
+        name,
+        email,
+        password,
       );
     },
-    closeDialog: (state) => (state.dialog = !state.dialog),
   },
 
   actions: {
