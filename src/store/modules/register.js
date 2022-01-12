@@ -2,6 +2,7 @@ export default {
   namespaced: true,
 
   state: {
+    message: 'dsada',
     name: '',
     password: '',
     formValidity: false,
@@ -55,9 +56,15 @@ export default {
       }
     },
   mutations: {
-  updateMessage (state, date) {
-    state.obj.date = date
-  },
+    updateMessage(state,message) {
+      state.message = message
+    },
+    updateName(state, name) {
+      state.name = name
+    },
+    updatePassword(state, password) {
+      state.password = password
+    },
     addUser() {
      state.isSubmitted = !state.isSubmitted;
       state.registeredUsers.push(

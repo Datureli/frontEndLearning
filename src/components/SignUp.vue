@@ -35,7 +35,7 @@
             <v-text-field
               label="Name"
               type="name"
-              v-model="name"
+              :value="name" @input="updateName"
               :rules="nameRules"
               prepend-icon="mdi-pencil"
             >
@@ -52,7 +52,7 @@
             <v-text-field
               label="Password"
               type="password"
-              v-model="password"
+              :value="password" @input="updatePassword"
               required
               :rules="passwordRules"
               prepend-icon="mdi-lock-question"
@@ -79,7 +79,6 @@
               </template>
               <v-date-picker
                 v-model="date"
-                @input="menu2 = false"
               ></v-date-picker>
             </v-menu>
             <v-autocomplete
@@ -108,6 +107,9 @@
               </v-btn>
             </div>
           </v-form>
+             {{message}}
+          <input :value="message" @input="updateMessage">
+       
         </v-card>
         <v-card
           v-else
@@ -125,7 +127,7 @@
 </template>
 
 <script>
-import { mapState, mapActions, mapGetters } from "vuex";
+import { mapState, mapActions} from "vuex";
 export default {
   data() {
     return {
@@ -134,18 +136,29 @@ export default {
   },
   methods: {
     ...mapActions("register", ["addUser", "closeDialog"]),
-  },
-  computed: {
-  date: {
-    get () {
-      return this.$store.register.state.obj.date
+    updateMessage(e) {
+      this.$store.commit('register/updateMessage', e.target.value)
     },
-    set (value) {
-      this.$store.register.commit('updateMessage', value)
+    updateName(e) {
+      this.$store.commit('register/updateName', e.target.value)
+    },
+    updatePassword() {
+      this.$store.commit('register/updatePassword',e.target.value)
     }
   },
+  computed: {
+    message() {
+      return this.$store.register.state.message
+    },
+    name() {
+      return this.$store.register.state.name
+    },
+    password() {
+      return this.$store.register.state.password
+    },
     ...mapState("register", [
       "agreeToTerms",
+      "message",
       "name",
       "registeredUsers",
       "password",
