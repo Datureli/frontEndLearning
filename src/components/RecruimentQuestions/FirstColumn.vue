@@ -2,7 +2,6 @@
   <v-card width="320" class="mt-15 ml-12" color="transparent" elevation="0">
     <v-list color="transparent">
       <v-list-item-group
-        v-model="selectedItem"
         style="font-size: 25px"
         color="primary"
         active-class="blue--text"

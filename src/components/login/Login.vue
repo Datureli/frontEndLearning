@@ -219,7 +219,6 @@ export default {
     MessageSection,
   },
   data: () => ({
-    showFavorite: false,
     elementVisible: true,
     loginButton: true,
     dialog: false,
@@ -227,10 +226,10 @@ export default {
     password: null,
     loggedIn: false,
     showPassword: false,
-
   }),
   computed: {
     ...mapState("login",["loginRules","passwordRules","username","password","dialog"]),
+    ...mapState(["favorite"]),
     ...mapState("register", ["registeredUsers"]),
     isUserLogin() {
       if (
@@ -247,10 +246,6 @@ export default {
     logOut() {
       this.loggedIn = false;
     },
-    addUser() {
-      this.$store.dispatch("register/addUser");
-    },
-
     closeModal() {
       this.dialog = false;
       this.$router.push({ path: "/" });
@@ -261,7 +256,7 @@ export default {
     },
   },
   created() {
-    setTimeout(() => (this.elementVisible = false), 5000);
+    setTimeout(() => (this.elementVisible = false), 3000);
   },
 };
 </script>

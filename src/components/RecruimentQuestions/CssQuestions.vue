@@ -35,7 +35,6 @@
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
-          dsadad    {{word}}
     <v-sheet class="d-flex" relative>
       <v-icon
         x-large

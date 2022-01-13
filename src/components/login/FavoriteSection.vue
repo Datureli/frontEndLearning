@@ -4,6 +4,7 @@
     <h1 class="mx-auto">{{ favorite.question }}</h1>  
     <p>{{favorite.answer}}</p>
     </v-card>
+    <h1>dsadadsasdas</h1>
   </v-container>
 </template>
 
@@ -12,6 +13,7 @@ import { mapState } from "vuex";
 export default {
   computed: {
     ...mapState(["disable", "favorite"]),
+    ...mapState("questions",["cssQuestions"])
   },
 };
 </script>
