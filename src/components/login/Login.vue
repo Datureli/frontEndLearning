@@ -13,9 +13,7 @@
         </v-btn>
       </template>
 
-      <v-card
-        style="background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
-      >
+      <v-card color="darkGradient">
         <v-toolbar class="mb-0" dark color="#2c3e50">
           <v-toolbar-title>Ucz się frontu</v-toolbar-title>
           <v-spacer></v-spacer>
@@ -25,11 +23,10 @@
             </v-btn>
           </v-toolbar-items>
         </v-toolbar>
-        {{ loggedIn }}
+
         <div class="d-flex">
           <v-card
-            @click="loggedIn === true"
-            v-show="isUserLogin && !elementVisible"
+            v-show="loggedIn && !elementVisible"
             height="100%"
             width="310"
             dark
@@ -45,8 +42,8 @@
                   v-for="(loginSection, index) in loginSections"
                   :key="index"
                   :to="loginSection.link"
+                  elevation="0"
                   class="text-deocration-none mx-auto"
-                  style="text-decoration: none;"
                 >
                   <v-list-item-title>{{
                     loginSection.title
@@ -62,7 +59,7 @@
             v-show="loggedIn && !elementVisible"
             v-if="this.$route.path === '/login'"
           />
-          <ChangePassword v-if="this.$route.path === '/login/password'" />
+          <ChangePassword v-if="this.$route.path === '/password'" />
           <MessageSection v-if="this.$route.path === '/login/messages'" />
         </div>
 
@@ -79,7 +76,12 @@
             class="mx-auto mt-15 pr-4 pl-4"
           >
             <v-card-title>
-              <h1 class="display-1 mx-auto white--text">Login</h1>
+              <h1
+             
+                class="display-1 mx-auto white--text"
+              >
+                Login
+              </h1>
             </v-card-title>
             <v-card-text>
               <v-form>
@@ -93,7 +95,8 @@
                 />
                 <v-text-field
                   label="Password"
-                  v-model="password"
+                  :value="password"
+                  @input="updatePassword"
                   :rules="passwordRules"
                   :type="showPassword ? 'text' : 'password'"
                   prepend-icon="mdi-lock"
@@ -104,11 +107,11 @@
             </v-card-text>
             <v-card-actions>
               <v-btn
-                block
-                v-if="loginButton"
+                block 
                 rounded
+                v-if="!loggedIn"
                 class="mx-auto ma-2"
-                @click="isUserLogin"
+                @click="logOut"
                 color="info"
                 >Login</v-btn
               >
@@ -143,19 +146,7 @@ export default {
     MessageSection,
   },
   data: () => ({
-    loginSections: [
-      { title: "Profil", link: "/login" },
-      { title: "Password", link: "/password" },
-      { title: "Messages", link: "/messages" },
-      { title: "Friends", link: "login" },
-      { title: "Stwórz pytania", link: "login" },
-      { title: "Profil", link: "login" },
-      { title: "Ulubione", link: "login" },
-      { title: "Osiągnięcia", link: "login" },
-      { title: "Ustawienia", link: "login" },
-    ],
     elementVisible: true,
-    loginButton: true,
     dialog: false,
     showPassword: false,
   }),
@@ -166,6 +157,7 @@ export default {
       "username",
       "password",
       "loggedIn",
+      "loginSections",
     ]),
     ...mapState("register", ["registeredUsers"]),
     // username() {    return this.$store.login.state.username },

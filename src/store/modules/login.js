@@ -7,6 +7,16 @@ export default {
     username: null,
     password: null,
     loggedIn: false,
+    loginSections: [
+      { title: "Profil", link: "/login" },
+      { title: "Password", link: "/password" },
+      { title: "Messages", link: "/messages" },
+      { title: "Friends", link: "/friends" },
+      { title: "Stwórz pytania", link: "/createquestions" },
+      { title: "Ulubione", link: "/favorite" },
+      { title: "Osiągnięcia", link: "/archivments" },
+      { title: "Ustawienia", link: "/settings" },
+    ],
   },
 
   mutations: {
@@ -20,12 +30,10 @@ export default {
     updateLoggedIn(state, loggedIn) {
       state.loggedIn = loggedIn
     },
-    isUserLogin(state, username, password, loggedIn) {
-      state.username = username;
-      state.password = password;
-      state.loggedIn = loggedIn;
-      if (username.length > 0 && password.length > 0) {
-        loggedIn = true;
+    isUserLogin(state) {
+  
+      if (state.username.length > 0 && state.password.length > 0) {
+        state.loggedIn = true;
         this.$router.push({ path: "login" });
       }
     },
