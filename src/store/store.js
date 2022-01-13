@@ -16,6 +16,7 @@ export default new Vuex.Store({
   state: {
     disable: true,
     favorite: [],
+    isHeartActive: false,
   },
   mutations: {
     disable: (state) => (state.disable = !state.disable),

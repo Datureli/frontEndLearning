@@ -138,7 +138,7 @@ export default {
       addUser() {
         this.$store.dispatch("register/addUser")
       },
-      addRegister(name,email,password) {
+      addRegister() {
      
         this.$store.state.register.registeredUsers.push(updateName)
       },

@@ -65,6 +65,7 @@
         >
 
         <v-icon
+        :disabled="!isHeartActive"
           x-large
           @click="addToFavorite(htmlQuestions)"
           color="red"
@@ -85,7 +86,7 @@ export default {
     },
   },
   computed: {
-    ...mapState(["disable", "favorite"]),
+    ...mapState(["disable", "favorite","isHeartActive"]),
     ...mapState("questions", ["htmlQuestions"]),
   },
 
