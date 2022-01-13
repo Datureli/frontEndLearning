@@ -12,6 +12,8 @@
     <HtmlQuestions v-if="this.$route.path === '/about/htmlquestions'" />
     <VueQuestions v-if="this.$route.path === '/about/vue'" />
     <GitQuestions v-if="this.$route.path === '/about/gitquestions'" />
+    <BootstrapQuestions v-if="this.$route.path === '/about/bootstrap'" />
+    <TypeScriptQuestions v-if="this.$route.path === '/about/typescript'" />
   </v-sheet>
 </template>
 
@@ -21,6 +23,8 @@ import CssQuestions from "./CssQuestions.vue";
 import JavascriptQuestions from "./JavascriptQuestions.vue";
 import VueQuestions from "./VueQuestions.vue";
 import GitQuestions from "./GitQuestions.vue";
+import BootstrapQuestions from "./BootstrapQuestions.vue";
+import TypeScriptQuestions from "./TypeScriptQuestions.vue"
 export default {
   components: {
     HtmlQuestions,
@@ -28,6 +32,8 @@ export default {
     JavascriptQuestions,
     VueQuestions,
     GitQuestions,
+    BootstrapQuestions,
+    TypeScriptQuestions
   },
   computed: {
     width() {

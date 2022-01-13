@@ -13,7 +13,6 @@ import { mapState } from "vuex";
 export default {
   computed: {
     ...mapState(["disable", "favorite"]),
-    ...mapState("questions",["cssQuestions"])
   },
 };
 </script>

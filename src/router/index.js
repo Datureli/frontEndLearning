@@ -45,10 +45,10 @@ const routes = [
         name: "BootstrapQuestions",
       },
       {
-        path: "scssquestions",
+        path: "typescript",
         component: () =>
-          import("../components/RecruimentQuestions/ScssQuestions.vue"),
-        name: "ScssQuestions",
+          import("../components/RecruimentQuestions/TypeScriptQuestions.vue"),
+        name: "TypeScriptQuestions",
       },
       {
         path: "general",
@@ -88,7 +88,7 @@ const routes = [
     component: () => import("../components/IntoFlashCards.vue"),
   },
   {
-    path: "quiz",
+    path: "/quiz",
     name: "Quiz",
     component: () => import("../components/Quiz.vue"),
   },

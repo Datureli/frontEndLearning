@@ -71,7 +71,7 @@
         <v-list-item>
           <v-icon>mdi-language-typescript</v-icon>
           <router-link
-            :to="{ name: 'TypescriptQuestions' }"
+            :to="{ name: 'TypeScriptQuestions' }"
             class="text-deocration-none mx-auto"
             style="text-decoration: none; color: #a55c1b;"
           >
@@ -91,11 +91,11 @@
         <v-list-item>
           <v-icon>mdi-account-circle</v-icon>
           <router-link
-            :to="{ name: 'StupidQuestions' }"
+            :to="{ name: 'BootstrapQuestions' }"
             class="text-deocration-none mx-auto"
             style="text-decoration: none; color: #a55c1b;"
           >
-            Pytania o ciebie
+            Testowanie
           </router-link>
         </v-list-item>
       </v-list-item-group>
@@ -104,25 +104,9 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
 import { mapActions } from "vuex";
 export default {
-  data() {
-    return {
-      questionCategories: [
 
-      ]
-    }
-  },
-  computed: {
-    ...mapState("questions", [
-      "javascriptQuestions",
-      "htmlQuestions",
-      "cssQuestions",
-      "vueQuestions",
-      "gitQuestions",
-    ]),
-  },
   methods: {
     ...mapActions("questions", [
       "randomHtmlQuestion",

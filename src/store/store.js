@@ -10,13 +10,14 @@ export default new Vuex.Store({
   modules: {
     login,
     questions,
-    register
+    register,
   },
 
   state: {
     disable: true,
     favorite: [],
     isHeartActive: false,
+    page: 0,
   },
   mutations: {
     disable: (state) => (state.disable = !state.disable),

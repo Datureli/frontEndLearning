@@ -228,8 +228,7 @@ export default {
     showPassword: false,
   }),
   computed: {
-    ...mapState("login",["loginRules","passwordRules","username","password","dialog"]),
-    ...mapState(["favorite"]),
+    ...mapState("login",["loginRules","passwordRules",]),
     ...mapState("register", ["registeredUsers"]),
     isUserLogin() {
       if (
