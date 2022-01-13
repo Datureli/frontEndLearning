@@ -9,24 +9,14 @@
     >
       <template v-slot:activator="{ on, attrs }">
         <v-btn
-          v-if="loggedIn === false"
+          :if="!loggedIn ? 'login' : 'my account'"
           color="transparent"
           dark
           v-bind="attrs"
           v-on="on"
         >
-          login
+          {{!loggedIn ? 'login' : 'my account' }}
         </v-btn>
-        <v-btn
-          @click="contModal"
-          v-else
-          v-model="dialog"
-          v-on="on"
-          v-bind="attrs"
-          color="transparent"
-          dark
-          >My Account</v-btn
-        >
       </template>
 
       <v-card
@@ -42,8 +32,10 @@
             </v-btn>
           </v-toolbar-items>
         </v-toolbar>
+        {{loggedIn}}
         <div class="d-flex">
           <v-card
+          @click="loggedIn === true"
             v-show="loggedIn && !elementVisible"
             height="100%"
             width="310"
@@ -163,7 +155,8 @@
                 <v-text-field
                   hide-details="auto"
                   label="Username"
-                  v-model="username"
+                  :value="username"
+                  @input="updateUsername"
                   :rules="loginRules"
                   prepend-icon="mdi-account-circle"
                 />
@@ -184,7 +177,7 @@
                 v-if="loginButton"
                 rounded
                 class="mx-auto ma-2"
-                @click="isUserLogin()"
+                @click="isUserLogin"
                 color="info"
                 >Login</v-btn
               >
@@ -222,28 +215,28 @@ export default {
     elementVisible: true,
     loginButton: true,
     dialog: false,
-    username: null,
-    password: null,
-    loggedIn: false,
     showPassword: false,
   }),
   computed: {
-    ...mapState("login",["loginRules","passwordRules",]),
+    ...mapState("login",["loginRules","passwordRules","username","password","loggedIn"]),
     ...mapState("register", ["registeredUsers"]),
-    isUserLogin() {
-      if (
-        this.username.length > 0 &&
-        this.password.length > 0 
-      ) {
-        this.loggedIn = true;
-        this.$router.push({ path: "login" });
-      }
-    },
+   // username() {    return this.$store.login.state.username },
+   // password() {   return this.$store.login.state.password },
+ //  loggedIn() {   return this.$store.login.state.loggedIn  }
   },
 
   methods: {
+       isUserLogin() {
+      this.$store.dispatch("login/isUserLogin");
+    },
+     updateUsername(e) {
+      this.$store.commit("login/updateUsername", e.target.value);
+    },
+     updatePassword(e) {
+      this.$store.commit("login/updatePassword", e.target.value);
+    },
     logOut() {
-      this.loggedIn = false;
+      this.$store.commit("logOut");
     },
     closeModal() {
       this.dialog = false;

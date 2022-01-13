@@ -130,18 +130,17 @@ export default {
     return {
       date: new Date().toISOString().substr(0, 10),
       dialog: false,
-         isSubmitted: true,
+      isSubmitted: true,
       formValidity: false,
     };
   },
   methods: {
-      addUser() {
-        this.$store.dispatch("register/addUser")
-      },
-      addRegister() {
-     
-        this.$store.state.register.registeredUsers.push(updateName)
-      },
+    addUser() {
+      this.$store.dispatch("register/addUser");
+    },
+    addRegister() {
+      this.$store.state.register.registeredUsers.push(updateName);
+    },
     updateName(e) {
       this.$store.commit("register/updateName", e.target.value);
     },
@@ -151,12 +150,10 @@ export default {
     updateEmail() {
       this.$store.commit("register/updateEmail", e.target.value);
     },
-
-
   },
   computed: {
     email() {
-      return this.$store.register.state.email
+      return this.$store.register.state.email;
     },
     name() {
       return this.$store.register.state.name;

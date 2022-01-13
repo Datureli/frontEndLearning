@@ -35,14 +35,5 @@ export default new Vuex.Store({
     addToFavorite(context) {
       context.commit("addToFavorite");
     },
-    // store methods
-  },
-  getters: {
-    //computed
-    isUserLogin() {
-      if (state.username.length > 0 && state.password.length > 0) {
-        state.loginStatus = true;
-      }
-    },
   },
 });

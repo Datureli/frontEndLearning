@@ -575,7 +575,16 @@ export default {
           "Podstawowe narzędzie używane do sprawdzenia stanu plików to polecenie git status. ",
         secondAnswer: "",
       },
+ 
     ],
+    testQuestions: [
+      {
+        question: "Po co testujemy aplikacje?",
+        answer:
+          "Testowanie oprogramowania ma na celu sprawdzenie jego poprawnego działania oraz zebranie informacji na jego temat.",
+        secondAnswer: "",
+      },
+    ]
   },
 
   getters: {},

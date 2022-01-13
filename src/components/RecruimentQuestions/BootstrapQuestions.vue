@@ -1,7 +1,7 @@
 <template>
   <v-carousel hide-delimiters @change="page = 1" class="mt-1">
     <v-carousel-item
-      v-for="(javascriptQuestions, index) in javascriptQuestions"
+      v-for="(testQuestions, index) in testQuestions"
       :key="index"
           max-width="700"
       class="mx-auto"
@@ -10,26 +10,26 @@
         <v-list-item-content>
           <v-list-item-subtitle
             class="text--primary   font-weight-black  text-h4 text-wrap "
-            v-text="javascriptQuestions.question"
+            v-text="testQuestions.question"
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
             class="white--text text-justify text-h5 text-wrap"
             v-if="page === 1"
             v-show="disable"
-            v-text="javascriptQuestions.answer"
+            v-text="testQuestions.answer"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
             class="white--text text-justify text-h5 text-wrap"
             v-if="page === 2"
             v-show="disable"
-            v-text="javascriptQuestions.secondAnswer"
+            v-text="testQuestions.secondAnswer"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
             class="white--text text-justify text-h5 text-wrap"
             v-if="page === 3"
             v-show="disable"
-            v-text="javascriptQuestions.thirdPartOfAnswer"
+            v-text="testQuestions.thirdPartOfAnswer"
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -65,7 +65,7 @@
 
       <v-icon
         x-large
-        @click="addToFavorite(javascriptQuestions)"
+        @click="addToFavorite(testQuestions)"
         color="red"
         style="position: absolute; bottom: 26%; right:4%;"
         >mdi-heart</v-icon
@@ -84,7 +84,7 @@ export default {
   },
   computed: {
     ...mapState(["disable", "favorite"]),
-    ...mapState("questions", ["javascriptQuestions"]),
+    ...mapState("questions", ["testQuestions"]),
   },
 
   methods: {
@@ -92,8 +92,8 @@ export default {
       this.$store.commit("disable");
     },
 
-    addToFavorite(javascriptQuestions) {
-      this.$store.state.favorite.push(javascriptQuestions);
+    addToFavorite(testQuestions) {
+      this.$store.state.favorite.push(testQuestions);
     },
     randomQuestion() {
       this.$store.dispatch("questions/randomQuestion");
