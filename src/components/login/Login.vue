@@ -8,20 +8,13 @@
       transition="dialog-bottom-transition"
     >
       <template v-slot:activator="{ on, attrs }">
-        <v-btn
-          :if="!loggedIn ? 'login' : 'my account'"
-          color="transparent"
-          dark
-          v-bind="attrs"
-          v-on="on"
-        >
-          {{!loggedIn ? 'login' : 'my account' }}
+        <v-btn color="transparent" dark v-bind="attrs" v-on="on">
+          {{ !loggedIn ? "login" : "my account" }}
         </v-btn>
       </template>
 
       <v-card
         style="background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
-        height="100%"
       >
         <v-toolbar class="mb-0" dark color="#2c3e50">
           <v-toolbar-title>Ucz się frontu</v-toolbar-title>
@@ -32,11 +25,11 @@
             </v-btn>
           </v-toolbar-items>
         </v-toolbar>
-        {{loggedIn}}
+        {{ loggedIn }}
         <div class="d-flex">
           <v-card
-          @click="loggedIn === true"
-            v-show="loggedIn && !elementVisible"
+            @click="loggedIn === true"
+            v-show="isUserLogin && !elementVisible"
             height="100%"
             width="310"
             dark
@@ -48,78 +41,16 @@
                 color="primary"
                 active-class="blue--text"
               >
-                <v-list-item>
-                  <router-link
-                    :to="{ name: 'Login' }"
-                    class="text-deocration-none mx-auto"
-                    style="text-decoration: none;"
-                  >
-                    Profil
-                  </router-link>
-                </v-list-item>
-
-                <v-list-item>
-                  <router-link
-                    :to="{ name: 'Password' }"
-                    class="mx-auto"
-                    style="text-decoration: none;"
-                  >
-                    Password
-                  </router-link>
-                </v-list-item>
-                <v-list-item>
-                  <router-link
-                    :to="{ name: 'Messages' }"
-                    class="text-deocration-none mx-auto"
-                    style="text-decoration: none;"
-                  >
-                    Messages
-                  </router-link>
-                </v-list-item>
-                <v-list-item>
-                  <router-link
-                    :to="{ name: 'VueQuestions' }"
-                    class="text-deocration-none mx-auto"
-                    style="text-decoration: none;"
-                  >
-                    Friends
-                  </router-link>
-                </v-list-item>
-                <v-list-item>
-                  <router-link
-                    :to="{ name: 'HtmlQuestions' }"
-                    class="text-deocration-none mx-auto"
-                    style="text-decoration: none;"
-                  >
-                    Stwórz pytania
-                  </router-link>
-                </v-list-item>
-                <v-list-item>
-                  <router-link
-                    :to="{ name: 'Favorite' }"
-                    class="text-deocration-none mx-auto"
-                    style="text-decoration: none;"
-                  >
-                    Ulubione
-                  </router-link>
-                </v-list-item>
-                <v-list-item>
-                  <router-link
-                    :to="{ name: 'GeneralQuestions' }"
-                    class="text-deocration-none mx-auto"
-                    style="text-decoration: none;"
-                  >
-                    Osiągnięcia
-                  </router-link>
-                </v-list-item>
-                <v-list-item>
-                  <router-link
-                    :to="{ name: 'StupidQuestions' }"
-                    class="text-deocration-none mx-auto"
-                    style="text-decoration: none;"
-                  >
-                    Ustawienia
-                  </router-link>
+                <v-list-item
+                  v-for="(loginSection, index) in loginSections"
+                  :key="index"
+                  :to="loginSection.link"
+                  class="text-deocration-none mx-auto"
+                  style="text-decoration: none;"
+                >
+                  <v-list-item-title>{{
+                    loginSection.title
+                  }}</v-list-item-title>
                 </v-list-item>
               </v-list-item-group>
             </v-list>
@@ -212,27 +143,44 @@ export default {
     MessageSection,
   },
   data: () => ({
+    loginSections: [
+      { title: "Profil", link: "/login" },
+      { title: "Password", link: "/password" },
+      { title: "Messages", link: "/messages" },
+      { title: "Friends", link: "login" },
+      { title: "Stwórz pytania", link: "login" },
+      { title: "Profil", link: "login" },
+      { title: "Ulubione", link: "login" },
+      { title: "Osiągnięcia", link: "login" },
+      { title: "Ustawienia", link: "login" },
+    ],
     elementVisible: true,
     loginButton: true,
     dialog: false,
     showPassword: false,
   }),
   computed: {
-    ...mapState("login",["loginRules","passwordRules","username","password","loggedIn"]),
+    ...mapState("login", [
+      "loginRules",
+      "passwordRules",
+      "username",
+      "password",
+      "loggedIn",
+    ]),
     ...mapState("register", ["registeredUsers"]),
-   // username() {    return this.$store.login.state.username },
-   // password() {   return this.$store.login.state.password },
- //  loggedIn() {   return this.$store.login.state.loggedIn  }
+    // username() {    return this.$store.login.state.username },
+    // password() {   return this.$store.login.state.password },
+    //  loggedIn() {   return this.$store.login.state.loggedIn  }
   },
 
   methods: {
-       isUserLogin() {
+    isUserLogin() {
       this.$store.dispatch("login/isUserLogin");
     },
-     updateUsername(e) {
+    updateUsername(e) {
       this.$store.commit("login/updateUsername", e.target.value);
     },
-     updatePassword(e) {
+    updatePassword(e) {
       this.$store.commit("login/updatePassword", e.target.value);
     },
     logOut() {
