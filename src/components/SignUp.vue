@@ -166,8 +166,6 @@ export default {
       "name",
       "registeredUsers",
       "password",
-      "formValidity",
-      "isSubmitted",
       "agreeToTermsRules",
       "email",
       "nameRules",

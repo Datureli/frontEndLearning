@@ -584,6 +584,20 @@ export default {
           "Testowanie oprogramowania ma na celu sprawdzenie jego poprawnego działania oraz zebranie informacji na jego temat.",
         secondAnswer: "",
       },
+    ],
+    errorQuestions: [
+      {
+        question: "Unchecked runtime.lastError: The message port closed before a response was received.",
+        answer:
+          "Jednym z powodu wyskakiwania tego typu błędu mogą być rozszerzenia w przeglądarce blokujące treści.",
+        secondAnswer: "",
+      },
+      {
+        question: "vue: Uncaught TypeError: Cannot read property ... of undefinedv",
+        answer:
+          "Just use v-if on a common parent to all the elements in your template relying on that AJAX call, not around each one.",
+        secondAnswer: "",
+      },
     ]
   },
 

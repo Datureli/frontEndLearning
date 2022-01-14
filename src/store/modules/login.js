@@ -4,8 +4,8 @@ export default {
   state: {
     loginRules: [(value) => !!value || "login is required"],
     passwordRules: [(value) => !!value || "password is required"],
-    username: null,
-    password: null,
+    username: "",
+    password: "",
     loggedIn: false,
     loginSections: [
       { title: "Profil", link: "/login" },
@@ -31,7 +31,6 @@ export default {
       state.loggedIn = loggedIn
     },
     isUserLogin(state) {
-  
       if (state.username.length > 0 && state.password.length > 0) {
         state.loggedIn = true;
         this.$router.push({ path: "login" });

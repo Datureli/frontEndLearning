@@ -76,10 +76,7 @@
             class="mx-auto mt-15 pr-4 pl-4"
           >
             <v-card-title>
-              <h1
-             
-                class="display-1 mx-auto white--text"
-              >
+              <h1 class="display-1 mx-auto white--text">
                 Login
               </h1>
             </v-card-title>
@@ -107,11 +104,10 @@
             </v-card-text>
             <v-card-actions>
               <v-btn
-                block 
+                block
                 rounded
-                v-if="!loggedIn"
                 class="mx-auto ma-2"
-                @click="logOut"
+                @click="isUserLogin"
                 color="info"
                 >Login</v-btn
               >
@@ -160,9 +156,6 @@ export default {
       "loginSections",
     ]),
     ...mapState("register", ["registeredUsers"]),
-    // username() {    return this.$store.login.state.username },
-    // password() {   return this.$store.login.state.password },
-    //  loggedIn() {   return this.$store.login.state.loggedIn  }
   },
 
   methods: {
@@ -176,15 +169,11 @@ export default {
       this.$store.commit("login/updatePassword", e.target.value);
     },
     logOut() {
-      this.$store.commit("logOut");
+      this.$store.commit("login/logOut");
     },
     closeModal() {
       this.dialog = false;
       this.$router.push({ path: "/" });
-    },
-    contModal() {
-      this.dialog = true;
-      this.$router.push({ path: "login" });
     },
   },
   created() {
