@@ -1,9 +1,6 @@
 <template>
   <v-container-fluid>
-    <v-app-bar
-      style="background-color: #000000;
-        background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
-    >
+    <v-app-bar color="darkGradient">
       <v-app-bar-nav-icon
         color="white"
         @click="drawer = true"
@@ -12,7 +9,6 @@
       <v-dialog v-model="drawer" hide-overlay>
         <v-navigation-drawer
           v-model="drawer"
-
           class="hidden-md-and-up"
           width="100%"
           fullscreen
@@ -32,7 +28,7 @@
             <v-list-item-group>
               <v-list-item
                 class="white--text text-h4"
-                v-for="(toolbarItem,index) in toolbarItems"
+                v-for="(toolbarItem, index) in toolbarItems"
                 :key="index"
                 :to="toolbarItem.link"
               >
@@ -47,7 +43,7 @@
           <v-tab
             v-model="tab"
             class="text-decoration-none white--text d-none d-sm-flex"
-            v-for="(toolbarItem,index) in toolbarItems"
+            v-for="(toolbarItem, index) in toolbarItems"
             :key="index"
             :to="toolbarItem.link"
           >

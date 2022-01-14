@@ -85,15 +85,13 @@
                 <v-text-field
                   hide-details="auto"
                   label="Username"
-                  :value="username"
-                  @input="updateUsername"
+                  v-model="username"
                   :rules="loginRules"
                   prepend-icon="mdi-account-circle"
                 />
                 <v-text-field
                   label="Password"
-                  :value="password"
-                  @input="updatePassword"
+                  v-model="password"
                   :rules="passwordRules"
                   :type="showPassword ? 'text' : 'password'"
                   prepend-icon="mdi-lock"
@@ -142,38 +140,35 @@ export default {
     MessageSection,
   },
   data: () => ({
+    username: "",
+    password: "",
     elementVisible: true,
     dialog: false,
     showPassword: false,
+      loggedIn: false,
   }),
   computed: {
     ...mapState("login", [
       "loginRules",
       "passwordRules",
-      "username",
-      "password",
-      "loggedIn",
       "loginSections",
     ]),
     ...mapState("register", ["registeredUsers"]),
   },
 
   methods: {
-    isUserLogin() {
-      this.$store.dispatch("login/isUserLogin");
-    },
-    updateUsername(e) {
-      this.$store.commit("login/updateUsername", e.target.value);
-    },
-    updatePassword(e) {
-      this.$store.commit("login/updatePassword", e.target.value);
-    },
     logOut() {
-      this.$store.commit("login/logOut");
+      this.loggedIn = !this.loggedIn
     },
     closeModal() {
       this.dialog = false;
       this.$router.push({ path: "/" });
+    },
+    isUserLogin() {
+      if (this.username.length > 0 && this.password.length > 0) {
+        this.loggedIn = true;
+        this.$router.push({ path: "login" });
+      }
     },
   },
   created() {
