@@ -32,6 +32,7 @@
             dark
             color="#2c3e50"
           >
+          <p class="rotingtxt">original</p>
             <v-list color="transparent">
               <v-list-item-group
                 style="font-size: 20px"
@@ -145,20 +146,16 @@ export default {
     elementVisible: true,
     dialog: false,
     showPassword: false,
-      loggedIn: false,
+    loggedIn: false,
   }),
   computed: {
-    ...mapState("login", [
-      "loginRules",
-      "passwordRules",
-      "loginSections",
-    ]),
+    ...mapState("login", ["loginRules", "passwordRules", "loginSections"]),
     ...mapState("register", ["registeredUsers"]),
   },
 
   methods: {
     logOut() {
-      this.loggedIn = !this.loggedIn
+      this.loggedIn = !this.loggedIn;
     },
     closeModal() {
       this.dialog = false;
@@ -176,3 +173,19 @@ export default {
   },
 };
 </script>
+
+<style>
+  
+.rotingtxt{
+	-webkit-transform: rotate(331deg);
+	-moz-transform: rotate(331deg);
+	-o-transform: rotate(331deg);
+	transform: rotate(331deg);
+	font-size: 12em;
+	color: rgba(255, 5, 5, 0.17);
+	position: absolute;
+	font-family: 'Denk One', sans-serif;
+	text-transform:uppercase;
+}
+
+</style>
