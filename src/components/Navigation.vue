@@ -9,12 +9,10 @@
       <v-dialog v-model="drawer" hide-overlay>
         <v-navigation-drawer
           v-model="drawer"
-          class="hidden-md-and-up"
+          class="hidden-md-and-up darkGradient"
           width="100%"
           fullscreen
-          absolute
-          style="background-color: #000000;
-        background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);"
+          absolute        
         >
           <v-toolbar class="mb-0" dark color="transparent" elevation="0">
             <v-spacer></v-spacer>
