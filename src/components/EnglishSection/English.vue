@@ -1,9 +1,8 @@
 <template>
   <div>
-    <div v-for="(text, index) in info.text" :key="index">
-      <h1>{{ text }}</h1> 
+    <div v-for="(translations, index) in info.translations" :key="index">
+      <h1>{{ translations.info }}</h1>
     </div>
-
   </div>
 </template>
 
@@ -15,14 +14,16 @@ export default {
     return {
       axios: require("axios").default,
       options: {
-        method: "GET",
-        url: "https://just-translated.p.rapidapi.com/",
-        params: { lang: "pl", text: "Hello, how are you?"  },
+        method: "POST",
+        url: "https://google-translate1.p.rapidapi.com/language/translate/v2",
         headers: {
-          "x-rapidapi-host": "just-translated.p.rapidapi.com",
+          "content-type": "application/x-www-form-urlencoded",
+          "accept-encoding": "application/gzip",
+          "x-rapidapi-host": "google-translate1.p.rapidapi.com",
           "x-rapidapi-key":
             "b00e13d5femsheb0d90eb2b7ca36p1be822jsn4b5de8e839b4",
         },
+        data: { q: "Hello, world!", target: "es", source: "en" },
       },
       info: null,
     };
