@@ -12,7 +12,7 @@
           class="hidden-md-and-up darkGradient"
           width="100%"
           fullscreen
-          absolute        
+          absolute
         >
           <v-toolbar class="mb-0" dark color="transparent" elevation="0">
             <v-spacer></v-spacer>
@@ -50,24 +50,29 @@
         </v-tabs>
       </template>
       <v-spacer></v-spacer>
-      <v-btn color="transparent" outlined>
-        <Login />
-      </v-btn>
-      <v-btn color="transparent" outlined>
-        <SignUp />
-      </v-btn>
+      <v-card class=" d-grid" style="border: 2px solid red;">
+        <v-btn color="transparent" outlined>
+          <Login />
+        </v-btn>
+        <v-btn color="transparent" outlined>
+          <SignUp />
+        </v-btn>
 
-      <v-btn @click="pushToFavorite" color="transparent">
-        <v-icon color="red">mdi-heart</v-icon>
-        <p class="white--text" v-if="favorite.length > 0">
-          {{ favorite.length }}
-        </p>
-      </v-btn>
+        <v-btn @click="pushToFavorite" color="transparent">
+          <v-icon color="red">mdi-heart</v-icon>
+          <p class="white--text" v-if="favorite.length > 0">
+            {{ favorite.length }}
+          </p>
+        </v-btn>
 
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
+        <v-btn icon>
+          <v-icon>mdi-dots-vertical</v-icon>
+        </v-btn>
+
+      </v-card>
+              <h1 class="mx-auto d-grid">--{{ currentRouteName }}--</h1>
     </v-app-bar>
+
     <router-view></router-view>
   </v-container-fluid>
 </template>
@@ -108,6 +113,9 @@ export default {
   computed: {
     ...mapState(["disable", "favorite"]),
     ...mapState("questions", ["javascriptQuestions"]),
+    currentRouteName() {
+      return this.$route.name;
+    },
   },
   methods: {
     pushToFavorite() {
