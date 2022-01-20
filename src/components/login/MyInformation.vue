@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card color="transparent" elevation="5" width="97%" class="mt-10 ml-5 d-flex">
+    <v-card color="transparent" elevation="5" class="mt-10 ml-5 d-flex">
       <v-avatar size="150" class="ml-7">
         <v-icon dark large style="font-size:130px;">
           mdi-account-circle

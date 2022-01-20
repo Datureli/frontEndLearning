@@ -24,15 +24,16 @@
           </v-toolbar-items>
         </v-toolbar>
 
-        <div class="d-flex">
+        <div class="d-flex" >
           <v-card
             v-show="loggedIn && !elementVisible"
             height="100%"
-            width="310"
+            max-width="300"
+            min-width="300"
             dark
             color="#2c3e50"
           >
-          <p class="rotingtxt">original</p>
+            <!--  <p class="rotingtxt">original</p> -->
             <v-list color="transparent">
               <v-list-item-group
                 style="font-size: 20px"
@@ -175,17 +176,15 @@ export default {
 </script>
 
 <style>
-  
-.rotingtxt{
-	-webkit-transform: rotate(331deg);
-	-moz-transform: rotate(331deg);
-	-o-transform: rotate(331deg);
-	transform: rotate(331deg);
-	font-size: 12em;
-	color: rgba(255, 5, 5, 0.17);
-	position: absolute;
-	font-family: 'Denk One', sans-serif;
-	text-transform:uppercase;
+.rotingtxt {
+  -webkit-transform: rotate(331deg);
+  -moz-transform: rotate(331deg);
+  -o-transform: rotate(331deg);
+  transform: rotate(331deg);
+  font-size: 12em;
+  color: rgba(255, 5, 5, 0.17);
+  position: absolute;
+  font-family: "Denk One", sans-serif;
+  text-transform: uppercase;
 }
-
 </style>
