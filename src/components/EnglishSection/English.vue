@@ -1,15 +1,17 @@
 <template>
   <div>
-    <div v-for="(translations, index) in info.translations" :key="index">
-      <h1>{{ translations.info }}</h1>
-    </div>
+  <ItWordsCollection />
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import ItWordsCollection from './ItWordsCollection.vue'
 export default {
   name: "Home",
+  components: {
+    ItWordsCollection
+  },
   data() {
     return {
       axios: require("axios").default,

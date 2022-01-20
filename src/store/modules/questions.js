@@ -30,12 +30,27 @@ export default {
       },
 
       {
-        question: "Czym jest tag <blockquote>?",
+        question: "Czym jest tag blockquote?",
         answer:
-          "Tag <blockquote> określa treść cytowaną ze źródła zewnętrznego (gazeta, praca naukowa itp.for         (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
+          "Tag blockquote określa treść cytowaną ze źródła zewnętrznego (gazeta, praca naukowa itp.",
         secondAnswer: `<blockquote cite="http://developer.mozilla.org">
         <p>To jest cytat z Mozilla Developer Center.</p>
           </blockquote>`,
+      },
+      {
+        question: "Czy tagi i elementy w html to to samo?",
+        answer:
+          "Nie.Elementy w html są definiowane poprzez starting tag,mogą zawierać jakiś kontent wewnątrz i tag zamykający.Przykład: <h1>Heading</h1> to element html natomiast <h1>jakiś kontent</h1> to tag zamykajacy",
+      },
+      {
+        question: "Czym są tagi i atrybuty w html?",
+        answer:
+          "tagi to podstawowy komponent w html który definiuje jak dany kontent będzie ustruktyryzowany/formatowany,natomiast atrybuty są używane wraz  ztagami html by zdefiniować charakterystyke elementu",
+      },
+      {
+        question: "Czym są void elements?",
+        answer:
+          "Są to takie elementy html które nie posiadają tagu zamykającego.Przykładowo: </br>,<img>,<hr />",
       },
       {
         question: "Czym jest Html?",

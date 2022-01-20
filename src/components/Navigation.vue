@@ -85,7 +85,7 @@ export default {
     toolbarItems: [
       {
         title: "Home",
-        link: "/home",
+        link: "/",
       },
       {
         title: "Pytania rekrutacyjne",
