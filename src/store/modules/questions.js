@@ -156,7 +156,7 @@ export default {
         answerNumbers: 1,
         question: "Czym jest model pudełkowy?",
         answer:
-          "Box model - czyli model pudełkowy - to opis budowy elementów blokowych na stronie www. To słowne określenie pozwala wyobrazić sobie w jaki sposób poszczególne elementy składają się na wielkość całego pudełka. Tymi elementami są marginesy zewnetrzne (w css: margin), obramowanie (w css: border), marginesy wewnętrzne (w css: padding) oraz szerokość (w css: width). Jak się za chwilkę okaże budowa box modelu jest prosta, ale czy na pewno oczywista ... ",
+          "Box model - czyli model pudełkowy - to opis budowy elementów blokowych na stronie www. To słowne określenie pozwala wyobrazić sobie w jaki sposób poszczególne elementy składają się na wielkość całego pudełka. Tymi elementami są marginesy zewnetrzne, obramowanie, marginesy wewnętrzne oraz szerokość.",
       },
       {
         question: "Opisz zalety Sass",
@@ -616,6 +616,12 @@ export default {
           "Testowanie oprogramowania ma na celu sprawdzenie jego poprawnego działania oraz zebranie informacji na jego temat.",
         secondAnswer: "",
       },
+      {
+        question: "Co to są testy jednostkowe?",
+        answer:
+          "Testy jednostkowe są to testy sprawdzające małe części kodu(funkcje,metody).Każdy test jest niezależny od poprzedniego oraz w jak najmniejszym stopniu opiera się na zewnętrznych zależnościach (wręcz nie powinno ich być!). Test może zakończyć się sukcesem lub porażką (ang. fail).",
+        secondAnswer: "",
+      },
     ],
     errorQuestions: [
       {
@@ -672,6 +678,7 @@ export default {
       }, 1000);
     },
     randomCssQuestion(state) {
+
       state.cssQuestions.sort(function() {
         return Math.round(Math.random()) - 0.5;
       });

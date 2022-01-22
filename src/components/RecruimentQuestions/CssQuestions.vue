@@ -1,5 +1,6 @@
 <template>
-  <v-carousel hide-delimiters @change="page = 1" class="mt-1">
+  <v-carousel hide-delimiters @change="page = 1" class="mt-1" @keydown.0="nextIndex">
+ 
     <v-carousel-item
       v-for="(cssQuestions, index) in cssQuestions"
       :key="index"
@@ -14,8 +15,7 @@
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
-  
-            class="white--text text-justify ma-0 text-h5 text-wrap"
+            class="white--text text-justify text-h5 text-wrap"
             v-if="page === 1"
             v-show="disable"
             v-text="cssQuestions.answer.trim().replace(/\s{2,9999}|\t/g, ' ')"
@@ -102,6 +102,10 @@ export default {
     randomCssQuestion() {
       this.$store.dispatch("questions/randomCssQuestion");
     },
+    nextIndex() {
+    cssQuestions.map()
+
+    }
   },
 }
 </script>

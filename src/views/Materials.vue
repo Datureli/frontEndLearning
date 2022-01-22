@@ -2,13 +2,13 @@
   <v-card height="540" class="triangle d-flex">
     <v-spacer></v-spacer>
 
-    <materialCard class="rounded-circle" height="100">
+    <materialCard class="mt-2">
       <Slot title="tab1" class="tab1">Video</Slot>
     </materialCard>
-    <materialCard class="rounded-circle">
+    <materialCard class="mt-7">
       <Slot title="tab2">Książki</Slot>
     </materialCard>
-    <materialCard class="rounded-circle">
+    <materialCard class="mt-16">
       <Slot title="tab3">Strony internetowe</Slot>
     </materialCard>
     <v-spacer></v-spacer>
@@ -21,10 +21,9 @@ import Slot from "../components/Slot.vue";
 export default {
   components: {
     MaterialCard,
-    Slot
+    Slot,
   },
 };
-
 </script>
 
 <style scoped>

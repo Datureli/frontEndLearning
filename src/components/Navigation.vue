@@ -1,6 +1,6 @@
 <template>
   <v-container-fluid>
-    <v-app-bar color="darkGradient">
+    <v-app-bar color="darkGradient"   >
       <v-app-bar-nav-icon
         color="white"
         @click="drawer = true"
@@ -50,7 +50,7 @@
         </v-tabs>
       </template>
       <v-spacer></v-spacer>
-      <v-card class=" d-grid" style="border: 2px solid red;">
+      <v-card color="transparent"  outlined style="border: 2px solid red;">
         <v-btn color="transparent" outlined>
           <Login />
         </v-btn>
@@ -70,7 +70,7 @@
         </v-btn>
 
       </v-card>
-              <h1 class="mx-auto d-grid">--{{ currentRouteName }}--</h1>
+              <h1 class="mx-auto d-none">--{{ currentRouteName }}--</h1>
     </v-app-bar>
 
     <router-view></router-view>
@@ -128,3 +128,14 @@ export default {
   },
 };
 </script>
+
+<style >
+  .flexcard {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexcard .v-toolbar {
+  flex: 0;
+}
+</style>
