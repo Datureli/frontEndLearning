@@ -622,6 +622,12 @@ export default {
           "Testy jednostkowe są to testy sprawdzające małe części kodu(funkcje,metody).Każdy test jest niezależny od poprzedniego oraz w jak najmniejszym stopniu opiera się na zewnętrznych zależnościach (wręcz nie powinno ich być!). Test może zakończyć się sukcesem lub porażką (ang. fail).",
         secondAnswer: "",
       },
+      {
+        question: "Opisz działanie funkcji expect",
+        answer:
+          "TZwraca ona obiekt z metodami, które umożliwiają wybranie wygodnego operatora logicznego oraz tego co dokładnie będziemy porównywać.",
+        secondAnswer: "",
+      },
     ],
     errorQuestions: [
       {
