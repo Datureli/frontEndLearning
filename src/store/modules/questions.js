@@ -110,7 +110,7 @@ export default {
       {
         question: "Do czego służy znacznik footer?",
         answer:
-          "Tag <footer> definiuje stopkę dokumentu lub sekcji i powinien zawierać informacje o stronie, która go zawiera. Ten tag zwykle zawiera informacje o autorze, prawach autorskich, dane kontaktowe, mapę witryny, powrót do góry oraz linki do powiązanych dokumentów,",
+          "Tag footer definiuje stopkę dokumentu lub sekcji i powinien zawierać informacje o stronie, która go zawiera. Ten tag zwykle zawiera informacje o autorze, prawach autorskich, dane kontaktowe, mapę witryny, powrót do góry oraz linki do powiązanych dokumentów,",
         secondAnswer: "",
       },
       {
@@ -370,7 +370,7 @@ export default {
         answer:
           "undefined – coś nie zostało zainicjalizowane, null – coś jest aktualnie niedostępne.W JavaScript undefined oznacza, że zmienna została zadeklarowana ale jeszcze nie ma żadnej przypisanej wartości.Null może być reprezentowane jako wartość, bezwartości, inaczej mówiąc możemy przypisać do zmiennej temp pudełko z cyferką 5, albo samo pudełko, samo pudełko jest nullem.",
         secondAnswer:
-          "Gdy przypiszemy wartość null do zmiennej oznacza to, że zerujemy tą zmienną. Nie chcemy aby posiadała ona jakąkolwiek wartość lub referencję do czegokolwiek. Zmienna empty reprezentuje zamierzony brak wartości.Pomimo tego, że operator typeof zwraca nam typ object, zmienna z wartością null nic nie reprezentuje. Jak już wspominałem wcześniej, to że null zwraca typ object jest błędem z czasów powstawania języka JavaScript.undefined może pojawić się gdy nie inicjalizujemy zmiennej,Łatwiej będzie nam pracować z kodem i znaleźć problem gdy nie będziemy posługiwać się wartością undefined. Gdy trafimy na błąd związany z undefined w konsoli przeglądarki będziemy wiedzieć, że o czymś zapomnieliśmy, odwołujemy się do czegoś co nie istnieje. Zawęzimy opcję szukania problemu gdy nie będziemy się dodatkowo posługiwać undefined, a zostawimy go dla JavaScript.",
+          "Gdy przypiszemy wartość null do zmiennej oznacza to, że zerujemy tą zmienną. Nie chcemy aby posiadała ona jakąkolwiek wartość lub referencję do czegokolwiek.Pomimo tego, że operator typeof zwraca nam typ object, zmienna z wartością null nic nie reprezentuje.to że null zwraca typ object jest błędem z czasów powstawania języka.Gdy trafimy na błąd związany z undefined w konsoli przeglądarki będziemy wiedzieć, że o czymś zapomnieliśmy, odwołujemy się do czegoś co nie istnieje.",
         thirdPartOfAnswer:
           "Wartość null i undefined reprezentują puste, nieokreślone wartości. Jeżeli porównamy oba typy przez potrójny znak równości i wypiszemy do konsoli, zobaczymy wartość false:",
       },
@@ -447,6 +447,11 @@ export default {
         question: "Czym jest composition api?",
         answer:
           "pozwala na pisanie komponentów w sposób oparty na funkcjach. Usprawnienie to zostało zainspirowane przez React Hooks. Nowe API umożliwia hermetyzację logiki w tzw. „composition functions” i pozwala używać jej ponownie we wszystkich komponentach.   ",
+      },
+      {
+        question: "Czym są mixiny?",
+        answer:
+          "mixiny to funkcje które pozwalają nam na reużywalność kodu pomiędzy komponentami w vue js.Jest to objekt javascript który może zawierać każdą opcję jaką zawiera komponent",
       },
       {
         question: "Wyjaśnij cykl życia w Vue",
@@ -640,6 +645,15 @@ export default {
         question: "vue: Uncaught TypeError: Cannot read property ... of undefinedv",
         answer:
           "Just use v-if on a common parent to all the elements in your template relying on that AJAX call, not around each one.",
+        secondAnswer: "",
+      },
+  
+    ],
+    reactQuestions: [
+      {
+        question: "Czym jest defaultProps?",
+        answer:
+          "defaultProps pozwala nam na ustawienie propsów,ustawienie wartości domyślnej dla propsów",
         secondAnswer: "",
       },
     ]
