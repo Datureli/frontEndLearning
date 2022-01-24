@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-card
-      v-if="(this.showQuestions = true)"
+      v-if="checkStatus"
       width="500"
       height="300"
       class="mx-auto mt-15"
@@ -35,13 +35,18 @@
 
 <script>
 export default {
+  computed: {
+    checkStatus() {
+      return this.showQuestions
+    }
+  },
   methods: {
     incrementCarouselCounter() {
       this.carouselCounter += 1;
     },
     agreeToTest() {
       this.testAgreement = false;
-      this.showQuestions = !this.showQuestions
+      this.showQuestions = false
     },
     refuseTest() {
       this.testAgreement = false;
