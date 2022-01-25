@@ -6,8 +6,7 @@
       height="300"
       class="mx-auto mt-15"
     >
-    {{showQuestions}}
-      {{ carouselCounter }}
+   <p>{{ carouselCounter + '/10' }} </p>   
       <v-carousel hide-delimiters prev-icon @change="incrementCarouselCounter">
         <v-carousel-item
           class="mt-16"
@@ -15,6 +14,23 @@
           :key="index"
         >
           <h1>{{ itWords.englishWord }} - {{ itWords.polishWord }}</h1>
+        </v-carousel-item>
+      </v-carousel>
+    </v-card>
+   <v-card
+      v-else
+      color="green"
+      width="500"
+      height="300"
+      class="mx-auto mt-15"
+    >
+      <v-carousel hide-delimiters prev-icon>
+        <v-carousel-item
+          class="mt-16"
+          v-for="(CheckKnowledgeQuestion, index) in CheckKnowledgeQuestions"
+          :key="index"
+        >
+            {{CheckKnowledgeQuestion.englishWord}}
         </v-carousel-item>
       </v-carousel>
     </v-card>
@@ -38,11 +54,27 @@ export default {
   computed: {
     checkStatus() {
       return this.showQuestions
+    },
+  },
+  watch: {
+    booklist: {
+      itWords(neVal,oldVal) {
+        if( this.carouselCounter += 1) {
+    CheckKnowledgeQuestions.push(itWords)
+        }
+        
+      }
     }
   },
   methods: {
     incrementCarouselCounter() {
       this.carouselCounter += 1;
+      for (let i = 0; i < this.itWords.length; i++) {
+   this.CheckKnowledgeQuestions.push(this.itWords[i])
+      }
+   
+
+     // this.itWords.shift()
     },
     agreeToTest() {
       this.testAgreement = false;
@@ -56,8 +88,8 @@ export default {
     return {
       showQuestions: true,
       testAgreement: true,
-      askAboutTest: false,
       carouselCounter: 0,
+      CheckKnowledgeQuestions: [],
       itWords: [
         {
           englishWord: "collapsing",
