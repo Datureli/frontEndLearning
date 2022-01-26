@@ -1,16 +1,17 @@
 <template>
   <div>
-  <ItWordsCollection />
+    <v-select :items="items" label="Standard"></v-select>
+    <ItWordsCollection />
   </div>
 </template>
 
 <script>
 import axios from "axios";
-import ItWordsCollection from './ItWordsCollection.vue'
+import ItWordsCollection from "./ItWordsCollection.vue";
 export default {
   name: "Home",
   components: {
-    ItWordsCollection
+    ItWordsCollection,
   },
   data() {
     return {

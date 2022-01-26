@@ -1,12 +1,8 @@
 <template>
   <v-container>
-    <v-card
-      v-if="checkStatus"
-      width="500"
-      height="300"
-      class="mx-auto mt-15"
-    >
-   <p>{{ carouselCounter + '/10' }} </p>   
+
+    <v-card v-if="checkStatus" width="500" height="310" class="mx-auto mt-5">
+      <p>{{ carouselCounter + "/10" }}</p>
       <v-carousel hide-delimiters prev-icon @change="incrementCarouselCounter">
         <v-carousel-item
           class="mt-16"
@@ -17,23 +13,20 @@
         </v-carousel-item>
       </v-carousel>
     </v-card>
-   <v-card
-      v-else
-      color="green"
-      width="500"
-      height="300"
-      class="mx-auto mt-15"
-    >
+    <v-card v-else color="green" width="500" height="350" class="mx-auto mt-15">
       <v-carousel hide-delimiters prev-icon>
         <v-carousel-item
-          class="mt-16"
           v-for="(CheckKnowledgeQuestion, index) in CheckKnowledgeQuestions"
           :key="index"
         >
-            {{CheckKnowledgeQuestion.englishWord}}
+          <h1>{{ CheckKnowledgeQuestion.englishWord }}</h1>
+            <v-text-field :rules="rules"></v-text-field>
         </v-carousel-item>
+
       </v-carousel>
+    
     </v-card>
+    
     <v-card
       class="mx-auto mt-2"
       v-if="this.carouselCounter > 10 && this.testAgreement"
@@ -53,32 +46,21 @@
 export default {
   computed: {
     checkStatus() {
-      return this.showQuestions
+      return this.showQuestions;
     },
-  },
-  watch: {
-    booklist: {
-      itWords(neVal,oldVal) {
-        if( this.carouselCounter += 1) {
-    CheckKnowledgeQuestions.push(itWords)
-        }
-        
-      }
-    }
   },
   methods: {
     incrementCarouselCounter() {
       this.carouselCounter += 1;
       for (let i = 0; i < this.itWords.length; i++) {
-   this.CheckKnowledgeQuestions.push(this.itWords[i])
+        this.CheckKnowledgeQuestions.push(this.itWords[i]);
       }
-   
 
-     // this.itWords.shift()
+      // this.itWords.shift()
     },
     agreeToTest() {
       this.testAgreement = false;
-      this.showQuestions = false
+      this.showQuestions = false;
     },
     refuseTest() {
       this.testAgreement = false;
@@ -86,9 +68,21 @@ export default {
   },
   data() {
     return {
+      selectedAnswer: "",
       showQuestions: true,
       testAgreement: true,
       carouselCounter: 0,
+      answerOptions: [
+        {
+          value: "string",
+        },
+        {
+          value: "string2",
+        },
+        {
+          value: "string3",
+        },
+      ],
       CheckKnowledgeQuestions: [],
       itWords: [
         {
@@ -104,8 +98,8 @@ export default {
           polishWord: "Niedogodności",
         },
         {
-          englishWord: "Disadvantages",
-          polishWord: "Niedogodności",
+          englishWord: "Chart",
+          polishWord: "wykres",
         },
         {
           englishWord: "Compatibility",
