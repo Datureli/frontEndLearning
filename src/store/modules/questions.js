@@ -136,60 +136,48 @@ export default {
         answerNumbers: 2,
         question: `Rozwiń i opisz skrót BEM`,
         answer:
-          'Nazwa BEM pochodzi od angielskiego Block Element Modifier.Opiera się ono na podziale elementów na stronie na:bloki - na przykład formularz albo menu,elementy - poszczególne elementy bloku takie jak: input czy guzik formularza albo też link w menu,modyfikatory - specyficzne warianty elementów: input do wpisywania hasła, guzik “Anuluj” lub aktywny link w menu',
-        secondAnswer:
-          `W BEM istnieje pewna konwencja nazewnictwa klas CSS. Ogólne zasady tego nazewnictwa przedstawiam poniżej:.block - pierwsze słowo w nazwie oznacza, że klasa dotyczy danego bloku,elementy - poszczególne elementy bloku takie jak: input czy guzik formularza albo też link w menu,modyfikatory - specyficzne warianty elementów: input do wpisywania hasła, guzik “Anuluj” lub aktywny link w menu`,
+          "Nazwa BEM pochodzi od angielskiego Block Element Modifier.Opiera się ono na podziale elementów na stronie na:bloki - na przykład formularz albo menu,elementy - poszczególne elementy bloku takie jak: input czy guzik formularza albo też link w menu,modyfikatory - specyficzne warianty elementów: input do wpisywania hasła, guzik “Anuluj” lub aktywny link w menu",
+        secondAnswer: `W BEM istnieje pewna konwencja nazewnictwa klas CSS. Ogólne zasady tego nazewnictwa przedstawiam poniżej:.block - pierwsze słowo w nazwie oznacza, że klasa dotyczy danego bloku,elementy - poszczególne elementy bloku takie jak: input czy guzik formularza albo też link w menu,modyfikatory - specyficzne warianty elementów: input do wpisywania hasła, guzik “Anuluj” lub aktywny link w menu`,
       },
       {
         answerNumbers: 1,
         question: `Czym jest Css sprites?`,
-        answer:
-          `To technika pozwalająca na łączenie wielu mniejszych obrazów, wykorzystywanych na stronie www, w jeden większy plik, który przy odpowiedniej pomocy styli CSS pozwoli zaoszczędzić nam pasmo serwera oraz czas ładowania się strony,`,
+        answer: `To technika pozwalająca na łączenie wielu mniejszych obrazów, wykorzystywanych na stronie www, w jeden większy plik, który przy odpowiedniej pomocy styli CSS pozwoli zaoszczędzić nam pasmo serwera oraz czas ładowania się strony,`,
       },
       {
         answerNumbers: 1,
         question: `Rozwiń skrót Css`,
-        answer:
-          `Kaskadowe arkusze stylów css służą do definiowania układów graficznych dokumentów HTML.Arkusz stylów CSS zawiera reguły opisujące w jaki sposób przeglądarka internetowa ma wyświetlać zawartość dokumentów HTML lub XML. Za pomocą arkuszy CSS można opisać wiele właściwości prezentacji elementów strony: wybrać kolor tekstu, wypełnienie tła, rodzaj czcionki, ustawić odstępy między elementami czy zdefiniować położenie jednego elementu względem drugiego.`,
+        answer: `Kaskadowe arkusze stylów css służą do definiowania układów graficznych dokumentów HTML.Arkusz stylów CSS zawiera reguły opisujące w jaki sposób przeglądarka internetowa ma wyświetlać zawartość dokumentów HTML lub XML. Za pomocą arkuszy CSS można opisać wiele właściwości prezentacji elementów strony: wybrać kolor tekstu, wypełnienie tła, rodzaj czcionki, ustawić odstępy między elementami czy zdefiniować położenie jednego elementu względem drugiego.`,
       },
       {
         answerNumbers: 1,
         question: `Czym jest model pudełkowy?`,
-        answer:
-          `Box model - czyli model pudełkowy - to opis budowy elementów blokowych na stronie www. To słowne określenie pozwala wyobrazić sobie w jaki sposób poszczególne elementy składają się na wielkość całego pudełka. Tymi elementami są marginesy zewnetrzne, obramowanie, marginesy wewnętrzne oraz szerokość.`,
+        answer: `Box model - czyli model pudełkowy - to opis budowy elementów blokowych na stronie www. To słowne określenie pozwala wyobrazić sobie w jaki sposób poszczególne elementy składają się na wielkość całego pudełka. Tymi elementami są marginesy zewnetrzne, obramowanie, marginesy wewnętrzne oraz szerokość.`,
       },
       {
         question: `Opisz zalety Sass`,
-        answer:
-          `Sass to preprocesor CSS,który pozwala na znacznie szybszą i wydajniejszą pracę z arkuszami stylów.Preprocesory pozwalają na programowanie wśród arkuszy stylów, co daje ogromne możliwości przyspieszenia pracy.przeglądarki czytają kod CSS, a kod w formacie Sass będzie dla nich niezrozumiały. Rozwiązaniem tego problemu jest kompilacja plików Sass do wyjściowego CSS`,
-        secondAnswer:
-          `W Sass możemy używać zmiennych,Zagnieżdzanie.Mixins.DziedziczenieKolejna bardzo mocna cecha. Dzięki dziedziczeniu możemy przekazywać część zastosowanych deklaracji z jednego obiektu na drugi. To z kolei ponownie pozwala nam na podążanie za regułą DRY. Aby dany element odziedziczył cechy swego przodka należy wstawić wyrażenie @extend a następnie selektor z którego mamy dziedziczyć. W przykładzie wykorzystamy klasę alert (która może formatować jakiś komunikat) i dodamy kolejne jej odmiany:`,
-        thirdPartOfAnswer:
-          ` Do naszej dyspozycji SASS udostępnia operatory typu: +, -, *, /, oraz %. Możliwa jest także konwersja wartości (np z pikseli na procenty).`,
+        answer: `Sass to preprocesor CSS,który pozwala na znacznie szybszą i wydajniejszą pracę z arkuszami stylów.Preprocesory pozwalają na programowanie wśród arkuszy stylów, co daje ogromne możliwości przyspieszenia pracy.przeglądarki czytają kod CSS, a kod w formacie Sass będzie dla nich niezrozumiały. Rozwiązaniem tego problemu jest kompilacja plików Sass do wyjściowego CSS`,
+        secondAnswer: `W Sass możemy używać zmiennych,Zagnieżdzanie.Mixins.DziedziczenieKolejna bardzo mocna cecha. Dzięki dziedziczeniu możemy przekazywać część zastosowanych deklaracji z jednego obiektu na drugi. To z kolei ponownie pozwala nam na podążanie za regułą DRY. Aby dany element odziedziczył cechy swego przodka należy wstawić wyrażenie @extend a następnie selektor z którego mamy dziedziczyć. W przykładzie wykorzystamy klasę alert (która może formatować jakiś komunikat) i dodamy kolejne jej odmiany:`,
+        thirdPartOfAnswer: ` Do naszej dyspozycji SASS udostępnia operatory typu: +, -, *, /, oraz %. Możliwa jest także konwersja wartości (np z pikseli na procenty).`,
       },
       {
         question: `Czym się różni scss od sass?`,
-        answer:
-          `Podstawową różnicą jest składnia, pliki scss są zbliżone do składni CSS, natomiast pliki sass do składni języka Ruby.`,
+        answer: `Podstawową różnicą jest składnia, pliki scss są zbliżone do składni CSS, natomiast pliki sass do składni języka Ruby.`,
         secondAnswer: ``,
       },
       {
         question: `Jakie są typy selektorów w css?`,
-        answer:
-          `selektor uniwersalny: selektor uniwersalny oznacza wszystkie elementy na stronie.selektor typu element:Ten selektor dopasowuje jeden lub więcej elementów html o tym samym imieniu.id selector:ten selektor dopasowuje każdy element html którego id posiada taką samą wartość jak selektor,class selektor: Ten selektor dopasowuje każdy element na stronie który zawiera atrybut klasy przypisany do tej samej wartości co klasa.kombinator potomstwa: pozwala łączyć dwa lub więcej selektorów co pozwala bardziej sprecyzować metode selekcji.Child combinator:A selector that uses the child combinator służy do wskazania elementu, który jest dzieckiem innego elementu. Kombinator dziecka jest znakiem większości (U+003E, >) i oddziela dwa selektory złożone. Białe znaki wokół > są opcjonalne i nie mają specjalnego znaczenia.`,
+        answer: `selektor uniwersalny: selektor uniwersalny oznacza wszystkie elementy na stronie.selektor typu element:Ten selektor dopasowuje jeden lub więcej elementów html o tym samym imieniu.id selector:ten selektor dopasowuje każdy element html którego id posiada taką samą wartość jak selektor,class selektor: Ten selektor dopasowuje każdy element na stronie który zawiera atrybut klasy przypisany do tej samej wartości co klasa.kombinator potomstwa: pozwala łączyć dwa lub więcej selektorów co pozwala bardziej sprecyzować metode selekcji.Child combinator:A selector that uses the child combinator służy do wskazania elementu, który jest dzieckiem innego elementu. Kombinator dziecka jest znakiem większości (U+003E, >) i oddziela dwa selektory złożone. Białe znaki wokół > są opcjonalne i nie mają specjalnego znaczenia.`,
         secondAnswer: `General Sibling Combinator:The general sibling combinator (~) separates two selectors and matches all iterations of the second element, that are following the first element (though not necessarily immediately), and are children of the same parent element.Adjacent Sibling Combinator:Attribute Selector`,
       },
       {
         question: `Jakie są ograniczenia w css?`,
-        answer:
-          `Zgodność z przeglądarką - niektóre selektory są wspierane a niektóre nie.Musimy wiedzieć które są wspierane a które nie.Cross browser issue: niektóre selektory zachowują się inaczej w różnych przeglądarkach.Nie posiada parent selector: Na ten moment w css nie możesz zaznaczyc tagu rodzica`,
+        answer: `Zgodność z przeglądarką - niektóre selektory są wspierane a niektóre nie.Musimy wiedzieć które są wspierane a które nie.Cross browser issue: niektóre selektory zachowują się inaczej w różnych przeglądarkach.Nie posiada parent selector: Na ten moment w css nie możesz zaznaczyc tagu rodzica`,
         secondAnswer: ``,
       },
       {
-        question:
-          `Jaka jest różnica między „resetowaniem” a „normalizowaniem” CSS?`,
-        answer:
-          `Resetowanie – ma na celu usunięcie wszystkich domyślnych stylów przeglądarki. Na przykład marginesy, wypełnienia, rozmiary czcionek wszystkich elementów są resetowane. Normalizowanie – zachowuje przydatne style domyślne zamiast cofania wszystkiego. Poprawia również różnice w wyświetlaniu elementów w różnych przeglądarkach.`,
+        question: `Jaka jest różnica między „resetowaniem” a „normalizowaniem” CSS?`,
+        answer: `Resetowanie – ma na celu usunięcie wszystkich domyślnych stylów przeglądarki. Na przykład marginesy, wypełnienia, rozmiary czcionek wszystkich elementów są resetowane. Normalizowanie – zachowuje przydatne style domyślne zamiast cofania wszystkiego. Poprawia również różnice w wyświetlaniu elementów w różnych przeglądarkach.`,
         secondAnswer: ``,
       },
     ],
@@ -449,6 +437,12 @@ export default {
           "pozwala na pisanie komponentów w sposób oparty na funkcjach. Usprawnienie to zostało zainspirowane przez React Hooks. Nowe API umożliwia hermetyzację logiki w tzw. „composition functions” i pozwala używać jej ponownie we wszystkich komponentach.   ",
       },
       {
+        question: "Czym są komponenty funkcyjne",
+        answer:
+          "props zawsze napływają do komponentu z zewnątrz. Drugim obiektem, który służy do zarządzania danymi w komponentach, jest state. Dzięki nim komponent może zarządzać stanem od wewnątrz. state jest dostępne wyłącznie w komponentach klasowych.Z tego powodu komponenty funkcyjne często określa się inną, dość rozwlekłą w języku polskim, nazwą: funkcyjne komponenty pozbawione stanu (ang. functional stateless components, FCS).",
+          secondAnswer: 'Po co decydujemy się na korzystanie z komponentów, które mają jawnie ograniczony zakres możliwości?Jak się okazuje, te ograniczenia mają swoje zalety.Komponenty funkcyjne cechuje prostota, zwięzłość i przewidywalność. Nie musimy przejmować się stanem ani innymi funkcjonalnościami, dodającymi zbędną złożoność.Komponenty pozbawione stanu są świetnym sposobem na redukowanie złożoności aplikacji.'
+      },
+      {
         question: "Czym są mixiny?",
         answer:
           "mixiny to funkcje które pozwalają nam na reużywalność kodu pomiędzy komponentami w vue js.Jest to objekt javascript który może zawierać każdą opcję jaką zawiera komponent",
@@ -462,9 +456,10 @@ export default {
         question: "Jak stworzyć two-way binding w Vue js?",
         answer:
           "Do stworzenia służy dyrektywa v-model.W obustronnym przepływie danych data albo model jest przypięty do DOM i dom jest przypięty do modelu",
-      }, 
+      },
       {
-        question: "Podaj różnicę między one-way-data flow a two-way data binding",
+        question:
+          "Podaj różnicę między one-way-data flow a two-way data binding",
         answer:
           "W przepływie jednostronnym,wizualna warstwa aplikacji nie aktualizuje się automatycznie kiedy,kiedy data się zmienia musimy napisać kod który będzie aktualizować się podczas każdej zmiany.W przypadku two-way data binding zmiany dokonywane są automatycznie.Przykłady użycia one-way w Vue to v-bind natomiast two-way to v-model",
       },
@@ -485,15 +480,13 @@ export default {
       },
       {
         question: "Wymień funkcjonalności w Vue",
-        answer:
-          "Raktywność,templates,komponenty,transition,routing",
+        answer: "Raktywność,templates,komponenty,transition,routing",
       },
       {
         question: "Objaśnij cykl życia w Vue",
-        answer:
-          "Raktywność,templates,komponenty,transition,routing",
+        answer: "Raktywność,templates,komponenty,transition,routing",
       },
-      
+
       {
         question: "co to jest flux?",
         answer:
@@ -616,8 +609,9 @@ export default {
         question: "Co to jest gitflow?",
         answer:
           "Git Flow został przedstawiony w 2010 roku i był jednym z pierwszych sposobów ustandaryzowania pracy z gitem.W przypadku Git Flow, mamy do czynienia z tzw. releasami funkcjonalności, nad którymi pracowaliśmy w ostatni czasie. Tak więc nasza aplikacja raz na jakiś czas zostaje uzupełniona o kilka mniejszych bądź jakiś jeden bardziej znaczący feature. Release taki może powstawać przykładowo podczas jednego dwutygodniowego sprintu (korzystając tutaj z terminologii Scrum).",
-        secondAnswer: "Pierwsza rzecz, którą należy zrobić, aby wdrożyć model Git Flow, to odpowiednio uporządkować gałęzie w swoim repozytorium. W tym przypadku będziemy operować na pięciu rodzajach branchy:master – produkcyjna wersja aplikacji. Do tego brancha będziemy mergować tylko te zmiany, które już zostały wydane na produkcję oraz krytyczne hotfixy.hotfix – jedyna gałąź bazująca ma masterze. To właśnie ona służy do szybkiego naprawiania krytycznych błędów występujących na produkcji.    release – na tym branchu przygotowywany jest release kolejnej wersji aplikacji. To właśnie wersja aplikacji z tego brancha trafia na produkcję.  develop – gałąź ta jest „nieoficjalnym” masterem podczas pracy nad releasem. Z tego brancha programiści tworzą swoje gałęzie robocze i do niego mergują (rebase-ują) swoją pracę. Gdy praca nad wszystkimi funkcjonalnościami w danym releasie jest gotowa, branch ten jest mergowany do gałęzi „release”.  gałęzie robocze (features) – na tych gałęziach pracujemy na co dzień i tworzymy nowe funkcjonalności.",},
- 
+        secondAnswer:
+          "Pierwsza rzecz, którą należy zrobić, aby wdrożyć model Git Flow, to odpowiednio uporządkować gałęzie w swoim repozytorium. W tym przypadku będziemy operować na pięciu rodzajach branchy:master – produkcyjna wersja aplikacji. Do tego brancha będziemy mergować tylko te zmiany, które już zostały wydane na produkcję oraz krytyczne hotfixy.hotfix – jedyna gałąź bazująca ma masterze. To właśnie ona służy do szybkiego naprawiania krytycznych błędów występujących na produkcji.    release – na tym branchu przygotowywany jest release kolejnej wersji aplikacji. To właśnie wersja aplikacji z tego brancha trafia na produkcję.  develop – gałąź ta jest „nieoficjalnym” masterem podczas pracy nad releasem. Z tego brancha programiści tworzą swoje gałęzie robocze i do niego mergują (rebase-ują) swoją pracę. Gdy praca nad wszystkimi funkcjonalnościami w danym releasie jest gotowa, branch ten jest mergowany do gałęzi „release”.  gałęzie robocze (features) – na tych gałęziach pracujemy na co dzień i tworzymy nowe funkcjonalności.",
+      },
     ],
     testQuestions: [
       {
@@ -641,18 +635,19 @@ export default {
     ],
     errorQuestions: [
       {
-        question: "Unchecked runtime.lastError: The message port closed before a response was received.",
+        question:
+          "Unchecked runtime.lastError: The message port closed before a response was received.",
         answer:
           "Jednym z powodu wyskakiwania tego typu błędu mogą być rozszerzenia w przeglądarce blokujące treści.",
         secondAnswer: "",
       },
       {
-        question: "vue: Uncaught TypeError: Cannot read property ... of undefinedv",
+        question:
+          "vue: Uncaught TypeError: Cannot read property ... of undefinedv",
         answer:
           "Just use v-if on a common parent to all the elements in your template relying on that AJAX call, not around each one.",
         secondAnswer: "",
       },
-  
     ],
     reactQuestions: [
       {
@@ -661,7 +656,86 @@ export default {
           "defaultProps pozwala nam na ustawienie propsów,ustawienie wartości domyślnej dla propsów",
         secondAnswer: "",
       },
-    ]
+    ],
+    generalQuestions: [
+      {
+        question: "Czym jest domena?",
+        answer:
+          "Domena (adres internetowy) to unikalna nazwa w Internecie, pod którą można umieścić serwis WWW, czy też założyć konta email.Aby Twoja strona WWW była dostępna w Internecie, oprócz domeny potrzebujesz jeszcze serwera WWW (dla plików strony WWW), na który będzie wskazywać Twoja unikalna nazwa.",
+        secondAnswer:
+          "Domeny opierają się na systemie DNS, czyli Domain Name System. Jest to sieć rozproszonych po świecie serwerów. Dzięki DNS możemy używać zrozumiałych nazw witryn zamiast skomplikowanych adresów IP.Każdą z domen obsługują przynajmniej dwa serwery DNS, aby w przypadku awarii jednego z nich uniknąć sytuacji przestoju w działaniu strony internetowej. Do najważniejszych serwerów należy trzynaście tzw. root servers.",
+      },
+      {
+        question: "Jak działa DNS?",
+        answer:
+          "DNS (Domain Name System) to protokół, którego główna funkcja polega na tłumaczeniu łatwych do zapamiętania przez człowieka nazw domen na zrozumiałe dla komputerów dane liczbowe.",
+        secondAnswer:
+          "Działanie systemu DNS przebiega zgodnie z następującymi etapami:1. Użytkownik wpisuje w polu adresu przeglądarki określoną nazwę domeny, np. https://www.netia.pl/pl/.2. System za pośrednictwem przeglądarki nawiązuje komunikację z lokalnym serwerem DNS, przesyłając prośbę o przetłumaczenie nazwy domeny na adres IP.3. Lokalny serwer przesyła zapytanie o numer IP do jednego z 13 głównych serwerów na świecie (roor-servers).4. Serwer główny przekazuje informację na temat lokalizacji (adresu IP) serwera, na którym przechowywane są strony internetowe z określoną końcówką domeny – w tym przypadku .pl.5. Serwer DNS dostarcza w informacji zwrotnej do komputera użytkownika (do przeglądarki stron internetowych) numer odpowiadający konkretnej domenie.6. Komputer nawiązuje połączenie z adresem IP, co umożliwia wyświetlenie zawartości strony www.Wszystko dzieje się w bardzo krótkim czasie, dlatego działanie serwera DNS jest dla nas niezauważalne.",
+        thirdPartOfAnswer:
+          "Serwer DNS zawiera bazę danych o hierarchicznej formie, w której znajdują się domeny najwyższego poziomu (TLD) oraz drugiego poziomu.  Domeny TLD dzielą się na krajowe oraz funkcjonalne. Każda z domen krajowych jest zakończona kropką oraz znajdującymi się za nią dwoma znakami",
+      },
+      {
+        question: "Co wpływa na szybkość odpowiedzi serwera DNS?",
+        answer:
+          "Szybkość wczytywania się stron internetowych na komputerze w dużym stopniu zależy od czasu, w jakim serwer DNS odnajdzie adres IP odpowiadający danej domenie. Istotnym czynnikiem wpływającym na czas odpowiedzi jest odległość komputera od docelowego serwera.Na opóźnienie w komunikacji, oprócz sporej odległości, może również wpłynąć skomplikowana struktura strony www. Sporo współczesnych witryn zawiera liczne odwołania do innych stron – np. serwisów społecznościowych czy kanałów reklamowych. W takim przypadku zanim możliwe będzie załadowanie strony, serwer będzie musiał przetłumaczyć adresy wielu domen. Zamiana serwerów DNS na szybsze znacząco przyśpiesza wczytywanie się witryn, pomimo identycznej przepustowości łącza.",
+        secondAnswer: "",
+      },
+      {
+        question: "Jakie są rodzaje zapytań oraz serwerów DNS",
+        answer:
+          "Najbardziej ogólny podział rozróżnia serwery domeny głównej oraz serwery autorytatywne:• Serwery domeny głównej (typu root) to 13 DNS-ów, które są rozmieszczone na całym świecie – komputer użytkownika nawiązuje połączenie z tym spośród nich, który znajduje się najbliżej.    • Serwery autorytatywne to natomiast lokalne serwery (zwykle główny i alternatywny), które przechowują aktualne dane na temat komputerów w danej domenie.",
+        secondAnswer:
+          "Autorytatywne serwery DNS można następnie podzielić na: • DNS Master Server – główny serwer autorytatywny domeny. Przechowywane są w nim informacje dotyczące jej konfiguracji. Serwer Master przesyła dane do serwerów typu slave.     • DNS Slave Server – wtórny serwer, który automatycznie pobiera dane zapisywane w serwerze DNS Master po każdej aktualizacji zawartości domeny. Zapisywane są na nim kopie informacji, dzięki czemu może być używany jako serwer zapasowy, alternatywny wobec głównego. Rodzaje zapytań DNS dzielą się na:          • Rekurencyjne – wymuszają na serwerze odnalezienie informacji na temat domeny lub przesłanie powiadomienia o błędzie. Jeżeli odpytywany serwer nie jest w stanie udzielić odpowiedzi na zapytanie, wtedy przekazuje takie polecenie do innych serwerów DNS.     • Iteracyjne – nie wymuszają na serwerze łączenia się z innymi serwerami, jeżeli ten nie zna adresu IP domeny. W takim przypadku wskazują jedynie najlepszą odpowiedź, jaką w danym momencie dysponują – odnosi się ona do adresów serwerów autorytatywnych danej domeny.",
+      },
+      {
+        question: "Czym jest HTTP?",
+        answer:
+          "Http to skrót od wyrażenia Hypertext Transfer Protocol, czyli protokół umożliwiający przesyłanie danych dla sieci internetowej. Odpowiada on za komunikację pomiędzy klientem (przeglądarką) a serwerem, na którym przechowywane są wszystkie pliki tworzące witrynę internetową. Komunikacja w ramach protokołu http opiera się na dość prostym procesie wysyłania danych pomiędzy klientem a serwerem. Klient wysyła zapytanie, na co serwer odpowiada poprzez przesłanie tych danych zainteresowanemu. ",
+        secondAnswer: "Co jest charakterystyczne dla protokołu http? Po pierwsze nie przechowuje on uprzednio przesłanych danych. Oznacza to, że muszą być pobierane z serwera przy każdorazowym wejściu na stronę, co opóźnia cały proces, choć jednocześnie pozwala uniknąć obciążania serwerów.Ponadto http nie definiuje, w jaki sposób informacje są transmitowane z serwera do przeglądarki, a więc stwarza ryzyko przechwycenia wrażliwych informacji. ",
+        thirdPartOfAnswer: ''
+      },
+      {
+        question: "Czym jest HTTPS?",
+        answer:
+          "defaultProps pozwala nam na ustawienie propsów,ustawienie wartości domyślnej dla propsów",
+        secondAnswer: "Każdy właściciel witryny internetowej może przejść z adresu z przedrostkiem http na ten z https na początku. Wiąże się to z koniecznością wdrożenia certyfikatu szyfrującego SSL",
+      },   {
+        question: "https a Google – czy szyfrowanie wpływa na pozycjonowanie?",
+        answer:
+          " Algorytmy biorą pod uwagę takie czynniki jak wiarygodność i jakość domeny, a to ma związek również z zapewnieniem użytkownikom bezpieczeństwa. Oznacza to, że wdrożenie protokołu https może mieć pozytywny wpływ na pozycjonowanie witryny.",
+        secondAnswer: "",
+      },   {
+        question: "Czym jest CORS?",
+        answer:
+          " zapewnia nam on możliwość bezpiecznej wymiany danych pomiędzy stronami które charakteryzuje inny Origin.",
+        secondAnswer: "",
+      },
+      {
+        question: "Czym jest SOP?",
+        answer:
+          " zapewnia nam on możliwość bezpiecznej wymiany danych pomiędzy stronami które charakteryzuje inny Origin.",
+        secondAnswer: "",
+      },
+      {
+        question: "Czym jest Content security Policy?",
+        answer:
+          " Content Security Policy (CSP) ito dodatkowa warstwa ochrony, która pozwala na wykrywanie i odpieranie niektórych typów ataków, w tym Cross Site Scripting (XSS) oraz ataków wprowadzania danych.Te ataki są używane czynności takich jak: wykradanie danych, uszkodzenia strony, dystrybucja złośliwego oprogramowania.      ",
+        secondAnswer: "",
+      },
+      {
+        question: "Czym jest Event bobbling?",
+        answer:
+          " Jest to propagacja elementu do samej góry.Zawsze idzie z dołu do góry",
+        secondAnswer: "",
+      },
+      {
+        question: "Czym jest i jak działa przeglądarka",
+        answer:
+          "Przeglądarka internetowa jest programem komputerowym, którego głównym celem jest wyświetlanie stron internetowych.",
+        secondAnswer: "Pierwsze co robi przeglądarka to zdobycie adresu IP dla domenyJak już przeglądarka pobierze ten dokument to zaczyna go interpretować, czyli analizować jego treść. Kiedy dojdzie do lini z <title> to zrozumie, że jest to tytuł strony i umieści tekst Najlepsza strona w zakładce.Później natrafi na tekst Witam i po prostu wyświetli go.Ciekawiej robi się gdy dojdziemy do lini zawierającej img>. Przeglądarka rozumie, że <img> oznacza obrazek. A skoro obrazek to trzeba go pobrać i wyświetlić.",
+        thirdPartOfAnswer: 'Pewnie się zastanawiasz skąd ma go pobrać? Otóż podobnie jak wcześniej z dokumentem html tak i teraz połączy się z komputerem (serwerem), którego adres IP już zna i poprosi grzecznie o przesłanie pliku o nazwie fotka.jpg.Serwer ponownie odpowie na jej prośbę tym razem przesyłając obrazek. W zależności jak duży jest to obrazek, pobieranie może potrwać bardzo krótko - tak że nawet nie zauważysz - lub trochę dłużej (np. 4 sekundy).Interpretacja dokumentu kończy się na lini zawierającej </html>, co oznacza koniec dokumentu html.przeglądarka jest programem komputerowym przeglądarka łączy się z innym komputerem (serwerem) w celu pobrania dokumentu html przeglądarka interpretuje zawartość pobranego dokumentu html i na jego podstawie wyświetla stronę jeśli dokument html zawiera odniesienia do innych plików (np. obrazki, video, javascript, css) to przeglądarka ponownie łączy się z serwerem , pobiera je, a następnie wyświetla (obrazek, video) lub wykonuje (javascript, css)'
+      },
+    ],
   },
 
   getters: {},
@@ -703,7 +777,6 @@ export default {
       }, 1000);
     },
     randomCssQuestion(state) {
-
       state.cssQuestions.sort(function() {
         return Math.round(Math.random()) - 0.5;
       });

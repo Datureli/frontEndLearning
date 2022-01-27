@@ -1,6 +1,5 @@
 <template>
   <v-container>
-
     <v-card v-if="checkStatus" width="500" height="310" class="mx-auto mt-5">
       <p>{{ carouselCounter + "/10" }}</p>
       <v-carousel hide-delimiters prev-icon @change="incrementCarouselCounter">
@@ -20,13 +19,11 @@
           :key="index"
         >
           <h1>{{ CheckKnowledgeQuestion.englishWord }}</h1>
-            <v-text-field :rules="rules"></v-text-field>
+          <v-text-field :rules="rules"></v-text-field>
         </v-carousel-item>
-
       </v-carousel>
-    
     </v-card>
-    
+
     <v-card
       class="mx-auto mt-2"
       v-if="this.carouselCounter > 10 && this.testAgreement"
@@ -124,6 +121,18 @@ export default {
         {
           englishWord: "cause",
           polishWord: "Przyczyna",
+        },
+           {
+          englishWord: "Request",
+          polishWord: "Żądanie",
+        },
+             {
+          englishWord: "Access",
+          polishWord: "dostęp",
+        },
+               {
+          englishWord: "available",
+          polishWord: "dostępny",
         },
       ],
     };
