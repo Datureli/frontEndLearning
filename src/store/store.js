@@ -3,6 +3,9 @@ import Vuex from "vuex";
 import login from "./modules/login";
 import questions from "./modules/questions";
 import register from "./modules/register"
+import htmlQuestions from './modules/htmlQuestions'
+import cssQuestions from './modules/cssQuestions'
+import vueQuestions from './modules/vueQuestions'
 
 Vue.use(Vuex);
 
@@ -11,6 +14,9 @@ export default new Vuex.Store({
     login,
     questions,
     register,
+    htmlQuestions,
+    cssQuestions,
+    vueQuestions
   },
 
   state: {

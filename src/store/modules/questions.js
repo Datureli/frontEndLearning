@@ -2,185 +2,7 @@ export default {
   namespaced: true,
 
   state: {
-    htmlQuestions: [
-      {
-        question: "Czym jest Html?",
 
-        answer: `HTML (Hypertext Markup Language) to język znaczników służący do prezentacji treści na stronach internetowych, który jest oparty o hiperłącza łączące poszczególne dokumenty pomiędzy sobą. Przeglądarki internetowe jednoznacznie interpretują kod HTML i na jego bazie przedstawiają treść końcowym użytkownikom.`,
-
-        secondAnswer: `<!DOCTYPE html>
-<html lang="en">
-  <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width,initial-scale=1.0">
-      <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-  </body>
-</html>`,
-      },
-      {
-        question: "jak wstawić ikonę obok adresu strony www?",
-
-        answer: `Polecenie to pozwala dodać ikonkę (favicon.ico), która będzie widoczna w przeglądarce przy adresie naszej strony. Typowy rozmiar ikony to 16x16 pikseli. W systemie Windows jest dodatkowa możliwość umieszczenia skrótu na pulpicie - wtedy przydatna może być ikona o rozmiarach 32x32. Format *.ico pozwala zapisać dwie wersje rozmiaru w jednym pliku. Niektóre przeglądarki - nie MSIE 6 - pozwalając również używać innych formatów graficznych, takich jak np. PNG.`,
-        secondAnswer: `<head>
-        <link rel="shortcut icon" href="adres ikony">
-      </head>`,
-      },
-
-      {
-        question: "Czym jest tag blockquote?",
-        answer:
-          "Tag blockquote określa treść cytowaną ze źródła zewnętrznego (gazeta, praca naukowa itp.",
-        secondAnswer: `<blockquote cite="http://developer.mozilla.org">
-        <p>To jest cytat z Mozilla Developer Center.</p>
-          </blockquote>`,
-      },
-      {
-        question: "Czy tagi i elementy w html to to samo?",
-        answer:
-          "Nie.Elementy w html są definiowane poprzez starting tag,mogą zawierać jakiś kontent wewnątrz i tag zamykający.Przykład: <h1>Heading</h1> to element html natomiast <h1>jakiś kontent</h1> to tag zamykajacy",
-      },
-      {
-        question: "Czym są tagi i atrybuty w html?",
-        answer:
-          "tagi to podstawowy komponent w html który definiuje jak dany kontent będzie ustruktyryzowany/formatowany,natomiast atrybuty są używane wraz  ztagami html by zdefiniować charakterystyke elementu",
-      },
-      {
-        question: "Czym są void elements?",
-        answer:
-          "Są to takie elementy html które nie posiadają tagu zamykającego.Przykładowo: </br>,<img>,<hr />",
-      },
-      {
-        question: "Czym jest Html?",
-        answer: `Jest to znacznik, który określa znaczenie elementu.
-         Głównie do celów dostępności (ang. accessibility). Jest częścią specyfikacji ARIA. Został też dodany do HTML5.`,
-      },
-      {
-        question: "Co to jest W3C?",
-        answer: `Konsorcjum zajmuje się przede wszystkim dbaniem o prawidłowy rozwój sieci. Opracowuje standardy tworzenia protokołów http, standardy tworzenia stron w języku HTML, XHTML, standardy CSS, XML, DOM oraz wiele innych.`,
-      },
-      {
-        question: "Czym jest tag <picture>?",
-        answer: `Tag <picture> zapewnia programistom stron internetowych większą elastyczność w określaniu zasobów obrazu. Zamiast jednego obrazu skalowanego w górę lub w dół to, w zależności od rozmiaru viewportu, można dobrać wiele obrazów tak, żeby dla każdej rozdzielczości ładnie wypełnić okno przeglądarki.`,
-        secondAnswer:
-          "Element <picture> ma dwa różne tagi: jeden lub więcej tagów <source> oraz jeden tag <img>.Tag <source> ma następujące właściwości:srcset (wymagany): określa URL obrazu do wyświetlenia media: akceptuje wszelkie prawidłowe media query, które normalnie byłyby ustawione w CSS      rozmiary: definiuje pojedynczy deskryptor szerokości, media query z deskryptorem szerokości lub rozdzieloną przecinkami listę media query z deskryptorem szerokości type: określa typ MIME",
-        thirdPartOfAnswer:
-          "Przeglądarka użyje wartości atrybutów, aby załadować najbardziej dopasowany obraz. Tag <img> służy do zapewnienia kompatybilności wstecznej, jeśli przeglądarka nie obsługuje tagu <picture>",
-      },
-      {
-        question: "Czym jest Web Socket?",
-        answer:
-          "Web sockets to technologia następnej generacji do dwukierunkowej komunikacji dla aplikacji internetowych, która działa na jednym gnieździe i jest wystawiona za pomocą interfejsu napisanego w JavaScript dla przeglądarek zgodnych z HTML5,Po uzyskaniu połączenia gniazda z serwerem WWW, możesz wysyłać dane z przeglądarki do serwera po wywołaniu metody send() oraz odbierać dane z serwera dzięki obsłudze zdarzenia onmessage",
-      },
-      {
-        question: "Czym jest tag <article>?",
-        answer:
-          "Tag <article> określa niezależną i osobną treść. Najczęściej  używa się go na blogach. ",
-      },
-      {
-        question: "Objaśnij semantyczny html",
-        answer:
-          "Semantyczny HTML to kod napisany za pomocą tagów które mają określone znaczenie i mogą być odpowiednio interpretowane przez przeglądarkę i developera. Dla odróżnienia tagi które nie są semantyczne są obojętne tzn. nie mówią wprost nic na temat swojej zawartości.Kluczowymi kwestiami stosowania semantycznego html jest accessibility oraz SEO",
-        secondAnswer:
-          "Tagi nie-semantyczne,Do tej grupy należy np. bardzo popularny <div> </div> lub <span> </span>Tagi semantyczne:",
-      },
-
-      {
-        question: "to czego służy znacznik <pre>?",
-        answer:
-          "Wprowadza tekst preformatowany, czyli napisany czcionką monotypiczną (o stałej szerokości znaku), który uwzględnia dodatkowe spacje, tabulację i znaki końca linii (nie trzeba stosować znaczników <br>) oraz nie jest automatycznie zawijany. Dzięki niemu możesz np. wkleić na stronę WWW tekst, wprost ze zwykłego edytora, bez stosowania dodatkowych znaczników (niestety informacje dotyczące formatowania zostaną pominięte). Należy jednak przy tym pamiętać, aby tekst nie zawierał znaków: " <
-          " oraz " >
-          " (w zamian używaj: &lt; i &gt;).",
-        thirdPartOfAnswer: "",
-      },
-      {
-        question: "Do czego służy znacznik Main?",
-        answer:
-          "Tag <main> określa główną treść dokumentu. Może to ułatwić korzystanie ze skrótów klawiszowych, przybliżaniu w przeglądarkach mobilnych i przy innych czynnościach. W dokumencie musi znajdować się jeden element <main>. Element <main> nie może być zagnieżdżony w żadnym z tych elementów: <article>, <aside>, <footer>, <header> lub <nav>.",
-        secondAnswer: "",
-      },
-      {
-        question: "Do czego służy znacznik nav?",
-        answer:
-          "Tag <nav> definiuje zestaw linków nawigacji. W tagu nav powinny się znaleźć podstawowe linki służące do nawigacji, a nie wszystkie linki na stronie.",
-        secondAnswer: "",
-      },
-      {
-        question: "Do czego służy znacznik footer?",
-        answer:
-          "Tag footer definiuje stopkę dokumentu lub sekcji i powinien zawierać informacje o stronie, która go zawiera. Ten tag zwykle zawiera informacje o autorze, prawach autorskich, dane kontaktowe, mapę witryny, powrót do góry oraz linki do powiązanych dokumentów,",
-        secondAnswer: "",
-      },
-      {
-        question: "Do czego służy znacznik header?",
-        answer:
-          "Tag <header> reprezentuje kontener na treść wprowadzającą lub zestaw linków nawigacyjnych. Zazwyczaj zawiera logo, linki nawigacyjne lub nagłówki.",
-        secondAnswer: "",
-      },
-      {
-        question: "Czym jest accessibility?(dostępność)",
-        answer:
-          "Accessibility (pl. dostępność) to tworzenie aplikacji w sposób który jest łatwy do interpretacji dla przeglądarki i/lub specjalnych urządzeń przystosowanych przez osoby niepełnosprawne. Po prostu przeglądarka wie kiedy ma do czynienia z obrazkiem, nawigacją czy artykułem.",
-        secondAnswer: "",
-      },
-      {
-        question: "Na czym polega semantyczny Html?",
-        answer: "Znacznik Main służy do umieszczania głównej części strony",
-        secondAnswer: "",
-      },
-    ],
-    cssQuestions: [
-      {
-        answerNumbers: 2,
-        question: `Rozwiń i opisz skrót BEM`,
-        answer:
-          "Nazwa BEM pochodzi od angielskiego Block Element Modifier.Opiera się ono na podziale elementów na stronie na:bloki - na przykład formularz albo menu,elementy - poszczególne elementy bloku takie jak: input czy guzik formularza albo też link w menu,modyfikatory - specyficzne warianty elementów: input do wpisywania hasła, guzik “Anuluj” lub aktywny link w menu",
-        secondAnswer: `W BEM istnieje pewna konwencja nazewnictwa klas CSS. Ogólne zasady tego nazewnictwa przedstawiam poniżej:.block - pierwsze słowo w nazwie oznacza, że klasa dotyczy danego bloku,elementy - poszczególne elementy bloku takie jak: input czy guzik formularza albo też link w menu,modyfikatory - specyficzne warianty elementów: input do wpisywania hasła, guzik “Anuluj” lub aktywny link w menu`,
-      },
-      {
-        answerNumbers: 1,
-        question: `Czym jest Css sprites?`,
-        answer: `To technika pozwalająca na łączenie wielu mniejszych obrazów, wykorzystywanych na stronie www, w jeden większy plik, który przy odpowiedniej pomocy styli CSS pozwoli zaoszczędzić nam pasmo serwera oraz czas ładowania się strony,`,
-      },
-      {
-        answerNumbers: 1,
-        question: `Rozwiń skrót Css`,
-        answer: `Kaskadowe arkusze stylów css służą do definiowania układów graficznych dokumentów HTML.Arkusz stylów CSS zawiera reguły opisujące w jaki sposób przeglądarka internetowa ma wyświetlać zawartość dokumentów HTML lub XML. Za pomocą arkuszy CSS można opisać wiele właściwości prezentacji elementów strony: wybrać kolor tekstu, wypełnienie tła, rodzaj czcionki, ustawić odstępy między elementami czy zdefiniować położenie jednego elementu względem drugiego.`,
-      },
-      {
-        answerNumbers: 1,
-        question: `Czym jest model pudełkowy?`,
-        answer: `Box model - czyli model pudełkowy - to opis budowy elementów blokowych na stronie www. To słowne określenie pozwala wyobrazić sobie w jaki sposób poszczególne elementy składają się na wielkość całego pudełka. Tymi elementami są marginesy zewnetrzne, obramowanie, marginesy wewnętrzne oraz szerokość.`,
-      },
-      {
-        question: `Opisz zalety Sass`,
-        answer: `Sass to preprocesor CSS,który pozwala na znacznie szybszą i wydajniejszą pracę z arkuszami stylów.Preprocesory pozwalają na programowanie wśród arkuszy stylów, co daje ogromne możliwości przyspieszenia pracy.przeglądarki czytają kod CSS, a kod w formacie Sass będzie dla nich niezrozumiały. Rozwiązaniem tego problemu jest kompilacja plików Sass do wyjściowego CSS`,
-        secondAnswer: `W Sass możemy używać zmiennych,Zagnieżdzanie.Mixins.DziedziczenieKolejna bardzo mocna cecha. Dzięki dziedziczeniu możemy przekazywać część zastosowanych deklaracji z jednego obiektu na drugi. To z kolei ponownie pozwala nam na podążanie za regułą DRY. Aby dany element odziedziczył cechy swego przodka należy wstawić wyrażenie @extend a następnie selektor z którego mamy dziedziczyć. W przykładzie wykorzystamy klasę alert (która może formatować jakiś komunikat) i dodamy kolejne jej odmiany:`,
-        thirdPartOfAnswer: ` Do naszej dyspozycji SASS udostępnia operatory typu: +, -, *, /, oraz %. Możliwa jest także konwersja wartości (np z pikseli na procenty).`,
-      },
-      {
-        question: `Czym się różni scss od sass?`,
-        answer: `Podstawową różnicą jest składnia, pliki scss są zbliżone do składni CSS, natomiast pliki sass do składni języka Ruby.`,
-        secondAnswer: ``,
-      },
-      {
-        question: `Jakie są typy selektorów w css?`,
-        answer: `selektor uniwersalny: selektor uniwersalny oznacza wszystkie elementy na stronie.selektor typu element:Ten selektor dopasowuje jeden lub więcej elementów html o tym samym imieniu.id selector:ten selektor dopasowuje każdy element html którego id posiada taką samą wartość jak selektor,class selektor: Ten selektor dopasowuje każdy element na stronie który zawiera atrybut klasy przypisany do tej samej wartości co klasa.kombinator potomstwa: pozwala łączyć dwa lub więcej selektorów co pozwala bardziej sprecyzować metode selekcji.Child combinator:A selector that uses the child combinator służy do wskazania elementu, który jest dzieckiem innego elementu. Kombinator dziecka jest znakiem większości (U+003E, >) i oddziela dwa selektory złożone. Białe znaki wokół > są opcjonalne i nie mają specjalnego znaczenia.`,
-        secondAnswer: `General Sibling Combinator:The general sibling combinator (~) separates two selectors and matches all iterations of the second element, that are following the first element (though not necessarily immediately), and are children of the same parent element.Adjacent Sibling Combinator:Attribute Selector`,
-      },
-      {
-        question: `Jakie są ograniczenia w css?`,
-        answer: `Zgodność z przeglądarką - niektóre selektory są wspierane a niektóre nie.Musimy wiedzieć które są wspierane a które nie.Cross browser issue: niektóre selektory zachowują się inaczej w różnych przeglądarkach.Nie posiada parent selector: Na ten moment w css nie możesz zaznaczyc tagu rodzica`,
-        secondAnswer: ``,
-      },
-      {
-        question: `Jaka jest różnica między „resetowaniem” a „normalizowaniem” CSS?`,
-        answer: `Resetowanie – ma na celu usunięcie wszystkich domyślnych stylów przeglądarki. Na przykład marginesy, wypełnienia, rozmiary czcionek wszystkich elementów są resetowane. Normalizowanie – zachowuje przydatne style domyślne zamiast cofania wszystkiego. Poprawia również różnice w wyświetlaniu elementów w różnych przeglądarkach.`,
-        secondAnswer: ``,
-      },
-    ],
     javascriptQuestions: [
       {
         question: "Jakie zadeklarować zmienną w javascript?",
@@ -418,118 +240,7 @@ export default {
           "Przed wprowadzeniem funkcji strzałkowych każda nowa funkcja deniniowała swoją własną wartość this (nowy obiekt w przypadku konstruktora, undefined w wywołaniach funkcji strict mode, obiekt bazowy jeśli funkcja jest wywoływana jako `metoda obiektowa`, itp.). Okazało się to niekorzystne przy obiektowym stylu programowania.Funkcja strzałkowa nie posiada własnego this; używana jest wartość this kontekstu wykonania. W związku z tym, w poniższym kodzie, this użyty w funkcji, który jest przekazywany do setInterval, ma taką samą wartość jak this w funkcji otaczającej:",
       },
     ],
-    vueQuestions: [
-      {
-        question: "Czym jest Vuex?",
-        answer:
-          "Dzięki Vuex możemy przechowywać stan naszej aplikacji Vue w centralnej lokalizacji.Pozwala nam pobierać i ustawiać stan współdzielenia oraz automatycznie propagować wszelkie zmiany dokonane we wspólnym stanie do wszystkich komponentów.",
-      },
-      {
-        question: "Jakie są zalety Vue.js?",
-        answer:
-          "vue js posiada niski próg wejścia.Framework jest również lekki,waży tylko 18-23 kb,Vue js jest szybszym frameworkiem niż Angular czy React,virtual DOM,data binding,komponentyAnimation/Transition: VueJS provides several techniques to implement the transition to HTML components. This framework allows you to add third party animation libraries.templates.",
-        secondAnswer:
-          "konkurentów React i Angular. Jako React jest oparty na komponentach oraz jednostronnym przepływie danych, i podobnie do Angular posiada proste szablony z dobrą składnią. Vue nie potrzebuje konfiguracji środowiska, Do komunikacji pomiędzy komponentami używa się vuex czyli biblioteki, która zarządza dużą ilością danych jednocześnie.Posiada bardzo szczegołową dokumentacje",
-      },
-      {
-        question: "Czym jest composition api?",
-        answer:
-          "pozwala na pisanie komponentów w sposób oparty na funkcjach. Usprawnienie to zostało zainspirowane przez React Hooks. Nowe API umożliwia hermetyzację logiki w tzw. „composition functions” i pozwala używać jej ponownie we wszystkich komponentach.   ",
-      },
-      {
-        question: "Czym są komponenty funkcyjne",
-        answer:
-          "props zawsze napływają do komponentu z zewnątrz. Drugim obiektem, który służy do zarządzania danymi w komponentach, jest state. Dzięki nim komponent może zarządzać stanem od wewnątrz. state jest dostępne wyłącznie w komponentach klasowych.Z tego powodu komponenty funkcyjne często określa się inną, dość rozwlekłą w języku polskim, nazwą: funkcyjne komponenty pozbawione stanu (ang. functional stateless components, FCS).",
-          secondAnswer: 'Po co decydujemy się na korzystanie z komponentów, które mają jawnie ograniczony zakres możliwości?Jak się okazuje, te ograniczenia mają swoje zalety.Komponenty funkcyjne cechuje prostota, zwięzłość i przewidywalność. Nie musimy przejmować się stanem ani innymi funkcjonalnościami, dodającymi zbędną złożoność.Komponenty pozbawione stanu są świetnym sposobem na redukowanie złożoności aplikacji.'
-      },
-      {
-        question: "Czym są mixiny?",
-        answer:
-          "mixiny to funkcje które pozwalają nam na reużywalność kodu pomiędzy komponentami w vue js.Jest to objekt javascript który może zawierać każdą opcję jaką zawiera komponent",
-      },
-      {
-        question: "Wyjaśnij cykl życia w Vue",
-        answer:
-          "pozwala na pisanie komponentów w sposób oparty na funkcjach. Usprawnienie to zostało zainspirowane przez React Hooks. Nowe API umożliwia hermetyzację logiki w tzw. „composition functions” i pozwala używać jej ponownie we wszystkich komponentach.   ",
-      },
-      {
-        question: "Jak stworzyć two-way binding w Vue js?",
-        answer:
-          "Do stworzenia służy dyrektywa v-model.W obustronnym przepływie danych data albo model jest przypięty do DOM i dom jest przypięty do modelu",
-      },
-      {
-        question:
-          "Podaj różnicę między one-way-data flow a two-way data binding",
-        answer:
-          "W przepływie jednostronnym,wizualna warstwa aplikacji nie aktualizuje się automatycznie kiedy,kiedy data się zmienia musimy napisać kod który będzie aktualizować się podczas każdej zmiany.W przypadku two-way data binding zmiany dokonywane są automatycznie.Przykłady użycia one-way w Vue to v-bind natomiast two-way to v-model",
-      },
-      {
-        question: "Jaka jest różnica między Vue2 a Vue3?",
-        answer:
-          "Vue 3.0 jest o wiele bardziej wydajne w porównaniu do swojej poprzedniej wersji. Mówimy tutaj o rozmiarze gotowej aplikacji Vue, która jest do 41% lżejsza dzięki użyciu techniki tree-shaking, początkowym renderowaniu, które jest do 55% szybsze, aktualizacjach, które są aż o 133% szybsze oraz o 54% mniejszym zużyciu pamięci.Twórcy Vue.js zaproponowali w nowym wydaniu dwie funkcje dla Single-File Components: script setup oraz style vars.Vue 3.0 zapewnia również lepszą integrację z językiem TypeScript.",
-      },
-      {
-        question: "Co to są gettery?",
-        answer:
-          "to są funkcje które zwracają nam stan.obiekt.defineProperty API, jeśli jeszcze tego nie wiesz. Ponieważ system reaktywności Vue opiera się na tym API.",
-      },
-      {
-        question: "Czym jest virtual DOM?",
-        answer:
-          "virtual dom to obiket javascript reprezentujący document object model(dom)Vue aktualizuje virtual dom zamiast aktualizowac po prostu dom.Dzięki temu redukujemy koszt aktualizacji prawdziwego dom.Wirtualny dom oferuje nam możliwość kontrolowania w którym momencie virtual dom ma być wyrenderowany.Oferuje również możliwość polepszenia wydajności naszych aplikacji internetowych poprzez zmniejszenie ilosci aktualizacji dla dom",
-      },
-      {
-        question: "Wymień funkcjonalności w Vue",
-        answer: "Raktywność,templates,komponenty,transition,routing",
-      },
-      {
-        question: "Objaśnij cykl życia w Vue",
-        answer: "Raktywność,templates,komponenty,transition,routing",
-      },
 
-      {
-        question: "co to jest flux?",
-        answer:
-          "Flux to wzorzec projektowy stworzony do ujednolicenia przepływu danych w aplikacjach, szczególnie tych frontowych. Posiada trzy części: dispatch, store i view.View (ang. widok) to część w której użytkownik komunikuje się z aplikacją.Store to w dużym uproszczeniu obiekt z stanem aplikacji.Dispatcher to centralna część fluxa z której wysłamy prośby o zmianę stanu aplikacji.",
-      },
-      {
-        question: "Wyjaśnij na czym polega reaktywność w vue",
-        answer:
-          "Wszystkie właściwości zdefiniowane w instancji vue są reaktywne.Oznacza to ,że jeżeli zajdzie jakaś zmiana to komponent automatycznie się zaktualizuje.Podczas inicjalizacji wszystkie właściwości są konwertowane do getterów oraz setterów,dzięki temu vue wie kiedy należy dokonać aktualizacji",
-      },
-      {
-        question: "Czym jest single file component?",
-        answer:
-          "Jest to plik z rozszerzeniem vue. zawierającym komponent vue.W przeciwieństwie do stndardowego podziału plików na style,szkielet oraz logike w odrębnych plików,w single file component wszystko znajduje się w jednym pliku.",
-      },
-      {
-        question: "Wyjaśnij na czym polega przepływ danych w vue",
-        answer:
-          "Vue używa one-way data flow.Dane są przekazywane do komponentu dziecka z komponentu rodzica za pomocą właściwości props",
-      },
-      {
-        question: "czym jest mapState?",
-        answer:
-          "życie mapState() pozwala na pobranie i przypisanie do lokalnego scope wartości bezpośrednio z sekcji state w store. W ten sposób otrzymujemy czyste dane – bez żadnych modyfikacji. Ma to duży sens, jeśli są to typy proste – jakaś flaga będąca wartością boolean (true/false), np. flaga „loading” itp.",
-      },
-      {
-        question: "Czym są sunspense components",
-        answer:
-          "Suspense components to nowa funkcja w vue 3 która tworzy.Ogólną ideą jest umożliwienie komponentom „zawieszenia” renderowania, np. Jeśli potrzebują dodatkowych danych ładowanych ze źródeł zewnętrznych. Gdy wszystkie informacje będą dostępne, js ponownie spróbuje wyrenderować komponent.Aby to osiągnąć, React korzysta z Promises. Komponent może rzucić Promise w swojej metodzie renderowania (lub cokolwiek, co jest wywoływane podczas renderowania komponentu , np. Nowy statyczny getDerivedStateFromProps). React łapie rzuconą Obietnicę i szuka najbliższego Suspensekomponentu na drzewie, które działa jak rodzaj granicy. SuspenseSkładnik bierze element jako fallbackpodpora, która będzie wyświetlana, gdy wszystkie dzieci w jego poddrzewem zawiesinie, bez względu na to gdzie i dlaczego.",
-      },
-      {
-        question: "Jaka jest różnica między composition api a option api?",
-        answer:
-          "Composition API. Udostępnia nowy sposób tworzenia komponentów, który znacząco różni się od podejścia zaprezentowanego w poprzedniej wersji frameworka.Przede wszystkim większa elastyczność w układaniu logiki kodu, jego lepsza reużywalność oraz poprawiona czytelność dzięki mniejszej ilości zagłębień.Doświadczenie pokazało, że większe aplikacje oparte o Vue.js w wersji 2 były ciężkie do utrzymania, do rozbudowy oraz do diagnozowania błędów.",
-        secondAnswer:
-          "Composition api posiada setup hook wewnątrz którego piszemy swój kod. Wewnątrz setup hook możemy pogrupować części naszego kodu według logicznego porządku.Dzięki composition api nie musimy więc używać Mixinów.",
-      },
-      {
-        question: "Jaka jest różnica między watch a watchEffect",
-        answer:
-          "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
-      },
-    ],
     typescriptQuestion: [
       {
         question:
@@ -659,6 +370,25 @@ export default {
     ],
     generalQuestions: [
       {
+        question: "Czym jest ShadowDOM?",
+        answer:
+          "Domyślnie, przeglądarki nie prezentują Shadow DOM w narzędziach dla programistów, ale po zmianie ustawienia „Show user agent Shadow DOM” można go podejrzeć w specjalnym elemencie #shadow-root:",
+        secondAnswer: "Shadow DOM pozwala stworzyć pod-drzewo DOM z dodatkowymi elementami DOM określanymi jako custom components albo Web Components. Zaletą wykorzystywania Shadow DOM i tworzenia za jego pomocą własnych komponentów jest niezależność i izolacja komponentów od klasycznego DOM. W praktyce daje nam to niezależność od dodanego stylu CSS czy wykonywanego kodu JS w ramach strony internetowej.",
+      },
+      {
+        question: "Czym jest useStrict?",
+        answer:
+          "Use strict to zakres reguł, które muszą zostać przestrzegane w kodzie. Dzięki temu każdy programista pracujący na kodzie, który oparty jest o ten mechanizm, musi podobnie tworzyć oprogramowanie, aby nie powstawały błędy. Na przykład deklarując zmienną bez kluczowego słowa var, zadziała dla kodu, który nie ma mechanizmu use strict, jeżeli spróbujemy uruchomić kod, w którym mamy deklarację zmiennej bez słowa kluczowego var i z użyciem mechanizmu use strict wtedy aplikacja zgłosi błąd",
+        secondAnswer: "Deklaracja use strict obejmuję wszystko, co znajduję się poniżej. Jeżeli stworzymy kod powyżej, to mechanizm nie będzie sprawdzać kodu powyżej use strict.Aby mieć możliwość, wymuszenia na programistach pewnych reguł w kodzie, bądź chcemy zachować spójność kodu w całej aplikacji. Warto wspomnieć, że dzięki use strict zapobiegamy takim przypadkom jak: Wyłapuje pewne typowe błędy, wpadki programisty i rzuca wyjątkiem. Zapobiega lub wyrzuca błędy, gdy podejmowane są względnie „niebezpieczne” działania (takie jak uzyskanie dostępu do obiektu globalnego). Wyłącza funkcje, które są mylące lub źle przemyślane.",
+        thirdPartOfAnswer: 'Najlepiej, gdy pracujemy nad dużym projektem, wtedy ilość programistów jest spora, jak również rotacja między nimi występuje w różnych ilościach. Mechanizm use strict pozwala na nałożenie pewnych reguł w JavaScript, dzięki którym kod będzie spójny i nie będzie powielać błędów.'
+      },
+      {
+        question: "Czym jest defaultProps?",
+        answer:
+          "defaultProps pozwala nam na ustawienie propsów,ustawienie wartości domyślnej dla propsów",
+        secondAnswer: "",
+      },
+      {
         question: "Czym jest domena?",
         answer:
           "Domena (adres internetowy) to unikalna nazwa w Internecie, pod którą można umieścić serwis WWW, czy też założyć konta email.Aby Twoja strona WWW była dostępna w Internecie, oprócz domeny potrzebujesz jeszcze serwera WWW (dla plików strony WWW), na który będzie wskazywać Twoja unikalna nazwa.",
@@ -723,10 +453,10 @@ export default {
         secondAnswer: "",
       },
       {
-        question: "Czym jest Event bobbling?",
+        question: `Czym jest Event bobbling?`,
         answer:
-          " Jest to propagacja elementu do samej góry.Zawsze idzie z dołu do góry",
-        secondAnswer: "",
+          ` Jest to propagacja elementu do samej góry.Zawsze idzie z dołu do góry`,
+        secondAnswer: ``,
       },
       {
         question: "Czym jest i jak działa przeglądarka",
@@ -738,8 +468,6 @@ export default {
     ],
   },
 
-  getters: {},
-
   mutations: {
     questionLoop(state) {
       setInterval(() => {
@@ -748,13 +476,7 @@ export default {
         });
       }, 1000);
     },
-    htmlQuestionLoop(state) {
-      setInterval(() => {
-        state.htmlQuestions.sort(function() {
-          return Math.round(Math.random()) - 0.5;
-        });
-      }, 1000);
-    },
+
     vueQuestionLoop(state) {
       setInterval(() => {
         state.vueQuestions.sort(function() {
@@ -781,11 +503,7 @@ export default {
         return Math.round(Math.random()) - 0.5;
       });
     },
-    randomHtmlQuestion(state) {
-      state.htmlQuestions.sort(function() {
-        return Math.round(Math.random()) - 0.5;
-      });
-    },
+
     randomVueQuestion(state) {
       state.vueQuestions.sort(function() {
         return Math.round(Math.random()) - 0.5;
@@ -806,9 +524,7 @@ export default {
     questionLoop(context) {
       context.commit("questionLoop");
     },
-    htmlQuestionLoop(context) {
-      context.commit("htmlQuestionLoop");
-    },
+
     cssQuestionLoop(context) {
       context.commit("cssQuestionLoop");
     },
@@ -821,9 +537,7 @@ export default {
     randomQuestion(context) {
       context.commit("randomQuestion");
     },
-    randomHtmlQuestion(context) {
-      context.commit("randomHtmlQuestion");
-    },
+ 
     randomVueQuestion(context) {
       context.commit("randomVueQuestion");
     },

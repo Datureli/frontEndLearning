@@ -19,11 +19,12 @@
             v-show="disable"
             v-text="htmlQuestions.answer"
           ></v-list-item-subtitle>
-          <pre v-if="page === 2">      <code> 
-            <p  v-show="disable">{{htmlQuestions.secondAnswer}}</p> 
-            </code>
-        </pre>
-
+        <v-list-item-subtitle
+            class="white--text text-justify text-h5 text-wrap"
+            v-if="page === 2"
+            v-show="disable"
+           v-text="htmlQuestions.secondAnswer"
+          ></v-list-item-subtitle>
           <v-list-item-subtitle
             class="white--text text-justify text-h5 text-wrap"
             v-if="page === 3"
@@ -87,7 +88,7 @@ export default {
   },
   computed: {
     ...mapState(["disable", "favorite","isHeartActive"]),
-    ...mapState("questions", ["htmlQuestions"]),
+    ...mapState("htmlQuestions", ["htmlQuestions"]),
   },
 
   methods: {
@@ -98,10 +99,10 @@ export default {
       this.$store.state.favorite.push(htmlQuestions);
     },
     htmlQuestionLoop() {
-      this.$store.dispatch("questions/htmlQuestionLoop");
+      this.$store.dispatch("htmlQuestions/htmlQuestionLoop");
     },
     randomHtmlQuestion() {
-      this.$store.dispatch("questions/randomHtmlQuestion");
+      this.$store.dispatch("htmlQuestions/randomHtmlQuestion");
     },
   },
 };

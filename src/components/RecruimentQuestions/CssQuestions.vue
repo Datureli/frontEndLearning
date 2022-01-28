@@ -1,26 +1,11 @@
 <template>
-  <v-carousel
-    ref="carousel"
-    :continuous="true"
-    hide-delimiters
-    @change="page = 1"
-    class="mt-1"
-  >
+  <v-carousel hide-delimiters @change="page = 1" class="mt-1">
     <v-carousel-item
       v-for="(cssQuestions, index) in cssQuestions"
       :key="index"
       max-width="700"
       class="mx-auto"
     >
-      <div>
-        <v-btn
-          @keyup.g="$refs.carousel.next()"
-          @click.stop="$refs.carousel.next()"
-          icon
-        >
-          <v-icon>mdi-magnify</v-icon>
-        </v-btn>
-      </div>
       <v-list-item>
         <v-list-item-content>
           <v-list-item-subtitle
@@ -29,10 +14,12 @@
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
+            hide-details="auto"
+            height="100%"
             class="white--text text-justify text-h5 text-wrap"
             v-if="page === 1"
             v-show="disable"
-            v-text="cssQuestions.answer.trim().replace(/\s{2,9999}|\t/g, ' ')"
+            v-text="cssQuestions.answer.replace(/\s\s+/g, ' ')"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
             class="white--text text-justify text-h5 text-wrap"
@@ -69,7 +56,7 @@
       >
 
       <v-pagination
-      class="mx-auto"
+        class="mx-auto hidden-sm-and-down"
         style="position: absolute; bottom: 18%; right:36%"
         v-model="page"
         :length="3"
@@ -104,12 +91,12 @@ export default {
   },
   computed: {
     ...mapState(["disable", "favorite"]),
-    ...mapState("questions", ["cssQuestions"]),
-    nextArrow() {
-      cssQuestions;
-    },
+    ...mapState("cssQuestions", ["cssQuestions"]),
   },
   methods: {
+    checkSpaces() {
+    cssQuestions.replace(/  +/g, ' ')
+    },
     disableAnswers() {
       this.$store.commit("disable");
     },
@@ -117,13 +104,10 @@ export default {
       this.$store.state.favorite.push(cssQuestions);
     },
     cssQuestionLoop() {
-      this.$store.dispatch("questions/cssQuestionLoop");
+      this.$store.dispatch("cssQuestions/cssQuestionLoop");
     },
     randomCssQuestion() {
-      this.$store.dispatch("questions/randomCssQuestion");
-    },
-    nextIndex() {
-      cssQuestions.map();
+      this.$store.dispatch("cssQuestions/randomCssQuestion");
     },
   },
 };

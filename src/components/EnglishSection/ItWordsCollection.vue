@@ -134,6 +134,10 @@ export default {
           englishWord: "available",
           polishWord: "dostępny",
         },
+                 {
+          englishWord: "Consider",
+          polishWord: "Rozważać",
+        },
       ],
     };
   },
