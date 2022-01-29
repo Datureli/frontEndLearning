@@ -2,7 +2,7 @@
   <v-app>
     <v-row>
       <v-col>
-        <v-main class="gradient">
+        <v-main>
           <header>
             <Navigation />
           </header>

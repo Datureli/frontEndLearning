@@ -102,9 +102,6 @@ export default {
     ...mapState("cssQuestions", ["cssQuestions"]),
   },
   methods: {
-    checkSpaces() {
-      cssQuestions.replace(/  +/g, " ");
-    },
     disableAnswers() {
       this.$store.commit("disable");
     },
