@@ -11,8 +11,8 @@
 
           <router-link
             :to="{ name: 'HtmlQuestions' }"
-            class="text-deocration-none mx-auto"
-            style="text-decoration: none; color: #a55c1b;"
+            class="mx-auto"
+            style="text-decoration: none;"
           >
             Html
           </router-link>
@@ -23,7 +23,7 @@
           <router-link
             :to="{ name: 'CssQuestions' }"
             class="mx-auto"
-            style="text-decoration: none; color: #a55c1b;"
+            style="text-decoration: none;"
           >
             Css
           </router-link>
@@ -32,8 +32,8 @@
           <v-icon>mdi-language-javascript</v-icon>
           <router-link
             :to="{ name: 'JavascriptQuestions' }"
-            class="text-deocration-none mx-auto"
-            style="text-decoration: none; color: #a55c1b;"
+            class=" mx-auto"
+            style="text-decoration: none;"
           >
             Javascript
           </router-link>
@@ -42,8 +42,8 @@
           <v-icon>mdi-vuejs</v-icon>
           <router-link
             :to="{ name: 'VueQuestions' }"
-            class="text-deocration-none mx-auto"
-            style="text-decoration: none; color: #a55c1b;"
+            class="mx-auto"
+            style="text-decoration: none;"
           >
             Vue
           </router-link>
@@ -52,8 +52,8 @@
           <v-icon>mdi-git</v-icon>
           <router-link
             :to="{ name: 'GitQuestions' }"
-            class="text-deocration-none mx-auto"
-            style="text-decoration: none; color: #a55c1b;"
+            class="mx-auto"
+            style="text-decoration: none;"
           >
             Git
           </router-link>
@@ -62,8 +62,8 @@
           <v-icon>mdi-react</v-icon>
           <router-link
             :to="{ name: '' }"
-            class="text-deocration-none mx-auto"
-            style="text-decoration: none; color: #a55c1b;"
+            class="mx-auto"
+            style="text-decoration: none;"
           >
             React
           </router-link>
@@ -72,8 +72,8 @@
           <v-icon>mdi-language-typescript</v-icon>
           <router-link
             :to="{ name: 'TypeScriptQuestions' }"
-            class="text-deocration-none mx-auto"
-            style="text-decoration: none; color: #a55c1b;"
+            class="mx-auto"
+            style="text-decoration: none;"
           >
             Typescript
           </router-link>
@@ -82,8 +82,8 @@
           <v-icon>mdi-account-circle</v-icon>
           <router-link
             :to="{ name: 'GeneralQuestions' }"
-            class="text-deocration-none mx-auto"
-            style="text-decoration: none; color: #a55c1b;"
+            class="mx-auto"
+            style="text-decoration: none;"
           >
             Ogólne
           </router-link>
@@ -92,8 +92,8 @@
           <v-icon>mdi-account-circle</v-icon>
           <router-link
             :to="{ name: 'BootstrapQuestions' }"
-            class="text-deocration-none mx-auto"
-            style="text-decoration: none; color: #a55c1b;"
+            class="mx-auto"
+            style="text-decoration: none;"
           >
             Testowanie
           </router-link>
@@ -106,7 +106,6 @@
 <script>
 import { mapActions } from "vuex";
 export default {
-
   methods: {
     ...mapActions("questions", [
       "randomHtmlQuestion",
