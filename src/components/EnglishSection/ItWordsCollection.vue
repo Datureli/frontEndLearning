@@ -19,12 +19,12 @@
           :key="index"
         >
           <h1>{{ CheckKnowledgeQuestion.englishWord }}</h1>
+          <h1>{{ CheckKnowledgeQuestion.polishWord }}</h1>
           <v-text-field v-model="selectedAnswer">dsadsa</v-text-field>
-          {{selectedAnswer}}
-          
+          {{ selectedAnswer }}
+          <h1 v-if="validateAnswer">good</h1>
         </v-carousel-item>
       </v-carousel>
-      
     </v-card>
 
     <v-card
@@ -49,10 +49,13 @@ export default {
       return this.showQuestions;
     },
     validateAnswer() {
-      if(this.selectedAnswer = CheckKnowledgeQuestion.polishWord  ) {
-        return true
+      if (this.selectedAnswer = this.CheckKnowledgeQuestion.polishWord ) {
+        return (this.goodAnswer = true);
       }
-    }
+    },
+  },
+  mounted() {
+
   },
   methods: {
     incrementCarouselCounter() {
@@ -71,6 +74,7 @@ export default {
   },
   data() {
     return {
+      goodAnswer: false,
       selectedAnswer: "",
       showQuestions: true,
       testAgreement: true,
@@ -128,19 +132,19 @@ export default {
           englishWord: "cause",
           polishWord: "Przyczyna",
         },
-           {
+        {
           englishWord: "Request",
           polishWord: "Żądanie",
         },
-             {
+        {
           englishWord: "Access",
           polishWord: "dostęp",
         },
-               {
+        {
           englishWord: "available",
           polishWord: "dostępny",
         },
-                 {
+        {
           englishWord: "Consider",
           polishWord: "Rozważać",
         },

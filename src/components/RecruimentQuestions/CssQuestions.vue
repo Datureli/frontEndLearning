@@ -1,12 +1,13 @@
 <template>
-  <v-carousel hide-delimiters @change="page = 1" class="mt-1">
+  <v-carousel eager hide-delimiters @change="page = 1" class="mt-1">
+    
     <v-carousel-item
       v-for="(cssQuestions, index) in cssQuestions"
       :key="index"
       max-width="700"
       class="mx-auto"
     >
-      <v-list-item >
+      <v-list-item>
         <v-list-item-content>
           <v-list-item-title
             class="text--primary wrap-text font-weight-black text-h4 text-wrap "
@@ -14,8 +15,9 @@
           ></v-list-item-title>
 
           <v-list-item-subtitle
-            style="  word-break: break-all;"
-            class="white--text text-justify text-h5 text-wrap"
+            style="word-break: break-all;  text-align: justify;
+  text-justify: auto;"
+            class="white--text text-h5 text-wrap"
             v-if="page === 1"
             v-show="disable"
             v-text="cssQuestions.answer"
@@ -28,7 +30,7 @@
             v-text="cssQuestions.secondAnswer"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
-              style="  word-break: break-all;"
+            style="  word-break: break-all;"
             class="white--text text-justify text-h5 text-wrap"
             v-if="page === 3"
             v-show="disable"
@@ -109,6 +111,7 @@ export default {
     },
     randomCssQuestion() {
       this.$store.dispatch("cssQuestions/randomCssQuestion");
+      this.page = 1
     },
   },
 };
