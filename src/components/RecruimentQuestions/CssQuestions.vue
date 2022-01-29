@@ -1,6 +1,5 @@
 <template>
   <v-carousel eager hide-delimiters @change="page = 1" class="mt-1">
-    
     <v-carousel-item
       v-for="(cssQuestions, index) in cssQuestions"
       :key="index"
@@ -52,6 +51,7 @@
       <v-icon
         x-large
         @click="cssQuestionLoop"
+        :disabled="disableLoop"
         class="hidden-sm-and-down"
         color="white"
         style="position: absolute; bottom: 26%; right:85%;"
@@ -87,6 +87,11 @@
 <script>
 import { mapState } from "vuex";
 export default {
+  data() {
+    return {
+      disableLoop: false,
+    };
+  },
   props: {
     page: {
       type: Number,
@@ -108,10 +113,11 @@ export default {
     },
     cssQuestionLoop() {
       this.$store.dispatch("cssQuestions/cssQuestionLoop");
+      this.disableLoop = true;
     },
     randomCssQuestion() {
       this.$store.dispatch("cssQuestions/randomCssQuestion");
-      this.page = 1
+      this.page = 1;
     },
   },
 };
