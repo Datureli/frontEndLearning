@@ -6,28 +6,29 @@
       max-width="700"
       class="mx-auto"
     >
-      <v-list-item>
+      <v-list-item >
         <v-list-item-content>
-          <v-list-item-subtitle
-            class="text--primary font-weight-black text-h4 text-wrap "
+          <v-list-item-title
+            class="text--primary wrap-text font-weight-black text-h4 text-wrap "
             v-text="cssQuestions.question"
-          ></v-list-item-subtitle>
+          ></v-list-item-title>
 
           <v-list-item-subtitle
-            hide-details="auto"
-            height="100%"
+            style="  word-break: break-all;"
             class="white--text text-justify text-h5 text-wrap"
             v-if="page === 1"
             v-show="disable"
-            v-text="cssQuestions.answer.replace(/\s\s+/g, ' ')"
+            v-text="cssQuestions.answer"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
+            style="  word-break: break-all;"
             class="white--text text-justify text-h5 text-wrap"
             v-if="page === 2"
             v-show="disable"
             v-text="cssQuestions.secondAnswer"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
+              style="  word-break: break-all;"
             class="white--text text-justify text-h5 text-wrap"
             v-if="page === 3"
             v-show="disable"
@@ -95,7 +96,7 @@ export default {
   },
   methods: {
     checkSpaces() {
-    cssQuestions.replace(/  +/g, ' ')
+      cssQuestions.replace(/  +/g, " ");
     },
     disableAnswers() {
       this.$store.commit("disable");
@@ -112,3 +113,10 @@ export default {
   },
 };
 </script>
+
+<style>
+.wrap-text {
+  white-space: normal;
+  word-wrap: break-word;
+}
+</style>

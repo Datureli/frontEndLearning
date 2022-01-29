@@ -19,9 +19,12 @@
           :key="index"
         >
           <h1>{{ CheckKnowledgeQuestion.englishWord }}</h1>
-          <v-text-field :rules="rules"></v-text-field>
+          <v-text-field v-model="selectedAnswer">dsadsa</v-text-field>
+          {{selectedAnswer}}
+          
         </v-carousel-item>
       </v-carousel>
+      
     </v-card>
 
     <v-card
@@ -45,6 +48,11 @@ export default {
     checkStatus() {
       return this.showQuestions;
     },
+    validateAnswer() {
+      if(this.selectedAnswer = CheckKnowledgeQuestion.polishWord  ) {
+        return true
+      }
+    }
   },
   methods: {
     incrementCarouselCounter() {
@@ -52,8 +60,6 @@ export default {
       for (let i = 0; i < this.itWords.length; i++) {
         this.CheckKnowledgeQuestions.push(this.itWords[i]);
       }
-
-      // this.itWords.shift()
     },
     agreeToTest() {
       this.testAgreement = false;
