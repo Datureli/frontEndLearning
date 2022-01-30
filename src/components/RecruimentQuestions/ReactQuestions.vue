@@ -36,7 +36,7 @@
          </v-carousel-item>
         <v-sheet class="d-flex" relative>
       <v-icon
-        x-large
+        large
         @click="randomCssQuestion"
         class="hidden-sm-and-down"
         color="brown"
