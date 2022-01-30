@@ -3,7 +3,7 @@
     <v-carousel-item
       v-for="(javascriptQuestions, index) in javascriptQuestions"
       :key="index"
-          max-width="700"
+      max-width="700"
       class="mx-auto"
     >
       <v-list-item>
@@ -34,11 +34,12 @@
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
-     <v-sheet class="d-flex" relative>
+    <v-sheet class="d-flex" relative>
       <v-icon
         x-large
         @click="randomQuestion"
         color="brown"
+        class="hidden-sm-and-down"
         style="position: absolute; bottom: 26%; right:90%;"
         >mdi-dice-multiple</v-icon
       >
@@ -46,6 +47,7 @@
       <v-icon
         x-large
         @click="questionLoop"
+        class="hidden-sm-and-down"
         color="white"
         style="position: absolute; bottom: 26%; right:85%;"
         >mdi-autorenew</v-icon
@@ -54,11 +56,13 @@
       <v-pagination
         style="position: absolute; bottom: 18%; right:36%"
         v-model="page"
+        class="hidden-sm-and-down"
         :length="3"
       ></v-pagination>
       <v-icon
         large
         @click="disableAnswers"
+        class="hidden-sm-and-down"
         style="position: absolute; bottom: 26%; right:10%;"
         >mdi-comment-off-outline</v-icon
       >
@@ -66,6 +70,7 @@
       <v-icon
         x-large
         @click="addToFavorite(javascriptQuestions)"
+        class="hidden-sm-and-down"
         color="red"
         style="position: absolute; bottom: 26%; right:4%;"
         >mdi-heart</v-icon

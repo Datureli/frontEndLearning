@@ -1,35 +1,35 @@
 <template>
   <v-carousel @change="page = 1" class="mt-1">
     <v-carousel-item
-      v-for="(javascriptQuestions, index) in javascriptQuestions"
+      v-for="(reactQuestions, index) in reactQuestions"
       :key="index"
-          max-width="700"
+      max-width="700"
       class="mx-auto"
     >
       <v-list-item>
         <v-list-item-content>
           <v-list-item-subtitle
             class="text--primary   font-weight-black  text-h4 text-wrap "
-            v-text="javascriptQuestions.question"
+            v-text="reactQuestions.question"
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
             class="white--text text-justify text-h5 text-wrap"
             v-if="page === 1"
             v-show="disable"
-            v-text="javascriptQuestions.answer"
+            v-text="reactQuestions.answer"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
             class="white--text text-justify text-h5 text-wrap"
             v-if="page === 2"
             v-show="disable"
-            v-text="javascriptQuestions.secondAnswer"
+            v-text="reactQuestions.secondAnswer"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
             class="white--text text-justify text-h5 text-wrap"
             v-if="page === 3"
             v-show="disable"
-            v-text="javascriptQuestions.thirdPartOfAnswer"
+            v-text="reactQuestions.thirdPartOfAnswer"
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -45,12 +45,12 @@
           >mdi-comment-off-outline</v-icon
         >
         <v-icon
-          @click="randomQuestion"
+          @click="randomReactQuestion"
           color="brown"
           style="position: absolute; bottom: 26%; right:7%; font-size:45px;"
           >mdi-dice-multiple</v-icon
         >
-        <v-button @click="questionLoop()">
+        <v-button @click="reactQuestionLoop()">
           <v-icon
             color="white"
             class="mx-auto"
@@ -59,14 +59,13 @@
           >
         </v-button>
 
-        <v-button @click="addToFavorite(javascriptQuestions)">
+        <v-button @click="addToFavorite(reactQuestions)">
           <v-icon
             color="red"
             style="position: absolute; bottom: 26%; right:1%; font-size:45px;"
             >mdi-heart</v-icon
           >
         </v-button>
-        
       </div>
     </v-carousel-item>
   </v-carousel>
@@ -82,7 +81,7 @@ export default {
   },
   computed: {
     ...mapState(["disable", "favorite"]),
-    ...mapState("questions", ["javascriptQuestions"]),
+    ...mapState("reactQuestions", ["reactQuestions"]),
   },
 
   methods: {
@@ -90,14 +89,14 @@ export default {
       this.$store.commit("disable");
     },
 
-    addToFavorite(javascriptQuestions) {
-      this.$store.state.favorite.push(javascriptQuestions);
+    addToFavorite(reactQuestions) {
+      this.$store.state.favorite.push(reactQuestions);
     },
     randomQuestion() {
-      this.$store.dispatch("questions/randomQuestion");
+      this.$store.dispatch("reactQuestions/randomReactQuestion");
     },
     questionLoop() {
-      this.$store.dispatch("questions/questionLoop");
+      this.$store.dispatch("reactQuestions/reactQuestionLoop");
     },
   },
 };

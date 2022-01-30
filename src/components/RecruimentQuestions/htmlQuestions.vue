@@ -19,11 +19,11 @@
             v-show="disable"
             v-text="htmlQuestions.answer"
           ></v-list-item-subtitle>
-        <v-list-item-subtitle
+          <v-list-item-subtitle
             class="white--text text-justify text-h5 text-wrap"
             v-if="page === 2"
             v-show="disable"
-           v-text="htmlQuestions.secondAnswer"
+            v-text="htmlQuestions.secondAnswer"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
             class="white--text text-justify text-h5 text-wrap"
@@ -39,7 +39,7 @@
         <v-icon
           x-large
           @click="randomHtmlQuestion"
-          class="d-sm-and-down-none"
+          class="hidden-sm-and-down"
           color="brown"
           style="position: absolute; bottom: 26%; right:90%;"
           >mdi-dice-multiple</v-icon
@@ -48,25 +48,29 @@
         <v-icon
           x-large
           @click="htmlQuestionLoop"
+          class="hidden-sm-and-down"
           color="white"
           style="position: absolute; bottom: 26%; right:85%;"
           >mdi-autorenew</v-icon
         >
 
         <v-pagination
+          class="hidden-sm-and-down"
           style="position: absolute; bottom: 18%; right:36%"
           v-model="page"
           :length="3"
         ></v-pagination>
         <v-icon
           large
+          class="hidden-sm-and-down"
           @click="disableAnswers"
           style="position: absolute; bottom: 26%; right:10%;"
           >mdi-comment-off-outline</v-icon
         >
 
         <v-icon
-        :disabled="!isHeartActive"
+          class="hidden-sm-and-down"
+          :disabled="!isHeartActive"
           x-large
           @click="addToFavorite(htmlQuestions)"
           color="red"
@@ -87,7 +91,7 @@ export default {
     },
   },
   computed: {
-    ...mapState(["disable", "favorite","isHeartActive"]),
+    ...mapState(["disable", "favorite", "isHeartActive"]),
     ...mapState("htmlQuestions", ["htmlQuestions"]),
   },
 
@@ -107,24 +111,3 @@ export default {
   },
 };
 </script>
-<style>
-pre {
-  background: rgb(102, 93, 93);
-  border: 2px solid black;
-  padding: 0;
-  text-align: center;
-  justify-content: center;
-  margin: 0 auto;
-  width: 100%;
-  height: 250px;
-  font-size: 15px;
-}
-code {
-  font-family: "Inconsolata", "Monaco", "Consolas", "Andale Mono",
-    "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
-  display: block;
-  font-size: 13px;
-  line-height: 19px;
-  color: #ddd;
-}
-</style>

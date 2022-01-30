@@ -40,6 +40,7 @@
         x-large
         @click="randomVueQuestion"
         color="brown"
+         class="hidden-sm-and-down"
         style="position: absolute; bottom: 26%; right:90%;"
         >mdi-dice-multiple</v-icon
       >
@@ -48,6 +49,7 @@
         x-large
         @click="vueQuestionLoop"
         color="white"
+         class="hidden-sm-and-down"
         style="position: absolute; bottom: 26%; right:85%;"
         >mdi-autorenew</v-icon
       >
@@ -55,11 +57,13 @@
       <v-pagination
         style="position: absolute; bottom: 18%; right:36%"
         v-model="page"
+         class="hidden-sm-and-down"
         :length="3"
       ></v-pagination>
       <v-icon
         large
         @click="disableAnswers"
+         class="hidden-sm-and-down"
         style="position: absolute; bottom: 26%; right:10%;"
         >mdi-comment-off-outline</v-icon
       >
@@ -68,6 +72,7 @@
         x-large
         @click="addToFavorite(vueQuestions)"
         color="red"
+         class="hidden-sm-and-down"
         style="position: absolute; bottom: 26%; right:4%;"
         >mdi-heart</v-icon
       >
@@ -86,7 +91,7 @@ export default {
   },
   computed: {
     ...mapState(["disable", "favorite"]),
-    ...mapState("questions", ["vueQuestions"]),
+    ...mapState("vueQuestions", ["vueQuestions"]),
     
   },
 
@@ -99,10 +104,10 @@ export default {
       this.$store.state.favorite.push(vueQuestions);
     },
     randomVueQuestion() {
-      this.$store.dispatch("questions/randomVueQuestion");
+      this.$store.dispatch("vueQuestions/randomVueQuestion");
     },
     vueQuestionLoop() {
-      this.$store.dispatch("questions/vueQuestionLoop");
+      this.$store.dispatch("vueQuestions/vueQuestionLoop");
     },
   },
 };

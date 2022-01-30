@@ -6,6 +6,8 @@ import register from "./modules/register"
 import htmlQuestions from './modules/htmlQuestions'
 import cssQuestions from './modules/cssQuestions'
 import vueQuestions from './modules/vueQuestions'
+import gitQuestions from './modules/gitQuestions'
+import reactQuestions from './modules/reactQuestions'
 
 Vue.use(Vuex);
 
@@ -16,7 +18,9 @@ export default new Vuex.Store({
     register,
     htmlQuestions,
     cssQuestions,
-    vueQuestions
+    vueQuestions,
+    gitQuestions,
+    reactQuestions
   },
 
   state: {

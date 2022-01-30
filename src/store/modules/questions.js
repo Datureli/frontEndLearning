@@ -316,14 +316,7 @@ export default {
         secondAnswer: "",
       },
     ],
-    reactQuestions: [
-      {
-        question: "Czym jest defaultProps?",
-        answer:
-          "defaultProps pozwala nam na ustawienie propsów,ustawienie wartości domyślnej dla propsów",
-        secondAnswer: "",
-      },
-    ],
+
     generalQuestions: [
       {
         question: "Czym jest ShadowDOM?",
@@ -481,15 +474,7 @@ export default {
       context.commit("questionLoop");
     },
 
-    cssQuestionLoop(context) {
-      context.commit("cssQuestionLoop");
-    },
-    vueQuestionLoop(context) {
-      context.commit("vueQuestionLoop");
-    },
-    gitQuestionLoop(context) {
-      context.commit("gitQuestionLoop");
-    },
+
     randomQuestion(context) {
       context.commit("randomQuestion");
     },

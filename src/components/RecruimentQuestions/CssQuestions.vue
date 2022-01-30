@@ -102,6 +102,19 @@ export default {
     ...mapState("cssQuestions", ["cssQuestions"]),
   },
   methods: {
+    switchQuestion() {
+      switch (page) {
+        case 1:
+          return cssQuestions.answer;
+
+        case 2:
+          cssQuestions.secondAnswer;
+          break;
+
+        default:
+          break;
+      }
+    },
     disableAnswers() {
       this.$store.commit("disable");
     },

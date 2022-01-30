@@ -61,7 +61,7 @@
         <v-list-item>
           <v-icon>mdi-react</v-icon>
           <router-link
-            :to="{ name: '' }"
+            :to="{ name: 'ReactQuestions' }"
             class="mx-auto"
             style="text-decoration: none;"
           >
