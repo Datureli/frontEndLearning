@@ -37,7 +37,7 @@
     <v-sheet class="d-flex">
       <v-row justify="spacer-around" class="hidden-sm-and-down">
         <v-icon
-          x-large
+          large
           @click="randomHtmlQuestion"
           color="brown"
           style="position: absolute; bottom: 26%; right:90%;"
