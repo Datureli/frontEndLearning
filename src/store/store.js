@@ -8,6 +8,7 @@ import cssQuestions from './modules/cssQuestions'
 import vueQuestions from './modules/vueQuestions'
 import gitQuestions from './modules/gitQuestions'
 import reactQuestions from './modules/reactQuestions'
+import generalQuestions from "./modules/generalQuestions";
 
 Vue.use(Vuex);
 
@@ -20,7 +21,8 @@ export default new Vuex.Store({
     cssQuestions,
     vueQuestions,
     gitQuestions,
-    reactQuestions
+    reactQuestions,
+    generalQuestions
   },
 
   state: {
@@ -37,7 +39,8 @@ export default new Vuex.Store({
         javascriptQuestions.answer,
         htmlQuestions,
         vueQuestions,
-        gitQuestions
+        gitQuestions,
+        generalQuestions
       );
     },
   },

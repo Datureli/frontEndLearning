@@ -9,6 +9,13 @@ export default {
                 "defaultProps pozwala nam na ustawienie propsów,ustawienie wartości domyślnej dla propsów",
               secondAnswer: "",
             },
+            {
+              question: "Czym jest defaultProps?",
+              answer:
+                "defaultProps pozwala nam na ustawienie propsów,ustawienie wartości domyślnej dla propsów",
+              secondAnswer: "",
+              thirdPartOfAnswer: ''
+            },
           ],
     },
   

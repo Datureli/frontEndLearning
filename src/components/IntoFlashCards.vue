@@ -5,6 +5,7 @@
       max-width="944"
       height="380"
       elevation="10"
+      color="transparent"
     >
       <div class="ml-15 mt-15">
         <v-card-title class="text-h4">Ucz się poprzez fiszki!</v-card-title>

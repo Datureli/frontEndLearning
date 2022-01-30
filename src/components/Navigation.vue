@@ -98,7 +98,7 @@ export default {
       },
       {
         title: "Gry",
-        link: "/home",
+        link: "/intoflashcards",
       },
       {
         title: "Materiały",

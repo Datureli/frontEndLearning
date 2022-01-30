@@ -34,12 +34,11 @@
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
-    <v-sheet class="d-flex" relative>
-      <v-row justify="spacer-around">
+    <v-sheet class="d-flex">
+      <v-row justify="spacer-around" class="hidden-sm-and-down">
         <v-icon
           x-large
           @click="randomHtmlQuestion"
-          class="hidden-sm-and-down"
           color="brown"
           style="position: absolute; bottom: 26%; right:90%;"
           >mdi-dice-multiple</v-icon
@@ -48,21 +47,18 @@
         <v-icon
           x-large
           @click="htmlQuestionLoop"
-          class="hidden-sm-and-down"
           color="white"
           style="position: absolute; bottom: 26%; right:85%;"
           >mdi-autorenew</v-icon
         >
 
         <v-pagination
-          class="hidden-sm-and-down"
           style="position: absolute; bottom: 18%; right:36%"
           v-model="page"
           :length="3"
         ></v-pagination>
         <v-icon
           large
-          class="hidden-sm-and-down"
           @click="disableAnswers"
           style="position: absolute; bottom: 26%; right:10%;"
           >mdi-comment-off-outline</v-icon
