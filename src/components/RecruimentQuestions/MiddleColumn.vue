@@ -1,7 +1,7 @@
 <template>
   <v-sheet
     class="mx-auto mt-xm-5 mb-15 mt-lg-12"
-    height="415"
+    :height="height"
     :width="width"
     color="transparent"
     tile
@@ -55,6 +55,20 @@ export default {
           return 790;
         case "xl":
           return 900;
+      }
+    },
+    height() {
+     switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return 350;
+        case "sm":
+          return 350;
+        case "md":
+          return 400;
+        case "lg":
+          return 415;
+        case "xl":
+          return 400;
       }
     },
     elevation() {
