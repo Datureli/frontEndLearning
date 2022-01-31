@@ -40,7 +40,8 @@
         <v-tabs fixed-tabs align-with-title>
           <v-tab
             v-model="tab"
-            class="text-decoration-none white--text d-none d-sm-flex"
+            style="font-size: 12px;"
+            class=" white--text ma-0 d-none d-sm-flex"
             v-for="(toolbarItem, index) in toolbarItems"
             :key="index"
             :to="toolbarItem.link"
@@ -50,7 +51,7 @@
         </v-tabs>
       </template>
       <v-spacer></v-spacer>
-      <v-card color="transparent" outlined style="border: 2px solid red;">
+      <v-card color="transparent" outlined>
         <v-btn color="transparent" outlined>
           <Login />
         </v-btn>
@@ -71,8 +72,9 @@
       </v-card>
       <h1 class="mx-auto d-none">--{{ currentRouteName }}--</h1>
     </v-app-bar>
-
+ <v-slide-x-transition mode="out-in">
     <router-view></router-view>
+     </v-slide-x-transition>
   </v-container-fluid>
 </template>
 

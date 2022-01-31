@@ -2,11 +2,10 @@
   <v-app>
     <v-row>
       <v-col>
-        <v-main>
-          <header>
+        <v-main >
+          <header >
             <Navigation />
           </header>
-          <transition name="slide" mode="out-in"> </transition>
         </v-main>
       </v-col>
     </v-row>
@@ -33,9 +32,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
 }
 
 .darkGradient {
-  background-image: linear-gradient(177deg, #000000 0%, #2c3e50 74%);
+  background-image: linear-gradient(167deg, #000000 0%, #2c3e50 74%);
 }
 </style>
