@@ -16,7 +16,7 @@
           <v-list-item-subtitle
             style="word-break: break-all;  text-align: justify;
   text-justify: auto;"
-            class="white--text text-h5 text-wrap"
+            class="white--text text-h6 text-wrap"
             v-if="page === 1"
             v-show="disable"
             v-text="cssQuestions.answer"

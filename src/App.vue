@@ -36,6 +36,6 @@ body {
 }
 
 .darkGradient {
-  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  background-image: linear-gradient(177deg, #000000 0%, #2c3e50 74%);
 }
 </style>
