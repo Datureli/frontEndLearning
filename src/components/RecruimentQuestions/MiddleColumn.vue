@@ -1,6 +1,6 @@
 <template>
   <v-sheet
-    class="mx-auto mt-xm-5 mb-15 mt-lg-16"
+    class="mx-auto mt-xm-5 mb-15 mt-lg-12"
     height="415"
     :width="width"
     color="transparent"
@@ -52,7 +52,7 @@ export default {
         case "md":
           return 500;
         case "lg":
-          return 850;
+          return 790;
         case "xl":
           return 900;
       }

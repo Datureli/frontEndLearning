@@ -1,8 +1,8 @@
 <template>
-  <v-card width="320" class="mt-15 ml-12" color="transparent" elevation="0">
+  <v-card width="280" class="mt-8 ml-16" color="transparent" elevation="0">
     <v-list color="transparent">
       <v-list-item-group
-        style="font-size: 25px"
+        style="font-size: 23px"
         color="primary"
         active-class="blue--text"
       >
