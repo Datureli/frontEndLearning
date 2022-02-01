@@ -37,6 +37,24 @@ export default {
         secondAnswer: "",
       },
       {
+        question: "Czym są domknięcia?",
+        answer:
+          "domknięcia są to funkcje, które mają dostęp do środowiska, w którym zostały zdefiniowane. ",
+        secondAnswer: "",
+      },
+      {
+        question: "Jak możemy tworzyć obiekty w javascript?",
+        answer:
+          "W JavaScript obiekty można tworzyć na 3 różne sposoby: poprzez inicjalizator obiektu (literał obiektywy, ang. object literal syntax), fabrykę (ang. factory function) oraz funkcje konstruujące (ang. constructor functions).",
+        secondAnswer: "",
+      },
+      {
+        question: "Czy JavaScript wspiera dziedziczenie? Jeżeli tak, to w jaki sposób?",
+        answer:
+          "JavaScript w przeciwieństwie do wielu innych języków, np. Javy nie ma dedykowanego mechanizmu dla klas.W JS wszystko jest obiektem, nawet funkcje. W efekcie czego można zaimplementować mechanizm dziedziczenia, opierając się na prototypach.",
+        secondAnswer: "",
+      },
+      {
         question: "Jaka jest różnica między var,let a const?",
         answer:
           "Pierwsza i najważniejsza różnica między let/const a var to zasięg zmiennych.W przypadku let/const zmienne mają zasięg blokowy, co w skrócie oznacza od klamry do klamry.Zmienne deklarowane za pomocą var mają natomiast zasięg funkcyjny, czyli ich zasięg określa ciało funkcji.Ostatnią różnicą - dość mało znaną - jest to, że deklarując zmienną globalną var (poza ciałem funkcji), dodawana jest ona jako właściwość obiektu window. W przypadku let nic takiego się nie dzieje:",

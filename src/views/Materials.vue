@@ -46,32 +46,11 @@ export default {
 .triangle {
   width: 100%;
   height: calc(340vw / 10);
-  background: linear-gradient(
-    to bottom right,
-    #2c3e50 0%,
-    rgb(0, 0, 0) 50%,
-    #afa565 50%,
-    #000000 100%
-  );
+  background: black;
 }
 .tab1 {
   color: rebeccapurple;
   height: 100px;
   text-align: center;
-}
-.flashing {
-  animation: flash 2.5s;
-  background: brown;
-}
-@keyframes flash {
-  0% {
-    background-color: none;
-  }
-  50% {
-    background-color: green;
-  }
-  100% {
-    background-color: none;
-  }
 }
 </style>
