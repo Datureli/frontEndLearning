@@ -1,29 +1,32 @@
 <template>
-  <v-card height="540" class="triangle d-flex">
+  <v-card height="540" class="d-flex" color="black" >
     <v-spacer></v-spacer>
+    <v-card class="d-flex mt-5" color="transparent">
+      <materialCard class="mt-5">
+        <Slot title="tab1" class="tab1 mx-auto text-h5">Video</Slot>
+      </materialCard>
+      <materialCard class="mt-10 text-center">
+        <Slot title="tab2" class="mx-auto text-h5">Książki</Slot>
+      </materialCard>
+      
+      <materialCard class="mt-16">
+        
+          <Slot
+            title="tab3"
+            style="word-break: break-word"
+            class="mx-auto text-h5"
+            >Strony internetowe</Slot
+          >
+      </materialCard>
+    </v-card>
 
-    <materialCard
-      class="mt-2"
-      :class="{ active: isActive }"
-      @click="toggleClass('app', 'flashing')"
-    >
-      <Slot title="tab1" class="tab1 mx-auto text-h5">Video</Slot>
-    </materialCard>
-    <materialCard class="mt-7 text-center">
-      <Slot title="tab2" class="mx-auto text-h5">Książki</Slot>
-    </materialCard>
-    <materialCard class="mt-16">
-      <Slot title="tab3" style="word-break: break-word" class="mx-auto text-h5"
-        >Strony internetowe</Slot
-      >
-    </materialCard>
     <v-spacer></v-spacer>
   </v-card>
 </template>
 
 <script setup>
-import MaterialCard from "../components/MaterialCard.vue";
-import Slot from "../components/Slot.vue";
+import MaterialCard from "../components/materials/MaterialCard.vue";
+import Slot from "../components/materials/Slot.vue";
 export default {
   firstColumnClicked: false,
   secondColumnClicked: false,
@@ -36,18 +39,12 @@ export default {
   methods: {
     myFilter() {
       this.isActive = !this.isActive;
-      // some code to filter users
     },
   },
 };
 </script>
 
 <style scoped>
-.triangle {
-  width: 100%;
-  height: calc(340vw / 10);
-  background: black;
-}
 .tab1 {
   color: rebeccapurple;
   height: 100px;

@@ -80,12 +80,12 @@ const routes = [
   {
     path: "/intoflashcards",
     name: "IntoFlashCards",
-    component: () => import("../components/IntoFlashCards.vue"),
+    component: () => import("../components/games/IntoFlashCards"),
   },
   {
     path: "/quiz",
     name: "Quiz",
-    component: () => import("../components/Quiz.vue"),
+    component: () => import("../components/games/Quiz"),
   },
   {
     path: "/materials",
@@ -100,7 +100,7 @@ const routes = [
   {
     path: "/signup",
     name: "SignUp",
-    component: () => import("../components/SignUp.vue")
+    component: () => import("../components/login/SignUp.vue")
   },
   {
     path: "/login/",

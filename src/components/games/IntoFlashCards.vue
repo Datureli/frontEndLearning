@@ -26,7 +26,7 @@
       </div>
       <v-spacer></v-spacer>
       <v-img
-        src="../assets/logo.png"
+      
         class="mr-10"
         max-height="350"
         max-width="350"

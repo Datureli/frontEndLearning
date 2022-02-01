@@ -1,6 +1,6 @@
 <template>
-  <v-card class="mx-auto ml-15 module-border-wrap" width="300" max-height="400">
-    <div class="module">
+  <v-card class="mx-auto ml-15 module-border-wrap"  width="300" max-height="350">
+    <div class="module" >
       <v-card-title class="mx-auto mt-15">
         <slot />
       </v-card-title>

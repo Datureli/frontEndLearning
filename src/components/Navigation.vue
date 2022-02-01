@@ -81,7 +81,7 @@
 <script>
 import { mapState } from "vuex";
 import Login from "./login/Login.vue";
-import SignUp from "./SignUp.vue";
+import SignUp from "./login/SignUp.vue";
 import About from "../views/About.vue";
 export default {
   components: { Login, SignUp, About },
