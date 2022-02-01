@@ -33,51 +33,51 @@
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-      <div class="d-flex">
-        <v-pagination
-          style="position: absolute; bottom: 25%; right:35%"
-          v-model="page"
-          :length="3"
-        ></v-pagination>
-        <v-icon
-          @click="disableAnswers"
-          style="position: absolute; bottom: 26%; right:17%; font-size:45px;"
-          >mdi-comment-off-outline</v-icon
-        >
-        <v-icon
-          @click="randomGeneralQuestion"
-          color="brown"
-          style="position: absolute; bottom: 26%; right:7%; font-size:45px;"
-          >mdi-dice-multiple</v-icon
-        >
-        <v-button @click="generalQuestionLoop">
-          <v-icon
-            color="white"
-            class="mx-auto"
-            style="position: absolute; bottom: 26%; right:12%; font-size:45px;"
-            >mdi-autorenew</v-icon
-          >
-        </v-button>
+          </v-carousel-item>
+       <v-sheet class="d-flex" relative>
+      <v-icon
+        x-large
+        @click="randomGeneralQuestion"
+        class="hidden-sm-and-down"
+        color="brown"
+        style="position: absolute; bottom: 26%; right:90%;"
+        >mdi-dice-multiple</v-icon
+      >
 
-        <v-button @click="addToFavorite(generalQuestions)">
-          <v-icon
-            color="red"
-            style="position: absolute; bottom: 26%; right:1%; font-size:45px;"
-            >mdi-heart</v-icon
-          >
-        </v-button>
-        <v-row justify="space-around"  class="mt-15">
-          <div class="mr-15">
-            <v-icon color="black" x-large>mdi-application-brackets</v-icon>
-            <v-icon color="blue" x-large>mdi-help-box</v-icon>
-          </div>
-          <div>
-            <v-icon color="red" x-large>mdi-heart</v-icon>
-            <v-icon color="grey" x-large>mdi-cogs</v-icon>
-          </div>
-        </v-row>
-      </div>
-    </v-carousel-item>
+      <v-icon
+        x-large
+        @click="generalQuestionLoop"
+        :disabled="disableLoop"
+        class="hidden-sm-and-down"
+        color="white"
+        style="position: absolute; bottom: 26%; right:85%;"
+        >mdi-autorenew</v-icon
+      >
+
+      <v-pagination
+        class="mx-auto hidden-sm-and-down"
+        style="position: absolute; bottom: 18%; right:36%"
+        v-model="page"
+        :length="3"
+      ></v-pagination>
+      <v-icon
+        large
+        class="hidden-sm-and-down"
+        @click="disableAnswers"
+        style="position: absolute; bottom: 26%; right:10%;"
+        >mdi-comment-off-outline</v-icon
+      >
+
+      <v-icon
+        x-large
+        class="hidden-sm-and-down"
+        @click="addToFavorite(generalQuestions)"
+        color="red"
+        style="position: absolute; bottom: 26%; right:4%;"
+        >mdi-heart</v-icon
+      >
+    </v-sheet>
+
   </v-carousel>
 </template>
 

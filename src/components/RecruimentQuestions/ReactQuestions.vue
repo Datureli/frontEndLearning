@@ -37,7 +37,7 @@
         <v-sheet class="d-flex" relative>
       <v-icon
         large
-        @click="randomCssQuestion"
+        @click="randomReactQuestion"
         class="hidden-sm-and-down"
         color="brown"
         style="position: absolute; bottom: 26%; right:90%;"
@@ -46,7 +46,7 @@
 
       <v-icon
         x-large
-        @click="cssQuestionLoop"
+        @click="reactQuestionLoop"
         :disabled="disableLoop"
         class="hidden-sm-and-down"
         color="white"
@@ -71,7 +71,7 @@
       <v-icon
         x-large
         class="hidden-sm-and-down"
-        @click="addToFavorite(cssQuestions)"
+        @click="addToFavorite(reactQuestions)"
         color="red"
         style="position: absolute; bottom: 26%; right:4%;"
         >mdi-heart</v-icon

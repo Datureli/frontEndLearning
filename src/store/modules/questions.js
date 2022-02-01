@@ -165,7 +165,7 @@ export default {
       {
         question: "Opisz pętle forEach",
         answer:
-          "Wykonuje dostarczoną funkcję jeden raz na każdy element tablicy.Metoda forEach wykonuje dostarczoną funkcje callback raz dla każdego elementu tablicy. Funkcja callback wywoływana jest jedynie dla indeksów tablicy, którym została przypisana wartość; nie jest wywoływana dla indeksów, które zostały usunięte i tych, którym nigdy nie została przypisana żadna wartość.Funkcja callback jest wywoływana z trzema argumentami: wartością elementu, jego indeksem i obiektem tablicy, w którym się ten element zawiera.",
+          "Wykonuje dostarczoną funkcję jeden raz na każdy element tablicy.Funkcja callback wywoływana jest jedynie dla indeksów tablicy, którym została przypisana wartość; nie jest wywoływana dla indeksów, które zostały usunięte i tych, którym nigdy nie została przypisana żadna wartość.Funkcja callback jest wywoływana z trzema argumentami: wartością elementu, jego indeksem i obiektem tablicy, w którym się ten element zawiera.",
         secondAnswer:
           "Jeśli parametr thisArg został dostarczony do metody forEach, będzie on wskazywany przez this dla każdego wywołania funkcji callback. W przypadku, gdy nie został on przekazany lub jego wartość jest równa null, this będzie się odnosić do obiektu globalnego połączonego z funkcją callback.Metoda forEach nie modyfikuje tablicy na której jest wywołana.",
       },
@@ -296,22 +296,6 @@ export default {
         question: "Opisz działanie funkcji expect",
         answer:
           "TZwraca ona obiekt z metodami, które umożliwiają wybranie wygodnego operatora logicznego oraz tego co dokładnie będziemy porównywać.",
-        secondAnswer: "",
-      },
-    ],
-    errorQuestions: [
-      {
-        question:
-          "Unchecked runtime.lastError: The message port closed before a response was received.",
-        answer:
-          "Jednym z powodu wyskakiwania tego typu błędu mogą być rozszerzenia w przeglądarce blokujące treści.",
-        secondAnswer: "",
-      },
-      {
-        question:
-          "vue: Uncaught TypeError: Cannot read property ... of undefinedv",
-        answer:
-          "Just use v-if on a common parent to all the elements in your template relying on that AJAX call, not around each one.",
         secondAnswer: "",
       },
     ],

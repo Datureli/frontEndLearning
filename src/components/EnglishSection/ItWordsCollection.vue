@@ -1,6 +1,6 @@
 <template>
-  <v-container>
-    <v-card v-if="checkStatus" width="500" height="310" class="mx-auto mt-5">
+  <v-container class="d-flex">
+    <v-card v-if="checkStatus" width="500" height="310" class="mx-auto ">
       <p>{{ carouselCounter + "/10" }}</p>
       <v-carousel hide-delimiters prev-icon @change="incrementCarouselCounter">
         <v-carousel-item
@@ -48,14 +48,7 @@ export default {
     checkStatus() {
       return this.showQuestions;
     },
-    validateAnswer() {
-      if (this.selectedAnswer = this.CheckKnowledgeQuestion.polishWord ) {
-        return (this.goodAnswer = true);
-      }
-    },
-  },
-  mounted() {
-
+ 
   },
   methods: {
     incrementCarouselCounter() {
