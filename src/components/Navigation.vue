@@ -99,7 +99,7 @@ export default {
       },
       {
         title: "Gry",
-        link: "/intoflashcards",
+        link: "/games",
       },
       {
         title: "Materiały",

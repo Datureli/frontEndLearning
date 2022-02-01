@@ -78,9 +78,9 @@ const routes = [
     component: () => import("../views/FlashCards.vue"),
   },
   {
-    path: "/intoflashcards",
-    name: "IntoFlashCards",
-    component: () => import("../components/games/IntoFlashCards"),
+    path: "/games",
+    name: "Games",
+    component: () => import("../views/Games"),
   },
   {
     path: "/quiz",

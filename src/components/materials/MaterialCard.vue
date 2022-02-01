@@ -1,12 +1,26 @@
 <template>
   <v-card class="mx-auto ml-15 module-border-wrap"  width="300" max-height="350">
-    <div class="module" >
-      <v-card-title class="mx-auto mt-15">
-        <slot />
+    <v-card class="module" >
+      <v-card-title  class="mx-auto mt-15">
+        <slot  />
       </v-card-title>
-    </div>
+    </v-card>
   </v-card>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      fotos: [
+        {
+          src: "https://cdn.vuetifyjs.com/images/cards/cooking.png"
+        }
+      ]
+    }
+  },
+}
+</script>
 
 <style scoped>
 .module-border-wrap {
