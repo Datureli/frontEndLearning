@@ -2,10 +2,16 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Features](#features)
 
 ## General info
 this project is an advanced front-end learning platform,preparing for recruitment interviews
-	
+
+## Features
+* dsaddsaas
+* dsadas
+
+
 ## Technologies
 Project is created with:
 * Vue 2.6.14
