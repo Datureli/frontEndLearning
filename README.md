@@ -18,8 +18,8 @@ Project is created with:
 To run this project, install it locally using npm:
 
 ```
-$ cd ../lorem
+$ cd frontEndLearning
 $ npm install
-$ npm start
+$ npm run serve
 ```
 
