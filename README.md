@@ -16,9 +16,10 @@ Project is created with:
 	
 ## Setup
 To run this project, install it locally using npm:
-...
-$ cd frontEndLearning
+
+```
+$ cd ../lorem
 $ npm install
-$ npm run serve
+$ npm start
 ```
 
