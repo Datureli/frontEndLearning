@@ -1,34 +1,22 @@
-# Pagination
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
 
-1.reset pagination on prev/next button
-2.display content only one on pagination
-3.Need to add reset "page" on click random question and question loop function
-4.Fix extra spaces in answers in recruiment questions
-5.disable favorite button before user is logged in 
-6.Add clear setInteval button 
+## General info
+This project is simple Lorem ipsum dolor generator.
+	
+## Technologies
+Project is created with:
+* Lorem version: 12.3
+* Ipsum version: 2.33
+* Ament library version: 999
+	
+## Setup
+To run this project, install it locally using npm:
 
-
-# lernfisz
-
-## Project setup
 ```
-npm install
+$ cd ../lorem
+$ npm install
+$ npm start
 ```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
