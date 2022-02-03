@@ -5,7 +5,7 @@
 * [Status}(#status)
 * [Setup](#setup)
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=datureli&repo=github-readme-stats)](https://github.com/Datureli/github-readme-stats)
+
 ## General info
 this project is an advanced front-end learning platform,preparing for recruitment interviews
 
