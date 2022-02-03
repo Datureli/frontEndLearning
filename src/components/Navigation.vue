@@ -1,17 +1,9 @@
 <template>
   <v-container-fluid>
     <v-app-bar color="transparent">
-      <v-app-bar-nav-icon
-        color="white"
-        @click="drawer = true"
-      ></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon color="white" @click="drawer = true"></v-app-bar-nav-icon>
       <v-dialog v-model="drawer" hide-overlay>
-        <v-navigation-drawer
-          v-model="drawer"
-          class=" darkGradient"
-          fullscreen
-          absolute
-        >
+        <v-navigation-drawer v-model="drawer" fullscreen absolute>
           <v-toolbar class="mb-0" dark color="transparent" elevation="0">
             <v-spacer></v-spacer>
             <v-toolbar-items>
