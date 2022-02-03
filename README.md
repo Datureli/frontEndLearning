@@ -5,6 +5,7 @@
 * [Status](#status)
 * [Setup](#setup)
 
+![alt text](http://url/to/img.png)
 
 ## General info
 this project is an advanced front-end learning platform,preparing for recruitment interviews
