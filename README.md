@@ -1,14 +1,16 @@
 ## Table of contents
 * [General info](#general-info)
-* [Technologies](#technologies)
-* [Setup](#setup)
 * [Features](#features)
+* [Technologies](#technologies)
+* [Status}(#status)
+* [Setup](#setup)
+
 
 ## General info
 this project is an advanced front-end learning platform,preparing for recruitment interviews
 
 ## Features
-* dsaddsaas
+* Learn front-end topics by learning questions
 * dsadas
 
 
