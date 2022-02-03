@@ -1,10 +1,10 @@
 <template>
   <v-container-fluid>
-    <v-app-bar color="transparent">
-      <v-app-bar-nav-icon color="white" @click="drawer = true"></v-app-bar-nav-icon>
+    <v-app-bar :color="color">
+      <v-app-bar-nav-icon color="red" @click="drawer = true"></v-app-bar-nav-icon>
       <v-dialog v-model="drawer" hide-overlay>
         <v-navigation-drawer v-model="drawer" fullscreen absolute>
-          <v-toolbar class="mb-0" dark color="transparent" elevation="0">
+          <v-toolbar class="mb-0" dark color="darkGradient" elevation="0">
             <v-spacer></v-spacer>
             <v-toolbar-items>
               <v-btn icon dark @click="closeModal">
@@ -12,7 +12,7 @@
               </v-btn>
             </v-toolbar-items>
           </v-toolbar>
-          <v-list nav class="mt-15 green--text">
+          <v-list color="red" height="500" nav class="green--text">
             <v-list-item-group>
               <v-list-item
                 class="white--text text-h4"
@@ -44,7 +44,7 @@
         </v-btn>
 
         <v-btn icon>
-          <v-icon>mdi-dots-vertical</v-icon>
+          <v-icon color="red">mdi-dots-vertical</v-icon>
         </v-btn>
       </v-card>
       <h1 class="mx-auto d-none">--{{ currentRouteName }}--</h1>
@@ -91,6 +91,20 @@ export default {
     ...mapState(["disable", "favorite"]),
     currentRouteName() {
       return this.$route.name;
+    },
+    color() {
+      switch (this.$route.name) {
+        case "Home":
+          return "black";
+        case "About":
+          return "green";
+        case "md":
+          return blue;
+        case "lg":
+          return red;
+        case "xl":
+          return orange;
+      }
     },
   },
   methods: {

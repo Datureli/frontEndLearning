@@ -2,8 +2,8 @@
   <v-app>
     <v-row>
       <v-col>
-        <v-main >
-          <header >
+        <v-main>
+          <header>
             <Navigation />
           </header>
         </v-main>
