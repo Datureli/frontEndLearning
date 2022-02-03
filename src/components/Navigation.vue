@@ -1,16 +1,14 @@
 <template>
   <v-container-fluid>
-    <v-app-bar color="darkGradient">
+    <v-app-bar color="transparent">
       <v-app-bar-nav-icon
         color="white"
         @click="drawer = true"
-        class="d-block d-sm-none"
       ></v-app-bar-nav-icon>
       <v-dialog v-model="drawer" hide-overlay>
         <v-navigation-drawer
           v-model="drawer"
-          class="hidden-md-and-up darkGradient"
-          width="100%"
+          class=" darkGradient"
           fullscreen
           absolute
         >
@@ -36,20 +34,7 @@
           </v-list>
         </v-navigation-drawer>
       </v-dialog>
-      <template v-slot:extension>
-        <v-tabs fixed-tabs align-with-title>
-          <v-tab
-            v-model="tab"
-            style="font-size: 12px;"
-            class=" white--text ma-0 d-none d-sm-flex"
-            v-for="(toolbarItem, index) in toolbarItems"
-            :key="index"
-            :to="toolbarItem.link"
-          >
-            {{ toolbarItem.title }}
-          </v-tab>
-        </v-tabs>
-      </template>
+
       <v-spacer></v-spacer>
       <v-card color="transparent" outlined>
         <v-btn color="transparent" outlined>
@@ -72,9 +57,9 @@
       </v-card>
       <h1 class="mx-auto d-none">--{{ currentRouteName }}--</h1>
     </v-app-bar>
- <v-slide-x-transition mode="out-in">
-    <router-view></router-view>
-     </v-slide-x-transition>
+    <v-slide-x-transition mode="out-in">
+      <router-view></router-view>
+    </v-slide-x-transition>
   </v-container-fluid>
 </template>
 
@@ -86,7 +71,6 @@ import About from "../views/About.vue";
 export default {
   components: { Login, SignUp, About },
   data: () => ({
-    tab: null,
     drawer: false,
     toolbarItems: [
       {
