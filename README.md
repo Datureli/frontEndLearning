@@ -11,7 +11,7 @@ this project is an advanced front-end learning platform,preparing for recruitmen
 
 ## Features
 * Learn front-end topics by learning questions
-* dsadas
+* Learn english IT words
 
 
 ## Technologies
