@@ -12,7 +12,7 @@
               </v-btn>
             </v-toolbar-items>
           </v-toolbar>
-          <v-list nav class="mt-16 green--text">
+          <v-list nav class="mt-15 green--text">
             <v-list-item-group>
               <v-list-item
                 class="white--text text-h4"
