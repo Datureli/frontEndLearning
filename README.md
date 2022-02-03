@@ -2,7 +2,7 @@
 * [General info](#general-info)
 * [Features](#features)
 * [Technologies](#technologies)
-* [Status}(#status)
+* [Status](#status)
 * [Setup](#setup)
 
 
@@ -21,6 +21,9 @@ Project is created with:
 * vue-router ^3.5.3
 * vuex ^3.6.2
 * axios ^0.24.0
+
+## Status
+working on
 	
 ## Setup
 To run this project, install it locally using npm:
