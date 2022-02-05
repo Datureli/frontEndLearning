@@ -1,6 +1,6 @@
 <template>
   <v-container-fluid>
-
+    
     <v-app-bar :color="color">
       <v-app-bar-nav-icon color="white" @click="drawer = true" />
       <v-dialog v-model="drawer" hide-overlay>
@@ -13,14 +13,6 @@
               </v-btn>
             </v-toolbar-items>
           </v-toolbar>
-            <v-lazy
-        v-model="isActive"
-        :options="{
-          threshold: .5
-        }"
-        min-height="200"
-        transition="fade-transition"
-      >
           <v-list color="primary" height="520" class="green--text">
             <v-list-item-group>
               <v-list-item
@@ -33,7 +25,6 @@
               </v-list-item>
             </v-list-item-group>
           </v-list>
-            </v-lazy>
         </v-navigation-drawer>
       </v-dialog>
 
@@ -75,7 +66,6 @@ import About from "../views/About.vue";
 export default {
   components: { Login, SignUp, About },
   data: () => ({
-     isActive: false,
     drawer: false,
     toolbarItems: [
       {

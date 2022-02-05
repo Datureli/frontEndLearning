@@ -8,20 +8,6 @@
   </v-card>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      fotos: [
-        {
-          src: "https://cdn.vuetifyjs.com/images/cards/cooking.png"
-        }
-      ]
-    }
-  },
-}
-</script>
-
 <style scoped>
 .module-border-wrap {
   max-width: 250px;

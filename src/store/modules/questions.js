@@ -217,6 +217,15 @@ export default {
         answer: "Funkcja strzałkowa to skrócony zapis wyrażenia funkcyjnego:",
       },
       {
+        question: "Jak działa async?",
+        answer: "Aby JavaScript nie blokował drzewa renderowania można wykorzystać regułę async. Atrybut async powoduje, że kod JS jest wykonywany niezależnie od etapu ładowania się strony i nie wpływa na ścieżkę renderowania. Atrybut ten może być z powodzeniem zastosowany w przypadku skryptów do:analityki internetowej,    dodatkowych widgetów do strony,",
+        secondAnswer: 'Atrybut async mówi przeglądarce, że skrypt nie wpływa ani na DOM ani na CSSOM i może być przetworzony dopiero po załadowaniu i wyrenderowaniu całej podstrony. Atrybut async działa wyłącznie w przypadku skryptów umieszczonych w osobnym pliku – dlatego wydzielenie skryptu do osobnego pliku jest tak bardzo istotne.'
+      },
+      {
+        question: "opisz atrybut defer?",
+        answer: "W przypadku kiedy JavaScript manipuluje drzewem DOM, można wykorzystać defer. Dzięki temu, skrypty w nagłówku będą potraktowane z takim priorytetem, jakby były na samym końcu strony. W przypadku kiedy chcemy pogodzić asynchroniczne ładowanie i możliwość manipulacją drzewem DOM, można wykorzystać bibliotekę require.js.",
+      },
+      {
         question: "Czym jest funkcja strzałkowa?",
         answer:
           "Funkcja anonimowa to taka funkcja, która nie ma swojej nazwy. Funkcje takie wykorzystywane są jako funkcje zwrotne, które przekazujemy do innych funkcji.Przy skracaniu zapisu obowiązuje nas kilka dość prostych zasad.         Jeżeli funkcja wymaga tylko jednego parametru, wtedy mogę (ale nie muszę!) pominąć nawiasy:Jeżeli parametrów jest więcej, lub nie ma żadnego, wtedy nawiasy muszą zostać:Jeżeli funkcja ma tylko jedną instrukcję, mogę pominąć też klamry:A dodatkowo jeżeli jedyną instrukcją jest instrukcja return, także i jej możemy się pozbyć:Natomiast jeżeli funkcja ma więcej instrukcji - klamry muszą pozostać:",

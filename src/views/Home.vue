@@ -2,7 +2,7 @@
   <v-container-fluid>
     <v-img
       :height="height"
-      lazy-src="https://picsum.photos/id/11/10/6"
+      lazy-src="../assets/lightbulb.jpg"
       src="../assets/lightbulb.jpg"
     >
     </v-img>

@@ -21,18 +21,5 @@ export default {
     RightColumn,
     FirstColumnMobile,
   },
-  data() {
-    return {
-      dialog: false,
-      notifications: false,
-      sound: true,
-      widgets: false,
-    };
-  },
-  methods: {
-    closeModal() {
-      this.dialog = false;
-    },
-  },
 };
 </script>
