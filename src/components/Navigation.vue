@@ -1,10 +1,10 @@
 <template>
   <v-container-fluid>
     <v-app-bar :color="color">
-      <v-app-bar-nav-icon color="red" @click="drawer = true"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon color="white" @click="drawer = true" />
       <v-dialog v-model="drawer" hide-overlay>
-        <v-navigation-drawer v-model="drawer" fullscreen absolute>
-          <v-toolbar class="mb-0" dark color="darkGradient" elevation="0">
+        <v-navigation-drawer floating v-model="drawer" absolute>
+          <v-toolbar color="darkGradient" elevation="0">
             <v-spacer></v-spacer>
             <v-toolbar-items>
               <v-btn icon dark @click="closeModal">
@@ -12,7 +12,7 @@
               </v-btn>
             </v-toolbar-items>
           </v-toolbar>
-          <v-list color="red" height="500" nav class="green--text">
+          <v-list color="black" height="500" nav class="green--text">
             <v-list-item-group>
               <v-list-item
                 class="white--text text-h4"
@@ -87,6 +87,11 @@ export default {
       },
     ],
   }),
+  watch: {
+    $route(to, from) {
+      this.drawer = false;
+    },
+  },
   computed: {
     ...mapState(["disable", "favorite"]),
     currentRouteName() {
@@ -97,13 +102,15 @@ export default {
         case "Home":
           return "black";
         case "About":
-          return "green";
-        case "md":
-          return blue;
-        case "lg":
-          return red;
-        case "xl":
-          return orange;
+          return "darkGradient";
+        case "CssQuestions":
+          return "darkGradient";
+        case "Materials":
+          return "black";
+        case "games":
+          return "red";
+        case "English":
+          return "orange";
       }
     },
   },
@@ -113,7 +120,6 @@ export default {
     },
     closeModal() {
       this.drawer = false;
-      this.$router.push({ path: "/" });
     },
   },
 };
