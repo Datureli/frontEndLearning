@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import {VContainerFluid, VImg} from 'vuetify/lib'
 export default {
   computed: {
     height() {
@@ -27,5 +28,9 @@ export default {
       }
     },
   },
+  components: {
+    VContainerFluid,
+    VImg
+  }
 };
 </script>

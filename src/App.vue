@@ -1,17 +1,14 @@
 <template>
   <v-app>
-    <v-row>
-      <v-col>
         <v-main>
           <header>
             <Navigation />
           </header>
         </v-main>
-      </v-col>
-    </v-row>
   </v-app>
 </template>
 <script>
+import {VApp,VMain} from 'vuetify/lib'
 import Navigation from "./components/Navigation.vue";
 export default {
   name: "App",
