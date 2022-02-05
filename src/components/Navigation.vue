@@ -48,9 +48,9 @@
         </v-btn>
       </v-card>
     </v-app-bar>
-    <v-slide-x-transition mode="out-in">
+    <v-slide-x-reverse-transition mode="out-in" :duration="{ enter: 500, leave: 800 }">
       <router-view></router-view>
-    </v-slide-x-transition>
+    </v-slide-x-reverse-transition>
   </v-container-fluid>
 </template>
 
@@ -120,3 +120,4 @@ export default {
   },
 };
 </script>
+
