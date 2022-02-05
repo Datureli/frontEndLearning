@@ -48,7 +48,10 @@
         </v-btn>
       </v-card>
     </v-app-bar>
-    <v-slide-x-reverse-transition mode="out-in" :duration="{ enter: 500, leave: 800 }">
+    <v-slide-x-reverse-transition
+      mode="out-in"
+      :duration="{ enter: 500, leave: 800 }"
+    >
       <router-view></router-view>
     </v-slide-x-reverse-transition>
   </v-container-fluid>
@@ -98,8 +101,15 @@ export default {
         case "Home":
           return "black";
         case "About":
-          return "darkGradient";
         case "CssQuestions":
+        case "HtmlQuestions":
+        case "VueQuestions":
+        case "GitQuestions":
+        case "ReactQuestions":
+        case "TypeScriptQuestions":
+        case "JavascriptQuestions":
+        case "GeneralQuestions":
+        case "BootstrapQuestions":
           return "darkGradient";
         case "Materials":
           return "black";
@@ -120,4 +130,3 @@ export default {
   },
 };
 </script>
-

@@ -30,7 +30,6 @@ body {
 #app {
   font-family: Georgia, Helvetica, Arial, sans-serif;
   text-align: center;
-  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
 }
 
 .darkGradient {
