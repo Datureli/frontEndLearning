@@ -1,6 +1,11 @@
 <template>
   <v-container-fluid>
-    <v-img :height="height" src="../assets/lightbulb.jpg"> </v-img>
+    <v-img
+      :height="height"
+      lazy-src="https://picsum.photos/id/11/10/6"
+      src="../assets/lightbulb.jpg"
+    >
+    </v-img>
   </v-container-fluid>
 </template>
 
@@ -10,7 +15,7 @@ export default {
     height() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
-          return 500;
+          return 520;
         case "sm":
           return 350;
         case "md":
