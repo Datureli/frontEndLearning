@@ -3,8 +3,8 @@
     <v-app-bar :color="color">
       <v-app-bar-nav-icon color="white" @click="drawer = true" />
       <v-dialog v-model="drawer" hide-overlay>
-        <v-navigation-drawer floating v-model="drawer" absolute>
-          <v-toolbar color="darkGradient" elevation="0">
+        <v-navigation-drawer v-model="drawer" absolute>
+          <v-toolbar color="primary" elevation="0">
             <v-spacer></v-spacer>
             <v-toolbar-items>
               <v-btn icon dark @click="closeModal">
@@ -12,7 +12,7 @@
               </v-btn>
             </v-toolbar-items>
           </v-toolbar>
-          <v-list color="black" height="500" nav class="green--text">
+          <v-list color="primary" height="520" class="green--text">
             <v-list-item-group>
               <v-list-item
                 class="white--text text-h4"
@@ -44,10 +44,9 @@
         </v-btn>
 
         <v-btn icon>
-          <v-icon color="red">mdi-dots-vertical</v-icon>
+          <v-icon color="white">mdi-dots-vertical</v-icon>
         </v-btn>
       </v-card>
-      <h1 class="mx-auto d-none">--{{ currentRouteName }}--</h1>
     </v-app-bar>
     <v-slide-x-transition mode="out-in">
       <router-view></router-view>
@@ -94,9 +93,6 @@ export default {
   },
   computed: {
     ...mapState(["disable", "favorite"]),
-    currentRouteName() {
-      return this.$route.name;
-    },
     color() {
       switch (this.$route.name) {
         case "Home":
@@ -107,8 +103,8 @@ export default {
           return "darkGradient";
         case "Materials":
           return "black";
-        case "games":
-          return "red";
+        case "Games":
+          return "darkGradient";
         case "English":
           return "orange";
       }
