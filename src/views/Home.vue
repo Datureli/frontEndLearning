@@ -2,6 +2,8 @@
   <v-container-fluid>
     <v-img
       :height="height"
+      max-width="500"
+      class="mx-auto"
       lazy-src="../assets/lightbulb.jpg"
       src="../assets/lightbulb.jpg"
     >

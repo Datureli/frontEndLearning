@@ -1,7 +1,7 @@
 <template>
   <v-container-fluid>
     
-    <v-app-bar :color="color">
+    <v-app-bar :color="color" elevation="0">
       <v-app-bar-nav-icon color="white" @click="drawer = true" />
       <v-dialog v-model="drawer" hide-overlay>
         <v-navigation-drawer v-model="drawer" absolute>
@@ -51,7 +51,7 @@
     </v-app-bar>
     <v-slide-x-reverse-transition
       mode="out-in"
-      :duration="{ enter: 500, leave: 800 }"
+      :duration="{ enter: 50, leave: 50 }"
     >
       <router-view></router-view>
     </v-slide-x-reverse-transition>
