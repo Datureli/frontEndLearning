@@ -1,22 +1,17 @@
-import Vue from 'vue'
-import Vuetify, {
-  VCard,
-  VRating,
-  VToolbar,
-} from 'vuetify/lib'
-import { Ripple } from 'vuetify/lib/directives'
+import Vue from "vue";
+import Vuetify, { VCard, VToolbar } from "vuetify/lib";
+import { Ripple } from "vuetify/lib/directives";
 
 Vue.use(Vuetify, {
   components: {
     VCard,
-    VRating,
     VToolbar,
   },
   directives: {
     Ripple,
   },
-})
+});
 
-const opts = {}
+const opts = {};
 
-export default new Vuetify(opts)
+export default new Vuetify(opts);

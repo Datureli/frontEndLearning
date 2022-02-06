@@ -10,20 +10,17 @@
 </template>
 
 <script>
-import {VRow, VSheet} from 'vuetify/lib'
 import firstColumn from "../components/RecruimentQuestions/FirstColumn.vue";
 import MiddleColumn from "../components/RecruimentQuestions/MiddleColumn.vue";
 import RightColumn from "../components/RecruimentQuestions/RightColumn.vue";
 import FirstColumnMobile from "../components/RecruimentQuestions/FirstColumnMobile.vue";
 export default {
   components: {
-    VRow,
-    VSheet,
-    
     firstColumn,
     MiddleColumn,
     RightColumn,
     FirstColumnMobile,
   },
+
 };
 </script>
