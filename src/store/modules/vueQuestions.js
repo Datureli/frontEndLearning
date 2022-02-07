@@ -15,9 +15,9 @@ export default {
                 secondAnswer: 'W odróżnieniu od innych hooks,creation hook działą również podczas server-side renderingu.Nie posiada dostępu do dom ani docelowego elemntu montażowego'
             },
             {
-              question: "omów mounted hook",
+              question: "Czym jest mounted hook",
               answer:
-                "Wywoływana po zamontowaniu instancji, w której el jest zastępowany przez nowo utworzoną maszynę vm. $ El. Jeśli instancja główna jest podłączona do elementu w dokumencie, vm. $ El będzie również w dokumencie po wywołaniu zamontowania.",
+                "Jest najczęściej wywoływanym hookiem.Pozwalają nam na dostęp do naszego komponentu natychmiastowo przed i po pierwszym wyrenderowaniu.Nie działają podczas renderowania po stronie serwera.Używany go jeżeli potrzebuje dostępu lub potrzebujemy zmodyfikować DOM naszego komponentu natychmiastowo przez lub po pierwszym wyrenderowaniu.Nie należy używać mounting hooks jeżeli potrzebujemy fetchować naszą data komponent podczas inicjalizacji Wywoływana po zamontowaniu instancji, w której el jest zastępowany przez nowo utworzoną maszynę vm. $ El. Jeśli instancja główna jest podłączona do elementu w dokumencie, vm. $ El będzie również w dokumencie po wywołaniu zamontowania.",
             },
             {
               question: "Czym są komponenty?",
@@ -68,7 +68,7 @@ export default {
             {
               question: "Wyjaśnij cykl życia w Vue",
               answer:
-                "Jest to proces instancji vue wewnątrz której uruchamiane zostają pewne funkcje które przechodzą przez proces tworzenia i aktualizowania drzewa DOM.Wewnątrz powstają i istnieją komponenty vue i są nazywane lifecycle hook's.Cykl życia pozwala nam wiedzieć kiedy nasz komponent powstał,kiedy zostal dodany do dom,zaktualizowany lub zniszcony.  Zasadniczo każde główne zdarzenie cyklu życia Vue jest podzielone na dwa punkty zaczepienia, które są wywoływane tuż przed tym zdarzeniem, a następnie tuż po nim. Istnieją cztery główne zdarzenia (8 głównych punktów zaczepienia), które możesz wykorzystać w swojej aplikacji Vue.",
+                "Jest to proces instancji vue wewnątrz której uruchamiane zostają pewne funkcje które przechodzą przez proces tworzenia i aktualizowania drzewa DOM.Dzięki temu wiemy jak vue działa pod spodem.Wszystkie elementy cyklu zycia posiadają dostęp do this content przypisaną do instancji dzięki czemu możemy uzyskać dostęp do data,computed oraz metod. Wewnątrz powstają i istnieją komponenty vue i są nazywane lifecycle hook's.Cykl życia pozwala nam wiedzieć kiedy nasz komponent powstał,kiedy zostal dodany do dom,zaktualizowany lub zniszcony.  Zasadniczo każde główne zdarzenie cyklu życia Vue jest podzielone na dwa punkty zaczepienia, które są wywoływane tuż przed tym zdarzeniem, a następnie tuż po nim. Istnieją cztery główne zdarzenia (8 głównych punktów zaczepienia), które możesz wykorzystać w swojej aplikacji Vue.",
                 secondAnswer: 'Tworzenie - działa na utworzeniu komponentu  Montaż - działa, gdy jest zamontowany DOM  Aktualizacje - uruchamia się, gdy modyfikowane są dane reaktywne  Destruction - działa tuż przed zniszczeniem twojego żywiołu.',
                 thirdPartOfAnswer: 'All lifecycle hooks automatically have their this context bound to the component instance, so that you can access data, computed properties, and methods. This means you should not use an arrow function to define a lifecycle method (e.g. created: () => this.fetchTodos()). The reason is arrow functions bind the parent context, so this will not be the Vue instance as you expect and this.fetchTodos will be undefined.In order words, arrow functions does not have their own value of this. The value of this in an arrow function is inherited from the enclosing (lexical) scope. So, you cannot use them inside a hook.'
             },
@@ -94,8 +94,7 @@ export default {
               question:
                 "opisz beforeCreate",
               answer:
-                "Używanie beforeCreatehaka jest przydatne, gdy potrzebujesz jakiegoś rodzaju wywołania logiki / API, które nie musi być przypisane do danych. Ponieważ gdybyśmy teraz przypisywali coś do danych, zostałoby to utracone po zainicjowaniu stanu.",
-                secondAnswer: 'This is the first hook that gets called after the Vue instance has been initialized. At this stage, data observation (reactivity), events, computed properties and watchers are yet to be set up. Therefore , we cannot interact with any parts of the component.'
+                "BeforeCreate uruchamia się każdorazowo podczas inicjalizacji naszego komponentu.Data na ten moment nie jest reaktywna,a eventy nie zostały jeszcze ustawione więc nie możemy dokonać ,żadnych interakcji z naszym komponentem. Używanie beforeCreatehaka jest przydatne, gdy potrzebujesz jakiegoś rodzaju wywołania logiki / API, które nie musi być przypisane do danych. Ponieważ gdybyśmy teraz przypisywali coś do danych, zostałoby to utracone po zainicjowaniu stanu.",
             },
             {
               question: "Jaka jest różnica między Vue2 a Vue3?",
@@ -108,34 +107,54 @@ export default {
                 "to są funkcje które zwracają nam stan.obiekt.defineProperty API, jeśli jeszcze tego nie wiesz. Ponieważ system reaktywności Vue opiera się na tym API.",
             },
             {
+              question: "Czym jest updated hook?",
+              answer:
+                "Jest uruchamiany zaraz po tym jak data naszego komponentu oraz dom zostaną rerenderowane.Używamy go w sytuacji gdy potrzebujemy dostępu do DOM zaraz po zmianie propety  ",
+            },
+            {
               question: "opisz created hook",
               answer:
-                "This hook is called after the instance is created. At this stage, the instance has finished processing, data observation (reactivity), computed properties, methods, watchers and event callbacks have been set up. You can’t interact with the DOM at this stage because your component has not been mounted. The $el property is not also available yet.",
+                "Uruchamia się zanim template i virtual DOM zostaną zamonotowane lub wyrenderowane.Wywoływana jest zaraz po utworzeniu instancji.Masz dostęp do reaktywnej data oraz events które są aktywne. Na tym etapie instancja zakonczyla przetwarzanie daty,computed,metod,watchers oraz event callback.Nie możemy narazie odziaływać na drzewo DOM ponieważ nasz komponent nie został zamontowany.Również właściwość $el nie jest dostępna.",
             },
             {
               question: "opisz beforeMount hook",
               answer:
-                "At this stage, the template is compiled, either from the template or render options, or from the outerHTML of the element that Vue was initialized to. The template isn’t rendered yet and the $el method doesn’t exist either. Please note that this hook is not called during sever-side rendering.",
+                "Na tym etapie,template został skompilowany ani wyrenderowany.Metoda $el nie istnieje.Uruchamia się zaraz przed początkowym renderowaniem  oraz zaraz po tym jak template albo funkcja renderująca zostaje skompilowana.Nie może zostać wywołany podczas server-side renderingu",
             },
             {
               question: "opisz Mounted hook",
               answer:
-                "alled after the instance has been mounted, where el property is replaced by the newly created vm.$el. If the root instance is mounted to an in-document element, vm.$el will also be in-document when mounted is called. The component becomes fully functional after the mounted hook is called and we can fully interact with it.One thing to take note of is that the mounted hook doesn’t guarantee that the element has been added to DOM. To execute a code that is DOM dependent at this stage, put the code inside a callback method to the Vue.nextTick() function (Vue.nextTick() defers its callback to be executed after the next DOM update cycle). See the example below:",
+                "W mounted hook posiadasz pełny dostęp do reaktywnego komponentu,template oraz wyrenderowanego drzewa DOM(poprzez this.$el).Należy go używać w przypadku gdy chcemy modyfikować DOM,w szczególności przy integracji z innymi bibliotekami innymi niż vue.Należy wspomnieć,że mounted hook nie gwarantuje nam ,że element będzie dodany do drzewa dom na tym etapie",
             },
             {
               question: "Czym jest beforeUpdate hook?",
               answer:
-                "pdated — hook is fired after a change has been made. The component’s DOM would have been updated when this hook is called, so you can perform DOM-dependent operations here. However, in most cases you should avoid changing state inside the hook. To react to state changes, it’s usually better to use a computed property or watcher instead.",
+                "Uruchamia się podczas gdy data w naszym komponencie ulega zmianie oraz cykl update się rozpoczyna,zaraz przed tym DOM jest patched oraz rerenderowany.Używamy go jeżeli potrzebujemy dostać się do new state w jakiejkolwiek reactive data naszego komponentu zanim zostanie wyrenderowany.Podczas wywołania tego hooka dom komponentu zostanie zaktualizowany więc możemy wykonywać operacje na drzewie dom.Należy jednak pamiętam ,że w większości przypadków powinieneś unikać zmiany state podczas uzywania tego hooka.Aby dokonać zmian lepiej jest użyć właściwości computed lub watcher.",
             },
             {
               question: "Czym jest update hook?",
               answer:
-                "hook is fired after a change has been made. The component’s DOM would have been updated when this hook is called, so you can perform DOM-dependent operations here. However, in most cases you should avoid changing state inside the hook. To react to state changes, it’s usually better to use a computed property or watcher instead.    Note that updated does not guarantee that all child components have also been re-rendered. If you want to wait until the entire view has been re-rendered, you can use vm.$nextTick inside of updated:"
+                "Updating hooks są zawsze wywołwane gdy reaktywny propety używany przez twój komponent zmienia się lub coś innego powoduje przerenderowanie komponentu.Pozwala nam wejść w  watch-compute-render cycle dla twojego komponentu.Używamy go gdy potrzebujemy wiedzieć kiedy nasz komponent renderuje się na nowo np dla debugowania.Nie należy używać update hooks jeżeli chcemy wiedzieć kiedy reaktywność naszego komponentu ulega zmianie.Zamiast tego możęmy użyć watch albo computed. "
             },
             {
               question: "Czym jest beforeDestroy hook?",
               answer:
-                "Called right before a Vue instance is destroyed. At this stage the instance is still fully functional. You can perform necessary cleanups here. Please note that this hook is not called during sever-side rendering..",
+                "Jest uruchamiany zaraz przed zniszczeniem komponentu.Komponent nadal będzie istniał i będzie funkcjonalny.Używamy go gdy chcemy wyczyścić eventy lub reaktywność.Na ten moment instancja jest w pełni funkcjonalna.Hook ten Please note that this hook is not called during sever-side rendering..",
+            },
+            {
+              question: "Czym jest destroyed hook?",
+              answer:
+                "Podczas gdy osiągamy stan destroyed hook,praktycznie nic nie pozostaje w naszym komponencie.Wszystko co zostało z nim powiązane zostaje usunięte.Używamy go gdy chcemy wyczyścić lub poinformować server ,że komponent został zniszczony.",
+            },
+            {
+              question: "Czym jest activated i dezactivated hook?",
+              answer:
+                "Służą utrzymywania przy życiu komponentów.Pozwalają nam wykryć kiedy komponent owinięty w tag <keep-alive>.Możemy użyć ich do fetchowania data dla naszego komponentu oraz aby uchwycić zmiany naszego state.Zachowuje się jak created oraz beforedestroy bez potrzeby tworzenia komponentu na nowo",
+            },
+            {
+              question: "Czym są destructing hooks?",
+              answer:
+                "Pozwalają nam wykonywać akcje kiedy nasz komponent zostanie zniszczony,takie jak cleanup lub wysyłanie analiz.Zostają odpalone kiedy komponent zostanie usunięty z drzewa DOM",
             },
             {
               question: "Czym jest Destroy hook?",
@@ -156,10 +175,6 @@ export default {
               answer: "Zasadniczą czynnością, jaką musimy wykonać na samym początku jest powiązanie obiektu Vue z konkretnym elementem DOM w naszym dokumencie. Instancja Vue musi wiedzieć, w jakim zakresie ma działać i trzeba to wyraźnie zdefiniować. Robimy to poprzez podanie nazwy selectora właściwości el obiektu, którego przekazujemy jako argument konstruktora Vue(). Dzięki temu każde dziecko zdefiniowanego elementu będzie obserwowane i przetwarzane jako wirtualne drzewo DOM (Virtual DOM).",
               secondAnswer: 'Właściwość data zawiera pola, których będziemy używać do przechowywania naszych danych, methods przetrzymuje definicje metod dostępnych w zasięgu instancji. Metody kryjące się w computed to wartości obliczane dynamicznie. Definiujemy je jako metody, jednakże w momencie ich użycia korzystamy z nich jak ze zwykłego pola (Vue oblicza je automatycznie).',
               thirdPartOfAnswer: 'Ważną kwestią jest sposób odwoływania się do jednej z powyższych właściwości, który odbywa się pośrednictwem referencji this. Jest to możliwe dzięki temu, że Vue łączy wszystkie właściwości z główną instancją obiektu, co daje do nich bezpośredni dostęp.'
-            },
-            {
-              question: "Objaśnij cykl życia w Vue",
-              answer: "",
             },
             {
               question: "Czym są dyrektywy?",
@@ -198,9 +213,20 @@ export default {
                 "Jest to plik z rozszerzeniem vue. zawierającym komponent vue.W przeciwieństwie do stndardowego podziału plików na style,szkielet oraz logike w odrębnych plików,w single file component wszystko znajduje się w jednym pliku.",
             },
             {
+              question: "Jak walidować propsy?",
+              answer:
+                "Możemy tego dokonać poprzez dodanie required key oraz jego wartości do props.Możemy walidować za pomocą typu propsa oraz używając required.",
+            },
+            {
               question: "Wyjaśnij na czym polega przepływ danych w vue",
               answer:
                 "Vue używa one-way data flow.Dane są przekazywane do komponentu dziecka z komponentu rodzica za pomocą właściwości props",
+            },
+            {
+              question: "Czym jest props?",
+              answer:
+                "Propsy są używane do przekazywania informacji/data z komponentu rodzica do komponentu dziecka.Można go zarejestrować w komponencie aby przekazać dane do jednego z komponentów dziecka.Dane w props mogą przepływać tylko jednostronnie,z komponentu rodzica do komponentu dziecka.To oznacza ,że nie jesteśmy w stanie przesłać propsa z komponentu dziecka do rodzica.",
+                secondAnswer: 'Propsy są read-only a to oznacza ,że nie mogą zostać zmodyfikowane przez komponent dziecka ponieważ wartość należy do komponentu rodzica'
             },
             {
               question: "czym jest mapState?",

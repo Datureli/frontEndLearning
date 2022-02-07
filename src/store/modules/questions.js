@@ -110,6 +110,11 @@ export default {
           "Operator warunkowy (tak zwany ternary operator), to tak naprawdę skrócona wersja warunku if:",
       },
       {
+        question: "Jak wyczyścić tablice?",
+        answer:
+          "Można to zrobić na wiele sposobów, zerując jej długość: arrayList.length = 0;. Możliwe jest także użycie arrayList = [];, co sprawi, że wartością zmiennej arrayList będzie nowy obiekt Array. Należy tu jednak pamiętać, że drugą metodę można stosować tylko wtedy, gdy do pierwszego obiektu Array nie ma w kodzie żadnych referencji.",
+      },
+      {
         question: "Czym jest IIFE?",
         answer:
           "IIFE (Immediately-invoked function expression) - czyli samo wywołujące się wyrażenie funkcyjne to wzorzec funkcji, która sama się wywołuje.",
@@ -256,6 +261,21 @@ export default {
         question: "Czym są async/await?",
         answer:
           "Obydwa słowa kluczowe wiążą się z obietnicami. Pierwsze z nich - async - wstawione przed deklaracją funkcji sprawi, że taka funkcja zwróci obietnicę. Drugie z nich - await - może wystąpić tylko wewnątrz funkcji poprzedzonej przez async i powinno się znaleźć przed wykonaniem funkcji asynchronicznej. Sprawi, że wykonanie nie przejdzie dalej, dopóki obietnica nie zostanie wykonana. Dzięki temu asynchroniczny kod przypomina swoim zachowaniem kod synchroniczny.",
+      },
+      {
+        question: "Czym jest currying i w jakich sytuacjach się go stosuje?",
+        answer:
+          "Currying to technika pracy z funkcjami, polegająca na ich transformacji w następujący sposób: f(a, b, c) do f(a)(b)(c). Dzięki temu de facto rozbija funkcję mającą wiele parametrów do wielu funkcji mającej po jednym parametrze.",
+      },
+      {
+        question: "Jaka jest definicja funkcji wyższego rzędu?",
+        answer:
+          "Funkcja wyższego rzędu to funkcja, która przyjmuje inne funkcje jako parametry lub też taka, której wynik również jest funkcją. Przykładowa funkcja wyższego rzędu to map służąca do zwracania listy z wynikami funkcji dla wszystkich elementów z danej listy.",
+      },
+      {
+        question: "Jakie są zalety i wady rozszerzania wbudowanych obiektów JavaScript?",
+        answer:
+          "Rozszerzanie wbudowanych obiektów uważane jest złą praktykę. W ten sposób zmieniamy zachowanie obiektów. I o ile mowa o obiekcie, z którego będzie działał tylko konkretny kod, to problem nie jest duży, ale w przypadku zewnętrznego kodu, który wykorzysta rozszerzony obiekt, nic nie będzie działać. Dobrą praktyką jest korzystanie ze wbudowanych metod. Dodawanie własnych metod do obiektów może być problematyczne także ze względu na interferencje z bibliotekami, które same mogą rozszerzać obiekty o te same metody. Wówczas dojdzie do konfliktu, nadpisania, i kod po prostu nie będzie działał. Zaletą rozszerzania wbudowanych typów może być natomiast to, że można zbudować w ten sposób polyfill, przez co kod będzie działał również na starszym oprogramowaniu, przeglądarkach nieobsługujących nowszych wersji JavaScript.",
       },
       {
         question: "Czym jest obietnica (promise)?",
