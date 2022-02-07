@@ -1,6 +1,13 @@
 <template>
   <v-container-fluid>
-
+    <v-img
+    contain
+      :height="height"
+      max-width="500"
+      class="mx-auto"
+      src="../assets/lightbulb.jpg"
+    >
+    </v-img>
   </v-container-fluid>
 </template>
 
