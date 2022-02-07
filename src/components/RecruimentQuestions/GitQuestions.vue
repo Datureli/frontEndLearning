@@ -14,19 +14,19 @@
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
+            class="white--text text-justify text-h6 text-wrap"
             v-if="page === 1"
             v-show="disable"
             v-text="gitQuestions.answer"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
+            class="white--text text-justify text-h6 text-wrap"
             v-if="page === 2"
             v-show="disable"
             v-text="gitQuestions.secondAnswer"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
+            class="white--text text-justify text-h6 text-wrap"
             v-if="page === 3"
             v-show="disable"
             v-text="gitQuestions.thirdPartOfAnswer"
@@ -39,7 +39,6 @@
       <v-icon
         x-large
         @click="randomGitQuestion"
-        color="brown"
          class="hidden-sm-and-down"
         style="position: absolute; bottom: 26%; right:90%;"
         >mdi-dice-multiple</v-icon

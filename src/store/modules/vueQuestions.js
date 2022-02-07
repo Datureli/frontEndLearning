@@ -53,7 +53,7 @@ export default {
             {
               question: "Czym są mixiny?",
               answer:
-                "mixiny to funkcje które pozwalają nam na reużywalność kodu pomiędzy komponentami w vue js.Jest to objekt javascript który może zawierać każdą opcję jaką zawiera komponent",
+                "mixiny to funkcje które pozwalają nam na reużywalność kodu pomiędzy komponentami w vue js.Jest to objekt javascript który może zawierać każdą opcję jaką zawiera komponent.Mixiny są pisane w odrebnym pliku i mogą być dzielone pomiędzy komponentami",
             },
             {
               question: "Do czego nam plik main.js w vue?",
@@ -64,6 +64,16 @@ export default {
               question: "Czym jest vue-cli?",
               answer:
                 "plikacja konsolowa oparta o node.js, dzięki której będziemy w stanie zarządzać naszą aplikacją z poziomu terminala. Aby zainstalować vue-cli musimy posiadać node.js oraz npm/yarn.",
+            },
+            {
+              question: "Czym jest vue?",
+              answer:
+                "vue.js to open-source,progresywny framework javascript stworzony do tworzenia interfejsów użytkownika.Biblioteka skupiona jest na view layer.Jest łatwy w użyciu i w integracji z innymi bibliotekami",
+            },
+            {
+              question: "Czym jest atrybut ref?",
+              answer:
+                "Vue zapewnia nam koncept propsów oraz zdarzeń umożliwiających komunikację pomiędzy komponentem rodzica i komponentem dziecka.Czasami trzeba uzyskać dostęp bezpośrednio do komponentu dziecka w javascript.Aby uzyskać ten efekt możemy użyć atrybutu ref aby przypisać referencje id do komponentu dziecka.Po przypisaniu mamy dostęp do instancji komponentu w miejscu gdzie zdefiniowalismy ref",
             },
             {
               question: "Wyjaśnij cykl życia w Vue",
@@ -78,11 +88,41 @@ export default {
                 "Do stworzenia służy dyrektywa v-model.W obustronnym przepływie danych data albo model jest przypięty do DOM i dom jest przypięty do modelu",
             },
             {
+              question: "Czym są sloty?",
+              answer:
+                "Sloty ogólne rzecz biorąc są mechanizmem, który pozwala nam na tworzenie komponentów wielokrotnego użytku. Mechanizm ten na pewno ułatwia korzystanie z pewnej znanej programistom reguły DRY( Don’t Repeat Yourself). Cały trik polega na tym że sloty dają nam możliwość umieszczenia lub zmiany treści jeżeli komponent dziecka zaimportujemy do rodzica. Sloty w Vue.js możemy rozumieć jako miejsce w ktorym umieszczamy nową treść lub pozostawiamy tą domyślnie zadeklarowaną.",
+            },
+            {
+              question: "Czym są scoped slots?",
+              answer:
+                "Istnieje też coś co nazywamy Scoped slots. Wymieniony rodzaj slotów jest szczególnie przydatny jeżeli chcielibyśmy przekazać dane z komponentu dziecka posiadajcego sloty do rodzica",
+            },
+            {
               question: "Cykl życia w composition api",
               answer:
                 "W API Composition musimy zaimportować haki cyklu życia do naszego projektu, zanim będziemy mogli ich użyć. Ma to pomóc w utrzymaniu jak najmniejszych projektów.",
                 secondAnswer: 'onBeforeMount - wywołane przed rozpoczęciem montażu onMounted - wywoływane, gdy komponent jest montowany onBeforeUpdate - wywoływana, gdy reaktywne dane ulegają zmianie i przed ponownym renderowaniem onUpdated - wywołana po ponownym renderowaniu onBeforeUnmount - wywołana przed zniszczeniem instancji Vue onUnmounted - wywoływana po zniszczeniu instancji onActivated - wywoływane, gdy aktywny jest komponent onDeactivated - wywoływana, gdy utrzymywany przy życiu komponent jest dezaktywowany onErrorCaptured - wywoływana, gdy zostanie przechwycony błąd z komponentu potomnego',
                 thirdPartOfAnswer: ''
+            },
+            {
+              question: "Czym jest one-way data flow?",
+              answer:
+                "Wszystkie prosy działają tylko w jednym kierunku,z komponentu rodzica do komponentu dziecka.Jeżeli zajdzie jakaś zmiana w komponencie rodzina to automatycznie aktualizuje komponent dziecka ale nie działa to w drugą strone,zapobiega to mutowaniu statu rodzica.",
+            },
+                      {
+              question: "Czym jest one-way data flow?",
+              answer:
+                "Wszystkie prosy działają tylko w jednym kierunku,z komponentu rodzica do komponentu dziecka.Jeżeli zajdzie jakaś zmiana w komponencie rodzina to automatycznie aktualizuje komponent dziecka ale nie działa to w drugą strone,zapobiega to mutowaniu statu rodzica.",
+            },          {
+              question: "jaka jest różnica między v-show i v-if?",
+              answer:
+                "Czasami napotkasz na sytuację, w której dodanie/usunięcie elementu przez v-if/v-else będzie z różnych względów niepożądane. Możesz wtedy użyć dyrektywy v-show, która w przypadku, kiedy warunek nie jest spełniony nadaje elementowi styl display: none;. Oznacza to, że jest on zawsze obecny w drzewie DOM, ale czasami po prostu niewidoczny.  Warto wspomnieć, że dyrektywa v-else nie działa razem z v-show.",
+                secondAnswer: 'v-if directive is used to render a block conditionally. It has lazy behavior meaning if the initial condition is false then it will not render the block until the condition becomes true. v-if completely destroy and recreate the elements during condition change.  It has less initial render cost but high toggle cost so when your condition is not changing frequently at runtime then use v-if directive.  v-show directive is also used to render a block conditionally. v-show always renders the element. It just sets the CSS display property instead of destroying the element or block from DOM.  It has high cost of initial rendering but less cost of toggle, so when you need frequent toggle then use v-show directive'
+            },
+            {
+              question: "Czym jest atrybut key?",
+              answer:
+                "Każdy element powinien mieć przypisany atrybut key z identyfikatorem w postaci stringu lub wartości numerycznej. Pozwala to Vue lepiej śledzić zmiany na liście i poprawić wydajność.Atrybut key to podpowiedz dla algorytmu virtual DOM.W przypadku gdy nie użyjemy atrybutu key Vue uses an algorithm that minimizes element movement and tries to reuse the elements of the same type. But with 'key' attribute elements will be reordered and the elements without key are destroyed. It's similar to $index in AngularJS. It's mostly used with the 'v-for' directive.",
             },
             {
               question:
@@ -155,6 +195,11 @@ export default {
               question: "Czym są destructing hooks?",
               answer:
                 "Pozwalają nam wykonywać akcje kiedy nasz komponent zostanie zniszczony,takie jak cleanup lub wysyłanie analiz.Zostają odpalone kiedy komponent zostanie usunięty z drzewa DOM",
+            },
+            {
+              question: "Czym są filtry?",
+              answer:
+                "Filtry są używane do formatownia tekstu w naszej aplikacji.Są używane wraz z interpolacją and v-bind.",
             },
             {
               question: "Czym jest Destroy hook?",

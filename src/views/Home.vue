@@ -1,14 +1,6 @@
 <template>
   <v-container-fluid>
-    <v-img
-    contain
-      :height="height"
-      max-width="500"
-      class="mx-auto"
-      lazy-src="../assets/lightbulb.jpg"
-      src="../assets/lightbulb.jpg"
-    >
-    </v-img>
+
   </v-container-fluid>
 </template>
 
@@ -24,7 +16,7 @@ export default {
         case "md":
           return 400;
         case "lg":
-          return 550;
+          return 450;
         case "xl":
           return 400;
       }

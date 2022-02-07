@@ -47,10 +47,60 @@ export default {
               secondAnswer: "",
             },
             {
+              question: "Jak można skopiować commit na inną gałąź?",
+              answer:
+                "Do kopiowania commitów i dodawania ich na inne gałęzie służy polecenie git cherry-pick sha_commita. Wykonanie tego polecenia spowoduje kopię commita z podaną referencją i dodaniem go do aktywnej gałęzi. Referencję do commita możemy uzyskać za pomocą polecenia git log, którego dotyczyło jedno z poprzednich pytań.",
+              secondAnswer: "",
+            },
+            {
+              question: "Jak utowrzyć nową gałąź? Jak zmienić aktywną gałąź?",
+              answer:
+                "git branch nazwa_brancha – utwórz nową gałąź.    git checkout nazwa_brancha – zmiana aktywnej gałęzi.    git checkout -b nazwa_brancha – utworzenie oraz zmiana aktywnej gałęzi.",  secondAnswer: "",
+            },
+            {
+              question: "11. Opisz stany w jakich może znajdować się zmiana w Gicie.",
+              answer:
+                "Wyróżniamy trzy stany w jakich może znajdować się zmiana w repozytorium. Pierwszym stanem jest stan modified. W tym stanie są domyślnie wszystkie modyfikacje poczynione od ostatniego commita. Drugim stanem jest stan staged. Aby zmiana znalazła się w tym stanie, należy skorzystać z polecenia git add i wybrać zmiany. Przy poleceniu git commit pod uwagę brane są tylko zmiany będące w stanie staged. Ostatnim stanem jest stan commited, czyli stan w którym zmiana została zapisana w repozytorium. Przy commitowaniu możliwe jest pominięcie stanu staged poprzez skorzystanie z flagi -a przy wywołaniu polecenia git commit.",  secondAnswer: "",
+            },
+            {
+              question: "Czym jest konflikt w gicie?",
+              answer:
+                "Konflikt w Git może zaistnieć w następującej sytuacji:Programista A tworzy branch feature i wprowadza na nim zmiany w istniejącym już wcześniej pliku.W międzyczasie programista B na branchu master wprowadza zmiany.Programista A kończy pracę na branchu feature, pushuje wprowadzone zmiany i przełącza się na mastera.Programista A chce zmerge’ować mastera z branchem feature… … i w tym momencie mamy konflikt. Programista B edytował ten sam plik, co programista A i system kontroli wersji nie wie, która wersja jest poprawna.W tym momencie przed programistą A stoi zadanie na wybraniu poprawnej wersji. Brzmi to skomplikowanie, ale w praktyce wystarczy skasować niechciany kod a zostawić właściwy… i gotowe!",  secondAnswer: "",
+            },
+            {
+              question: "Czym jest squash commitów?", 
+              answer:
+                "Squash commitów jest scaleniem kilku commitów w jeden. Na przykład, w serwisie GitHub takie zachowanie można zdefiniować w momencie scalania pull requestów. W takim przypadku wszystkie commity ze scalanego pull requesta zostaną połączone w jeden, a następnie scalone z gałęzią docelową. W Gicie można taki rezultat uzyskać dzięki poleceniu git rebase. ",
+              secondAnswer: "",
+            },
+            {
+              question: "Do czego służy Git LFS?", 
+              answer:
+                "Git nie jest najlepszy miejscem do przechowywania dużych plików, czy plików binarnych tj. obrazy, filmy czy pliki audio. W tym celu powstało narzędzie o nazwie Git LFS (Large File System). Dzięki temu, w repozytorium nie są przechowywane pliki a jedynie wskaźniki (referencje) do nich. Typy plików, przechowywanych przez Git LFS można zdefiniować w pliku .gitattributes. Przykładowo, chcąc wykorzystać Git LFS do plików z formatem JPG należy zdefiniować następującą regułę: git lfs track jpg",
+              secondAnswer: "",
+            },
+            {
               question: "Jak sprawdzić stan plików?", 
               answer:
                 "Podstawowe narzędzie używane do sprawdzenia stanu plików to polecenie git status. ",
               secondAnswer: "",
+            },
+            {
+              question: "Jak sprawdzić stan plików?", 
+              answer:
+                "Podstawowe narzędzie używane do sprawdzenia stanu plików to polecenie git status. ",
+              secondAnswer: "",
+            },
+            {
+              question: "Czym się różni git fetch od git pull?", 
+              answer:
+                "Polecenie git fetch jedynie pobiera dane o zmianach ze zdalnego repozytorium. Polecenie git pull oprócz pobrania zmian ze zddalnego repozytorium podejmuje próbę scalenia ich (merge) z aktywną gałęzią. Podczas scalania może wystąpić konflikt",
+              secondAnswer: "",
+            },
+            {
+              question: "Do czego służy polecenie git commit –amend?", 
+              answer:
+                "Polecenie git commit --amend pozwala na modyfikację ostatniego commita w repozytorium. Jest to szczególnie przydatne w sytuacji gdy jakiś plik lub zmiana podczas tworzenia commita zostaną pominięte lub w przypadku błędnego commit message.,   Warto pamiętać, że nie powinno się korzystać z tego polecenia po wysłaniu commita do repozytorium zdalnego! Polecenie to modyfikuje historię Gita i jego wywołanie może w konsekwencji utrudnić pracę innym osobom pracującym z tym samym repozytorium.", secondAnswer: "",
             },
             {
               question: "Co to jest gitflow?",
