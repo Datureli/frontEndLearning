@@ -14,13 +14,13 @@
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
+            class="white--text text-justify text-h6 text-wrap"
             v-if="page === 1"
             v-show="disable"
             v-text="htmlQuestions.answer"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
+            class="white--text text-justify text-h6 text-wrap"
             v-if="page === 2"
             v-show="disable"
             v-text="htmlQuestions.secondAnswer"

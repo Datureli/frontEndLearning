@@ -1,6 +1,5 @@
 <template>
   <v-container-fluid>
-    
     <v-app-bar :color="color" elevation="0">
       <v-app-bar-nav-icon color="white" @click="drawer = true" />
       <v-dialog v-model="drawer" hide-overlay>
@@ -16,6 +15,7 @@
           <v-list color="primary" height="520" class="green--text">
             <v-list-item-group>
               <v-list-item
+              color="green"
                 class="white--text text-h4"
                 v-for="(toolbarItem, index) in toolbarItems"
                 :key="index"
@@ -50,6 +50,7 @@
       </v-card>
     </v-app-bar>
     <v-slide-x-reverse-transition
+      width="inherit"
       mode="out-in"
       :duration="{ enter: 50, leave: 50 }"
     >

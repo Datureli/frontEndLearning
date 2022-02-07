@@ -1,6 +1,7 @@
 <template>
   <v-container-fluid>
     <v-img
+    contain
       :height="height"
       max-width="500"
       class="mx-auto"
