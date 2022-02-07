@@ -39,7 +39,6 @@
         <v-icon
           large
           @click="randomHtmlQuestion"
-          color="brown"
           style="position: absolute; bottom: 26%; right:90%;"
           >mdi-dice-multiple</v-icon
         >

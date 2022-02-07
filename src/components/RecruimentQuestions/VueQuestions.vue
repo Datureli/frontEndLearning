@@ -9,24 +9,26 @@
       <v-list-item>
         <v-list-item-content>
           <v-list-item-subtitle
-            class="text--primary   font-weight-black  text-h4 text-wrap "
+            class="text--primary font-weight-black text-h4 text-wrap "
             v-text="vueQuestions.question"
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
+             style="word-break: break-all;"
+            class="white--text text-justify text-h6 text-wrap"
             v-if="page === 1"
             v-show="disable"
             v-text="vueQuestions.answer"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
+             style="word-break: break-all;"
+            class="white--text text-justify text-h6 text-wrap"
             v-if="page === 2"
             v-show="disable"
             v-text="vueQuestions.secondAnswer"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
+            class="white--text text-justify text-h6 text-wrap"
             v-if="page === 3"
             v-show="disable"
             v-text="vueQuestions.thirdPartOfAnswer"
@@ -39,7 +41,6 @@
       <v-icon
         x-large
         @click="randomVueQuestion"
-        color="brown"
          class="hidden-sm-and-down"
         style="position: absolute; bottom: 26%; right:90%;"
         >mdi-dice-multiple</v-icon
@@ -105,6 +106,7 @@ export default {
     },
     randomVueQuestion() {
       this.$store.dispatch("vueQuestions/randomVueQuestion");
+      this.page = 1
     },
     vueQuestionLoop() {
       this.$store.dispatch("vueQuestions/vueQuestionLoop");

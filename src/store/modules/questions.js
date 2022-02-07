@@ -43,16 +43,36 @@ export default {
         secondAnswer: "",
       },
       {
+        question: "Czym są metody?",
+        answer:
+          "Metody JavaScript to akcje, które można wykonywać na obiektach. Metodą obiektu nazywamy właściwość zawierającą definicję funkcji (inaczej: metoda to funkcja przechowywana jako właściwość obiektu). ",
+        secondAnswer: "",
+      },
+      {
+        question: "Czym jest obiekt w javascript?",
+        answer:
+          "Obiekty JavaScript to kontenery dla nazwanych wartości, zwanych właściwościami i metodami. W JS prawie wszystko jest obiektem:Obiekty są zmiennymi, ale mogą zawierać wiele wartości. Wartości są zapisywane jako pary nazwa: wartość (nazwa i wartość oddzielone dwukropkiem). Pary te oddziela przecinek. Obiekt JavaScript to zbiór nazwanych wartości. Te nazwane wartości nazywamy właściwościami. ",
+        secondAnswer:
+          "Boolean (typ logiczny) może być obiektem (jeśli zdefiniowano za pomocą słowa new) Number (liczba) może być obiektem (jeśli zdefiniowano za pomocą słowa new) String (łańcuch) może być obiektem (jeśli zdefiniowano za pomocą słowa new) Date (data) jest zawsze obiektem Math (matematyka) jest zawsze obiektem Regular expression (wyrażenie regularne) jest zawsze obiektem Array (tablica) jest zawsze obiektem Function (funkcja) jest zawsze obiektem Object (obiekt) jest zawsze obiektem",
+      },
+      {
         question: "Jak możemy tworzyć obiekty w javascript?",
         answer:
           "W JavaScript obiekty można tworzyć na 3 różne sposoby: poprzez inicjalizator obiektu (literał obiektywy, ang. object literal syntax), fabrykę (ang. factory function) oraz funkcje konstruujące (ang. constructor functions).",
         secondAnswer: "",
       },
       {
-        question: "Czy JavaScript wspiera dziedziczenie? Jeżeli tak, to w jaki sposób?",
+        question:
+          "Czy JavaScript wspiera dziedziczenie? Jeżeli tak, to w jaki sposób?",
         answer:
           "JavaScript w przeciwieństwie do wielu innych języków, np. Javy nie ma dedykowanego mechanizmu dla klas.W JS wszystko jest obiektem, nawet funkcje. W efekcie czego można zaimplementować mechanizm dziedziczenia, opierając się na prototypach.",
         secondAnswer: "",
+      },
+      {
+        question: "Co w javascript nie jest obiektem?",
+        answer:
+          "Wszystkie wartości JavaScript, z wyjątkiem prymitywów (primitives), są obiektami.Prymitywna wartość jest to wartość, która ma właściwości lub metody.  Prymitywny typ danych to dane, które posiadają pierwotną wartość.  JavaScript definiuje 5 typów prymitywnych typów danych:",
+        secondAnswer: "string number boolean null undefined",
       },
       {
         question: "Jaka jest różnica między var,let a const?",
@@ -67,7 +87,7 @@ export default {
       {
         question: "Czym jest Hoisting??",
         answer:
-          "Kolejna różnica między starszą deklaracją var a jej młodszymi braćmi to tak zwany hoisting (windowanie).JavaScript lubi pomagać programiście. Jednym z takich przypadków pomocy jest niewidoczne dla programisty wynoszenie deklaracji na początek kodu. I tak na początek kodu wynoszone są deklaracje takie jak var / let/ const / function / class. Różnica jest w sposobie takiego wynoszenia.",
+          "To wbudowany w JavaScript mechanizm wynoszący deklarację zmiennych bez ich inicjowania na początek funkcji.Kolejna różnica między starszą deklaracją var a jej młodszymi braćmi to tak zwany hoisting (windowanie).JavaScript lubi pomagać programiście. Jednym z takich przypadków pomocy jest niewidoczne dla programisty wynoszenie deklaracji na początek kodu. I tak na początek kodu wynoszone są deklaracje takie jak var / let/ const / function / class. Różnica jest w sposobie takiego wynoszenia.",
       },
       {
         question: "opisz inkrementacje i dekrementacje",
@@ -213,17 +233,55 @@ export default {
           "Jest to skrócona wersja sprawdzenia czy zmienna to Boolean(true albo false)",
       },
       {
+        question: "Czym jest IIFE?",
+        answer:
+          "Immediately Invoked Function Expression — to funkcja, którą da się wywołać zaraz po swojej definicji. IIFE  jest opakowywane w okrągłe nawiasy, po których następują kolejne okrągłe nawiasy - ma to na celu wywołanie zdefiniowanej funkcji.",
+      },
+      {
+        question: "Co to jest “callback hell” i jak można się go pozbyć?",
+        answer:
+          "Piekło wywołań objawia się wtedy, gdy mamy do czynienia z kaskadowym wywołaniem funkcji zwrotnych. Prowadzi ono do kodu trudnego w zrozumieniu i debugowaniu. Jest kilka technik, które pomagają w opanowaniu piekła wywołań. Samo wyłączenie callbacków jako osobne funkcji może być pomocne, jednak chyba najciekawsze są rozwiązania później dodane do JS - obietnice i async/await.",
+      },
+      {
+        question: "Czym jest operator …?          ",
+        answer:
+          "Operator … to tzw. operator rozwinięcia. Dzięki niemu możliwe jest rozwinięcie ciągu znaków w przypadkach, kiedy wiadomo, że będzie tam zero lub więcej argumentów dla funkcji, lub elementów dla literałów tablicowych. Można w ten sposób łatwo kopiować istniejącą już tablicę lub obiekt w inne tablice lub obiekty. Odwrotnością spread operatora jest operator rest, dzięki któremu jedna funkcja może przyjąć wiele argumentów, a tablice lub obiekty zostać scalone w jeden.",
+      },
+      {
+        question: "Czym są async/await?",
+        answer:
+          "Obydwa słowa kluczowe wiążą się z obietnicami. Pierwsze z nich - async - wstawione przed deklaracją funkcji sprawi, że taka funkcja zwróci obietnicę. Drugie z nich - await - może wystąpić tylko wewnątrz funkcji poprzedzonej przez async i powinno się znaleźć przed wykonaniem funkcji asynchronicznej. Sprawi, że wykonanie nie przejdzie dalej, dopóki obietnica nie zostanie wykonana. Dzięki temu asynchroniczny kod przypomina swoim zachowaniem kod synchroniczny.",
+      },
+      {
+        question: "Czym są async/await?",
+        answer:
+          "Obydwa słowa kluczowe wiążą się z obietnicami. Pierwsze z nich - async - wstawione przed deklaracją funkcji sprawi, że taka funkcja zwróci obietnicę. Drugie z nich - await - może wystąpić tylko wewnątrz funkcji poprzedzonej przez async i powinno się znaleźć przed wykonaniem funkcji asynchronicznej. Sprawi, że wykonanie nie przejdzie dalej, dopóki obietnica nie zostanie wykonana. Dzięki temu asynchroniczny kod przypomina swoim zachowaniem kod synchroniczny.",
+      },
+      {
+        question: "Czym jest obietnica (promise)?",
+        answer:
+          "Obietnice to obiekty, które reprezentują wykonanie (sukcesem lub porażką) operacji asynchronicznej. Są tak nazwane, bo wykonywana funkcja asynchroniczna musi złożyć obietnicę dostarczenia w przyszłości wartości. Po zakończeniu operacji asynchronicznej jej wynik może zostać obsłużony przez wywołanie na obietnicy metody then.",
+      },
+      {
+        question: "Czym jest pętla zdarzeń",
+        answer:
+          "Pętla zdarzeń to mechanizm, który umożliwia asynchroniczne wykonanie, mimo, że JavaScript jest jednowątkowy. Właściwa praca wykonuje się w stosie wywołań, tam funkcje JS są wykonywane. Wiadomość o tym co powinno zostać przetworzone nie ląduje jednak samoczynnie na stosie wywołań. Najpierw te wiadomości trafiają do kolejki, gdzie umieszcza je środowisko uruchomieniowe. Pętla zdarzeń natomiast ciągle nasłuchuje nowych wiadomości w kolejce i wysyła je do stosu wywołań, jeżeli tylko stos jest wolny. Taka implementacja mogłaby sprawiać spore problemy, jeżeli stos wywołań zostałby zablokowany przez czekanie na zasoby, jednak praktycznie wszystkie operacje I/O w JS są nieblokujące (z wyjątkiem kilku wywołań).",
+      },
+      {
         question: "Czym jest funkcja anonimowa?",
         answer: "Funkcja strzałkowa to skrócony zapis wyrażenia funkcyjnego:",
       },
       {
         question: "Jak działa async?",
-        answer: "Aby JavaScript nie blokował drzewa renderowania można wykorzystać regułę async. Atrybut async powoduje, że kod JS jest wykonywany niezależnie od etapu ładowania się strony i nie wpływa na ścieżkę renderowania. Atrybut ten może być z powodzeniem zastosowany w przypadku skryptów do:analityki internetowej,    dodatkowych widgetów do strony,",
-        secondAnswer: 'Atrybut async mówi przeglądarce, że skrypt nie wpływa ani na DOM ani na CSSOM i może być przetworzony dopiero po załadowaniu i wyrenderowaniu całej podstrony. Atrybut async działa wyłącznie w przypadku skryptów umieszczonych w osobnym pliku – dlatego wydzielenie skryptu do osobnego pliku jest tak bardzo istotne.'
+        answer:
+          "Aby JavaScript nie blokował drzewa renderowania można wykorzystać regułę async. Atrybut async powoduje, że kod JS jest wykonywany niezależnie od etapu ładowania się strony i nie wpływa na ścieżkę renderowania. Atrybut ten może być z powodzeniem zastosowany w przypadku skryptów do:analityki internetowej,    dodatkowych widgetów do strony,",
+        secondAnswer:
+          "Atrybut async mówi przeglądarce, że skrypt nie wpływa ani na DOM ani na CSSOM i może być przetworzony dopiero po załadowaniu i wyrenderowaniu całej podstrony. Atrybut async działa wyłącznie w przypadku skryptów umieszczonych w osobnym pliku – dlatego wydzielenie skryptu do osobnego pliku jest tak bardzo istotne.",
       },
       {
         question: "opisz atrybut defer?",
-        answer: "W przypadku kiedy JavaScript manipuluje drzewem DOM, można wykorzystać defer. Dzięki temu, skrypty w nagłówku będą potraktowane z takim priorytetem, jakby były na samym końcu strony. W przypadku kiedy chcemy pogodzić asynchroniczne ładowanie i możliwość manipulacją drzewem DOM, można wykorzystać bibliotekę require.js.",
+        answer:
+          "W przypadku kiedy JavaScript manipuluje drzewem DOM, można wykorzystać defer. Dzięki temu, skrypty w nagłówku będą potraktowane z takim priorytetem, jakby były na samym końcu strony. W przypadku kiedy chcemy pogodzić asynchroniczne ładowanie i możliwość manipulacją drzewem DOM, można wykorzystać bibliotekę require.js.",
       },
       {
         question: "Czym jest funkcja strzałkowa?",

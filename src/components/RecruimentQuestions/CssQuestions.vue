@@ -22,14 +22,14 @@
             v-text="cssQuestions.answer"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
-            style="  word-break: break-all;"
+            style="word-break: break-all;"
             class="white--text text-justify text-h5 text-wrap"
             v-if="page === 2"
             v-show="disable"
             v-text="cssQuestions.secondAnswer"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
-            style="  word-break: break-all;"
+            style="word-break: break-all;"
             class="white--text text-justify text-h5 text-wrap"
             v-if="page === 3"
             v-show="disable"
