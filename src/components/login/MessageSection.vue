@@ -5,7 +5,7 @@
         color="transparent"
         class="mx-auto"
         max-width="800"
-        height="500"
+        height="400"
         flat
       >
         <v-card
@@ -24,7 +24,7 @@
           color="transparent"
           class="mx-auto"
           max-width="800"
-          height="450"
+          height="400"
         ></v-card>
 
         <v-spacer></v-spacer>

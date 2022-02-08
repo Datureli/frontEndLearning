@@ -62,7 +62,7 @@
             v-if="this.$route.path === '/login'"
           />
           <ChangePassword v-if="this.$route.path === '/password'" />
-          <MessageSection v-if="this.$route.path === '/login/messages'" />
+          <MessageSection v-if="this.$route.path === '/messages'" />
         </div>
 
         <v-container>

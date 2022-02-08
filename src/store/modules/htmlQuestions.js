@@ -46,11 +46,6 @@ export default {
           "Są to takie elementy html które nie posiadają tagu zamykającego.Przykładowo: </br>,<img>,<hr />",
       },
       {
-        question: "Czym jest Html?",
-        answer: `Jest to znacznik, który określa znaczenie elementu.
-               Głównie do celów dostępności (ang. accessibility). Jest częścią specyfikacji ARIA. Został też dodany do HTML5.`,
-      },
-      {
         question: "Co to jest W3C?",
         answer: `Konsorcjum zajmuje się przede wszystkim dbaniem o prawidłowy rozwój sieci. Opracowuje standardy tworzenia protokołów http, standardy tworzenia stron w języku HTML, XHTML, standardy CSS, XML, DOM oraz wiele innych.`,
       },
