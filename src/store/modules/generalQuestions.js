@@ -28,7 +28,7 @@ export default {
       {
         question: "Czym jest domena?",
         answer:
-          "Domena (adres internetowy) to unikalna nazwa w Internecie, pod którą można umieścić serwis WWW, czy też założyć konta email.Aby Twoja strona WWW była dostępna w Internecie, oprócz domeny potrzebujesz jeszcze serwera WWW (dla plików strony WWW), na który będzie wskazywać Twoja unikalna nazwa.",
+          "Domena (adres internetowy) to unikalna nazwa w Internecie, pod którą można umieścić serwis WWW, czy też założyć konta email.Aby Twoja strona WWW była dostępna w Internecie, oprócz domeny potrzebujesz jeszcze serwera WWW  na który będzie wskazywać Twoja unikalna nazwa.",
         secondAnswer:
           "Domeny opierają się na systemie DNS, czyli Domain Name System. Jest to sieć rozproszonych po świecie serwerów. Dzięki DNS możemy używać zrozumiałych nazw witryn zamiast skomplikowanych adresów IP.Każdą z domen obsługują przynajmniej dwa serwery DNS, aby w przypadku awarii jednego z nich uniknąć sytuacji przestoju w działaniu strony internetowej. Do najważniejszych serwerów należy trzynaście tzw. root servers.",
       },
@@ -82,6 +82,12 @@ export default {
         secondAnswer: "",
       },
       {
+        question: "Czym jest zasada jednej odpowiedzialności?",
+        answer:
+          "zasada mówiąca, że nigdy nie powinno być więcej niż jednego powodu do istnienia klasy bądź metody",
+        secondAnswer: "",
+      },
+      {
         question: "Czym jest SOP?",
         answer:
           " zapewnia nam on możliwość bezpiecznej wymiany danych pomiędzy stronami które charakteryzuje inny Origin.",
@@ -98,7 +104,7 @@ export default {
         answer:
           "Największą zaletą Single Page Application jest jej szybkość działania. W porównaniu do tradycyjnej witryny internetowej użytkownik ma możliwość bardziej “płynnego” poruszania się po stronie. Kolejnymi zaletami są: wygoda dla użytkownika (UX) oraz generowanie mniejszego obciążenia dla serwera. To rozwiązanie wspaniale sprawdzi się dla stron, które mogą być pobierane również w formie aplikacji mobilnej.",
         secondAnswer:
-          "awarta jest wartościowa i jak wysoko w wynikach wyszukiwania powinna się znaleźć. Tutaj właśnie leży sedno problemu - crawlery Facebooka w ogóle nie radzą sobie ze stronami typu SPA. Natomiast Google radzi sobie, ale nie najlepiej.latego osiągnięcie wysokich wyników w wyszukiwarce Google przy SPA może być bardzo trudne. Nie twierdzimy, że nie jest to możliwe, ponieważ istnieją sposoby na rozwiązanie tego problemu, jednak to, co stosunkowo łatwo osiągnąć na “zwykłej” stronie internetowej, tutaj będzie sprawiać problemy.",
+          "Zawarta jest wartościowa i jak wysoko w wynikach wyszukiwania powinna się znaleźć. Tutaj właśnie leży sedno problemu - crawlery Facebooka w ogóle nie radzą sobie ze stronami typu SPA. Natomiast Google radzi sobie, ale nie najlepiej.latego osiągnięcie wysokich wyników w wyszukiwarce Google przy SPA może być bardzo trudne. Nie twierdzimy, że nie jest to możliwe, ponieważ istnieją sposoby na rozwiązanie tego problemu, jednak to, co stosunkowo łatwo osiągnąć na “zwykłej” stronie internetowej, tutaj będzie sprawiać problemy.",
       },
       {
         question: "Jak działają strony SPA?",

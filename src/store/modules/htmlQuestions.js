@@ -113,11 +113,6 @@ export default {
           "Accessibility (pl. dostępność) to tworzenie aplikacji w sposób który jest łatwy do interpretacji dla przeglądarki i/lub specjalnych urządzeń przystosowanych przez osoby niepełnosprawne. Po prostu przeglądarka wie kiedy ma do czynienia z obrazkiem, nawigacją czy artykułem.",
         secondAnswer: "",
       },
-      {
-        question: "Na czym polega semantyczny Html?",
-        answer: "Znacznik Main służy do umieszczania głównej części strony",
-        secondAnswer: "",
-      },
     ],
   },
 

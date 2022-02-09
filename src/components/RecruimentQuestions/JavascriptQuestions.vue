@@ -14,19 +14,22 @@
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
-            class="white--text text-h6 text-wrap"
+          subheading
+            style=" word-spacing: 1em 1em 1em;"
+            class="white--text text-justify text-h6 text-wrap"
             v-if="page === 1"
             v-show="disable"
             v-text="javascriptQuestions.answer"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
+            style="word-break: break-all;"
+            class="white--text text-justify text-h6 text-wrap"
             v-if="page === 2"
             v-show="disable"
             v-text="javascriptQuestions.secondAnswer"
           ></v-list-item-subtitle>
           <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
+            class="white--text text-justify text-h6 text-wrap"
             v-if="page === 3"
             v-show="disable"
             v-text="javascriptQuestions.thirdPartOfAnswer"
@@ -35,7 +38,7 @@
       </v-list-item>
     </v-carousel-item>
     <v-sheet class="d-flex">
-      <v-row justify="spacer-around" color="red" class="hidden-sm-and-down">
+      <v-row justify="spacer-around"  class="hidden-sm-and-down">
         <v-icon
           x-large
           @click="randomQuestion"
@@ -78,6 +81,15 @@
 <script>
 import { mapState } from "vuex";
 export default {
+  data() {
+    return {
+      icons: [
+        {
+          iconFunction: ''
+        }
+      ]
+    }
+  },
   props: {
     page: {
       type: Number,
