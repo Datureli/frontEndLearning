@@ -49,7 +49,17 @@ state: {
           icon: "mdi-account-circle",
         },
       ],
+},
+mutations: {
+  removeItemFromFirstColumn: (state, payload) => {
+    const i = state.firstColumn.map(item => item.id).indexOf(payload.id);
+    state.firstColumn.splice(i, 1);
+  }
+},
+actions: {
+  removeItemFromFirstColumn(context) {
+    context.commit(removeItemFromFirstColumn)
+  }
 }
-
 
 }

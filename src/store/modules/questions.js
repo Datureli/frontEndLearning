@@ -358,6 +358,11 @@ export default {
           "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
       },
       {
+        question: "Dlaczego powinniśmy używać typescripta?",
+        answer:
+          "błędy typu są wyłapywane podczas kompilacji,bogatsza obsługa edytorów,łatwiejszy  w odczycie i rozumieniu kod,wspomaga developer experience(debugowanie)",
+      },
+      {
         question: "czym jest typ unknown?",
         answer:
           "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
