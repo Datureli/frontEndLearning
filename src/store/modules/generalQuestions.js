@@ -70,6 +70,14 @@ export default {
           "Każdy właściciel witryny internetowej może przejść z adresu z przedrostkiem http na ten z https na początku. Wiąże się to z koniecznością wdrożenia certyfikatu szyfrującego SSL",
       },
       {
+        question: "Czym jest Solid?",
+        answer:
+          "S.O.L.I.D. to akronim, który wymyślił Robert C. Martin. Uncle Bob (taki ma pseudonim) jest programistą. Ma sporo doświadczenia, przez wielu uważany jest za swego rodzaju autorytet.Akronim ten zbiera zestaw wytycznych. Wytyczne te stosuje się podczas pisania programów w sposób obiektowy. Samo słówko solid można przetłumaczyć jako solidny, konkretny, mocny.",
+        secondAnswer:
+          "S jak Samodzielny.S pochodzi od Single Responsibility Principle. W oryginalnym wydaniu autor mówi o tym, że klasa powinna mieć wyłącznie jeden powód do zmiany. Wytyczna ta sprowadza się do tego, że dana klasa powinna mieć jeden główny cel. Jedną główną odpowiedzialność. Jedną funkcjonalność, którą realizuje.",
+          thirdPartOfAnswer: 'O jak Otwarty O pochodzi od Open/Closed Principle. W tym miejscu Uncle Bob zwraca uwagę na to aby kod, który tworzymy był “możliwy do rozszerzania i zamknięty na modyfikacje”. Sprowadza się do do świadomego użycia kompozycji, dziedziczenia czy modyfikatorów dostępu.L pochodzi od Liskov Substitution Principle. W przypadku tej wytycznej Twój kod powinien współpracować poprawnie z klasą, jak i wszystkimi jej podklasami. Innymi słowy jeśli zależysz od jakiegoś interfejsu to wszystkie jego implementacje powinny poprawnie działać z Twoją klasą/metodą.I pochodzi od Interface Segregation Principle. Wytyczna ta mówi o tym, abyś rozdzielał interfejs klasy. Interfejs ten powinien być odpowiednio zdefiniowany. Chodzi tu o aby inny fragment kodu, który używa Twojej klasy używał wyłącznie podzbioru metod, który jest w tamtym przypadku istotny. W oryginale wytyczna ta mówi o tym, ze klienty nie powinny być zmuszane do wprowadzania zależności od interfejsów, których nie używają.D pochodzi od Dependency Inversion Principle. Wytyczna ta mówi, że wysokopoziomowe klasy nie powinny zależeć od niskopoziomowych detali. Zależność ta powinna być odwrócona poprzez wprowadzenie dodatkowych elementów. Mówi się tu o dodatkowych warstwach abstrakcji, które pozwalają na zmianę kierunku takiej zależności.'
+      },
+      {
         question: "https a Google – czy szyfrowanie wpływa na pozycjonowanie?",
         answer:
           " Algorytmy biorą pod uwagę takie czynniki jak wiarygodność i jakość domeny, a to ma związek również z zapewnieniem użytkownikom bezpieczeństwa. Oznacza to, że wdrożenie protokołu https może mieć pozytywny wpływ na pozycjonowanie witryny.",

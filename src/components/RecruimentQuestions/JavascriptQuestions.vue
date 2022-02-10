@@ -37,8 +37,7 @@
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
-    <v-sheet class="d-flex">
-      <v-row justify="spacer-around"  class="hidden-sm-and-down">
+      <v-row justify="spacer-around" height="50"  class=" d-flex hidden-sm-and-down align">
         <v-icon
           x-large
           @click="randomQuestion"
@@ -59,7 +58,7 @@
           v-model="page"
           :length="3"
         ></v-pagination>
-        <v-icon
+        <v-icon 
           large
           @click="disableAnswers"
           style="position: absolute; bottom: 26%; right:10%;"
@@ -74,7 +73,7 @@
           >mdi-heart</v-icon
         >
       </v-row>
-    </v-sheet>
+
   </v-carousel>
 </template>
 

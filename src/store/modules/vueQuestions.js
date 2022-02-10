@@ -36,7 +36,7 @@ export default {
             {
               question: "Czym jest composition api?",
               answer:
-                "pozwala na pisanie komponentów w sposób oparty na funkcjach.Nowe API umożliwia hermetyzację logiki w tzw. „composition functions” i pozwala używać jej ponownie we wszystkich komponentach.   ",
+                "Pojawiło się kilka artykułów i samouczków wideo wyjaśniających nową składnię, a głównym wnioskiem jest: Composition API to nowa struktura do budowania komponentów Vue w celu poprawy czytelności kodu i ponownego wykorzystania.pozwala na pisanie komponentów w sposób oparty na funkcjach.Nowe API umożliwia hermetyzację logiki w tzw. „composition functions” i pozwala używać jej ponownie we wszystkich komponentach.   ",
             },
             {
               question: "Czym są zdarzenia?",
@@ -194,12 +194,53 @@ export default {
             {
               question: "Czym są destructing hooks?",
               answer:
+                "Zarówno ref jak i reactive mogą sprawić ,że wartość będzie reaktywna.Jednak różnią się od siebie w użyciu i dostępie.Ref można bezpośrednio przypisać do pojedynczej zmiennej lub stałej,podczas gdy reaktywność może być używana jako zwykła funkcja data,to sprawia ,że cały obiekt jaki obejmuje jest reaktywny.Ref potrzebuje wartości(value) aby uzyskać dostęp do kontentu,podczas gdy reactive ma bezpośredni dostęp",
+            },
+            {
+              question: "Jaka jest różnica między ref a reactive?",
+              answer:
                 "Pozwalają nam wykonywać akcje kiedy nasz komponent zostanie zniszczony,takie jak cleanup lub wysyłanie analiz.Zostają odpalone kiedy komponent zostanie usunięty z drzewa DOM",
+            },
+            {
+              question: "Czym jest toRefs?",
+              answer:
+                "Ta funkcja przekonwertuje każdą z wartości obiektu i zmapuje ją w jej własnym ref.właściwości są reaktywne, więc jeśli musisz użyć destrukturyzacji ES6, powinieneś użyć toRefs, w przeciwnym razie wpłynęłoby to na reaktywność właściwości.",
+            },
+            {
+              question: "Jak uzywać propsów w composition api?",
+              answer:
+                "Aby uzyskać dostęp do propsów w setup function,musimy przekazać go jako argument.Nadal obowiązuje tu zasada braku destrukturyzacji, ponieważ jeśli to zrobimy, stracimy reaktywność.",
+            },
+            {
+              question: "dlaczego powinniśmy unikać używania this wewnątrz setup?",
+              answer:
+                "Należy unikać używania this wewnątrz setup ponieważ this nie będzie odnosić się do komponentu.Setup() jest wywoływany przed właściwością data,computed,methods więc nie będą dostępne wewnątrz naszej instacji setup",
+            },
+            {
+              question: "Czym jest atrybut ref?",
+              answer:
+                "ref pozwala nam uczynić dowolną zmienną reaktywną.Ref bierze argument i zwraca go owiniętego w obiekt z wartością,może być później użyty aby uzyskać dostęp lub zmutować wartość reaktywnej zmiennej.W innych słowach ref wytwarza reaktywną referencje dla naszej wartości.",
+            },
+            {
+              question: "Czym jest multi root template?",
+              answer:
+                "W vue 2 mogliśmy mieć tylko jeden root element wewnątrz templatu.W vue 3 uległo to zmianie dzięki funkcji fragmens,dzięki temu nie musimy więcej posiadać tylko jednego root element.",
+            },
+            {
+              question: "Czym jest setup w composition api?",
+              answer:
+                "Composition api wprowadza opcję setup(), która jest uruchamiana przed każdym przechwyceniem cyklu życia. Setup() zostanie uruchomiony przed utworzeniem komponentu, gdy właściwości zostaną rozwiązane i będą gotowe do użycia 🤗. I na nim będziesz mógł napisać dowolną logikę JavaScript, której potrzebujesz.Funkcja setup() przyjmuje dwa argumenty: pierwszy to props a drugi context .kontekst jest normalnym obiektem JS i nie jest reaktywny, omówimy to poniżej.",
             },
             {
               question: "Czym są filtry?",
               answer:
                 "Filtry są używane do formatownia tekstu w naszej aplikacji.Są używane wraz z interpolacją and v-bind.",
+            },
+            {
+              question: "Wyjaśnij reaktywność w composition api?",
+              answer:
+                "Wartości zadeklarowane w setup() NIE są domyślnie reaktywne. Jak być może pamiętasz, w Options API obiekt danych konwertuje swoje właściwości na pobierające/ustawiające, aby były reaktywne , a zatem za każdym razem, gdy dokonamy zmiany, zostanie to odzwierciedlone w DOM . W przypadku setup(), aby odzwierciedlić zmiany, musisz upewnić się, że wartość jest reaktywna, używając opcji Ref lub Reactive.Słowo kluczowe „this” nie jest dostępne w setup(). W Options API słowo kluczowe „this” odnosi się do komponentu, ale w Composition API „this” będzie niezdefiniowane. Ponieważ setup() jest wywoływana przed jakimkolwiek innym przechwyceniem cyklu życia, „this” nie będzie odwołaniem do bieżącej aktywnej instancji i dlatego nie będzie zachowywać się jak w innych opcjach.",
+                secondAnswer: 'Setup() musi zwracać obiekt za każdym razem, gdy chcesz, aby szablon komponentu miał dostęp do właściwości kontekstu, a także właściwości przekazanych do setup(). Właściwość z setup(), której chcesz użyć w szablonie komponentu, musi zostać zwrócona w obiekcie JS.'
             },
             {
               question: "Czym jest Destroy hook?",
