@@ -15,69 +15,53 @@
 
           <v-list-item-subtitle
             style="word-break: break-all;  text-align: justify;
-  text-justify: auto;"
-            class="white--text text-h6 text-wrap"
-            v-if="page === 1"
+            text-justify: auto;"
+            class="white--text text-h6 text-wrap"  
             v-show="disable"
-            v-text="cssQuestions.answer"
-          ></v-list-item-subtitle>
-          <v-list-item-subtitle
-            style="word-break: break-all;"
-            class="white--text text-justify text-h5 text-wrap"
-            v-if="page === 2"
-            v-show="disable"
-            v-text="cssQuestions.secondAnswer"
-          ></v-list-item-subtitle>
-          <v-list-item-subtitle
-            style="word-break: break-all;"
-            class="white--text text-justify text-h5 text-wrap"
-            v-if="page === 3"
-            v-show="disable"
-            v-text="cssQuestions.thirdPartOfAnswer"
+            v-text="page === 1 ? cssQuestions.answer : page === 2 ? cssQuestions.secondAnswer : cssQuestions.thirdPartOfAnswer"
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
     <v-sheet class="d-flex" relative>
-       <v-row justify="spacer-around" class="hidden-sm-and-down">
-      <v-icon
-        x-large
-        @click="randomCssQuestion"
-        color="brown"
-        style="position: absolute; bottom: 26%; right:90%;"
-        >mdi-dice-multiple</v-icon
-      >
+      <v-row justify="spacer-around" class="hidden-sm-and-down">
+        <v-icon
+          x-large
+          @click="randomCssQuestion"
+          style="position: absolute; bottom: 26%; right:90%;"
+          >mdi-dice-multiple</v-icon
+        >
 
-      <v-icon
-        x-large
-        @click="cssQuestionLoop"
-        :disabled="disableLoop"
-        color="white"
-        style="position: absolute; bottom: 26%; right:85%;"
-        >mdi-autorenew</v-icon
-      >
+        <v-icon
+          x-large
+          @click="cssQuestionLoop"
+          :disabled="disableLoop"
+          color="white"
+          style="position: absolute; bottom: 26%; right:85%;"
+          >mdi-autorenew</v-icon
+        >
 
-      <v-pagination
-        class="mx-auto hidden-sm-and-down"
-        style="position: absolute; bottom: 18%; right:36%"
-        v-model="page"
-        :length="3"
-      ></v-pagination>
-      <v-icon
-        large
-        @click="disableAnswers"
-        style="position: absolute; bottom: 26%; right:10%;"
-        >mdi-comment-off-outline</v-icon
-      >
+        <v-pagination
+          class="mx-auto hidden-sm-and-down"
+          style="position: absolute; bottom: 18%; right:36%"
+          v-model="page"
+          :length="3"
+        ></v-pagination>
+        <v-icon
+          large
+          @click="disableAnswers"
+          style="position: absolute; bottom: 26%; right:10%;"
+          >mdi-comment-off-outline</v-icon
+        >
 
-      <v-icon
-        x-large
-        @click="addToFavorite(cssQuestions)"
-        color="red"
-        style="position: absolute; bottom: 26%; right:4%;"
-        >mdi-heart</v-icon
-      >
-       </v-row>
+        <v-icon
+          x-large
+          @click="addToFavorite(cssQuestions)"
+          color="red"
+          style="position: absolute; bottom: 26%; right:4%;"
+          >mdi-heart</v-icon
+        >
+      </v-row>
     </v-sheet>
   </v-carousel>
 </template>
@@ -98,21 +82,21 @@ export default {
   computed: {
     ...mapState(["disable", "favorite"]),
     ...mapState("cssQuestions", ["cssQuestions"]),
-  },
-  methods: {
-    switchQuestion() {
+        switchQuestion() {
       switch (page) {
         case 1:
           return cssQuestions.answer;
 
         case 2:
-          cssQuestions.secondAnswer;
-          break;
+          return cssQuestions.secondAnswer;
 
-        default:
-          break;
+        case 3:
+          return cssQuestions.thirdPartOfAnswer;
       }
     },
+  },
+  methods: {
+
     disableAnswers() {
       this.$store.commit("disable");
     },
