@@ -11,7 +11,8 @@ export default {
       {
         question: `Czym jest string interpolation?`,
 
-        answer: `HTML (Hypertext Markup Language) to język znaczników służący do prezentacji treści na stronach internetowych, który jest oparty o hiperłącza łączące poszczególne dokumenty pomiędzy sobą. Przeglądarki internetowe jednoznacznie interpretują kod HTML i na jego bazie przedstawiają treść końcowym użytkownikom.`,
+        answer: `
+        Interpolacja ciągów JavaScript to proces osadzania wyrażenia w części ciągu.Literał szablonu służy do osadzania wyrażeń. Za pomocą interpolacji można dodawać do ciągu wartości, takie jak zmienne i obliczenia matematyczne.`,
       },
       {
         question: "jak wstawić ikonę obok adresu www?",
@@ -26,6 +27,14 @@ export default {
         question: "Czym jest tag blockquote?",
         answer:
           "Tag blockquote określa treść cytowaną ze źródła zewnętrznego (gazeta, praca naukowa itp.",
+        secondAnswer: `<blockquote cite="http://developer.mozilla.org">
+              <p>To jest cytat z Mozilla Developer Center.</p>
+                </blockquote>`,
+      },
+      {
+        question: "Co to jest div?",
+        answer:
+          "Jest rodzajem pojemnika na treść. Nie ma on żadnego wpływu na treść ani układ graficzny, dopóki nie zostanie ostylizowany z użyciem CSS.  ",
         secondAnswer: `<blockquote cite="http://developer.mozilla.org">
               <p>To jest cytat z Mozilla Developer Center.</p>
                 </blockquote>`,

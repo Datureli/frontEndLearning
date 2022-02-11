@@ -36,18 +36,18 @@ export default {
             {
               question: "Czym jest composition api?",
               answer:
-                "Pojawiło się kilka artykułów i samouczków wideo wyjaśniających nową składnię, a głównym wnioskiem jest: Composition API to nowa struktura do budowania komponentów Vue w celu poprawy czytelności kodu i ponownego wykorzystania.pozwala na pisanie komponentów w sposób oparty na funkcjach.Nowe API umożliwia hermetyzację logiki w tzw. „composition functions” i pozwala używać jej ponownie we wszystkich komponentach.   ",
+                "Composition API to nowa struktura do budowania komponentów Vue w celu poprawy czytelności kodu i ponownego wykorzystania.pozwala na pisanie komponentów w sposób oparty na funkcjach.Nowe API umożliwia hermetyzację logiki w tzw. „composition functions” i pozwala używać jej ponownie we wszystkich komponentach.   ",
             },
             {
               question: "Czym są zdarzenia?",
               answer:
-                "Z obsługą zdarzeń mieliśmy do czynienia podczas omawiania dyrektywy v-on. Za jej pomocą dodajemy event listener, który będzie nasłuchiwał wystąpienia zdefiniowanego zdarzenia, a po jego wyzwoleniu wykonywał konkretną akcję (na przykład wykonywał metodę). Pójdźmy jednak o krok dalej i zastanówmy się, jak wygląda komunikacja pomiędzy komponentami w kontekście zdarzeń. Możemy wyobrazić sobie prostą sytuację, w której mamy drzewo DOM składające się z elementu rodzica i zagnieżdżonego w nim dziecka.",
+                " Za jej pomocą dodajemy event listener, który będzie nasłuchiwał wystąpienia zdefiniowanego zdarzenia, a po jego wyzwoleniu wykonywał konkretną akcję (na przykład wykonywał metodę).",
                 secondAnswer: ''
             },
             {
               question: "Czym są komponenty funkcyjne",
               answer:
-                "props zawsze napływają do komponentu z zewnątrz. Drugim obiektem, który służy do zarządzania danymi w komponentach, jest state. Dzięki nim komponent może zarządzać stanem od wewnątrz. state jest dostępne wyłącznie w komponentach klasowych.Z tego powodu komponenty funkcyjne często określa się inną, dość rozwlekłą w języku polskim, nazwą: funkcyjne komponenty pozbawione stanu (ang. functional stateless components, FCS).",
+                "props zawsze napływają do komponentu z zewnątrz. Drugim obiektem, który służy do zarządzania danymi w komponentach, jest state. Dzięki nim komponent może zarządzać stanem od wewnątrz. state jest dostępne wyłącznie w komponentach klasowych.Z tego powodu komponenty funkcyjne często określa się inną nazwą funkcyjne komponenty pozbawione stanu (ang. functional stateless components, FCS).",
                 secondAnswer: 'Po co decydujemy się na korzystanie z komponentów, które mają jawnie ograniczony zakres możliwości?Jak się okazuje, te ograniczenia mają swoje zalety.Komponenty funkcyjne cechuje prostota, zwięzłość i przewidywalność. Nie musimy przejmować się stanem ani innymi funkcjonalnościami, dodającymi zbędną złożoność.Komponenty pozbawione stanu są świetnym sposobem na redukowanie złożoności aplikacji.'
             },
             {
@@ -58,12 +58,12 @@ export default {
             {
               question: "Do czego nam plik main.js w vue?",
               answer:
-                "Dzieją się tu trzy zasadnicze rzeczy, na które warto zwrócić uwagę:Tworzona jest instancja Vue.Renderowanie komponentu najwyższego poziomu przeniesione zostaje do App.vue.Instancja Vue zostaje powiązana z elementem #app znajdującym się w pliku index.html.",
+                "W pliku main.js Dzieją się tu trzy zasadnicze rzeczy, na które warto zwrócić uwagę:Tworzona jest instancja Vue.Renderowanie komponentu najwyższego poziomu przeniesione zostaje do App.vue.Instancja Vue zostaje powiązana z elementem #app znajdującym się w pliku index.html.",
             },
             {
               question: "Czym jest vue-cli?",
               answer:
-                "plikacja konsolowa oparta o node.js, dzięki której będziemy w stanie zarządzać naszą aplikacją z poziomu terminala. Aby zainstalować vue-cli musimy posiadać node.js oraz npm/yarn.",
+                "Aplikacja konsolowa oparta o node.js, dzięki której będziemy w stanie zarządzać naszą aplikacją z poziomu terminala. Aby zainstalować vue-cli musimy posiadać node.js oraz npm/yarn.",
             },
             {
               question: "Czym jest vue?",
