@@ -57,7 +57,6 @@
         >
 
         <v-icon
-          class="hidden-sm-and-down"
           :disabled="!isHeartActive"
           x-large
           @click="addToFavorite(htmlQuestions)"
@@ -73,6 +72,20 @@
 <script>
 import { mapState } from "vuex";
 export default {
+  data() {
+    return {
+      icons: [
+        {
+          click: randomHtmlQuestion,
+          icon: 'mdi-dice-multiple'
+        },
+             {
+          click: htmlQuestionLoop,
+          icon: 'mdi-autorenew'
+        },
+      ]
+    }
+  },
   props: {
     page: {
       type: Number,
