@@ -15,26 +15,19 @@
 
           <v-list-item-subtitle
             class="white--text text-justify text-h5 text-wrap"
-            v-if="page === 1"
             v-show="disable"
-            v-text="reactQuestions.answer"
-          ></v-list-item-subtitle>
-          <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
-            v-if="page === 2"
-            v-show="disable"
-            v-text="reactQuestions.secondAnswer"
-          ></v-list-item-subtitle>
-          <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
-            v-if="page === 3"
-            v-show="disable"
-            v-text="reactQuestions.thirdPartOfAnswer"
+            v-text="
+              page === 1
+                ? reactQuestions.answer
+                : page === 2
+                ? reactQuestions.secondAnswer
+                : reactQuestions.thirdPartOfAnswer
+            "
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-         </v-carousel-item>
-        <v-sheet class="d-flex" relative>
+    </v-carousel-item>
+    <v-sheet class="d-flex" relative>
       <v-icon
         large
         @click="randomReactQuestion"
@@ -77,7 +70,6 @@
         >mdi-heart</v-icon
       >
     </v-sheet>
- 
   </v-carousel>
 </template>
 

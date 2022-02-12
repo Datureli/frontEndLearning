@@ -15,21 +15,14 @@
 
           <v-list-item-subtitle
             class="white--text text-justify text-h5 text-wrap"
-            v-if="page === 1"
             v-show="disable"
-            v-text="generalQuestions.answer"
-          ></v-list-item-subtitle>
-          <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
-            v-if="page === 2"
-            v-show="disable"
-            v-text="generalQuestions.secondAnswer"
-          ></v-list-item-subtitle>
-          <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
-            v-if="page === 3"
-            v-show="disable"
-            v-text="generalQuestions.thirdPartOfAnswer"
+               v-text="
+              page === 1
+                ? generalQuestions.answer
+                : page === 2
+                ? generalQuestions.secondAnswer
+                : generalQuestions.thirdPartOfAnswer
+            "
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>

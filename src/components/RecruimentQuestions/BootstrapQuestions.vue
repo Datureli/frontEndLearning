@@ -15,21 +15,14 @@
 
           <v-list-item-subtitle
             class="white--text text-justify text-h5 text-wrap"
-            v-if="page === 1"
             v-show="disable"
-            v-text="testQuestions.answer"
-          ></v-list-item-subtitle>
-          <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
-            v-if="page === 2"
-            v-show="disable"
-            v-text="testQuestions.secondAnswer"
-          ></v-list-item-subtitle>
-          <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
-            v-if="page === 3"
-            v-show="disable"
-            v-text="testQuestions.thirdPartOfAnswer"
+              v-text="
+              page === 1
+                ? testQuestions.answer
+                : page === 2
+                ? testQuestions.secondAnswer
+                : testQuestions.thirdPartOfAnswer
+            "
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -38,7 +31,6 @@
       <v-icon
         x-large
         @click="randomQuestion"
-        color="brown"
         style="position: absolute; bottom: 26%; right:90%;"
         >mdi-dice-multiple</v-icon
       >

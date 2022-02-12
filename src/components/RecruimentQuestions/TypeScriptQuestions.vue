@@ -1,40 +1,33 @@
 <template>
   <v-carousel hide-delimiters @change="page = 1" class="mt-1">
     <v-carousel-item
-      v-for="(javascriptQuestions, index) in javascriptQuestions"
+      v-for="(typescriptQuestions, index) in typescriptQuestions"
       :key="index"
-          max-width="700"
+      max-width="700"
       class="mx-auto"
     >
       <v-list-item>
         <v-list-item-content>
           <v-list-item-subtitle
             class="text--primary   font-weight-black  text-h4 text-wrap "
-            v-text="javascriptQuestions.question"
+            v-text="typescriptQuestions.question"
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
             class="white--text text-justify text-h5 text-wrap"
-            v-if="page === 1"
             v-show="disable"
-            v-text="javascriptQuestions.answer"
-          ></v-list-item-subtitle>
-          <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
-            v-if="page === 2"
-            v-show="disable"
-            v-text="javascriptQuestions.secondAnswer"
-          ></v-list-item-subtitle>
-          <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
-            v-if="page === 3"
-            v-show="disable"
-            v-text="javascriptQuestions.thirdPartOfAnswer"
+            v-text="
+              page === 1
+                ? typescriptQuestions.answer
+                : page === 2
+                ? typescriptQuestions.secondAnswer
+                : typescriptQuestions.thirdPartOfAnswer
+            "
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
-     <v-sheet class="d-flex" relative>
+    <v-sheet class="d-flex" relative>
       <v-icon
         x-large
         @click="randomQuestion"
@@ -65,7 +58,7 @@
 
       <v-icon
         x-large
-        @click="addToFavorite(javascriptQuestions)"
+        @click="addToFavorite(typescriptQuestions)"
         color="red"
         style="position: absolute; bottom: 26%; right:4%;"
         >mdi-heart</v-icon
@@ -84,7 +77,7 @@ export default {
   },
   computed: {
     ...mapState(["disable", "favorite"]),
-    ...mapState("questions", ["javascriptQuestions"]),
+    ...mapState("questions", ["typescriptQuestions"]),
   },
 
   methods: {
@@ -92,14 +85,14 @@ export default {
       this.$store.commit("disable");
     },
 
-    addToFavorite(javascriptQuestions) {
-      this.$store.state.favorite.push(javascriptQuestions);
+    addToFavorite(typescriptQuestions) {
+      this.$store.state.favorite.push(typescriptQuestions);
     },
     randomQuestion() {
-      this.$store.dispatch("questions/randomQuestion");
+      this.$store.dispatch("questions/randomTypescriptQuestion");
     },
     questionLoop() {
-      this.$store.dispatch("questions/questionLoop");
+      this.$store.dispatch("questions/typescriptQuestionLoop");
     },
   },
 };

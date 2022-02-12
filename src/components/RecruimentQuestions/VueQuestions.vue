@@ -16,22 +16,9 @@
           <v-list-item-subtitle
              style="word-break: break-all;"
             class="white--text text-justify text-h6 text-wrap"
-            v-if="page === 1"
+       
             v-show="disable"
-            v-text="vueQuestions.answer"
-          ></v-list-item-subtitle>
-          <v-list-item-subtitle
-             style="word-break: break-all;"
-            class="white--text text-justify text-h6 text-wrap"
-            v-if="page === 2"
-            v-show="disable"
-            v-text="vueQuestions.secondAnswer"
-          ></v-list-item-subtitle>
-          <v-list-item-subtitle
-            class="white--text text-justify text-h6 text-wrap"
-            v-if="page === 3"
-            v-show="disable"
-            v-text="vueQuestions.thirdPartOfAnswer"
+                 v-text="page === 1 ? vueQuestions.answer : page === 2 ? vueQuestions.secondAnswer : vueQuestions.thirdPartOfAnswer"
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>

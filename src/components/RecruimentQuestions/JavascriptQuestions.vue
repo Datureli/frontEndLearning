@@ -14,66 +14,60 @@
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
-          subheading
             style=" word-spacing: 1em 1em 1em;"
             class="white--text text-justify text-h6 text-wrap"
-            v-if="page === 1"
             v-show="disable"
-            v-text="javascriptQuestions.answer"
-          ></v-list-item-subtitle>
-          <v-list-item-subtitle
-            style="word-break: break-all;"
-            class="white--text text-justify text-h6 text-wrap"
-            v-if="page === 2"
-            v-show="disable"
-            v-text="javascriptQuestions.secondAnswer"
-          ></v-list-item-subtitle>
-          <v-list-item-subtitle
-            class="white--text text-justify text-h6 text-wrap"
-            v-if="page === 3"
-            v-show="disable"
-            v-text="javascriptQuestions.thirdPartOfAnswer"
+            v-text="
+              page === 1
+                ? javascriptQuestions.answer
+                : page === 2
+                ? javascriptQuestions.secondAnswer
+                : javascriptQuestions.thirdPartOfAnswer
+            "
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
-      <v-row justify="spacer-around" height="50"  class=" d-flex hidden-sm-and-down align">
-        <v-icon
-          x-large
-          @click="randomQuestion"
-          style="position: absolute; bottom: 26%; right:90%;"
-          >mdi-dice-multiple</v-icon
-        >
+    <v-row
+      justify="spacer-around"
+      height="50"
+      class=" d-flex hidden-sm-and-down align"
+    >
+      <v-icon
+        x-large
+        @click="randomQuestion"
+        style="position: absolute; bottom: 26%; right:90%;"
+        >mdi-dice-multiple</v-icon
+      >
 
-        <v-icon
-          x-large
-          @click="questionLoop"
-          color="white"
-          style="position: absolute; bottom: 26%; right:85%;"
-          >mdi-autorenew</v-icon
-        >
+      <v-icon
+        x-large
+        @click="questionLoop"
+        color="white"
+        style="position: absolute; bottom: 26%; right:85%;"
+        >mdi-autorenew</v-icon
+      >
 
-        <v-pagination
-          style="position: absolute; bottom: 18%; right:36%"
-          v-model="page"
-          :length="3"
-        ></v-pagination>
-        <v-icon 
-          large
-          @click="disableAnswers"
-          style="position: absolute; bottom: 26%; right:10%;"
-          >mdi-comment-off-outline</v-icon
-        >
+      <v-pagination
+        style="position: absolute; bottom: 18%; right:36%"
+        v-model="page"
+        :length="3"
+      ></v-pagination>
+      <v-icon
+        large
+        @click="disableAnswers"
+        style="position: absolute; bottom: 26%; right:10%;"
+        >mdi-comment-off-outline</v-icon
+      >
 
-        <v-icon
-          x-large
-          @click="addToFavorite(javascriptQuestions)"
-          color="red"
-          style="position: absolute; bottom: 26%; right:4%;"
-          >mdi-heart</v-icon
-        >
-      </v-row>
-
+      <v-icon
+        x-large
+        @click="addToFavorite(javascriptQuestions)"
+        color="red"
+        style="position: absolute; bottom: 26%; right:4%;"
+        >mdi-heart</v-icon
+      >
+    </v-row>
   </v-carousel>
 </template>
 
@@ -84,10 +78,10 @@ export default {
     return {
       icons: [
         {
-          iconFunction: ''
-        }
-      ]
-    }
+          iconFunction: "",
+        },
+      ],
+    };
   },
   props: {
     page: {
