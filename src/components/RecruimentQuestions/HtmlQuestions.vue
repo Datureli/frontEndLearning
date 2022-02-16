@@ -39,7 +39,6 @@
         <v-icon
           x-large
           @click="htmlQuestionLoop"
-          color="white"
           style="position: absolute; bottom: 26%; right:85%;"
           >mdi-autorenew</v-icon
         >
@@ -55,15 +54,25 @@
           style="position: absolute; bottom: 26%; right:10%;"
           >mdi-comment-off-outline</v-icon
         >
-
-        <v-icon
-          :disabled="!isHeartActive"
-          x-large
-          @click="addToFavorite(htmlQuestions)"
-          color="red"
-          style="position: absolute; bottom: 26%; right:4%;"
-          >mdi-heart</v-icon
-        >
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              style="position: absolute; bottom: 26%; right:2%;"
+              color="transparent"
+              outlined
+              v-bind="attrs"
+              v-on="on"
+            >
+              <v-icon
+                :disabled="!isHeartActive"
+                x-large
+                @click="addToFavorite(htmlQuestions)"
+                >mdi-heart</v-icon
+              >
+            </v-btn>
+          </template>
+          <span>You need to be logged in</span>
+        </v-tooltip>
       </v-row>
     </v-sheet>
   </v-carousel>
@@ -72,20 +81,6 @@
 <script>
 import { mapState } from "vuex";
 export default {
-  data() {
-    return {
-      icons: [
-        {
-          click: randomHtmlQuestion,
-          icon: 'mdi-dice-multiple'
-        },
-             {
-          click: htmlQuestionLoop,
-          icon: 'mdi-autorenew'
-        },
-      ]
-    }
-  },
   props: {
     page: {
       type: Number,
