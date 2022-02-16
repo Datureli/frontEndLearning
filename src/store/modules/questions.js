@@ -373,6 +373,11 @@ export default {
           "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
       },
       {
+        question: "czym są intefejsy?",
+        answer:
+          "Jednym z podstawowych zasad TS jest to, że sprawdzanie typów koncentruje się na 'kształcie' ich wartości. Mówimy na to podtyp strukturalny. W TypeScript sposobem na definiowanie takich związków są właśnie interfejsy.",
+      },
+      {
         question: "Opisz typ any",
         answer:
           "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",

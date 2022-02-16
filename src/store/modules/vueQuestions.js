@@ -147,6 +147,11 @@ export default {
                 "to są funkcje które zwracają nam stan.obiekt.defineProperty API, jeśli jeszcze tego nie wiesz. Ponieważ system reaktywności Vue opiera się na tym API.",
             },
             {
+              question: "Czemu nie powinniśmy używać v-if razem z v-for?",
+              answer:
+                "Nie powinniśmy używać razem tych dyrektyw ponieważ v-for posiada większy priorytet niż v-if",
+            },
+            {
               question: "Czym jest updated hook?",
               answer:
                 "Jest uruchamiany zaraz po tym jak data naszego komponentu oraz dom zostaną rerenderowane.Używamy go w sytuacji gdy potrzebujemy dostępu do DOM zaraz po zmianie propety  ",

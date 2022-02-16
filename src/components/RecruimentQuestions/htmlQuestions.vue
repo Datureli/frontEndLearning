@@ -14,7 +14,8 @@
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
-            class="white--text text-justify text-h6 text-wrap"
+          style="word-break: inherit; "
+            class="&nbsp;  white--text text-justify text-h6 text-wrap"
             v-show="disable"
             v-text="
               page === 1
@@ -79,7 +80,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapGetters } from "vuex";
 export default {
   props: {
     page: {
@@ -89,6 +90,10 @@ export default {
   computed: {
     ...mapState(["disable", "favorite", "isHeartActive"]),
     ...mapState("htmlQuestions", ["htmlQuestions"]),
+    ...mapGetters("htmlQuestions", ["removeSpace"]),
+    removespace() {
+      return this.$store.getters['htmlQuestions/removeSpace']
+    }
   },
 
   methods: {
@@ -100,6 +105,9 @@ export default {
     },
     htmlQuestionLoop() {
       this.$store.dispatch("htmlQuestions/htmlQuestionLoop");
+    },
+    removeSpace() {
+      this.$store.dispatch("htmlQuestions/removeSpace")
     },
     randomHtmlQuestion() {
       this.$store.dispatch("htmlQuestions/randomHtmlQuestion");

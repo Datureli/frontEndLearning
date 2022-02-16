@@ -6,7 +6,7 @@ export default {
       {
         question: `Czym jest Html?`,
 
-        answer: `HTML (Hypertext Markup Language) to język znaczników służący do prezentacji treści na stronach internetowych, który jest oparty o hiperłącza łączące poszczególne dokumenty pomiędzy sobą. Przeglądarki internetowe jednoznacznie interpretują kod HTML i na jego bazie przedstawiają treść końcowym użytkownikom.`,
+        answer: `HTML (Hypertext Markup Language) to język znaczników służący do prezentacji treści na stronach internetowych,który jest oparty o hiperłącza łączące poszczególne dokumenty pomiędzy sobą ; . Przeglądarki internetowe jednoznacznie interpretują kod HTML i na jego bazie przedstawiają treść końcowym użytkownikom.`,
       },
       {
         question: `Czym jest string interpolation?`,
@@ -30,6 +30,12 @@ export default {
         secondAnswer: `<blockquote cite="http://developer.mozilla.org">
               <p>To jest cytat z Mozilla Developer Center.</p>
                 </blockquote>`,
+      },
+      {
+        question: "Czym jest twarda spacja & nbspHtml?",
+        answer:
+          "Hmmm… A jak chcemy użyć więcej niż jednej spacji, to co wtedy? Możemy tego dokonać poprzez dodanie znaku specjalnego. Znak specjalny to odpowiednik znaku wprowadzanego z klawiatury (np. spacji) posiadający specjalny zapis html. Każdy znak specjalny zaczyna się od znaku & (ampersand) i kończy się średnikiem ;.  Znak specjalny niełamliwej spacji to &nbsp; (ang. non-breaking space – spacja niełamliwa).",
+        secondAnswer: `W zasadzie jedynym prawidłowym zastosowaniem tego specjalnego znaku jest zapobieżenie rozdzielenia wyrazów przy przenoszeniu do następnej linii.`,
       },
       {
         question: "Co to jest div?",
@@ -125,6 +131,14 @@ export default {
     ],
   },
 
+  getters: {
+    removeSpace(state) {
+      return state.htmlQuestions
+        .replace(/\s+/g, "")
+        .split(" ")
+        .join("");
+    },
+  },
   mutations: {
     htmlQuestionLoop(state) {
       setInterval(() => {
@@ -137,14 +151,14 @@ export default {
       state.htmlQuestions.sort(function() {
         return Math.round(Math.random()) - 0.5;
       });
-    }
-  },
-    actions: {
-      htmlQuestionLoop(context) {
-        context.commit("htmlQuestionLoop");
-      },
-      randomHtmlQuestion(context) {
-        context.commit("randomHtmlQuestion");
-      },
     },
-  }
+  },
+  actions: {
+    htmlQuestionLoop(context) {
+      context.commit("htmlQuestionLoop");
+    },
+    randomHtmlQuestion(context) {
+      context.commit("randomHtmlQuestion");
+    },
+  },
+};
