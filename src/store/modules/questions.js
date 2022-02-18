@@ -19,6 +19,12 @@ export default {
         secondAnswer: "",
       },
       {
+        question: "Czym jest instrukcja try w api call?",
+        answer:
+          "instrukcja try pozwala zdefiniować blok kodu, który ma być testowany pod kątem błędów podczas wykonywania.Instrukcja catch umożliwia zdefiniowanie bloku kodu, który ma zostać wykonany, jeśli w bloku try wystąpi błąd.",
+        secondAnswer: "",
+      },
+      {
         question: "Czym jest funkcja some()?",
         answer:
           "Metoda some() zwróci prawdę, jeżeli chociaż dla jednego elementu użyta funkcja zwróci prawdę.",
@@ -355,7 +361,37 @@ export default {
       {
         question: "czym jest enum?",
         answer:
-          "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
+          "Z definicji służą do grupowania numerycznych wartości, jest to pewnego rodzaju zbiór. Elementy enuma, numerowane są od zera.Enumy są często wykorzystywane na bazie strigów.",
+      },
+      {
+        question: "opisz typ tuple?",
+        answer:
+          "Typ tuple pozwala zadeklarować tablicę z wartościami o różnych typach. Nie muszą być one takie same, jeśli znamy typy wartości, możemy zamiast any, podać typ tuple.",
+      },
+      {
+        question: "czym jest parametr rest?",
+        answer:
+          "Rest, jak pewnie wiesz z JavaScriptu, zbiera pozostałe parametry z tablicy. ",
+      },
+      {
+        question: "opisz funkcje w typescript?",
+        answer:
+          "Każdy parametr funkcji ma własny typ, definiujemy go dwukropkiem. Po nawiasach (), podajemy typ, jaki będzie miała zwracana wartość z funkcji. Taka sama konstrukcja tyczy się funkcji strzałkowych.parametry funkcji typujemy po dwukropku.Defaultowo wszystkie parametry są wymagane, możemy to jednak zmienić stawiając znak zapytania przed dwukropkiem.Możemy podać domyślną wartość dla parametru funkcji, gdy to zrobimy, typescript domyśli się jaki jest typ naszej wartości.",
+      },
+      {
+        question: "opisz tablice w typescript?",
+        answer:
+          "W typescript tablice dzielą się na dwa rodzaje: listę oraz tuple.W liście wszystkie elementy mają ten sam typ.Można użyć tu type literals lub globalnych interfejsów a dokładniej generics.W tuple elementy niekoniecznie muszą mieć ten sam typ.",
+      },
+      {
+        question: "Czym jest asercja typów?",
+        answer:
+          "Powiedzmy, że zadeklarowałeś w pewnym momencie zmieną typu any. Po jakimś czasie wiesz, że ta zmienna powinna być typu string. Za pomocą asercji typów możesz oznajmić TypeScriptowi, że wiesz, co robisz. Nie wpływa ona na runtime, jest używana tylko w procesie kompilacji. Asercję możemy zapisać na dwa sposoby.",
+      },
+      {
+        question: "opisz typ never?",
+        answer:
+          "Typ never reprezentuje typ, który nigdy nie przemija. Może być sub typem każdego typu (oprócz samego siebie). Pewnie niewiele Ci to mówi, spójrzmy na przykładzie. Funkcja, która zwraca never, musi mieć tzw unreachable end point.",
       },
       {
         question: "Dlaczego powinniśmy używać typescripta?",
@@ -375,22 +411,18 @@ export default {
       {
         question: "czym są intefejsy?",
         answer:
-          "Jednym z podstawowych zasad TS jest to, że sprawdzanie typów koncentruje się na 'kształcie' ich wartości. Mówimy na to podtyp strukturalny. W TypeScript sposobem na definiowanie takich związków są właśnie interfejsy.",
+          "Jednym z podstawowych zasad TS jest to, że sprawdzanie typów koncentruje się na 'kształcie' ich wartości. Mówimy na to podtyp strukturalny. W TypeScript sposobem na definiowanie takich związków są właśnie interfejsy.Dzięki nim możemy definiować strukturę objektu. Są one niezmiernie przydatne w klasach.Jeśli chcesz, aby dana wartość była tylko do odczytu i żebyś nie mógł jej modyfikować, powinieneś skorzystać z readonly.",
+          secondAnswer: 'Możemy rozszerzać interfejsy używając słowa extends. Stwórzmy dwa interfejsy - Dog i Animal.'
       },
       {
         question: "Opisz typ any",
         answer:
-          "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
+          "Oznacza każdy typ, jeśli to możliwe, unikaj wrzucania any tam, gdzie nie ma ono zastosowania.",
       },
       {
         question: "Opisz typ void",
         answer:
-          "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
-      },
-      {
-        question: "Czym jest interfejs  w typescript",
-        answer:
-          "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
+          "W pewnym sensie przeciwieństwo any, jest to typ 'brak typu'. Najczęściej używany przy funkcjach, jako oznaczenie, że dana funkcja nic nie zwraca:",
       },
     ],
 
