@@ -217,6 +217,11 @@ export default {
                 "Aby uzyskać dostęp do propsów w setup function,musimy przekazać go jako argument.Nadal obowiązuje tu zasada braku destrukturyzacji, ponieważ jeśli to zrobimy, stracimy reaktywność.",
             },
             {
+              question: "Co to composables?",
+              answer:
+                "to funkcja, która wykorzystuje interfejs Vue Composition API do hermetyzacji i ponownego użycia logiki stanowej.Budując aplikacje frontendowe, często mamy potrzebę ponownego wykorzystania logiki do typowych zadań.jego funkcja formatująca hermetyzuje logikę bezstanową: pobiera dane wejściowe i natychmiast zwraca oczekiwane dane wyjściowe.",
+            },
+            {
               question: "dlaczego powinniśmy unikać używania this wewnątrz setup?",
               answer:
                 "Należy unikać używania this wewnątrz setup ponieważ this nie będzie odnosić się do komponentu.Setup() jest wywoływany przed właściwością data,computed,methods więc nie będą dostępne wewnątrz naszej instacji setup",

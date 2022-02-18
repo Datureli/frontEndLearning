@@ -71,6 +71,31 @@ export default {
                 "Oznacza każdy typ, jeśli to możliwe, unikaj wrzucania any tam, gdzie nie ma ono zastosowania.",
             },
             {
+              question: "Czym jest klasa public?",
+              answer:
+                "public w TypeScripcie działają tak jak *normalne właściwości, nie musisz ich oznaczać.",
+            },
+            {
+              question: "Czym jest klasa private?",
+              answer:
+                "Każdą właściwość możemy zmienić na prywatną, poprzedzając ją słowem private. Taka właściwość nie będzie dostępna poza klasą, w której się znajduje. Prywatne właściwości nie są chronione podczas runtime'u",
+            },
+            {
+              question: "Czym jest klasa protected?",
+              answer:
+                "Podobne do private, różnią się tym, że protected możemy użyć podczas dziedziczenia.",
+            },
+            {
+              question: "Co to jest type casting?",
+              answer:
+                "Oznacza każdy typ, jeśli to możliwe, unikaj wrzucania any tam, gdzie nie ma ono zastosowania.",
+            },
+            {
+              question: "Czym są indeksowane typy?",
+              answer:
+                "Tak samo jak możemy typować funkcję, możemy również użyc interfejsów z tzw. indeksowalnymi typami.",
+            },
+            {
               question: "Opisz typ void",
               answer:
                 "W pewnym sensie przeciwieństwo any, jest to typ 'brak typu'. Najczęściej używany przy funkcjach, jako oznaczenie, że dana funkcja nic nie zwraca:",

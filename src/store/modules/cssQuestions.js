@@ -36,6 +36,16 @@ export default {
           secondAnswer: ``,
         },
         {
+          question: `Czym jest selektor atrybutu?`,
+          answer: `To zaprezentowana wraz z premierą CSS 3 możliwość przypisania stylów do selektora nie na podstawie nazwy czy klasy, ale na podstawie jego atrybutów HTML-u. Selektor atrybutu można zatem zastosować do wszystkich obiektów w dokumencie, które mają np. określone wymiary czy też linków prowadzących nawet pod konkretne adresy. `,
+          secondAnswer: ``,
+        },
+        {
+          question: `Jaka jest różnica między CSS Grid i Flexboksem?`,
+          answer: `Grid tworzy siatkę, która jest dwuwymiarowa i składa się z kolumn i wersów. Odrębne podejście wykorzystuje się w przypadku Flexboksów, czyli takiemu podejściu do umiejscawiania i wyrównywania obiektów na stronie, gdzie występują one w jednym „wymiarze”: w poziomie lub w pionie.`,
+          secondAnswer: ``,
+        },
+        {
           question: `Jakie są typy selektorów w css?`,
           answer: `selektor uniwersalny: selektor uniwersalny oznacza wszystkie elementy na stronie.selektor typu element:Ten selektor dopasowuje jeden lub więcej elementów html o tym samym imieniu.id selector:ten selektor dopasowuje każdy element html którego id posiada taką samą wartość jak selektor,class selektor: Ten selektor dopasowuje każdy element na stronie który zawiera atrybut klasy przypisany do tej samej wartości co klasa.kombinator potomstwa: pozwala łączyć dwa lub więcej selektorów co pozwala bardziej sprecyzować metode selekcji.Child combinator:A selector that uses the child combinator służy do wskazania elementu, który jest dzieckiem innego elementu. Kombinator dziecka jest znakiem większości (U+003E, >) i oddziela dwa selektory złożone. Białe znaki wokół > są opcjonalne i nie mają specjalnego znaczenia.`,
           secondAnswer: `General Sibling Combinator:The general sibling combinator (~) separates two selectors and matches all iterations of the second element, that are following the first element (though not necessarily immediately), and are children of the same parent element.Adjacent Sibling Combinator:Attribute Selector`,

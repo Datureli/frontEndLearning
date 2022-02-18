@@ -86,7 +86,19 @@ export default {
       {
         question: "Czym jest CORS?",
         answer:
-          " zapewnia nam on możliwość bezpiecznej wymiany danych pomiędzy stronami które charakteryzuje inny Origin.",
+          "CORS to skrót od Cross-Origin Resource Sharing, czyli mechanizmu pozwalającego wysyłać żądania HTTP z jednej strony na drugą z pominięciem mechanizmów bezpieczeństwa w przeglądarkach. CORS wykorzystuje nagłówek, w którym zdefiniować można „bezpieczne” adresy i wysłać żądanie, które nie zostanie zablokowane. zapewnia nam on możliwość bezpiecznej wymiany danych pomiędzy stronami które charakteryzuje inny Origin.",
+        secondAnswer: "",
+      },
+      {
+        question: "Czym jest XMLHttpRequest?",
+        answer:
+          "Jest to żądanie umożliwiająca asynchroniczną komunikację pomiędzy klientem a serwerem. Pozwala na wysyłanie danych do serwera w tle, żądań pobrania danych z serwera i otrzymania danych z serwera oraz na aktualizowanie danych bez konieczności odświeżania całej strony.",
+        secondAnswer: "",
+      },
+      {
+        question: "Czym jest plik manifestu w HTML5?",
+        answer:
+          "Plik manifestu to plik zawierający listy zasobów, które mają być zcachowane. Dzięki temu można świadomie wskazać konkretne elementy w taki sposób, aby przełożyło się to na szybsze ładowanie aplikacji bądź – np. gdy jakiś element musi być często odświeżany – również to zasygnalizować. Wyróżnia się trzy rodzaje (sekcje) obiektów w plikach manifestu: te, które mają być zcachowane (CACHE Manifest), te, które zawsze mają być pobrane (Network), pliki awaryjne, które mają być zcachowane w razie, gdyby aplikacja padła (Fallback).",
         secondAnswer: "",
       },
       {
@@ -134,8 +146,36 @@ export default {
         secondAnswer: "",
       },
       {
+        question: "Jaka jest różnica pomiędzy display: none i visibility: hidden?",
+        answer:
+          " Oba atrybuty służą do ukrywania elementów na stronie. W praktyce działają one jednak inaczej. O ile atrybut visibility: hidden faktycznie jedynie ukrywa element i tag jest renderowany i zostanie dla nie niego zarezerwowane widoczne miejsce, tak w przypadku display: none w ogóle nie zostanie on wyświetlony na stronie, ani nie pojawi się na niego miejsce, choć cały czas będzie można z nim wchodzić w interkacje przez DOM.",
+        secondAnswer: "",
+      },
+      {
         question: `Czym jest Event bobbling?`,
         answer: ` Jest to propagacja elementu do samej góry.Zawsze idzie z dołu do góry`,
+        secondAnswer: ``,
+      },
+      {
+        question: `Jaka jest definicja funkcji wyższego rzędu?`,
+        answer: ` Funkcja wyższego rzędu to funkcja, która przyjmuje inne funkcje jako parametry lub też taka, której wynik również jest funkcją. Przykładowa funkcja wyższego rzędu to map służąca do zwracania listy z wynikami funkcji dla wszystkich elementów z danej listy.
+
+        Tradycyjnie do zebranych na temat rozmowy kwalifikacyjnej na stanowisko Frontend Developera dołączamy przydatne linki, z którymi warto zapoznać się w trakcie przygotowań:`,
+        secondAnswer: ``,
+      },
+      {
+        question: `Czym są preprocesory?`,
+        answer: `Preprocesory w CSS, takie jak SASS czy LESS, to narzędzia rozszerzające możliwości CSS. CSS zapisywany jest pierwotnie do pliku najczęściej o rozszerzeniu SCSS, a następnie „kompilowany ”do pliku CSS. Preprocesory pozwalają na daleko idącą automatyzację pracy nad stylami, umożliwiają stosowanie dobrych praktyk, automatycznie implementując DRY, a nawet można dzięki nim stosować w CSS-ie logikę. `,
+        secondAnswer: ``,
+      },
+      {
+        question: `Jakie są różnice między kodem synchronicznym a asynchronicznym?`,
+        answer: `W przypadku kodu synchronicznego mamy do czynienia z sytuacją, gdzie zadania są wykonywane po kolei, jedno na raz i jedno po drugim. Przeciwieństwem jest kod asynchroniczny, który pozwala na realizację wielu zadań równolegle. W przypadku frontendu i JavaScript można definiować funkcje asynchroniczne async, jak i używać obietnic, `,
+        secondAnswer: ``,
+      },
+      {
+        question: `Czym jest yagni?`,
+        answer: `zasada pochodząca z programowania ekstremalnego, kładąca nacisk na wysokie ryzyko tworzenia kodu zanim będzie potrzebny.Często zdarza się, że tworzony jest kod na wszelki wypadek, nawet gdy nie jest potrzebny w danym momencie. Może się później okazać że nasza ocena co do użyteczności kodu lub jego działania była błędna i funkcja będzie wymagała refaktoryzacji lub całkowitego usunięcia. Dlatego zalecane jest stosowanie zasady YAGNI, czyli odkładanie pisania kodu na później, wtedy gdy będzie naprawdę potrzebny.`,
         secondAnswer: ``,
       },
       {
@@ -143,9 +183,9 @@ export default {
         answer:
           "Przeglądarka internetowa jest programem komputerowym, którego głównym celem jest wyświetlanie stron internetowych.",
         secondAnswer:
-          "Pierwsze co robi przeglądarka to zdobycie adresu IP dla domenyJak już przeglądarka pobierze ten dokument to zaczyna go interpretować, czyli analizować jego treść. Kiedy dojdzie do lini z <title> to zrozumie, że jest to tytuł strony i umieści tekst Najlepsza strona w zakładce.Później natrafi na tekst Witam i po prostu wyświetli go.Ciekawiej robi się gdy dojdziemy do lini zawierającej img>. Przeglądarka rozumie, że <img> oznacza obrazek. A skoro obrazek to trzeba go pobrać i wyświetlić.",
+          "Pierwsze co robi przeglądarka to zdobycie adresu IP dla domenyJak już przeglądarka pobierze ten dokument to zaczyna go interpretować, czyli analizować jego treść. Kiedy dojdzie do lini z <title> to zrozumie, że jest to tytuł strony i umieści tekst w zakładce.Później natrafi na tekst Witam i po prostu wyświetli go.Ciekawiej robi się gdy dojdziemy do lini zawierającej img>. Przeglądarka rozumie, że <img> oznacza obrazek. A skoro obrazek to trzeba go pobrać i wyświetlić.",
         thirdPartOfAnswer:
-          "Pewnie się zastanawiasz skąd ma go pobrać? Otóż podobnie jak wcześniej z dokumentem html tak i teraz połączy się z komputerem (serwerem), którego adres IP już zna i poprosi grzecznie o przesłanie pliku o nazwie fotka.jpg.Serwer ponownie odpowie na jej prośbę tym razem przesyłając obrazek. W zależności jak duży jest to obrazek, pobieranie może potrwać bardzo krótko - tak że nawet nie zauważysz - lub trochę dłużej (np. 4 sekundy).Interpretacja dokumentu kończy się na lini zawierającej </html>, co oznacza koniec dokumentu html.przeglądarka jest programem komputerowym przeglądarka łączy się z innym komputerem (serwerem) w celu pobrania dokumentu html przeglądarka interpretuje zawartość pobranego dokumentu html i na jego podstawie wyświetla stronę jeśli dokument html zawiera odniesienia do innych plików (np. obrazki, video, javascript, css) to przeglądarka ponownie łączy się z serwerem , pobiera je, a następnie wyświetla (obrazek, video) lub wykonuje (javascript, css)",
+          " skąd ma go pobrać? Otóż podobnie jak wcześniej z dokumentem html tak i teraz połączy się z komputerem (serwerem), którego adres IP już zna i poprosi grzecznie o przesłanie pliku o nazwie fotka.jpg.Serwer ponownie odpowie na jej prośbę tym razem przesyłając obrazek. W zależności jak duży jest to obrazek, pobieranie może potrwać bardzo krótko  - lub trochę dłużej.Interpretacja dokumentu kończy się na lini zawierającej </html>, co oznacza koniec dokumentu html.przeglądarka jest programem komputerowym.",
       },
       {
         question: "Co to jest DRY?",
@@ -165,7 +205,7 @@ export default {
       {
         question: "Czym jest Rwd?",
         answer:
-          "esponsive web design (RWD) to technika projektowania strony www tak, aby jej wygląd i układ dostosowywał się automatycznie do rozmiaru okna przeglądarki, na której jest wyświetlany np. przeglądarki, smartfonów czy tabletów. Strona tworzona w takiej technice jest uniwersalna i wyświetla się dobrze zarówno na dużych ekranach, jak i na smartfonach czy tabletach.",
+          "Responsive web design to technika projektowania strony www tak, aby jej wygląd i układ dostosowywał się automatycznie do rozmiaru okna przeglądarki, na której jest wyświetlany np. przeglądarki, smartfonów czy tabletów. Strona tworzona w takiej technice jest uniwersalna i wyświetla się dobrze zarówno na dużych ekranach, jak i na smartfonach czy tabletach.",
       },
       {
         question:
@@ -177,6 +217,11 @@ export default {
         question: "Opowiedz coś o sobie",
         answer:
           "To według kandydatów jedno z najtrudniejszych pytań. Przez to, że jest bardzo ogólne, to bardzo często zastanawiamy, “Co autor chce wiedzieć?” – aby gładko wybrnąć z odpowiedzią na to. Pytanie to warto podzielić na 3 części: – kilka słów o swoim dotychczasowym doświadczeniu zawodowym – dlaczego chcesz zostać programistą/programistką? – jakie są Twoje zainteresowania.",
+      },
+      {
+        question: "Czym są eventy server-sent?",
+        answer:
+          "Server-sent events to API pozwalające na przekazywanie żądań w relacji serwer-klient, przy czym jako klienta należy rozumieć jako aplikację. API, w odróżnieniu od WebSocketów, pozwala na jednokierunkowe przesyłanie wiadomości, najczęściej komunikatów o konkretnych wydarzeniach, np. zmianach na backendzie lub statusie (końcu) przetwarzania danych elementów.",
       },
       {
         question: "Opowiedz coś o swoim ostatnim projekcie",

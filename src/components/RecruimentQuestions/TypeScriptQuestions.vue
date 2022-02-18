@@ -5,7 +5,16 @@
       :key="index"
       max-width="700"
       class="mx-auto"
+      ref="carousel"
     >
+    <div>
+  <v-btn 
+    @click.stop='$refs.carousel.next()'
+    icon  
+  > 
+      <v-icon>mdi-magnify</v-icon>
+  </v-btn>
+</div>
       <v-list-item>
         <v-list-item-content>
           <v-list-item-subtitle
