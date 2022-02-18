@@ -10,6 +10,7 @@ import gitQuestions from './modules/gitQuestions'
 import reactQuestions from './modules/reactQuestions'
 import generalQuestions from "./modules/generalQuestions";
 import firstColumn from "./modules/firstColumn"
+import typescriptQuestions from './modules/typescriptQuestions'
 
 Vue.use(Vuex);
 
@@ -24,6 +25,7 @@ export default new Vuex.Store({
     gitQuestions,
     reactQuestions,
     generalQuestions,
+    typescriptQuestions,
     firstColumn
   },
 
@@ -42,7 +44,8 @@ export default new Vuex.Store({
         htmlQuestions,
         vueQuestions,
         gitQuestions,
-        generalQuestions
+        generalQuestions,
+        typescriptQuestions
       );
     },
   },

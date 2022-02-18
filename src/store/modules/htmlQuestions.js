@@ -34,7 +34,7 @@ export default {
       {
         question: "Czym jest twarda spacja & nbspHtml?",
         answer:
-          "Hmmm… A jak chcemy użyć więcej niż jednej spacji, to co wtedy? Możemy tego dokonać poprzez dodanie znaku specjalnego. Znak specjalny to odpowiednik znaku wprowadzanego z klawiatury (np. spacji) posiadający specjalny zapis html. Każdy znak specjalny zaczyna się od znaku & (ampersand) i kończy się średnikiem ;.  Znak specjalny niełamliwej spacji to &nbsp; (ang. non-breaking space – spacja niełamliwa).",
+          "jak chcemy użyć więcej niż jednej spacji, to co wtedy? Możemy tego dokonać poprzez dodanie znaku specjalnego. Znak specjalny to odpowiednik znaku wprowadzanego z klawiatury (np. spacji) posiadający specjalny zapis html. Każdy znak specjalny zaczyna się od znaku & (ampersand) i kończy się średnikiem ;.  Znak specjalny niełamliwej spacji to &nbsp; (ang. non-breaking space – spacja niełamliwa).",
         secondAnswer: `W zasadzie jedynym prawidłowym zastosowaniem tego specjalnego znaku jest zapobieżenie rozdzielenia wyrazów przy przenoszeniu do następnej linii.`,
       },
       {
