@@ -22,7 +22,7 @@ export default {
         {
           answerNumbers: 1,
           question: `Czym jest model pudełkowy?`,
-          answer: `Box model - czyli model pudełkowy - to opis budowy elementów blokowych na stronie www. To słowne określenie pozwala wyobrazić sobie w jaki sposób poszczególne elementy składają się na wielkość całego pudełka. Tymi elementami są marginesy zewnetrzne, obramowanie, marginesy wewnętrzne oraz szerokość.`,
+          answer: `Model pudełkowy - to opis budowy elementów blokowych na stronie www.To słowne określenie pozwala wyobrazić sobie w jaki sposób poszczególne elementy składają się na wielkość całego pudełka. Tymi elementami są marginesy zewnetrzne, obramowanie, marginesy wewnętrzne oraz szerokość.`,
         },
         {
           question: `Opisz zalety Sass`,
@@ -53,12 +53,10 @@ export default {
         {
           question: `Jakie są ograniczenia w css?`,
           answer: `Zgodność z przeglądarką - niektóre selektory są wspierane a niektóre nie.Musimy wiedzieć które są wspierane a które nie.Cross browser issue: niektóre selektory zachowują się inaczej w różnych przeglądarkach.Nie posiada parent selector: Na ten moment w css nie możesz zaznaczyc tagu rodzica`,
-          secondAnswer: ``,
         },
         {
-          question: `Jaka jest różnica między „resetowaniem” a „normalizowaniem” CSS?`,
+          question: `Jaka jest różnica między resetowaniem a normalizowaniem CSS?`,
           answer: `Resetowanie – ma na celu usunięcie wszystkich domyślnych stylów przeglądarki. Na przykład marginesy, wypełnienia, rozmiary czcionek wszystkich elementów są resetowane. Normalizowanie – zachowuje przydatne style domyślne zamiast cofania wszystkiego. Poprawia również różnice w wyświetlaniu elementów w różnych przeglądarkach.`,
-          secondAnswer: ``,
         },
       ],
     },

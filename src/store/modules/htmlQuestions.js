@@ -6,7 +6,7 @@ export default {
       {
         question: `Czym jest Html?`,
 
-        answer: `HTML (Hypertext Markup Language) to język znaczników służący do prezentacji treści na stronach internetowych,który jest oparty o hiperłącza łączące poszczególne dokumenty pomiędzy sobą ; . Przeglądarki internetowe jednoznacznie interpretują kod HTML i na jego bazie przedstawiają treść końcowym użytkownikom.`,
+        answer: `HTML (Hypertext Markup Language) to język znaczników służący do prezentacji treści na stronach internetowych,który jest oparty o hiperłącza łączące poszczególne dokumenty pomiędzy sobą. Przeglądarki internetowe jednoznacznie interpretują kod HTML i na jego bazie przedstawiają treść końcowym użytkownikom.`,
       },
       {
         question: `Czym jest string interpolation?`,
@@ -53,12 +53,12 @@ export default {
       {
         question: "Czym są tagi i atrybuty w html?",
         answer:
-          "tagi to podstawowy komponent w html który definiuje jak dany kontent będzie ustruktyryzowany/formatowany,natomiast atrybuty są używane wraz  ztagami html by zdefiniować charakterystyke elementu",
+          "Tagi to podstawowy komponent w html który definiuje jak dany kontent będzie ustruktyryzowany/formatowany,natomiast atrybuty są używane wraz ztagami html by zdefiniować charakterystyke elementu",
       },
       {
         question: "Czym są void elements?",
         answer:
-          "Są to takie elementy html które nie posiadają tagu zamykającego.Przykładowo: </br>,<img>,<hr />",
+          "Są to takie elementy html które nie posiadają tagu zamykającego.Przykładowo:br,img,hr",
       },
       {
         question: "Co to jest W3C?",
@@ -68,9 +68,9 @@ export default {
         question: "Czym jest tag picture?",
         answer: `Tag picture zapewnia programistom stron internetowych większą elastyczność w określaniu zasobów obrazu. Zamiast jednego obrazu skalowanego w górę lub w dół to, w zależności od rozmiaru viewportu, można dobrać wiele obrazów tak, żeby dla każdej rozdzielczości ładnie wypełnić okno przeglądarki.`,
         secondAnswer:
-          "Element <picture> ma dwa różne tagi: jeden lub więcej tagów <source> oraz jeden tag <img>.Tag <source> ma następujące właściwości:srcset (wymagany): określa URL obrazu do wyświetlenia media: akceptuje wszelkie prawidłowe media query, które normalnie byłyby ustawione w CSS      rozmiary: definiuje pojedynczy deskryptor szerokości, media query z deskryptorem szerokości lub rozdzieloną przecinkami listę media query z deskryptorem szerokości type: określa typ MIME",
+          "Element picture ma dwa różne tagi: jeden lub więcej tagów source oraz jeden tag img.Tag source ma następujące właściwości:srcset (wymagany): określa URL obrazu do wyświetlenia, media: akceptuje wszelkie prawidłowe media query, które normalnie byłyby ustawione w CSS,rozmiary: definiuje pojedynczy deskryptor szerokości, media query z deskryptorem szerokości lub rozdzieloną przecinkami listę media query z deskryptorem szerokości type: określa typ MIME",
         thirdPartOfAnswer:
-          "Przeglądarka użyje wartości atrybutów, aby załadować najbardziej dopasowany obraz. Tag <img> służy do zapewnienia kompatybilności wstecznej, jeśli przeglądarka nie obsługuje tagu <picture>",
+          "Przeglądarka użyje wartości atrybutów, aby załadować najbardziej dopasowany obraz. Tag img służy do zapewnienia kompatybilności wstecznej, jeśli przeglądarka nie obsługuje tagu picture",
       },
       {
         question: "Czym jest Web Socket?",
@@ -91,12 +91,11 @@ export default {
       },
 
       {
-        question: "to czego służy znacznik <pre>?",
+        question: "to czego służy znacznik pre?",
         answer:
           "Wprowadza tekst preformatowany, czyli napisany czcionką monotypiczną (o stałej szerokości znaku), który uwzględnia dodatkowe spacje, tabulację i znaki końca linii (nie trzeba stosować znaczników <br>) oraz nie jest automatycznie zawijany. Dzięki niemu możesz np. wkleić na stronę WWW tekst, wprost ze zwykłego edytora, bez stosowania dodatkowych znaczników (niestety informacje dotyczące formatowania zostaną pominięte). Należy jednak przy tym pamiętać, aby tekst nie zawierał znaków: " <
           " oraz " >
           " (w zamian używaj: &lt; i &gt;).",
-        thirdPartOfAnswer: "",
       },
       {
         question: "Do czego służy znacznik Main?",

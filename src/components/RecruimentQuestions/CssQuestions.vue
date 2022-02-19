@@ -14,11 +14,15 @@
           ></v-list-item-title>
 
           <v-list-item-subtitle
-            style="word-break: break-all;  text-align: justify;
-            text-justify: auto;"
-            class="white--text text-h6 text-wrap"  
+            class="white--text text-justify text-h6 text-wrap"
             v-show="disable"
-            v-text="page === 1 ? cssQuestions.answer : page === 2 ? cssQuestions.secondAnswer : cssQuestions.thirdPartOfAnswer"
+            v-text="
+              page === 1
+                ? cssQuestions.answer
+                : page === 2
+                ? cssQuestions.secondAnswer
+                : cssQuestions.thirdPartOfAnswer
+            "
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -82,21 +86,8 @@ export default {
   computed: {
     ...mapState(["disable", "favorite"]),
     ...mapState("cssQuestions", ["cssQuestions"]),
-        switchQuestion() {
-      switch (page) {
-        case 1:
-          return cssQuestions.answer;
-
-        case 2:
-          return cssQuestions.secondAnswer;
-
-        case 3:
-          return cssQuestions.thirdPartOfAnswer;
-      }
-    },
   },
   methods: {
-
     disableAnswers() {
       this.$store.commit("disable");
     },
