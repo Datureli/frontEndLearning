@@ -6,7 +6,7 @@
     color="transparent"
     tile
     :elevation="elevation"
-  >
+  > 
     <h1 class="mt-15" v-if="this.$route.path === '/about'">Choose Category</h1>
     <CssQuestions v-if="this.$route.path === '/about/cssquestions'" />
     <JavascriptQuestions v-if="this.$route.path === '/about/javascript'" />
@@ -30,6 +30,7 @@ import BootstrapQuestions from "./BootstrapQuestions.vue";
 import TypeScriptQuestions from "./TypeScriptQuestions.vue"
 import ReactQuestions from "./ReactQuestions.vue"
 import GeneralQuestions from "./GeneralQuestions.vue"
+import IconComponent from './IconComponent.vue'
 export default {
   components: {
     HtmlQuestions,
@@ -40,7 +41,8 @@ export default {
     BootstrapQuestions,
     TypeScriptQuestions,
     ReactQuestions,
-    GeneralQuestions
+    GeneralQuestions,
+    IconComponent
   },
   computed: {
     width() {

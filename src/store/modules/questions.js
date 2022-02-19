@@ -25,6 +25,12 @@ export default {
         secondAnswer: "",
       },
       {
+        question: "Czym jest konstruktor?",
+        answer:
+          "Constructor jest szczególną metodą, która służy tworzeniu i inicjalizowaniu obiektu zdefiniowanego słowem kluczowym class. Dozwolony jest tylko jeden konstruktor w danej klasie. Jeśli klasa posiada więcej niż jedno wystąpienie metody constructor, wygenerowany zostanie błąd SyntaxError.Aby wywołać konstruktor klasy bazowej, należy użyć słowa kluczowego super",
+        secondAnswer: "",
+      },
+      {
         question: "Czym jest metoda GET?",
         answer:
           "Metoda GET służy do pobierania danych z interfejsu API. Chcemy, aby to żądanie API działało asynchronicznie, dlatego używamy funkcji opartej na obietnicy ze słowami kluczowymi async/await.",

@@ -6,6 +6,7 @@
       max-width="700"
       class="mx-auto"
     >
+    
       <v-list-item>
         <v-list-item-content>
           <v-list-item-subtitle
@@ -74,6 +75,7 @@
 <script>
 import { mapState } from "vuex";
 export default {
+
   props: {
     page: {
       type: Number,
