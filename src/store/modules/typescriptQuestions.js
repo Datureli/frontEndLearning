@@ -81,6 +81,11 @@ export default {
                 "Każdą właściwość możemy zmienić na prywatną, poprzedzając ją słowem private. Taka właściwość nie będzie dostępna poza klasą, w której się znajduje. Prywatne właściwości nie są chronione podczas runtime'u",
             },
             {
+              question: "Union Types i Type guard ",
+              answer:
+                "Pozwala opisać typ jeden z dwóch (lub wielu). Możemy go fajnie użyć z tzw. Type guardem. Co to jest type guard? Type guard pozwala nam sprawdzić np. Czy dana zależność znajduje się w obiekcie. in to zależność JavaScriptowa, nie TS'owa. Type guardem może być również typeof czy też instanceof, metod na type guardy jest wiele.",
+            },
+            {
               question: "Czym jest klasa protected?",
               answer:
                 "Podobne do private, różnią się tym, że protected możemy użyć podczas dziedziczenia.",

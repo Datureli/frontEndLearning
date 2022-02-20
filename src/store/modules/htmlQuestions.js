@@ -6,7 +6,7 @@ export default {
       {
         question: `Czym jest Html?`,
 
-        answer: `HTML (Hypertext Markup Language) to język znaczników służący do prezentacji treści na stronach internetowych,który jest oparty o hiperłącza łączące poszczególne dokumenty pomiędzy sobą. Przeglądarki internetowe jednoznacznie interpretują kod HTML i na jego bazie przedstawiają treść końcowym użytkownikom.`,
+        answer: `$HTML (Hypertext Markup Language) to język znaczników służący do prezentacji treści na stronach internetowych,który jest oparty o hiperłącza łączące poszczególne dokumenty pomiędzy sobą. Przeglądarki internetowe jednoznacznie interpretują kod HTML i na jego bazie przedstawiają treść końcowym użytkownikom.`,
       },
       {
         question: `Czym jest string interpolation?`,
@@ -34,7 +34,7 @@ export default {
       {
         question: "Czym jest twarda spacja & nbspHtml?",
         answer:
-          "jak chcemy użyć więcej niż jednej spacji, to co wtedy? Możemy tego dokonać poprzez dodanie znaku specjalnego. Znak specjalny to odpowiednik znaku wprowadzanego z klawiatury (np. spacji) posiadający specjalny zapis html. Każdy znak specjalny zaczyna się od znaku & (ampersand) i kończy się średnikiem ;.  Znak specjalny niełamliwej spacji to &nbsp; (ang. non-breaking space – spacja niełamliwa).",
+          "jak chcemy użyć więcej niż jednej spacji,możemy tego dokonać poprzez dodanie znaku specjalnego.Znak specjalny to odpowiednik znaku wprowadzanego z klawiatury (np. spacji) posiadający specjalny zapis html. Każdy znak specjalny zaczyna się od znaku & (ampersand) i kończy się średnikiem.Znak specjalny niełamliwej spacji to &nbsp; (non-breaking space).",
         secondAnswer: `W zasadzie jedynym prawidłowym zastosowaniem tego specjalnego znaku jest zapobieżenie rozdzielenia wyrazów przy przenoszeniu do następnej linii.`,
       },
       {
@@ -100,13 +100,12 @@ export default {
       {
         question: "Do czego służy znacznik Main?",
         answer:
-          "Tag <main> określa główną treść dokumentu. Może to ułatwić korzystanie ze skrótów klawiszowych, przybliżaniu w przeglądarkach mobilnych i przy innych czynnościach. W dokumencie musi znajdować się jeden element <main>. Element <main> nie może być zagnieżdżony w żadnym z tych elementów: <article>, <aside>, <footer>, <header> lub <nav>.",
-        secondAnswer: "",
+          "Tag main określa główną treść dokumentu.Może to ułatwić korzystanie ze skrótów klawiszowych, przybliżaniu w przeglądarkach mobilnych i przy innych czynnościach.W dokumencie musi znajdować się jeden element main.Element main nie może być zagnieżdżony w żadnym z tych elementów: article, aside, footer, header lub nav.",
       },
       {
         question: "Do czego służy znacznik nav?",
         answer:
-          "Tag <nav> definiuje zestaw linków nawigacji. W tagu nav powinny się znaleźć podstawowe linki służące do nawigacji, a nie wszystkie linki na stronie.",
+          "Tag nav definiuje zestaw linków nawigacji. W tagu nav powinny się znaleźć podstawowe linki służące do nawigacji, a nie wszystkie linki na stronie.",
         secondAnswer: "",
       },
       {
@@ -118,7 +117,7 @@ export default {
       {
         question: "Do czego służy znacznik header?",
         answer:
-          "Tag <header> reprezentuje kontener na treść wprowadzającą lub zestaw linków nawigacyjnych. Zazwyczaj zawiera logo, linki nawigacyjne lub nagłówki.",
+          "Tag header reprezentuje kontener na treść wprowadzającą lub zestaw linków nawigacyjnych. Zazwyczaj zawiera logo, linki nawigacyjne lub nagłówki.",
         secondAnswer: "",
       },
       {
@@ -132,10 +131,7 @@ export default {
 
   getters: {
     removeSpace(state) {
-      return state.htmlQuestions
-        .replace(/\s+/g, "")
-        .split(" ")
-        .join("");
+      return state.htmlQuestions.trim()
     },
   },
   mutations: {

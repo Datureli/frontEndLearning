@@ -9,13 +9,12 @@
       <v-list-item>
         <v-list-item-content>
           <v-list-item-subtitle
-            class="text--primary mb-5 font-weight-black  text-h4 text-wrap "
+            class="text--primary mb-5 font-weight-black text-h4 text-wrap "
             v-text="htmlQuestions.question"
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
-          style="word-break: inherit; "
-            class="&nbsp;  white--text text-justify text-h6 text-wrap"
+            class="white--text text-justify text-h6 text-wrap"
             v-show="disable"
             v-text="
               page === 1
@@ -91,9 +90,6 @@ export default {
     ...mapState(["disable", "favorite", "isHeartActive"]),
     ...mapState("htmlQuestions", ["htmlQuestions"]),
     ...mapGetters("htmlQuestions", ["removeSpace"]),
-    removespace() {
-      return this.$store.getters['htmlQuestions/removeSpace']
-    }
   },
 
   methods: {
@@ -106,11 +102,9 @@ export default {
     htmlQuestionLoop() {
       this.$store.dispatch("htmlQuestions/htmlQuestionLoop");
     },
-    removeSpace() {
-      this.$store.dispatch("htmlQuestions/removeSpace")
-    },
     randomHtmlQuestion() {
       this.$store.dispatch("htmlQuestions/randomHtmlQuestion");
+      this.page = 1
     },
   },
 };
