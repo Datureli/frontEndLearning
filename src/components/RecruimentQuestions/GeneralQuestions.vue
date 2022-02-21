@@ -32,7 +32,6 @@
         x-large
         @click="randomGeneralQuestion"
         class="hidden-sm-and-down"
-        color="brown"
         style="position: absolute; bottom: 26%; right:90%;"
         >mdi-dice-multiple</v-icon
       >
@@ -65,7 +64,6 @@
         x-large
         class="hidden-sm-and-down"
         @click="addToFavorite(generalQuestions)"
-        color="red"
         style="position: absolute; bottom: 26%; right:4%;"
         >mdi-heart</v-icon
       >

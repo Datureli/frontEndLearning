@@ -50,8 +50,9 @@ export default {
       {
         question: "Jaka jest różnica między vue a nuxt?",
         answer:
-          " Za jej pomocą dodajemy event listener, który będzie nasłuchiwał wystąpienia zdefiniowanego zdarzenia, a po jego wyzwoleniu wykonywał konkretną akcję (na przykład wykonywał metodę).",
-        secondAnswer: "",
+          "Nuxt.js i Vue.js obsługują logikę w różny sposób.Główna różnica polega na tym vue zawsze działa po stronie klienta,nuxt nie,co w niektórych wypadkach może powodować problemy.Na przykład gdy próbuje y zaznaczyć element dom,zaraz po tym jak aplikacja zostanie załadowana,istnieje możliwość, że aplikacja działa po stronie Node.js,a w node.js nie ma elementów dom",
+        secondAnswer: "To samo miałoby miejsce podczas uzyskiwania dostępu do lokalnej pamięci przeglądarki. To jest główny powód, dla którego Nuxt używa plików cookie w pamięci lokalnej — ponieważ są one zawsze dostępne.Z Vue nie mamy tego rodzaju problemów, ponieważ zawsze działa na kliencie i dlatego nie musimy zawracać sobie głowy tego rodzaju potencjalnymi problemami.",
+        thirdPartOfAnswer: 'Nuxt.js generuje własny router w oparciu o strukturę folderów, podczas gdy w przypadku Vue.js należy to zrobić ręcznie – pamiętaj jednak, że obie zasady mają swoje plusy i minusy. Automatycznie generowane zalety routera polegają na tym, że łatwiej i szybciej go utworzyć. Po prostu tworzysz katalog i pliki, a Nuxt wykonuje całą pracę. Ale minusem jest to, że jest mniej kontrolowalny i zarządzalny niż ręcznie napisany.'
       },
       {
         question: "Czym są komponenty funkcyjne",
@@ -98,6 +99,12 @@ export default {
         question: "Jak stworzyć two-way binding w Vue js?",
         answer:
           "Do stworzenia służy dyrektywa v-model.W obustronnym przepływie danych data albo model jest przypięty do DOM i dom jest przypięty do modelu",
+      },
+      {
+        question: "Jak działają layouts w nuxt?",
+        answer:
+          "Aplikacje Vue.js mają główny plik App.vue, który jest głównym opakowaniem(wrapper) komponentów głównych dla wszystkich komponentów aplikacji. Nuxt.js wykorzystuje układy, w których każdy układ służy jako indywidualne opakowanie dla komponentów aplikacji.Na przykład, jeśli chcemy, aby niektóre strony korzystały z różnych bibliotek UI, globalnych stylów CSS, rodzin czcionek, systemów projektowania, metatagów lub innych elementów, możemy zdefiniować układ, który ma być używany jako jego główny komponent nadrzędny. Domyślnie wszystkie strony Nuxt.js używają układu default.vue.",
+          secondAnswer: ''
       },
       {
         question: "Czym są sloty?",

@@ -32,6 +32,11 @@ export default {
                 </blockquote>`,
       },
       {
+        question: "Które przeglądarki wspierają HTML5?",
+        answer:
+          "Ostatnie wersje Safari, Google Chrome, Mozilla Firefox oraz Opera – wszystkie wspierają wiele funkcjonalności HTML5. Internet Explorer od wersji 9.0 również wspiera niektóre z funkcjonalności.Mobilne przeglądarki internetowe, które zostały zainstalowane na urządzeniach jak iPhone, iPad oraz Android doskonale wpierają HTML5."
+      },
+      {
         question: "Czym jest twarda spacja & nbspHtml?",
         answer:
           "jak chcemy użyć więcej niż jednej spacji,możemy tego dokonać poprzez dodanie znaku specjalnego.Znak specjalny to odpowiednik znaku wprowadzanego z klawiatury (np. spacji) posiadający specjalny zapis html. Każdy znak specjalny zaczyna się od znaku & (ampersand) i kończy się średnikiem.Znak specjalny niełamliwej spacji to &nbsp; (non-breaking space).",
@@ -41,9 +46,18 @@ export default {
         question: "Co to jest div?",
         answer:
           "Jest rodzajem pojemnika na treść. Nie ma on żadnego wpływu na treść ani układ graficzny, dopóki nie zostanie ostylizowany z użyciem CSS.  ",
-        secondAnswer: `<blockquote cite="http://developer.mozilla.org">
-              <p>To jest cytat z Mozilla Developer Center.</p>
-                </blockquote>`,
+      },
+      {
+        question: "Czy HTML jest wstecznie kompatybilny ze starszymi przeglądarkami?",
+        answer:
+          "Tak! HTML5 został zaprojektowany tak, aby w miarę możliwości, być kompatybilny ze starszymi przeglądarkami. Nowe funkcjonalności opierają się na tych istniejących i pozwalają na wyświetlenie awaryjnej zawartości dla starszych przeglądarek. ",
+      },
+      {
+        question: "Wymień niektóre z nowych funkcji HTML5.",
+        answer:
+          "nowe elementy składni,header,footer oraz section,Forms 2.0 – ulepszenie formularzy internetowych, został przedstawiony nowy atrybut - input,WebSocket następna generacja dwukierunkowej komunikacji dla aplikacji internetowych,Server-Sent Event, HTML5 wprowadza zdarzenia, które przechodzą z serwera WWW do przeglądarki internetowej,Canvas – obsługuje dwuwymiarową powierzchnię rysunkową, które może zostać oprogramowana przy użyciu JavaScript;",
+          secondAnswer: 'Audio & Video – od teraz można umieszczać nagrania audio oraz filmy video na stronach internetowych bez uciekania się do wtyczek firm trzecich; Geolocation – od teraz użytkownicy mogą zdecydować czy chcą podzielić się fizyczną lokalizacją z aplikacją internetową; Microdata – pozwala na tworzenie swoich własnych słowników poza językiem HTML5, które pozwalają na rozszerzenie strony internetowej przy użyciu niestandardowej semantyki; Drag & drop – od teraz można przeciągać i opuszczać elementy z jednego miejsca do drugiego w obrębie tej samej strony internetowej.',
+          thirdPartOfAnswer: 'Persistent Local Storage – przy użyciu tej funkcjonalności aplikacje webowe mogą przechowywać dane lokalnie bez użycia przeglądarki użytkownika. Wcześniej dane te musiały być przechowywane w ciasteczkach, włączając w to każde pojedyncze żądanie. Lokalne przechowywanie pamięci jest bezpieczniejsze, pozwala na przechowywanie większej ilości danych bez negatywnego wpływu na wydajność strony internetowej;'
       },
       {
         question: "Czy tagi i elementy w html to to samo?",
@@ -54,6 +68,11 @@ export default {
         question: "Czym są tagi i atrybuty w html?",
         answer:
           "Tagi to podstawowy komponent w html który definiuje jak dany kontent będzie ustruktyryzowany/formatowany,natomiast atrybuty są używane wraz ztagami html by zdefiniować charakterystyke elementu",
+      },
+      {
+        question: "Jaki jest cel używania sekcji ‘section’ w HTML5?",
+        answer:
+          "Znacznik ten reprezentuje rozdział dokumentu lub sekcję aplikacji. Może być użyty razem ze znacznikami h1-h6, które wskazują na strukturę dokumentu.",
       },
       {
         question: "Czym są void elements?",
@@ -106,25 +125,46 @@ export default {
         question: "Do czego służy znacznik nav?",
         answer:
           "Tag nav definiuje zestaw linków nawigacji. W tagu nav powinny się znaleźć podstawowe linki służące do nawigacji, a nie wszystkie linki na stronie.",
-        secondAnswer: "",
+      },
+      {
+        question: "Jaki jest cel używania sekcji aside w HTML5?",
+        answer:
+          "Znacznik ten reprezentuje fragment zawartości, która jest tylko nieznacznie związana z resztą strony.",
+      },
+      {
+        question: "Czym są atrybuty niestandardowe w HTML5?",
+        answer:
+          "Atrybuty niestandardowe rozpoczynają się od ‘data-‘ i będą nazywane na podstawie twoich preferencji. Poniżej krótki przykład:Powyższy przykład jest całkowicie poprawny w HTML5. Składa się z dwóch atrybutów, data-subject oraz data-level . Użytkownik będzie mógł pobrać wartości tych atrybutów używając JavaScript lub CSS w podobny sposób jak w przypadku korzystania ze standardowych atrybutów.",
       },
       {
         question: "Do czego służy znacznik footer?",
         answer:
           "Tag footer definiuje stopkę dokumentu lub sekcji i powinien zawierać informacje o stronie, która go zawiera. Ten tag zwykle zawiera informacje o autorze, prawach autorskich, dane kontaktowe, mapę witryny, powrót do góry oraz linki do powiązanych dokumentów,",
-        secondAnswer: "",
+      },
+      {
+        question: "Czym jest Web Forms 2.0?",
+        answer:
+          "Jest to rozszerzenie funkcji formularzy z HTML4. Elementy formularza oraz atrybuty w HTML5 wprowadzają większy zakres semantyki niż miało to miejsce w HTML4 oraz usuwają potrzebę pisania długich skryptów oraz stylowania elementów, które było wymagane w HTML4.",
       },
       {
         question: "Do czego służy znacznik header?",
         answer:
           "Tag header reprezentuje kontener na treść wprowadzającą lub zestaw linków nawigacyjnych. Zazwyczaj zawiera logo, linki nawigacyjne lub nagłówki.",
-        secondAnswer: "",
+      },
+      {
+        question: " Co masz na myśli mówiąc o przechowywaniu sesji w HTML5?",
+        answer:
+          "HTML5 przedstawił nowy atrybut sessionStorage , który może być wykorzystywany przez strony aby dodawać dane do sesji i będzie dostępny dla każdej strony otwartej w tym oknie, tj. jak tylko zamkniesz okno sesja będzie pusta.",
       },
       {
         question: "Czym jest accessibility?(dostępność)",
         answer:
-          "Accessibility (pl. dostępność) to tworzenie aplikacji w sposób który jest łatwy do interpretacji dla przeglądarki i/lub specjalnych urządzeń przystosowanych przez osoby niepełnosprawne. Po prostu przeglądarka wie kiedy ma do czynienia z obrazkiem, nawigacją czy artykułem.",
-        secondAnswer: "",
+          "Accessibility to tworzenie aplikacji w sposób który jest łatwy do interpretacji dla przeglądarki i/lub specjalnych urządzeń przystosowanych przez osoby niepełnosprawne. Po prostu przeglądarka wie kiedy ma do czynienia z obrazkiem, nawigacją czy artykułem.",
+      },
+      {
+        question: "Jakie są wady ciasteczek?",
+        answer:
+          "Ciasteczka mają następujące wady: ciasteczka są dołączone do każdego żądania HTTP a tym samym prowadzą do spowolnienia aplikacji internetowej przez przekazywanie tych samych danych; ciasteczka są dołączone do każdego żądania HTTP a tym samym wysyłamy nieszyfrowane dane przez internet; ciasteczka są ograniczone do około 4KB. Liczba ta nie wystarczy do przechowywania wszystkich niezbędnych danych.",
       },
     ],
   },
