@@ -61,7 +61,6 @@
         <v-icon
           x-large
           @click="addToFavorite(cssQuestions)"
-          color="red"
           style="position: absolute; bottom: 26%; right:4%;"
           >mdi-heart</v-icon
         >

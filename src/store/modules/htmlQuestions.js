@@ -6,7 +6,7 @@ export default {
       {
         question: `Czym jest Html?`,
 
-        answer: `$HTML (Hypertext Markup Language) to język znaczników służący do prezentacji treści na stronach internetowych,który jest oparty o hiperłącza łączące poszczególne dokumenty pomiędzy sobą. Przeglądarki internetowe jednoznacznie interpretują kod HTML i na jego bazie przedstawiają treść końcowym użytkownikom.`,
+        answer: `HTML (Hypertext Markup Language) to język znaczników służący do prezentacji treści na stronach internetowych,który jest oparty o hiperłącza łączące poszczególne dokumenty pomiędzy sobą.Przeglądarki internetowe jednoznacznie interpretują kod HTML i na jego bazie przedstawiają treść końcowym użytkownikom.`,
       },
       {
         question: `Czym jest string interpolation?`,
@@ -51,7 +51,7 @@ export default {
         question:
           "Czy HTML jest wstecznie kompatybilny ze starszymi przeglądarkami?",
         answer:
-          "Tak! HTML5 został zaprojektowany tak, aby w miarę możliwości, być kompatybilny ze starszymi przeglądarkami. Nowe funkcjonalności opierają się na tych istniejących i pozwalają na wyświetlenie awaryjnej zawartości dla starszych przeglądarek. ",
+          "Tak! HTML5 został zaprojektowany tak, aby w miarę możliwości, być kompatybilny ze starszymi przeglądarkami.Nowe funkcjonalności opierają się na tych istniejących i pozwalają na wyświetlenie awaryjnej zawartości dla starszych przeglądarek.",
       },
       {
         question: "Wymień niektóre z nowych funkcji HTML5.",
@@ -80,7 +80,7 @@ export default {
       {
         question: "Czym są void elements?",
         answer:
-          "Są to takie elementy html które nie posiadają tagu zamykającego.Przykładowo:br,img,hr",
+          `Są to takie elementy html które nie posiadają tagu zamykającego.Przykładowo:br,img,hr`,
       },
       {
         question: "Co to jest W3C?",
@@ -100,9 +100,9 @@ export default {
           "Web sockets to technologia następnej generacji do dwukierunkowej komunikacji dla aplikacji internetowych, która działa na jednym gnieździe i jest wystawiona za pomocą interfejsu napisanego w JavaScript dla przeglądarek zgodnych z HTML5,Po uzyskaniu połączenia gniazda z serwerem WWW, możesz wysyłać dane z przeglądarki do serwera po wywołaniu metody send() oraz odbierać dane z serwera dzięki obsłudze zdarzenia onmessage",
       },
       {
-        question: "Czym jest tag <article>?",
+        question: "Czym jest tag article?",
         answer:
-          "Tag <article> określa niezależną i osobną treść. Najczęściej  używa się go na blogach. ",
+          "Tag article określa niezależną i osobną treść. Najczęściej  używa się go na blogach.",
       },
       {
         question: "Objaśnij semantyczny html",
@@ -137,12 +137,12 @@ export default {
       {
         question: "Czym są atrybuty niestandardowe w HTML5?",
         answer:
-          "Atrybuty niestandardowe rozpoczynają się od ‘data-‘ i będą nazywane na podstawie twoich preferencji. Poniżej krótki przykład:Powyższy przykład jest całkowicie poprawny w HTML5. Składa się z dwóch atrybutów, data-subject oraz data-level . Użytkownik będzie mógł pobrać wartości tych atrybutów używając JavaScript lub CSS w podobny sposób jak w przypadku korzystania ze standardowych atrybutów.",
+          "Atrybuty niestandardowe rozpoczynają się od data- i będą nazywane na podstawie twoich preferencji.Składa się z dwóch atrybutów, data-subject oraz data-level.Użytkownik będzie mógł pobrać wartości tych atrybutów używając JavaScript lub CSS w podobny sposób jak w przypadku korzystania ze standardowych atrybutów.",
       },
       {
         question: "Do czego służy znacznik footer?",
         answer:
-          "Tag footer definiuje stopkę dokumentu lub sekcji i powinien zawierać informacje o stronie, która go zawiera. Ten tag zwykle zawiera informacje o autorze, prawach autorskich, dane kontaktowe, mapę witryny, powrót do góry oraz linki do powiązanych dokumentów,",
+          "Tag footer definiuje stopkę dokumentu lub sekcji i powinien zawierać informacje o stronie, która go zawiera.Ten tag zwykle zawiera informacje o autorze, prawach autorskich,dane kontaktowe, mapę witryny,powrót do góry oraz linki do powiązanych dokumentów,",
       },
       {
         question: "Czym jest Web Forms 2.0?",

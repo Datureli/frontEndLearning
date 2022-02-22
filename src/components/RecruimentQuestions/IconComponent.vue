@@ -1,9 +1,8 @@
 <template>
   <v-row class="hidden-sm-and-down">
-    {{ this.$route.path }}
     <v-icon
       large
-      @change="clickhandler"
+      @click="clickhandler"
       style="position: absolute; bottom: 26%; right:60%;"
       >mdi-dice-multiple</v-icon
     >
@@ -62,20 +61,21 @@ export default {
         this.randomVueQuestion();
       }
     },
+    path() {
+      switch (this.$route.path) {
+        case "/about/javascript":
+          return randomQuestion();
+
+        case "/about/vue":
+          return randomVueQuestion();
+      }
+    },
     randomQuestion() {
       this.$store.dispatch("questions/randomQuestion");
     },
     randomVueQuestion() {
       this.$store.dispatch("vueQuestions/randomVueQuestion");
-      this.page = 1;
-    },
-    path() {
-      switch (this.$route.path) {
-        case "/about/javascript":
-          return randomQuestion();
-        case "/about/vue":
-          return randomVueQuestion();
-      }
+
     },
   },
 };

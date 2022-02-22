@@ -87,7 +87,7 @@ export default {
   },
 
   methods: {
-   ...mapActions("javascriptQuestions", ["javascriptQuestionLoop", "randomJavascriptQuestion"]),
+   ...mapActions("questions", ["questionLoop", "randomQuestion"]),
     ...mapActions(["disableAnswers", "addToFavorite"]),
   },
 };

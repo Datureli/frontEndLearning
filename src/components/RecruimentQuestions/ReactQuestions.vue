@@ -27,12 +27,11 @@
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
-    <v-sheet class="d-flex" relative>
+    <v-sheet class="d-flex">
       <v-icon
         large
         @click="randomReactQuestion"
         class="hidden-sm-and-down"
-        color="brown"
         style="position: absolute; bottom: 26%; right:90%;"
         >mdi-dice-multiple</v-icon
       >
@@ -42,7 +41,6 @@
         @click="reactQuestionLoop"
         :disabled="disableLoop"
         class="hidden-sm-and-down"
-        color="white"
         style="position: absolute; bottom: 26%; right:85%;"
         >mdi-autorenew</v-icon
       >
