@@ -74,7 +74,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState,mapActions } from "vuex";
 export default {
   props: {
     page: {
@@ -87,19 +87,8 @@ export default {
   },
 
   methods: {
-    disableAnswers() {
-      this.$store.commit("disable");
-    },
-
-    addToFavorite(reactQuestions) {
-      this.$store.state.favorite.push(reactQuestions);
-    },
-    randomReactQuestion() {
-      this.$store.dispatch("reactQuestions/randomReactQuestion");
-    },
-    reactQuestionLoop() {
-      this.$store.dispatch("reactQuestions/reactQuestionLoop");
-    },
+   ...mapActions("reactQuestions", ["reactQuestionLoop", "randomReactQuestion"]),
+    ...mapActions(["disableAnswers", "addToFavorite"]),
   },
 };
 </script>

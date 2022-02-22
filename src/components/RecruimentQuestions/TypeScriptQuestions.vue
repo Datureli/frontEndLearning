@@ -76,7 +76,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState,mapActions } from "vuex";
 export default {
   props: {
     page: {
@@ -89,19 +89,8 @@ export default {
   },
 
   methods: {
-    disableAnswers() {
-      this.$store.commit("disable");
-    },
-
-    addToFavorite(typescriptQuestion) {
-      this.$store.state.favorite.push(typescriptQuestion);
-    },
-    randomTypescriptQuestion() {
-      this.$store.dispatch("typescriptQuestions/randomTypescriptQuestion");
-    },
-    typescriptQuestionLoop() {
-      this.$store.dispatch("typescriptQuestions/typescriptQuestionLoop");
-    },
+    ...mapActions("typescriptQuestions", ["typescriptQuestionLoop", "randomTypescriptQuestion"]),
+    ...mapActions(["disableAnswers", "addToFavorite"]),
   },
 };
 </script>
