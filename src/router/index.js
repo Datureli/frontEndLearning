@@ -39,10 +39,10 @@ const routes = [
         name: "ReactQuestions",
       },
       {
-        path: "bootstrap",
+        path: "test",
         component: () =>
-          import("../components/RecruimentQuestions/BootstrapQuestions.vue"),
-        name: "BootstrapQuestions",
+          import("../components/RecruimentQuestions/TestQuestions.vue"),
+        name: "TestQuestions",
       },
       {
         path: "typescript",

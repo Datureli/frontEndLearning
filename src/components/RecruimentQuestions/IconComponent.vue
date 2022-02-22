@@ -9,7 +9,7 @@
 
     <v-icon
       x-large
-      @click="htmlQuestionLoop"
+      @click="randomLoop"
       style="position: absolute; bottom: 20%; right:70%;"
       >mdi-autorenew</v-icon
     >
@@ -45,10 +45,10 @@
 <script>
 import { mapState, mapActions } from "vuex";
 export default {
-  props: {
-    page: {
-      type: Number,
-    },
+  data() {
+    return {
+      disableLoop: false,
+    };
   },
   computed: {
     ...mapState(["disable", "favorite", "isHeartActive"]),
@@ -76,30 +76,48 @@ export default {
           return this.randomGeneralQuestion();
       }
     },
-    randomQuestion() {
-      this.$store.dispatch("questions/randomQuestion");
+    randomLoop() {
+      switch (this.$route.path) {
+        case "/about/htmlquestions":
+          return this.htmlQuestionLoop();
+        case "/about/cssquestions":
+          return this.cssQuestionLoop();
+        case "/about/javascript":
+          return this.questionLoop();
+        case "/about/vue":
+          return this.vueQuestionLoop();
+        case "/about/react":
+          return this.reactQuestionLoop();
+        case "/about/typescript":
+          return this.typescriptQuestionLoop();
+        case "/about/gitQuestions":
+          return this.gitQuestionLoop();
+        case "/about/general":
+          return this.generalQuestionLoop();
+        case "/about/bootstrap":
+          return this.GeneralQuestion();
+      }
     },
-    randomVueQuestion() {
-      this.$store.dispatch("vueQuestions/randomVueQuestion");
-    },
-    randomHtmlQuestion() {
-      this.$store.dispatch("htmlQuestions/randomHtmlQuestion");
-    },
+    ...mapActions({
+      htmlQuestions: ["randomHtmlQuestion"],
+    }),
     ...mapActions("htmlQuestions", ["htmlQuestionLoop", "randomHtmlQuestion"]),
-    ...mapActions(["disableAnswers", "addToFavorite"]),
-        ...mapActions("cssQuestions", ["cssQuestionLoop", "randomCssQuestion"]),
-    ...mapActions(["disableAnswers", "addToFavorite"]),
-       ...mapActions("generalQuestions", ["generalQuestionLoop", "randomGeneralQuestion"]),
-    ...mapActions(["disableAnswers", "addToFavorite"]),
-        ...mapActions("gitQuestions", ["gitQuestionLoop", "randomGitQuestion"]),
-    ...mapActions(["disableAnswers", "addToFavorite"]),
-       ...mapActions("questions", ["questionLoop", "randomQuestion"]),
-    ...mapActions(["disableAnswers", "addToFavorite"]),
-       ...mapActions("reactQuestions", ["reactQuestionLoop", "randomReactQuestion"]),
-    ...mapActions(["disableAnswers", "addToFavorite"]),
-        ...mapActions("typescriptQuestions", ["typescriptQuestionLoop", "randomTypescriptQuestion"]),
-    ...mapActions(["disableAnswers", "addToFavorite"]),
-       ...mapActions("vueQuestions", ["vueQuestionLoop", "randomVueQuestion"]),
+    ...mapActions("cssQuestions", ["cssQuestionLoop", "randomCssQuestion"]),
+    ...mapActions("generalQuestions", [
+      "generalQuestionLoop",
+      "randomGeneralQuestion",
+    ]),
+    ...mapActions("gitQuestions", ["gitQuestionLoop", "randomGitQuestion"]),
+    ...mapActions("questions", ["questionLoop", "randomQuestion"]),
+    ...mapActions("reactQuestions", [
+      "reactQuestionLoop",
+      "randomReactQuestion",
+    ]),
+    ...mapActions("typescriptQuestions", [
+      "typescriptQuestionLoop",
+      "randomTypescriptQuestion",
+    ]),
+    ...mapActions("vueQuestions", ["vueQuestionLoop", "randomVueQuestion"]),
     ...mapActions(["disableAnswers", "addToFavorite"]),
   },
 };

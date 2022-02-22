@@ -27,7 +27,7 @@ import CssQuestions from "./CssQuestions.vue";
 import JavascriptQuestions from "./JavascriptQuestions.vue";
 import VueQuestions from "./VueQuestions.vue";
 import GitQuestions from "./GitQuestions.vue";
-import BootstrapQuestions from "./BootstrapQuestions.vue";
+import BootstrapQuestions from "./TestQuestions.vue";
 import TypeScriptQuestions from "./TypeScriptQuestions.vue"
 import ReactQuestions from "./ReactQuestions.vue"
 import GeneralQuestions from "./GeneralQuestions.vue"

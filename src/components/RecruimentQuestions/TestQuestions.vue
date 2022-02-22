@@ -3,7 +3,7 @@
     <v-carousel-item
       v-for="(testQuestions, index) in testQuestions"
       :key="index"
-          max-width="700"
+      max-width="700"
       class="mx-auto"
     >
       <v-list-item>
@@ -16,7 +16,7 @@
           <v-list-item-subtitle
             class="white--text text-justify text-h5 text-wrap"
             v-show="disable"
-              v-text="
+            v-text="
               page === 1
                 ? testQuestions.answer
                 : page === 2
@@ -27,11 +27,11 @@
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
-     <v-pagination
-          style="position: absolute; bottom: 18%; right:36%"
-          v-model="page"
-          :length="3"
-        ></v-pagination>
+    <v-pagination
+      style="position: absolute; bottom: 18%; right:36%"
+      v-model="page"
+      :length="3"
+    ></v-pagination>
   </v-carousel>
 </template>
 
@@ -46,22 +46,6 @@ export default {
   computed: {
     ...mapState(["disable", "favorite"]),
     ...mapState("questions", ["testQuestions"]),
-  },
-
-  methods: {
-    disableAnswers() {
-      this.$store.commit("disable");
-    },
-
-    addToFavorite(testQuestions) {
-      this.$store.state.favorite.push(testQuestions);
-    },
-    randomQuestion() {
-      this.$store.dispatch("questions/randomQuestion");
-    },
-    questionLoop() {
-      this.$store.dispatch("questions/questionLoop");
-    },
   },
 };
 </script>
