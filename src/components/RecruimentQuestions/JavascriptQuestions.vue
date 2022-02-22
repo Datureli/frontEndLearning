@@ -29,53 +29,17 @@
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
-    <v-row
-      justify="spacer-around"
-      height="50"
-      class=" d-flex hidden-sm-and-down align"
-    >
-      <v-icon
-        x-large
-        @click="randomQuestion"
-        style="position: absolute; bottom: 26%; right:90%;"
-        >mdi-dice-multiple</v-icon
-      >
-
-      <v-icon
-        x-large
-        @click="questionLoop"
-        color="white"
-        style="position: absolute; bottom: 26%; right:85%;"
-        >mdi-autorenew</v-icon
-      >
-
-      <v-pagination
-        style="position: absolute; bottom: 18%; right:36%"
-        v-model="page"
-        :length="3"
-      ></v-pagination>
-      <v-icon
-        large
-        @click="disableAnswers"
-        style="position: absolute; bottom: 26%; right:10%;"
-        >mdi-comment-off-outline</v-icon
-      >
-
-      <v-icon
-        x-large
-        @click="addToFavorite(javascriptQuestions)"
-        color="red"
-        style="position: absolute; bottom: 26%; right:4%;"
-        >mdi-heart</v-icon
-      >
-    </v-row>
+   <v-pagination
+      style="position: absolute; bottom: 18%; right:36%"
+      v-model="page"
+      :length="3"
+    ></v-pagination>
   </v-carousel>
 </template>
 
 <script>
-import { mapState,mapActions } from "vuex";
+import { mapState } from "vuex";
 export default {
-
   props: {
     page: {
       type: Number,
@@ -84,11 +48,6 @@ export default {
   computed: {
     ...mapState(["disable", "favorite"]),
     ...mapState("questions", ["javascriptQuestions"]),
-  },
-
-  methods: {
-   ...mapActions("questions", ["questionLoop", "randomQuestion"]),
-    ...mapActions(["disableAnswers", "addToFavorite"]),
   },
 };
 </script>

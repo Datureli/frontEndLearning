@@ -27,59 +27,16 @@
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
-    <v-sheet class="d-flex">
-      <v-row justify="spacer-around" class="hidden-sm-and-down">
-        <v-icon
-          large
-          @click="randomHtmlQuestion"
-          style="position: absolute; bottom: 26%; right:90%;"
-          >mdi-dice-multiple</v-icon
-        >
-
-        <v-icon
-          x-large
-          @click="htmlQuestionLoop"
-          style="position: absolute; bottom: 26%; right:85%;"
-          >mdi-autorenew</v-icon
-        >
-
         <v-pagination
           style="position: absolute; bottom: 18%; right:36%"
           v-model="page"
           :length="3"
         ></v-pagination>
-        <v-icon
-          large
-          @click="disableAnswers"
-          style="position: absolute; bottom: 26%; right:10%;"
-          >mdi-comment-off-outline</v-icon
-        >
-        <v-tooltip bottom>
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn
-              style="position: absolute; bottom: 26%; right:2%;"
-              color="transparent"
-              outlined
-              v-bind="attrs"
-              v-on="on"
-            >
-              <v-icon
-                :disabled="!isHeartActive"
-                x-large
-                @click="addToFavorite(htmlQuestions)"
-                >mdi-heart</v-icon
-              >
-            </v-btn>
-          </template>
-          <span>You need to be logged in</span>
-        </v-tooltip>
-      </v-row>
-    </v-sheet>
   </v-carousel>
 </template>
 
 <script>
-import { mapState, mapActions } from "vuex";
+import { mapState } from "vuex";
 export default {
   props: {
     page: {
@@ -87,13 +44,8 @@ export default {
     },
   },
   computed: {
-    ...mapState(["disable", "favorite", "isHeartActive"]),
+    ...mapState(["disable"]),
     ...mapState("htmlQuestions", ["htmlQuestions"]),
-  },
-
-  methods: {
-    ...mapActions("htmlQuestions", ["htmlQuestionLoop", "randomHtmlQuestion"]),
-    ...mapActions(["disableAnswers", "addToFavorite"]),
   },
 };
 </script>

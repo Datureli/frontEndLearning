@@ -27,53 +27,16 @@
         </v-list-item-content>
       </v-list-item>
           </v-carousel-item>
-       <v-sheet class="d-flex" relative>
-      <v-icon
-        x-large
-        @click="randomGeneralQuestion"
-        class="hidden-sm-and-down"
-        style="position: absolute; bottom: 26%; right:90%;"
-        >mdi-dice-multiple</v-icon
-      >
-
-      <v-icon
-        x-large
-        @click="generalQuestionLoop"
-        :disabled="disableLoop"
-        class="hidden-sm-and-down"
-        color="white"
-        style="position: absolute; bottom: 26%; right:85%;"
-        >mdi-autorenew</v-icon
-      >
-
-      <v-pagination
-        class="mx-auto hidden-sm-and-down"
-        style="position: absolute; bottom: 18%; right:36%"
-        v-model="page"
-        :length="3"
-      ></v-pagination>
-      <v-icon
-        large
-        class="hidden-sm-and-down"
-        @click="disableAnswers"
-        style="position: absolute; bottom: 26%; right:10%;"
-        >mdi-comment-off-outline</v-icon
-      >
-
-      <v-icon
-        x-large
-        class="hidden-sm-and-down"
-        @click="addToFavorite(generalQuestions)"
-        style="position: absolute; bottom: 26%; right:4%;"
-        >mdi-heart</v-icon
-      >
-    </v-sheet>
-
+     <v-pagination
+          style="position: absolute; bottom: 18%; right:36%"
+          v-model="page"
+          :length="3"
+        ></v-pagination>
   </v-carousel>
 </template>
 
 <script>
-import { mapState, mapActions } from "vuex";
+import { mapState} from "vuex";
 export default {
   props: {
     page: {
@@ -83,11 +46,6 @@ export default {
   computed: {
     ...mapState(["disable", "favorite"]),
     ...mapState("generalQuestions", ["generalQuestions"]),
-  },
-
-  methods: {
-   ...mapActions("generalQuestions", ["generalQuestionLoop", "randomGeneralQuestion"]),
-    ...mapActions(["disableAnswers", "addToFavorite"]),
   },
 };
 </script>

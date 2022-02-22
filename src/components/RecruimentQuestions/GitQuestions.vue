@@ -16,7 +16,7 @@
           <v-list-item-subtitle
             class="white--text text-justify text-h6 text-wrap"
             v-show="disable"
-              v-text="
+            v-text="
               page === 1
                 ? gitQuestions.answer
                 : page === 2
@@ -26,54 +26,17 @@
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-     
     </v-carousel-item>
-      <v-sheet class="d-flex" relative>
-      <v-icon
-        x-large
-        @click="randomGitQuestion"
-         class="hidden-sm-and-down"
-        style="position: absolute; bottom: 26%; right:90%;"
-        >mdi-dice-multiple</v-icon
-      >
-
-      <v-icon
-        x-large
-        @click="gitQuestionLoop"
-        color="white"
-         class="hidden-sm-and-down"
-        style="position: absolute; bottom: 26%; right:85%;"
-        >mdi-autorenew</v-icon
-      >
-
-      <v-pagination
-        style="position: absolute; bottom: 18%; right:36%"
-        v-model="page"
-         class="hidden-sm-and-down"
-        :length="3"
-      ></v-pagination>
-      <v-icon
-        large
-        @click="disableAnswers"
-         class="hidden-sm-and-down"
-        style="position: absolute; bottom: 26%; right:10%;"
-        >mdi-comment-off-outline</v-icon
-      >
-
-      <v-icon
-        x-large
-        @click="addToFavorite(gitQuestions)"
-         class="hidden-sm-and-down"
-        color="red"
-        style="position: absolute; bottom: 26%; right:4%;"
-        >mdi-heart</v-icon
-      >
-    </v-sheet>
+    <v-pagination
+      style="position: absolute; bottom: 18%; right:36%"
+      v-model="page"
+      :length="3"
+    ></v-pagination>
   </v-carousel>
 </template>
 
 <script>
-import { mapState,mapActions } from "vuex";
+import { mapState, mapActions } from "vuex";
 export default {
   props: {
     page: {
@@ -83,11 +46,6 @@ export default {
   computed: {
     ...mapState(["disable", "favorite"]),
     ...mapState("gitQuestions", ["gitQuestions"]),
-  },
-
-  methods: {
-   ...mapActions("gitQuestions", ["gitQuestionLoop", "randomGitQuestion"]),
-    ...mapActions(["disableAnswers", "addToFavorite"]),
   },
 };
 </script>
