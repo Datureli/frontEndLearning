@@ -50,6 +50,9 @@ export default new Vuex.Store({
     },
   },
   actions: {
+    disableAnswers(context) {
+      context.commit('disable')
+    },
     addToFavorite(context) {
       context.commit("addToFavorite");
     },

@@ -58,22 +58,17 @@ export default {
   },
 
   mutations: {
-    cssQuestionLoop(state) {
-      setInterval(() => {
-        state.cssQuestions.sort(function() {
-          return Math.round(Math.random()) - 0.5;
-        });
-      }, 1000);
-    },
     randomCssQuestion(state) {
-      state.cssQuestions.sort(function() {
+      state.cssQuestions.sort(() => {
         return Math.round(Math.random()) - 0.5;
       });
     },
   },
   actions: {
     cssQuestionLoop(context) {
-      context.commit("cssQuestionLoop");
+      setInterval(() => {
+      context.commit("randomCssQuestion");
+    }, 5000);
     },
     randomCssQuestion(context) {
       context.commit("randomCssQuestion");

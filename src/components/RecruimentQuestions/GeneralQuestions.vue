@@ -73,7 +73,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapActions } from "vuex";
 export default {
   props: {
     page: {
@@ -86,19 +86,8 @@ export default {
   },
 
   methods: {
-    disableAnswers() {
-      this.$store.commit("disable");
-    },
-
-    addToFavorite(generalQuestions) {
-      this.$store.state.favorite.push(generalQuestions);
-    },
-    randomGeneralQuestion() {
-      this.$store.dispatch("generalQuestions/randomGeneralQuestion");
-    },
-    generalQuestionLoop() {
-      this.$store.dispatch("generalQuestions/generalQuestionLoop");
-    },
+   ...mapActions("generalQuestions", ["generalQuestionLoop", "randomGeneralQuestion"]),
+    ...mapActions(["disableAnswers", "addToFavorite"]),
   },
 };
 </script>

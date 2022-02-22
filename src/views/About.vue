@@ -1,6 +1,6 @@
 <template>
   <v-row justify="center">
-    <v-sheet elevation="0" height="560" class="darkGradient pa-5 d-lg-flex d-grid">
+    <v-sheet height="560" class="darkGradient pa-5 d-lg-flex d-grid">
       <first-column v-if="$vuetify.breakpoint.mdAndUp" />
       <middle-column />
       <first-column-mobile v-if="$vuetify.breakpoint.smAndDown" />

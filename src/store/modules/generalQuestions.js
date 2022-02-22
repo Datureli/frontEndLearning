@@ -75,7 +75,8 @@ export default {
           "S.O.L.I.D. to akronim, który wymyślił Robert C. Martin. Uncle Bob (taki ma pseudonim) jest programistą. Ma sporo doświadczenia, przez wielu uważany jest za swego rodzaju autorytet.Akronim ten zbiera zestaw wytycznych. Wytyczne te stosuje się podczas pisania programów w sposób obiektowy. Samo słówko solid można przetłumaczyć jako solidny, konkretny, mocny.",
         secondAnswer:
           "S jak Samodzielny.S pochodzi od Single Responsibility Principle. W oryginalnym wydaniu autor mówi o tym, że klasa powinna mieć wyłącznie jeden powód do zmiany. Wytyczna ta sprowadza się do tego, że dana klasa powinna mieć jeden główny cel. Jedną główną odpowiedzialność. Jedną funkcjonalność, którą realizuje.",
-          thirdPartOfAnswer: 'O jak Otwarty O pochodzi od Open/Closed Principle. W tym miejscu Uncle Bob zwraca uwagę na to aby kod, który tworzymy był “możliwy do rozszerzania i zamknięty na modyfikacje”. Sprowadza się do do świadomego użycia kompozycji, dziedziczenia czy modyfikatorów dostępu.L pochodzi od Liskov Substitution Principle. W przypadku tej wytycznej Twój kod powinien współpracować poprawnie z klasą, jak i wszystkimi jej podklasami. Innymi słowy jeśli zależysz od jakiegoś interfejsu to wszystkie jego implementacje powinny poprawnie działać z Twoją klasą/metodą.I pochodzi od Interface Segregation Principle. Wytyczna ta mówi o tym, abyś rozdzielał interfejs klasy. Interfejs ten powinien być odpowiednio zdefiniowany. Chodzi tu o aby inny fragment kodu, który używa Twojej klasy używał wyłącznie podzbioru metod, który jest w tamtym przypadku istotny. W oryginale wytyczna ta mówi o tym, ze klienty nie powinny być zmuszane do wprowadzania zależności od interfejsów, których nie używają.D pochodzi od Dependency Inversion Principle. Wytyczna ta mówi, że wysokopoziomowe klasy nie powinny zależeć od niskopoziomowych detali. Zależność ta powinna być odwrócona poprzez wprowadzenie dodatkowych elementów. Mówi się tu o dodatkowych warstwach abstrakcji, które pozwalają na zmianę kierunku takiej zależności.'
+        thirdPartOfAnswer:
+          "O jak Otwarty O pochodzi od Open/Closed Principle. W tym miejscu Uncle Bob zwraca uwagę na to aby kod, który tworzymy był “możliwy do rozszerzania i zamknięty na modyfikacje”. Sprowadza się do do świadomego użycia kompozycji, dziedziczenia czy modyfikatorów dostępu.L pochodzi od Liskov Substitution Principle. W przypadku tej wytycznej Twój kod powinien współpracować poprawnie z klasą, jak i wszystkimi jej podklasami. Innymi słowy jeśli zależysz od jakiegoś interfejsu to wszystkie jego implementacje powinny poprawnie działać z Twoją klasą/metodą.I pochodzi od Interface Segregation Principle. Wytyczna ta mówi o tym, abyś rozdzielał interfejs klasy. Interfejs ten powinien być odpowiednio zdefiniowany. Chodzi tu o aby inny fragment kodu, który używa Twojej klasy używał wyłącznie podzbioru metod, który jest w tamtym przypadku istotny. W oryginale wytyczna ta mówi o tym, ze klienty nie powinny być zmuszane do wprowadzania zależności od interfejsów, których nie używają.D pochodzi od Dependency Inversion Principle. Wytyczna ta mówi, że wysokopoziomowe klasy nie powinny zależeć od niskopoziomowych detali. Zależność ta powinna być odwrócona poprzez wprowadzenie dodatkowych elementów. Mówi się tu o dodatkowych warstwach abstrakcji, które pozwalają na zmianę kierunku takiej zależności.",
       },
       {
         question: "https a Google – czy szyfrowanie wpływa na pozycjonowanie?",
@@ -146,7 +147,8 @@ export default {
         secondAnswer: "",
       },
       {
-        question: "Jaka jest różnica pomiędzy display: none i visibility: hidden?",
+        question:
+          "Jaka jest różnica pomiędzy display: none i visibility: hidden?",
         answer:
           " Oba atrybuty służą do ukrywania elementów na stronie. W praktyce działają one jednak inaczej. O ile atrybut visibility: hidden faktycznie jedynie ukrywa element i tag jest renderowany i zostanie dla nie niego zarezerwowane widoczne miejsce, tak w przypadku display: none w ogóle nie zostanie on wyświetlony na stronie, ani nie pojawi się na niego miejsce, choć cały czas będzie można z nim wchodzić w interkacje przez DOM.",
         secondAnswer: "",
@@ -155,6 +157,40 @@ export default {
         question: `Czym jest Event bobbling?`,
         answer: ` Jest to propagacja elementu do samej góry.Zawsze idzie z dołu do góry`,
         secondAnswer: ``,
+      },
+      {
+        question: `Jak działa renderowanie po stronie klienta?`,
+        answer: `Kiedy programiści mówią o renderowaniu po stronie klienta, mają na myśli renderowanie treści w przeglądarce za pomocą JavaScript. Więc zamiast pobierać całą zawartość z samego dokumentu HTML, otrzymujesz podstawowy dokument HTML z plikiem JavaScript, który wyrenderuje resztę witryny za pomocą przeglądarki`,
+        secondAnswer: `Inną rzeczą, o której należy pamiętać, jest to, że Twoja witryna/aplikacja nie będzie mogła się załadować, dopóki WSZYSTKIE JavaScript nie zostanie pobrane do przeglądarki. Ma to sens, ponieważ zawiera wszystkie potrzebne treści. Jeśli Twoi użytkownicy korzystają z wolnego połączenia internetowego, początkowy czas ładowania może się nieco wydłużyć.`,
+      },
+      {
+        question: `renderowanie po stronie serwera vs renderowanie po stronie klienta?`,
+        answer: ` renderowanie po stronie serwera jest świetne dla SEO. Twoje treści są obecne, zanim je otrzymasz, więc wyszukiwarki mogą je indeksować i indeksować. Coś, co nie jest tak z renderowaniem po stronie klienta. Przynajmniej nie po prostu.`,
+        secondAnswer: `Poniżej znajduje się krótkie zestawienie zalet i wad dla każdego podejścia:Server-side pros:
+        Search engines can crawl the site for better SEO.
+        The initial page load is faster.
+        Great for static sites.Server-side cons:
+        Frequent server requests.
+        An overall slow page rendering.
+        Full page reloads.
+        Non-rich site interactions.Client-side pros:
+        Rich site interactions
+        Fast website rendering after the initial load.
+        Great for web applications.
+        Robust selection of JavaScript libraries.Client-side cons:
+        Low SEO if not implemented correctly.
+        Initial load might require more time.
+        In most cases, requires an external library.`,
+      },
+      {
+        question: `Jak działa renderowanie po stronie servera?`,
+        answer: `Renderowanie po stronie serwera to najczęstsza metoda wyświetlania informacji na ekranie. Działa poprzez konwersję plików HTML na serwerze na użyteczne informacje dla przeglądarki.`,
+        secondAnswer: `Za każdym razem, gdy odwiedzasz witrynę, Twoja przeglądarka wysyła zapytanie do serwera, na którym znajduje się zawartość witryny. Żądanie zwykle zajmuje tylko kilka milisekund, ale ostatecznie zależy to od wielu czynników:Twoja prędkość internetu
+        lokalizacja serwera
+        ilu użytkowników próbuje uzyskać dostęp do witryny?
+        i jak zoptymalizowana jest strona internetowa, żeby wymienić tylko kilka`,
+        thirdPartOfAnswer:
+          "Po zakończeniu przetwarzania żądania przeglądarka odzyskuje w pełni wyrenderowany kod HTML i wyświetla go na ekranie. Jeśli następnie zdecydujesz się odwiedzić inną stronę w witrynie, Twoja przeglądarka ponownie zażąda nowych informacji. Nastąpi to za każdym razem, gdy odwiedzasz stronę, której Twoja przeglądarka nie ma wersji w pamięci podręcznej.",
       },
       {
         question: `Jaka jest definicja funkcji wyższego rzędu?`,
@@ -254,13 +290,6 @@ export default {
   },
 
   mutations: {
-    generalQuestionLoop(state) {
-      setInterval(() => {
-        state.generalQuestions.sort(function() {
-          return Math.round(Math.random()) - 0.5;
-        });
-      }, 1000);
-    },
     randomGeneralQuestion(state) {
       state.generalQuestions.sort(function() {
         return Math.round(Math.random()) - 0.5;
@@ -269,7 +298,9 @@ export default {
   },
   actions: {
     generalQuestionLoop(context) {
-      context.commit("generalQuestionLoop");
+      setInterval(() => {
+        context.commit("randomGeneralQuestion");
+      }, 5000);
     },
     randomGeneralQuestion(context) {
       context.commit("randomGeneralQuestion");

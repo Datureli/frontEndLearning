@@ -1,5 +1,5 @@
 <template>
-  <v-container class="d-flex">
+  <v-container class="d-flex" >
     <v-card color="orange" v-if="checkStatus" width="500" height="310" class="mx-auto ">
       <p>{{ carouselCounter + "/10" }}</p>
       <v-carousel hide-delimiters prev-icon @change="incrementCarouselCounter">

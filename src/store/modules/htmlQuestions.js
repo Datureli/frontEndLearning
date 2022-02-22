@@ -34,7 +34,7 @@ export default {
       {
         question: "Które przeglądarki wspierają HTML5?",
         answer:
-          "Ostatnie wersje Safari, Google Chrome, Mozilla Firefox oraz Opera – wszystkie wspierają wiele funkcjonalności HTML5. Internet Explorer od wersji 9.0 również wspiera niektóre z funkcjonalności.Mobilne przeglądarki internetowe, które zostały zainstalowane na urządzeniach jak iPhone, iPad oraz Android doskonale wpierają HTML5."
+          "Ostatnie wersje Safari, Google Chrome, Mozilla Firefox oraz Opera – wszystkie wspierają wiele funkcjonalności HTML5. Internet Explorer od wersji 9.0 również wspiera niektóre z funkcjonalności.Mobilne przeglądarki internetowe, które zostały zainstalowane na urządzeniach jak iPhone, iPad oraz Android doskonale wpierają HTML5.",
       },
       {
         question: "Czym jest twarda spacja & nbspHtml?",
@@ -48,7 +48,8 @@ export default {
           "Jest rodzajem pojemnika na treść. Nie ma on żadnego wpływu na treść ani układ graficzny, dopóki nie zostanie ostylizowany z użyciem CSS.  ",
       },
       {
-        question: "Czy HTML jest wstecznie kompatybilny ze starszymi przeglądarkami?",
+        question:
+          "Czy HTML jest wstecznie kompatybilny ze starszymi przeglądarkami?",
         answer:
           "Tak! HTML5 został zaprojektowany tak, aby w miarę możliwości, być kompatybilny ze starszymi przeglądarkami. Nowe funkcjonalności opierają się na tych istniejących i pozwalają na wyświetlenie awaryjnej zawartości dla starszych przeglądarek. ",
       },
@@ -56,8 +57,10 @@ export default {
         question: "Wymień niektóre z nowych funkcji HTML5.",
         answer:
           "nowe elementy składni,header,footer oraz section,Forms 2.0 – ulepszenie formularzy internetowych, został przedstawiony nowy atrybut - input,WebSocket następna generacja dwukierunkowej komunikacji dla aplikacji internetowych,Server-Sent Event, HTML5 wprowadza zdarzenia, które przechodzą z serwera WWW do przeglądarki internetowej,Canvas – obsługuje dwuwymiarową powierzchnię rysunkową, które może zostać oprogramowana przy użyciu JavaScript;",
-          secondAnswer: 'Audio & Video – od teraz można umieszczać nagrania audio oraz filmy video na stronach internetowych bez uciekania się do wtyczek firm trzecich; Geolocation – od teraz użytkownicy mogą zdecydować czy chcą podzielić się fizyczną lokalizacją z aplikacją internetową; Microdata – pozwala na tworzenie swoich własnych słowników poza językiem HTML5, które pozwalają na rozszerzenie strony internetowej przy użyciu niestandardowej semantyki; Drag & drop – od teraz można przeciągać i opuszczać elementy z jednego miejsca do drugiego w obrębie tej samej strony internetowej.',
-          thirdPartOfAnswer: 'Persistent Local Storage – przy użyciu tej funkcjonalności aplikacje webowe mogą przechowywać dane lokalnie bez użycia przeglądarki użytkownika. Wcześniej dane te musiały być przechowywane w ciasteczkach, włączając w to każde pojedyncze żądanie. Lokalne przechowywanie pamięci jest bezpieczniejsze, pozwala na przechowywanie większej ilości danych bez negatywnego wpływu na wydajność strony internetowej;'
+        secondAnswer:
+          "Audio & Video – od teraz można umieszczać nagrania audio oraz filmy video na stronach internetowych bez uciekania się do wtyczek firm trzecich; Geolocation – od teraz użytkownicy mogą zdecydować czy chcą podzielić się fizyczną lokalizacją z aplikacją internetową; Microdata – pozwala na tworzenie swoich własnych słowników poza językiem HTML5, które pozwalają na rozszerzenie strony internetowej przy użyciu niestandardowej semantyki; Drag & drop – od teraz można przeciągać i opuszczać elementy z jednego miejsca do drugiego w obrębie tej samej strony internetowej.",
+        thirdPartOfAnswer:
+          "Persistent Local Storage – przy użyciu tej funkcjonalności aplikacje webowe mogą przechowywać dane lokalnie bez użycia przeglądarki użytkownika. Wcześniej dane te musiały być przechowywane w ciasteczkach, włączając w to każde pojedyncze żądanie. Lokalne przechowywanie pamięci jest bezpieczniejsze, pozwala na przechowywanie większej ilości danych bez negatywnego wpływu na wydajność strony internetowej;",
       },
       {
         question: "Czy tagi i elementy w html to to samo?",
@@ -169,28 +172,18 @@ export default {
     ],
   },
 
-  getters: {
-    removeSpace(state) {
-      return state.htmlQuestions.trim()
-    },
-  },
   mutations: {
-    htmlQuestionLoop(state) {
-      setInterval(() => {
-        state.htmlQuestions.sort(function() {
-          return Math.round(Math.random()) - 0.5;
-        });
-      }, 1000);
-    },
     randomHtmlQuestion(state) {
-      state.htmlQuestions.sort(function() {
+      state.htmlQuestions.sort(() => {
         return Math.round(Math.random()) - 0.5;
       });
     },
   },
   actions: {
     htmlQuestionLoop(context) {
-      context.commit("htmlQuestionLoop");
+      setInterval(() => {
+        context.commit("randomHtmlQuestion");
+      }, 5000);
     },
     randomHtmlQuestion(context) {
       context.commit("randomHtmlQuestion");

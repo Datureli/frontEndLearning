@@ -9,7 +9,7 @@
       <v-list-item>
         <v-list-item-content>
           <v-list-item-subtitle
-            class="text--primary mb-5 font-weight-black text-h4 text-wrap "
+            class="text--primary font-weight-black text-h4 text-wrap "
             v-text="htmlQuestions.question"
           ></v-list-item-subtitle>
 
@@ -79,7 +79,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex";
+import { mapState, mapActions } from "vuex";
 export default {
   props: {
     page: {
@@ -89,23 +89,11 @@ export default {
   computed: {
     ...mapState(["disable", "favorite", "isHeartActive"]),
     ...mapState("htmlQuestions", ["htmlQuestions"]),
-    ...mapGetters("htmlQuestions", ["removeSpace"]),
   },
 
   methods: {
-    disableAnswers() {
-      this.$store.commit("disable");
-    },
-    addToFavorite(htmlQuestions) {
-      this.$store.state.favorite.push(htmlQuestions);
-    },
-    htmlQuestionLoop() {
-      this.$store.dispatch("htmlQuestions/htmlQuestionLoop");
-    },
-    randomHtmlQuestion() {
-      this.$store.dispatch("htmlQuestions/randomHtmlQuestion");
-      this.page = 1
-    },
+    ...mapActions("htmlQuestions", ["htmlQuestionLoop", "randomHtmlQuestion"]),
+    ...mapActions(["disableAnswers", "addToFavorite"]),
   },
 };
 </script>

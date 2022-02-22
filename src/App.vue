@@ -8,7 +8,6 @@
   </v-app>
 </template>
 <script>
-import {VApp,VMain} from 'vuetify/lib'
 import Navigation from "./components/Navigation.vue";
 export default {
   name: "App",

@@ -71,7 +71,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapActions } from "vuex";
 export default {
   data() {
     return {
@@ -88,20 +88,8 @@ export default {
     ...mapState("cssQuestions", ["cssQuestions"]),
   },
   methods: {
-    disableAnswers() {
-      this.$store.commit("disable");
-    },
-    addToFavorite(cssQuestions) {
-      this.$store.state.favorite.push(cssQuestions);
-    },
-    cssQuestionLoop() {
-      this.$store.dispatch("cssQuestions/cssQuestionLoop");
-      this.disableLoop = true;
-    },
-    randomCssQuestion() {
-      this.$store.dispatch("cssQuestions/randomCssQuestion");
-      this.page = 1;
-    },
+    ...mapActions("cssQuestions", ["cssQuestionLoop", "randomCssQuestion"]),
+    ...mapActions(["disableAnswers", "addToFavorite"]),
   },
 };
 </script>

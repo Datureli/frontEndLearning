@@ -20,9 +20,29 @@ export default {
                 "Typ tuple pozwala zadeklarować tablicę z wartościami o różnych typach. Nie muszą być one takie same, jeśli znamy typy wartości, możemy zamiast any, podać typ tuple.",
             },
             {
+              question: "opisz Utility Types?",
+              answer:
+                "Są to globalne typy pomocnicze. Przydają się, jeśli mamy kilka typów, które są np. readonly lub optional. Mają podobną składnię do typów generycznych.",
+            },
+            {
               question: "czym jest parametr rest?",
               answer:
                 "Rest, jak pewnie wiesz z JavaScriptu, zbiera pozostałe parametry z tablicy. ",
+            },
+            {
+              question: "czym jest Intersection Types",
+              answer:
+                "Połączenie dwóch typów w jeden: ",
+            },
+            {
+              question: "Union Types i Type guard",
+              answer:
+                "Pozwala opisać typ jeden z dwóch (lub wielu). Możemy go fajnie użyć z tzw. Type guardem. Co to jest type guard? Type guard pozwala nam sprawdzić np. Czy dana zależność znajduje się w obiekcie. in to zależność JavaScriptowa, nie TS'owa. Type guardem może być również typeof czy też instanceof, metod na type guardy jest wiele.",
+            },
+            {
+              question: "czym jest alias typów?",
+              answer:
+                "Pozwala na zdefiniowanie aliasu danego typu. Często w przykładach wykorzystywaliśmy typ string dla userName. Jeśli zdefiniujemy sobie taki alias, będziemy mogli go używać w wielu miejscach.",
             },
             {
               question: "opisz funkcje w typescript?",
@@ -33,6 +53,10 @@ export default {
               question: "opisz tablice w typescript?",
               answer:
                 "W typescript tablice dzielą się na dwa rodzaje: listę oraz tuple.W liście wszystkie elementy mają ten sam typ.Można użyć tu type literals lub globalnych interfejsów a dokładniej generics.W tuple elementy niekoniecznie muszą mieć ten sam typ.",
+            },
+            {
+              question: "opisz Typy generyczne(Generics)?",
+              answer:  "Pozwalają nam one nadawać dynamicznie typy. Wyznaczają, w pewnym sensie, kolejny poziom abstrakcji. Mają zastosowanie w funkcjach, interfejsach i klasach.",
             },
             {
               question: "Czym jest asercja typów?",
@@ -52,7 +76,7 @@ export default {
             {
               question: "czym jest typ unknown?",
               answer:
-                "W watchEffect nie musimy informować o dacie,wie jakiej reaktywnej informacji używamy,automatycznie zwraca uwagę na zmiany,no old value",
+                "Przedstawiam Ci typ unknown, to właśnie on może być skuteczny przy danych z API. Jest on bardzo podobny do any, bo tak jak any może przyjąć każdy typ. Samo unknown nie jest jednak przypisywalne do innej wartości niż any lub unknown, bez aktywnej asercji typów. Dlaczego unknown jest lepszym wyborem od any? Daje nam on podobną swobodę, ale pilnuje nas, przed nieświadomym przypisaniem do poprawnie otypowej zmiennej.",
             },
             {
               question: "czym jest generics?",
@@ -68,7 +92,7 @@ export default {
             {
               question: "Opisz typ any",
               answer:
-                "Oznacza każdy typ, jeśli to możliwe, unikaj wrzucania any tam, gdzie nie ma ono zastosowania.",
+                "Oznacza każdy typ, jeśli to możliwe, unikaj wrzucania any tam, gdzie nie ma ono zastosowania.any, może być przydatne przy zaciąganiu jakiś zewnętrznych danych (API), jest to najpopularniejsza metoda, ale nie najlepsza. TypeScript od pewnego czasu daje nam lepszy sposób.",
             },
             {
               question: "Czym jest klasa public?",
@@ -79,6 +103,16 @@ export default {
               question: "Czym jest klasa private?",
               answer:
                 "Każdą właściwość możemy zmienić na prywatną, poprzedzając ją słowem private. Taka właściwość nie będzie dostępna poza klasą, w której się znajduje. Prywatne właściwości nie są chronione podczas runtime'u",
+            },
+            {
+              question: "Czym jest implements w interfejsach?",
+              answer:
+                "Interfejsy wykorzystujemy w klasach, używając słowa implements. Możemy ich podać kilka, mogą również być one rozszerzane.",
+            },
+            {
+              question: "Czym są klasy abstrakcyjne?",
+              answer:
+                "Klas abstrakcyjnych nie możemy instancjonować. Tylko klasy dziedziczne mogą to robić, no chyba, że są również abstrakcyjne. Abstrakcyjne klasy mogą również posiadać abstrakcyjne metody, nie mogą być one implementowane, posiadają tylko tzw. sygnaturę typów. Do oznaczania abstrakcyjnych klas i ich metod używamy słowa abstract.Przypominają one Intefejsy, ale nimi nie są. Abstrakcyjne klasy mogą zawierać również metody z jakąś implementacją (metody bez abstract), interfejsy tego nie robią.Abstrakcyjne klasy występują tylko w procesie kompilacji, podczas runtime'u zachowują się jak normalne klasy.",
             },
             {
               question: "Union Types i Type guard ",
@@ -109,22 +143,17 @@ export default {
     },
   
     mutations: {
-      typescriptQuestionLoop(state) {
-        setInterval(() => {
-          state.typescriptQuestions.sort(function() {
-            return Math.round(Math.random()) - 0.5;
-          });
-        }, 1000);
-      },
       randomTypescriptQuestion(state) {
-        state.typescriptQuestions.sort(function() {
+        state.typescriptQuestions.sort(() => {
           return Math.round(Math.random()) - 0.5;
         });
       },
     },
     actions: {
       typescriptQuestionLoop(context) {
-        context.commit("typescriptQuestionLoop");
+        setInterval(() => {
+          context.commit("randomTypescriptQuestion");
+        }, 5000);
       },
       randomTypescriptQuestion(context) {
         context.commit("randomTypescriptQuestion");

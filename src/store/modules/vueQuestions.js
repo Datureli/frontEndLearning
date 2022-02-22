@@ -104,7 +104,6 @@ export default {
         question: "Jak działają layouts w nuxt?",
         answer:
           "Aplikacje Vue.js mają główny plik App.vue, który jest głównym opakowaniem(wrapper) komponentów głównych dla wszystkich komponentów aplikacji. Nuxt.js wykorzystuje układy, w których każdy układ służy jako indywidualne opakowanie dla komponentów aplikacji.Na przykład, jeśli chcemy, aby niektóre strony korzystały z różnych bibliotek UI, globalnych stylów CSS, rodzin czcionek, systemów projektowania, metatagów lub innych elementów, możemy zdefiniować układ, który ma być używany jako jego główny komponent nadrzędny. Domyślnie wszystkie strony Nuxt.js używają układu default.vue.",
-          secondAnswer: ''
       },
       {
         question: "Czym są sloty?",
@@ -389,22 +388,17 @@ export default {
   },
 
   mutations: {
-    vueQuestionLoop(state) {
-      setInterval(() => {
-        state.vueQuestions.sort(function() {
-          return Math.round(Math.random()) - 0.5;
-        });
-      }, 1000);
-    },
     randomVueQuestion(state) {
-      state.vueQuestions.sort(function() {
+      state.vueQuestions.sort(() => {
         return Math.round(Math.random()) - 0.5;
       });
     },
   },
   actions: {
     vueQuestionLoop(context) {
-      context.commit("vueQuestionLoop");
+      setInterval(() => {
+        context.commit("randomVueQuestion");
+      }, 5000);
     },
     randomVueQuestion(context) {
       context.commit("randomVueQuestion");

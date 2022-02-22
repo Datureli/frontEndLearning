@@ -113,22 +113,17 @@ export default {
     },
   
     mutations: {
-      gitQuestionLoop(state) {
-        setInterval(() => {
-          state.gitQuestions.sort(function() {
-            return Math.round(Math.random()) - 0.5;
-          });
-        }, 1000);
-      },
       randomGitQuestion(state) {
-        state.gitQuestions.sort(function() {
+        state.gitQuestions.sort(() => {
           return Math.round(Math.random()) - 0.5;
         });
       }
     },
       actions: {
         gitQuestionLoop(context) {
-          context.commit("gitQuestionLoop");
+          setInterval(() => {
+            context.commit("randomGitQuestion");
+          }, 5000);
         },
         randomGitQuestion(context) {
           context.commit("randomGitQuestion");

@@ -26,7 +26,7 @@ export default {
       {
         question: "Czym jest konstruktor?",
         answer:
-          "Constructor jest szczególną metodą, która służy tworzeniu i inicjalizowaniu obiektu zdefiniowanego słowem kluczowym class. Dozwolony jest tylko jeden konstruktor w danej klasie. Jeśli klasa posiada więcej niż jedno wystąpienie metody constructor, wygenerowany zostanie błąd SyntaxError.Aby wywołać konstruktor klasy bazowej, należy użyć słowa kluczowego super",
+          "W Javascript mamy kilka typów danych. Większość z nich możemy tworzyć na dwa sposoby: korzystając z tak zwanego literału (skrócony zapis) lub na bazie tak zwanych konstruktorów:Constructor jest szczególną metodą, która służy tworzeniu i inicjalizowaniu obiektu zdefiniowanego słowem kluczowym class. Dozwolony jest tylko jeden konstruktor w danej klasie. Jeśli klasa posiada więcej niż jedno wystąpienie metody constructor, wygenerowany zostanie błąd SyntaxError.Aby wywołać konstruktor klasy bazowej, należy użyć słowa kluczowego super",
       },
       {
         question: "Czym jest metoda GET?",
@@ -105,6 +105,11 @@ export default {
         question: "Czym jest temporal dead zone?",
         answer:
           "Miejsce przed deklaracją zmiennej let/const zwie się temporal dead zone, bo nie możemy odwoływać się do zmiennej, której jeszcze nie zadeklarowaliśmy. Dzięki takiemu zabiegowi nasz kod staje się bardziej logiczny - najpierw tworzymy wszystkie klocki a dopiero potem ich używamy.",
+      },
+      {
+        question: "Czym jest prototyp?",
+        answer:
+          "Gdy tworzysz pojedynczy obiekt jakiegoś typu, dostaje on właściwość [[Prototype]], która wskazuje na jego obiekt prototyp. Na ten sam obiekt wskazuje też właściwość prototype w konstruktorze danego typu. Zasada ta tyczy się każdego typu danych:",
       },
       {
         question: "Czym jest Hoisting??",
@@ -391,23 +396,17 @@ export default {
   },
 
   mutations: {
-    questionLoop(state) {
-      setInterval(() => {
-        state.javascriptQuestions.sort(function() {
-          return Math.round(Math.random()) - 0.5;
-        });
-      }, 1000);
-    },
-
     randomQuestion(state) {
-      state.javascriptQuestions.sort(function() {
+      state.javascriptQuestions.sort(() => {
         return Math.round(Math.random()) - 0.5;
       });
     },
   },
   actions: {
     questionLoop(context) {
-      context.commit("questionLoop");
+      setInterval(() => {
+        context.commit("randomQuestion");
+      }, 5000);
     },
 
     randomQuestion(context) {

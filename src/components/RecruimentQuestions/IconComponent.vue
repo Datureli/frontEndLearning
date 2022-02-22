@@ -3,7 +3,7 @@
     {{ this.$route.path }}
     <v-icon
       large
-      @change="path"
+      @change="clickhandler"
       style="position: absolute; bottom: 26%; right:60%;"
       >mdi-dice-multiple</v-icon
     >

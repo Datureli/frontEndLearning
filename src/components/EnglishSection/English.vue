@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <v-container fluid style="background: orange; height: 521px;">
     <v-select label="Standard"></v-select>
     <ItWordsCollection />
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -14,3 +14,7 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+
+</style>

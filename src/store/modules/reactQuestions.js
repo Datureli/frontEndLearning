@@ -20,13 +20,6 @@ export default {
     },
   
     mutations: {
-     reactQuestionLoop(state) {
-        setInterval(() => {
-          state.reactQuestions.sort(function() {
-            return Math.round(Math.random()) - 0.5;
-          });
-        }, 1000);
-      },
       randomReactQuestion(state) {
         state.reactQuestions.sort(function() {
           return Math.round(Math.random()) - 0.5;
@@ -35,7 +28,9 @@ export default {
     },
       actions: {
        reactQuestionLoop(context) {
-          context.commit("reactQuestionLoop");
+        setInterval(() => {
+          context.commit("randomReactQuestion");
+        }, 5000);
         },
         randomReactQuestion(context) {
           context.commit("randomReactQuestion");
