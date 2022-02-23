@@ -116,6 +116,13 @@ export default {
           "Istnieje też coś co nazywamy Scoped slots. Wymieniony rodzaj slotów jest szczególnie przydatny jeżeli chcielibyśmy przekazać dane z komponentu dziecka posiadajcego sloty do rodzica",
       },
       {
+        question: "Struktura w nuxt js?",
+        answer:
+          "assets – jest to miejsce, w którym możemy przechowywać nieprzetworzone pliki, taki jak np. less czy sass. Nuxt.js wspiera wiele różnych preprocesorów i to jest dobre miejsce na trzymanie ich źródeł.components – folder zawierający fundament działania Vue.js a więc wszystkie nasze reużywalne komponenty.layouts i pages – tutaj znajdują się główne szablony naszego frontendu. Każda strona obsługiwana przez routing znajduje się w katalogu pages i jest opakowana przez główny szablon. Szablony te służą głównie do ustandaryzowania pewnych elementów na frontendzie dla wielu stron takich jak wspólny nagłówek i stopka czy jednolite menu na każdej podstronie.",
+          secondAnswer: 'middleware i plugins – jak sama nazwy wskazują są to miejsca, w których przechowujemy kod, który wpływa na działanie naszej aplikacji w taki sposób, że rozszerza lub dodaje pewne mechanizmy lub modyfikuje zachowanie.server – tutaj znajduje się kod, który uruchamiany jest po stronie serwera. W moim przypadku jest to konfiguracja instancji serwera Express.',
+          thirdPartOfAnswer: 'static – miejsce, w którym znajdują się wszystkie pliki statyczne (js, css, img, fonts, itp.). Co ważne wszystkie pliki z tego katalogu są automatycznie udostępnione na świat. Dla przykładu gdy mamy ikonę naszej aplikacji w pliku static/favicon.ico możemy ją wyświetlić za pomocą adresu http://localhost/favicon.ico.store – jest to miejsce gdzie znajduje się kod z logiką przechowującą poszczególne stany aplikacji. Możemy sobie wyobrazić je, jako globalny rejestr, gdzie poszczególne elementy / komponenty naszego frontendu mają dostęp i mogą go odczytywać lub zmodyfikować jego stan podczas “życia” aplikacji aby współdzielić pewne informacje.nuxt.config.js – główny plik z konfiguracją aplikacji Nuxt.js..env – plik z konfiguracją naszej aplikacji'
+      },
+      {
         question: "Cykl życia w composition api",
         answer:
           "W API Composition musimy zaimportować haki cyklu życia do naszego projektu, zanim będziemy mogli ich użyć. Ma to pomóc w utrzymaniu jak najmniejszych projektów.",
@@ -274,6 +281,17 @@ export default {
         question: "Czym są filtry?",
         answer:
           "Filtry są używane do formatownia tekstu w naszej aplikacji.Są używane wraz z interpolacją and v-bind.",
+      },
+      {
+        question: "wymień zalety nuxt.js?",
+        answer:
+          "Obsługa modelu SSR, czyli możemy tworzyć kod, który działa zarówno po stronie serwera, jak i klienta, co ma ogromne znaczenie dla SEO.Obsługa modelu strony statycznej, a więc możemy stworzyć czystą stronę w html dla wszystkich naszych zaprogramowanych reguł routingu.Komponenty zamknięte w pojedynczym pliku, z jasnym podziałem na struktury, takie jak szablon (<template>), style – w tym preprocesory np. Less, Sass (<style>) oraz kod JavaScript – w tym preprocesory np. TypeScript (<script>).Domyślna obsługa i konfiguracja dla wielu bibliotek interfejsu graficznego",
+          secondAnswer: 'Ustrukturyzowana budowa – nie musimy zastanawiać się, gdzie dany element powinien się znaleźć w strukturze katalogów.Pełna obsługa routingu, wielojęzyczności, kontroli dostępu, middlewares itp.Pełna obsługa kompilacji ES6/ES7/ES8 – nie musimy wchodzić w szczegóły znajomości takich narzędzi, jak Webpack czy Babel i martwić się o to, czy nasz kod zadziała na wszystkich przeglądarkach.Obsługa zmian w kodzie w czasie rzeczywistym i przeładowywanie procesu bez konieczności ingerencji dewelopera (ang. hot code reloading)Dostępny analizator wygenerowanego kodu naszej aplikacji – w przejrzysty sposób obrazuje jak poszczególne moduły wpływają na rozmiar wynikowego kodu css oraz js.'
+      },
+      {
+        question: "Czym jest nuxt?",
+        answer:
+          "Nuxt.js jest to framework wykorzystujący Vue.js, który dodaje możliwość tworzenia aplikacji w oparciu o model SPA (ang. Single Page Application), SSR (ang. Server Side Rendering) lub statycznych plików html.Nuxt od razu konfiguruje Webpack w taki sposób, aby serwer developerski kompilował zmiany na bieżąco. Oznacza to, że aby zobaczyć zmiany wystarczy zapisać edytowany plik. Nie trzeba natomiast kompilować aplikacji od nowa za każdym razem, tak jak w “czystym” Vue. Oczywiście skonfigurowanie Webpack w taki sposób dla Vue również jest możliwe, ale nie jest gotowe od razu po stworzeniu projektu i może nie być zbyt oczywiste.",
       },
       {
         question: "Wyjaśnij reaktywność w composition api?",

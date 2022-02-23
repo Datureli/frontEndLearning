@@ -26,6 +26,12 @@ export default {
         secondAnswer: "",
       },
       {
+        question: "Czym jest docker?",
+        answer:
+          "Docker to platforma Open Source służąca do tworzenia i wdrażania aplikacji kontenerowych oraz zarządzania nimi. Umożliwia programistom pakowanie aplikacji w kontenery — standardowe wykonywalne komponenty łączące kod źródłowy aplikacji z zależnościami i bibliotekami systemu operacyjnego wymaganymi do uruchomienia tego kodu w dowolnym środowisku.  Kontenery upraszczają dostarczanie rozproszonych aplikacji i stają się coraz popularniejsze w miarę jak organizacje coraz częściej tworzą rozwiązania z myślą o chmurze i wykorzystują hybrydowe środowiska",
+        secondAnswer: "Programiści mogą tworzyć kontenery bez użycia platformy Docker, ale dzięki niej tworzenie i wdrażanie kontenerów oraz zarządzanie nimi jest łatwiejsze, prostsze i bezpieczniejsze. Platforma Docker to zasadniczo zestaw narzędzi, który umożliwia programistom tworzenie, wdrażanie, uruchamianie, aktualizowanie i zatrzymywanie kontenerów przy użyciu prostych komend oraz automatyzowanie pracy za pomocą jednego interfejsu API.",
+      },
+      {
         question: "Czym jest domena?",
         answer:
           "Domena (adres internetowy) to unikalna nazwa w Internecie, pod którą można umieścić serwis WWW, czy też założyć konta email.Aby Twoja strona WWW była dostępna w Internecie, oprócz domeny potrzebujesz jeszcze serwera WWW  na który będzie wskazywać Twoja unikalna nazwa.",
@@ -69,6 +75,14 @@ export default {
         secondAnswer:
           "Każdy właściciel witryny internetowej może przejść z adresu z przedrostkiem http na ten z https na początku. Wiąże się to z koniecznością wdrożenia certyfikatu szyfrującego SSL",
       },
+      {
+        question: "Jak działają kontenery?",
+        answer:
+          "Używanie kontenerów jest możliwe dzięki funkcjom izolowania procesów i wirtualizacji wbudowanym w jądro systemu Linux.te funkcje — np. grupy kontroli (cgroups) służące do przydzielania zasobów do procesów oraz przestrzenie nazw służące do ograniczania dostępu procesów do innych zasobów lub obszarów systemu albo wglądu w te zasoby lub obszary — pozwalają wielu komponentom aplikacji na współużytkowanie zasobów jednej instancji systemu operacyjnego hosta w sposób podobny do tego, w jaki hiperwizor pozwala wielu maszynom wirtualnym na współużytkowanie procesora, pamięci i innych zasobów pojedynczego serwera sprzętowego.",
+        secondAnswer:
+          "Dzięki temu technologia kontenerów oferuje wszystkie funkcje i korzyści maszyn wirtualnych — w tym izolację aplikacji, ekonomiczną skalowalność i możliwość likwidacji",
+      },
+      
       {
         question: "Czym jest Solid?",
         answer:
