@@ -96,7 +96,7 @@ export default {
     },
 
     randomizeQuestionCard() {
-      this.questions.sort(function() {
+      this.questions.sort(() => {
         return Math.round(Math.random()) - 0.5;
       });
     },

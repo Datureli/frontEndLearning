@@ -1,7 +1,7 @@
 <template>
   <v-row justify="center">
     <v-sheet height="560" class="darkGradient pa-5 d-lg-flex d-grid">
-      <first-column v-if="$vuetify.breakpoint.mdAndUp" />
+      <FirstColumn v-if="$vuetify.breakpoint.mdAndUp" />
       <middle-column />
       <first-column-mobile v-if="$vuetify.breakpoint.smAndDown" />
       <right-column v-if="$vuetify.breakpoint.mdAndUp" />
@@ -10,17 +10,14 @@
 </template>
 
 <script>
-import firstColumn from "../components/RecruimentQuestions/FirstColumn.vue";
-import MiddleColumn from "../components/RecruimentQuestions/MiddleColumn.vue";
-import RightColumn from "../components/RecruimentQuestions/RightColumn.vue";
-import FirstColumnMobile from "../components/RecruimentQuestions/FirstColumnMobile.vue";
+import { FirstColumn, MiddleColumn, RightColumn, FirstColumnMobile, } from "../components/RecruitmentQuestionsLayout";
+
 export default {
   components: {
-    firstColumn,
+    FirstColumn,
     MiddleColumn,
     RightColumn,
     FirstColumnMobile,
   },
-
 };
 </script>
