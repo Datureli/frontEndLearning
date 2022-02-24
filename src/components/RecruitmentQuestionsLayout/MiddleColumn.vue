@@ -18,22 +18,12 @@
     <BootstrapQuestions v-if="this.$route.path === '/about/bootstrap'" />
     <TypeScriptQuestions v-if="this.$route.path === '/about/typescript'" />
     <IconComponent />
-    
+
   </v-sheet>
 </template>
 
 <script>
-import HtmlQuestions from "../RecruimentQuestions/HtmlQuestions.vue";
-import CssQuestions from "../RecruimentQuestions/CssQuestions.vue";
-import JavascriptQuestions from "../RecruimentQuestions/JavascriptQuestions.vue";
-import VueQuestions from "../RecruimentQuestions/VueQuestions.vue";
-import GitQuestions from "../RecruimentQuestions/GitQuestions.vue";
-import BootstrapQuestions from "../RecruimentQuestions/TestQuestions.vue";
-import TypeScriptQuestions from "../RecruimentQuestions/TypeScriptQuestions.vue"
-import ReactQuestions from "../RecruimentQuestions/ReactQuestions.vue"
-import GeneralQuestions from "../RecruimentQuestions/GeneralQuestions.vue"
-import IconComponent from '../RecruimentQuestions/IconComponent.vue'
-import QuestionPagination from '../RecruimentQuestions/QuestionPagination.vue'
+import { HtmlQuestions, CssQuestions, JavascriptQuestions ,VueQuestions,GitQuestions, BootstrapQuestions, TypeScriptQuestions, ReactQuestions,GeneralQuestions, IconComponent, QuestionPagination} from '../RecruimentQuestions'
 export default {
   components: {
     HtmlQuestions,

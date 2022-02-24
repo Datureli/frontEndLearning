@@ -211,7 +211,7 @@ export default {
       {
         question: "Czym jest beforeDestroy hook?",
         answer:
-          "Jest uruchamiany zaraz przed zniszczeniem komponentu.Komponent nadal będzie istniał i będzie funkcjonalny.Używamy go gdy chcemy wyczyścić eventy lub reaktywność.Na ten moment instancja jest w pełni funkcjonalna.Hook ten Please note that this hook is not called during sever-side rendering..",
+          "Jest uruchamiany zaraz przed zniszczeniem komponentu.Komponent nadal będzie istniał i będzie funkcjonalny.Używamy go gdy chcemy wyczyścić eventy lub reaktywność.Na ten moment instancja jest w pełni funkcjonalna.Nie jest renderowany po stronie serwera",
       },
       {
         question: "Czym jest destroyed hook?",
@@ -296,9 +296,9 @@ export default {
       {
         question: "Wyjaśnij reaktywność w composition api?",
         answer:
-          "Wartości zadeklarowane w setup() NIE są domyślnie reaktywne. Jak być może pamiętasz, w Options API obiekt danych konwertuje swoje właściwości na pobierające/ustawiające, aby były reaktywne , a zatem za każdym razem, gdy dokonamy zmiany, zostanie to odzwierciedlone w DOM . W przypadku setup(), aby odzwierciedlić zmiany, musisz upewnić się, że wartość jest reaktywna, używając opcji Ref lub Reactive.Słowo kluczowe „this” nie jest dostępne w setup(). W Options API słowo kluczowe „this” odnosi się do komponentu, ale w Composition API „this” będzie niezdefiniowane. Ponieważ setup() jest wywoływana przed jakimkolwiek innym przechwyceniem cyklu życia, „this” nie będzie odwołaniem do bieżącej aktywnej instancji i dlatego nie będzie zachowywać się jak w innych opcjach.",
+          "Wartości zadeklarowane w setup nie są domyślnie reaktywne.W Options API obiekt danych konwertuje swoje właściwości na pobierające/ustawiające, aby były reaktywne a zatem za każdym razem, gdy dokonamy zmiany, zostanie to odzwierciedlone w DOM.W przypadku setup, aby odzwierciedlić zmiany, musisz upewnić się, że wartość jest reaktywna, używając opcji Ref lub Reactive.Słowo kluczowe „this” nie jest dostępne w setup. W Options API słowo kluczowe „this” odnosi się do komponentu, ale w Composition API „this” będzie niezdefiniowane.Ponieważ setup jest wywoływana przed jakimkolwiek innym przechwyceniem cyklu życia, „this” nie będzie odwołaniem do bieżącej aktywnej instancji i dlatego nie będzie zachowywać się jak w innych opcjach.",
         secondAnswer:
-          "Setup() musi zwracać obiekt za każdym razem, gdy chcesz, aby szablon komponentu miał dostęp do właściwości kontekstu, a także właściwości przekazanych do setup(). Właściwość z setup(), której chcesz użyć w szablonie komponentu, musi zostać zwrócona w obiekcie JS.",
+          "Setup musi zwracać obiekt za każdym razem, gdy chcesz, aby szablon komponentu miał dostęp do właściwości kontekstu, a także właściwości przekazanych do setup. Właściwość z setup, której chcesz użyć w szablonie komponentu, musi zostać zwrócona w obiekcie JS.",
       },
       {
         question: "Czym jest Destroy hook?",

@@ -2,6 +2,7 @@ export default {
   namespaced: true,
 
   state: {
+    timeToNextQuestion: 5,
     htmlQuestions: [
       {
         question: `Czym jest Html?`,
@@ -79,8 +80,7 @@ export default {
       },
       {
         question: "Czym są void elements?",
-        answer:
-          `Są to takie elementy html które nie posiadają tagu zamykającego.Przykładowo:br,img,hr`,
+        answer: `Są to takie elementy html które nie posiadają tagu zamykającego.Przykładowo:br,img,hr`,
       },
       {
         question: "Co to jest W3C?",
@@ -182,7 +182,9 @@ export default {
   actions: {
     htmlQuestionLoop(context) {
       setInterval(() => {
-        context.commit("randomHtmlQuestion");
+        if (state.timeToNextQuestion < 0) {
+          context.commit("randomHtmlQuestion");
+        }
       }, 5000);
     },
     randomHtmlQuestion(context) {
