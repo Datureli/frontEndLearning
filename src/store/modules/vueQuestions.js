@@ -103,7 +103,7 @@ export default {
       {
         question: "Jak działają layouts w nuxt?",
         answer:
-          "Aplikacje Vue.js mają główny plik App.vue, który jest głównym opakowaniem(wrapper) komponentów głównych dla wszystkich komponentów aplikacji. Nuxt.js wykorzystuje układy, w których każdy układ służy jako indywidualne opakowanie dla komponentów aplikacji.Na przykład, jeśli chcemy, aby niektóre strony korzystały z różnych bibliotek UI, globalnych stylów CSS, rodzin czcionek, systemów projektowania, metatagów lub innych elementów, możemy zdefiniować układ, który ma być używany jako jego główny komponent nadrzędny. Domyślnie wszystkie strony Nuxt.js używają układu default.vue.",
+          "Aplikacje Vue.js mają główny plik App.vue, który jest głównym opakowaniem(wrapper) komponentów głównych dla wszystkich komponentówCnaplikacji. Nuxt.js wykorzystuje układy, w których każdy układ służy jako indywidualne opakowanie dla komponentów aplikacji.Na przykład, jeśli chcemy, aby niektóre strony korzystały z różnych bibliotek UI, globalnych stylów CSS, rodzin czcionek, systemów projektowania, metatagów lub innych elementów, możemy zdefiniować układ, który ma być używany jako jego główny komponent nadrzędny. Domyślnie wszystkie strony Nuxt.js używają układu default.vue.",
       },
       {
         question: "Czym są sloty?",
@@ -139,6 +139,11 @@ export default {
         question: "Czym jest one-way data flow?",
         answer:
           "Wszystkie prosy działają tylko w jednym kierunku,z komponentu rodzica do komponentu dziecka.Jeżeli zajdzie jakaś zmiana w komponencie rodzina to automatycznie aktualizuje komponent dziecka ale nie działa to w drugą strone,zapobiega to mutowaniu statu rodzica.",
+      },
+      {
+        question: "po co używamy atrybutu key w dyrektywie v-for?",
+        answer:
+          "Aby śledzić tożsamość każdego węzła, a tym samym ponownie używać i zmieniać kolejność istniejących elementów, musisz podać unikalny atrybut klucza dla każdego elementu w iteracji v-for. Idealną wartością klucza byłby unikalny identyfikator każdego przedmiotu. W związku z tym zawsze zaleca się dostarczanie klucza z v-for, gdy tylko jest to możliwe, chyba że iterowana zawartość DOM jest prosta.Nie należy używać wartości innych niż pierwotne, takich jak obiekty i tablice, jako kluczy v-for. Zamiast tego użyj ciągów lub wartości liczbowych.",
       },
       {
         question: "jaka jest różnica między v-show i v-if?",
@@ -212,6 +217,16 @@ export default {
         question: "Czym jest beforeDestroy hook?",
         answer:
           "Jest uruchamiany zaraz przed zniszczeniem komponentu.Komponent nadal będzie istniał i będzie funkcjonalny.Używamy go gdy chcemy wyczyścić eventy lub reaktywność.Na ten moment instancja jest w pełni funkcjonalna.Nie jest renderowany po stronie serwera",
+      },
+      {
+        question: "Jakie modyfikatory zdarzeń udostępnia vue?",
+        answer:
+          "Normalnie JavaScript udostępnia event.preventDefault() lub event.stopPropagation() wewnątrz modułów obsługi zdarzeń. Możesz użyć metod dostarczanych przez vue, ale te metody są przeznaczone do logiki danych, a nie do obsługi zdarzeń DOM. Vue udostępnia poniżej modyfikatory zdarzeń dla v-on, a te modyfikatory są przyrostkami dyrektywy oznaczonymi kropką..stop .prevent .capture .self .once .passive",
+      },
+      {
+        question: "Czym są kluczowe modyfikatory?",
+        answer:
+          "Vue obsługuje modyfikatory klawiszy na v-on do obsługi zdarzeń związanych z klawiaturą. Weźmy przykład zdarzenia keyup z enter keycode..enter .tab .delete (captures both “Delete” and “Backspace” keys) .esc .space .up .down .left .right",
       },
       {
         question: "Czym jest destroyed hook?",
@@ -344,7 +359,12 @@ export default {
       {
         question: "Opisz dyrektywe v-model",
         answer:
-          "Pozwala na wiązanie elementów DOM takich jak na przykład input do pól obiektu data.",
+          "Pozwala na wiązanie elementów DOM takich jak na przykład input do pól obiektu data.Pamiętaj, że v-model zignoruje wartość początkową, sprawdzone lub wybrane atrybuty znajdujące się na dowolnych elementach formularza. Dlatego zawsze używa danych instancji Vue jako źródła prawdy",
+      },
+      {
+        question: "Jakie są obsługiwane modyfikatory w v-model?",
+        answer:
+          "Dyrektywa v-model obsługuje trzy modyfikatory.1. lazy: Domyślnie v-model synchronizuje dane wejściowe z danymi po każdym zdarzeniu wejściowym. Możesz dodać modyfikator leniwy, aby zamiast tego synchronizować zdarzenia po zmianie.. liczba: Jeśli chcesz, aby dane wprowadzane przez użytkownika były automatycznie umieszczane jako liczba, możesz dodać modyfikator liczby do swojego v-modelu. Nawet z type='number', wartość elementów wejściowych HTML zawsze zwraca ciąg. Tak więc ten modyfikator rzutowania jest wymagany.3. trim: jeśli chcesz, aby białe znaki z danych wprowadzonych przez użytkownika były przycinane automatycznie, możesz dodać modyfikator przycinania do swojego v-modelu.",
       },
 
       {
@@ -368,14 +388,39 @@ export default {
           "Możemy tego dokonać poprzez dodanie required key oraz jego wartości do props.Możemy walidować za pomocą typu propsa oraz używając required.",
       },
       {
+        question: "Co to jest rejestracja globalna w komponentach?",
+        answer:
+          "Komponenty zarejestrowane globalnie mogą być użyte w szablonie dowolnej głównej instancji Vue (nowej Vue) utworzonej po rejestracji.",
+      },
+      {
+        question: " Opisać walidacje dostępne dla propsów",
+        answer:
+          " Vue zapewnia walidacje, takie jak typy, wymagane pola(required), wartości domyślne(default) wraz z niestandardowymi walidacjami.",
+      },
+      {
+        question: "Jaka jest różnica między rejestracją lokalną a globalną w systemie modułowym?",
+        answer:
+          "W przypadku rejestracji lokalnej należy utworzyć każdy komponent w folderze components (opcjonalne, ale zalecane) i zaimportować je do sekcji komponentów innego pliku komponentu.W rejestracji globalnej musisz wyeksportować wszystkie komponenty wspólne lub podstawowe w osobnym pliku. Ale niektóre popularne pakiety, takie jak webpack, upraszczają ten proces, używając require.context do globalnego rejestrowania podstawowych komponentów w poniższym pliku wejściowym (jednorazowo).",
+      },
+      {
         question: "Wyjaśnij na czym polega przepływ danych w vue",
         answer:
           "Vue używa one-way data flow.Dane są przekazywane do komponentu dziecka z komponentu rodzica za pomocą właściwości props",
       },
       {
+        question: "Jak komunikować się z komponentu dziecka to komponentu rodzica?",
+        answer:
+          "Jeśli chcesz, aby dziecko chciało ponownie komunikować się z rodzicem, wyemituj zdarzenie od dziecka za pomocą obiektu $emit do rodzica,",
+      },
+      {
+        question: "Kiedy komponent potrzebuje pojedynczego elementu głównego?",
+        answer:
+          " W VueJS 2.x każdy komponent musi mieć jeden element główny(root element), gdy szablon ma więcej niż jeden element. W takim przypadku musisz owinąć elementy elementem nadrzędnym.  W przeciwnym razie wystąpi błąd, mówiący, że Szablon komponentu powinien zawierać dokładnie jeden element główny. Podczas gdy w 3.x komponenty mogą teraz mieć wiele węzłów głównych. Ten sposób dodawania wielu węzłów głównych nazywa się fragmentami."
+      },
+      {
         question: "Czym jest props?",
         answer:
-          "Propsy są używane do przekazywania informacji/data z komponentu rodzica do komponentu dziecka.Można go zarejestrować w komponencie aby przekazać dane do jednego z komponentów dziecka.Dane w props mogą przepływać tylko jednostronnie,z komponentu rodzica do komponentu dziecka.To oznacza ,że nie jesteśmy w stanie przesłać propsa z komponentu dziecka do rodzica.",
+          "Propsy to niestandardowe atrybuty, które można zarejestrować w komponencie. są używane do przekazywania informacji/danych z komponentu rodzica do komponentu dziecka.Można go zarejestrować w komponencie aby przekazać dane do jednego z komponentów dziecka.Dane w props mogą przepływać tylko jednostronnie,z komponentu rodzica do komponentu dziecka.To oznacza ,że nie jesteśmy w stanie przesłać propsa z komponentu dziecka do rodzica.",
         secondAnswer:
           "Propsy są read-only a to oznacza ,że nie mogą zostać zmodyfikowane przez komponent dziecka ponieważ wartość należy do komponentu rodzica",
       },
