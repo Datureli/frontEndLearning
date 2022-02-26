@@ -398,6 +398,11 @@ export default {
           " Vue zapewnia walidacje, takie jak typy, wymagane pola(required), wartości domyślne(default) wraz z niestandardowymi walidacjami.",
       },
       {
+        question: "Co to jest router vue i jakie są jego funkcje?",
+        answer:
+          "Vue Router to oficjalna biblioteka routingu dla aplikacji jednostronicowych zaprojektowana do użytku z frameworkiem Vue.js.Zagnieżdżone mapowanie trasy/widoku Modułowa, oparta na komponentach konfiguracja routera Parametry trasy, zapytanie, symbole wieloznaczne Zobacz efekty przejścia obsługiwane przez system przejść Vue.js Szczegółowa kontrola nawigacji Linki z automatycznymi aktywnymi klasami CSS Tryb historii HTML5 lub tryb skrótu z automatycznym przywracaniem w IE9 Przywróć pozycję przewijania po powrocie do trybu historii",
+      },
+      {
         question: "Jaka jest różnica między rejestracją lokalną a globalną w systemie modułowym?",
         answer:
           "W przypadku rejestracji lokalnej należy utworzyć każdy komponent w folderze components (opcjonalne, ale zalecane) i zaimportować je do sekcji komponentów innego pliku komponentu.W rejestracji globalnej musisz wyeksportować wszystkie komponenty wspólne lub podstawowe w osobnym pliku. Ale niektóre popularne pakiety, takie jak webpack, upraszczają ten proces, używając require.context do globalnego rejestrowania podstawowych komponentów w poniższym pliku wejściowym (jednorazowo).",
