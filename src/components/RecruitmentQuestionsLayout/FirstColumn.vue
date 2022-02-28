@@ -8,6 +8,7 @@
           :key="index"
           :to="firstColumn.link"
         >
+        <h1 v-show="shoeEmptySlot">empty slot</h1>
           <v-icon>{{ firstColumn.icon }}</v-icon>
           <v-list-item-title class="text-h6 ml-6">{{
             firstColumn.title
@@ -24,7 +25,7 @@
                   v-if="hover"
                   class="d-flex transition-fast-in-fast-out darken-2 v-card--reveal text-h2 white--text"
                 >
-                  <v-btn icon @click="remove">
+                  <v-btn icon @click="removeItemFromFirstColumn">
                     <v-icon>mdi-close</v-icon>
                   </v-btn>
                 </div>
@@ -60,23 +61,9 @@ export default {
       "randomQuestion",
       "randomReactQuestion",
     ]),
-    ...mapActions("firstColumn", 'removeItemFromFirstColumn')
+    ...mapActions("firstColumn",[ 'removeItemFromFirstColumn'])
   },
-  removeQuestionsCategory() {
-    let state = this.$store.state;
-    let newState = {};
 
-    Object.keys(state).forEach((key) => {
-      newState[key] = null;
-    });
-
-    this.$store.replaceState(newState);
-  },
-  remove() {
-       for (let i = 0; i < this.itWords.length; i++) {
-       this.$store.state.firstColumn.firstColumn.splice(i,1)
-      }
-  }
 };
 </script>
 <style>
