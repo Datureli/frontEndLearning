@@ -59,14 +59,10 @@ state: {
         },
       ],
 },
-getters: {
- firstColumn: state => state.firstColumn
-},
 mutations: {
   removeItemFromFirstColumn: (state, payload) => {
-    const column = state.firstColumn
-    const i = column.map(item => item.id).indexOf(column);
-    column.splice(payload, 1);
+    const i = state.firstColumn.map(item => item.id).indexOf(payload);
+    state.firstColumn.splice(i, 1);
   },
 },
 actions: {

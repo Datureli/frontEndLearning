@@ -133,7 +133,7 @@ export default {
       {
         question: "Czym jest one-way data flow?",
         answer:
-          "Wszystkie prosy działają tylko w jednym kierunku,z komponentu rodzica do komponentu dziecka.Jeżeli zajdzie jakaś zmiana w komponencie rodzina to automatycznie aktualizuje komponent dziecka ale nie działa to w drugą strone,zapobiega to mutowaniu statu rodzica.",
+          "Jednokierunkowy przepływ danych oznacza, że ​​model jest jedynym źródłem prawdy. Zmiany w interfejsie użytkownika wywołują komunikaty sygnalizujące zamiar użytkownika wobec modelu (lub „przechowywanie” w React). Tylko modelka ma dostęp do zmiany stanu aplikacji.",
       },
       {
         question: "Czym jest one-way data flow?",
@@ -353,6 +353,14 @@ export default {
         answer: "Pozwala na wykonanie pętli na powiązanym elemencie DOM.",
       },
       {
+        question: "Czym jest x-templates",
+        answer: "Oprócz zwykłych szablonów i szablonów wbudowanych, możesz również definiować szablony za pomocą elementu skryptu typu text/x-template, a następnie odwołując się do szablonu za pomocą identyfikatora.",
+      },
+      {
+        question: "Czym jest tag keep-alive?",
+        answer: "to abstrakcyjny komponent używany do zachowania stanu komponentu lub uniknięcia ponownego renderowania. Gdy owiniesz tag wokół komponentu dynamicznego, buforuje on instancje nieaktywnego komponentu bez ich niszczenia.",
+      },
+      {
         question: "Opisz dyrektywe v-bind",
         answer: "Pozwala na wiązanie wyrażeń do atrybutów elementów DOM.",
       },
@@ -458,6 +466,11 @@ export default {
           secondAnswer: 'Co więcej, użycie watch() umożliwia nam również dostęp do poprzedniej wartości obserwowanych zmiennych.I think the easiest way to remember the difference between watch and watchEffect() is to think of watchEffect() like a variant of computed() that doesn’t return a value but triggers side-effects.'
       },
     ],
+  },
+  getters: {
+    removeSpaces (state) {
+      return state.vueQuestions.split(/\s/).join('');
+    }
   },
 
   mutations: {

@@ -3,12 +3,10 @@
     <v-list color="transparent">
       <v-list-item-group active-class="green--text">
         <v-list-item
-          v-show="!showEmptySlot"
           v-for="(firstColumn, index) in firstColumn"
           :key="index"
           :to="firstColumn.link"
         >
-        <h1 v-show="shoeEmptySlot">empty slot</h1>
           <v-icon>{{ firstColumn.icon }}</v-icon>
           <v-list-item-title class="text-h6 ml-6">{{
             firstColumn.title
@@ -36,6 +34,7 @@
           </v-hover>
         </v-list-item>
       </v-list-item-group>
+     
     </v-list>
   </v-card>
 </template>
@@ -61,9 +60,8 @@ export default {
       "randomQuestion",
       "randomReactQuestion",
     ]),
-    ...mapActions("firstColumn",[ 'removeItemFromFirstColumn'])
+    ...mapActions("firstColumn", ["removeItemFromFirstColumn"]),
   },
-
 };
 </script>
 <style>

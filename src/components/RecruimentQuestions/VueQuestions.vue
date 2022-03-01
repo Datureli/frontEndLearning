@@ -14,7 +14,6 @@
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
-            style="word-break: break-all;"
             class="white--text text-justify text-h6 text-wrap"
             v-show="disable"
             v-text="
@@ -37,7 +36,7 @@
 </template>
 
 <script>
-import { mapState} from "vuex";
+import { mapState, mapGetters } from "vuex";
 export default {
   props: {
     page: {
@@ -45,8 +44,9 @@ export default {
     },
   },
   computed: {
-    ...mapState(["disable", "favorite",""]),
+    ...mapState(["disable", "favorite"]),
     ...mapState("vueQuestions", ["vueQuestions"]),
+    ...mapGetters("vueQuestions", ["removeSpaces"]),
   },
 };
 </script>
