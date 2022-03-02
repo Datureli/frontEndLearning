@@ -14,9 +14,9 @@
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
-            class="white--text text-justify text-h5 text-wrap"
+            class="white--text  text-h6 text-wrap"
             v-show="disable"
-               v-text="
+            v-text="
               page === 1
                 ? generalQuestions.answer
                 : page === 2
@@ -26,17 +26,17 @@
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-          </v-carousel-item>
-     <v-pagination
-          style="position: absolute; bottom: 18%; right:36%"
-          v-model="page"
-          :length="3"
-        ></v-pagination>
+    </v-carousel-item>
+    <v-pagination
+      style="position: absolute; bottom: 18%; right:36%"
+      v-model="page"
+      :length="3"
+    ></v-pagination>
   </v-carousel>
 </template>
 
 <script>
-import { mapState} from "vuex";
+import { mapState } from "vuex";
 export default {
   props: {
     page: {

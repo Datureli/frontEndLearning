@@ -60,8 +60,8 @@ state: {
       ],
 },
 mutations: {
-  removeItemFromFirstColumn: (state, payload) => {
-    const i = state.firstColumn.map(item => item.id).indexOf(payload);
+  removeItemFromFirstColumn: (state, firstColumn) => {
+    const i = state.firstColumn.map(item => item.id).indexOf(firstColumn);
     state.firstColumn.splice(i, 1);
   },
 },

@@ -170,7 +170,10 @@ export default {
       {
         question: `Czym jest Event bobbling?`,
         answer: ` Jest to propagacja elementu do samej góry.Zawsze idzie z dołu do góry`,
-        secondAnswer: ``,
+      },
+      {
+        question: `Czym są service workery?`,
+        answer: `Service Worker pozwala nam na rozszerzenie funkcjonalności naszej aplikacji o pewne funkcje, które dostępne są w natywnych aplikacjach mobilnych. Przykładami mogą być umożliwienie pracy w trybie offline oraz push notyfikacje na ekranie urządzenia użytkownika naszej aplikacji`,
       },
       {
         question: `Jak działa renderowanie po stronie klienta?`,
