@@ -27,6 +27,17 @@
 import MaterialCard from "../components/materials/MaterialCard.vue";
 import Slot from "../components/materials/Slot.vue";
 export default {
+  images: [
+    {
+      img: "daas",
+    },
+    {
+      img: "https://picsum.photos/510/300?random",
+    },
+    {
+      img: "https://picsum.photos/510/300?random",
+    },
+  ],
   firstColumnClicked: false,
   secondColumnClicked: false,
   ThirdColumnClicked: false,

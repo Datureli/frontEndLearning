@@ -15,10 +15,16 @@
     >
 
     <v-icon
-      large
+      large 
       @click="disableAnswers"
       style="position: absolute; bottom: 20%; right:20%;"
       >mdi-comment-off-outline</v-icon
+    >
+      <v-icon
+      x-large
+      @click="randomLoop"
+      style="position: absolute; bottom: 20%; right:27%;"
+      >mdi-music</v-icon
     >
     <v-tooltip bottom>
       <template v-slot:activator="{ on, attrs }">

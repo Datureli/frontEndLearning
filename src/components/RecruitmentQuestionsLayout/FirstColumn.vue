@@ -23,7 +23,7 @@
                   v-if="hover"
                   class="d-flex transition-fast-in-fast-out darken-2 v-card--reveal text-h2 white--text"
                 >
-                  <v-btn icon @click="removeItemFromFirstColumn(id)">
+                  <v-btn icon @click="removeItemFromFirstColumn(payload)">
                     <v-icon>mdi-close</v-icon>
                   </v-btn>
                 </div>
@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import { mapActions, mapState } from "vuex";
+import { mapActions, mapState,mapGetters } from "vuex";
 export default {
   data() {
     return {
@@ -50,6 +50,7 @@ export default {
   },
   computed: {
     ...mapState("firstColumn", ["firstColumn"]),
+    ...mapGetters("firstColumn",['firstColumnGet'])
   },
   methods: {
     ...mapActions("questions", [

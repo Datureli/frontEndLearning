@@ -59,10 +59,20 @@ state: {
         },
       ],
 },
+getters: {
+  firstColumnGet(state) {
+    return state.firstColumn.filter(firstColumn => firstColumn.id)
+  }
+},
 mutations: {
-  removeItemFromFirstColumn: (state, firstColumn) => {
-    const i = state.firstColumn.map(item => item.id).indexOf(firstColumn);
+  setState(state,firstColumn) {
+    state.firstColumn = firstColumn
+  },
+
+  removeItemFromFirstColumn: (state,payload) => {
+    const i = state.firstColumn.map(item => item.id).indexOf(payload);
     state.firstColumn.splice(i, 1);
+
   },
 },
 actions: {

@@ -90,7 +90,24 @@ const routes = [
   {
     path: "/materials",
     name: "Materials",
-    component: () => import("../views/Materials.vue"),
+    component: () => import("../views/Materials"),
+    children: [
+      {
+        path: "video",
+        name: "Video",
+        component: () => import("../components/login/FavoriteSection.vue"),
+      },
+      {
+        path: "favorite",
+        name: "Favorite",
+        component: () => import("../components/login/FavoriteSection.vue"),
+      },
+      {
+        path: "favorite",
+        name: "Favorite",
+        component: () => import("../components/login/FavoriteSection.vue"),
+      },
+    ]
   },
   {
     path: "/signup",

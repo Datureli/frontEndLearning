@@ -17,7 +17,7 @@
     <GeneralQuestions v-if="this.$route.path === '/about/general'" />
     <BootstrapQuestions v-if="this.$route.path === '/about/bootstrap'" />
     <TypeScriptQuestions v-if="this.$route.path === '/about/typescript'" />
-    <IconComponent />
+    <IconComponent v-if="this.$route.path !== './about'" />
 
   </v-sheet>
 </template>
