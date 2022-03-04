@@ -1,8 +1,8 @@
-Before Create - First lifecycle hook that's called immediately after a vue instance has been initialized.
-Created - It's called just after the 'Before create' hook but the vue instance has set initial properties, data etc.
-Before mount - It's called just before the instance is mounted on DOM. At this moment the template has been compiled.
-Mounted - It's called once the template is ready with data and functional.
+Before Create - Pierwszy lifecycle hook.Pozwala nam na przeprowadzanie akcji zanim nasz komponent zostanie dodany do drzewa dom.W tym hooku nie mamy jeszcze dostępu do drzewa dom.
+Created - Wywoływany zaraz bo beforeCreate.Na tym etapie mamy już dostęp do naszych reaktywnych danych ale templates oraz virtual dom nie zostały jeszcze zamonotowane ani nie zostały wyrenderowane.
+Before mount - wywoływany zaraz przed tym jak instancja zostaje dodana do dom. Na tym etapie template zostały skompilowane.
+Mounted - Najczęsciej używany hook.Mamy pełen dostęp do reaktywnych komponentów,templatek,oraz wyrenderowaNEGO DOM.
 Before update - It's called when any changes are made to data that requires DOM to be updated.
-Updated - It's called just after DOM has updated.
-Before destroy It's a place where you can perform resource clean up before destroying the vue instance.
-destroyed - It's get called when all vue instances have been destroyed. It will be triggered when run the destroy method on an object in code.
+Updated - zostaje wywoływany zaraz po tych jak dane się zaaktualizują(zmienią),Jest to najlepsze miejsce aby uzyskać dostęp do dom zaraz po zmianie.
+Before destroy - wywoływany zaraz przed zniszczeniem instancji.Jeżei mamy potrzebe wyczyścić eventy lub reaktywność,to jest to odpowiednie miejsce
+destroyed - wywoływany po zniszczeniu instancji.
