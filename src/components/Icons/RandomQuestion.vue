@@ -1,6 +1,6 @@
 <template>
   <v-icon
-    large
+    x-large
     @click="globalRandomQuestion"
     @keydown.esc="globalRandomQuestion"
     >mdi-dice-multiple</v-icon

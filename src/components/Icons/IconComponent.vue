@@ -1,5 +1,5 @@
 <template>
-  <v-row class="hidden-sm-and-down mt-1">
+  <v-row class="hidden-sm-and-down mt-1 mx-auto pa-1">
     <RandomQuestion />
     <RandomQuestionLoop />
     <MusicComponent />

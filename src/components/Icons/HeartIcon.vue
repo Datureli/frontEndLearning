@@ -18,10 +18,3 @@
     <span>You need to be logged in</span>
   </v-tooltip>
 </template>
-
-<script>
-import {mapState} from 'vuex'
-export default {
-
-}
-</script>
