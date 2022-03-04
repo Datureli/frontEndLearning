@@ -2,7 +2,6 @@
   <v-icon
     x-large
     @click="randomLoop"
-    style="position: absolute; bottom:3%; right:70%;"
     >mdi-autorenew</v-icon
   >
 </template>
@@ -47,7 +46,6 @@ export default {
     ...mapActions("reactQuestions", ["reactQuestionLoop"]),
     ...mapActions("typescriptQuestions", ["typescriptQuestionLoop"]),
     ...mapActions("vueQuestions", ["vueQuestionLoop"]),
-    ...mapActions(["disableAnswers", "addToFavorite"]),
   },
 };
 </script>

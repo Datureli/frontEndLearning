@@ -3,7 +3,6 @@
     large
     @click="globalRandomQuestion"
     @keydown.esc="globalRandomQuestion"
-    style="position: absolute; bottom:3%; right:73%;"
     >mdi-dice-multiple</v-icon
   >
 </template>
@@ -34,25 +33,14 @@ export default {
           return this.randomGeneralQuestion();
       }
     },
-    ...mapActions("htmlQuestions", ["htmlQuestionLoop", "randomHtmlQuestion"]),
-    ...mapActions("htmlQuestions", ["htmlQuestionLoop", "randomHtmlQuestion"]),
-    ...mapActions("cssQuestions", ["cssQuestionLoop", "randomCssQuestion"]),
-    ...mapActions("generalQuestions", [
-      "generalQuestionLoop",
-      "randomGeneralQuestion",
-    ]),
-    ...mapActions("gitQuestions", ["gitQuestionLoop", "randomGitQuestion"]),
-    ...mapActions("questions", ["questionLoop", "randomQuestion"]),
-    ...mapActions("reactQuestions", [
-      "reactQuestionLoop",
-      "randomReactQuestion",
-    ]),
-    ...mapActions("typescriptQuestions", [
-      "typescriptQuestionLoop",
-      "randomTypescriptQuestion",
-    ]),
-    ...mapActions("vueQuestions", ["vueQuestionLoop", "randomVueQuestion"]),
-    ...mapActions(["disableAnswers", "addToFavorite"]),
+    ...mapActions("htmlQuestions", ["randomHtmlQuestion"]),
+    ...mapActions("cssQuestions", ["randomCssQuestion"]),
+    ...mapActions("generalQuestions", ["randomGeneralQuestion"]),
+    ...mapActions("gitQuestions", ["randomGitQuestion"]),
+    ...mapActions("questions", ["randomQuestion"]),
+    ...mapActions("reactQuestions", ["randomReactQuestion"]),
+    ...mapActions("typescriptQuestions", ["randomTypescriptQuestion"]),
+    ...mapActions("vueQuestions", ["randomVueQuestion"]),
   },
 };
 </script>

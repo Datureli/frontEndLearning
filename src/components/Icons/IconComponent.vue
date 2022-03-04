@@ -1,5 +1,5 @@
 <template>
-  <v-row class="hidden-sm-and-down" style="border: 21px solid red;">
+  <v-row class="hidden-sm-and-down mt-1">
     <RandomQuestion />
     <RandomQuestionLoop />
     <MusicComponent />
@@ -9,19 +9,21 @@
 </template>
 
 <script>
-import { mapState, mapActions } from "vuex";
-import MusicComponent from "./MusicComponent.vue";
-import RandomQuestion from "./RandomQuestion.vue";
-import RandomQuestionLoop from "./RandomQuestionLoop.vue";
+import {
+  RandomQuestion,
+  RandomQuestionLoop,
+  MusicComponent,
+  HeartIcon,
+  DisableComponent,
+} from "../Icons";
+
 export default {
   components: {
     MusicComponent,
     RandomQuestion,
     RandomQuestionLoop,
-  },
-
-  computed: {
-    ...mapState(["disable", "favorite", "isHeartActive"]),
+    HeartIcon,
+    DisableComponent
   },
 };
 </script>
