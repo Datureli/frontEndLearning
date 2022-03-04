@@ -23,7 +23,8 @@
 </template>
 
 <script>
-import { HtmlQuestions, CssQuestions, JavascriptQuestions ,VueQuestions,GitQuestions, BootstrapQuestions, TypeScriptQuestions, ReactQuestions,GeneralQuestions, IconComponent, QuestionPagination} from '../RecruimentQuestions'
+import { HtmlQuestions, CssQuestions, JavascriptQuestions ,VueQuestions,GitQuestions, BootstrapQuestions, TypeScriptQuestions, ReactQuestions,GeneralQuestions, QuestionPagination} from '../RecruimentQuestions'
+import IconComponent from '../Icons/IconComponent.vue'
 export default {
   components: {
     HtmlQuestions,

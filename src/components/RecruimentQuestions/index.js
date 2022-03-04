@@ -7,7 +7,6 @@ import BootstrapQuestions from "../RecruimentQuestions/TestQuestions";
 import TypeScriptQuestions from "../RecruimentQuestions/TypeScriptQuestions"
 import ReactQuestions from "../RecruimentQuestions/ReactQuestions"
 import GeneralQuestions from "../RecruimentQuestions/GeneralQuestions"
-import IconComponent from '../RecruimentQuestions/IconComponent'
 import QuestionPagination from '../RecruimentQuestions/QuestionPagination'
 
 export {
@@ -20,6 +19,5 @@ export {
     TypeScriptQuestions,
     ReactQuestions,
     GeneralQuestions,
-    IconComponent,
     QuestionPagination
 }
