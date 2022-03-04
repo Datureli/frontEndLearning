@@ -6,6 +6,7 @@
       <first-column-mobile v-if="$vuetify.breakpoint.smAndDown" />
       <right-column v-if="$vuetify.breakpoint.mdAndUp" />
     </v-sheet>
+    
   </v-row>
 </template>
 
