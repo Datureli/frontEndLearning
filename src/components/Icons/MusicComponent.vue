@@ -1,32 +1,28 @@
 <template>
-  <v-row>
+  <div>
     <v-icon
       x-large
       @click="prev"
-      style="position: absolute; bottom:3%; right:50%;"
       >mdi-skip-previous</v-icon
     >
     <v-icon
       v-if="!isPlaying"
       x-large
       @click="play"
-      style="position: absolute; bottom:3%; right:47%;"
       >mdi-music</v-icon
     >
     <v-icon
       v-else
       x-large
       @click="pause"
-      style="position: absolute; bottom:3%; right:47%;"
       >mdi-music-off</v-icon
     >
     <v-icon
       x-large
       @click="next"
-      style="position: absolute; bottom:3%; right:44%;"
       >mdi-skip-next</v-icon
     >
-  </v-row>
+  </div>
 </template>
 
 

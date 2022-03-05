@@ -1,8 +1,14 @@
 <template>
-  <v-row class="hidden-sm-and-down mt-1 mx-auto pa-1">
+  <v-row
+    justify="space-around"
+    class="hidden-sm-and-down mt-1 mx-auto pl-4 pa-1"
+
+  >
     <RandomQuestion />
     <RandomQuestionLoop />
+    <ChangeTheme />
     <MusicComponent />
+    <TranslateIcon />
     <HeartIcon />
     <DisableComponent />
   </v-row>
@@ -15,6 +21,8 @@ import {
   MusicComponent,
   HeartIcon,
   DisableComponent,
+  ChangeTheme,
+  TranslateIcon,
 } from "../Icons";
 
 export default {
@@ -23,7 +31,9 @@ export default {
     RandomQuestion,
     RandomQuestionLoop,
     HeartIcon,
-    DisableComponent
+    DisableComponent,
+    ChangeTheme,
+    TranslateIcon,
   },
 };
 </script>
