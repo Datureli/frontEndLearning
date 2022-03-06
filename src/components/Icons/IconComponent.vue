@@ -2,7 +2,6 @@
   <v-row
     justify="space-around"
     class="hidden-sm-and-down mt-1 mx-auto pl-4 pa-1"
-
   >
     <RandomQuestion />
     <RandomQuestionLoop />
