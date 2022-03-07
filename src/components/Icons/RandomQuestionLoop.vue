@@ -1,7 +1,17 @@
 <template>
-  <v-btn color="transparent">
-    <v-icon x-large @click="randomLoop">mdi-autorenew</v-icon>
-  </v-btn>
+  <div>
+    <v-btn
+      v-if="!disableloop"
+      @click="
+        clearInterval();
+        randomLoop();
+      "
+      color="transparent"
+    >
+      <v-icon x-large>mdi-autorenew</v-icon>
+    </v-btn>
+    <v-btn v-else @click="clearInterval">ss</v-btn>
+  </div>
 </template>
 
 <script>
@@ -12,7 +22,16 @@ export default {
       disableLoop: false,
     };
   },
+  watch: {
+    isDisabled() {
+      this.disableLoop = !this.disableLoop
+    }
+  },
   methods: {
+    clearInterval() {
+      this.disableLoop = !this.disableLoop
+      clearInterval(this.randomLoop());
+    },
     randomLoop() {
       switch (this.$route.path) {
         case "/about/htmlquestions":
@@ -35,7 +54,6 @@ export default {
           return this.GeneralQuestion();
       }
     },
-    ...mapActions("htmlQuestions", ["htmlQuestionLoop"]),
     ...mapActions("htmlQuestions", ["htmlQuestionLoop"]),
     ...mapActions("cssQuestions", ["cssQuestionLoop"]),
     ...mapActions("generalQuestions", ["generalQuestionLoop"]),
