@@ -1,10 +1,12 @@
 <template>
-  <v-icon
-    x-large
-    @click="globalRandomQuestion"
-    @keydown.esc="globalRandomQuestion"
-    >mdi-dice-multiple</v-icon
-  >
+  <v-btn color="transparent">
+    <v-icon
+      x-large
+      @click="globalRandomQuestion"
+      @keydown.esc="globalRandomQuestion"
+      >mdi-dice-multiple</v-icon
+    >
+  </v-btn>
 </template>
 
 <script>

@@ -1,9 +1,7 @@
 <template>
-  <v-icon
-    x-large
-    @click="randomLoop"
-    >mdi-autorenew</v-icon
-  >
+  <v-btn color="transparent">
+    <v-icon x-large @click="randomLoop">mdi-autorenew</v-icon>
+  </v-btn>
 </template>
 
 <script>

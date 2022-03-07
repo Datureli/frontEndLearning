@@ -1,5 +1,7 @@
 <template>
-  <v-icon x-large @click="disableAnswers">mdi-comment-off-outline</v-icon>
+  <v-btn color="transparent">
+    <v-icon x-large @click="disableAnswers">mdi-comment-off-outline</v-icon>
+  </v-btn>
 </template>
 
 <script>

@@ -337,6 +337,11 @@ export default {
           "Funkcja Symbol() zwraca wartość typu symbol, Każdy symbol zwrócony przez Symbol() jest unikalny.Symbol powinien być użyty jako identyfikator własności obiektu, został zaprojektowany jedynie w tym celu.typ Symbol jest typem prostym",
       },
       {
+        question: "Opisz słowo kluczowe this",
+        answer:
+          "Można powiedzieć, że jest to referencja do obiektu, który wywołał daną funkcję.w zakresie globalnym “this” jest po prostu referencją do obiektu ‘window’ i mogą być w zasadzie stosowane zamiennie.",
+      },
+      {
         question: "Czym jest funkcja strzałkowa?",
         answer:
           "Funkcja anonimowa to taka funkcja, która nie ma swojej nazwy. Funkcje takie wykorzystywane są jako funkcje zwrotne, które przekazujemy do innych funkcji.Przy skracaniu zapisu obowiązuje nas kilka dość prostych zasad.         Jeżeli funkcja wymaga tylko jednego parametru, wtedy mogę (ale nie muszę!) pominąć nawiasy:Jeżeli parametrów jest więcej, lub nie ma żadnego, wtedy nawiasy muszą zostać:Jeżeli funkcja ma tylko jedną instrukcję, mogę pominąć też klamry:A dodatkowo jeżeli jedyną instrukcją jest instrukcja return, także i jej możemy się pozbyć:Natomiast jeżeli funkcja ma więcej instrukcji - klamry muszą pozostać:",
