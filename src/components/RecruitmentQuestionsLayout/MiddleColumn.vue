@@ -11,6 +11,7 @@
       <h1 class="mt-15" v-if="this.$route.path === '/about'">
         Choose Category
       </h1>
+       
       <CssQuestions v-if="this.$route.path === '/about/cssquestions'" />
       <JavascriptQuestions v-if="this.$route.path === '/about/javascript'" />
       <HtmlQuestions v-if="this.$route.path === '/about/htmlquestions'" />
@@ -20,9 +21,8 @@
       <GeneralQuestions v-if="this.$route.path === '/about/general'" />
       <BootstrapQuestions v-if="this.$route.path === '/about/bootstrap'" />
       <TypeScriptQuestions v-if="this.$route.path === '/about/typescript'" />
-    
     </v-sheet>
-      <IconComponent v-if="this.$route.path !== './about'" />
+     <IconComponent v-if="this.$route.path != '/about'"  />
   </div>
 </template>
 
