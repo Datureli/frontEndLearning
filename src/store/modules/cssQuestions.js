@@ -63,12 +63,15 @@ export default {
         return Math.round(Math.random()) - 0.5;
       });
     },
+    clearLoop(state) {
+      clearInterval()
+    }
   },
   actions: {
     cssQuestionLoop(context) {
       setInterval(() => {
-      context.commit("randomCssQuestion");
-    }, 5000);
+        context.commit("randomCssQuestion");
+      }, 5000);
     },
     randomCssQuestion(context) {
       context.commit("randomCssQuestion");

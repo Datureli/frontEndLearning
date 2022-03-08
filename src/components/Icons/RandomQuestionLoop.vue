@@ -11,7 +11,7 @@
       <v-icon x-large>mdi-autorenew</v-icon>
     </v-btn>
     <v-btn v-else @click="clearInterval" color="transparent"
-      ><v-icon x-large color="red" >mdi-autorenew</v-icon></v-btn
+      ><v-icon x-large color="red">mdi-autorenew</v-icon></v-btn
     >
   </div>
 </template>
@@ -35,27 +35,36 @@ export default {
     randomLoop() {
       switch (this.$route.path) {
         case "/about/htmlquestions":
-          return this.htmlQuestionLoop();
+          this.htmlQuestionLoop();
+          break;
         case "/about/cssquestions":
-          return this.cssQuestionLoop();
+          this.cssQuestionLoop();
+          break;
         case "/about/javascript":
-          return this.questionLoop();
+          this.questionLoop();
+          break;
         case "/about/vue":
-          return this.vueQuestionLoop();
+          this.vueQuestionLoop();
+          break;
         case "/about/react":
-          return this.reactQuestionLoop();
+          this.reactQuestionLoop();
+          break;
         case "/about/typescript":
-          return this.typescriptQuestionLoop();
+          this.typescriptQuestionLoop();
+          break;
         case "/about/gitQuestions":
-          return this.gitQuestionLoop();
+          this.gitQuestionLoop();
+          break;
         case "/about/general":
-          return this.generalQuestionLoop();
+          this.generalQuestionLoop();
+          break;
         case "/about/bootstrap":
-          return this.GeneralQuestion();
+          this.GeneralQuestion();
+          break;
       }
     },
     ...mapActions("htmlQuestions", ["htmlQuestionLoop"]),
-    ...mapActions("cssQuestions", ["cssQuestionLoop"]),
+    ...mapActions("cssQuestions", ["cssQuestionLoop", "resetLoop"]),
     ...mapActions("generalQuestions", ["generalQuestionLoop"]),
     ...mapActions("gitQuestions", ["gitQuestionLoop"]),
     ...mapActions("questions", ["questionLoop"]),
