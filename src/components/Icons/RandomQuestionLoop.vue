@@ -1,14 +1,18 @@
 <template>
   <div>
     <v-btn
-      :disabled="disableLoop"
-      v-if="this.disableloop = true"
-      @click="randomLoop"
+      v-if="disableLoop"
+      @click="
+        randomLoop();
+        changeStatus();
+      "
       color="transparent"
     >
       <v-icon x-large>mdi-autorenew</v-icon>
     </v-btn>
-    <v-btn v-else @click="clearInterval">ss</v-btn>
+    <v-btn v-else @click="clearInterval" color="transparent"
+      ><v-icon x-large color="red" >mdi-autorenew</v-icon></v-btn
+    >
   </div>
 </template>
 
@@ -17,16 +21,18 @@ import { mapActions } from "vuex";
 export default {
   data() {
     return {
-      disableLoop: false,
+      disableLoop: true,
     };
   },
   methods: {
     clearInterval() {
-      this.disableLoop = false
+      this.disableLoop = true;
       clearInterval(this.randomLoop());
     },
-    randomLoop() {
+    changeStatus() {
       this.disableLoop = !this.disableLoop;
+    },
+    randomLoop() {
       switch (this.$route.path) {
         case "/about/htmlquestions":
           return this.htmlQuestionLoop();
