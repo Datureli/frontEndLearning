@@ -1,11 +1,9 @@
 <template>
   <div>
     <v-btn
-      v-if="!disableloop"
-      @click="
-        clearInterval();
-        randomLoop();
-      "
+      :disabled="disableLoop"
+      v-if="this.disableloop = true"
+      @click="randomLoop"
       color="transparent"
     >
       <v-icon x-large>mdi-autorenew</v-icon>
@@ -22,17 +20,13 @@ export default {
       disableLoop: false,
     };
   },
-  watch: {
-    isDisabled() {
-      this.disableLoop = !this.disableLoop
-    }
-  },
   methods: {
     clearInterval() {
-      this.disableLoop = !this.disableLoop
+      this.disableLoop = false
       clearInterval(this.randomLoop());
     },
     randomLoop() {
+      this.disableLoop = !this.disableLoop;
       switch (this.$route.path) {
         case "/about/htmlquestions":
           return this.htmlQuestionLoop();
