@@ -31,8 +31,8 @@ export default {
           return this.randomGitQuestion();
         case "/about/general":
           return this.randomGeneralQuestion();
-        case "/about/bootstrap":
-          return this.randomGeneralQuestion();
+        case "/about/test":
+          return this.randomTestQuestion();
       }
     },
     ...mapActions("htmlQuestions", ["randomHtmlQuestion"]),
@@ -43,6 +43,7 @@ export default {
     ...mapActions("reactQuestions", ["randomReactQuestion"]),
     ...mapActions("typescriptQuestions", ["randomTypescriptQuestion"]),
     ...mapActions("vueQuestions", ["randomVueQuestion"]),
+    ...mapActions("testQuestions", ["randomTestQuestion"]),
   },
 };
 </script>

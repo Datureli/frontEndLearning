@@ -53,7 +53,7 @@ state: {
         },
         {
           title: "Testowanie",
-          link: "/about/bootstrap",
+          link: "/about/test",
           icon: "mdi-account-circle",
           id: 9
         },

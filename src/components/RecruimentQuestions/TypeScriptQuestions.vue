@@ -5,12 +5,11 @@
       :key="index"
       max-width="700"
       class="mx-auto"
-      ref="carousel"
     >
       <v-list-item>
         <v-list-item-content>
           <v-list-item-subtitle
-            class="text--primary   font-weight-black  text-h4 text-wrap "
+            class="text--primary font-weight-black text-h4 text-wrap "
             v-text="typescriptQuestions.question"
           ></v-list-item-subtitle>
 
@@ -37,7 +36,7 @@
 </template>
 
 <script>
-import { mapState,mapActions } from "vuex";
+import { mapState } from "vuex";
 export default {
   props: {
     page: {

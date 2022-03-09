@@ -3,7 +3,7 @@ import CssQuestions from "../RecruimentQuestions/CssQuestions";
 import JavascriptQuestions from "../RecruimentQuestions/JavascriptQuestions";
 import VueQuestions from "../RecruimentQuestions/VueQuestions";
 import GitQuestions from "../RecruimentQuestions/GitQuestions";
-import BootstrapQuestions from "../RecruimentQuestions/TestQuestions";
+import TestQuestions from "../RecruimentQuestions/TestQuestions";
 import TypeScriptQuestions from "../RecruimentQuestions/TypeScriptQuestions"
 import ReactQuestions from "../RecruimentQuestions/ReactQuestions"
 import GeneralQuestions from "../RecruimentQuestions/GeneralQuestions"
@@ -15,7 +15,7 @@ export {
     JavascriptQuestions,
     VueQuestions,
     GitQuestions,
-    BootstrapQuestions,
+    TestQuestions,
     TypeScriptQuestions,
     ReactQuestions,
     GeneralQuestions,

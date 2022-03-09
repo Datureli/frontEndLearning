@@ -118,7 +118,7 @@ export default {
         case "TypeScriptQuestions":
         case "JavascriptQuestions":
         case "GeneralQuestions":
-        case "BootstrapQuestions":
+        case "TestQuestions":
           return "darkGradient";
         case "Materials":
           return "black";

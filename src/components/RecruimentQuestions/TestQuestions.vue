@@ -9,7 +9,7 @@
       <v-list-item>
         <v-list-item-content>
           <v-list-item-subtitle
-            class="text--primary   font-weight-black  text-h4 text-wrap "
+            class="text--primary font-weight-black text-h4 text-wrap "
             v-text="testQuestions.question"
           ></v-list-item-subtitle>
 
@@ -45,7 +45,7 @@ export default {
   },
   computed: {
     ...mapState(["disable", "favorite"]),
-    ...mapState("questions", ["testQuestions"]),
+    ...mapState("testQuestions", ["testQuestions"]),
   },
 };
 </script>

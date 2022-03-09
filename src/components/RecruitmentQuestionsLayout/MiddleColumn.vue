@@ -19,7 +19,7 @@
       <GitQuestions v-if="this.$route.path === '/about/gitquestions'" />
       <ReactQuestions v-if="this.$route.path === '/about/react'" />
       <GeneralQuestions v-if="this.$route.path === '/about/general'" />
-      <BootstrapQuestions v-if="this.$route.path === '/about/bootstrap'" />
+      <TestQuestions v-if="this.$route.path === '/about/test'" />
       <TypeScriptQuestions v-if="this.$route.path === '/about/typescript'" />
     </v-sheet>
      <IconComponent v-if="this.$route.path != '/about'"  />
@@ -33,13 +33,13 @@ import {
   JavascriptQuestions,
   VueQuestions,
   GitQuestions,
-  BootstrapQuestions,
+  TestQuestions,
   TypeScriptQuestions,
   ReactQuestions,
   GeneralQuestions,
   QuestionPagination,
 } from "../RecruimentQuestions";
-import IconComponent from "../Icons/IconComponent.vue";
+import IconComponent from "../Icons/IconComponent";
 export default {
   components: {
     HtmlQuestions,
@@ -47,7 +47,7 @@ export default {
     JavascriptQuestions,
     VueQuestions,
     GitQuestions,
-    BootstrapQuestions,
+    TestQuestions,
     TypeScriptQuestions,
     ReactQuestions,
     GeneralQuestions,
