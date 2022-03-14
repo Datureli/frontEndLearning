@@ -20,7 +20,7 @@ export default {
         case "/about/cssquestions":
           return this.randomCssQuestion();
         case "/about/javascript":
-          return this.randomQuestion();
+          return this.randomJavascriptQuestion();
         case "/about/vue":
           return this.randomVueQuestion();
         case "/about/react":
@@ -39,7 +39,7 @@ export default {
     ...mapActions("cssQuestions", ["randomCssQuestion"]),
     ...mapActions("generalQuestions", ["randomGeneralQuestion"]),
     ...mapActions("gitQuestions", ["randomGitQuestion"]),
-    ...mapActions("questions", ["randomQuestion"]),
+    ...mapActions("javascriptQuestions", ["randomJavascriptQuestion"]),
     ...mapActions("reactQuestions", ["randomReactQuestion"]),
     ...mapActions("typescriptQuestions", ["randomTypescriptQuestion"]),
     ...mapActions("vueQuestions", ["randomVueQuestion"]),

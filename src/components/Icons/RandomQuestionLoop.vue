@@ -41,7 +41,7 @@ export default {
           this.cssQuestionLoop();
           break;
         case "/about/javascript":
-          this.questionLoop();
+          this.javascriptQuestionLoop();
           break;
         case "/about/vue":
           this.vueQuestionLoop();
@@ -67,7 +67,7 @@ export default {
     ...mapActions("cssQuestions", ["cssQuestionLoop", "resetLoop"]),
     ...mapActions("generalQuestions", ["generalQuestionLoop"]),
     ...mapActions("gitQuestions", ["gitQuestionLoop"]),
-    ...mapActions("questions", ["questionLoop"]),
+    ...mapActions("javascriptQuestions", ["javascriptQuestionLoop"]),
     ...mapActions("reactQuestions", ["reactQuestionLoop"]),
     ...mapActions("typescriptQuestions", ["typescriptQuestionLoop"]),
     ...mapActions("vueQuestions", ["vueQuestionLoop"]),

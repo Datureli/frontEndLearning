@@ -200,9 +200,9 @@ export default {
           "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
       },
       {
-        question: "Czym jest tag <time>?",
+        question: "Czym jest tag time?",
         answer:
-          "<time> określa czytelną dla człowieka datę oraz godzinę. Można go również używać do kodowania daty i godziny w sposób możliwy do odczytu maszynowego, dzięki czemu przeglądarki mogą oferować dodawanie przypomnień do kalendarza. <time> pozwala również wyszukiwarkom na generowanie inteligentniejszych wyników wyszukiwania.",
+          "Time określa czytelną dla człowieka datę oraz godzinę. Można go również używać do kodowania daty i godziny w sposób możliwy do odczytu maszynowego, dzięki czemu przeglądarki mogą oferować dodawanie przypomnień do kalendarza. <time> pozwala również wyszukiwarkom na generowanie inteligentniejszych wyników wyszukiwania.",
         secondAnswer:
           "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
       },
@@ -385,21 +385,21 @@ export default {
   },
 
   mutations: {
-    randomQuestion(state) {
+    randomJavascriptQuestion(state) {
       state.javascriptQuestions.sort(() => {
         return Math.round(Math.random()) - 0.5;
       });
     },
   },
   actions: {
-    questionLoop(context) {
+    javascriptQuestionLoop(context) {
       setInterval(() => {
-        context.commit("randomQuestion");
+        context.commit("randomJavascriptQuestion");
       }, 5000);
     },
 
-    randomQuestion(context) {
-      context.commit("randomQuestion");
+    randomJavascriptQuestion(context) {
+      context.commit("randomJavascriptQuestion");
     },
   },
 };

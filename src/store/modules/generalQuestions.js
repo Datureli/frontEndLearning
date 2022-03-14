@@ -176,6 +176,11 @@ export default {
         answer: `Service Worker pozwala nam na rozszerzenie funkcjonalności naszej aplikacji o pewne funkcje, które dostępne są w natywnych aplikacjach mobilnych. Przykładami mogą być umożliwienie pracy w trybie offline oraz push notyfikacje na ekranie urządzenia użytkownika naszej aplikacji`,
       },
       {
+        question: `Czym jest pwa?`,
+        answer: `PWA to skrót od wyrazów Progressive Web App (tłumacząc na język polski: Progresywna Aplikacja Internetowa). Jej celem jest zapewnienie najwyższej jakości odbioru stron internetowych przez wszystkie systemy operacyjne, a także bez względu na jakość połączenia z internetem. Po wejściu na stronę typu PWA, zawartość aplikacji zapisywana jest w pamięci urządzenia. Dzięki zapisanym danym,  ponowne wejście na stronę PWA może odbyć się również w trybie offline. To stanowi przewagę stron PWA nad innymi rodzajami stron internetowych.
+        Dlaczego funkcja pobierania aplikacji PWA jest ważna? Dzięki temu użytkownik twojej strony, po ściągnięciu jej na smartfon, będzie mógł otworzyć ją w trybie offline. To oznacza, że będzie mógł przeglądać zawartość strony nawet podczas podróży pociągiem czy samolotem.`,
+      },
+      {
         question: `Jak działa renderowanie po stronie klienta?`,
         answer: `Kiedy programiści mówią o renderowaniu po stronie klienta, mają na myśli renderowanie treści w przeglądarce za pomocą JavaScript. Więc zamiast pobierać całą zawartość z samego dokumentu HTML, otrzymujesz podstawowy dokument HTML z plikiem JavaScript, który wyrenderuje resztę witryny za pomocą przeglądarki`,
         secondAnswer: `Inną rzeczą, o której należy pamiętać, jest to, że Twoja witryna/aplikacja nie będzie mogła się załadować, dopóki WSZYSTKIE JavaScript nie zostanie pobrane do przeglądarki. Ma to sens, ponieważ zawiera wszystkie potrzebne treści. Jeśli Twoi użytkownicy korzystają z wolnego połączenia internetowego, początkowy czas ładowania może się nieco wydłużyć.`,

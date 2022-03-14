@@ -152,6 +152,18 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes,
 });
+let isFirstRedirect = true;
+
+router.beforeEach((to, from, next) => {
+
+  const lastVisitedPage = localStorage.getItem('lastVisitedPage');
+  const executableRedirect = (lastVisitedPage && isFirstRedirect);
+
+  isFirstRedirect = false;
+
+  executableRedirect ? next({ name: lastVisitedPage }) : next();
+
+});
 
 router.beforeEach((to,from,next) => {
   document.title = `${to.meta.title}`;

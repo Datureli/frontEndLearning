@@ -47,7 +47,7 @@ export default {
   },
   computed: {
     ...mapState(["disable", "favorite"]),
-    ...mapState("questions", ["javascriptQuestions"]),
+    ...mapState("javascriptQuestions", ["javascriptQuestions"]),
   },
 };
 </script>

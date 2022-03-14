@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import login from "./modules/login";
-import questions from "./modules/questions";
+import javascriptQuestions from "./modules/javascriptQuestions";
 import register from "./modules/register"
 import htmlQuestions from './modules/htmlQuestions'
 import cssQuestions from './modules/cssQuestions'
@@ -17,7 +17,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   modules: {
     login,
-    questions,
+    javascriptQuestions,
     register,
     htmlQuestions,
     cssQuestions,
