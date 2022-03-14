@@ -12,6 +12,9 @@
 <script>
 import { mapActions } from "vuex";
 export default {
+  created() {
+    window.addEventListener("keydown", this.globalRandomQuestion);
+  },
   methods: {
     globalRandomQuestion() {
       switch (this.$route.path) {
