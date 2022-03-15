@@ -1,18 +1,12 @@
 <template>
-  <v-btn color="transparent" @keydown.49="globalRandomQuestion">
-    <v-icon x-large @click="globalRandomQuestion">mdi-dice-multiple</v-icon>
-  </v-btn>
+    <v-btn color="transparent">
+      <v-icon x-large v-shortkey="['1']" @shortkey="globalRandomQuestion" @click="globalRandomQuestion">mdi-dice-multiple</v-icon>
+    </v-btn>
 </template>
 
 <script>
 import { mapActions } from "vuex";
 export default {
-  created() {
-     window.addEventListener("keydown", this.globalRandomQuestion);
-  },
-  beforeDestroy() {
-    window.removeEventListener("keydown", this.globalRandomQuestion);
-  },
   methods: {
     globalRandomQuestion() {
       switch (this.$route.path) {
