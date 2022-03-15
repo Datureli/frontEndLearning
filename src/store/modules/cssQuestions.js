@@ -63,13 +63,15 @@ export default {
         return Math.round(Math.random()) - 0.5;
       });
     },
-    clearLoop(state) {
-      clearInterval()
-    }
   },
   actions: {
     cssQuestionLoop(context) {
-      setInterval(() => {
+      let timeRun = 0;
+      let interval = setInterval(() => {
+        timeRun += 1
+        if (timeRun === 1) {
+          clearInterval(interval);
+        }
         context.commit("randomCssQuestion");
       }, 5000);
     },

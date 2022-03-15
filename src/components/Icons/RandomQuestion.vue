@@ -1,7 +1,12 @@
 <template>
-    <v-btn color="transparent">
-      <v-icon x-large v-shortkey="['1']" @shortkey="globalRandomQuestion" @click="globalRandomQuestion">mdi-dice-multiple</v-icon>
-    </v-btn>
+  <v-btn
+    color="transparent"
+    v-shortkey="['1']"
+    @shortkey="globalRandomQuestion"
+    @click="globalRandomQuestion"
+  >
+    <v-icon x-large >mdi-dice-multiple</v-icon>
+  </v-btn>
 </template>
 
 <script>
@@ -42,5 +47,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

@@ -1,6 +1,8 @@
 <template>
   <div>
     <v-btn
+      v-shortkey="['2']"
+      @shortkey="randomLoop(); changeStatus();"
       v-if="disableLoop"
       @click="
         randomLoop();
@@ -10,8 +12,8 @@
     >
       <v-icon x-large>mdi-autorenew</v-icon>
     </v-btn>
-    <v-btn v-else @click="clearInterval" color="transparent"
-      ><v-icon x-large color="red">mdi-autorenew</v-icon></v-btn
+    <v-btn v-else @click="resetInterval" color="transparent"
+      ><v-icon x-large color="green">mdi-autorenew</v-icon></v-btn
     >
   </div>
 </template>
@@ -25,9 +27,8 @@ export default {
     };
   },
   methods: {
-    clearInterval() {
-      this.disableLoop = true;
-      clearInterval(this.randomLoop());
+    resetInterval() {
+      this.disableLoop = !this.disableLoop
     },
     changeStatus() {
       this.disableLoop = !this.disableLoop;
@@ -64,7 +65,7 @@ export default {
       }
     },
     ...mapActions("htmlQuestions", ["htmlQuestionLoop"]),
-    ...mapActions("cssQuestions", ["cssQuestionLoop", "resetLoop"]),
+    ...mapActions("cssQuestions", ["cssQuestionLoop", "clearLoop"]),
     ...mapActions("generalQuestions", ["generalQuestionLoop"]),
     ...mapActions("gitQuestions", ["gitQuestionLoop"]),
     ...mapActions("javascriptQuestions", ["javascriptQuestionLoop"]),
