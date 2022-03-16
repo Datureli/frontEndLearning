@@ -28,6 +28,7 @@
       </v-list-item>
     </v-carousel-item>
        <v-pagination
+       circle
           style="position: absolute; bottom: 18%; right:36%"
           v-model="page"
           :length="3"
@@ -49,10 +50,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.wrap-text {
-  white-space: normal;
-  word-wrap: break-word;
-}
-</style>

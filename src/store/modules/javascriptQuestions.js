@@ -6,20 +6,26 @@ export default {
       {
         question: "Jakie zadeklarować zmienną w javascript?",
         answer:
-          "Aby zadeklarować zmienną, powinniśmy posłużyć się jednym ze słów kluczowych var,let oraz const.",
+          "Aby zadeklarować zmienną, powinniśmy posłużyć się jednym ze słów kluczowych var,let oraz const..Pod zmienne możemy podstawić dowolne wartości jakie będziemy chcieli",
         secondAnswer:
-          "wielu programistów zaleca stosować już const i let. Dzięki nim nasze skrypty stają się nie tylko bardziej optymalne pod względem zarządzania pamięcią, ale i potencjalnie unikamy niektórych problematycznych sytuacji.Pod zmienne możemy podstawić dowolne wartości jakie będziemy chcieli",
+          "Zaleca się używanie let oraz const zamiast var.Dzięki nim nasze skrypty stają się bardziej optymalne pod względem zarządzania pamięcią, ale i potencjalnie unikamy niektórych problematycznych sytuacji",
         thirdPartOfAnswer:
-          "Nazwy zmiennych i stałych które deklarujemy nie mogą być byle jakie. Istnieją pewne zasady których musimy się trzymać. I tak:wielkość liter ma znaczenie. Zmienna myTXT to nie to samo co mytxt,nazwa zmiennej nie może zaczynać się od cyfry,,nazwa zmiennej nie może zawierać spacji, kropki, przecinka ani myślnika (można natomiast używać podkreślenia),nazwą zmiennej nie może być słowo kluczowe zarezerwowane przez JavaScript",
+          "Nazewnictwo zmiennych posiada konkretne zasady.Wielkość liter ma znaczenie.Zmienne o takiej samej nazwie,ale utworzone przy pomocy różnej wielkości liter to dwie różne zmienne.Nazwa zmiennej nie może zaczynać się od cyfry,nazwa zmiennej nie może zawierać spacji, kropki, przecinka ani myślnika (można natomiast używać podkreślenia),nazwą zmiennej nie może być słowo kluczowe zarezerwowane przez JavaScript",
       },
       {
         question: "Czym jest grid?",
         answer:
           "Grid to struktura, która pozwala na umieszczanie zawartości zarówno pionowo, jak i poziomo, w spójny i łatwy w zarządzaniu sposób. Grid obejmują dwa kluczowe elementy: wiersze i kolumny",
-        secondAnswer: "",
+        secondAnswer:
+          "Pozwala nam na układanie treści tak, by była ona czytelna dla użytkownika. Dzięki takim zabiegom, strona posiada bardziej estetyczny wygląd, jest przejrzysta i bardziej przyjazna dla użytkownika.",
       },
       {
         question: "Czym jest debugowanie?",
+        answer:
+          "Pisząc kod co chwila będziemy natrafiać na różnego rodzaju błędy. Aby sobie z nimi radzić powinniśmy umieć debugować nasz kod.Kod JavaScript i TypeScript można debugować przy użyciu Visual Studio. Można ustawiać i trafiać punkty przerwania, dołączać debuger, sprawdzać zmienne, wyświetlać stos wywołań i używać innych funkcji debugowania.",
+      },
+      {
+        question: "Jak działa słowo kluczowe new?",
         answer:
           "Pisząc kod co chwila będziemy natrafiać na różnego rodzaju błędy. Aby sobie z nimi radzić powinniśmy umieć debugować nasz kod.Kod JavaScript i TypeScript można debugować przy użyciu Visual Studio. Można ustawiać i trafiać punkty przerwania, dołączać debuger, sprawdzać zmienne, wyświetlać stos wywołań i używać innych funkcji debugowania.",
       },
@@ -55,8 +61,13 @@ export default {
       {
         question: "Czym jest funkcja map()?",
         answer:
-          "MMetoda map() robi pętlę po tablicy i każdorazowo zwraca nowy element tablicy. W wyniku po zakończeniu całej pętli zwracana jest nowa tablica z taką samą liczbą elementów:.",
+          "Metoda map() robi pętlę po tablicy i każdorazowo zwraca nowy element tablicy. W wyniku po zakończeniu całej pętli zwracana jest nowa tablica z taką samą liczbą elementów:.",
         secondAnswer: "",
+      },
+      {
+        question: "Czym są getery i setery",
+        answer:
+          ". Get, używasz do pobierania wartości, a set do przypisania wartości. ",
       },
       {
         question: "Czym są domknięcia?",

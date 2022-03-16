@@ -7,7 +7,6 @@ import i18n from './i18n'
 Vue.use(require('vue-shortkey'))
 
 new Vue({
-  
   vuetify,
   router,
   store,
