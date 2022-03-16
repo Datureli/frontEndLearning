@@ -5,13 +5,13 @@
 * [Status](#status)
 * [Setup](#setup)
 
-![alt text](http://url/to/img.png)
-
 ## General info
 this project is an advanced front-end learning platform,preparing for recruitment interviews
 
 ## Features
 * Learn front-end topics by learning questions
+* randomQuestion function
+* disable answers 
 * Learn english IT words
 
 
