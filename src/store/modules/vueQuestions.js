@@ -245,6 +245,11 @@ export default {
           "Pozwalają nam wykonywać akcje kiedy nasz komponent zostanie zniszczony,takie jak cleanup lub wysyłanie analiz.Zostają odpalone kiedy komponent zostanie usunięty z drzewa DOM.używanie reactive zamiast ref pozwala nam zrezygnować z value",
       },
       {
+        question: "Czym jest beforeEnter?",
+        answer:
+          "the route you want to go to — to the one you come from — from callback to call when you are done — next",
+      },
+      {
         question: "Czym jest toRefs?",
         answer:
           "Ta funkcja przekonwertuje każdą z wartości obiektu i zmapuje ją w jej własnym ref.właściwości są reaktywne, więc jeśli musisz użyć destrukturyzacji ES6, powinieneś użyć toRefs, w przeciwnym razie wpłynęłoby to na reaktywność właściwości.",
@@ -387,7 +392,7 @@ export default {
       {
         question: "Czym jest single file component?",
         answer:
-          "Jest to plik z rozszerzeniem vue zawierającym komponent vue.W przeciwieństwie do stndardowego podziału plików na style,szkielet oraz logike w odrębnych plików,w single file component wszystko znajduje się w jednym pliku.",
+          "Jest to plik z rozszerzeniem vue zawierającym komponent vue.W przeciwieństwie do stndardowego podziału plików na style,szkielet oraz logike w odrębnych plikach,w single file component wszystko znajduje się w jednym pliku.",
       },
       {
         question: "Co to jest rejestracja globalna w komponentach?",
@@ -429,7 +434,7 @@ export default {
       {
         question: "Kiedy komponent potrzebuje pojedynczego elementu głównego?",
         answer:
-          " W VueJS 2.x każdy komponent musi mieć jeden element główny(root element), gdy szablon ma więcej niż jeden element. W takim przypadku musisz owinąć elementy elementem nadrzędnym.  W przeciwnym razie wystąpi błąd, mówiący, że Szablon komponentu powinien zawierać dokładnie jeden element główny. Podczas gdy w 3.x komponenty mogą teraz mieć wiele węzłów głównych. Ten sposób dodawania wielu węzłów głównych nazywa się fragmentami.",
+          " W VueJS 2.x każdy komponent musi mieć jeden element główny,gdy szablon ma więcej niż jeden element. W takim przypadku musisz owinąć elementy elementem nadrzędnym.W przeciwnym razie wystąpi błąd, mówiący, że Szablon komponentu powinien zawierać dokładnie jeden element główny.W vue 3 komponenty mogą mieć wiele węzłów głównych. Ten sposób dodawania wielu węzłów głównych nazywa się fragmentami.",
       },
       {
         question: "Czym jest props?",

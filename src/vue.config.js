@@ -1,10 +1,10 @@
-const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
-
 module.exports = {
-   configureWebpack: {
-     plugins: [
-        new VuetifyLoaderPlugin(),
-    ]
-   }
- // ...other vue-cli plugin options...
-} 
+  pluginOptions: {
+    i18n: {
+      locale: "en",
+      fallbackLocale: "en",
+      localeDir: "locales",
+      enableInSFC: false
+    }
+  }
+};

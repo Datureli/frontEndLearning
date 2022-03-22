@@ -7,6 +7,7 @@
       color="transparent"
       tile
       :elevation="elevation"
+      
     >
       <h1 class="mt-15" v-if="this.$route.path === '/about'">
         Choose Category

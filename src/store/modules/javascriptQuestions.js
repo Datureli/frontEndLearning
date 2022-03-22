@@ -102,6 +102,12 @@ export default {
         secondAnswer: "",
       },
       {
+        question:
+          "Czym jest endpoint?",
+        answer:
+          "to po prostu unikalny adres URL, który wywołujesz w celu interakcji z innym systemem.",
+      },
+      {
         question: "Co w javascript nie jest obiektem?",
         answer:
           "Wszystkie wartości JavaScript, z wyjątkiem prymitywów (primitives), są obiektami.Prymitywna wartość jest to wartość, która ma właściwości lub metody.  Prymitywny typ danych to dane, które posiadają pierwotną wartość.  JavaScript definiuje 5 typów prymitywnych typów danych:",
@@ -125,12 +131,12 @@ export default {
       {
         question: "Czym jest Hoisting??",
         answer:
-          "To wbudowany w JavaScript mechanizm wynoszący deklarację zmiennych bez ich inicjowania na początek funkcji.Kolejna różnica między starszą deklaracją var a jej młodszymi braćmi to tak zwany hoisting (windowanie).JavaScript lubi pomagać programiście. Jednym z takich przypadków pomocy jest niewidoczne dla programisty wynoszenie deklaracji na początek kodu. I tak na początek kodu wynoszone są deklaracje takie jak var / let/ const / function / class. Różnica jest w sposobie takiego wynoszenia.",
+          "To wbudowany w JavaScript mechanizm wynoszący deklarację zmiennych bez ich inicjowania na początek funkcji.JavaScript lubi pomagać programiście. I tak na początek kodu wynoszone są deklaracje takie jak var / let/ const / function / class. Różnica jest w sposobie takiego wynoszenia."
       },
       {
         question: "opisz inkrementacje i dekrementacje",
         answer:
-          "Operatory inkrementacji i dekrementacji, które mogą występować przed zmienną lub po zmiennej.Gdy występuje przed zmienną, zwiększenie jej wartości nastąpi w danej instrukcji. Jeżeli występuje po zmiennej, zwiększona wartość wystąpi dopiero w kolejnej instrukcji",
+          "Operatory inkrementacji i dekrementacji, mogą występować przed zmienną lub po zmiennej.Gdy występuje przed zmienną, zwiększenie jej wartości nastąpi w danej instrukcji. Jeżeli występuje po zmiennej, zwiększona wartość wystąpi dopiero w kolejnej instrukcji",
       },
       {
         question: "Opisz operatory porównania",
@@ -185,7 +191,7 @@ export default {
       {
         question: "Opisz typy danych w javascript",
         answer:
-          "W JavaScript dane możemy podzielić na dwie grupy: typy proste(prymitywne) oraz złożone.Do typów prymitywnych zaliczamy:Number,string,bigInt,boolean,undefined,null,symbol a do złożonych:Object (w tym Array, Map i Set).Kolejną charakterystyczną cechą rozróżniającą typy prymitywne od obiektów jest to, że te pierwsze w przeciwieństwie do obiektów są niemutowalne.Mutowalnymi określamy takie dane, którym w czasie ich istnienia możemy zmieniać części składowe:",
+          "Dane możemy podzielić na dwie grupy: typy proste(prymitywne) oraz złożone.Do typów prymitywnych zaliczamy:Number,string,bigInt,boolean,undefined,null,symbol a do złożonych:Object (w tym Array, Map i Set).Kolejną charakterystyczną cechą rozróżniającą typy prymitywne od obiektów jest to, że te pierwsze w przeciwieństwie do obiektów są niemutowalne.Mutowalnymi określamy takie dane, którym w czasie ich istnienia możemy zmieniać części składowe:",
         secondAnswer:
           "JavaScript jest językiem dynamicznie typowanym. Oznacza to, że nie musimy deklarować typu zmiennej, ponieważ jest on automatycznie konwertowany do porządanych wartości w czasie wykonywania się skryptu.",
       },
@@ -202,6 +208,12 @@ export default {
           "Przetwarza argument w postaci łańcucha znaków i zwraca liczbę całkowitą typu integer , o zadanej podstawie.Pozwala przekształcić podany tekst na liczbę całkowitą.",
         secondAnswer:
           "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
+      },
+      {
+        question: "Jak działa fetch api?",
+        answer:
+          "Metoda fetch zwraca obietnicę, która rozwiązuje odpowiedź z żądania, aby pokazać status (powodzenie lub niepowodzenie). Jeśli kiedykolwiek zobaczysz tę obietnicę wiadomości {} na ekranie dziennika konsoli, nie panikuj — w zasadzie oznacza to, że obietnica działa, ale czeka na rozwiązanie. Aby go rozwiązać, potrzebujemy funkcji obsługi .then() (callback), aby uzyskać dostęp do treści.So in short, we first define the path (Fetch), secondly request data from the server (Request), thirdly define the content type (Body) and last but not least, we access the data (Response).",
+
       },
       {
         question: "Czym jest innerHtml?",
@@ -305,7 +317,7 @@ export default {
       {
         question: "Czym są async/await?",
         answer:
-          "Obydwa słowa kluczowe wiążą się z obietnicami. Pierwsze z nich - async - wstawione przed deklaracją funkcji sprawi, że taka funkcja zwróci obietnicę. Drugie z nich - await - może wystąpić tylko wewnątrz funkcji poprzedzonej przez async i powinno się znaleźć przed wykonaniem funkcji asynchronicznej. Sprawi, że wykonanie nie przejdzie dalej, dopóki obietnica nie zostanie wykonana. Dzięki temu asynchroniczny kod przypomina swoim zachowaniem kod synchroniczny.",
+          "Obydwa słowa kluczowe wiążą się z obietnicami.Async - wstawione przed deklaracją funkcji sprawi, że taka funkcja zwróci obietnicę.Await może wystąpić tylko wewnątrz funkcji poprzedzonej przez async i powinno się znaleźć przed wykonaniem funkcji asynchronicznej. Sprawi, że wykonanie nie przejdzie dalej, dopóki obietnica nie zostanie wykonana. Dzięki temu asynchroniczny kod przypomina swoim zachowaniem kod synchroniczny.",
       },
       {
         question: "Czym jest currying i w jakich sytuacjach się go stosuje?",
@@ -313,9 +325,22 @@ export default {
           "Currying to technika pracy z funkcjami, polegająca na ich transformacji w następujący sposób: f(a, b, c) do f(a)(b)(c). Dzięki temu de facto rozbija funkcję mającą wiele parametrów do wielu funkcji mającej po jednym parametrze.",
       },
       {
-        question: "Jaka jest definicja funkcji wyższego rzędu?",
+        question: "Czym jest Rest api?",
+        answer:
+          "Interfejs API, czyli aplikacyjny interfejs programistyczny, jest zestawem reguł definiujących sposób, w jaki aplikacje lub urządzenia mogą się ze sobą łączyć i komunikować. Interfejs API REST to interfejs API zgodny z zasadami projektowania REST, czyli stylem architektury representational state transfer. Z tego powodu interfejsy API REST są czasami nazywane interfejsami API zgodnymi ze specyfikacją REST.",
+          secondAnswer: 'Podstawowe działanie interfejsu API polega na umożliwieniu aplikacji lub usłudze uzyskania dostępu do zasobu w innej aplikacji lub usłudze. Aplikacja lub usługa uzyskująca dostęp jest nazywana klientem, a aplikacja lub usługa, w której znajduje się zasób — serwerem.'
+      },
+      {
+        question: "czym jest funkcja wyższego rzędu?",
         answer:
           "Funkcja wyższego rzędu to funkcja, która przyjmuje inne funkcje jako parametry lub też taka, której wynik również jest funkcją. Przykładowa funkcja wyższego rzędu to map służąca do zwracania listy z wynikami funkcji dla wszystkich elementów z danej listy.",
+      },
+      {
+        question: "Jakie są zasady korzystania z rest api?",
+        answer:
+          "Jednolity interfejs -Wszystkie żądania wysyłane do interfejsu API dotyczące tego samego zasobu powinny wyglądać tak samo, bez względu na to, skąd pochodzą.Interfejs API REST powinien zapewniać przypisanie jednego elementu danych, takiego jak nazwa lub adres e-mail użytkownika, do jednego identyfikatora URl.Rozdzielenie klienta i serwera - Podczas projektowania interfejsu API REST aplikacje klienta i serwera muszą być całkowicie niezależne od siebie. Aplikacja kliencka powinna dysponować wyłącznie informacją o identyfikatorze URI żądanego zasobu. Nie może ona wchodzić w interakcje z aplikacją serwera w żaden inny sposób. Podobnie aplikacja serwera nie powinna modyfikować aplikacji klienckiej, a jedynie przekazywać jej żądane dane za pośrednictwem protokołu HTTP.",
+          secondAnswer: 'Bezstanowość. Interfejsy API REST są bezstanowe. To oznacza, że każde żądanie musi zawierać wszystkie informacje niezbędne do jego przetworzenia. Innymi słowy, interfejsy API REST nie wymagają żadnych sesji po stronie serwera. Aplikacje serwera nie mogą przechowywać żadnych danych związanych z żądaniem klienta.Możliwość buforowania. Gdy to możliwe, powinna być dostępna opcja buforowania zasobów po stronie klienta lub serwera. Odpowiedzi serwera muszą również zawierać informację o tym, czy buforowanie dostarczonego zasobu jest dozwolone. Celem jest zwiększenie wydajności po stronie klienta przy jednoczesnym zwiększeniu skalowalności po stronie serwera.',
+          thirdPartOfAnswer: 'Warstwowa architektura systemu. W interfejsach API REST wywołania i odpowiedzi przechodzą przez różne warstwy. Z reguły nie należy zakładać, że aplikacje klienta i serwera łączą się ze sobą bezpośrednio. Pętla komunikacyjna może obejmować pewną liczbę elementów pośredniczących. Interfejsy API REST muszą być zaprojektowane w taki sposób, aby ani klient, ani serwer nie miał informacji o tym, czy komunikuje się z aplikacją końcową, czy elementem pośredniczącym.Kod na żądanie (opcjonalnie). Interfejsy API REST zwykle wysyłają zasoby statyczne, ale w niektórych przypadkach odpowiedzi mogą również zawierać kod wykonywalny (np. aplety Java). W takich przypadkach kod powinien być uruchamiany tylko na żądanie.'
       },
       {
         question:
@@ -324,7 +349,7 @@ export default {
           "Rozszerzanie wbudowanych obiektów uważane jest złą praktykę. W ten sposób zmieniamy zachowanie obiektów. I o ile mowa o obiekcie, z którego będzie działał tylko konkretny kod, to problem nie jest duży, ale w przypadku zewnętrznego kodu, który wykorzysta rozszerzony obiekt, nic nie będzie działać. Dobrą praktyką jest korzystanie ze wbudowanych metod. Dodawanie własnych metod do obiektów może być problematyczne także ze względu na interferencje z bibliotekami, które same mogą rozszerzać obiekty o te same metody. Wówczas dojdzie do konfliktu, nadpisania, i kod po prostu nie będzie działał. Zaletą rozszerzania wbudowanych typów może być natomiast to, że można zbudować w ten sposób polyfill, przez co kod będzie działał również na starszym oprogramowaniu, przeglądarkach nieobsługujących nowszych wersji JavaScript.",
       },
       {
-        question: "Czym jest obietnica (promise)?",
+        question: "Czym jest obietnica(promise)?",
         answer:
           "Obietnice to obiekty, które reprezentują wykonanie (sukcesem lub porażką) operacji asynchronicznej. Są tak nazwane, bo wykonywana funkcja asynchroniczna musi złożyć obietnicę dostarczenia w przyszłości wartości. Po zakończeniu operacji asynchronicznej jej wynik może zostać obsłużony przez wywołanie na obietnicy metody then.",
       },
@@ -335,14 +360,14 @@ export default {
       },
       {
         question: "Czym jest funkcja anonimowa?",
-        answer: "Funkcja strzałkowa to skrócony zapis wyrażenia funkcyjnego:",
+        answer: "Funkcja anonimowa to po prostu funkcja bez nazwy,używając wyrażenia funkcyjnego nie musimy nadawać nazwy po słowie function().",
       },
       {
         question: "Jak działa async?",
         answer:
           "Aby JavaScript nie blokował drzewa renderowania można wykorzystać regułę async. Atrybut async powoduje, że kod JS jest wykonywany niezależnie od etapu ładowania się strony i nie wpływa na ścieżkę renderowania. Atrybut ten może być z powodzeniem zastosowany w przypadku skryptów do:analityki internetowej,    dodatkowych widgetów do strony,",
         secondAnswer:
-          "Atrybut async mówi przeglądarce, że skrypt nie wpływa ani na DOM ani na CSSOM i może być przetworzony dopiero po załadowaniu i wyrenderowaniu całej podstrony. Atrybut async działa wyłącznie w przypadku skryptów umieszczonych w osobnym pliku – dlatego wydzielenie skryptu do osobnego pliku jest tak bardzo istotne.",
+          "Atrybut async mówi przeglądarce, że skrypt nie wpływa ani na DOM ani na CSSOM i może być przetworzony dopiero po załadowaniu i wyrenderowaniu całej podstrony.",
       },
       {
         question: "opisz atrybut defer?",
@@ -352,7 +377,7 @@ export default {
       {
         question: "Czym jest symbol w javascript?",
         answer:
-          "Funkcja Symbol() zwraca wartość typu symbol, Każdy symbol zwrócony przez Symbol() jest unikalny.Symbol powinien być użyty jako identyfikator własności obiektu, został zaprojektowany jedynie w tym celu.typ Symbol jest typem prostym",
+          "Funkcja Symbol zwraca wartość typu symbol, Każdy symbol zwrócony przez Symbol jest unikalny.Symbol powinien być użyty jako identyfikator własności obiektu, został zaprojektowany jedynie w tym celu.typ Symbol jest typem prostym",
       },
       {
         question: "Opisz słowo kluczowe this",
@@ -369,9 +394,9 @@ export default {
       {
         question: "Czym jest wyrażenie funkcyjne?",
         answer:
-          "wyrażeniem funkcyjnym i jest niczym innym jak podstawieniem funkcji pod zmienną:Wyrażenie i definicja różnią się od siebie nie tylko sposobem zapisu, ale także tym, jak taki kod jest interpretowany przez przeglądarkę.Funkcja stworzona za pomocą deklaracji jest od razu dostępna dla całego skryptu. Wynika to z działania mechanizmu hoistingu,który przenosi taką deklarację na początek danego zakresu kodu (skryptu lub funkcji)W przypadku wyrażeń funkcyjnych takie odwołanie rzuci nam błędem.",
+          "Zmienne w JavaScripcie mogą przechowywać funkcję.wyrażeniem funkcyjnym  jest podstawieniem funkcji pod zmienną.Wyrażenie i definicja różnią się od siebie nie tylko sposobem zapisu, ale także tym, jak taki kod jest interpretowany przez przeglądarkę.Funkcja stworzona za pomocą deklaracji jest od razu dostępna dla całego skryptu. Wynika to z działania mechanizmu hoistingu,który przenosi taką deklarację na początek danego zakresu kodu (skryptu lub funkcji)W przypadku wyrażeń funkcyjnych takie odwołanie skończy się błędem.",
         secondAnswer:
-          "Wynika to z faktu, że powyżej podstawiliśmy funkcję pod zmienną, a przecież do takich nie możemy się odwoływać przed ich utworzeniem.Istnieje jeszcze jedna różnica między obydwoma zapisami. Przy stosowaniu deklaracji, dana funkcja zapisywana jest jako klucz obiektu Window (to samo ma miejsce, gdy tworzymy globalną zmienną za pomocą zmiennej var). W przypadku wyrażenia poprzedzonego słowem const/let nie ma to miejsca.",
+          "Istnieje jeszcze jedna różnica między obydwoma zapisami. Przy stosowaniu deklaracji, dana funkcja zapisywana jest jako klucz obiektu Window (to samo ma miejsce, gdy tworzymy globalną zmienną za pomocą zmiennej var). W przypadku wyrażenia poprzedzonego słowem const/let nie ma to miejsca.",
       },
       {
         question: "Opisz działanie return",

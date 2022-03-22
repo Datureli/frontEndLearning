@@ -1,8 +1,7 @@
 export default {
   namespaced: true,
 
-  state: {
-    timeToNextQuestion: 5,
+  state: {  
     htmlQuestions: [
       {
         question: `Czym jest Html?`,
@@ -66,7 +65,7 @@ export default {
       {
         question: "Czy tagi i elementy w html to to samo?",
         answer:
-          "Nie.Elementy w html są definiowane poprzez starting tag,mogą zawierać jakiś kontent wewnątrz i tag zamykający.Przykład: <h1>Heading</h1> to element html natomiast <h1>jakiś kontent</h1> to tag zamykajacy",
+          "Nie -elementy w html są definiowane poprzez początkowy tag,mogą zawierać jakiś kontent wewnątrz i tag zamykający.Przykład: <h1>Heading</h1> to element html natomiast <h1>jakiś kontent</h1> to tag zamykajacy",
       },
       {
         question: "Czym są tagi i atrybuty w html?",

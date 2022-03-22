@@ -26,13 +26,15 @@
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
+      <!--{{ $t("message")}}-->
     </v-carousel-item>
-       <v-pagination
-       circle
-          style="position: absolute; bottom: 18%; right:36%"
-          v-model="page"
-          :length="3"
-        ></v-pagination>
+
+    <v-pagination
+      circle
+      style="position: absolute; bottom: 18%; right:36%"
+      v-model="page"
+      :length="3"
+    ></v-pagination>
   </v-carousel>
 </template>
 
