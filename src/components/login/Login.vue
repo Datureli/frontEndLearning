@@ -33,7 +33,6 @@
             dark
             color="#2c3e50"
           >
-            <!--  <p class="rotingtxt">original</p> -->
             <v-list color="transparent">
               <v-list-item-group
                 style="font-size: 20px"
@@ -160,7 +159,7 @@ export default {
     },
     closeModal() {
       this.dialog = false;
-      this.$router.push({ path: "/" });
+      this.$router.push({ path: "/about" });
     },
     isUserLogin() {
       if (this.username.length > 0 && this.password.length > 0) {

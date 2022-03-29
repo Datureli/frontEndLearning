@@ -47,7 +47,7 @@ export default {
       {
         question: "Jaka jest różnica między vue a nuxt?",
         answer:
-          "Nuxt.js i Vue.js obsługują logikę w różny sposób.Główna różnica polega na tym vue zawsze działa po stronie klienta,nuxt nie.Na przykład gdy próbuje y zaznaczyć element dom,zaraz po tym jak aplikacja zostanie załadowana,istnieje możliwość, że aplikacja działa po stronie Node.js,a w node.js nie ma elementów dom",
+          "Nuxt.js i Vue.js obsługują logikę w różny sposób.Główna różnica polega na tym vue zawsze działa po stronie klienta,nuxt nie.Na przykład gdy próbujemy zaznaczyć element dom,zaraz po tym jak aplikacja zostanie załadowana,istnieje możliwość, że aplikacja działa po stronie Node.js,a w node.js nie ma elementów dom",
         secondAnswer:
           "To samo miałoby miejsce podczas uzyskiwania dostępu do lokalnej pamięci przeglądarki. To jest główny powód, dla którego Nuxt używa plików cookie w pamięci lokalnej — ponieważ są one zawsze dostępne.Z Vue nie mamy tego rodzaju problemów, ponieważ zawsze działa na kliencie i dlatego nie musimy zawracać sobie głowy tego rodzaju potencjalnymi problemami.",
         thirdPartOfAnswer:
@@ -167,7 +167,7 @@ export default {
       {
         question: "Jaka jest różnica między Vue2 a Vue3?",
         answer:
-          "Vue 3.0 jest o wiele bardziej wydajne w porównaniu do swojej poprzedniej wersji. Mówimy tutaj o rozmiarze gotowej aplikacji Vue, która jest do 41% lżejsza dzięki użyciu techniki tree-shaking, początkowym renderowaniu, które jest do 55% szybsze, aktualizacjach, które są aż o 133% szybsze oraz o 54% mniejszym zużyciu pamięci.Twórcy Vue.js zaproponowali w nowym wydaniu dwie funkcje dla Single-File Components: script setup oraz style vars.Vue 3.0 zapewnia również lepszą integrację z językiem TypeScript.",
+          "Vue 3 jest o wiele bardziej wydajne w porównaniu do swojej poprzedniej wersji. Mówimy tutaj o rozmiarze gotowej aplikacji Vue, która jest do 41% lżejsza dzięki użyciu techniki tree-shaking, początkowym renderowaniu, które jest do 55% szybsze, aktualizacjach, które są aż o 133% szybsze oraz o 54% mniejszym zużyciu pamięci.Twórcy Vue.js zaproponowali w nowym wydaniu dwie funkcje dla Single-File Components: script setup oraz style vars.Vue 3.0 zapewnia również lepszą integrację z językiem TypeScript.",
       },
       {
         question: "Co to są gettery?",
@@ -299,11 +299,11 @@ export default {
           "Filtry są używane do formatownia tekstu w naszej aplikacji.Są używane wraz z interpolacją v-bind.",
       },
       {
-        question: "wymień zalety nuxt.js?",
+        question: "jakie są zalety nuxt.js?",
         answer:
-          "Obsługa modelu SSR, czyli możemy tworzyć kod, który działa zarówno po stronie serwera, jak i klienta, co ma ogromne znaczenie dla SEO.Obsługa modelu strony statycznej, a więc możemy stworzyć czystą stronę w html dla wszystkich naszych zaprogramowanych reguł routingu.Komponenty zamknięte w pojedynczym pliku, z jasnym podziałem na struktury, takie jak szablon (<template>), style – w tym preprocesory np. Less, Sass (<style>) oraz kod JavaScript – w tym preprocesory np. TypeScript (<script>).Domyślna obsługa i konfiguracja dla wielu bibliotek interfejsu graficznego",
+          "Obsługa modelu SSR, czyli możemy tworzyć kod, który działa zarówno po stronie serwera, jak i klienta, co ma ogromne znaczenie dla SEO.Obsługa modelu strony statycznej, a więc możemy stworzyć czystą stronę w html dla wszystkich naszych zaprogramowanych reguł routingu.Domyślna obsługa i konfiguracja dla wielu bibliotek interfejsu graficznego",
         secondAnswer:
-          "Ustrukturyzowana budowa – nie musimy zastanawiać się, gdzie dany element powinien się znaleźć w strukturze katalogów.Pełna obsługa routingu, wielojęzyczności, kontroli dostępu, middlewares itp.Pełna obsługa kompilacji ES6/ES7/ES8 – nie musimy wchodzić w szczegóły znajomości takich narzędzi, jak Webpack czy Babel i martwić się o to, czy nasz kod zadziała na wszystkich przeglądarkach.Obsługa zmian w kodzie w czasie rzeczywistym i przeładowywanie procesu bez konieczności ingerencji dewelopera (ang. hot code reloading)Dostępny analizator wygenerowanego kodu naszej aplikacji – w przejrzysty sposób obrazuje jak poszczególne moduły wpływają na rozmiar wynikowego kodu css oraz js.",
+          "Ustrukturyzowana budowa – nie musimy zastanawiać się, gdzie dany element powinien się znaleźć w strukturze katalogów.Pełna obsługa routingu, wielojęzyczności, kontroli dostępu, middlewares.Pełna obsługa kompilacji ES6/ES7/ES8 – nie musimy wchodzić w szczegóły znajomości takich narzędzi, jak Webpack czy Babel i martwić się o to, czy nasz kod zadziała na wszystkich przeglądarkach.Dostępny analizator wygenerowanego kodu naszej aplikacji – w przejrzysty sposób obrazuje jak poszczególne moduły wpływają na rozmiar wynikowego kodu css oraz js.",
       },
       {
         question: "Czym jest nuxt?",
@@ -371,7 +371,7 @@ export default {
       {
         question: "Opisz dyrektywe v-model",
         answer:
-          "Pozwala na wiązanie elementów DOM takich jak na przykład input do pól obiektu data.Pamiętaj, że v-model zignoruje wartość początkową, sprawdzone lub wybrane atrybuty znajdujące się na dowolnych elementach formularza. Dlatego zawsze używa danych instancji Vue jako źródła prawdy",
+          "Pozwala na wiązanie elementów DOM takich jak na przykład input do pól obiektu data.v-model zignoruje wartość początkową, sprawdzone lub wybrane atrybuty znajdujące się na dowolnych elementach formularza. Dlatego zawsze używa danych instancji Vue jako źródła prawdy",
       },
       {
         question: "Jakie są obsługiwane modyfikatory w v-model?",
@@ -392,7 +392,7 @@ export default {
       {
         question: "Na czym polega reaktywność w vue",
         answer:
-          "Wszystkie właściwości zdefiniowane w instancji vue są reaktywne.Oznacza to ,że jeżeli zajdzie jakaś zmiana to komponent automatycznie się zaktualizuje.Podczas inicjalizacji wszystkie właściwości są konwertowane do getterów oraz setterów,dzięki temu vue wie kiedy należy dokonać aktualizacji",
+          "Wszystkie właściwości zdefiniowane w instancji vue są reaktywne.Oznacza to,że jeżeli zajdzie jakaś zmiana to komponent automatycznie się zaktualizuje.Podczas inicjalizacji wszystkie właściwości są konwertowane do getterów oraz setterów,dzięki temu vue wie kiedy należy dokonać aktualizacji",
       },
       {
         question: "Czym jest single file component?",
@@ -439,7 +439,7 @@ export default {
       {
         question: "Kiedy komponent potrzebuje pojedynczego elementu głównego?",
         answer:
-          " W VueJS 2.x każdy komponent musi mieć jeden element główny,gdy szablon ma więcej niż jeden element. W takim przypadku musisz owinąć elementy elementem nadrzędnym.W przeciwnym razie wystąpi błąd, mówiący, że Szablon komponentu powinien zawierać dokładnie jeden element główny.W vue 3 komponenty mogą mieć wiele węzłów głównych. Ten sposób dodawania wielu węzłów głównych nazywa się fragmentami.",
+          " W Vue 2 każdy komponent musi mieć jeden element główny,gdy szablon ma więcej niż jeden element. W takim przypadku musisz owinąć elementy elementem nadrzędnym.W przeciwnym razie wystąpi błąd, mówiący, że Szablon komponentu powinien zawierać dokładnie jeden element główny.W vue 3 komponenty mogą mieć wiele węzłów głównych. Ten sposób dodawania wielu węzłów głównych nazywa się fragmentami.",
       },
       {
         question: "Czym jest props?",
@@ -474,12 +474,6 @@ export default {
       },
     ],
   },
-  getters: {
-    removeSpaces(state) {
-      return state.vueQuestions.split(/\s/).join("");
-    },
-  },
-
   mutations: {
     randomVueQuestion(state) {
       state.vueQuestions.sort(() => {

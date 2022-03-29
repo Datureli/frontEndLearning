@@ -12,7 +12,7 @@
         </v-btn>
       </template>
       <v-card color="darkGradient">
-        <v-toolbar dark elevation="0" color="#2c3e50">
+        <v-toolbar dense dark elevation="0" color="transparent">
           <v-spacer></v-spacer>
           <v-toolbar-items>
             <v-btn icon dark @click="dialog = false">
@@ -26,11 +26,11 @@
           elevation="0"
           outlined
           class="mx-auto pr-10 pl-10"
-          color="#2c3e50"
+          color="white"
         >
           <v-form v-model="formValidity">
             <v-card-title>
-              <h1 class="mx-auto white--text">Sign up</h1>
+              <h1 class="mx-auto">Sign up</h1>
             </v-card-title>
             <v-text-field
               label="Name"
@@ -133,6 +133,7 @@ export default {
   methods: {
     addUser() {
       this.$store.dispatch("register/addUser");
+      isSubmitted = false
     },
     addRegister() {
       this.$store.state.register.registeredUsers.push(updateName);

@@ -130,9 +130,6 @@ export default {
     },
   },
   methods: {
-    pushToFavorite() {
-      this.$router.push({ name: "login" });
-    },
     closeModal() {
       this.drawer = false;
     },
