@@ -385,6 +385,11 @@ export default {
           "Flux to wzorzec projektowy stworzony do ujednolicenia przepływu danych w aplikacjach, szczególnie tych frontowych. Posiada trzy części: dispatch, store i view.View (ang. widok) to część w której użytkownik komunikuje się z aplikacją.Store to w dużym uproszczeniu obiekt z stanem aplikacji.Dispatcher to centralna część fluxa z której wysłamy prośby o zmianę stanu aplikacji.",
       },
       {
+        question: "Jak composition api zmniejsza koszty pamięci",
+        answer:
+          "Kod napisany w Composition API i <script setup> jest bardziej wydajny i przyjazny dla minifikacji niż odpowiednik Options API. Dzieje się tak, ponieważ szablon w komponencie <script setup> jest kompilowany jako funkcja wbudowana w ten sam zakres kodu <script setup>. W przeciwieństwie do dostępu do właściwości z tego, skompilowany kod szablonu może bezpośrednio uzyskiwać dostęp do zmiennych zadeklarowanych wewnątrz <ustawienia skryptu>, bez pośrednika między nimi. Prowadzi to również do lepszej minifikacji, ponieważ wszystkie nazwy zmiennych można bezpiecznie skrócić.",
+      },
+      {
         question: "Na czym polega reaktywność w vue",
         answer:
           "Wszystkie właściwości zdefiniowane w instancji vue są reaktywne.Oznacza to ,że jeżeli zajdzie jakaś zmiana to komponent automatycznie się zaktualizuje.Podczas inicjalizacji wszystkie właściwości są konwertowane do getterów oraz setterów,dzięki temu vue wie kiedy należy dokonać aktualizacji",

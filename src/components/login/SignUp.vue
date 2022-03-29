@@ -11,9 +11,8 @@
           Sign up
         </v-btn>
       </template>
-      <v-card>
-        <v-toolbar dark color="primary">
-          <v-toolbar-title>Sing up</v-toolbar-title>
+      <v-card color="darkGradient">
+        <v-toolbar dark elevation="0" color="#2c3e50">
           <v-spacer></v-spacer>
           <v-toolbar-items>
             <v-btn icon dark @click="dialog = false">
@@ -24,13 +23,14 @@
         <v-card
           v-if="isSubmitted"
           width="600"
+          elevation="0"
           outlined
-          elevation="10"
-          class="mx-auto mb-5 mt-5 pr-10 pl-10"
+          class="mx-auto pr-10 pl-10"
+          color="#2c3e50"
         >
           <v-form v-model="formValidity">
             <v-card-title>
-              <h1 class="display-1 mx-auto">Sign up</h1>
+              <h1 class="mx-auto white--text">Sign up</h1>
             </v-card-title>
             <v-text-field
               label="Name"
@@ -87,25 +87,22 @@
               :items="hearOptions"
             ></v-autocomplete>
 
-            <div class="text-center justify-center d-flex">
-              <v-checkbox
-                v-model="agreeToTerms"
-                :rules="agreeToTermsRules"
-                required
-                label="Agree to terms i condition."
-              ></v-checkbox>
-            </div>
+            <v-checkbox
+              class="pa-0 "
+              v-model="agreeToTerms"
+              :rules="agreeToTermsRules"
+              required
+              label="Agree to terms i condition."
+            ></v-checkbox>
 
-            <div class="text-center">
-              <v-btn
-                class="mx-auto mb-5"
-                @click="addUser"
-                type="button"
-                color="primary"
-                :disabled="!formValidity"
-                >Submit
-              </v-btn>
-            </div>
+            <v-btn
+              class="mx-auto mb-5"
+              @click="addUser"
+              type="button"
+              color="primary"
+              :disabled="!formValidity"
+              >Submit
+            </v-btn>
           </v-form>
         </v-card>
         <v-card
@@ -117,7 +114,6 @@
           <p class="m-0">email confirmation has been send</p>
           <v-icon class="mb-5">mdi-checkbox-marked-circle</v-icon>
         </v-card>
-        {{ registeredUsers }}
       </v-card>
     </v-dialog>
   </v-row>

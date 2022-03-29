@@ -154,6 +154,11 @@ export default {
           "Operator warunkowy (tak zwany ternary operator), to tak naprawdę skrócona wersja warunku if:",
       },
       {
+        question: "Jaka jest różnica między map a forEach?",
+        answer:
+          "W teori efekt działania jest taki sam.Map zwraca nam nową tablice natomiast forEach nie zwraca niczego.Map jest o wiele szybszy niż forEach(60%)",
+      },
+      {
         question: "Jak wyczyścić tablice?",
         answer:
           "Można to zrobić na wiele sposobów, zerując jej długość: arrayList.length = 0;. Możliwe jest także użycie arrayList = [];, co sprawi, że wartością zmiennej arrayList będzie nowy obiekt Array. Należy tu jednak pamiętać, że drugą metodę można stosować tylko wtedy, gdy do pierwszego obiektu Array nie ma w kodzie żadnych referencji.",
@@ -387,7 +392,7 @@ export default {
       {
         question: "Czym jest funkcja strzałkowa?",
         answer:
-          "Funkcja anonimowa to taka funkcja, która nie ma swojej nazwy. Funkcje takie wykorzystywane są jako funkcje zwrotne, które przekazujemy do innych funkcji.Przy skracaniu zapisu obowiązuje nas kilka dość prostych zasad.         Jeżeli funkcja wymaga tylko jednego parametru, wtedy mogę (ale nie muszę!) pominąć nawiasy:Jeżeli parametrów jest więcej, lub nie ma żadnego, wtedy nawiasy muszą zostać:Jeżeli funkcja ma tylko jedną instrukcję, mogę pominąć też klamry:A dodatkowo jeżeli jedyną instrukcją jest instrukcja return, także i jej możemy się pozbyć:Natomiast jeżeli funkcja ma więcej instrukcji - klamry muszą pozostać:",
+          "Funkcja anonimowa to taka funkcja, która nie ma swojej nazwy. Funkcje takie wykorzystywane są jako funkcje zwrotne, które przekazujemy do innych funkcji.Przy skracaniu zapisu obowiązuje nas kilka dość prostych zasad.         Jeżeli funkcja wymaga tylko jednego parametru, wtedy mogę (ale nie muszę!) pominąć nawiasy:Jeżeli parametrów jest więcej, lub nie ma żadnego, wtedy nawiasy muszą zostać:Jeżeli funkcja ma tylko jedną instrukcję, mogę pominąć też klamry:A dodatkowo jeżeli jedyną instrukcją jest instrukcja return, także i jej możemy się pozbyć:Natomiast jeżeli funkcja ma więcej instrukcji - klamry muszą pozostać:Korzystając z funkcji strzałkowych należy pamiętać, że nie tworzą one własnego kontekstu this. W związku z tym nie mogą być wykorzystywane jako konstruktor nowego obiektu.",
         secondAnswer:
           "Dodatkowymi cechami, które odróżniają je od klasycznych funkcji są:Funkcje strzałkowe nie mają wiązania this i super. Dlatego nie powinniśmy ich używać do definiowania metod w obiektach i klasachNie posiadają właściwości arguments i new.targetUżycie dla nich call, apply i bind nie da oczekiwanych rezultatów. Wynika to właśnie z faktu, że nie ma tutaj wiązania thisNie można ich używać jako konstruktoryNie wolno używać w nich yield",
       },

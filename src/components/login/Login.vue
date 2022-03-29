@@ -14,7 +14,7 @@
       </template>
 
       <v-card color="darkGradient">
-        <v-toolbar class="mb-0" dark color="#2c3e50">
+        <v-toolbar class="mb-0" elevation="0" dark color="#2c3e50">
           <v-toolbar-title>Ucz się frontu</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-toolbar-items>
