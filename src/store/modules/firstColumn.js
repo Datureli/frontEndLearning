@@ -68,7 +68,6 @@ getters: {
 },
 mutations: {
   removeItemFromFirstColumn: (state,payload) => {
-    
     const i = state.firstColumn.map(item => item.id).indexOf(payload)
     state.firstColumn.splice(i, 1);
 
