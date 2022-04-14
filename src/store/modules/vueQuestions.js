@@ -47,7 +47,7 @@ export default {
       {
         question: "Jaka jest różnica między vue a nuxt?",
         answer:
-          "Nuxt.js i Vue.js obsługują logikę w różny sposób.Główna różnica polega na tym vue zawsze działa po stronie klienta,nuxt nie.Na przykład gdy próbujemy zaznaczyć element dom,zaraz po tym jak aplikacja zostanie załadowana,istnieje możliwość, że aplikacja działa po stronie Node.js,a w node.js nie ma elementów dom",
+          "Nuxt.js i Vue.js obsługują logikę w różny sposób.Główna różnica polega na tym,że vue zawsze działa po stronie klienta,nuxt nie.",
         secondAnswer:
           "To samo miałoby miejsce podczas uzyskiwania dostępu do lokalnej pamięci przeglądarki. To jest główny powód, dla którego Nuxt używa plików cookie w pamięci lokalnej — ponieważ są one zawsze dostępne.Z Vue nie mamy tego rodzaju problemów, ponieważ zawsze działa na kliencie i dlatego nie musimy zawracać sobie głowy tego rodzaju potencjalnymi problemami.",
         thirdPartOfAnswer:
@@ -78,7 +78,7 @@ export default {
       {
         question: "Czym jest vue?",
         answer:
-          "vue.js to open-source,progresywny framework javascript stworzony do tworzenia interfejsów użytkownika.Biblioteka skupiona jest na view layer.Jest łatwy w użyciu i w integracji z innymi bibliotekami",
+          "vue.js to open-source,progresywny framework javascript stworzony do tworzenia interfejsów użytkownika.Biblioteka skupiona jest na view layer.Jest łatwy w użyciu i w integracji z innymi bibliotekami.Oparty jest o wzorzec projektowy flux",
       },
       {
         question: "Czym jest atrybut ref?",
@@ -270,9 +270,9 @@ export default {
           "Należy unikać używania this wewnątrz setup ponieważ this nie będzie odnosić się do komponentu.Setup() jest wywoływany przed właściwością data,computed,methods więc nie będą dostępne wewnątrz naszej instacji setup",
       },
       {
-        question: "Plusy i minusy miksów w Vue 3",
+        question: "Wymień wady i zalety mixinów",
         answer:
-          "Miksery umożliwiają wyodrębnienie funkcjonalności komponentu w oddzielnej jednostce kodu. Każda funkcjonalność jest umieszczona w osobnym miksie, a każdy komponent może używać jednego lub więcej miksów. Kawałki zdefiniowane w miksie mogą być używane w komponencie tak, jakby były zdefiniowane w samym komponencie. Miksy są trochę podobne do klas w językach obiektowych, ponieważ zbierają kod związany z daną funkcjonalnością. Podobnie jak klasy, mieszanki mogą być dziedziczone (używane) w innych jednostkach kodu.",
+          "Mixiny umożliwiają nam współdzielenie logiki między komponentami.Kawałki zdefiniowane w miksie mogą być używane w komponencie tak, jakby były zdefiniowane w samym komponencie.",
         secondAnswer:
           "Jednak rozumowanie z użyciem mikserów jest trudniejsze, ponieważ w przeciwieństwie do klas, mieszanki nie muszą być projektowane z myślą o hermetyzacji. Mixiny mogą być kolekcjami luźno powiązanych fragmentów kodu bez dobrze zdefiniowanego interfejsu ze światem zewnętrznym. Używanie więcej niż jednej mieszanki na raz w tym samym komponencie może spowodować, że komponent będzie trudny do zrozumienia i użycia.",
         thirdPartOfAnswer:
@@ -382,7 +382,7 @@ export default {
       {
         question: "co to jest flux?",
         answer:
-          "Flux to wzorzec projektowy stworzony do ujednolicenia przepływu danych w aplikacjach, szczególnie tych frontowych. Posiada trzy części: dispatch, store i view.View (ang. widok) to część w której użytkownik komunikuje się z aplikacją.Store to w dużym uproszczeniu obiekt z stanem aplikacji.Dispatcher to centralna część fluxa z której wysłamy prośby o zmianę stanu aplikacji.",
+          "Flux to wzorzec projektowy stworzony do ujednolicenia przepływu danych w aplikacjach.Posiada trzy części: dispatch, store i view.View to część w której użytkownik komunikuje się z aplikacją.Store to w dużym uproszczeniu obiekt z stanem aplikacji.Dispatcher to centralna część fluxa z której wysłamy prośby o zmianę stanu aplikacji.",
       },
       {
         question: "Jak composition api zmniejsza koszty pamięci",
