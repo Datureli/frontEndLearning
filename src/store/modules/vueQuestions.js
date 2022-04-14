@@ -242,7 +242,7 @@ export default {
       {
         question: "Jaka jest różnica między ref a reactive?",
         answer:
-          "Pozwalają nam wykonywać akcje kiedy nasz komponent zostanie zniszczony,takie jak cleanup lub wysyłanie analiz.Zostają odpalone kiedy komponent zostanie usunięty z drzewa DOM.używanie reactive zamiast ref pozwala nam zrezygnować z value",
+          "Ref może przyjmować jako argumenty prymitywy (najczęściej: Boolean, String i Number) tak samo jak Obiekty, podczas gdy reactive() może przyjmować jako argumenty tylko Objects.Ref ma właściwość .value, której musisz użyć, aby uzyskać jej zawartość, ale dzięki funkcji reactive() możesz uzyskać do niej bezpośredni dostęp: za pomocą ref() możesz zastąpić całą instancję obiektu, ale korzystając z reaktywnej() nie możesz:",
       },
       {
         question: "Czym jest beforeEnter?",
@@ -456,7 +456,7 @@ export default {
       {
         question: "Czym są sunspense components",
         answer:
-          "Suspense components to nowa funkcja w vue 3 której ogólną ideą jest umożliwienie komponentom „zawieszenia” renderowania,Jeśli potrzebują dodatkowych danych ładowanych ze źródeł zewnętrznych. Gdy wszystkie informacje będą dostępne, js ponownie spróbuje wyrenderować komponent.Aby to osiągnąć Komponent może rzucić Promise w swojej metodzie renderowania (lub cokolwiek, co jest wywoływane podczas renderowania komponentu , np. Nowy statyczny getDerivedStateFromProps).łapie rzuconą Obietnicę i szuka najbliższego Suspensekomponentu na drzewie, które działa jak rodzaj granicy. SuspenseSkładnik bierze element jako fallbackpodpora, która będzie wyświetlana, gdy wszystkie dzieci w jego poddrzewem zawiesinie, bez względu na to gdzie i dlaczego.",
+          "Suspense components to nowa funkcja w vue 3 której ogólną ideą jest umożliwienie komponentom „zawieszenia” renderowania.Gdy wszystkie informacje będą dostępne, js ponownie spróbuje wyrenderować komponent.Aby to osiągnąć Komponent może rzucić Promise w swojej metodzie renderowania.łapie rzuconą Obietnicę i szuka najbliższego Suspensekomponentu na drzewie, które działa jak rodzaj granicy. SuspenseSkładnik bierze element jako fallbackpodpora, która będzie wyświetlana, gdy wszystkie dzieci w jego poddrzewem zawiesinie, bez względu na to gdzie i dlaczego.",
       },
       {
         question: "Jaka jest różnica między composition api a option api?",
