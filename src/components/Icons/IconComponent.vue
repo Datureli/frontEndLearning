@@ -5,9 +5,7 @@
   >
     <RandomQuestion />
     <RandomQuestionLoop />
-    <ChangeTheme />
     <MusicComponent />
-    <TranslateIcon />
     <HeartIcon />
     <DisableComponent />
   </v-row>
