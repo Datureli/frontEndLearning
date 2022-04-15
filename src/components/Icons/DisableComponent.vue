@@ -1,23 +1,13 @@
 <template>
-  <v-btn color="transparent">
-    <v-icon
-      v-if="disableStatus"
-      x-large
-      @click="
-        disableAnswers();
-        changeIcon();
-      "
-      >mdi-comment-off-outline</v-icon
-    >
-    <v-icon
-      v-else
-      x-large
-      @click="
-        disableAnswers();
-        changeIcon();
-      "
-      >mdi-comment-outline</v-icon
-    >
+  <v-btn
+    color="transparent"
+    @click="
+      disableAnswers();
+      changeIcon();
+    "
+  >
+    <v-icon v-if="disableStatus" x-large>mdi-comment-off-outline</v-icon>
+    <v-icon v-else x-large>mdi-comment-outline</v-icon>
   </v-btn>
 </template>
 
