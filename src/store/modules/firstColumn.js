@@ -70,23 +70,12 @@ mutations: {
   removeItemFromFirstColumn: (state,payload) => {
     const i = state.firstColumn.map(item => item.id).indexOf(payload)
     state.firstColumn.splice(i, 1);
-
   },
-  DELETE_CAR(state, id){
-    const i = state.firstColumn.map(item => item.id).indexOf(payload);
-    state.firstColumn.splice(i, 1);
-}
 },
 actions: {
   removeItemFromFirstColumn(context) {
     context.commit('removeItemFromFirstColumn')
   },
-  deleteItem ({commit}, id) {
-    this.$http.delete('http://localhost:3000/about/' + id)
-        .then(() => {              
-             commit('DELETE_CAR', id);
-        });
-}
 }
 
 }

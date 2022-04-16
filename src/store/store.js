@@ -11,6 +11,7 @@ import reactQuestions from './modules/reactQuestions'
 import generalQuestions from "./modules/generalQuestions";
 import firstColumn from "./modules/firstColumn"
 import typescriptQuestions from './modules/typescriptQuestions'
+import testQuestions from './modules/testQuestions'
 
 Vue.use(Vuex);
 
@@ -26,7 +27,8 @@ export default new Vuex.Store({
     reactQuestions,
     generalQuestions,
     typescriptQuestions,
-    firstColumn
+    firstColumn,
+    testQuestions
   },
 
   state: {
