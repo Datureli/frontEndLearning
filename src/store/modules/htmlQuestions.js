@@ -45,7 +45,12 @@ export default {
       {
         question: "Co to jest div?",
         answer:
-          "Jest rodzajem pojemnika na treść. Nie ma on żadnego wpływu na treść ani układ graficzny, dopóki nie zostanie ostylizowany z użyciem CSS.  ",
+          "Jest rodzajem pojemnika na treść. Nie ma on żadnego wpływu na treść ani układ graficzny, dopóki nie zostanie ostylizowany z użyciem CSS.",
+      },
+      {
+        question: "Czym jest label?",
+        answer:
+          "Element definiuje etykietę dla pola formularza, po kliknięciu której uaktywnia się przypisane jej pole.",
       },
       {
         question:

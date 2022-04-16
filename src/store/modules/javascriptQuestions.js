@@ -365,7 +365,19 @@ export default {
       },
       {
         question: "Czym jest funkcja anonimowa?",
-        answer: "Funkcja anonimowa to po prostu funkcja bez nazwy,używając wyrażenia funkcyjnego nie musimy nadawać nazwy po słowie function().",
+        answer: "Funkcja anonimowa to po prostu funkcja bez nazwy,używając wyrażenia funkcyjnego nie musimy nadawać nazwy po słowie function.",
+      },
+      {
+        question: "Jak działa Math.floor?",
+        answer: "zwraca największą liczbę całkowitą mniejszą lub równą podanej liczbie.",
+      },
+      {
+        question: "Jak działa JSON.parse",
+        answer: "Przekształca tekst w formacie JSON (ang. JavaScript Object Notation) na wartości proste i obiekty obsługiwane przez JavaScript. JSON jest specjalnym formatem zapisu różnych danych o typach występujących w języku JavaScript, ale z dodatkowymi ograniczeniami. Polegają one m.in. na tym, że wszystkie wartości tekstowe - w tym klucze obiektów - muszą być ujęte w znaki cudzysłowu, a nie apostrofy. Dane muszą być zapisane wprost przy pomocy literałów, a nie z użyciem operatora new oraz tworzone w całości za jednym razem bez używania zmiennych pomocniczych. Ponadto w formacie JSON można zapisać tylko następujące typy danych: Object, Array, String, Boolean, Number, Null.",
+      },
+      {
+        question: "Jak działa Math.random?",
+        answer: "zwraca wartość pseudolosową z przedziału 0 - 1",
       },
       {
         question: "Jak działa async?",

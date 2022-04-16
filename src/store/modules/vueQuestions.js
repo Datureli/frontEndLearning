@@ -63,17 +63,17 @@ export default {
       {
         question: "Czym są mixiny?",
         answer:
-          "mixiny to funkcje które pozwalają nam na reużywalność kodu pomiędzy komponentami w vue js.Jest to objekt javascript który może zawierać każdą opcję jaką zawiera komponent.Mixiny są pisane w odrebnym pliku i mogą być dzielone pomiędzy komponentami",
+          "mixiny to funkcje które pozwalają nam na reużywalność kodu pomiędzy komponentami w vue.Jest to objekt javascript który może zawierać każdą opcję jaką zawiera komponent.Mixiny są pisane w odrebnym pliku i mogą być dzielone pomiędzy komponentami",
       },
       {
         question: "Do czego nam plik main.js w vue?",
         answer:
-          "W pliku main.js dzieją się trzy zasadnicze rzeczy, na które warto zwrócić uwagę:Tworzona jest instancja Vue.Renderowanie komponentu najwyższego poziomu przeniesione zostaje do App.vue.Instancja Vue zostaje powiązana z elementem #app znajdującym się w pliku index.html."
+          "W pliku main.js dzieją się trzy zasadnicze rzeczy, na które warto zwrócić uwagę:Tworzona jest instancja Vue.Renderowanie komponentu najwyższego poziomu przeniesione zostaje do App.vue.Instancja Vue zostaje powiązana z elementem #app znajdującym się w pliku index.html.",
       },
       {
         question: "Czym jest vue-cli?",
         answer:
-          "Aplikacja konsolowa oparta o node.js, dzięki której będziemy w stanie zarządzać naszą aplikacją z poziomu terminala. Aby zainstalować vue-cli musimy posiadać node.js oraz npm/yarn."
+          "Aplikacja konsolowa oparta o node.js, dzięki której będziemy w stanie zarządzać naszą aplikacją z poziomu terminala. Aby zainstalować vue-cli musimy posiadać node.js oraz npm/yarn.",
       },
       {
         question: "Czym jest vue?",
@@ -83,7 +83,7 @@ export default {
       {
         question: "Czym jest atrybut ref?",
         answer:
-          "Vue zapewnia nam koncept propsów oraz zdarzeń umożliwiających komunikację pomiędzy komponentem rodzica i komponentem dziecka.Czasami trzeba uzyskać dostęp bezpośrednio do komponentu dziecka w javascript.Aby uzyskać ten efekt możemy użyć atrybutu ref aby przypisać referencje id do komponentu dziecka.Po przypisaniu mamy dostęp do instancji komponentu w miejscu gdzie zdefiniowalismy ref"
+          "Vue zapewnia nam koncept propsów oraz zdarzeń umożliwiających komunikację pomiędzy komponentem rodzica i komponentem dziecka.Czasami trzeba uzyskać dostęp bezpośrednio do komponentu dziecka w javascript.Aby uzyskać ten efekt możemy użyć atrybutu ref aby przypisać referencje id do komponentu dziecka.Po przypisaniu mamy dostęp do instancji komponentu w miejscu gdzie zdefiniowalismy ref",
       },
       {
         question: "Wyjaśnij cykl życia w Vue",
@@ -102,7 +102,7 @@ export default {
       {
         question: "Jak działają layouts w nuxt?",
         answer:
-          "Aplikacje Vue.js mają główny plik App.vue, który jest głównym opakowaniem(wrapper) komponentów głównych dla wszystkich komponentówCnaplikacji. Nuxt.js wykorzystuje układy, w których każdy układ służy jako indywidualne opakowanie dla komponentów aplikacji.Na przykład, jeśli chcemy, aby niektóre strony korzystały z różnych bibliotek UI, globalnych stylów CSS, rodzin czcionek, systemów projektowania, metatagów lub innych elementów, możemy zdefiniować układ, który ma być używany jako jego główny komponent nadrzędny. Domyślnie wszystkie strony Nuxt.js używają układu default.vue."
+          "Aplikacje Vue.js mają główny plik App.vue, który jest głównym opakowaniem(wrapper) komponentów głównych dla wszystkich komponentówCnaplikacji. Nuxt.js wykorzystuje układy, w których każdy układ służy jako indywidualne opakowanie dla komponentów aplikacji.Na przykład, jeśli chcemy, aby niektóre strony korzystały z różnych bibliotek UI, globalnych stylów CSS, rodzin czcionek, systemów projektowania, metatagów lub innych elementów, możemy zdefiniować układ, który ma być używany jako jego główny komponent nadrzędny. Domyślnie wszystkie strony Nuxt.js używają układu default.vue.",
       },
       {
         question: "Czym są sloty?",
@@ -112,7 +112,7 @@ export default {
       {
         question: "Czym są scoped slots?",
         answer:
-          "Wymieniony rodzaj slotów jest szczególnie przydatny jeżeli chcielibyśmy przekazać dane z komponentu dziecka posiadajcego sloty do rodzica"
+          "Wymieniony rodzaj slotów jest szczególnie przydatny jeżeli chcielibyśmy przekazać dane z komponentu dziecka posiadajcego sloty do rodzica",
       },
       {
         question: "Struktura w nuxt js?",
@@ -130,7 +130,7 @@ export default {
         secondAnswer:
           "onBeforeMount - wywołane przed rozpoczęciem montażu onMounted - wywoływane, gdy komponent jest montowany onBeforeUpdate - wywoływana, gdy reaktywne dane ulegają zmianie i przed ponownym renderowaniem onUpdated - wywołana po ponownym renderowaniu onBeforeUnmount - wywołana przed zniszczeniem instancji Vue onUnmounted - wywoływana po zniszczeniu instancji onActivated - wywoływane, gdy aktywny jest komponent onDeactivated - wywoływana, gdy utrzymywany przy życiu komponent jest dezaktywowany onErrorCaptured - wywoływana, gdy zostanie przechwycony błąd z komponentu potomnego",
       },
-      
+
       {
         question: "Czym jest one-way data flow?",
         answer:
@@ -162,7 +162,7 @@ export default {
       {
         question: "opisz beforeCreate",
         answer:
-          "BeforeCreate uruchamia się każdorazowo podczas inicjalizacji naszego komponentu.Data na ten moment nie jest reaktywna,a eventy nie zostały jeszcze ustawione więc nie możemy dokonać ,żadnych interakcji z naszym komponentem. Używanie beforeCreatehaka jest przydatne, gdy potrzebujesz jakiegoś rodzaju wywołania logiki / API, które nie musi być przypisane do danych. Ponieważ gdybyśmy teraz przypisywali coś do danych, zostałoby to utracone po zainicjowaniu stanu."
+          "BeforeCreate uruchamia się każdorazowo podczas inicjalizacji naszego komponentu.Dane na ten moment nie są reaktywne,a eventy nie zostały jeszcze ustawione więc nie możemy dokonać ,żadnych interakcji z naszym komponentem. Używanie beforeCreate jest przydatne, gdy potrzebujesz jakiegoś rodzaju wywołania logiki / API, które nie musi być przypisane do danych. Ponieważ gdybyśmy teraz przypisywali coś do danych, zostałoby to utracone po zainicjowaniu stanu.",
       },
       {
         question: "Jaka jest różnica między Vue2 a Vue3?",
@@ -242,7 +242,7 @@ export default {
       {
         question: "Jaka jest różnica między ref a reactive?",
         answer:
-          "Ref może przyjmować jako argumenty prymitywy (najczęściej: Boolean, String i Number) tak samo jak Obiekty, podczas gdy reactive() może przyjmować jako argumenty tylko Objects.Ref ma właściwość .value, której musisz użyć, aby uzyskać jej zawartość, ale dzięki funkcji reactive() możesz uzyskać do niej bezpośredni dostęp: za pomocą ref() możesz zastąpić całą instancję obiektu, ale korzystając z reaktywnej() nie możesz:",
+          "Ref może przyjmować jako argumenty prymitywy (Boolean, String i Number) tak samo jak Obiekty, podczas gdy reactive może przyjmować jako argumenty tylko Obiekty.Ref ma właściwość .value, której musisz użyć, aby uzyskać jej zawartość, ale dzięki funkcji reactive możesz uzyskać do niej bezpośredni dostęp. za pomocą ref możesz zastąpić całą instancję obiektu, ale korzystając z reactive nie możesz:",
       },
       {
         question: "Czym jest beforeEnter?",
@@ -252,7 +252,7 @@ export default {
       {
         question: "Czym jest toRefs?",
         answer:
-          "Ta funkcja przekonwertuje każdą z wartości obiektu i zmapuje ją w jej własnym ref.właściwości są reaktywne, więc jeśli musisz użyć destrukturyzacji ES6, powinieneś użyć toRefs, w przeciwnym razie wpłynęłoby to na reaktywność właściwości.",
+          "Konwertuje reaktywny obiekt na zwykły obiekt, w którym każda właściwość wynikowego obiektu jest odnośnikiem wskazującym na odpowiednią właściwość oryginalnego obiektu. Każdy indywidualny ref jest tworzony za pomocą toRef.",
       },
       {
         question: "Jak uzywać propsów w composition api?",
@@ -267,16 +267,16 @@ export default {
       {
         question: "dlaczego powinniśmy unikać używania this wewnątrz setup?",
         answer:
-          "Należy unikać używania this wewnątrz setup ponieważ this nie będzie odnosić się do komponentu.Setup() jest wywoływany przed właściwością data,computed,methods więc nie będą dostępne wewnątrz naszej instacji setup",
+          "Ponieważ this nie będzie odnosić się do komponentu.Setup() jest wywoływany przed właściwością data,computed,methods więc nie będą dostępne wewnątrz naszej instacji setup",
       },
       {
         question: "Wymień wady i zalety mixinów",
         answer:
           "Mixiny umożliwiają nam współdzielenie logiki między komponentami.Kawałki zdefiniowane w miksie mogą być używane w komponencie tak, jakby były zdefiniowane w samym komponencie.",
         secondAnswer:
-          "Jednak rozumowanie z użyciem mikserów jest trudniejsze, ponieważ w przeciwieństwie do klas, mieszanki nie muszą być projektowane z myślą o hermetyzacji. Mixiny mogą być kolekcjami luźno powiązanych fragmentów kodu bez dobrze zdefiniowanego interfejsu ze światem zewnętrznym. Używanie więcej niż jednej mieszanki na raz w tym samym komponencie może spowodować, że komponent będzie trudny do zrozumienia i użycia.",
+          "Mixiny mogą być kolekcjami luźno powiązanych fragmentów kodu bez dobrze zdefiniowanego interfejsu ze światem zewnętrznym. Używanie więcej niż jednej mieszanki na raz w tym samym komponencie może spowodować, że komponent będzie trudny do zrozumienia i użycia.",
         thirdPartOfAnswer:
-          "Bardziej praktycznym problemem, który może wystąpić podczas używania mikserów w Vue, jest kolizja nazw, co ma miejsce, gdy używa się dwóch lub więcej mixinów deklarujących nazwy pospolite. W tym miejscu należy zaznaczyć, że jeśli domyślna strategia Vue radzenia sobie z kolizjami nazw nie jest idealna w danej sytuacji, to deweloper może ją dostosować, co odbywa się kosztem wprowadzenia większej złożoności.Inną kwestią jest to, że mixiny nie oferują czegoś podobnego do konstruktora klas. To jest problem, ponieważ często potrzebujemy funkcjonalności, która jest bardzo podobna, ale nie dokładnie to samo, występować w różnych komponentach. W niektórych prostych przypadkach można to obejść, stosując mieszanki w fabrykach.                ",
+          "Bardziej praktycznym problemem, który może wystąpić podczas używania mixinów w Vue, jest kolizja nazw, co ma miejsce, gdy używa się dwóch lub więcej mixinów deklarujących nazwy.Inną kwestią jest to, że mixiny nie oferują czegoś podobnego do konstruktora klas.",
       },
       {
         question: "Czym jest atrybut ref?",
@@ -286,12 +286,12 @@ export default {
       {
         question: "Czym jest multi root template?",
         answer:
-          "W vue 2 mogliśmy mieć tylko jeden root element wewnątrz templatu.W vue 3 uległo to zmianie dzięki funkcji fragmens,dzięki temu nie musimy więcej posiadać tylko jednego root element.",
+          "W vue 2 mogliśmy mieć tylko jeden główny element wewnątrz template.W vue 3 uległo to zmianie dzięki funkcji fragmens,dzięki temu nie musimy więcej posiadać tylko jednego głównego elementu.",
       },
       {
         question: "Czym jest setup w composition api?",
         answer:
-          "Composition api wprowadza opcję setup(), która jest uruchamiana przed każdym przechwyceniem cyklu życia. Setup() zostanie uruchomiony przed utworzeniem komponentu, gdy właściwości zostaną rozwiązane i będą gotowe do użycia 🤗.Funkcja setup() przyjmuje dwa argumenty: pierwszy to props a drugi context .kontekst jest normalnym obiektem JS i nie jest reaktywny.",
+          "Composition api wprowadza opcję setup, która jest uruchamiana przed każdym przechwyceniem cyklu życia.Setup zostanie uruchomiony przed utworzeniem komponentu, gdy właściwości zostaną rozwiązane i będą gotowe do użycia 🤗.Funkcja setup() przyjmuje dwa argumenty: pierwszy to props a drugi context.kontekst jest normalnym obiektem JS i nie jest reaktywny.",
       },
       {
         question: "Czym są filtry?",
@@ -313,9 +313,7 @@ export default {
       {
         question: "Wyjaśnij reaktywność w composition api?",
         answer:
-          "Wartości zadeklarowane w setup nie są domyślnie reaktywne.W Options API obiekt danych konwertuje swoje właściwości na pobierające/ustawiające, aby były reaktywne a zatem za każdym razem, gdy dokonamy zmiany, zostanie to odzwierciedlone w DOM.W przypadku setup, aby odzwierciedlić zmiany, musisz upewnić się, że wartość jest reaktywna, używając opcji Ref lub Reactive.Słowo kluczowe „this” nie jest dostępne w setup. W Options API słowo kluczowe „this” odnosi się do komponentu, ale w Composition API „this” będzie niezdefiniowane.Ponieważ setup jest wywoływana przed jakimkolwiek innym przechwyceniem cyklu życia, „this” nie będzie odwołaniem do bieżącej aktywnej instancji i dlatego nie będzie zachowywać się jak w innych opcjach.",
-        secondAnswer:
-          "Setup musi zwracać obiekt za każdym razem, gdy chcesz, aby szablon komponentu miał dostęp do właściwości kontekstu, a także właściwości przekazanych do setup. Właściwość z setup, której chcesz użyć w szablonie komponentu, musi zostać zwrócona w obiekcie JS.",
+          "Wartości zadeklarowane w setup nie są domyślnie reaktywne.W setup, aby odzwierciedlić zmiany, musisz upewnić się, że wartość jest reaktywna, używając opcji Ref lub Reactive.Słowo kluczowe „this” nie jest dostępne w setup. W Options API słowo kluczowe „this” odnosi się do komponentu, ale w Composition API „this” będzie niezdefiniowane.Ponieważ setup jest wywoływana przed jakimkolwiek innym przechwyceniem cyklu życia, „this” nie będzie odwołaniem do bieżącej aktywnej instancji i dlatego nie będzie zachowywać się jak w innych opcjach.",
       },
       {
         question: "Czym jest Destroy hook?",
@@ -415,7 +413,7 @@ export default {
           "Dyrektywy niestandardowe to małe polecenia, które można dołączyć do elementów DOM. Są one poprzedzone v-, aby poinformować bibliotekę, że używasz specjalnego fragmentu znaczników i aby zachować spójność składni. Są one zazwyczaj przydatne, jeśli potrzebujesz niskopoziomowego dostępu do elementu HTML, aby kontrolować pewne zachowanie.",
       },
       {
-        question: "Co to jest router vue i jakie są jego funkcje?",
+        question: "Co to jest router i jakie są jego funkcje?",
         answer:
           "Vue Router to oficjalna biblioteka routingu dla aplikacji jednostronicowych zaprojektowana do użytku z frameworkiem Vue.js.Zagnieżdżone mapowanie trasy/widoku Modułowa, oparta na komponentach konfiguracja routera Parametry trasy, zapytanie, symbole wieloznaczne.Szczegółowa kontrola nawigacji Linki z automatycznymi aktywnymi klasami CSS Tryb historii HTML5 lub tryb skrótu z automatycznym przywracaniem w IE9 Przywróć pozycję przewijania po powrocie do trybu historii",
       },
