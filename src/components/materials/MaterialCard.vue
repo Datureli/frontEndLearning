@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto ml-15 module-border-wrap"  width="300" max-height="350">
+  <v-card class="mx-auto ml-15 module-border-wrap"  height="350" width="300" max-height="350">
     <v-card class="module" >
       <v-card-title  class="mx-auto mt-15">
         <slot> </slot>

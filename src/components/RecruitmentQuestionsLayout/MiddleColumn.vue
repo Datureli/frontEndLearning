@@ -8,7 +8,12 @@
       tile
       :elevation="elevation"
     >
-      <h1 class="mt-15" v-if="this.$route.path === '/about'">Choose Category</h1>
+      <h1
+        class="mt-15 pa-16 text-h2 font-weight-black"
+        v-if="this.$route.path === '/about'"
+      >
+        Choose Category
+      </h1>
 
       <CssQuestions v-if="this.$route.path === '/about/cssquestions'" />
       <JavascriptQuestions v-if="this.$route.path === '/about/javascript'" />

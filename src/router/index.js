@@ -91,15 +91,16 @@ const routes = [
     component: () => import("../components/games/Quiz"),
   },
   {
+    path: "book",
+    name: "Book",
+    component: () => import("../components/materials/Book"),
+  },
+  {
     path: "/materials",
     name: "Materials",
     component: () => import("../views/Materials"),
     children: [
-      {
-        path: "video",
-        name: "Video",
-        component: () => import("../components/login/FavoriteSection"),
-      },
+  
       {
         path: "favorite",
         name: "Favorite",

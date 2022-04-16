@@ -15,7 +15,7 @@
             </v-toolbar-items>
           </v-toolbar>
 
-          <v-list color="primary" height="520" class="green--text">
+          <v-list color="primary" height="520" class="green--text trans">
             <v-list-item-group>
               <v-list-item
                 color="green"
@@ -125,6 +125,7 @@ export default {
         case "Games":
           return "darkGradient";
         case "English":
+          case "Book":
           return "orange";
       }
     },
@@ -136,3 +137,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.trans {
+  transition: 0.2s;
+}
+</style>
