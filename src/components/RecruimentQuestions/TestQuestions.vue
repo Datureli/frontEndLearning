@@ -9,7 +9,7 @@
       <v-list-item>
         <v-list-item-content>
           <v-list-item-subtitle
-            class="text--primary font-weight-black text-h4 text-wrap "
+            class="text--primary font-weight-black text-h4 text-wrap"
             v-text="testQuestions.question"
           ></v-list-item-subtitle>
 
@@ -28,7 +28,7 @@
       </v-list-item>
     </v-carousel-item>
     <v-pagination
-      style="position: absolute; bottom: 18%; right:36%"
+      style="position: absolute; bottom: 18%; right: 36%"
       v-model="page"
       :length="3"
     ></v-pagination>

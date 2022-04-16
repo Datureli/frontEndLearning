@@ -7,12 +7,9 @@
       color="transparent"
       tile
       :elevation="elevation"
-      
     >
-      <h1 class="mt-15" v-if="this.$route.path === '/about'">
-        Choose Category
-      </h1>
-       
+      <h1 class="mt-15" v-if="this.$route.path === '/about'">Choose Category</h1>
+
       <CssQuestions v-if="this.$route.path === '/about/cssquestions'" />
       <JavascriptQuestions v-if="this.$route.path === '/about/javascript'" />
       <HtmlQuestions v-if="this.$route.path === '/about/htmlquestions'" />
@@ -23,7 +20,7 @@
       <TestQuestions v-if="this.$route.path === '/about/test'" />
       <TypeScriptQuestions v-if="this.$route.path === '/about/typescript'" />
     </v-sheet>
-     <IconComponent v-if="this.$route.path != '/about'"  />
+    <IconComponent v-if="this.$route.path != '/about'" />
   </div>
 </template>
 

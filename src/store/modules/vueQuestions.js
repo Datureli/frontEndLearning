@@ -11,19 +11,19 @@ export default {
       {
         question: "Czym jest created hook",
         answer:
-          "Jest to pierwszy hook który działa w naszym komponencie.Wywoływany synchronicznie po utworzeniu instancji.Na tym etapie instancja zakończyła przetwarzanie opcji,co oznacza,że ​​skonfigurowano obserwację danych, obliczone właściwości, metody, wywołania zwrotne watch / event. Jednak faza montażu nie została rozpoczęta, a właściwość $ el nie będzie jeszcze dostępna.W odróżnieniu od innych hooks,creation hook działą również podczas server-side renderingu.Nie posiada dostępu do dom ani docelowego elemntu montażowego",
+          "Jest to pierwszy hook który działa w naszym komponencie.Wywoływany synchronicznie po utworzeniu instancji.Na tym etapie instancja zakończyła przetwarzanie opcji,co oznacza,że skonfigurowano obserwację danych, obliczono właściwości, metody, wywołania zwrotne watch / event. Jednak faza montażu nie została rozpoczęta, a właściwość $ el nie będzie jeszcze dostępna.W odróżnieniu od innych hooks,creation hook działą również podczas server-side renderingu.Nie posiada dostępu do dom ani docelowego elemntu montażowego",
       },
       {
         question: "Czym jest mounted hook",
         answer:
-          "Jest najczęściej wywoływanym hookiem.Używany go jeżeli potrzebuje dostępu lub potrzebujemy zmodyfikować DOM naszego komponentu natychmiastowo przez lub po pierwszym wyrenderowaniu.Nie działa podczas renderowania po stronie serwera.Nie należy używać mounted hooks jeżeli potrzebujemy fetchować nasze dane komponentu podczas inicjalizacji Wywoływana po zamontowaniu instancji, w której el jest zastępowany przez nowo utworzoną maszynę vm. $ El. Jeśli instancja główna jest podłączona do elementu w dokumencie, vm. $ El będzie również w dokumencie po wywołaniu zamontowania.",
+          "Jest najczęściej wywoływanym hookiem.Używany go jeżeli potrzebujemy dostępu lub potrzebujemy zmodyfikować DOM naszego komponentu natychmiastowo przed lub po pierwszym wyrenderowaniu.Nie działa podczas renderowania po stronie serwera.Nie należy używać mounted hooks jeżeli potrzebujemy fetchować nasze dane komponentu podczas inicjalizacji. Wywoływana po zamontowaniu instancji, w której el jest zastępowany przez nowo utworzoną maszynę vm. $ El.",
       },
       {
         question: "Czym są komponenty?",
         answer:
-          "Komponenty są to instancje Vue, dzięki którym możemy wielokrotnie wykorzystywać te same części kodu w uniwersalny sposób. Unikamy w ten sposób powtarzania się, czyli przestrzegamy zasady DRY (Don’t Repeat Yourself). Dzięki temu aplikacja wygląda czysto i przejrzyście, a w przypadku błędów nie musimy poprawiać ich w wielu miejscach.",
+          "Komponenty są to instancje Vue, dzięki którym możemy wielokrotnie wykorzystywać te same części kodu w uniwersalny sposób.Unikamy w ten sposób powtarzania się, czyli przestrzegamy zasady DRY.Dzięki temu aplikacja wygląda czysto i przejrzyście, a w przypadku błędów nie musimy poprawiać ich w wielu miejscach.",
         secondAnswer:
-          "Komponent definiujemy za pomocą Vue.component. Pierwszym argumentem metody jest nazwa elementu DOM, z którego będziemy korzystać w szablonach. Drugi parametr to obiekt, który w tym przypadku posiada dwie właściwości. Najważniejszą z nich jest template, który w efekcie będzie podmieniany w realnym drzewie DOM za każdym razem, kiedy użyjemy komponentu. Drugą właściwością obiektu jest metoda data (metoda, nie obiekt!) zwracająca obiekt z danymi, które będą dostępne w zakresie pojedynczego komponentu.",
+          "Komponent definiujemy za pomocą Vue.component.Pierwszym argumentem metody jest nazwa elementu DOM, z którego będziemy korzystać w szablonach. Drugi parametr to obiekt, który w tym przypadku posiada dwie właściwości. Najważniejszą z nich jest template, który w efekcie będzie podmieniany w realnym drzewie DOM za każdym razem, kiedy użyjemy komponentu. Drugą właściwością obiektu jest metoda data (metoda, nie obiekt!) zwracająca obiekt z danymi, które będą dostępne w zakresie pojedynczego komponentu.",
         thirdPartOfAnswer:
           "Komponenty można zagnieżdżać wewnątrz siebie budując jednocześnie bardziej zaawansowane struktury szablonów. W przykładzie poniżej stworzono dwa proste przykłady: parent i child. Wykorzystane tu zostały specjalne tagi <slot></slot>, które stanowią placeholder. W ich miejscu renderowane jest to, co zostało umieszczone w elemencie rodzica.",
       },
@@ -32,7 +32,8 @@ export default {
         answer:
           "vue js posiada niski próg wejścia.Framework jest lekki,waży tylko 18-23 kb,Vue js jest szybszym frameworkiem niż Angular czy React,virtual DOM,data binding,komponentyAnimation/Transition.",
         secondAnswer:
-          "Jako React jest oparty na komponentach oraz jednostronnym przepływie danych, i podobnie do Angulara posiada proste szablony z dobrą składnią. Vue nie potrzebuje konfiguracji środowiska,Posiada bardzo szczegołową dokumentacje",
+          "Jest oparty na komponentach oraz jednostronnym przepływie danych, i podobnie do Angulara posiada proste szablony z dobrą składnią. Vue nie potrzebuje konfiguracji środowiska,Posiada bardzo szczegołową dokumentacje",
+          thirdPartOfAnswer: 'Vue pozwala na tworzenie prostych aplikacji webowych opartych o Model-view-viewmodel.'
       },
       {
         question: "Czym jest composition api?",
@@ -151,7 +152,7 @@ export default {
       {
         question: "Czym jest atrybut key?",
         answer:
-          "Każdy element powinien mieć przypisany atrybut key z identyfikatorem w postaci stringu lub wartości numerycznej. Pozwala to Vue lepiej śledzić zmiany na liście i poprawić wydajność.Atrybut key to podpowiedz dla algorytmu virtual DOM.Vue uses an algorithm that minimizes element movement and tries to reuse the elements of the same type. But with 'key' attribute elements will be reordered and the elements without key are destroyed. It's similar to $index in AngularJS. It's mostly used with the 'v-for' directive.",
+          "Każdy element powinien mieć przypisany atrybut key z identyfikatorem w postaci stringu lub wartości numerycznej. Pozwala to Vue lepiej śledzić zmiany na liście i poprawić wydajność.Atrybut key to podpowiedz dla algorytmu virtual DOM.Vue uses an algorithm that minimizes element movement and tries to reuse the elements of the same type. But with 'key' attribute elements will be reordered and the elements without key are destroyed.",
       },
       {
         question:

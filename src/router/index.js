@@ -7,7 +7,7 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: () => import("../views/Home.vue"),
+    component: () => import("../views/Home"),
     meta: {
       title: "Front-end learning platform"
     }
@@ -15,48 +15,48 @@ const routes = [
   {
     path: "/about/",
     name: "About",
-    component: () => import("../views/About.vue"),
+    component: () => import("../views/About"),
     children: [
       {
         path: "cssquestions",
         component: () =>
-          import("../components/RecruimentQuestions/CssQuestions.vue"),
+          import("../components/RecruimentQuestions/CssQuestions"),
         name: "CssQuestions",
       },
       {
         path: "javascript",
         component: () =>
-          import("../components/RecruimentQuestions/JavascriptQuestions.vue"),
+          import("../components/RecruimentQuestions/JavascriptQuestions"),
         name: "JavascriptQuestions",
       },
       {
         path: "vue",
         component: () =>
-          import("../components/RecruimentQuestions/VueQuestions.vue"),
+          import("../components/RecruimentQuestions/VueQuestions"),
         name: "VueQuestions",
       },
       {
         path: "react",
         component: () =>
-          import("../components/RecruimentQuestions/ReactQuestions.vue"),
+          import("../components/RecruimentQuestions/ReactQuestions"),
         name: "ReactQuestions",
       },
       {
         path: "test",
         component: () =>
-          import("../components/RecruimentQuestions/TestQuestions.vue"),
+          import("../components/RecruimentQuestions/TestQuestions"),
         name: "TestQuestions",
       },
       {
         path: "typescript",
         component: () =>
-          import("../components/RecruimentQuestions/TypeScriptQuestions.vue"),
+          import("../components/RecruimentQuestions/TypeScriptQuestions"),
         name: "TypeScriptQuestions",
       },
       {
         path: "general",
         component: () =>
-          import("../components/RecruimentQuestions/GeneralQuestions.vue"),
+          import("../components/RecruimentQuestions/GeneralQuestions"),
         name: "GeneralQuestions",
       },
 
@@ -69,7 +69,7 @@ const routes = [
       {
         path: "gitquestions",
         component: () =>
-          import("../components/RecruimentQuestions/GitQuestions.vue"),
+          import("../components/RecruimentQuestions/GitQuestions"),
         name: "GitQuestions",
       },
     ],
@@ -78,7 +78,7 @@ const routes = [
   {
     path: "/flashcards",
     name: "FlashCards",
-    component: () => import("../views/FlashCards.vue"),
+    component: () => import("../views/FlashCards"),
   },
   {
     path: "/games",
@@ -98,51 +98,51 @@ const routes = [
       {
         path: "video",
         name: "Video",
-        component: () => import("../components/login/FavoriteSection.vue"),
+        component: () => import("../components/login/FavoriteSection"),
       },
       {
         path: "favorite",
         name: "Favorite",
-        component: () => import("../components/login/FavoriteSection.vue"),
+        component: () => import("../components/login/FavoriteSection"),
       },
       {
         path: "favorite",
         name: "Favorite",
-        component: () => import("../components/login/FavoriteSection.vue"),
+        component: () => import("../components/login/FavoriteSection"),
       },
     ]
   },
   {
     path: "/signup",
     name: "SignUp",
-    component: () => import("../components/login/SignUp.vue")
+    component: () => import("../components/login/SignUp")
   },
   {
     path: "/login/",
     name: "Login",
-    component: () => import("../components/login/Login.vue"),
+    component: () => import("../components/login/Login"),
     children: [
       {
         path: "favorite",
         name: "Favorite",
-        component: () => import("../components/login/FavoriteSection.vue"),
+        component: () => import("../components/login/FavoriteSection"),
       },
       {
         path: "password",
         name: "Password",
-        component: () => import("../components/login/ChangePassword.vue"),
+        component: () => import("../components/login/ChangePassword"),
       },
       {
         path: "messages",
         name: "Messages",
-        component: () => import("../components/login/MessageSection.vue"),
+        component: () => import("../components/login/MessageSection"),
       }
     ]
   },
   {
     path: "/english",
     name: "English",
-    component: () => import("../components/EnglishSection/English.vue"),
+    component: () => import("../components/EnglishSection/English"),
   },
 
 ];
