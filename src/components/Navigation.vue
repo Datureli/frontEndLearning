@@ -121,11 +121,13 @@ export default {
         case "TestQuestions":
           return "darkGradient";
         case "Materials":
+        case "Book":
+        case "Wideo":
+        case "Website":
           return "black";
         case "Games":
           return "darkGradient";
         case "English":
-          case "Book":
           return "orange";
       }
     },

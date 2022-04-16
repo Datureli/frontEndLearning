@@ -96,22 +96,19 @@ const routes = [
     component: () => import("../components/materials/Book"),
   },
   {
+    path: "wideo",
+    name: "Wideo",
+    component: () => import("../components/materials/Video"),
+  },
+  {
+    path: "website",
+    name: "Website",
+    component: () => import("../components/materials/Website"),
+  },
+  {
     path: "/materials",
     name: "Materials",
     component: () => import("../views/Materials"),
-    children: [
-  
-      {
-        path: "favorite",
-        name: "Favorite",
-        component: () => import("../components/login/FavoriteSection"),
-      },
-      {
-        path: "favorite",
-        name: "Favorite",
-        component: () => import("../components/login/FavoriteSection"),
-      },
-    ]
   },
   {
     path: "/signup",

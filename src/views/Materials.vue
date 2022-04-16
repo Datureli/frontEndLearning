@@ -8,12 +8,12 @@
         </materialCard>
       </router-link>
 
-     <router-link :to="{ name: 'Book' }">
+     <router-link :to="{ name: 'Wideo' }">
         <materialCard class="mt-10 text-center">
           <Slot title="tab2" class="mx-auto text-h5">Książki</Slot>
         </materialCard></router-link
       >
-     <router-link :to="{ name: 'Book' }">
+     <router-link :to="{ name: 'Website' }">
         <materialCard class="mt-16">
           <Slot
             title="tab3"

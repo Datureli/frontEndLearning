@@ -8,6 +8,7 @@ state: {
           title: "Html",
           link: "/about/htmlquestions",
           icon: "mdi-language-html5",
+          color: 'orange',
           id: 1,
           
         },
@@ -15,36 +16,42 @@ state: {
           title: "Css",
           link: "/about/cssquestions",
           icon: "mdi-language-css3",
+          color: 'blue',
           id: 2
         },
         {
           title: "Javascript",
           link: "/about/javascript",
           icon: "mdi-language-javascript",
+          color: 'yellow',
           id: 3,
         },
         {
           title: "Vue",
           link: "/about/vue",
           icon: "mdi-vuejs",
+          color: 'green',
           id: 4,
         },
         {
           title: "React",
           link: "/about/react",
           icon: "mdi-react",
+          color: 'grey',
           id: 5,
         },
         {
           title: "Typescript",
           link: "/about/typescript",
           icon: "mdi-language-typescript",
+          color: 'blue',
           id: 6
         },
         {
           title: "Git",
           link: "/about/gitquestions",
           icon: "mdi-git",
+          color: 'black',
           id: 7
         },
         {
