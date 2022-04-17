@@ -124,7 +124,15 @@ export default {
         case "Book":
         case "Wideo":
         case "Website":
-          case "Html":
+        case "Html":
+        case "Css":
+        case "Javascript":
+        case "Vue":
+        case "React":
+        case "Typescript":
+        case "Git":
+        case "General":
+        case "Test":
           return "black";
         case "Games":
           return "darkGradient";

@@ -14,6 +14,7 @@ export default {
       {
         title: "Css",
         link: "/about/cssquestions",
+        bookLink: '/book/css',
         icon: "mdi-language-css3",
         color: "blue",
         id: 2,
@@ -21,6 +22,7 @@ export default {
       {
         title: "Javascript",
         link: "/about/javascript",
+        bookLink: '/book/javascript',
         icon: "mdi-language-javascript",
         color: "yellow",
         id: 3,
@@ -28,6 +30,7 @@ export default {
       {
         title: "Vue",
         link: "/about/vue",
+        bookLink: '/book/vue',
         icon: "mdi-vuejs",
         color: "green",
         id: 4,
@@ -35,6 +38,7 @@ export default {
       {
         title: "React",
         link: "/about/react",
+        bookLink: '/book/react',
         icon: "mdi-react",
         color: "blue",
         id: 5,
@@ -42,6 +46,7 @@ export default {
       {
         title: "Typescript",
         link: "/about/typescript",
+        bookLink: '/book/typescript',
         icon: "mdi-language-typescript",
         color: "blue",
         id: 6,
@@ -49,6 +54,7 @@ export default {
       {
         title: "Git",
         link: "/about/gitquestions",
+        bookLink: '/book/git',
         icon: "mdi-git",
         color: "black",
         id: 7,
@@ -56,6 +62,7 @@ export default {
       {
         title: "Ogólne",
         link: "/about/general",
+        bookLink: '/book/general',
         icon: "mdi-account-circle",
         color: "white",
         id: 8,
@@ -63,6 +70,7 @@ export default {
       {
         title: "Testowanie",
         link: "/about/test",
+        bookLink: '/book/test',
         icon: "mdi-wrench-outline",
         color: "grey",
         id: 9,
