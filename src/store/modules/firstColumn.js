@@ -58,12 +58,14 @@ state: {
           title: "Ogólne",
           link: "/about/general",
           icon: "mdi-account-circle",
+          color: 'white',
           id: 8
         },
         {
           title: "Testowanie",
           link: "/about/test",
-          icon: "mdi-account-circle",
+          icon: "mdi-wrench-outline",
+          color: 'grey',
           id: 9
         },
       ],
