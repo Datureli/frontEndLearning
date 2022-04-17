@@ -124,6 +124,7 @@ export default {
         case "Book":
         case "Wideo":
         case "Website":
+          case "Html":
           return "black";
         case "Games":
           return "darkGradient";

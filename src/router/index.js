@@ -91,9 +91,56 @@ const routes = [
     component: () => import("../components/games/Quiz"),
   },
   {
-    path: "book",
+    path: "/book/",
     name: "Book",
-    component: () => import("../components/materials/Book"),
+    component: () => import("../components/materials/Books/Book"),
+    children: [
+      {
+        path: 'html',
+        name: 'Html',
+        component: () => import("../components/materials/Books/HtmlBook")
+      },
+      {
+        path: 'css',
+        name: 'Css',
+        component: () => import("../components/materials/Books/HtmlBook")
+      },
+      {
+        path: 'javascript',
+        name: 'Javascript',
+        component: () => import("../components/materials/Books/HtmlBook")
+      },
+      {
+        path: 'vue',
+        name: 'Vue',
+        component: () => import("../components/materials/Books/HtmlBook")
+      },
+      {
+        path: 'react',
+        name: 'React',
+        component: () => import("../components/materials/Books/HtmlBook")
+      },
+      {
+        path: 'typescript',
+        name: 'Typescript',
+        component: () => import("../components/materials/Books/HtmlBook")
+      },
+      {
+        path: 'git',
+        name: 'Git',
+        component: () => import("../components/materials/Books/HtmlBook")
+      },
+      {
+        path: 'general',
+        name: 'General',
+        component: () => import("../components/materials/Books/HtmlBook")
+      },
+      {
+        path: 'tests',
+        name: 'Tests',
+        component: () => import("../components/materials/Books/HtmlBook")
+      },
+    ]
   },
   {
     path: "wideo",
