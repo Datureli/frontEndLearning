@@ -103,42 +103,42 @@ const routes = [
       {
         path: 'css',
         name: 'Css',
-        component: () => import("../components/materials/Books/HtmlBook")
+        component: () => import("../components/materials/Books/CssBook")
       },
       {
         path: 'javascript',
         name: 'Javascript',
-        component: () => import("../components/materials/Books/HtmlBook")
+        component: () => import("../components/materials/Books/JavascriptBook")
       },
       {
         path: 'vue',
         name: 'Vue',
-        component: () => import("../components/materials/Books/HtmlBook")
+        component: () => import("../components/materials/Books/VueBook")
       },
       {
         path: 'react',
         name: 'React',
-        component: () => import("../components/materials/Books/HtmlBook")
+        component: () => import("../components/materials/Books/ReactBook")
       },
       {
         path: 'typescript',
         name: 'Typescript',
-        component: () => import("../components/materials/Books/HtmlBook")
+        component: () => import("../components/materials/Books/TypescriptBook")
       },
       {
         path: 'git',
         name: 'Git',
-        component: () => import("../components/materials/Books/HtmlBook")
+        component: () => import("../components/materials/Books/GitBook")
       },
       {
         path: 'general',
         name: 'General',
-        component: () => import("../components/materials/Books/HtmlBook")
+        component: () => import("../components/materials/Books/GeneralBook")
       },
       {
         path: 'tests',
         name: 'Tests',
-        component: () => import("../components/materials/Books/HtmlBook")
+        component: () => import("../components/materials/Books/TestBook")
       },
     ]
   },

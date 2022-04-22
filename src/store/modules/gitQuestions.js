@@ -86,6 +86,12 @@ export default {
               secondAnswer: "",
             },
             {
+              question: "Różnice między github a gitlab?", 
+              answer:
+                "Poziomy uwierzytelnienia: GitLab może ustawiać i modyfikować uprawnienia dla różnych współpracowników w zależności od ich roli. W przypadku GitHub możesz zdecydować, kto ma prawa do odczytu i zapisu w repozytorium, ale jest to bardziej ograniczone.Mieszkanie: Chociaż obie platformy pozwalają na hostowanie treści projektów na samych platformach, w przypadku GitLab może również pozwolić na samodzielne hostowanie repozytoriów, co w niektórych przypadkach może być zaletą. GitHub dodał również tę funkcję, ale tylko z niektórymi płatnymi planami.",
+              secondAnswer: "Import i eksport: GitLab zawiera bardzo szczegółowe informacje o tym, jak importować projekty, aby przenieść je z jednej platformy na drugą, taką jak GitHub, Bitbucket, lub przenieść je do GitLab. Ponadto, jeśli chodzi o eksport, GitLab oferuje bardzo solidną pracę. W przypadku GitHub szczegółowa dokumentacja nie jest dostarczana, chociaż GitHub Importer może być używany jako narzędzie, chociaż może być nieco bardziej restrykcyjny, jeśli chodzi o eksport.",
+            },
+            {
               question: "Jak sprawdzić stan plików?", 
               answer:
                 "Podstawowe narzędzie używane do sprawdzenia stanu plików to polecenie git status. ",

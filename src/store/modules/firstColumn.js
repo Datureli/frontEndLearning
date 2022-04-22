@@ -70,7 +70,7 @@ export default {
       {
         title: "Testowanie",
         link: "/about/test",
-        bookLink: '/book/test',
+        bookLink: '/book/tests',
         icon: "mdi-wrench-outline",
         color: "grey",
         id: 9,

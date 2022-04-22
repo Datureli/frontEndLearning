@@ -27,21 +27,36 @@
     <TypescriptBook v-if="this.$route.path === '/book/typescript'" />
     <GitBook v-if="this.$route.path === '/book/git'" />
     <GeneralBook v-if="this.$route.path === '/book/general'" />
-    <TestBook v-if="this.$route.path === '/book/test'" />
+    <TestBook v-if="this.$route.path === '/book/tests'" />
   </v-card>
 </template>
 <script>
-import HtmlBook from "./HtmlBook.vue";
-import { mapActions, mapState } from "vuex";
+import {
+  HtmlBook,
+  CssBook,
+  JavascriptBook,
+  VueBook,
+  ReactBook,
+  TypescriptBook,
+  GitBook,
+  GeneralBook,
+  TestBook,
+} from "./index";
+import { mapState } from "vuex";
 export default {
   components: {
     HtmlBook,
+    CssBook,
+    JavascriptBook,
+    VueBook,
+    ReactBook,
+    TypescriptBook,
+    GitBook,
+    GeneralBook,
+    TestBook,
   },
   computed: {
     ...mapState("firstColumn", ["firstColumn"]),
-  },
-  methods: {
-    ...mapActions("firstColumn", ["removeItemFromFirstColumn", "deleteItem"]),
   },
 };
 </script>

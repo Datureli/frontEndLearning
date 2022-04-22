@@ -132,7 +132,7 @@ export default {
         case "Typescript":
         case "Git":
         case "General":
-        case "Test":
+        case "Tests":
           return "black";
         case "Games":
           return "darkGradient";

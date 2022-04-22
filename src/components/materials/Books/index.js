@@ -8,7 +8,7 @@ import GitBook from '../Books/GitBook'
 import GeneralBook from '../Books/GeneralBook'
 import TestBook from '../Books/TestBook'
 
-return {
+export {
     HtmlBook,
     CssBook,
     JavascriptBook,

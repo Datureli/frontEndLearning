@@ -380,6 +380,26 @@ export default {
         answer: "zwraca wartość pseudolosową z przedziału 0 - 1",
       },
       {
+        question: "operator ...(trzech kropek)?",
+        answer: " Zbiera on do tablicy o podanej nazwie wszystkie pozostałe przekazane do funkcji argumenty, które nie zostały wymienione przed nim.No fajnie, możemy zapomnieć o obiekcie arguments i jego ograniczeniach, ale do czego można to.Spread również zapisywany jest w postaci trzech kropek ..., lecz nie jako przedrostek do ostatniego argumentu w deklaracji funkcji, a jako przedrostek do jakiejkolwiek tablicy. Jego zadaniem jest 'rozbić' tablicę na listę jej elementów. Brzmi to banalnie ale ma to olbrzymią liczbę zastosowań, z których kilka przedstawiam poniżej.",
+      },
+      {
+        question: "normalizacja danych w javascript",
+        answer: "Proces normalizacji jest intensywnie wykorzystywany w każdym projekcie oprogramowania, ponieważ normalizacja danych ma duży wpływ na zmniejszenie redundancji danych.",
+      },
+      {
+        question: "czym jest redundancja danych?",
+        answer: "Redundancja (łac. redundantia „powódź, nadmiar, zbytek”) – nadmiarowość w stosunku do tego, co konieczne lub zwykłe. Określenie może odnosić się zarówno do nadmiaru zbędnego lub szkodliwego, niecelowo zużywającego zasoby, jak i do pożądanego zabezpieczenia na wypadek uszkodzenia części systemu.",
+      },
+      {
+        question: "Czym jest transpilacja?",
+        answer: "Transpilacja to proces konwersji kodu ES6 do wariantu ES5. Jest to technika, która z jednej strony umożliwia nam pisanie nowoczesnego kodu ES6 a z drugiej sprawia, że nasze aplikacje mogą być uruchamiane np. w starszych przeglądarkach, które tego najnowszego standardu JavaScript nie obsługują. Zasada działania jest prosta:",
+      },
+      {
+        question: "Co nowego pojawiło się es6?",
+        answer: "Klasy definiowane za pomocą ‘Class’,Zmienne ‘let’ oraz ‘const’ oraz nowe podejście do zakresu (scope) zmiennych.Łańcuchy szablonowe plus możliwość tworzenia np. wieloliniowych String,Przypisywanie wartości z użyciem Destructuring,Mechanizm Promises zapewniający nowe podejście do programowanie asynchronicznego,Arrow functions – funkcje definiowanie z użyciem ‘strzałki’ czyli ‘=>’,Natywne moduły,Nowe metody String, Math, Array czy Number",
+      },
+      {
         question: "Jak działa async?",
         answer:
           "Aby JavaScript nie blokował drzewa renderowania można wykorzystać regułę async. Atrybut async powoduje, że kod JS jest wykonywany niezależnie od etapu ładowania się strony i nie wpływa na ścieżkę renderowania. Atrybut ten może być z powodzeniem zastosowany w przypadku skryptów do:analityki internetowej,    dodatkowych widgetów do strony,",

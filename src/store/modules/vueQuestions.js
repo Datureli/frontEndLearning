@@ -73,6 +73,12 @@ export default {
           "Aplikacja konsolowa oparta o node.js, dzięki której będziemy w stanie zarządzać naszą aplikacją z poziomu terminala. Aby zainstalować vue-cli musimy posiadać node.js oraz npm/yarn.",
       },
       {
+        question: "Czym jest composition functions?",
+        answer:
+          "W celu wyciągnięcia logiki z komponentów używamy composition functions. Pozwalają one nam na wyciągnięcie reaktywnego stanu oraz funkcjonalności poza komponent i używanie ich w dowolnym miejscu aplikacji. Z racji posiadania własnego stanu niezależnego od komponentów, w którym są używane, mogą w pewnym stopniu zastąpić Vuexa. Są odpowiednikami mixinów używanych w Options API.",
+          secondAnswer: 'W komponentach dokonujemy destrukturyzacji na obiekcie zwracanym przez funkcje i wyciągamy interesujące nas dane i funkcje. Dzięki destrukturyzacji omijamy konflikty nazw właściwości, które pobieramy. Zwracane właściwości możemy stworzyć jako read-only i w ten sposób zapobiec ich mutacji bezpośrednio zmieniając ich wartość. Wtedy możemy wdrożyć taką samą zasadę działania jak w przypadku mutacji w Vuexie.'
+      },
+      {
         question: "Czym jest vue?",
         answer:
           "vue.js to open-source,progresywny framework javascript stworzony do tworzenia interfejsów użytkownika.Jest łatwy w użyciu i w integracji z innymi bibliotekami.Oparty jest o wzorzec projektowy flux",
@@ -244,7 +250,7 @@ export default {
       {
         question: "Czym jest toRefs?",
         answer:
-          "Konwertuje reaktywny obiekt na zwykły obiekt, w którym każda właściwość wynikowego obiektu jest odnośnikiem wskazującym na odpowiednią właściwość oryginalnego obiektu. Każdy indywidualny ref jest tworzony za pomocą toRef.",
+          "Konwertuje reaktywny obiekt na zwykły obiekt, w którym każda właściwość wynikowego obiektu jest odnośnikiem wskazującym na odpowiednią właściwość oryginalnego obiektu. Każdy indywidualny ref jest tworzony za pomocą toRef.. Zamiast tego musimy użyć funkcji toRefs, która pozwoli nam wypakować właściwości nie tracąc reaktywności.",
       },
       {
         question: "Jak uzywać propsów w composition api?",
@@ -289,6 +295,11 @@ export default {
         question: "Czym są filtry?",
         answer:
           "Filtry są używane do formatownia tekstu w naszej aplikacji.Są używane wraz z interpolacją v-bind.",
+      },
+      {
+        question: "props w composition api?",
+        answer:
+          "Metoda setup przyjmuje dwa parametry: props i context. Wszystkie zbindowane właściwości mamy dostępne poprzez obiekt props. Ważnym jest, że nie możemy zdestrukturyzować argumentu props, ponieważ utracimy wtedy reaktywność. Zamiast tego musimy użyć funkcji toRefs, która pozwoli nam wypakować właściwości nie tracąc reaktywności.",
       },
       {
         question: "jakie są zalety nuxt.js?",
@@ -419,6 +430,11 @@ export default {
         question: "Wyjaśnij na czym polega przepływ danych w vue",
         answer:
           "Vue używa one-way data flow.Dane są przekazywane do komponentu dziecka z komponentu rodzica za pomocą właściwości props",
+      },
+      {
+        question: "Różnica między script a script setup",
+        answer:
+          "Kod wewnątrz jest kompilowany jako zawartość funkcji setup() komponentu. Oznacza to, że w przeciwieństwie do normalnego <skryptu>, który jest wykonywany tylko raz, gdy komponent jest importowany po raz pierwszy, kod wewnątrz <ustawienia skryptu> będzie wykonywany za każdym razem, gdy tworzona jest instancja komponentu.",
       },
       {
         question:

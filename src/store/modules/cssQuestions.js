@@ -48,7 +48,7 @@ export default {
       },
       {
         question: `Jakie są ograniczenia w css?`,
-        answer: `Zgodność z przeglądarką - niektóre selektory są wspierane a niektóre nie.Musimy wiedzieć które są wspierane a które nie.Cross browser issue: niektóre selektory zachowują się inaczej w różnych przeglądarkach.Nie posiada parent selector: Na ten moment w css nie możesz zaznaczyc tagu rodzica`,
+        answer: `Zgodność z przeglądarką - niektóre selektory są wspierane a niektóre nie.Cross browser issue: niektóre selektory zachowują się inaczej w różnych przeglądarkach.`,
       },
       {
         question: `Jaka jest różnica między resetowaniem a normalizowaniem CSS?`,
