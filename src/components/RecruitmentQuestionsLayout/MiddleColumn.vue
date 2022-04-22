@@ -8,12 +8,18 @@
       tile
       :elevation="elevation"
     >
-      <h1
-        class="mt-15 pa-16 text-h2 font-weight-black"
-        v-if="this.$route.path === '/about'"
-      >
-        Choose Category
-      </h1>
+      <div v-if="this.$route.path === '/about'" class="pa-15">
+        <p class="text-h4">
+          Hello, this section is dedicated to studying recruitment questions.on
+          your left hand side are the categories for each question
+        </p>
+        <div class="d-flex justify-center">
+          <v-icon x-large>mdi-arrow-left-bold</v-icon>
+          <h1 class="text-h2 font-weight-black">
+            Choose Category
+          </h1>
+        </div>
+      </div>
 
       <CssQuestions v-if="this.$route.path === '/about/cssquestions'" />
       <JavascriptQuestions v-if="this.$route.path === '/about/javascript'" />
