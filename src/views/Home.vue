@@ -8,6 +8,7 @@
       src="../assets/lightbulb.jpg"
     >
     </v-img>
+    <h1 class="white--text">First polish front-end learning platform</h1>
   </v-container-fluid>
 </template>
 
@@ -23,7 +24,7 @@ export default {
         case "md":
           return 400;
         case "lg":
-          return 450;
+          return 380;
         case "xl":
           return 400;
       }
