@@ -385,7 +385,7 @@ export default {
       },
       {
         question: "normalizacja danych w javascript",
-        answer: "Proces normalizacji jest intensywnie wykorzystywany w każdym projekcie oprogramowania, ponieważ normalizacja danych ma duży wpływ na zmniejszenie redundancji danych.",
+        answer: "Proces normalizacji jest intensywnie wykorzystywany w każdym projekcie oprogramowania, ponieważ normalizacja danych ma duży wpływ na zmniejszenie redundancji danych.Dzięki niej zamiast zapętlać tablice,możemy uzyskać dostęp do obiektu poprzez wybrane id",
       },
       {
         question: "czym jest redundancja danych?",
@@ -394,6 +394,10 @@ export default {
       {
         question: "Czym jest transpilacja?",
         answer: "Transpilacja to proces konwersji kodu ES6 do wariantu ES5. Jest to technika, która z jednej strony umożliwia nam pisanie nowoczesnego kodu ES6 a z drugiej sprawia, że nasze aplikacje mogą być uruchamiane np. w starszych przeglądarkach, które tego najnowszego standardu JavaScript nie obsługują. Zasada działania jest prosta:",
+      },
+      {
+        question: "Czym jest typ bigINt?",
+        answer: "Typ ten powstał po to aby operować na bardzo dużych liczbach, z którymi nie radzi sobie typ number. Mowa tu o liczbach większych niż 2^53. Wtedy typ number traci swoją precyzję i dlatego powstał typ bigint.deklaruje się go używając litery n na końcu liczby:",
       },
       {
         question: "Co nowego pojawiło się es6?",

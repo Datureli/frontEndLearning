@@ -9,12 +9,12 @@
       :elevation="elevation"
     >
       <div v-if="this.$route.path === '/about'" class="pa-15">
-        <p class="text-h4">
+        <p class="text-h5">
           Hello, this section is dedicated to studying recruitment questions.on
           your left hand side are the categories for each question
         </p>
         <div class="d-flex justify-center">
-          <v-icon x-large>mdi-arrow-left-bold</v-icon>
+          <v-icon x-large class="mr-3">mdi-arrow-left-bold</v-icon>
           <h1 class="text-h2 font-weight-black">
             Choose Category
           </h1>

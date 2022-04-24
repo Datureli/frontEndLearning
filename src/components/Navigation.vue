@@ -57,6 +57,7 @@
     </v-app-bar>
 
     <v-slide-x-reverse-transition
+    class="trans"
       width="inherit"
       mode="out-in"
       :duration="{ enter: 50, leave: 50 }"
