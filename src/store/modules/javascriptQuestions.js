@@ -6,11 +6,11 @@ export default {
       {
         question: "Jakie zadeklarować zmienną w javascript?",
         answer:
-          "Aby zadeklarować zmienną, powinniśmy posłużyć się jednym ze słów kluczowych var,let oraz const..Pod zmienne możemy podstawić dowolne wartości jakie będziemy chcieli",
+          "Aby zadeklarować zmienną, powinniśmy posłużyć się jednym ze słów kluczowych var,let lub const.Pod zmienne możemy podstawić dowolne wartości jakie będziemy chcieli",
         secondAnswer:
           "Zaleca się używanie let oraz const zamiast var.Dzięki nim nasze skrypty stają się bardziej optymalne pod względem zarządzania pamięcią, ale i potencjalnie unikamy niektórych problematycznych sytuacji",
         thirdPartOfAnswer:
-          "Nazewnictwo zmiennych posiada konkretne zasady.Wielkość liter ma znaczenie.Zmienne o takiej samej nazwie,ale utworzone przy pomocy różnej wielkości liter to dwie różne zmienne.Nazwa zmiennej nie może zaczynać się od cyfry,nazwa zmiennej nie może zawierać spacji, kropki, przecinka ani myślnika (można natomiast używać podkreślenia),nazwą zmiennej nie może być słowo kluczowe zarezerwowane przez JavaScript",
+          "Nazewnictwo zmiennych posiada konkretne zasady.Wielkość liter ma znaczenie.Zmienne o takiej samej nazwie,ale utworzone przy pomocy różnej wielkości liter to dwie różne zmienne.Nazwa zmiennej nie może zaczynać się od cyfry,nie może zawierać spacji,kropki, przecinka ani myślnika (można natomiast używać podkreślenia),nazwą zmiennej nie może być słowo kluczowe zarezerwowane przez JavaScript",
       },
       {
         question: "Czym jest grid?",
@@ -22,47 +22,52 @@ export default {
       {
         question: "Czym jest debugowanie?",
         answer:
-          "Pisząc kod co chwila będziemy natrafiać na różnego rodzaju błędy. Aby sobie z nimi radzić powinniśmy umieć debugować nasz kod.Kod JavaScript i TypeScript można debugować przy użyciu Visual Studio. Można ustawiać i trafiać punkty przerwania, dołączać debuger, sprawdzać zmienne, wyświetlać stos wywołań i używać innych funkcji debugowania.",
+          "Kod JavaScript i TypeScript można debugować przy użyciu Visual Studio. Można ustawiać i trafiać punkty przerwania, dołączać debuger, sprawdzać zmienne, wyświetlać stos wywołań i używać innych funkcji debugowania.",
       },
       {
         question: "Jak działa słowo kluczowe new?",
         answer:
-          "Pisząc kod co chwila będziemy natrafiać na różnego rodzaju błędy. Aby sobie z nimi radzić powinniśmy umieć debugować nasz kod.Kod JavaScript i TypeScript można debugować przy użyciu Visual Studio. Można ustawiać i trafiać punkty przerwania, dołączać debuger, sprawdzać zmienne, wyświetlać stos wywołań i używać innych funkcji debugowania.",
+          "Operator new tworzy nową instancję typu obiektu zdenifiowanego przez użytkownika lub instancję wbudowanego typu obiektu, który posiada konstruktor.",
       },
       {
         question: "Czym jest konstruktor?",
         answer:
-          "W Javascript mamy kilka typów danych. Większość z nich możemy tworzyć na dwa sposoby: korzystając z tak zwanego literału (skrócony zapis) lub na bazie tak zwanych konstruktorów:Constructor jest szczególną metodą, która służy tworzeniu i inicjalizowaniu obiektu zdefiniowanego słowem kluczowym class. Dozwolony jest tylko jeden konstruktor w danej klasie. Jeśli klasa posiada więcej niż jedno wystąpienie metody constructor, wygenerowany zostanie błąd SyntaxError.Aby wywołać konstruktor klasy bazowej, należy użyć słowa kluczowego super",
+          "Konstruktor jest szczególną metodą, która służy tworzeniu i inicjalizowaniu obiektu zdefiniowanego słowem kluczowym class.Dozwolony jest tylko jeden konstruktor w danej klasie.Jeśli klasa posiada więcej niż jedno wystąpienie metody constructor, wygenerowany zostanie błąd SyntaxError.Aby wywołać konstruktor klasy bazowej, należy użyć słowa kluczowego super",
       },
       {
         question: "Czym jest metoda GET?",
         answer:
           "Metoda GET służy do pobierania danych z interfejsu API. Chcemy, aby to żądanie API działało asynchronicznie, dlatego używamy funkcji opartej na obietnicy ze słowami kluczowymi async/await.",
-        secondAnswer: "",
+      },
+      {
+        question: "Różnica między deklaracją funkcji a deklaracją klasy?",
+        answer:
+          "Ważną różnicą pomiędzy deklaracją funkcji a deklaracją klasy jest to, że deklaracje funkcji są przenoszone na początek (Hoisting) a klas nie. Najpierw musisz zadeklarować swoją klasę, by mieć do niej dostęp, w przeciwnym razie kod, jak ten poniżej, wygeneruje błąd ReferenceError:",
+      },
+      {
+        question: "Czym jest super w javascript?",
+        answer:
+          "Słowo kluczowe super jest wykorzystywane do udostępniania i korzystania z funkcji klasy po której nasz obiekt dziedziczy.",
       },
       {
         question: "Czym jest instrukcja try w api call?",
         answer:
           "instrukcja try pozwala zdefiniować blok kodu, który ma być testowany pod kątem błędów podczas wykonywania.Instrukcja catch umożliwia zdefiniowanie bloku kodu, który ma zostać wykonany, jeśli w bloku try wystąpi błąd.try służy do sprawdzania błędów, podczas gdy catch służy do obsługi błędu, jeśli taki wystąpi.",
-        secondAnswer: "",
       },
       {
         question: "Czym jest funkcja some()?",
         answer:
           "Metoda some() zwróci prawdę, jeżeli chociaż dla jednego elementu użyta funkcja zwróci prawdę.",
-        secondAnswer: "",
       },
       {
         question: "Czym jest funkcja reduce()?",
         answer:
-          "Dzięki reduce() możemy wykonywać operacje na tablicy redukując ją, w wyniku uzyskując jakiś wynik.Funkcja robi iterację po tablicy. W pierwszej iteracji pod pierwszy parametr wstawiany jest pierwszy element tablicy, a pod drugi kolejny. Funkcja zwraca jakiś wynik. W kolejnej iteracji podstawiany jest on pod pierwszy parametr, a do drugiego parametru trafia kolejny element w tablicy.",
-        secondAnswer: "",
+          "Dzięki reduce() możemy wykonywać operacje na tablicy redukując ją, w wyniku uzyskując jakiś wynik.Funkcja robi iterację po tablicy.W pierwszej iteracji pod pierwszy parametr wstawiany jest pierwszy element tablicy, a pod drugi kolejny.Funkcja zwraca jakiś wynik. W kolejnej iteracji podstawiany jest on pod pierwszy parametr, a do drugiego parametru trafia kolejny element w tablicy.",
       },
       {
         question: "Czym jest funkcja map()?",
         answer:
-          "Metoda map() robi pętlę po tablicy i każdorazowo zwraca nowy element tablicy. W wyniku po zakończeniu całej pętli zwracana jest nowa tablica z taką samą liczbą elementów:.",
-        secondAnswer: "",
+          "Metoda map() robi pętlę po tablicy i każdorazowo zwraca nowy element tablicy.W wyniku po zakończeniu całej pętli zwracana jest nowa tablica z taką samą liczbą elementów:.",
       },
       {
         question: "Czym są getery i setery",
@@ -73,18 +78,16 @@ export default {
         question: "Czym są domknięcia?",
         answer:
           "domknięcia są to funkcje, które mają dostęp do środowiska, w którym zostały zdefiniowane. ",
-        secondAnswer: "",
       },
       {
         question: "Czym są metody?",
         answer:
           "Metody JavaScript to akcje, które można wykonywać na obiektach. Metodą obiektu nazywamy właściwość zawierającą definicję funkcji (inaczej: metoda to funkcja przechowywana jako właściwość obiektu). ",
-        secondAnswer: "",
       },
       {
         question: "Czym jest obiekt w javascript?",
         answer:
-          "Obiekty JavaScript to kontenery dla nazwanych wartości, zwanych właściwościami i metodami. W JS prawie wszystko jest obiektem:Obiekty są zmiennymi, ale mogą zawierać wiele wartości. Wartości są zapisywane jako pary nazwa: wartość (nazwa i wartość oddzielone dwukropkiem). Pary te oddziela przecinek. Obiekt JavaScript to zbiór nazwanych wartości. Te nazwane wartości nazywamy właściwościami. ",
+          "Obiekty JavaScript to kontenery dla nazwanych wartości, zwanych właściwościami i metodami. W JS prawie wszystko jest obiektem:Obiekty są zmiennymi, ale mogą zawierać wiele wartości. Wartości są zapisywane jako pary nazwa: wartość (nazwa i wartość oddzielone dwukropkiem). Pary te oddziela przecinek.",
         secondAnswer:
           "Boolean (typ logiczny) może być obiektem (jeśli zdefiniowano za pomocą słowa new) Number (liczba) może być obiektem (jeśli zdefiniowano za pomocą słowa new) String (łańcuch) może być obiektem (jeśli zdefiniowano za pomocą słowa new) Date (data) jest zawsze obiektem Math (matematyka) jest zawsze obiektem Regular expression (wyrażenie regularne) jest zawsze obiektem Array (tablica) jest zawsze obiektem Function (funkcja) jest zawsze obiektem Object (obiekt) jest zawsze obiektem",
       },
@@ -92,36 +95,34 @@ export default {
         question: "Jak możemy tworzyć obiekty w javascript?",
         answer:
           "W JavaScript obiekty można tworzyć na 3 różne sposoby: poprzez inicjalizator obiektu (literał obiektywy, ang. object literal syntax), fabrykę (ang. factory function) oraz funkcje konstruujące (ang. constructor functions).",
-        secondAnswer: "",
       },
       {
         question:
           "Czy JavaScript wspiera dziedziczenie? Jeżeli tak, to w jaki sposób?",
         answer:
-          "JavaScript w przeciwieństwie do wielu innych języków, np. Javy nie ma dedykowanego mechanizmu dla klas.W JS wszystko jest obiektem, nawet funkcje. W efekcie czego można zaimplementować mechanizm dziedziczenia, opierając się na prototypach.",
-        secondAnswer: "",
+          "JavaScript w przeciwieństwie do wielu innych języków, np. Javy nie ma dedykowanego mechanizmu dla klas.W JS wszystko jest obiektem, nawet funkcje.W efekcie czego można zaimplementować mechanizm dziedziczenia, opierając się na prototypach.",
       },
       {
         question:
           "Czym jest endpoint?",
         answer:
-          "to po prostu unikalny adres URL, który wywołujesz w celu interakcji z innym systemem.",
+          "to unikalny adres URL, który wywołujesz w celu interakcji z innym systemem.",
       },
       {
         question: "Co w javascript nie jest obiektem?",
         answer:
-          "Wszystkie wartości JavaScript, z wyjątkiem prymitywów (primitives), są obiektami.Prymitywna wartość jest to wartość, która ma właściwości lub metody.  Prymitywny typ danych to dane, które posiadają pierwotną wartość.  JavaScript definiuje 5 typów prymitywnych typów danych:",
+          "Wszystkie wartości JavaScript, z wyjątkiem prymitywów (primitives), są obiektami.Prymitywna wartość jest to wartość, która ma właściwości lub metody Prymitywny typ danych to dane, które posiadają pierwotną wartość.  JavaScript definiuje 5 typów prymitywnych typów danych:",
         secondAnswer: "string number boolean null undefined",
       },
       {
         question: "Jaka jest różnica między var,let a const?",
         answer:
-          "Pierwsza i najważniejsza różnica między let/const a var to zasięg zmiennych.W przypadku let/const zmienne mają zasięg blokowy, co w skrócie oznacza od klamry do klamry.Zmienne deklarowane za pomocą var mają natomiast zasięg funkcyjny, czyli ich zasięg określa ciało funkcji.Ostatnią różnicą jest to, że deklarując zmienną globalną var (poza ciałem funkcji),dodawana jest ona jako właściwość obiektu window. W przypadku let nic takiego się nie dzieje",
+          "Pierwsza i najważniejsza różnica między let/const a var to zasięg zmiennych.W przypadku let/const zmienne mają zasięg blokowy, co w skrócie oznacza od klamry do klamry.Zmienne deklarowane za pomocą var mają natomiast zasięg funkcyjny, czyli ich zasięg określa ciało funkcji.Ostatnią różnicą jest to, że deklarując zmienną globalną var (poza ciałem funkcji),dodawana jest ona jako właściwość obiektu window.W przypadku let nic takiego się nie dzieje",
       },
       {
         question: "Czym jest temporal dead zone?",
         answer:
-          "Miejsce przed deklaracją zmiennej let/const zwie się temporal dead zone, bo nie możemy odwoływać się do zmiennej, której jeszcze nie zadeklarowaliśmy. Dzięki takiemu zabiegowi nasz kod staje się bardziej logiczny - najpierw tworzymy wszystkie klocki a dopiero potem ich używamy.",
+          "Miejsce przed deklaracją zmiennej let/const zwie się temporal dead zone, bo nie możemy odwoływać się do zmiennej, której jeszcze nie zadeklarowaliśmy.Dzięki takiemu zabiegowi nasz kod staje się bardziej logiczny",
       },
       {
         question: "Czym jest prototyp?",
@@ -343,7 +344,7 @@ export default {
       {
         question: "Jakie są zasady korzystania z rest api?",
         answer:
-          "Jednolity interfejs -Wszystkie żądania wysyłane do interfejsu API dotyczące tego samego zasobu powinny wyglądać tak samo, bez względu na to, skąd pochodzą.Interfejs API REST powinien zapewniać przypisanie jednego elementu danych, takiego jak nazwa lub adres e-mail użytkownika, do jednego identyfikatora URl.Rozdzielenie klienta i serwera - Podczas projektowania interfejsu API REST aplikacje klienta i serwera muszą być całkowicie niezależne od siebie. Aplikacja kliencka powinna dysponować wyłącznie informacją o identyfikatorze URI żądanego zasobu. Nie może ona wchodzić w interakcje z aplikacją serwera w żaden inny sposób. Podobnie aplikacja serwera nie powinna modyfikować aplikacji klienckiej, a jedynie przekazywać jej żądane dane za pośrednictwem protokołu HTTP.",
+          "Wszystkie żądania wysyłane do interfejsu API dotyczące tego samego zasobu powinny wyglądać tak samo.Interfejs API REST powinien zapewniać przypisanie jednego elementu danych, takiego jak nazwa lub adres e-mail użytkownika, do jednego identyfikatora URl.Rozdzielenie klienta i serwera - Podczas projektowania interfejsu API REST aplikacje klienta i serwera muszą być całkowicie niezależne od siebie. Aplikacja kliencka powinna dysponować wyłącznie informacją o identyfikatorze URI żądanego zasobu. Nie może ona wchodzić w interakcje z aplikacją serwera w żaden inny sposób. Podobnie aplikacja serwera nie powinna modyfikować aplikacji klienckiej, a jedynie przekazywać jej żądane dane za pośrednictwem protokołu HTTP.",
           secondAnswer: 'Bezstanowość. Interfejsy API REST są bezstanowe. To oznacza, że każde żądanie musi zawierać wszystkie informacje niezbędne do jego przetworzenia. Innymi słowy, interfejsy API REST nie wymagają żadnych sesji po stronie serwera. Aplikacje serwera nie mogą przechowywać żadnych danych związanych z żądaniem klienta.Możliwość buforowania. Gdy to możliwe, powinna być dostępna opcja buforowania zasobów po stronie klienta lub serwera. Odpowiedzi serwera muszą również zawierać informację o tym, czy buforowanie dostarczonego zasobu jest dozwolone. Celem jest zwiększenie wydajności po stronie klienta przy jednoczesnym zwiększeniu skalowalności po stronie serwera.',
           thirdPartOfAnswer: 'Warstwowa architektura systemu. W interfejsach API REST wywołania i odpowiedzi przechodzą przez różne warstwy. Z reguły nie należy zakładać, że aplikacje klienta i serwera łączą się ze sobą bezpośrednio. Pętla komunikacyjna może obejmować pewną liczbę elementów pośredniczących. Interfejsy API REST muszą być zaprojektowane w taki sposób, aby ani klient, ani serwer nie miał informacji o tym, czy komunikuje się z aplikacją końcową, czy elementem pośredniczącym.Kod na żądanie (opcjonalnie). Interfejsy API REST zwykle wysyłają zasoby statyczne, ale w niektórych przypadkach odpowiedzi mogą również zawierać kod wykonywalny (np. aplety Java). W takich przypadkach kod powinien być uruchamiany tylko na żądanie.'
       },
@@ -414,6 +415,12 @@ export default {
         question: "opisz atrybut defer?",
         answer:
           "W przypadku kiedy JavaScript manipuluje drzewem DOM, można wykorzystać defer. Dzięki temu, skrypty w nagłówku będą potraktowane z takim priorytetem, jakby były na samym końcu strony. W przypadku kiedy chcemy pogodzić asynchroniczne ładowanie i możliwość manipulacją drzewem DOM, można wykorzystać bibliotekę require.js.",
+      },
+      {
+        question: "czym jest class?",
+        answer:
+          "Wyrażenie class jest kolejnym sposobem definiowania klasy. Wyrażenia class mogą być nazwane lub nienazwane. Nazwa przypisana nazwanemu wyrażeniu class jest lokalna dla ciała klasy. (można ją odczytać z właściwości name (en-US) klasy)",
+          secondAnswer: 'Ciało klasy jest wykonywane w trybie ścisłym (ang. strict mode). W celu poprawienia wydajności, kod wykorzystywany tutaj podlega ścisłej składni; nie pozwala to na ukrycie niektórych wyjątków, a pewne słowa kluczowe są rezerwowane dla przyszłych wersji ECMAScript.'
       },
       {
         question: "Czym jest symbol w javascript?",
