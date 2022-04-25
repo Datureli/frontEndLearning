@@ -190,7 +190,7 @@ export default {
       {
         question: "Jak działa pętle while",
         answer:
-          "W pętli tego typu nie definiujemy ani początkowego licznika, ani nie definiujemy zmiany licznika.Musimy te rzeczy zrobić ręcznie.Pętlę while zazwyczaj stosuje się w sytuacjach, kiedy nie wiemy dokładnie, ile iteracji (powtórzeń) ma się wykonać.Wyobraź sobie, że chcesz wygenerować unikalny numer ID albo jakąś liczbę. Generujesz więc daną rzecz, następnie sprawdzasz czy wynik pasuje do założeń. Jak nie pasuje, generujesz dalej. I tak do skutku aż trafisz.",
+          "W pętli tego typu nie definiujemy ani początkowego licznika, ani nie definiujemy zmiany licznika.Musimy te rzeczy zrobić ręcznie.Pętlę while zazwyczaj stosuje się w sytuacjach, kiedy nie wiemy dokładnie, ile iteracji (powtórzeń) ma się wykonać.Wyobraź sobie, że chcesz wygenerować unikalny numer ID albo jakąś liczbę.Generujesz więc daną rzecz, następnie sprawdzasz czy wynik pasuje do założeń. Jak nie pasuje, generujesz dalej. I tak do skutku aż trafisz.",
         secondAnswer:
           "while (wyrażenie_sprawdzające_zakończenie_pętli) {  ...fragment kodu który będzie powtarzany...}",
       },
@@ -212,13 +212,11 @@ export default {
         question: "Wyjaśnij funkcję parseInt()",
         answer:
           "Przetwarza argument w postaci łańcucha znaków i zwraca liczbę całkowitą typu integer , o zadanej podstawie.Pozwala przekształcić podany tekst na liczbę całkowitą.",
-        secondAnswer:
-          "for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych){kod który zostanie wykonany pewną ilość razy}",
       },
       {
         question: "Jak działa fetch api?",
         answer:
-          "Metoda fetch zwraca obietnicę, która rozwiązuje odpowiedź z żądania, aby pokazać status (powodzenie lub niepowodzenie). Jeśli kiedykolwiek zobaczysz tę obietnicę wiadomości {} na ekranie dziennika konsoli, nie panikuj — w zasadzie oznacza to, że obietnica działa, ale czeka na rozwiązanie. Aby go rozwiązać, potrzebujemy funkcji obsługi .then() (callback), aby uzyskać dostęp do treści.So in short, we first define the path (Fetch), secondly request data from the server (Request), thirdly define the content type (Body) and last but not least, we access the data (Response).",
+          "Metoda fetch zwraca obietnicę, która rozwiązuje odpowiedź z żądania, aby pokazać status (powodzenie lub niepowodzenie). Jeśli kiedykolwiek zobaczysz tę obietnicę wiadomości {}  aby uzyskać dostęp do treści.So in short, we first define the path (Fetch), secondly request data from the server (Request), thirdly define the content type (Body) and last but not least, we access the data (Response).",
 
       },
       {
