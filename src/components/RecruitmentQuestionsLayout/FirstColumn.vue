@@ -3,8 +3,7 @@
     <v-list color="transparent">
       <v-list-item-group active-class="green--text">
         <v-list-item
-        
-          v-for="(firstColumn) in firstColumn"
+          v-for="firstColumn in firstColumn"
           :key="firstColumn.id"
           :to="firstColumn.link"
           :value="index"
@@ -36,13 +35,12 @@
           </v-hover>
         </v-list-item>
       </v-list-item-group>
-     
     </v-list>
   </v-card>
 </template>
 
 <script>
-import { mapActions, mapState,mapGetters } from "vuex";
+import { mapActions, mapState, mapGetters } from "vuex";
 export default {
   data() {
     return {
@@ -52,7 +50,7 @@ export default {
   },
   computed: {
     ...mapState("firstColumn", ["firstColumn"]),
-    ...mapGetters("firstColumn",['firstColumnGet'])
+    ...mapGetters("firstColumn", ["firstColumnGet"]),
   },
   methods: {
     ...mapActions("questions", [
@@ -63,7 +61,7 @@ export default {
       "randomQuestion",
       "randomReactQuestion",
     ]),
-    ...mapActions("firstColumn", ["removeItemFromFirstColumn","deleteItem"]),
+    ...mapActions("firstColumn", ["removeItemFromFirstColumn", "deleteItem"]),
   },
 };
 </script>
