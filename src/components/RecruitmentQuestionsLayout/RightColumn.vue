@@ -10,7 +10,7 @@
     <v-select
       v-model="select"
       class="pa-5 mt-0 mr-16 mx-auto"
-      :firstColumn="firstColumn"
+      :items="firstColumn"
       item-text="title"
       label="Category"
       persistent-hint
@@ -18,14 +18,9 @@
       single-line
     ></v-select>
     <v-select
-      v-model="select"
       class="pa-5 mt-0 pt-0 mr-16 mx-auto"
-      :items="items"
-      item-text="state"
+      :items="numberOfQuestions"
       label="Number of questions"
-      persistent-hint
-      return-object
-      single-line
     ></v-select>
     <v-select
       v-model="select"
@@ -58,6 +53,8 @@ import { mapState } from "vuex";
 export default {
   data() {
     return {
+      numberOfQuestions: [10, 15, 20, 25],
+      difficulty: [{ name: 'easy' }, { name: 'medium' }, { name: 'hard' }],
       items: [
         { state: "Florida", abbr: "FL" },
         { state: "Georgia", abbr: "GA" },
