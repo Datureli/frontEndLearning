@@ -25,9 +25,8 @@
     <v-select
       v-model="select"
       class="pa-5 mt-0 pt-0 mr-16 mx-auto"
-      :items="items"
-      item-text="state"
-      item-value="abbr"
+      :items="difficulty"
+      item-text="name"
       label="difficulty level"
       persistent-hint
       return-object
@@ -35,8 +34,9 @@
     ></v-select>
     <v-select
       v-model="select"
+      color="red"
       class="pa-5 mt-0 pt-0 mr-16 mx-auto"
-      :items="items"
+      :items="time"
       item-text="state"
       item-value="abbr"
       label="Time"
@@ -44,7 +44,7 @@
       return-object
       single-line
     ></v-select>
-    <v-btn class="mr-16">start</v-btn>
+    <v-btn :to="'/test-knowledge'" class="mr-16">start</v-btn>
   </v-card>
 </template>
 
@@ -54,14 +54,8 @@ export default {
   data() {
     return {
       numberOfQuestions: [10, 15, 20, 25],
-      difficulty: [{ name: 'easy' }, { name: 'medium' }, { name: 'hard' }],
-      items: [
-        { state: "Florida", abbr: "FL" },
-        { state: "Georgia", abbr: "GA" },
-        { state: "Nebraska", abbr: "NE" },
-        { state: "California", abbr: "CA" },
-        { state: "New York", abbr: "NY" },
-      ],
+      difficulty: [{ name: "easy" }, { name: "medium" }, { name: "hard" }],
+      time: [10, 20, 30, 40],
     };
   },
   computed: {

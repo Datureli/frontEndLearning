@@ -72,6 +72,12 @@ const routes = [
           import("../components/RecruimentQuestions/GitQuestions"),
         name: "GitQuestions",
       },
+      {
+        path: "test-knowledge",
+        component: () =>
+          import("../components/RecruimentQuestions/TestYourKnowledge"),
+        name: "TestYourKnowledge",
+      },
     ],
   },
 
