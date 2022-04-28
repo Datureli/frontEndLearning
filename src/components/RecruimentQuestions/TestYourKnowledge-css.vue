@@ -17,7 +17,7 @@
         </v-list-item>
         <v-list color="transparent" class="d-grid">
           <v-list-item class="answerDesign">A) {{cssQuestions.trueAnswer}}</v-list-item>
-          <v-list-item class="answerDesign">B)</v-list-item>
+          <v-list-item class="answerDesign">B) {{first}}</v-list-item>
           <v-list-item class="answerDesign">C)</v-list-item>
           <v-list-item class="answerDesign">D)</v-list-item>
         </v-list>

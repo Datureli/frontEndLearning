@@ -9,16 +9,18 @@ export default {
         secondAnswer: `W BEM istnieje pewna konwencja nazewnictwa klas CSS.Ogólne zasady tego nazewnictwa przedstawiam poniżej:.block - pierwsze słowo w nazwie oznacza, że klasa dotyczy danego bloku,elementy - poszczególne elementy bloku takie jak: input czy guzik formularza albo też link w menu,modyfikatory - specyficzne warianty elementów: input do wpisywania hasła, guzik “Anuluj” lub aktywny link w menu`,
         trueAnswer: 'Block element modifier',
         firstFakeAnswer: 'Blind element modifier',
-        secondFakeAnswer: '',
-        thirdFakeAnswer: ''
+        secondFakeAnswer: 'dsadsa',
+        thirdFakeAnswer: 'dsadas'
       },
       {
-        answerNumbers: 1,
         question: `Czym jest Css sprites?`,
         answer: `To technika pozwalająca na łączenie wielu mniejszych obrazów, wykorzystywanych na stronie www, w jeden większy plik, który przy odpowiedniej pomocy styli CSS pozwoli zaoszczędzić nam pasmo serwera oraz czas ładowania się strony,`,
       },
       {
-        answerNumbers: 1,
+        question: `Czym jest specifity?`,
+        answer: `Specificity to zasada, która określa który selektor ma pierwszeństwo w przypadku, kiedy wiele z nich ustawia te same reguły CSS dla tego samego znacznika HTML.`,
+      },
+      {
         question: `Rozwiń skrót Css`,
         answer: `Kaskadowe arkusze stylów css służą do definiowania układów graficznych dokumentów HTML.Arkusz stylów CSS zawiera reguły opisujące w jaki sposób przeglądarka internetowa ma wyświetlać zawartość dokumentów HTML lub XML. Za pomocą arkuszy CSS można opisać wiele właściwości prezentacji elementów strony: wybrać kolor tekstu, wypełnienie tła, rodzaj czcionki, ustawić odstępy między elementami czy zdefiniować położenie jednego elementu względem drugiego.`,
       },

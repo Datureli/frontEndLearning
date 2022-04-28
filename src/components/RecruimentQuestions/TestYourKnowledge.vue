@@ -17,9 +17,9 @@
         </v-list-item>
         <v-list color="transparent" class="d-grid">
           <v-list-item class="answerDesign">A) {{cssQuestions.trueAnswer}}</v-list-item>
-          <v-list-item class="answerDesign">B)</v-list-item>
-          <v-list-item class="answerDesign">C)</v-list-item>
-          <v-list-item class="answerDesign">D)</v-list-item>
+          <v-list-item class="answerDesign">B) {{cssQuestions.firstFakeAnswer}}</v-list-item>
+          <v-list-item class="answerDesign">C) {{cssQuestions.secondFakeAnswer}}</v-list-item>
+          <v-list-item class="answerDesign">D) {{cssQuestions.thirdFakeAnswer}}</v-list-item>
         </v-list>
       </v-carousel-item>
     </v-carousel>
