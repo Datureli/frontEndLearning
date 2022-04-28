@@ -30,6 +30,7 @@
       <GeneralQuestions v-if="this.$route.path === '/about/general'" />
       <TestQuestions v-if="this.$route.path === '/about/test'" />
       <TypeScriptQuestions v-if="this.$route.path === '/about/typescript'" />
+      <TestYourKnowledge v-if="this.$route.path === '/about/test-knowledge'" />
     </v-sheet>
     <IconComponent v-if="this.$route.path != '/about'" />
   </div>
@@ -47,6 +48,7 @@ import {
   ReactQuestions,
   GeneralQuestions,
   QuestionPagination,
+  TestYourKnowledge
 } from "../RecruimentQuestions";
 import IconComponent from "../Icons/IconComponent";
 export default {
@@ -62,6 +64,7 @@ export default {
     GeneralQuestions,
     IconComponent,
     QuestionPagination,
+    TestYourKnowledge
   },
   computed: {
     width() {

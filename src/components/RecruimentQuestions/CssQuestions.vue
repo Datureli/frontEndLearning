@@ -1,5 +1,5 @@
 <template>
-  <v-carousel eager hide-delimiters @change="page = 1" class="mt-1">
+  <v-carousel  eager hide-delimiters @change="page = 1" class="mt-1">
     <v-carousel-item
       v-for="(cssQuestions, index) in cssQuestions"
       :key="index"
@@ -14,6 +14,7 @@
           ></v-list-item-title>
 
           <v-list-item-subtitle
+           
             class="white--text text-justify text-h6 text-wrap"
             v-show="disable"
             v-text="
@@ -26,7 +27,6 @@
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-      <!--{{ $t("message")}}-->
     </v-carousel-item>
 
     <v-pagination

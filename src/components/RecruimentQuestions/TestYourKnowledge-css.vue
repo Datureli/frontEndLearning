@@ -25,25 +25,3 @@
     </v-carousel>
   </div>
 </template>
-
-<script>
-import { mapState } from "vuex";
-export default {
-  computed: {
-    ...mapState("htmlQuestions", ["htmlQuestions"]),
-    ...mapState("cssQuestions", ["cssQuestions"]),
-    ...mapState("javascriptQuestions", ["javascriptQuestions"]),
-    ...mapState("vueQuestions", ["vueQuestions"]),
-    ...mapState("reactQuestions", ["reactQuestions"]),
-    ...mapState("typescriptQuestions", ["typescriptQuestions"]),
-    ...mapState("gitQuestions", ["gitQuestions"]),
-    ...mapState("generalQuestions", ["generalQuestions"]),
-    ...mapState("testQuestions", ["testQuestions"]),
-  },
-};
-</script>
-<style>
-.answerDesign {
-  border-bottom: 1px solid black;
-}
-</style>

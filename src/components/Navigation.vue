@@ -120,6 +120,7 @@ export default {
         case "JavascriptQuestions":
         case "GeneralQuestions":
         case "TestQuestions":
+          case "TestYourKnowledge":
           return "darkGradient";
         case "Materials":
         case "Book":

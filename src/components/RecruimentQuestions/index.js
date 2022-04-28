@@ -8,6 +8,7 @@ import TypeScriptQuestions from "../RecruimentQuestions/TypeScriptQuestions"
 import ReactQuestions from "../RecruimentQuestions/ReactQuestions"
 import GeneralQuestions from "../RecruimentQuestions/GeneralQuestions"
 import QuestionPagination from '../RecruimentQuestions/QuestionPagination'
+import TestYourKnowledge from '../RecruimentQuestions/TestYourKnowledge'
 
 export {
     HtmlQuestions,
@@ -19,5 +20,6 @@ export {
     TypeScriptQuestions,
     ReactQuestions,
     GeneralQuestions,
-    QuestionPagination
+    QuestionPagination,
+    TestYourKnowledge
 }

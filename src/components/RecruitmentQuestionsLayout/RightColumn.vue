@@ -44,12 +44,13 @@
       return-object
       single-line
     ></v-select>
-    <v-btn :to="'/test-knowledge'" class="mr-16">start</v-btn>
+    <v-btn :to="'/about/test-knowledge'" class="mr-16">start</v-btn>
   </v-card>
 </template>
 
 <script>
 import { mapState } from "vuex";
+
 export default {
   data() {
     return {

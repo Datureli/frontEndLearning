@@ -403,6 +403,10 @@ export default {
         answer: "Klasy definiowane za pomocą ‘Class’,Zmienne ‘let’ oraz ‘const’ oraz nowe podejście do zakresu (scope) zmiennych.Łańcuchy szablonowe plus możliwość tworzenia np. wieloliniowych String,Przypisywanie wartości z użyciem Destructuring,Mechanizm Promises zapewniający nowe podejście do programowanie asynchronicznego,Arrow functions – funkcje definiowanie z użyciem ‘strzałki’ czyli ‘=>’,Natywne moduły,Nowe metody String, Math, Array czy Number",
       },
       {
+        question: "różnice pomiędzy == a ===?",
+        answer: "Podwójny operator sprawdza wartość,natomiast potrójny wartość i typ.Potrójny operator sprawdza czy wartości po obu stronach są identyczne.W praktyce wykorzystuje się to często przy funkcjach które zwracają raz wartość liczbową a raz wartość boolean.jeżeli mamy '2′ == 2 to JS zmieni typ pierwszego parametru na number. Jeśli pierwszy jest null a drugi undefined, zwróć true. ",
+      },
+      {
         question: "Jak działa async?",
         answer:
           "Aby JavaScript nie blokował drzewa renderowania można wykorzystać regułę async. Atrybut async powoduje, że kod JS jest wykonywany niezależnie od etapu ładowania się strony i nie wpływa na ścieżkę renderowania. Atrybut ten może być z powodzeniem zastosowany w przypadku skryptów do:analityki internetowej,    dodatkowych widgetów do strony,",
