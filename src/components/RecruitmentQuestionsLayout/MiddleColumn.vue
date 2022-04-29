@@ -70,7 +70,7 @@ export default {
     width() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
-          return 580;
+          return 480;
         case "sm":
           return 720;
         case "md":
@@ -84,7 +84,7 @@ export default {
     height() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
-          return 350;
+          return 400;
         case "sm":
           return 350;
         case "md":

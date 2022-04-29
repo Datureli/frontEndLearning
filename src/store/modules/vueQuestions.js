@@ -434,7 +434,7 @@ export default {
       {
         question: "Różnica między script a script setup",
         answer:
-          "Kod wewnątrz jest kompilowany jako zawartość funkcji setup() komponentu. Oznacza to, że w przeciwieństwie do normalnego <skryptu>, który jest wykonywany tylko raz, gdy komponent jest importowany po raz pierwszy, kod wewnątrz <ustawienia skryptu> będzie wykonywany za każdym razem, gdy tworzona jest instancja komponentu.",
+          "Kod wewnątrz jest kompilowany jako zawartość funkcji setup() komponentu. Oznacza to, że w przeciwieństwie do normalnego skryptu, który jest wykonywany tylko raz, gdy komponent jest importowany po raz pierwszy, kod wewnątrz ustawienia skryptu będzie wykonywany za każdym razem, gdy tworzona jest instancja komponentu.",
       },
       {
         question:

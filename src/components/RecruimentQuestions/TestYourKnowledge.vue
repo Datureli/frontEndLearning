@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-carousel hide-delimiters>
+    <v-carousel hide-delimiters >
       <v-carousel-item
         v-for="(cssQuestions, index) in cssQuestions"
         :key="index"

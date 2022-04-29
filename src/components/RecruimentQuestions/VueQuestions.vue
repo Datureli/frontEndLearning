@@ -29,6 +29,7 @@
       </v-list-item>
     </v-carousel-item>
     <v-pagination
+      circle
       style="position: absolute; bottom: 18%; right:36%"
       v-model="page"
       :length="3"
@@ -37,7 +38,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex";
+import { mapState } from "vuex";
 export default {
   props: {
     page: {
@@ -47,7 +48,6 @@ export default {
   computed: {
     ...mapState(["disable", "favorite"]),
     ...mapState("vueQuestions", ["vueQuestions"]),
-    ...mapGetters("vueQuestions", ["removeSpaces"]),
   },
 };
 </script>

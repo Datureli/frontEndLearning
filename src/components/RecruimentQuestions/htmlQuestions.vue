@@ -30,7 +30,8 @@
       </v-list-item>
     </v-carousel-item>
     <v-pagination
-      style="position: absolute; bottom: 18%; right:36%"
+    circle
+      style="position: absolute; bottom: 18%; right:34%"
       v-model="page"
       :length="3"
     ></v-pagination>

@@ -4,7 +4,7 @@ export default {
   state: {
     javascriptQuestions: [
       {
-        question: "Jakie zadeklarować zmienną w javascript?",
+        question: "Jak zadeklarować zmienną w javascript?",
         answer:
           "Aby zadeklarować zmienną, powinniśmy posłużyć się jednym ze słów kluczowych var,let lub const.Pod zmienne możemy podstawić dowolne wartości jakie będziemy chcieli",
         secondAnswer:
@@ -380,7 +380,7 @@ export default {
       },
       {
         question: "operator ...(trzech kropek)?",
-        answer: " Zbiera on do tablicy o podanej nazwie wszystkie pozostałe przekazane do funkcji argumenty, które nie zostały wymienione przed nim.No fajnie, możemy zapomnieć o obiekcie arguments i jego ograniczeniach, ale do czego można to.Spread również zapisywany jest w postaci trzech kropek ..., lecz nie jako przedrostek do ostatniego argumentu w deklaracji funkcji, a jako przedrostek do jakiejkolwiek tablicy. Jego zadaniem jest 'rozbić' tablicę na listę jej elementów. Brzmi to banalnie ale ma to olbrzymią liczbę zastosowań, z których kilka przedstawiam poniżej.",
+        answer: " Zbiera on do tablicy o podanej nazwie wszystkie pozostałe przekazane do funkcji argumenty, które nie zostały wymienione przed nim możemy zapomnieć o obiekcie arguments i jego ograniczeniach.Spread również zapisywany jest w postaci trzech kropek ..., lecz nie jako przedrostek do ostatniego argumentu w deklaracji funkcji, a jako przedrostek do jakiejkolwiek tablicy. Jego zadaniem jest 'rozbić' tablicę na listę jej elementów. Brzmi to banalnie ale ma to olbrzymią liczbę zastosowań, z których kilka przedstawiam poniżej.",
       },
       {
         question: "normalizacja danych w javascript",

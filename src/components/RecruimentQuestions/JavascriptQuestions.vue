@@ -6,7 +6,6 @@
       max-width="700"
       class="mx-auto"
     >
-    
       <v-list-item>
         <v-list-item-content>
           <v-list-item-subtitle
@@ -30,6 +29,7 @@
       </v-list-item>
     </v-carousel-item>
    <v-pagination
+      circle 
       style="position: absolute; bottom: 18%; right:36%"
       v-model="page"
       :length="3"
@@ -39,6 +39,7 @@
 
 <script>
 import { mapState } from "vuex";
+import CssQuestionsVue from './CssQuestions.vue';
 export default {
   props: {
     page: {
@@ -48,6 +49,7 @@ export default {
   computed: {
     ...mapState(["disable", "favorite"]),
     ...mapState("javascriptQuestions", ["javascriptQuestions"]),
+    ...mapState("cssQuestions", ["cssQuestions"]),
   },
 };
 </script>
