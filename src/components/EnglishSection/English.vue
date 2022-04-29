@@ -1,5 +1,6 @@
 <template>
   <v-container fluid style="background: orange; height: 521px;">
+    dsa{{select}}
     <v-select
       v-model="select"
       class="pa-5 mt-0 mr-16 mx-auto"
@@ -9,16 +10,22 @@
       persistent-hint
       return-object
       single-line
+      :to="englishSection.link"
+      @change="select"
     ></v-select>
-    <ItWordsCollection />
+    <ItWordsCollection v-if="select.name === 'angielski2'" />
   </v-container>
 </template>
 
 <script>
 import ItWordsCollection from "./ItWordsCollection.vue";
 export default {
+  
   data() {
+    
     return {
+      select: '',
+
       englishSection:  [
         {
           name: 'angielski',
@@ -26,7 +33,7 @@ export default {
         },
             {
           name: 'angielski2',
-          link: ''
+          link: '/words'
         },
             {
           name: 'angielski3',
