@@ -1,8 +1,8 @@
 <template>
-  <v-container fluid style="background: orange; height: 521px;">
+  <v-container fluid class="mx-auto" style="background: orange; height: 521px;">
     <v-select
       v-model="select"
-      class="pa-5 mt-0 mr-16 mx-auto"
+      class="pa-5 mt-0 mx-auto"
       :items="englishSection"
       item-text="name"
       label="Choose category"
@@ -19,35 +19,31 @@
 
 <script>
 import ItWordsCollection from "./ItWordsCollection.vue";
-import DescribeYourself from './DescribeYourself.vue'
+import DescribeYourself from "./DescribeYourself.vue";
 export default {
-  
   data() {
-    
     return {
-      select: '',
+      select: "",
 
-      englishSection:  [
+      englishSection: [
         {
-          name: 'opisz siebie',
+          name: "opisz siebie",
         },
-            {
-          name: 'nauka słów',
+        {
+          name: "nauka słów",
         },
-            {
-          name: 'angielski3',
-        }
-      ]
-    }
+        {
+          name: "angielski3",
+        },
+      ],
+    };
   },
   name: "Home",
   components: {
     ItWordsCollection,
-    DescribeYourself
+    DescribeYourself,
   },
-}
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

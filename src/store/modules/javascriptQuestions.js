@@ -379,6 +379,10 @@ export default {
         answer: "zwraca wartość pseudolosową z przedziału 0 - 1",
       },
       {
+        question: "W jakich przypadkach nie powinno używać się map?",
+        answer: "Map zwraca nam nową tablice,jeżeli nie potrzebujemy nowej tablicy to lepiej użyć forEach.Nieużywana tablica będzie zajmować miejsce w naszej pamięci.",
+      },
+      {
         question: "operator ...(trzech kropek)?",
         answer: " Zbiera on do tablicy o podanej nazwie wszystkie pozostałe przekazane do funkcji argumenty, które nie zostały wymienione przed nim możemy zapomnieć o obiekcie arguments i jego ograniczeniach.Spread również zapisywany jest w postaci trzech kropek ..., lecz nie jako przedrostek do ostatniego argumentu w deklaracji funkcji, a jako przedrostek do jakiejkolwiek tablicy. Jego zadaniem jest 'rozbić' tablicę na listę jej elementów. Brzmi to banalnie ale ma to olbrzymią liczbę zastosowań, z których kilka przedstawiam poniżej.",
       },

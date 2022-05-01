@@ -4,7 +4,7 @@
       class="mx-auto mt-xm-5 mt-lg-12"
       :height="height"
       :width="width"
-      color="transparent"
+      color="darkGradient"
       tile
       :elevation="elevation"
     >
