@@ -10,9 +10,6 @@
 
 <script>
 export default {
-  props: {
-    page: Number,
-  },
   computed: {
     page: {
       get() {

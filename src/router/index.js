@@ -149,12 +149,12 @@ const routes = [
     ]
   },
   {
-    path: "wideo",
+    path: "/wideo",
     name: "Wideo",
     component: () => import("../components/materials/Video"),
   },
   {
-    path: "website",
+    path: "/website",
     name: "Website",
     component: () => import("../components/materials/Website"),
   },
