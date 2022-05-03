@@ -29,22 +29,21 @@
       </v-list-item>
     </v-carousel-item>
 
-    <v-pagination
-      circle
-      style="position: absolute; bottom: 18%; right:36%"
-      v-model="page"
-      :length="3"
-    ></v-pagination>
+    <Pagination :page="page"  />
   </v-carousel>
 </template>
 
 <script>
 import { mapState } from "vuex";
+import Pagination from './Pagination.vue'
 export default {
-  props: {
-    page: {
-      type: Number,
-    },
+  components: {
+    Pagination
+  },
+  data() {
+    return {
+      page: null
+    }
   },
   computed: {
     ...mapState(["disable", "favorite"]),

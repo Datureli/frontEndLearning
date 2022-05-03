@@ -41,10 +41,10 @@
 import { mapState } from "vuex";
 import CssQuestionsVue from './CssQuestions.vue';
 export default {
-  props: {
-    page: {
-      type: Number,
-    },
+  data() {
+    return {
+      page: null
+    }
   },
   computed: {
     ...mapState(["disable", "favorite"]),

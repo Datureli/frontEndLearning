@@ -38,10 +38,10 @@
 <script>
 import { mapState } from "vuex";
 export default {
-  props: {
-    page: {
-      type: Number,
-    },
+  data() {
+    return {
+      page: null
+    }
   },
   computed: {
     ...mapState(["disable", "favorite"]),
