@@ -42,7 +42,7 @@ export default {
         {
           title: "Invincible",
           artist: "Deaf Kev",
-          src: require("@/assets/drake.mp3"),
+          src: require("@/assets/hack.mp3"),
         },
       ],
       player: new Audio(),
