@@ -1,38 +1,8 @@
 <template>
-  <v-container-fluid>
+  <v-container-fluid class="mx-auto overflow-hidden">
     <v-app-bar :color="color" elevation="0">
-      <v-app-bar-nav-icon color="white" @click="drawer = true" />
-
-      <v-dialog v-model="drawer" hide-overlay>
-        <v-navigation-drawer v-model="drawer" absolute>
-          <v-toolbar color="primary" elevation="0">
-            <v-spacer></v-spacer>
-
-            <v-toolbar-items>
-              <v-btn icon dark @click="closeModal">
-                <v-icon>mdi-close</v-icon>
-              </v-btn>
-            </v-toolbar-items>
-          </v-toolbar>
-
-          <v-list color="primary" height="520" class="green--text trans">
-            <v-list-item-group>
-              <v-list-item
-                color="green"
-                class="white--text text-h4"
-                v-for="(toolbarItem, index) in toolbarItems"
-                :key="index"
-                :to="toolbarItem.link"
-              >
-                <v-list-item-title>{{ toolbarItem.title }}</v-list-item-title>
-              </v-list-item>
-            </v-list-item-group>
-          </v-list>
-        </v-navigation-drawer>
-      </v-dialog>
-
+      <v-app-bar-nav-icon color="white" @click.stop="drawer = !drawer" />
       <v-spacer></v-spacer>
-
       <v-card color="transparent" outlined>
         <v-btn color="transparent" outlined>
           <Login />
@@ -49,11 +19,35 @@
             {{ favorite.length }}
           </p>
         </v-btn>
-
       </v-card>
     </v-app-bar>
+    <v-navigation-drawer v-model="drawer" absolute bottom>
+      <v-toolbar color="primary" elevation="0">
+        <v-spacer></v-spacer>
 
-      <router-view></router-view>
+        <v-toolbar-items>
+          <v-btn icon dark @click="closeModal">
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+        </v-toolbar-items>
+      </v-toolbar>
+
+      <v-list nav dense color="primary" class="green--text">
+        <v-list-item-group v-model="group">
+          <v-list-item
+            color="green"
+            class="white--text text-h4"
+            v-for="(toolbarItem, index) in toolbarItems"
+            :key="index"
+            :to="toolbarItem.link"
+          >
+            <v-list-item-title>{{ toolbarItem.title }}</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+
+    <router-view></router-view>
   </v-container-fluid>
 </template>
 
@@ -93,6 +87,9 @@ export default {
     $route(to, from) {
       this.drawer = false;
     },
+    group() {
+      this.drawer = false;
+    },
   },
   computed: {
     ...mapState(["favorite"]),
@@ -110,7 +107,7 @@ export default {
         case "JavascriptQuestions":
         case "GeneralQuestions":
         case "TestQuestions":
-          case "TestYourKnowledge":
+        case "TestYourKnowledge":
           return "darkGradient";
         case "Materials":
         case "Book":
@@ -140,9 +137,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.trans {
-  transition: 0.2s;
-}
-</style>
