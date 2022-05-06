@@ -28,22 +28,21 @@
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
-
-    <Pagination :page="page"  />
   </v-carousel>
 </template>
 
 <script>
 import { mapState } from "vuex";
-import Pagination from './Pagination.vue'
 export default {
-  components: {
-    Pagination
-  },
   data() {
     return {
       page: 0
     }
+  },
+  props: {
+    page: {
+      type: Number,
+    },
   },
   computed: {
     ...mapState(["disable", "favorite"]),

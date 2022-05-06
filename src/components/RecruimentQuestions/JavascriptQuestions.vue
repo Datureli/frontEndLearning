@@ -28,18 +28,12 @@
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
-   <v-pagination
-      circle 
-      style="position: absolute; bottom: 18%; right:36%"
-      v-model="page"
-      :length="3"
-    ></v-pagination>
+
   </v-carousel>
 </template>
 
 <script>
 import { mapState } from "vuex";
-import CssQuestionsVue from './CssQuestions.vue';
 export default {
   data() {
     return {
@@ -47,9 +41,8 @@ export default {
     }
   },
   computed: {
-    ...mapState(["disable", "favorite"]),
+    ...mapState(["disable"]),
     ...mapState("javascriptQuestions", ["javascriptQuestions"]),
-    ...mapState("cssQuestions", ["cssQuestions"]),
   },
 };
 </script>

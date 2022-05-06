@@ -29,12 +29,7 @@
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
-    <v-pagination
-    circle
-      style="position: absolute; bottom: 18%; right:34%"
-      v-model="page"
-      :length="3"
-    ></v-pagination>
+
   </v-carousel>
 </template>
 

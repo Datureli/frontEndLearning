@@ -165,11 +165,6 @@ export default {
           "Można to zrobić na wiele sposobów, zerując jej długość: arrayList.length = 0;. Możliwe jest także użycie arrayList = [];, co sprawi, że wartością zmiennej arrayList będzie nowy obiekt Array. Należy tu jednak pamiętać, że drugą metodę można stosować tylko wtedy, gdy do pierwszego obiektu Array nie ma w kodzie żadnych referencji.",
       },
       {
-        question: "Czym jest IIFE?",
-        answer:
-          "IIFE (Immediately-invoked function expression) - czyli samo wywołujące się wyrażenie funkcyjne to wzorzec funkcji, która sama się wywołuje.",
-      },
-      {
         question: "Czym jest instrukcja switch?",
         answer: `Instrukcja switch jest kolejnym sposobem tworzenia warunków - tym razem na zasadzie przyrównania wyniku do konkretnych wartości.Każdy przypadek kończy się słowem break, które kończy wykonywanie instrukcji switch.Jeżeli pominiemy to słowo, wtedy nawet przy pomyślnym przyrównaniu zostaną wykonane kolejne sprawdzenia, co często może powodować błędy.`,
         secondAnswer:
@@ -301,7 +296,7 @@ export default {
       {
         question: "Czym jest IIFE?",
         answer:
-          "Immediately Invoked Function Expression — to funkcja, którą da się wywołać zaraz po swojej definicji. IIFE  jest opakowywane w okrągłe nawiasy, po których następują kolejne okrągłe nawiasy - ma to na celu wywołanie zdefiniowanej funkcji.",
+          "Immediately Invoked Function Expression — Funkcja natychmiastowa jest wywoływana automatycznie bezpośrednio po jej odczytaniu.Uzyskujemy ją przez deklarację funkcji anonimowej (bez nazwy) w nawiasach okrągłych, przez co taka konstrukcja jest traktowana jako wyrażenie. Po wyrażeniu dodajemy kolejne dwa nawiasy, przez co jest ono automatycznie wywoływane.Dzięki wykorzystaniu funkcji natychmiastowych ograniczamy zakres (scope) zmiennych tylko do tej metody.Zmniejsza to tym samym potencjalne konflikty z innymi bibliotekami.",
       },
       {
         question: "Co to jest “callback hell” i jak można się go pozbyć?",
@@ -355,7 +350,7 @@ export default {
       {
         question: "Czym jest obietnica(promise)?",
         answer:
-          "Obietnice to obiekty, które reprezentują wykonanie (sukcesem lub porażką) operacji asynchronicznej. Są tak nazwane, bo wykonywana funkcja asynchroniczna musi złożyć obietnicę dostarczenia w przyszłości wartości. Po zakończeniu operacji asynchronicznej jej wynik może zostać obsłużony przez wywołanie na obietnicy metody then.",
+          "Obiekty Promise zostały wprowadzone od ECMAScript 6 jako natywne wsparcie dla operacji asynchronicznych Są tak nazwane, bo wykonywana funkcja asynchroniczna musi złożyć obietnicę dostarczenia w przyszłości wartości. Przetwarzanie metody asynchronicznej może zakończyć się powodzeniem – wtedy wywołujemy metodę resolve() lub porażką – wtedy metodę reject();Na obiekcie Promise zwróconym przez metodę możemy wywołać dwie metody:then  odpowiedzialną za przetwarzanie udanego wywołania;  catch odpowiedzialną za obsługę błędów.",
       },
       {
         question: "Czym jest pętla zdarzeń",
@@ -365,6 +360,10 @@ export default {
       {
         question: "Czym jest funkcja anonimowa?",
         answer: "Funkcja anonimowa to po prostu funkcja bez nazwy,używając wyrażenia funkcyjnego nie musimy nadawać nazwy po słowie function.",
+      },
+      {
+        question: "Do czego służy dyrektywa „use strict”?",
+        answer: "Dyrektywa use strict pozwala przełączyć silnik JavaScript w strict mode. W efekcie czego parser JS jest dużo bardziej rygorystyczny i zgłosi błędy, które bez tej dyrektywy są ignorowane.Dyrektywę można dodać na początku funkcji lub całego pliku *.js",
       },
       {
         question: "Jak działa Math.floor?",
