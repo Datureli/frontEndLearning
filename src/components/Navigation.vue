@@ -50,20 +50,10 @@
           </p>
         </v-btn>
 
-        <v-btn icon>
-          <v-icon color="white">mdi-dots-vertical</v-icon>
-        </v-btn>
       </v-card>
     </v-app-bar>
 
-    <v-slide-x-reverse-transition
-    class="trans"
-      width="inherit"
-      mode="out-in"
-      :duration="{ enter: 50, leave: 50 }"
-    >
       <router-view></router-view>
-    </v-slide-x-reverse-transition>
   </v-container-fluid>
 </template>
 
