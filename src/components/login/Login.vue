@@ -1,7 +1,6 @@
 <template>
   <v-row justify="center">
     <v-dialog
-      eager
       v-model="dialog"
       fullscreen
       @keydown.esc="dialog = false"
@@ -14,31 +13,21 @@
       </template>
 
       <v-card color="darkGradient">
-        <v-toolbar class="mb-0" elevation="0" dark color="#2c3e50">
-          <v-toolbar-title>Ucz się frontu</v-toolbar-title>
-          <v-spacer></v-spacer>
-          <v-toolbar-items>
-            <v-btn icon dark @click="closeModal">
-              <v-icon>mdi-close</v-icon>
-            </v-btn>
-          </v-toolbar-items>
-        </v-toolbar>
+        <v-btn x-large style="right: 1%" icon dark @click="closeModal" absolute>
+          <v-icon>mdi-close</v-icon>
+        </v-btn>
 
-        <div class="d-flex" >
+        <div class="d-flex">
           <v-card
+            tile
             v-show="loggedIn && !elementVisible"
-            height="100%"
-            max-width="300"
+            height="580"
             min-width="300"
             dark
             color="#2c3e50"
           >
-            <v-list color="transparent">
-              <v-list-item-group
-                style="font-size: 20px"
-                color="primary"
-                active-class="blue--text"
-              >
+            <v-list class="mt-12" color="transparent">
+              <v-list-item-group color="primary" active-class="blue--text">
                 <v-list-item
                   v-for="(loginSection, index) in loginSections"
                   :key="index"
@@ -67,14 +56,13 @@
         <v-container>
           <div v-show="elementVisible && loggedIn">
             <h1 class="mt-10">Welcome to your user panel {{ username }}</h1>
-            <login-animation />
           </div>
 
           <v-card
             color="darkGradient"
             v-if="!loggedIn"
             width="460"
-            class="mx-auto mt-15 pr-4 pl-4"
+            class="mx-auto mt-16 pr-4 pl-4"
           >
             <v-card-title>
               <h1 class="display-1 mx-auto white--text">
@@ -155,7 +143,7 @@ export default {
 
   methods: {
     logOut() {
-      this.loggedIn = !this.loggedIn;
+      this.loggedIn = !this.loggedIn; 
     },
     closeModal() {
       this.dialog = false;
@@ -173,17 +161,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.rotingtxt {
-  -webkit-transform: rotate(331deg);
-  -moz-transform: rotate(331deg);
-  -o-transform: rotate(331deg);
-  transform: rotate(331deg);
-  font-size: 12em;
-  color: rgba(255, 5, 5, 0.17);
-  position: absolute;
-  font-family: "Denk One", sans-serif;
-  text-transform: uppercase;
-}
-</style>

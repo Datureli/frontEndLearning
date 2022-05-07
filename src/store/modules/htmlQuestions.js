@@ -18,18 +18,12 @@ export default {
         question: "jak wstawić ikonę obok adresu www?",
 
         answer: `Polecenie to pozwala dodać ikonkę (favicon.ico), która będzie widoczna w przeglądarce przy adresie naszej strony.ico pozwala zapisać dwie wersje rozmiaru w jednym pliku. Niektóre przeglądarki - nie MSIE 6 - pozwalając również używać innych formatów graficznych, takich jak np. PNG.`,
-        secondAnswer: `<head>
-              <link rel="shortcut icon" href="adres ikony">
-            </head>`,
       },
 
       {
         question: "Czym jest tag blockquote?",
         answer:
           "Tag blockquote określa treść cytowaną ze źródła zewnętrznego (gazeta, praca naukowa itp.",
-        secondAnswer: `<blockquote cite="http://developer.mozilla.org">
-              <p>To jest cytat z Mozilla Developer Center.</p>
-                </blockquote>`,
       },
       {
         question: "Które przeglądarki wspierają HTML5?",
@@ -39,8 +33,7 @@ export default {
       {
         question: "Czym jest twarda spacja & nbspHtml?",
         answer:
-          "jak chcemy użyć więcej niż jednej spacji,możemy tego dokonać poprzez dodanie znaku specjalnego.Znak specjalny to odpowiednik znaku wprowadzanego z klawiatury (np. spacji) posiadający specjalny zapis html. Każdy znak specjalny zaczyna się od znaku & (ampersand) i kończy się średnikiem.Znak specjalny niełamliwej spacji to &nbsp; (non-breaking space).",
-        secondAnswer: `W zasadzie jedynym prawidłowym zastosowaniem tego specjalnego znaku jest zapobieżenie rozdzielenia wyrazów przy przenoszeniu do następnej linii.`,
+          "jak chcemy użyć więcej niż jednej spacji,możemy tego dokonać poprzez dodanie znaku specjalnego.Znak specjalny to odpowiednik znaku wprowadzanego z klawiatury (np. spacji) posiadający specjalny zapis html. Każdy znak specjalny zaczyna się od znaku & (ampersand) i kończy się średnikiem.Znak specjalny niełamliwej spacji to &nbsp; (non-breaking space).W zasadzie jedynym prawidłowym zastosowaniem tego specjalnego znaku jest zapobieżenie rozdzielenia wyrazów przy przenoszeniu do następnej linii",
       },
       {
         question: "Co to jest div?",
@@ -70,7 +63,7 @@ export default {
       {
         question: "Czy tagi i elementy w html to to samo?",
         answer:
-          "Nie -elementy w html są definiowane poprzez początkowy tag,mogą zawierać jakiś kontent wewnątrz i tag zamykający.Przykład: <h1>Heading</h1> to element html natomiast <h1>jakiś kontent</h1> to tag zamykajacy",
+          "Nie, elementy w html są definiowane poprzez początkowy tag,mogą zawierać jakiś kontent wewnątrz i tag zamykający.Przykład: <h1>Heading</h1> to element html natomiast <h1>jakiś kontent</h1> to tag zamykajacy",
       },
       {
         question: "Czym są tagi i atrybuty w html?",
@@ -95,8 +88,6 @@ export default {
         answer: `Tag picture zapewnia programistom stron internetowych większą elastyczność w określaniu zasobów obrazu. Zamiast jednego obrazu skalowanego w górę lub w dół to, w zależności od rozmiaru viewportu, można dobrać wiele obrazów tak, żeby dla każdej rozdzielczości ładnie wypełnić okno przeglądarki.`,
         secondAnswer:
           "Element picture ma dwa różne tagi: jeden lub więcej tagów source oraz jeden tag img.Tag source ma następujące właściwości:srcset (wymagany): określa URL obrazu do wyświetlenia, media: akceptuje wszelkie prawidłowe media query, które normalnie byłyby ustawione w CSS,rozmiary: definiuje pojedynczy deskryptor szerokości, media query z deskryptorem szerokości lub rozdzieloną przecinkami listę media query z deskryptorem szerokości type: określa typ MIME",
-        thirdPartOfAnswer:
-          "Przeglądarka użyje wartości atrybutów, aby załadować najbardziej dopasowany obraz. Tag img służy do zapewnienia kompatybilności wstecznej, jeśli przeglądarka nie obsługuje tagu picture",
       },
       {
         question: "Czym jest Web Socket?",
