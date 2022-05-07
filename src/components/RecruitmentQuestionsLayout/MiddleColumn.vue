@@ -8,16 +8,16 @@
       tile
       :elevation="elevation"
     >
-      <div v-if="this.$route.path === '/about'" class="pa-15">
-        <p class="text-h5">
-          Hello, this section is dedicated to studying recruitment questions.on
-          your left hand side are the categories for each question
-        </p>
-        <div class="d-flex justify-center">
-          <v-icon x-large class="mr-3">mdi-arrow-left-bold</v-icon>
+      <div v-if="this.$route.path === '/about'" class="pa-5">
+        <div class="d-grid justify-center">
           <h1 class="text-h2 font-weight-black">
             Choose Category
           </h1>
+          <p class="text-h5">
+            Hello, this section is dedicated to studying recruitment
+            questions.on your left hand side are the categories for each
+            question
+          </p>
         </div>
       </div>
 
@@ -48,7 +48,7 @@ import {
   ReactQuestions,
   GeneralQuestions,
   QuestionPagination,
-  TestYourKnowledge
+  TestYourKnowledge,
 } from "../RecruimentQuestions";
 import IconComponent from "../Icons/IconComponent";
 export default {
@@ -64,7 +64,7 @@ export default {
     GeneralQuestions,
     IconComponent,
     QuestionPagination,
-    TestYourKnowledge
+    TestYourKnowledge,
   },
   computed: {
     width() {

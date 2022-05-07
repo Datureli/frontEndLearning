@@ -1,10 +1,10 @@
 <template>
   <v-app>
-        <v-main>
-          <header>
-            <Navigation />
-          </header>
-        </v-main>
+    <v-main>
+      <header>
+        <Navigation />
+      </header>
+    </v-main>
   </v-app>
 </template>
 <script>
