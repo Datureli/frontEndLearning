@@ -2,7 +2,7 @@
   <div>
     <v-card
       width="750"
-      height="390"
+      height="370"
       class=" text-h6 mx-auto pa-5"
       color="orange"
     >
@@ -12,8 +12,8 @@
       >
         {{ englishSentence.sentence }}
       </div>
-      <v-btn absolute @click="randomSentence">random</v-btn>
     </v-card>
+    <v-btn class="mt-1" @click="randomSentence">random</v-btn>
   </div>
 </template>
 
