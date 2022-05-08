@@ -47,7 +47,6 @@ import {
   TypeScriptQuestions,
   ReactQuestions,
   GeneralQuestions,
-  QuestionPagination,
   TestYourKnowledge,
 } from "../RecruimentQuestions";
 import IconComponent from "../Icons/IconComponent";
@@ -63,7 +62,6 @@ export default {
     ReactQuestions,
     GeneralQuestions,
     IconComponent,
-    QuestionPagination,
     TestYourKnowledge,
   },
   computed: {
