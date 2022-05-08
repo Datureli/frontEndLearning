@@ -1,14 +1,31 @@
 <template>
-  <v-card width="750" class=" text-h6 mx-auto pa-9" color="orange">
-    <div v-for="englishSentence in englishSentences" :key="englishSentence">
-      {{ englishSentence.sentence }}
-    </div>
-    <p></p>
-  </v-card>
+  <div>
+    <v-card
+      width="750"
+      height="390"
+      class=" text-h6 mx-auto pa-5"
+      color="orange"
+    >
+      <div
+        v-for="englishSentence in englishSentences.slice(0, 5)"
+        :key="englishSentence"
+      >
+        {{ englishSentence.sentence }}
+      </div>
+      <v-btn absolute @click="randomSentence">random</v-btn>
+    </v-card>
+  </div>
 </template>
 
 <script>
 export default {
+  methods: {
+    randomSentence() {
+      this.englishSentences.sort(() => {
+        return Math.round(Math.random()) - 0.5;
+      });
+    },
+  },
   data() {
     return {
       englishSentences: [
