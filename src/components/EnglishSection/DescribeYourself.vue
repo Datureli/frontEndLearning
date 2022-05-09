@@ -21,7 +21,7 @@
 export default {
   computed: {
     joinStrings() {
-      return englishSentences.map((e => e.sentence).join('-'))
+this.englishSentences.reduce((a, b) => `${a.sentence || a}, ${b.sentence}`);
     }
   },
   methods: {
@@ -36,18 +36,18 @@ export default {
       englishSentences: [
         {
           sentence:
-            "My name is Paweł and I have been learning front end for almost two years.",
+            "My name is Paweł and I have been learning front end for almost two years",
         },
         {
-          sentence: "The technology I focus on most is vue js.",
-        },
-        {
-          sentence:
-            "I like its architecture, the way of writing code based on single file component, vue has extensive documentation and a large community focused around her I like the fact that it’s constantly challenging my brain.",
+          sentence: "The technology I focus on most is vue js",
         },
         {
           sentence:
-            "  The more you write code, the more you understand there are problems you have never faced, the more you realize you don’t know..",
+            "I like its architecture, the way of writing code based on single file component, vue has extensive documentation and a large community focused around her I like the fact that it’s constantly challenging my brain",
+        },
+        {
+          sentence:
+            "  The more you write code, the more you understand there are problems you have never faced, the more you realize you don’t know",
         },
         {
           sentence:

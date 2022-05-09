@@ -6,23 +6,17 @@ export default {
       {
         question: "Jak zadeklarować zmienną w javascript?",
         answer:
-          "Aby zadeklarować zmienną, powinniśmy posłużyć się jednym ze słów kluczowych var,let lub const.Pod zmienne możemy podstawić dowolne wartości jakie będziemy chcieli",
-        secondAnswer:
-          "Zaleca się używanie let oraz const zamiast var.Dzięki nim nasze skrypty stają się bardziej optymalne pod względem zarządzania pamięcią, ale i potencjalnie unikamy niektórych problematycznych sytuacji",
-        thirdPartOfAnswer:
-          "Nazewnictwo zmiennych posiada konkretne zasady.Wielkość liter ma znaczenie.Zmienne o takiej samej nazwie,ale utworzone przy pomocy różnej wielkości liter to dwie różne zmienne.Nazwa zmiennej nie może zaczynać się od cyfry,nie może zawierać spacji,kropki, przecinka ani myślnika (można natomiast używać podkreślenia),nazwą zmiennej nie może być słowo kluczowe zarezerwowane przez JavaScript",
+          "Aby zadeklarować zmienną, powinniśmy posłużyć się jednym ze słów kluczowych var,let lub const.Pod zmienne możemy podstawić dowolne wartości jakie będziemy chcieli.Zaleca się używanie let oraz const zamiast var.Dzięki nim nasze skrypty stają się bardziej optymalne pod względem zarządzania pamięcią, ale i potencjalnie unikamy niektórych problematycznych sytuacji.Zmienne o takiej samej nazwie,ale utworzone przy pomocy różnej wielkości liter to dwie różne zmienne.Nazwa zmiennej nie może zaczynać się od cyfry,nie może zawierać spacji,kropki, przecinka ani myślnika (można natomiast używać podkreślenia),nazwą zmiennej nie może być słowo kluczowe zarezerwowane przez JavaScript",
       },
       {
         question: "Czym jest grid?",
         answer:
-          "Grid to struktura, która pozwala na umieszczanie zawartości zarówno pionowo, jak i poziomo, w spójny i łatwy w zarządzaniu sposób. Grid obejmują dwa kluczowe elementy: wiersze i kolumny",
-        secondAnswer:
-          "Pozwala nam na układanie treści tak, by była ona czytelna dla użytkownika. Dzięki takim zabiegom, strona posiada bardziej estetyczny wygląd, jest przejrzysta i bardziej przyjazna dla użytkownika.",
+          "Grid to struktura, która pozwala na umieszczanie zawartości zarówno pionowo, jak i poziomo, w spójny i łatwy w zarządzaniu sposób. Grid obejmują dwa kluczowe elementy: wiersze i kolumny.Pozwala nam na układanie treści tak, by była ona czytelna dla użytkownika. Dzięki takim zabiegom, strona posiada bardziej estetyczny wygląd, jest przejrzysta i bardziej przyjazna dla użytkownika.",
       },
       {
         question: "Czym jest debugowanie?",
         answer:
-          "Kod JavaScript i TypeScript można debugować przy użyciu Visual Studio. Można ustawiać i trafiać punkty przerwania, dołączać debuger, sprawdzać zmienne, wyświetlać stos wywołań i używać innych funkcji debugowania.",
+          "ermin debugowanie może oznaczać wiele różnych rzeczy, ale najbardziej dosłownie oznacza usuwanie usterek z kodu. Teraz istnieje wiele sposobów, aby to zrobić. Na przykład możesz debugować, skanując kod w celu szukania literówek lub używając analizatora kodu. Kod można debugować przy użyciu profilera wydajności. Możesz też debugować za pomocą debugera. Debuger to bardzo wyspecjalizowane narzędzie dewelopera, które jest dołączane do uruchomionej aplikacji i umożliwia sprawdzanie kodu.",
       },
       {
         question: "Jak działa słowo kluczowe new?",
@@ -42,7 +36,7 @@ export default {
       {
         question: "Różnica między deklaracją funkcji a deklaracją klasy?",
         answer:
-          "Ważną różnicą pomiędzy deklaracją funkcji a deklaracją klasy jest to, że deklaracje funkcji są przenoszone na początek (Hoisting) a klas nie. Najpierw musisz zadeklarować swoją klasę, by mieć do niej dostęp, w przeciwnym razie kod, jak ten poniżej, wygeneruje błąd ReferenceError:",
+          "Ważną różnicą pomiędzy deklaracją funkcji a deklaracją klasy jest to, że deklaracje funkcji są przenoszone na początek (Hoisting) a klas nie. Najpierw musisz zadeklarować swoją klasę, by mieć do niej dostęp.",
       },
       {
         question: "Czym jest super w javascript?",
