@@ -1,5 +1,5 @@
 <template>
-  <v-carousel hide-delimiters @change="page = 1" class="mt-1">
+  <v-carousel hide-delimiters>
     <v-carousel-item
       v-for="(typescriptQuestions, index) in typescriptQuestions"
       :key="index"
@@ -16,29 +16,17 @@
           <v-list-item-subtitle
             class="white--text text-h6 text-wrap"
             v-show="disable"
-            v-text="
-              page === 1
-                ? typescriptQuestions.answer
-                : page === 2
-                ? typescriptQuestions.secondAnswer
-                : typescriptQuestions.thirdPartOfAnswer
-            "
+            v-text="typescriptQuestions.answer"
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
-
   </v-carousel>
 </template>
 
 <script>
 import { mapState } from "vuex";
 export default {
-  data() {
-    return {
-      page: null
-    }
-  },
   computed: {
     ...mapState(["disable"]),
     ...mapState("typescriptQuestions", ["typescriptQuestions"]),

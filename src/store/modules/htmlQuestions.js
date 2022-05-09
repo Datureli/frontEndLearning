@@ -1,11 +1,11 @@
 export default {
   namespaced: true,
 
-  state: {  
+  state: {
     htmlQuestions: [
       {
         question: `Czym jest Html?`,
-
+        
         answer: `HTML (Hypertext Markup Language) to język znaczników służący do prezentacji treści na stronach internetowych,który jest oparty o hiperłącza łączące poszczególne dokumenty pomiędzy sobą.Przeglądarki internetowe jednoznacznie interpretują kod HTML i na jego bazie przedstawiają treść końcowym użytkownikom.`,
       },
       {
