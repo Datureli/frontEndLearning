@@ -465,6 +465,11 @@ export default {
           "Pinia to biblioteka store dla Vue, pozwala na udostępnianie stanu między komponentami / stronami..",
       },
       {
+        question: "czym jest mvvm?",
+        answer:
+          "Wzorzec Model-View-ViewModel, opiera się na wydzieleniu odpowiednich warstw w systemie, w celu podziału zadań oraz zmniejszenia zależności pomiędzy klasami. Mamy więc klasy modelu danych, których zadaniem jest przechowywanie danych właśnie oraz ich ewentualną walidację. Klasy tej warstwy powinny być jak najprostsze pod względem budowy. Pod żadnym pozorem nie mogą odwoływać się do warstwy modelu widoku a tym bardziej do samego widoku.",
+      },
+      {
         question: "Czym są sunspense components",
         answer:
           "Suspense components to nowa funkcja w vue 3 której ogólną ideą jest umożliwienie komponentom „zawieszenia” renderowania.Gdy wszystkie informacje będą dostępne, js ponownie spróbuje wyrenderować komponent.Aby to osiągnąć Komponent może rzucić Promise w swojej metodzie renderowania.łapie rzuconą Obietnicę i szuka najbliższego Suspensekomponentu na drzewie, które działa jak rodzaj granicy. SuspenseSkładnik bierze element jako fallbackpodpora, która będzie wyświetlana, gdy wszystkie dzieci w jego poddrzewem zawiesinie, bez względu na to gdzie i dlaczego.",

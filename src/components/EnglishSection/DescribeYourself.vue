@@ -19,6 +19,11 @@
 
 <script>
 export default {
+  computed: {
+    joinStrings() {
+      return englishSentences.map((e => e.sentence).join('-'))
+    }
+  },
   methods: {
     randomSentence() {
       this.englishSentences.sort(() => {
