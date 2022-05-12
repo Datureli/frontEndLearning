@@ -21,7 +21,7 @@
         </v-btn>
       </v-card>
     </v-app-bar>
-    <v-navigation-drawer v-model="drawer" absolute>
+    <v-navigation-drawer temporary v-model="drawer" absolute>
       <v-toolbar color="primary" elevation="0">
         <v-spacer></v-spacer>
 
@@ -32,7 +32,7 @@
         </v-toolbar-items>
       </v-toolbar>
 
-      <v-list nav dense color="primary" height="520"  class="green--text">
+      <v-list nav dense color="primary" height="520" class="green--text">
         <v-list-item-group v-model="group">
           <v-list-item
             color="green"

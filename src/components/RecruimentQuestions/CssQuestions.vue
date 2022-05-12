@@ -1,7 +1,6 @@
 <template>
   <v-carousel hide-delimiters>
     <v-carousel-item
-      eager
       v-for="(cssQuestions, index) in cssQuestions"
       :key="index"
       max-width="700"
