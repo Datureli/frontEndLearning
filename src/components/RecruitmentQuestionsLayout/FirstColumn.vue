@@ -1,15 +1,16 @@
 <template>
-  <v-card width="278" class="mt-10 ml-16" color="transparent" elevation="0">
+  <v-card :width="width" class="mt-10" color="transparent" elevation="0">
+    <v-responsive :aspect-ratio="16/9">
     <v-list color="transparent">
       <v-list-item-group active-class="green--text">
         <v-list-item
+       
           v-for="firstColumn in firstColumn"
           :key="firstColumn.id"
           :to="firstColumn.link"
-          :value="index"
         >
-          <v-icon>{{ firstColumn.icon }}</v-icon>
-          <v-list-item-title class="text-h6 ml-6">{{
+          <v-icon >{{ firstColumn.icon }}</v-icon>
+          <v-list-item-title class="ml-5">{{
             firstColumn.title
           }}</v-list-item-title>
           <v-hover v-slot="{ hover }">
@@ -36,11 +37,12 @@
         </v-list-item>
       </v-list-item-group>
     </v-list>
+    </v-responsive>
   </v-card>
 </template>
 
 <script>
-import { mapActions, mapState, mapGetters } from "vuex";
+import { mapActions, mapState } from "vuex";
 export default {
   data() {
     return {
@@ -50,7 +52,20 @@ export default {
   },
   computed: {
     ...mapState("firstColumn", ["firstColumn"]),
-    ...mapGetters("firstColumn", ["firstColumnGet"]),
+    width() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return 280;
+        case "sm":
+          return 210;
+        case "md":
+          return 215;
+        case "lg":
+          return 250;
+        case "xl":
+          return 400;
+      }
+    },
   },
   methods: {
     ...mapActions("questions", [
@@ -65,13 +80,3 @@ export default {
   },
 };
 </script>
-<style>
-.v-card--reveal {
-  align-items: center;
-  bottom: 0;
-  justify-content: center;
-  opacity: 0.5;
-  position: absolute;
-  width: 100%;
-}
-</style>

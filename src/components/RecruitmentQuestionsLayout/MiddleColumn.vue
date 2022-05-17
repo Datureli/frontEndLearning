@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-sheet
-      class="mx-auto mt-xm-5 mt-lg-12"
+      class="mx-auto mt-12"
       :height="height"
       :width="width"
       color="darkGradient"
@@ -70,11 +70,11 @@ export default {
         case "xs":
           return 480;
         case "sm":
-          return 720;
+          return 910;
         case "md":
-          return 500;
+          return 620;
         case "lg":
-          return 790;
+          return 750;
         case "xl":
           return 900;
       }

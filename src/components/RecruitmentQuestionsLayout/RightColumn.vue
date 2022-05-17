@@ -1,17 +1,17 @@
 <template>
   <v-card
-    class="mt-12 mx-auto justify-center d-grid"
+    class="mt-12 d-grid"
     outlined
-    width="300"
+    :width="width"
     height="420"
     color="transparent"
   >
-    <h3 class="mx-auto mr-16">Test your knowledge</h3>
+    <h3 class="mr-6">Test your knowledge</h3>
     <v-form ref="form" v-model="isFilled">
       <v-select
         v-model="category"
         :rules="categoryRules"
-        class="pa-5 mt-0 mr-16 mx-auto"
+        class="pa-5 mt-0 mr-7 mx-auto"
         :items="firstColumn"
         item-text="title"
         label="Category"
@@ -20,7 +20,7 @@
         single-line
       ></v-select>
       <v-select
-        class="pa-5 mt-0 pt-0 mr-16 mx-auto"
+        class="pa-5 mt-0 pt-0 mr-7 mx-auto"
         :rules="numberOfQuestionsRules"
         :items="numberOfQuestions"
         label="Number of questions"
@@ -28,7 +28,7 @@
       <v-select
         v-model="select"
         :rules="difficultyRules"
-        class="pa-5 mt-0 pt-0 mr-16 mx-auto"
+        class="pa-5 mt-0 pt-0 mr-7 mx-auto"
         :items="difficulty"
         item-text="name"
         label="difficulty level"
@@ -38,7 +38,7 @@
       ></v-select>
       <v-select
         :rules="timeRules"
-        class="pa-5 mt-0 pt-0 mr-16 mx-auto"
+        class="pa-5 mt-0 pt-0 mr-7 mx-auto"
         :items="time"
         label="Time"
         persistent-hint
@@ -105,6 +105,20 @@ export default {
           return "darkGradient";
         case "English":
           return "orange";
+      }
+    },
+     width() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return 280;
+        case "sm":
+          return 210;
+        case "md":
+          return 215;
+        case "lg":
+          return 300;
+        case "xl":
+          return 400;
       }
     },
   },
