@@ -9,7 +9,7 @@
     <h3 class="mx-auto mr-16">Test your knowledge</h3>
     <v-form ref="form" v-model="isFilled">
       <v-select
-        v-model="select"
+        v-model="category"
         :rules="categoryRules"
         class="pa-5 mt-0 mr-16 mx-auto"
         :items="firstColumn"
@@ -46,11 +46,7 @@
         single-line
       ></v-select>
     </v-form>
-    <v-btn
-      @click="isSelectedCorrectly"
-      :disabled="!isFilled"
-      :to="'/about/test-knowledge'"
-      class="mr-16"
+    <v-btn :disabled="!isFilled" :to="'/about/test-knowledge'" class="mr-16"
       >start</v-btn
     >
   </v-card>
@@ -62,6 +58,7 @@ import { mapState } from "vuex";
 export default {
   data() {
     return {
+      category: "",
       isFilled: false,
       categoryRules: [(value) => !!value || "Category is required"],
       numberOfQuestionsRules: [(value) => !!value || "this field is required"],
@@ -74,16 +71,40 @@ export default {
   },
   computed: {
     ...mapState("firstColumn", ["firstColumn"]),
-    filledForm() {
-      if (this.$refs.form.validate()) {
-        return isFilled = true
-      }
-    }
-  },
-  methods: {
-    isSelectedCorrectly() {
-      if (this.categoryRules.length > 0) {
-        this.isFilled = true;
+       switch() {
+      switch (this.$route.name) {
+        case "Home":
+          return "black";
+        case "About":
+        case "CssQuestions":
+        case "HtmlQuestions":
+        case "VueQuestions":
+        case "GitQuestions":
+        case "ReactQuestions":
+        case "TypeScriptQuestions":
+        case "JavascriptQuestions":
+        case "GeneralQuestions":
+        case "TestQuestions":
+        case "TestYourKnowledge":
+          return "darkGradient";
+        case "Materials":
+        case "Book":
+        case "Wideo":
+        case "Website":
+        case "Html":
+        case "Css":
+        case "Javascript":
+        case "Vue":
+        case "React":
+        case "Typescript":
+        case "Git":
+        case "General":
+        case "Tests":
+          return "black";
+        case "Games":
+          return "darkGradient";
+        case "English":
+          return "orange";
       }
     },
   },
