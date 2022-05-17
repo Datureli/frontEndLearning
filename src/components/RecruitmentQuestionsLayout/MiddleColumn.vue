@@ -5,7 +5,6 @@
       :height="height"
       :width="width"
       color="darkGradient"
-      tile
       :elevation="elevation"
     >
       <div v-if="this.$route.path === '/about'" class="pa-5">
@@ -32,7 +31,7 @@
       <TypeScriptQuestions v-if="this.$route.path === '/about/typescript'" />
       <TestYourKnowledge v-if="this.$route.path === '/about/test-knowledge'" />
     </v-sheet>
-    <IconComponent v-if="this.$route.path != '/about'" />
+    <IconComponent v-if="this.$route.path != '/about'" class="mt-3" />
   </div>
 </template>
 
@@ -72,9 +71,9 @@ export default {
         case "sm":
           return 910;
         case "md":
-          return 620;
+          return 720;
         case "lg":
-          return 750;
+          return 800;
         case "xl":
           return 900;
       }

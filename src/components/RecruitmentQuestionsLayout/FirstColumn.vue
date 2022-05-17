@@ -1,15 +1,13 @@
 <template>
   <v-card :width="width" class="mt-10" color="transparent" elevation="0">
-    <v-responsive :aspect-ratio="16/9">
     <v-list color="transparent">
       <v-list-item-group active-class="green--text">
         <v-list-item
-       
           v-for="firstColumn in firstColumn"
           :key="firstColumn.id"
           :to="firstColumn.link"
         >
-          <v-icon >{{ firstColumn.icon }}</v-icon>
+          <v-icon>{{ firstColumn.icon }}</v-icon>
           <v-list-item-title class="ml-5">{{
             firstColumn.title
           }}</v-list-item-title>
@@ -37,7 +35,6 @@
         </v-list-item>
       </v-list-item-group>
     </v-list>
-    </v-responsive>
   </v-card>
 </template>
 
@@ -61,7 +58,7 @@ export default {
         case "md":
           return 215;
         case "lg":
-          return 250;
+          return 240;
         case "xl":
           return 400;
       }

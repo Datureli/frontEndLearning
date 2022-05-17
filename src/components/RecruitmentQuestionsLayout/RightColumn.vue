@@ -1,17 +1,11 @@
 <template>
-  <v-card
-    class="mt-12 d-grid"
-    outlined
-    :width="width"
-    height="420"
-    color="transparent"
-  >
-    <h3 class="mr-6">Test your knowledge</h3>
-    <v-form ref="form" v-model="isFilled">
+  <v-card class="mt-12 d-grid" outlined :width="width" color="transparent">
+    <h3>Test your knowledge</h3>
+    <v-form class="pa-5" ref="form" v-model="isFilled">
       <v-select
         v-model="category"
         :rules="categoryRules"
-        class="pa-5 mt-0 mr-7 mx-auto"
+        class="mt-5"
         :items="firstColumn"
         item-text="title"
         label="Category"
@@ -20,7 +14,7 @@
         single-line
       ></v-select>
       <v-select
-        class="pa-5 mt-0 pt-0 mr-7 mx-auto"
+        class="mt-5 pt-0"
         :rules="numberOfQuestionsRules"
         :items="numberOfQuestions"
         label="Number of questions"
@@ -28,7 +22,7 @@
       <v-select
         v-model="select"
         :rules="difficultyRules"
-        class="pa-5 mt-0 pt-0 mr-7 mx-auto"
+        class="mt-5 pt-0"
         :items="difficulty"
         item-text="name"
         label="difficulty level"
@@ -38,7 +32,7 @@
       ></v-select>
       <v-select
         :rules="timeRules"
-        class="pa-5 mt-0 pt-0 mr-7 mx-auto"
+        class="mt-5 pt-0"
         :items="time"
         label="Time"
         persistent-hint
@@ -46,9 +40,7 @@
         single-line
       ></v-select>
     </v-form>
-    <v-btn :disabled="!isFilled" :to="'/about/test-knowledge'" class="mr-16"
-      >start</v-btn
-    >
+    <v-btn :disabled="!isFilled" :to="'/about/test-knowledge'">start</v-btn>
   </v-card>
 </template>
 
@@ -71,43 +63,8 @@ export default {
   },
   computed: {
     ...mapState("firstColumn", ["firstColumn"]),
-       switch() {
-      switch (this.$route.name) {
-        case "Home":
-          return "black";
-        case "About":
-        case "CssQuestions":
-        case "HtmlQuestions":
-        case "VueQuestions":
-        case "GitQuestions":
-        case "ReactQuestions":
-        case "TypeScriptQuestions":
-        case "JavascriptQuestions":
-        case "GeneralQuestions":
-        case "TestQuestions":
-        case "TestYourKnowledge":
-          return "darkGradient";
-        case "Materials":
-        case "Book":
-        case "Wideo":
-        case "Website":
-        case "Html":
-        case "Css":
-        case "Javascript":
-        case "Vue":
-        case "React":
-        case "Typescript":
-        case "Git":
-        case "General":
-        case "Tests":
-          return "black";
-        case "Games":
-          return "darkGradient";
-        case "English":
-          return "orange";
-      }
-    },
-     width() {
+
+    width() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
           return 280;
@@ -116,7 +73,7 @@ export default {
         case "md":
           return 215;
         case "lg":
-          return 300;
+          return 240;
         case "xl":
           return 400;
       }
