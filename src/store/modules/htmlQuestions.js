@@ -26,6 +26,16 @@ export default {
           "Tag blockquote określa treść cytowaną ze źródła zewnętrznego (gazeta, praca naukowa itp.",
       },
       {
+        question: "Czym jest innerHtml?",
+        answer:
+          "Właściwość innerHTML umożliwia odczyt i ustawianie html, jaki jest we wnętrzu danego elementu:",
+      },
+      {
+        question: "Czym jest html canvas?",
+        answer:
+          "element języka HTML wprowadzony w HTML 5 pozwalający na dynamiczne, skryptowe renderowanie kształtów i obrazów bitmapowych. Dzięki wprowadzeniu obiektu canvas możliwe stało się tworzenie dynamicznych dwu i trójwymiarowych animacji czy gier działających w przeglądarkach bez dodatkowych wtyczek.",
+      },
+      {
         question: "Które przeglądarki wspierają HTML5?",
         answer:
           "Ostatnie wersje Safari, Google Chrome, Mozilla Firefox oraz Opera – wszystkie wspierają wiele funkcjonalności HTML5. Internet Explorer od wersji 9.0 również wspiera niektóre z funkcjonalności.Mobilne przeglądarki internetowe, które zostały zainstalowane na urządzeniach jak iPhone, iPad oraz Android doskonale wpierają HTML5.",
