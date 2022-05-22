@@ -121,13 +121,6 @@ import MyInformation from "./MyInformation.vue";
 import ChangePassword from "./ChangePassword.vue";
 import MessageSection from "./MessageSection.vue";
 export default {
-  components: {
-    loginAnimation,
-    MyInformation,
-    FavoriteSection,
-    ChangePassword,
-    MessageSection,
-  },
   data: () => ({
     username: "",
     password: "",
@@ -157,6 +150,13 @@ export default {
   },
   created() {
     setTimeout(() => (this.elementVisible = false), 3000);
+  },
+    components: {
+    loginAnimation,
+    MyInformation,
+    FavoriteSection,
+    ChangePassword,
+    MessageSection,
   },
 };
 </script>

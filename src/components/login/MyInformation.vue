@@ -1,25 +1,17 @@
 <template>
   <v-container>
-    <v-card color="transparent" elevation="5" class="mt-10 mx-auto d-flex">
+    <v-card color="transparent" elevation="3" class="mt-10 mx-auto d-flex">
       <v-avatar size="150">
         <v-icon dark large style="font-size:130px;">
           mdi-account-circle
         </v-icon>
       </v-avatar>
-      <h2 class="mt-5" style="right: 11%">Free Account</h2>
+      <h2 class="mt-5">Free Account</h2>
     </v-card>
 
-    <v-toolbar class="mb-0" elevation="0" dark color="transparent">
-     
-    </v-toolbar>
-    <v-sheet color="white" class="mx-auto" height="0" width="97%"> </v-sheet>
+    <v-sheet class="mx-auto mt-10" width="97%"> </v-sheet>
     <div class="d-flex mt-10">
-      <v-sheet
-        height="200"
-        width="50%"
-        style="border-left: none;"
-        color="transparent"
-      >
+      <v-sheet height="200" width="50%" color="transparent">
         <h2>Last activity</h2>
       </v-sheet>
       <v-sheet width="50%" color="transparent">
@@ -30,11 +22,10 @@
 </template>
 
 <style scoped>
-
 .v-sheet {
   border-bottom: 3px solid white;
 }
 h2 {
-    color: white;
+  color: white;
 }
 </style>

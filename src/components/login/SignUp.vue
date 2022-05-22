@@ -3,7 +3,7 @@
     <v-dialog
       v-model="dialog"
       fullscreen
-      hide-overlay
+      @keydown.esc="dialog = false"
       transition="dialog-bottom-transition"
     >
       <template v-slot:activator="{ on, attrs }">
@@ -12,21 +12,23 @@
         </v-btn>
       </template>
       <v-card color="darkGradient">
-        <v-toolbar dense dark elevation="0" color="transparent">
-          <v-spacer></v-spacer>
-          <v-toolbar-items>
-            <v-btn icon dark @click="dialog = false">
-              <v-icon>mdi-close</v-icon>
-            </v-btn>
-          </v-toolbar-items>
-        </v-toolbar>
+        <v-btn
+          x-large
+          style="right: 1%"
+          icon
+          dark
+          @click="dialog = false"
+          absolute
+        >
+          <v-icon>mdi-close</v-icon>
+        </v-btn>
+<v-container>
         <v-card
           v-if="isSubmitted"
-          width="600"
-          elevation="0"
-          outlined
-          class="mx-auto pr-10 pl-10"
-          color="white"
+          width="500"
+          elevation="3"
+          class="mx-auto mt-5 pr-10 pl-10"
+          color="darkGradient"
         >
           <v-form v-model="formValidity">
             <v-card-title>
@@ -105,15 +107,17 @@
             </v-btn>
           </v-form>
         </v-card>
+
         <v-card
           v-else
           width="400"
           class="mt-16 green darken-1 text-center justify-center mx-auto  white--text"
         >
-          <h1>congrtulation</h1>
+          <h1>congratulation</h1>
           <p class="m-0">email confirmation has been send</p>
           <v-icon class="mb-5">mdi-checkbox-marked-circle</v-icon>
         </v-card>
+                </v-container>
       </v-card>
     </v-dialog>
   </v-row>
@@ -133,7 +137,7 @@ export default {
   methods: {
     addUser() {
       this.$store.dispatch("register/addUser");
-      isSubmitted = false
+      isSubmitted = false;
     },
     addRegister() {
       this.$store.state.register.registeredUsers.push(updateName);

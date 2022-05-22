@@ -87,9 +87,6 @@ export default {
     $route(to, from) {
       this.drawer = false;
     },
-    group() {
-      this.drawer = false;
-    },
   },
   computed: {
     ...mapState(["favorite"]),
