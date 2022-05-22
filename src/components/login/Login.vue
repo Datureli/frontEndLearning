@@ -143,17 +143,16 @@ export default {
 
   methods: {
     logOut() {
-      this.loggedIn = !this.loggedIn; 
+      this.loggedIn = !this.loggedIn;
     },
     closeModal() {
       this.dialog = false;
       this.$router.push({ path: "/about" });
     },
     isUserLogin() {
-      if (this.username.length > 0 && this.password.length > 0) {
-        this.loggedIn = true;
-        this.$router.push({ path: "login" });
-      }
+      this.username.length > 0 && this.password.length > 0
+        ? (this.loggedIn = true && this.$router.push({ path: "login" }))
+        : (this.loggedIn = false);
     },
   },
   created() {

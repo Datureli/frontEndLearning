@@ -143,6 +143,11 @@ export default {
           "Przypadek testowy to nic innego jak zestaw warunków lub zmiennych, w ramach których tester ustala, czy testowany system spełnia wymagania lub działa poprawnie.",
       },
       {
+        question: "czym jest FIRST?",
+        answer:
+          "Fast oznacza, że uruchomienie testów powinno być szybkie, a dzięki temu informacja zwrotna o wyniku testów jest również przekazana w szybkim czasie.Isolated oznacza, że testy nie powinny zależeć od siebie. Dzięki temu testy można uruchamiać osobno w całym zestawie i zawsze dają te same wyniki.Repeatable oznacza, że testy powinny być powtarzalne w każdych warunkach. Wobec tego powinny one zależeć tyko od kodu, który testują. Self-validating oznacza, że każdy test powinien dać klarowną informację o tym, czy przeszedł pozytywnie czy nie. Jeśli nie przeszedł pozytywnie, to powinien dać informację co się stało oraz dlaczego nie przeszedł.Timely oznacza, żeby testy były pisane razem z nowym kodem, czyli aby były dostarczone na czas. Niedopuszczalna jest sytuacja, że testy powstają po jakimś czasie.   ",
+      },
+      {
         question: "soap vs rest?",
         answer:
           "Które rozwiązanie jest najbardziej wydajne? Okazuje się, że REST. Ze względu na swój mały rozmiar wymaga mniejszej przepustowości łącza niż SOAP. Co więcej, dla takiej samej ilości danych wymaga mniejszej mocy obliczeniowej. Dzięki temu działa szybciej, nawet o kilkadziesiąt procent, od SOAP. Wydajność różni się także ze względu na cache’owanie wywołań API, które, w przeciwieństwie do SOAP, umożliwia REST.Jeśli zależy Ci na dużej liczbie formatów, powinieneś zdecydować się na REST. Dzięki niemu dane można wymieniać w formacie JSON, XML, HTML, YAML, a także jako zwykły tekst. Daje więc Ci to duże pole manewru.  SOAP umożliwia komunikację tylko przy użyciu XML. Jednak dostępny jest dla zdecydowanie większej ilości protokołów niż REST, który uwzględnia jedynie HTTP. Tak więc SOAP wykorzystasz łącznie z SMTP, UDP i oczywiście z HTTP.  ",
