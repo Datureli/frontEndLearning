@@ -4,7 +4,7 @@
       <v-sheet
         height="540"
         width="1500"
-        class="darkGradient d-md-flex d-lg-flex d-grid"
+        class="darkGradient justify-center d-md-flex d-lg-flex d-grid"
       >
         <FirstColumn v-if="$vuetify.breakpoint.mdAndUp" />
         <MiddleColumn />

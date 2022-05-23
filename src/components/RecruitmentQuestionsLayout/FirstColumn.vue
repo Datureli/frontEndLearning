@@ -51,10 +51,6 @@ export default {
     ...mapState("firstColumn", ["firstColumn"]),
     width() {
       switch (this.$vuetify.breakpoint.name) {
-        case "xs":
-          return 280;
-        case "sm":
-          return 210;
         case "md":
           return 215;
         case "lg":

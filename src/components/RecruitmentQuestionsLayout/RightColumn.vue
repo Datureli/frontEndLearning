@@ -1,7 +1,7 @@
 <template>
-  <v-card class="mt-12 d-grid" outlined :width="width" color="transparent">
-    <h3>Test your knowledge</h3>
-    <v-form class="pa-5" ref="form" v-model="isFilled">
+  <v-card class="mt-12 d-grid" outlined color="transparent">
+    <h3 class="text-md-h6">Test your knowledge</h3>
+    <v-form class="pa-4" ref="form" v-model="isFilled">
       <v-select
         v-model="category"
         :rules="categoryRules"
@@ -46,7 +46,6 @@
 
 <script>
 import { mapState } from "vuex";
-
 export default {
   data() {
     return {
@@ -63,21 +62,6 @@ export default {
   },
   computed: {
     ...mapState("firstColumn", ["firstColumn"]),
-
-    width() {
-      switch (this.$vuetify.breakpoint.name) {
-        case "xs":
-          return 280;
-        case "sm":
-          return 210;
-        case "md":
-          return 215;
-        case "lg":
-          return 240;
-        case "xl":
-          return 400;
-      }
-    },
   },
 };
 </script>
