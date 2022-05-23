@@ -20,7 +20,6 @@
         label="Number of questions"
       ></v-select>
       <v-select
-        v-model="select"
         :rules="difficultyRules"
         class="mt-5 pt-0"
         :items="difficulty"

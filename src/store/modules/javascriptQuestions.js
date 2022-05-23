@@ -16,7 +16,7 @@ export default {
       {
         question: "Czym jest debugowanie?",
         answer:
-          "ermin debugowanie może oznaczać wiele różnych rzeczy, ale najbardziej dosłownie oznacza usuwanie usterek z kodu. Teraz istnieje wiele sposobów, aby to zrobić. Na przykład możesz debugować, skanując kod w celu szukania literówek lub używając analizatora kodu. Kod można debugować przy użyciu profilera wydajności. Możesz też debugować za pomocą debugera. Debuger to bardzo wyspecjalizowane narzędzie dewelopera, które jest dołączane do uruchomionej aplikacji i umożliwia sprawdzanie kodu.",
+          "Termin debugowanie może oznaczać wiele różnych rzeczy, ale najbardziej dosłownie oznacza usuwanie usterek z kodu. Teraz istnieje wiele sposobów, aby to zrobić. Na przykład możesz debugować, skanując kod w celu szukania literówek lub używając analizatora kodu. Kod można debugować przy użyciu profilera wydajności. Możesz też debugować za pomocą debugera. Debuger to bardzo wyspecjalizowane narzędzie dewelopera, które jest dołączane do uruchomionej aplikacji i umożliwia sprawdzanie kodu.",
       },
       {
         question: "Jak działa słowo kluczowe new?",
@@ -54,9 +54,9 @@ export default {
           "Metoda some() zwróci prawdę, jeżeli chociaż dla jednego elementu użyta funkcja zwróci prawdę.",
       },
       {
-        question: "Czym jest funkcja reduce()?",
+        question: "Czym jest funkcja reduce?",
         answer:
-          "Dzięki reduce() możemy wykonywać operacje na tablicy redukując ją, w wyniku uzyskując jakiś wynik.Funkcja robi iterację po tablicy.W pierwszej iteracji pod pierwszy parametr wstawiany jest pierwszy element tablicy, a pod drugi kolejny.Funkcja zwraca jakiś wynik. W kolejnej iteracji podstawiany jest on pod pierwszy parametr, a do drugiego parametru trafia kolejny element w tablicy.",
+          "Dzięki reduce możemy wykonywać operacje na tablicy redukując ją, w wyniku uzyskując jakiś wynik.Funkcja robi iterację po tablicy.W pierwszej iteracji pod pierwszy parametr wstawiany jest pierwszy element tablicy, a pod drugi kolejny.Funkcja zwraca jakiś wynik. W kolejnej iteracji podstawiany jest on pod pierwszy parametr, a do drugiego parametru trafia kolejny element w tablicy.",
       },
       {
         question: "Czym jest funkcja map()?",

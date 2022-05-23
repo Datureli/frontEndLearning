@@ -14,8 +14,8 @@
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
-            style=" word-spacing: 1em 1em 1em;"
-            class="white--text text-justify text-h6 text-wrap"
+            style="text-align:justify; word-spacing:-2px;"
+            class="white--text  text-h6 text-wrap"
             v-show="disable"
             v-text="javascriptQuestions.answer"
           ></v-list-item-subtitle>
