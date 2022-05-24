@@ -26,6 +26,11 @@ export default {
         secondAnswer: "",
       },
       {
+        question: "Czym jest izomorfizm",
+        answer:
+          "Aplikacja izomorficzna to taka, która dzieli prawie cały swój kod między serwerem i klientem.",
+      },
+      {
         question: "Czym jest docker?",
         answer:
           "Docker to platforma Open Source służąca do tworzenia i wdrażania aplikacji kontenerowych oraz zarządzania nimi. Umożliwia programistom pakowanie aplikacji w kontenery — standardowe wykonywalne komponenty łączące kod źródłowy aplikacji z zależnościami i bibliotekami systemu operacyjnego wymaganymi do uruchomienia tego kodu w dowolnym środowisku.  Kontenery upraszczają dostarczanie rozproszonych aplikacji i stają się coraz popularniejsze w miarę jak organizacje coraz częściej tworzą rozwiązania z myślą o chmurze i wykorzystują hybrydowe środowiska",
@@ -51,7 +56,6 @@ export default {
         question: "Co wpływa na szybkość odpowiedzi serwera DNS?",
         answer:
           "Szybkość wczytywania się stron internetowych na komputerze w dużym stopniu zależy od czasu, w jakim serwer DNS odnajdzie adres IP odpowiadający danej domenie. Istotnym czynnikiem wpływającym na czas odpowiedzi jest odległość komputera od docelowego serwera.Na opóźnienie w komunikacji, oprócz sporej odległości, może również wpłynąć skomplikowana struktura strony www. Sporo współczesnych witryn zawiera liczne odwołania do innych stron – np. serwisów społecznościowych czy kanałów reklamowych. W takim przypadku zanim możliwe będzie załadowanie strony, serwer będzie musiał przetłumaczyć adresy wielu domen. Zamiana serwerów DNS na szybsze znacząco przyśpiesza wczytywanie się witryn, pomimo identycznej przepustowości łącza.",
-        secondAnswer: "",
       },
       {
         question: "Jakie są rodzaje zapytań oraz serwerów DNS",
