@@ -70,10 +70,6 @@ export default {
         link: "/about",
       },
       {
-        title: "Gry",
-        link: "/games",
-      },
-      {
         title: "Materiały",
         link: "/materials",
       },

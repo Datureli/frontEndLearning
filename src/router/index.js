@@ -87,16 +87,6 @@ const routes = [
     component: () => import("../views/FlashCards"),
   },
   {
-    path: "/games",
-    name: "Games",
-    component: () => import("../views/Games"),
-  },
-  {
-    path: "/quiz",
-    name: "Quiz",
-    component: () => import("../components/games/Quiz"),
-  },
-  {
     path: "/book/",
     name: "Book",
     component: () => import("../components/materials/Books/Book"),
