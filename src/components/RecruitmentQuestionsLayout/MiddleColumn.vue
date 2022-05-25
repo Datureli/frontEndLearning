@@ -87,12 +87,8 @@ export default {
           return 0;
         case "sm":
           return 0;
-        case "md":
-          return 10;
-        case "lg":
-          return 10;
-        case "xl":
-          return 10;
+        default:
+          return 3;
       }
     },
   },

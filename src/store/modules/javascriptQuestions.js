@@ -199,6 +199,11 @@ export default {
           "by dodać do tablicy element na jej końcu, możemy użyć metody push(element1, element2, ...).Drugą metodą jest po prostu ustawianie elementu na danym indeksie:",
       },
       {
+        question: "Czym jest debouncing?",
+        answer:
+          "Debouncing to metoda, w której funkcja nie może zostać uruchomiona, dopóki nie upłynie określony czas bez wywołania tej funkcji. ",
+      },
+      {
         question: "Jakie są różnice pomiędzy keypress,keydown i keyup",
         answer:
           "by dodać do tablicy element na jej końcu, możemy użyć metody push(element1, element2, ...).Drugą metodą jest po prostu ustawianie elementu na danym indeksie:",

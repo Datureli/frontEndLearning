@@ -14,17 +14,18 @@
     ></v-select>
     <ItWordsCollection v-if="select.name === 'nauka słów'" />
     <DescribeYourself v-if="select.name === 'opisz siebie'" />
+    <ItDictionary v-if="select.name === 'słowniczek branżowy'" />
   </v-container>
 </template>
 
 <script>
 import ItWordsCollection from "./ItWordsCollection.vue";
 import DescribeYourself from "./DescribeYourself.vue";
+import ItDictionary from './ItDictionary.vue'
 export default {
   data() {
     return {
       select: "",
-
       englishSection: [
         {
           name: "opisz siebie",
@@ -33,7 +34,7 @@ export default {
           name: "nauka słów",
         },
         {
-          name: "angielski3",
+          name: "słowniczek branżowy",
         },
       ],
     };
@@ -42,8 +43,7 @@ export default {
   components: {
     ItWordsCollection,
     DescribeYourself,
+    ItDictionary
   },
 };
 </script>
-
-<style scoped></style>
