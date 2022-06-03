@@ -21,9 +21,7 @@
 export default {
   methods: {
     randomSentence() {
-      this.englishSentences.sort(() => {
-        return ~~Math.random() - 0.5;
-      });
+      this.englishSentences.sort(() => ~~Math.random() - 0.5);
     },
   },
   data() {
