@@ -1,6 +1,12 @@
 <template>
-  <v-container class="d-flex" >
-    <v-card color="orange" v-if="checkStatus" width="500" height="310" class="mx-auto ">
+  <v-container class="d-flex">
+    <v-card
+      color="orange"
+      v-if="checkStatus"
+      width="500"
+      height="310"
+      class="mx-auto "
+    >
       <p>{{ carouselCounter + "/10" }}</p>
       <v-carousel hide-delimiters prev-icon @change="incrementCarouselCounter">
         <v-carousel-item
@@ -18,8 +24,8 @@
           v-for="(CheckKnowledgeQuestion, index) in CheckKnowledgeQuestions"
           :key="index"
         >
-          <h1>{{ CheckKnowledgeQuestion.englishWord }}</h1>
-          <h1>{{ CheckKnowledgeQuestion.polishWord }}</h1>
+          <h2>{{ CheckKnowledgeQuestion.englishWord }}</h2>
+          <h2>{{ CheckKnowledgeQuestion.polishWord }}</h2>
           <v-text-field v-model="selectedAnswer">dsadsa</v-text-field>
           {{ selectedAnswer }}
           <h1 v-if="validateAnswer">good</h1>
@@ -48,7 +54,6 @@ export default {
     checkStatus() {
       return this.showQuestions;
     },
- 
   },
   methods: {
     incrementCarouselCounter() {

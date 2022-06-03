@@ -33,7 +33,8 @@ export default {
           "vue js posiada niski próg wejścia.Framework jest lekki,waży tylko 18-23 kb,Vue js jest szybszym frameworkiem niż Angular czy React,virtual DOM,data binding,komponentyAnimation/Transition.",
         secondAnswer:
           "Jest oparty na komponentach oraz jednostronnym przepływie danych, i podobnie do Angulara posiada proste szablony z dobrą składnią. Vue nie potrzebuje konfiguracji środowiska,Posiada bardzo szczegołową dokumentacje",
-          thirdPartOfAnswer: 'Vue pozwala na tworzenie prostych aplikacji webowych opartych o Model-view-viewmodel.'
+        thirdPartOfAnswer:
+          "Vue pozwala na tworzenie prostych aplikacji webowych opartych o Model-view-viewmodel.",
       },
       {
         question: "Czym jest composition api?",
@@ -55,7 +56,8 @@ export default {
           "Oznacz to , że komponenty są bezstanowe (brak danych reaktywnych) i bezinstancyjne (bez tego kontekstu)",
         secondAnswer:
           "W komponentach funkcyjnych otrzymuje 2 parametry: funkcję callback zwracającą VNode oraz obiekt context.W komponentach funkcyjnych nie występuja life hooki.",
-          thirdPartOfAnswer: 'Komponenty funkcyjne cechuje prostota, zwięzłość i przewidywalność. Nie musimy przejmować się stanem ani innymi funkcjonalnościami, dodającymi zbędną złożoność.Komponenty pozbawione stanu są świetnym sposobem na redukowanie złożoności aplikacji.'
+        thirdPartOfAnswer:
+          "Komponenty funkcyjne cechuje prostota, zwięzłość i przewidywalność. Nie musimy przejmować się stanem ani innymi funkcjonalnościami, dodającymi zbędną złożoność.Komponenty pozbawione stanu są świetnym sposobem na redukowanie złożoności aplikacji.",
       },
       {
         question: "Czym są mixiny?",
@@ -76,7 +78,8 @@ export default {
         question: "Czym jest composition functions?",
         answer:
           "W celu wyciągnięcia logiki z komponentów używamy composition functions. Pozwalają one nam na wyciągnięcie reaktywnego stanu oraz funkcjonalności poza komponent i używanie ich w dowolnym miejscu aplikacji. Z racji posiadania własnego stanu niezależnego od komponentów, w którym są używane, mogą w pewnym stopniu zastąpić Vuexa. Są odpowiednikami mixinów używanych w Options API.",
-          secondAnswer: 'W komponentach dokonujemy destrukturyzacji na obiekcie zwracanym przez funkcje i wyciągamy interesujące nas dane i funkcje. Dzięki destrukturyzacji omijamy konflikty nazw właściwości, które pobieramy. Zwracane właściwości możemy stworzyć jako read-only i w ten sposób zapobiec ich mutacji bezpośrednio zmieniając ich wartość. Wtedy możemy wdrożyć taką samą zasadę działania jak w przypadku mutacji w Vuexie.'
+        secondAnswer:
+          "W komponentach dokonujemy destrukturyzacji na obiekcie zwracanym przez funkcje i wyciągamy interesujące nas dane i funkcje. Dzięki destrukturyzacji omijamy konflikty nazw właściwości, które pobieramy. Zwracane właściwości możemy stworzyć jako read-only i w ten sposób zapobiec ich mutacji bezpośrednio zmieniając ich wartość. Wtedy możemy wdrożyć taką samą zasadę działania jak w przypadku mutacji w Vuexie.",
       },
       {
         question: "Czym jest vue?",

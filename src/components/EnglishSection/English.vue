@@ -39,7 +39,6 @@ export default {
       ],
     };
   },
-  name: "Home",
   components: {
     ItWordsCollection,
     DescribeYourself,
