@@ -3,7 +3,7 @@
     <v-card
       width="750"
       height="370"
-      class=" text-h6 mx-auto pa-5"
+      class="text-h6 mx-auto pa-5"
       color="orange"
     >
       <div
@@ -19,15 +19,10 @@
 
 <script>
 export default {
-  computed: {
-    joinStrings() {
-this.englishSentences.reduce((a, b) => `${a.sentence || a}, ${b.sentence}`);
-    }
-  },
   methods: {
     randomSentence() {
       this.englishSentences.sort(() => {
-        return Math.round(Math.random()) - 0.5;
+        return ~~Math.random() - 0.5;
       });
     },
   },
