@@ -175,9 +175,7 @@ export default {
 
   mutations: {
     randomHtmlQuestion(state) {
-      state.htmlQuestions.sort(() => {
-        return Math.round(Math.random()) - 0.5;
-      });
+      state.htmlQuestions.sort(() => ~~Math.random() - 0.5);
     },
   },
   actions: {

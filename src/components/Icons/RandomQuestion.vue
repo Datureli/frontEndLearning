@@ -27,7 +27,7 @@ export default {
           return this.randomReactQuestion();
         case "/about/typescript":
           return this.randomTypescriptQuestion();
-        case "/about/gitQuestions":
+        case "/about/gitquestions":
           return this.randomGitQuestion();
         case "/about/general":
           return this.randomGeneralQuestion();

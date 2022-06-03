@@ -58,9 +58,7 @@ export default {
 
   mutations: {
     randomReactQuestion(state) {
-      state.reactQuestions.sort(function() {
-        return Math.round(Math.random()) - 0.5;
-      });
+      state.reactQuestions.sort(() => ~~Math.random() - 0.5);
     },
   },
   actions: {

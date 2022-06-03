@@ -202,9 +202,7 @@ export default {
 
   mutations: {
     randomTestQuestion(state) {
-      state.testQuestions.sort(() => {
-        return Math.round(Math.random()) - 0.5;
-      });
+      state.testQuestions.sort(() => ~~Math.random() - 0.5);
     },
   },
   actions: {

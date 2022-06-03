@@ -65,9 +65,7 @@ export default {
 
   mutations: {
     randomCssQuestion(state) {
-      state.cssQuestions.sort(() => {
-        return Math.round(Math.random()) - 0.5;
-      });
+      state.cssQuestions.sort(() => ~~Math.random() - 0.5);
     },
   },
   actions: {

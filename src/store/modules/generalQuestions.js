@@ -317,9 +317,7 @@ export default {
 
   mutations: {
     randomGeneralQuestion(state) {
-      state.generalQuestions.sort(function() {
-        return Math.round(Math.random()) - 0.5;
-      });
+      state.generalQuestions.sort(() => ~~Math.random() - 0.5);
     },
   },
   actions: {

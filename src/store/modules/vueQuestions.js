@@ -492,9 +492,7 @@ export default {
   },
   mutations: {
     randomVueQuestion(state) {
-      state.vueQuestions.sort(() => {
-        return Math.round(Math.random()) - 0.5;
-      });
+      state.vueQuestions.sort(() => ~~Math.random() - 0.5);
     },
   },
   actions: {
