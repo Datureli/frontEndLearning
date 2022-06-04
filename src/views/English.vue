@@ -15,13 +15,15 @@
     <ItWordsCollection v-if="select.name === 'nauka słów'" />
     <DescribeYourself v-if="select.name === 'opisz siebie'" />
     <ItDictionary v-if="select.name === 'słowniczek branżowy'" />
+    <FlashCards v-if="select.name === 'fiszki'" />
   </v-container>
 </template>
 
 <script>
-import ItWordsCollection from "../components/EnglishSection/ItWordsCollection.vue";
-import DescribeYourself from "../components/EnglishSection/DescribeYourself.vue";
-import ItDictionary from '../components/EnglishSection/ItDictionary.vue'
+import ItWordsCollection from "../components/EnglishSection/ItWordsCollection";
+import DescribeYourself from "../components/EnglishSection/DescribeYourself";
+import ItDictionary from '../components/EnglishSection/ItDictionary'
+import FlashCards from '../components/EnglishSection/FlashCards'
 export default {
   data() {
     return {
@@ -36,13 +38,17 @@ export default {
         {
           name: "słowniczek branżowy",
         },
+           {
+          name: "fiszki",
+        },
       ],
     };
   },
   components: {
     ItWordsCollection,
     DescribeYourself,
-    ItDictionary
+    ItDictionary,
+    FlashCards
   },
 };
 </script>

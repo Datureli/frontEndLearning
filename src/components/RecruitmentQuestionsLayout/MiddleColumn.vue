@@ -1,8 +1,8 @@
 <template>
   <div>
     <v-sheet
-      class="mx-auto mt-12"
-      height="415"
+      class="mx-auto mt-13"
+      height="410"
       :width="width"
       color="darkGradient"
       :elevation="elevation"

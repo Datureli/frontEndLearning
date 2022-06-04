@@ -82,11 +82,6 @@ const routes = [
   },
 
   {
-    path: "/flashcards",
-    name: "FlashCards",
-    component: () => import("../views/FlashCards"),
-  },
-  {
     path: "/book/",
     name: "Book",
     component: () => import("../components/materials/Books/Book"),
