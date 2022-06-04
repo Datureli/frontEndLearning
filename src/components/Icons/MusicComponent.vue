@@ -12,7 +12,8 @@ import Vue from "vue";
 import Component from "vue-class-component";
 
 @Component
-export default class Counter extends Vue {
+export default class MusicComponent extends Vue {
+
   current = {};
   index = 0;
   isPlaying = false;
