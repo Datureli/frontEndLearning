@@ -1,33 +1,28 @@
 <template>
-  <v-container-fluid>
-    <div class="d-flex">
-      <v-list
-        v-for="(question, index) in questions.slice(0, 3)"
-        :key="index"
-        class="card space-around mx-auto"
-      >
-        <v-list-item-group>
-          <v-list-item>
-            <v-list-item-title>
-              {{ question.filterQuestions }}</v-list-item-title
-            >
-               <transition name="flip" mode="out-in">
-            <p :key="question.change" class="card__">
+  <v-container-fluid class="d-flex">
+    <v-list
+      v-for="(question, index) in questions.slice(0, 3)"
+      :key="index"
+      class="card mx-auto justify-center"
+    >
+      <v-list-item-group>
+        <v-list-item>
+          <transition name="flip" mode="out-in">
+            <p :key="question.change">
               {{ question.change ? question.answer : question.question }}
             </p>
           </transition>
-          <button @click="toggleQuestion(question)" class="mt-8">
-            {{ question.change ? "Back" : "Show answer" }}
-          </button>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-  
-      <div>
-        <v-icon @click="randomizeQuestionCard()" large class="mx-auto">
-          mdi-cube</v-icon
-        >
-      </div>
+        </v-list-item>
+        <button @click="toggleQuestion(question)" class="mt-8">
+          {{ question.change ? "Back" : "Show answer" }}
+        </button>
+      </v-list-item-group>
+    </v-list>
+
+    <div>
+      <v-icon @click="randomizeQuestionCard()" large class="mx-auto">
+        mdi-cube</v-icon
+      >
     </div>
   </v-container-fluid>
 </template>
@@ -108,34 +103,18 @@ export default {
 
 <style scoped>
 .card {
-  display: block;
   width: 250px;
   height: 330px;
-  padding: 80px 50px;
   border-radius: 9px;
-  line-height: 25px;
-  cursor: pointer;
-  position: relative;
-  color: #fff;
   font-weight: 600;
   font-size: 20px;
-  margin: 30px auto;
-  text-decoration: none;
   background-color: green;
 }
 .cardRotate {
   transform: rotate(180deg);
   animation: 3s rotate ease;
 }
-p {
-  inline-size: 150px;
-  overflow-wrap: break-word;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  height: 70%;
-  width: 100%;
-}
+
 button {
   border-radius: 5px;
   border: 1px solid #22bb1a;
@@ -165,21 +144,5 @@ button:hover {
 .flip-leave-from {
   transform: rotateY(180deg);
   opacity: 0;
-}
-@media only screen and (min-width: 1000px) {
-  .displayCards {
-    width: 70%;
-    margin: auto;
-  }
-  ul {
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .card {
-    display: block;
-    margin: 20px;
-  }
 }
 </style>
