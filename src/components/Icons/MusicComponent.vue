@@ -8,6 +8,12 @@
 </template>
 
 <script>
+import Component from 'vue-class-component'
+
+@Component
+export default class Counter extends Vue {
+
+}
 export default {
   data() {
     return {
