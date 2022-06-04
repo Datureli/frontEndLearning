@@ -60,13 +60,7 @@ export default {
   },
   computed: {
     width() {
-      // this.$vuetify.breakpoint.lg  ? 800 : 900
-      switch (this.$vuetify.breakpoint.name) {
-        case "lg":
-          return 800;
-        case "xl":
-          return 900;
-      }
+      return this.$vuetify.breakpoint.lg  ? 800 : 900
     },
     height() {
       switch (this.$vuetify.breakpoint.name) {
