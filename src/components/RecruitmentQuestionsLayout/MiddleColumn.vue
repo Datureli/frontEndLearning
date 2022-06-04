@@ -2,7 +2,7 @@
   <div>
     <v-sheet
       class="mx-auto mt-12"
-      :height="height"
+      height="415"
       :width="width"
       color="darkGradient"
       :elevation="elevation"
@@ -60,27 +60,10 @@ export default {
   },
   computed: {
     width() {
-      return this.$vuetify.breakpoint.lg  ? 800 : 900
-    },
-    height() {
-      switch (this.$vuetify.breakpoint.name) {
-        case "sm":
-          return 350;
-        case "lg":
-          return 415;
-        default:
-          return 400;
-      }
+      return this.$vuetify.breakpoint.mdAndUp ? 800 : 500;
     },
     elevation() {
-      switch (this.$vuetify.breakpoint.name) {
-        case "xs":
-          return 0;
-        case "sm":
-          return 0;
-        default:
-          return 3;
-      }
+      return this.$vuetify.breakpoint.smAndDown ? 0 : 3;
     },
   },
 };
