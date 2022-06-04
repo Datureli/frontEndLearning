@@ -1,36 +1,17 @@
 <template>
   <div>
-    <v-icon
-      x-large
-      @click="prev"
-      >mdi-skip-previous</v-icon
-    >
-    <v-icon
-      v-if="!isPlaying"
-      x-large
-      @click="play"
-      >mdi-music</v-icon
-    >
-    <v-icon
-      v-else
-      x-large
-      @click="pause"
-      >mdi-music-off</v-icon
-    >
-    <v-icon
-      x-large
-      @click="next"
-      >mdi-skip-next</v-icon
-    >
+    <v-icon x-large @click="prev">mdi-skip-previous</v-icon>
+    <v-icon v-if="!isPlaying" x-large @click="play">mdi-music</v-icon>
+    <v-icon v-else x-large @click="pause">mdi-music-off</v-icon>
+    <v-icon x-large @click="next">mdi-skip-next</v-icon>
   </div>
 </template>
 
-
 <script>
 export default {
-    data() {
-        return {
-                current: {},
+  data() {
+    return {
+      current: {},
       index: 0,
       isPlaying: false,
       songs: [
@@ -46,14 +27,14 @@ export default {
         },
       ],
       player: new Audio(),
-        }
-    },
-      created() {
+    };
+  },
+  created() {
     this.current = this.songs[this.index];
     this.player.src = this.current.src;
   },
   methods: {
-       play(song) {
+    play(song) {
       if (typeof song.src != "undefined") {
         this.current = song;
         this.player.src = this.current.src;
@@ -85,13 +66,16 @@ export default {
       this.play(this.current);
     },
     prev() {
-      this.index--;
-      if (this.index < 0) {
-        this.index = this.songs.length - 1;
+      let index = this.index
+      let songs = this.songs
+      let current = this.current
+      index--;
+      if (index < 0) {
+        index = songs.length - 1;
       }
-      this.current = this.songs[this.index];
-      this.play(this.current);
+      current = songs[index];
+      this.play(current);
     },
   },
-}
+};
 </script>

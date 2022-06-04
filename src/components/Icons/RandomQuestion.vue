@@ -5,7 +5,7 @@
     @shortkey="globalRandomQuestion"
     @click="globalRandomQuestion"
   >
-    <v-icon x-large >mdi-dice-multiple</v-icon>
+    <v-icon x-large>mdi-dice-multiple</v-icon>
   </v-btn>
 </template>
 
