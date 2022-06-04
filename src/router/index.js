@@ -183,14 +183,7 @@ const routes = [
   {
     path: "/english",
     name: "English",
-    component: () => import("../components/EnglishSection/English"),
-    children: [
-      {
-        path: "/words",
-        name: "Words",
-        component: () => import("../components/EnglishSection/ItWordsCollection"),
-      }
-    ]
+    component: () => import("../views/English"),
   },
 
 ];

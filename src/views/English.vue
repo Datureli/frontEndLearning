@@ -19,9 +19,9 @@
 </template>
 
 <script>
-import ItWordsCollection from "./ItWordsCollection.vue";
-import DescribeYourself from "./DescribeYourself.vue";
-import ItDictionary from './ItDictionary.vue'
+import ItWordsCollection from "../components/EnglishSection/ItWordsCollection.vue";
+import DescribeYourself from "../components/EnglishSection/DescribeYourself.vue";
+import ItDictionary from '../components/EnglishSection/ItDictionary.vue'
 export default {
   data() {
     return {
