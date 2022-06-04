@@ -87,40 +87,15 @@ export default {
   computed: {
     ...mapState(["favorite"]),
     color() {
-      switch (this.$route.name) {
-        case "Home":
-          return "black";
-        case "About":
-        case "CssQuestions":
-        case "HtmlQuestions":
-        case "VueQuestions":
-        case "GitQuestions":
-        case "ReactQuestions":
-        case "TypeScriptQuestions":
-        case "JavascriptQuestions":
-        case "GeneralQuestions":
-        case "TestQuestions":
-        case "TestYourKnowledge":
-          return "darkGradient";
-        case "Materials":
-        case "Book":
-        case "Wideo":
-        case "Website":
-        case "Html":
-        case "Css":
-        case "Javascript":
-        case "Vue":
-        case "React":
-        case "Typescript":
-        case "Git":
-        case "General":
-        case "Tests":
-          return "black";
-        case "Games":
-          return "darkGradient";
-        case "English":
-          return "orange";
-      }
+      return this.$route.name === "Home" ||
+        this.$route.name === "Materials" ||
+        this.$route.path.charAt(1) === "b" ||
+        this.$route.path.charAt(1) === "w" ||
+        this.$route.path.charAt(2) === "e"
+        ? "black"
+        : this.$route.name === "English"
+        ? "orange"
+        : "darkGradient";
     },
   },
   methods: {

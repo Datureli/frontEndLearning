@@ -1,15 +1,17 @@
 <template>
   <v-container-fluid>
     <div class="d-flex">
-      <ul class="mx-auto">
-        <li
-          ref="card"
-          v-for="(question, index) in questions.slice(0, 3)"
-          :key="index"
-          class="card"
-        >
-          {{ question.filterQuestions }}
-          <transition name="flip" mode="out-in">
+      <v-list
+        v-for="(question, index) in questions.slice(0, 3)"
+        :key="index"
+        class="card space-around mx-auto"
+      >
+        <v-list-item-group>
+          <v-list-item>
+            <v-list-item-title>
+              {{ question.filterQuestions }}</v-list-item-title
+            >
+               <transition name="flip" mode="out-in">
             <p :key="question.change" class="card__">
               {{ question.change ? question.answer : question.question }}
             </p>
@@ -17,8 +19,10 @@
           <button @click="toggleQuestion(question)" class="mt-8">
             {{ question.change ? "Back" : "Show answer" }}
           </button>
-        </li>
-      </ul>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+  
       <div>
         <v-icon @click="randomizeQuestionCard()" large class="mx-auto">
           mdi-cube</v-icon
@@ -96,9 +100,7 @@ export default {
     },
 
     randomizeQuestionCard() {
-      this.questions.sort(() => {
-        return Math.round(Math.random()) - 0.5;
-      });
+      this.questions.sort(() => ~~Math.random() - 0.5);
     },
   },
 };
@@ -120,8 +122,6 @@ export default {
   margin: 30px auto;
   text-decoration: none;
   background-color: green;
-  -webkit-box-shadow: inset 21px -50px 32px -24px #3f3d42;
-  box-shadow: inset 21px -50px 32px -24px #3f3d42;
 }
 .cardRotate {
   transform: rotate(180deg);
@@ -150,7 +150,7 @@ button {
 }
 
 button:hover {
-  background-color: #2dcc2b;
+  background-color: #3fb63d;
 }
 
 .flip-enter-active {
