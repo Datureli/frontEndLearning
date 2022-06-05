@@ -1,29 +1,41 @@
 <template>
-  <v-container-fluid class="d-flex">
+  <v-container-fluid class="d-flex mx-auto justify-center">
     <v-list
+      width="250px"
+      height="330px"
       v-for="(question, index) in questions.slice(0, 3)"
       :key="index"
-      class="card mx-auto justify-center"
+      class="rounded-lg mr-5"
+      color="#008000"
     >
       <v-list-item-group>
         <v-list-item>
-          <transition name="flip" mode="out-in">
-            <p :key="question.change">
-              {{ question.change ? question.answer : question.question }}
-            </p>
-          </transition>
+            <v-list-item-title
+              :key="question.change"
+              class="mt-15 mx-auto text-h5"
+            >
+              {{
+                question.change ? question.answer : question.question
+              }}</v-list-item-title
+            >
         </v-list-item>
-        <button @click="toggleQuestion(question)" class="mt-8">
+        <v-spacer></v-spacer>
+        <v-btn
+          color="#42c73b"
+          height="45"
+          @click="toggleQuestion(question)"
+          class="mt-15"
+        >
           {{ question.change ? "Back" : "Show answer" }}
-        </button>
+        </v-btn>
       </v-list-item-group>
     </v-list>
 
-    <div>
+    <v-card>
       <v-icon @click="randomizeQuestionCard()" large class="mx-auto">
         mdi-cube</v-icon
       >
-    </div>
+    </v-card>
   </v-container-fluid>
 </template>
 
@@ -101,48 +113,3 @@ export default {
 };
 </script>
 
-<style scoped>
-.card {
-  width: 250px;
-  height: 330px;
-  border-radius: 9px;
-  font-weight: 600;
-  font-size: 20px;
-  background-color: green;
-}
-.cardRotate {
-  transform: rotate(180deg);
-  animation: 3s rotate ease;
-}
-
-button {
-  border-radius: 5px;
-  border: 1px solid #22bb1a;
-  background-color: #42c73b;
-  padding: 10px 16px;
-  outline: none;
-  font-size: 14px;
-  font-weight: 700;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background-color: #3fb63d;
-}
-
-.flip-enter-active {
-  transition: all 0.7s ease;
-}
-
-.flip-leave-active {
-  display: none;
-}
-
-.flip-enter-from,
-.flip-leave-from {
-  transform: rotateY(180deg);
-  opacity: 0;
-}
-</style>
