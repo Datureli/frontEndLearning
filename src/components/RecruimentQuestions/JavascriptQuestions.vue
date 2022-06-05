@@ -12,7 +12,7 @@
             class="text--primary font-weight-black text-h4 text-wrap "
             v-text="javascriptQuestions.question"
           ></v-list-item-subtitle>
-
+            
           <v-list-item-subtitle
             style="text-align:justify; word-spacing:-2px;"
             class="white--text  text-h6 text-wrap"

@@ -1,35 +1,18 @@
 <template>
   <v-container-fluid class="d-flex mx-auto justify-center">
-    <v-list
+    <v-card
       width="250px"
       height="330px"
       v-for="(question, index) in questions.slice(0, 3)"
       :key="index"
       class="rounded-lg mr-5"
       color="#008000"
+      @click="toggleQuestion(question)"
     >
-      <v-list-item-group>
-        <v-list-item>
-            <v-list-item-title
-              :key="question.change"
-              class="mt-15 mx-auto text-h5"
-            >
-              {{
-                question.change ? question.answer : question.question
-              }}</v-list-item-title
-            >
-        </v-list-item>
-        <v-spacer></v-spacer>
-        <v-btn
-          color="#42c73b"
-          height="45"
-          @click="toggleQuestion(question)"
-          class="mt-15"
-        >
-          {{ question.change ? "Back" : "Show answer" }}
-        </v-btn>
-      </v-list-item-group>
-    </v-list>
+      <p :key="question.change" class="mt-10 mx-auto text-h5 text-wrap">
+        {{ question.change ? question.answer : question.question }}
+      </p>
+    </v-card>
 
     <v-card>
       <v-icon @click="randomizeQuestionCard()" large class="mx-auto">
@@ -63,7 +46,7 @@ export default {
         {
           question: "Czym jest :before i :after?",
           answer:
-            ":before oraz :after umożliwiają dodanie kontentu przed i za elementem.",
+            ":before oraz :after umożliwiają dodanie kontentu przed i za elementem.",
           change: false,
         },
         {
@@ -112,4 +95,3 @@ export default {
   },
 };
 </script>
-
