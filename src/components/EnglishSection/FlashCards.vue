@@ -6,15 +6,15 @@
       v-for="(question, index) in questions.slice(0, 3)"
       :key="index"
       class="rounded-lg mr-5"
-      color="#008000"
+      color="orange"
       @click="toggleQuestion(question)"
     >
-      <p :key="question.change" class="mt-10 mx-auto text-h5 text-wrap">
+      <p style="font-weight: 700" :key="question.change" class="mt-10 mx-auto text-h5 white--text text-wrap">
         {{ question.change ? question.answer : question.question }}
       </p>
     </v-card>
 
-    <v-card>
+    <v-card color="transparent" outlined>
       <v-icon @click="randomizeQuestionCard()" large class="mx-auto">
         mdi-cube</v-icon
       >
@@ -28,8 +28,8 @@ export default {
     return {
       questions: [
         {
-          question: "Co to jest git?",
-          answer: "Git jest to rozproszony system kontroli wersji",
+          question: "What is git?",
+          answer: "Git is a distributed version control system",
           change: false,
         },
         {
