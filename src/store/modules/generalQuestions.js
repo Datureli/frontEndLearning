@@ -286,6 +286,11 @@ export default {
           "Server-sent events to API pozwalające na przekazywanie żądań w relacji serwer-klient, przy czym jako klienta należy rozumieć jako aplikację. API, w odróżnieniu od WebSocketów, pozwala na jednokierunkowe przesyłanie wiadomości, najczęściej komunikatów o konkretnych wydarzeniach, np. zmianach na backendzie lub statusie (końcu) przetwarzania danych elementów.",
       },
       {
+        question: "Czym się różni prettier od eslint",
+        answer:
+          "Prettier zajmie się formatowaniem Twojego kodu, ESLint zadba o Twój styl kodu.",
+      },
+      {
         question: "Opowiedz coś o swoim ostatnim projekcie",
         answer:
           "To pytanie, choć z pozoru odwołuje się do Twoich emocji, należy rozpatrywać w nieco bardziej konkretnych kategoriach. Nie rozwódź się nad tym, jak bardzo ciężko było Ci dokończyć ten projekt oraz jakie szczęście Cię ogarnęło po jego zakończeniu. Zamiast tego przygotuj sobie taki opis projektu, który będzie zawierał najważniejsze elementy: – kilka zdań o tym, czym jest ten projekt, jak działa, jakie ma rozwiązania i funkcjonalności, – podkresl rolę, ktorą odegrałeś w projekcie, dodaj kilka zdań o przebiegu jego realizacji, na jakie problemy trafiłeś i jak je rozwiązałeś, – nie może zabraknąć opisu stacka technologicznego, i wyjaśnienia, dlaczego użyłeś określonych narzędzi, języków i frameworków.",

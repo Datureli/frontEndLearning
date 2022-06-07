@@ -1,6 +1,6 @@
 <template>
   <v-container-fluid class="mx-auto overflow-hidden">
-    <v-app-bar :color="color" elevation="0">
+    <v-app-bar class="overflow-hidden" :color="color" elevation="0">
       <v-app-bar-nav-icon id="test" color="white" @click.stop="drawer = !drawer" />
       <v-spacer></v-spacer>
       <v-card color="transparent" outlined>
