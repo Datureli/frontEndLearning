@@ -448,7 +448,7 @@ export default {
 
   mutations: {
     randomJavascriptQuestion(state) {
-      state.javascriptQuestions.sort(() => ~~Math.random() - 0.5);
+      state.javascriptQuestions.sort(() => Math.floor( Math.random() - 0.5));
     },
   },
   actions: {

@@ -322,7 +322,7 @@ export default {
 
   mutations: {
     randomGeneralQuestion(state) {
-      state.generalQuestions.sort(() => ~~Math.random() - 0.5);
+      state.generalQuestions.sort(() => Math.floor( Math.random() - 0.5));
     },
   },
   actions: {

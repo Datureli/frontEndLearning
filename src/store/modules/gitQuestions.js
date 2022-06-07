@@ -126,7 +126,7 @@ export default {
 
   mutations: {
     randomGitQuestion(state) {
-      state.gitQuestions.sort(() => ~~Math.random() - 0.5);
+      state.gitQuestions.sort(() => Math.floor( Math.random() - 0.5));
     },
   },
   actions: {

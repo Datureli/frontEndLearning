@@ -144,7 +144,7 @@ export default {
   
     mutations: {
       randomTypescriptQuestion(state) {
-        state.typescriptQuestions.sort(() => ~~Math.random() - 0.5);
+        state.typescriptQuestions.sort(() => Math.floor( Math.random() - 0.5));
       },
     },
     actions: {
