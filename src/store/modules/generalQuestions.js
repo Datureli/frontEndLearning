@@ -72,44 +72,37 @@ export default {
       {
         question: "https a Google – czy szyfrowanie wpływa na pozycjonowanie?",
         answer:
-          " Algorytmy biorą pod uwagę takie czynniki jak wiarygodność i jakość domeny, a to ma związek również z zapewnieniem użytkownikom bezpieczeństwa. Oznacza to, że wdrożenie protokołu https może mieć pozytywny wpływ na pozycjonowanie witryny.",
-        secondAnswer: "",
+          "Algorytmy biorą pod uwagę takie czynniki jak wiarygodność i jakość domeny, a to ma związek również z zapewnieniem użytkownikom bezpieczeństwa. Oznacza to, że wdrożenie protokołu https może mieć pozytywny wpływ na pozycjonowanie witryny.",
       },
       {
         question: "Czym jest CORS?",
         answer:
           "CORS to skrót od Cross-Origin Resource Sharing, czyli mechanizmu pozwalającego wysyłać żądania HTTP z jednej strony na drugą z pominięciem mechanizmów bezpieczeństwa w przeglądarkach. CORS wykorzystuje nagłówek, w którym zdefiniować można „bezpieczne” adresy i wysłać żądanie, które nie zostanie zablokowane. zapewnia nam on możliwość bezpiecznej wymiany danych pomiędzy stronami które charakteryzuje inny Origin.",
-        secondAnswer: "",
       },
       {
         question: "Czym jest XMLHttpRequest?",
         answer:
           "Jest to żądanie umożliwiająca asynchroniczną komunikację pomiędzy klientem a serwerem. Pozwala na wysyłanie danych do serwera w tle, żądań pobrania danych z serwera i otrzymania danych z serwera oraz na aktualizowanie danych bez konieczności odświeżania całej strony.",
-        secondAnswer: "",
       },
       {
         question: "Czym jest plik manifestu w HTML5?",
         answer:
           "Plik manifestu to plik zawierający listy zasobów, które mają być zcachowane. Dzięki temu można świadomie wskazać konkretne elementy w taki sposób, aby przełożyło się to na szybsze ładowanie aplikacji bądź – np. gdy jakiś element musi być często odświeżany – również to zasygnalizować. Wyróżnia się trzy rodzaje (sekcje) obiektów w plikach manifestu: te, które mają być zcachowane (CACHE Manifest), te, które zawsze mają być pobrane (Network), pliki awaryjne, które mają być zcachowane w razie, gdyby aplikacja padła (Fallback).",
-        secondAnswer: "",
       },
       {
         question: "Czym jest zasada jednej odpowiedzialności?",
         answer:
           "zasada mówiąca, że nigdy nie powinno być więcej niż jednego powodu do istnienia klasy bądź metody",
-        secondAnswer: "",
       },
       {
         question: "Czym jest SOP?",
         answer:
           " zapewnia nam on możliwość bezpiecznej wymiany danych pomiędzy stronami które charakteryzuje inny Origin.",
-        secondAnswer: "",
       },
       {
         question: "Czym są crawlery?",
         answer:
           "  Są to specjalne aplikacje (boty), które mają za zadanie prześledzić, a następnie ustalić zawartość strony internetowej. To właśnie dzięki nim, gdy udostępniamy link na Facebooku, oprócz adresu URL pojawia się tytuł, opis oraz zdjęcie, np. z logo serwisu. Na podobnej zasadzie działają crawlery Google. Skanują stronę i ustalają, czy treść tam zawarta jest wartościowa i jak wysoko w wynikach wyszukiwania powinna się znaleźć. Tutaj właśnie leży sedno problemu - crawlery Facebooka w ogóle nie radzą sobie ze stronami typu SPA. Natomiast Google radzi sobie, ale nie najlepiej.",
-        secondAnswer: "",
       },
       {
         question: "Jakie są zalety i wady SPA?",
@@ -129,20 +122,17 @@ export default {
         question: "Jak działają tradycyjne strony internetowe?",
         answer:
           "radycyjne strony internetowe działają w schemacie żądanie (request) - odpowiedź (response). Oznacza to, że za każdym razem kiedy chcemy odwiedzić stronę, wysyłamy żądanie do serwera. Ten natomiast przetwarza nasze żądanie, sprawdzając np. czy jesteśmy zalogowanym użytkownikiem, jakie przesłaliśmy pliki cookies, itp. Na tej podstawie decyduje, jaka treść powinna zostać nam wyświetlona. Krótko ujmując, serwer wykonuje całą masę pracy, aby na końcu w odpowiedzi wysłać nam kod HTML (oraz oczywiście CSS i JS), który nasza przeglądarka wyświetli jako stronę. Chcąc przejść do innej podstrony - np. z droptica.pl na droptica.pl/case-studies - cała operacja wykonywana jest ponownie. Serwer przetwarza żądanie, decyduje, jaka treść powinna być wyświetlona, generuje i zwraca kod HTML. Dzieje się tak za każdym razem, kiedy chcemy wyświetlić kolejne podstrony.",
-        secondAnswer: "",
       },
       {
         question: "Czym jest Content security Policy?",
         answer:
           " Content Security Policy (CSP) ito dodatkowa warstwa ochrony, która pozwala na wykrywanie i odpieranie niektórych typów ataków, w tym Cross Site Scripting (XSS) oraz ataków wprowadzania danych.Te ataki są używane czynności takich jak: wykradanie danych, uszkodzenia strony, dystrybucja złośliwego oprogramowania.      ",
-        secondAnswer: "",
       },
       {
         question:
           "Jaka jest różnica pomiędzy display: none i visibility: hidden?",
         answer:
           " Oba atrybuty służą do ukrywania elementów na stronie. W praktyce działają one jednak inaczej. O ile atrybut visibility: hidden faktycznie jedynie ukrywa element i tag jest renderowany i zostanie dla nie niego zarezerwowane widoczne miejsce, tak w przypadku display: none w ogóle nie zostanie on wyświetlony na stronie, ani nie pojawi się na niego miejsce, choć cały czas będzie można z nim wchodzić w interkacje przez DOM.",
-        secondAnswer: "",
       },
       {
         question: `Czym jest Event bobbling?`,
