@@ -489,7 +489,7 @@ export default {
         answer:
           "W watchEffect główna różnica polega na tym, że nie obserwujesz jednej konkretnej wartości reaktywnej, ale każdą reaktywną wartość w funkcji zwrotnej.Hook działa jak computed hook lub computed option, ale zamiast zwracać wartość, używasz jej do wyzwalania efektów ubocznych.Ponieważ po prostu definiujesz funkcję zwrotną i jest ona uruchamiana automatycznie, jeśli zmieni się jedna z reaktywnych zmiennych, których używasz w jej wnętrzu. Ale to zachowanie może być problematyczne. Jeśli chcesz wywołać funkcję zwrotną tylko wtedy, gdy zmieni się jedna lub wiele określonych zmiennych, musisz użyć watch() zamiast watchEffect().",
         secondAnswer:
-          "Co więcej, użycie watch() umożliwia nam również dostęp do poprzedniej wartości obserwowanych zmiennych.I think the easiest way to remember the difference between watch and watchEffect() is to think of watchEffect() like a variant of computed() that doesn’t return a value but triggers side-effects.",
+          "Co więcej, użycie watch() umożliwia nam również dostęp do poprzedniej wartości obserwowanych zmiennych.I think the easiest way to remember the difference between watch and watchEffect() is to think of watchEffect() like a variant of computed() that doesnt return a value but triggers side-effects.",
       },
     ],
   },

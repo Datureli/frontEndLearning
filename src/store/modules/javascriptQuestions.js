@@ -147,7 +147,7 @@ export default {
       {
         question: "Jaka jest różnica między map a forEach?",
         answer:
-          "W teori efekt działania jest taki sam.Map zwraca nam nową tablice natomiast forEach nie zwraca niczego.Map jest o wiele szybszy niż forEach(60%)",
+          "W teori efekt działania jest taki sam.Map zwraca nam nową tablice natomiast forEach zwraca undefined.Map jest o wiele szybszy niż forEach(60%)",
       },
       {
         question: "Jak wyczyścić tablice?",
@@ -330,7 +330,7 @@ export default {
       {
         question: "Jak działa JSON.parse",
         answer:
-          "Przekształca tekst w formacie JSON (ang. JavaScript Object Notation) na wartości proste i obiekty obsługiwane przez JavaScript. JSON jest specjalnym formatem zapisu różnych danych o typach występujących w języku JavaScript, ale z dodatkowymi ograniczeniami. Polegają one m.in. na tym, że wszystkie wartości tekstowe - w tym klucze obiektów - muszą być ujęte w znaki cudzysłowu, a nie apostrofy. Dane muszą być zapisane wprost przy pomocy literałów, a nie z użyciem operatora new oraz tworzone w całości za jednym razem bez używania zmiennych pomocniczych. Ponadto w formacie JSON można zapisać tylko następujące typy danych: Object, Array, String, Boolean, Number, Null.",
+          "Przekształca tekst w formacie JSON na wartości proste i obiekty obsługiwane przez JavaScript. JSON jest specjalnym formatem zapisu różnych danych o typach występujących w języku JavaScript, ale z dodatkowymi ograniczeniami. Polegają one m.in. na tym, że wszystkie wartości tekstowe - w tym klucze obiektów - muszą być ujęte w znaki cudzysłowu, a nie apostrofy. Dane muszą być zapisane wprost przy pomocy literałów, a nie z użyciem operatora new oraz tworzone w całości za jednym razem bez używania zmiennych pomocniczych. Ponadto w formacie JSON można zapisać tylko następujące typy danych: Object, Array, String, Boolean, Number, Null.",
       },
       {
         question: "Jak działa Math.random?",
@@ -389,9 +389,7 @@ export default {
       {
         question: "czym jest class?",
         answer:
-          "Wyrażenie class jest kolejnym sposobem definiowania klasy. Wyrażenia class mogą być nazwane lub nienazwane. Nazwa przypisana nazwanemu wyrażeniu class jest lokalna dla ciała klasy. (można ją odczytać z właściwości name (en-US) klasy)",
-        secondAnswer:
-          "Ciało klasy jest wykonywane w trybie ścisłym (ang. strict mode). W celu poprawienia wydajności, kod wykorzystywany tutaj podlega ścisłej składni; nie pozwala to na ukrycie niektórych wyjątków, a pewne słowa kluczowe są rezerwowane dla przyszłych wersji ECMAScript.",
+          "Wyrażenie class jest kolejnym sposobem definiowania klasy. Wyrażenia class mogą być nazwane lub nienazwane. Nazwa przypisana nazwanemu wyrażeniu class jest lokalna dla ciała klasy.",
       },
       {
         question: "Czym jest symbol w javascript?",
@@ -406,7 +404,7 @@ export default {
       {
         question: "Czym jest funkcja strzałkowa?",
         answer:
-          "Funkcja anonimowa to taka funkcja, która nie ma swojej nazwy. Funkcje takie wykorzystywane są jako funkcje zwrotne, które przekazujemy do innych funkcji.Przy skracaniu zapisu obowiązuje nas kilka dość prostych zasad.         Jeżeli funkcja wymaga tylko jednego parametru, wtedy mogę (ale nie muszę!) pominąć nawiasy:Jeżeli parametrów jest więcej, lub nie ma żadnego, wtedy nawiasy muszą zostać:Jeżeli funkcja ma tylko jedną instrukcję, mogę pominąć też klamry:A dodatkowo jeżeli jedyną instrukcją jest instrukcja return, także i jej możemy się pozbyć:Natomiast jeżeli funkcja ma więcej instrukcji - klamry muszą pozostać:Korzystając z funkcji strzałkowych należy pamiętać, że nie tworzą one własnego kontekstu this. W związku z tym nie mogą być wykorzystywane jako konstruktor nowego obiektu.",
+          "Funkcja anonimowa to taka funkcja, która nie ma swojej nazwy. Funkcje takie wykorzystywane są jako funkcje zwrotne, które przekazujemy do innych funkcji.Przy skracaniu zapisu obowiązuje nas kilka dość prostych zasad. Jeżeli funkcja wymaga tylko jednego parametru, wtedy mogę (ale nie muszę!) pominąć nawiasy:Jeżeli parametrów jest więcej, lub nie ma żadnego, wtedy nawiasy muszą zostać:Jeżeli funkcja ma tylko jedną instrukcję, mogę pominąć też klamry:A dodatkowo jeżeli jedyną instrukcją jest instrukcja return, także i jej możemy się pozbyć:Natomiast jeżeli funkcja ma więcej instrukcji - klamry muszą pozostać:Korzystając z funkcji strzałkowych należy pamiętać, że nie tworzą one własnego kontekstu this. W związku z tym nie mogą być wykorzystywane jako konstruktor nowego obiektu.",
         secondAnswer:
           "Dodatkowymi cechami, które odróżniają je od klasycznych funkcji są:Funkcje strzałkowe nie mają wiązania this i super. Dlatego nie powinniśmy ich używać do definiowania metod w obiektach i klasachNie posiadają właściwości arguments i new.targetUżycie dla nich call, apply i bind nie da oczekiwanych rezultatów. Wynika to właśnie z faktu, że nie ma tutaj wiązania thisNie można ich używać jako konstruktoryNie wolno używać w nich yield",
       },
@@ -420,7 +418,7 @@ export default {
       {
         question: "Opisz działanie return",
         answer:
-          "Każda funkcja zwraca jakąś wartość. Domyślnie jest nią undefined.Instrukcja return nie tylko zwraca wartość, ale i przerywa dalsze działanie danej funkcji.W wielu edytorach kod leżący za return będzie miał przytłumione kolory, co symbolizuje, że taki kod nigdy sie nie wykona:Instrukcji return może być wiele dla jednej funkcji. Zawsze jednak wykonana zostanie tylko jedna Instrukcja return może zwracać dowolną wartość.",
+          "Każda funkcja zwraca jakąś wartość. Domyślnie jest nią undefined.Instrukcja return zwraca wartość i przerywa dalsze działanie danej funkcji.W wielu edytorach kod leżący za return będzie miał przytłumione kolory, co symbolizuje, że taki kod nigdy sie nie wykona. Instrukcji return może być wiele dla jednej funkcji. Zawsze jednak wykonana zostanie tylko jedna. Instrukcja return może zwracać dowolną wartość.",
       },
       {
         question: "Opisz pracę z plikiem psd",
@@ -434,7 +432,7 @@ export default {
         answer:
           "Umożliwia przypisanie własności tablicy lub obiektu do zmiennych z wykorzystaniem składni przypominającej składnię tablic czy literałów obiektowych. Może być ona niezwykle zwięzła, a jednocześnie znacznie czytelniejsza od tradycyjnego kodu służącego do uzyskania dostępu do własności.",
         secondAnswer:
-          "Nie korzystając z przypisania destrukturyzującego, dostęp do pierwszych trzech elementów tablicy możemy uzyskać w następujący sposób:var first = jakaśTamTablica[0]  var second = jakaśTamTablica[1]; var third = jakaśTamTablica[2];Jeśli natomiast zastosujemy przypisanie destrukturyzujące, ten sam kod można wyrazić w bardziej zwięzły i czytelny sposób:	      var [first, second, third] = jakaśTamTablica;",
+          "Nie korzystając z przypisania destrukturyzującego, dostęp do pierwszych trzech elementów tablicy możemy uzyskać w następujący sposób:var first = jakaśTamTablica[0]  var second = jakaśTamTablica[1]; var third = jakaśTamTablica[2];Jeśli natomiast zastosujemy przypisanie destrukturyzujące, ten sam kod można wyrazić w bardziej zwięzły i czytelny sposób: var [first, second, third] = jakaśTamTablica;",
       },
       {
         question: "jakie są różnice między arrow function a regular function?",
