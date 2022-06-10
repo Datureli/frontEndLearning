@@ -77,15 +77,10 @@ export default {
       },
     ],
   },
-  getters: {
-    firstColumnGet(state) {
-      return state.firstColumn.filter((firstColumn) => firstColumn.id);
-    },
-  },
   mutations: {
     removeItemFromFirstColumn: (state, payload) => {
-      const i = state.firstColumn.map((item) => item.id).indexOf(payload);
-      state.firstColumn.splice(i, 1);
+      const i = state.firstColumn.filter((item) => item.id).indexOf(payload);
+      state.firstColumn.splice(i, 1)
     },
   },
   actions: {

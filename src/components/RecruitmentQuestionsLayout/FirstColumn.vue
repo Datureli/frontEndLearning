@@ -6,6 +6,7 @@
           v-for="firstColumn in firstColumn"
           :key="firstColumn.id"
           :to="firstColumn.link"
+          :on-delete="removeItemFromFirstColumn"
         >
           <v-icon>{{ firstColumn.icon }}</v-icon>
           <v-list-item-title class="ml-5">{{
@@ -69,7 +70,7 @@ export default {
       "randomQuestion",
       "randomReactQuestion",
     ]),
-    ...mapActions("firstColumn", ["removeItemFromFirstColumn", "deleteItem"]),
+    ...mapActions("firstColumn", ["removeItemFromFirstColumn"]),
   },
 };
 </script>
