@@ -3,7 +3,7 @@
     <v-list color="transparent">
       <v-list-item-group active-class="green--text">
         <v-list-item
-          v-for="(firstColumn,index) in firstColumn"
+          v-for="(firstColumn, index) in firstColumn"
           :key="index"
           :to="firstColumn.link"
         >
@@ -12,18 +12,10 @@
             firstColumn.title
           }}</v-list-item-title>
           <v-hover v-slot="{ hover }">
-            <v-card
-              class="mx-auto"
-              color="transparent"
-              outlined
-              max-width="600"
-            >
+            <v-card color="transparent" outlined>
               <v-expand-transition>
-                <div
-                  v-if="hover"
-                  class="d-flex transition-fast-in-fast-out darken-2 v-card--reveal text-h2 white--text"
-                >
-                  <v-btn small icon @click="removeCategory(firstColumn)">
+                <div v-if="hover" class="transition-fast-in-fast-out">
+                  <v-btn x-small absolute icon class="mt-1" @click="removeCategory(firstColumn)">
                     <v-icon>mdi-close</v-icon>
                   </v-btn>
                 </div>
@@ -41,12 +33,6 @@
 <script>
 import { mapActions, mapState } from "vuex";
 export default {
-  data() {
-    return {
-      showEmptySlot: false,
-      showRmoveButton: false,
-    };
-  },
   computed: {
     ...mapState("firstColumn", ["firstColumn"]),
     width() {
@@ -54,16 +40,16 @@ export default {
         case "md":
           return 215;
         case "lg":
-          return 240;
+          return 260;
         case "xl":
           return 400;
       }
     },
   },
   methods: {
-       removeCategory(firstColumn) {
-        this.firstColumn.splice(this.firstColumn.indexOf(firstColumn), 1);
-      },
+    removeCategory(firstColumn) {
+      this.firstColumn.splice(this.firstColumn.indexOf(firstColumn), 1);
+    },
     ...mapActions("questions", [
       "randomHtmlQuestion",
       "randomCssQuestion",
@@ -72,7 +58,6 @@ export default {
       "randomQuestion",
       "randomReactQuestion",
     ]),
-    ...mapActions("firstColumn", ["removeItemFromFirstColumn"]),
   },
 };
 </script>
