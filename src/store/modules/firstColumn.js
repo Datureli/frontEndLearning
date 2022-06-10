@@ -77,15 +77,4 @@ export default {
       },
     ],
   },
-  mutations: {
-    removeItemFromFirstColumn: (state, payload) => {
-      const i = state.firstColumn.filter((item) => item.id).indexOf(payload);
-      state.firstColumn.splice(i, 1)
-    },
-  },
-  actions: {
-    removeItemFromFirstColumn(context) {
-      context.commit("removeItemFromFirstColumn");
-    },
-  },
 };

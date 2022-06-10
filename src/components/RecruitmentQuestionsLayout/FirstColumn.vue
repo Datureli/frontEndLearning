@@ -3,10 +3,9 @@
     <v-list color="transparent">
       <v-list-item-group active-class="green--text">
         <v-list-item
-          v-for="firstColumn in firstColumn"
-          :key="firstColumn.id"
+          v-for="(firstColumn,index) in firstColumn"
+          :key="index"
           :to="firstColumn.link"
-          :on-delete="removeItemFromFirstColumn"
         >
           <v-icon>{{ firstColumn.icon }}</v-icon>
           <v-list-item-title class="ml-5">{{
@@ -24,7 +23,7 @@
                   v-if="hover"
                   class="d-flex transition-fast-in-fast-out darken-2 v-card--reveal text-h2 white--text"
                 >
-                  <v-btn icon @click="removeItemFromFirstColumn">
+                  <v-btn small icon @click="removeCategory(firstColumn)">
                     <v-icon>mdi-close</v-icon>
                   </v-btn>
                 </div>
@@ -62,6 +61,9 @@ export default {
     },
   },
   methods: {
+       removeCategory(firstColumn) {
+        this.firstColumn.splice(this.firstColumn.indexOf(firstColumn), 1);
+      },
     ...mapActions("questions", [
       "randomHtmlQuestion",
       "randomCssQuestion",
