@@ -2,7 +2,7 @@ const { By, Key, Builder } = require("selenium-webdriver");
 require("chromedriver");
 
 async function example() {
-  var searchString = "Automation testing with Selenium and JavaScript";
+  let searchString = "Automation testing with Selenium and JavaScript";
 
   let driver = await new Builder().forBrowser("chrome").build();
 
@@ -11,11 +11,11 @@ async function example() {
   let element = await driver.findElement(By.id("test"));
   let check = element.click();
   await driver.sleep(3000);
-  let autoCompleteItem = await driver.findElement(By.id('navi'));
-autoCompleteItem.get(2).click()
-
-  var title = await driver.getTitle();
-  console.log("Title is:", title);
+  let closeButton = await driver.findElement(By.id("closeButton"))
+  closeButton.click()
+  await driver.sleep(3000);
+  let autoCompleteItem = await driver.findElement(By.id("navi"));
+  autoCompleteItem.get(2).click();
 
   //It is always a safe practice to quit the browser after execution
   // await driver.quit();

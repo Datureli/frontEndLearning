@@ -26,7 +26,7 @@
         <v-spacer></v-spacer>
 
         <v-toolbar-items>
-          <v-btn icon dark @click="closeModal">
+          <v-btn id="closeButton" icon dark @click="closeModal">
             <v-icon>mdi-close</v-icon>
           </v-btn>
         </v-toolbar-items>
