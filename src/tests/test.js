@@ -9,13 +9,16 @@ async function example() {
   await driver.get("https://cranky-leakey-58c4cc.netlify.app/");
 
   let element = await driver.findElement(By.id("test"));
-  let check = element.click();
+  element.click();
+
   await driver.sleep(3000);
-  let closeButton = await driver.findElement(By.id("closeButton"))
-  closeButton.click()
+
+  let tryCloseButton = await driver.findElement(By.id("closeButton"));
+  tryCloseButton.click();
+
   await driver.sleep(3000);
-  let autoCompleteItem = await driver.findElement(By.id("navi"));
-  autoCompleteItem.get(2).click();
+
+  element.click();
 
   //It is always a safe practice to quit the browser after execution
   // await driver.quit();
