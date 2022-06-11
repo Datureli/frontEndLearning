@@ -1,15 +1,13 @@
 const { By, Key, Builder } = require("selenium-webdriver");
 require("chromedriver");
 
-async function example() {
-  let searchString = "Automation testing with Selenium and JavaScript";
-
+async function checkNavigation() {
   let driver = await new Builder().forBrowser("chrome").build();
 
   await driver.get("https://cranky-leakey-58c4cc.netlify.app/");
 
-  let element = await driver.findElement(By.id("test"));
-  element.click();
+  let tryOpenNavigation = await driver.findElement(By.id("test"));
+  tryOpenNavigation.click();
 
   await driver.sleep(3000);
 
@@ -18,9 +16,25 @@ async function example() {
 
   await driver.sleep(3000);
 
-  element.click();
+  tryOpenNavigation.click();
 
-  //It is always a safe practice to quit the browser after execution
-  // await driver.quit();
+  await driver.sleep(3000);
+
+  driver.findElement(By.linkText("Pytania rekrutacyjne")).click();
+  await driver.sleep(3000);
+  tryOpenNavigation.click();
+  await driver.sleep(3000);
+  driver.findElement(By.linkText("Materiały")).click();
+  await driver.sleep(3000);
+  tryOpenNavigation.click();
+  await driver.sleep(3000);
+  driver.findElement(By.linkText("Angielski")).click();
+  await driver.sleep(3000);
+  tryOpenNavigation.click();
+  await driver.sleep(3000);
+  driver.findElement(By.linkText("Home")).click();
+
+  await driver.sleep(3000);
+  await driver.quit();
 }
-example();
+checkNavigation();
