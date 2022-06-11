@@ -41,7 +41,7 @@
             :key="index"
             :to="toolbarItem.link"
           >
-            <v-list-item-title>{{ toolbarItem.title }}</v-list-item-title>
+            <v-list-item-title id="navi">{{ toolbarItem.title }}</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
