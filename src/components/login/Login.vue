@@ -7,7 +7,7 @@
       transition="dialog-bottom-transition"
     >
       <template v-slot:activator="{ on, attrs }">
-        <v-btn color="transparent" dark v-bind="attrs" v-on="on">
+        <v-btn id="login" color="transparent" dark v-bind="attrs" v-on="on">
           {{ !loggedIn ? "login" : "my account" }}
         </v-btn>
       </template>
