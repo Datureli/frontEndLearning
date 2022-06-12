@@ -59,10 +59,11 @@
           </div>
 
           <v-card
+            style="margin-top: 110px;"
             color="darkGradient"
             v-if="!loggedIn"
             width="460"
-            class="mx-auto mt-16 pr-4 pl-4"
+            class="mx-auto pr-4 pl-4"
           >
             <v-card-title>
               <h1 class="display-1 mx-auto white--text">
@@ -151,7 +152,7 @@ export default {
   created() {
     setTimeout(() => (this.elementVisible = false), 3000);
   },
-    components: {
+  components: {
     loginAnimation,
     MyInformation,
     FavoriteSection,

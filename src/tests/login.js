@@ -6,6 +6,6 @@ async function login() {
 
     await driver.get("https://cranky-leakey-58c4cc.netlify.app/");
 
-    driver.findElement(By.id("Login")).click();
+    driver.findElement(By.id("login")).click();
 }
 login()
