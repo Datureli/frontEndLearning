@@ -116,11 +116,11 @@
 
 <script>
 import { mapState } from "vuex";
-import FavoriteSection from "./FavoriteSection.vue";
-import loginAnimation from "./LoginAnimation.vue";
-import MyInformation from "./MyInformation.vue";
-import ChangePassword from "./ChangePassword.vue";
-import MessageSection from "./MessageSection.vue";
+import FavoriteSection from "./FavoriteSection";
+import loginAnimation from "./LoginAnimation";
+import MyInformation from "./MyInformation";
+import ChangePassword from "./ChangePassword";
+import MessageSection from "./MessageSection";
 export default {
   data: () => ({
     username: "",

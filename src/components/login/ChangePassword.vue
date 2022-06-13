@@ -1,11 +1,11 @@
 <template>
   <v-card
     color="darkGradient"
-    dark
     v-if="!loggedIn"
     width="560"
     height="400"
-    class="mx-auto mt-15 pr-4 pl-4"
+    style="margin-top: 90px;"
+    class="mx-auto pr-4 pl-4"
   >
     <v-card-title>
       <h1 class="display-1 mt-10 mx-auto white--text">Change Password</h1>
