@@ -1,8 +1,8 @@
 <template>
-  <v-card class="mt-12 d-grid" outlined color="transparent">
+  <v-card max-width="225" class="mt-12 d-grid" outlined color="transparent">
     <h3 class="text-md-h6">Test your knowledge</h3>
-    <v-form class="pa-4" ref="form" v-model="isFilled">
-      <v-select
+    <v-form  class="pa-4" v-model="isFilled">
+      <v-select absolute
         v-model="category"
         :rules="categoryRules"
         class="mt-5"
@@ -48,13 +48,13 @@ import { mapState } from "vuex";
 export default {
   data() {
     return {
-      category: "",
+
       isFilled: false,
     };
   },
   computed: {
     ...mapState("firstColumn", ["firstColumn"]),
-    ...mapState("rightColumn", ["categoryRules","numberOfQuestionsRules","difficultyRules","timeRules","numberOfQuestions","difficulty","time"])
+    ...mapState("rightColumn", ["category","categoryRules","numberOfQuestionsRules","difficultyRules","timeRules","numberOfQuestions","difficulty","time"])
   },
 };
 </script>

@@ -1,6 +1,7 @@
 <template>
   <div>
     <v-sheet
+    absolute
       class="mx-auto mt-13"
       height="410"
       :width="width"
