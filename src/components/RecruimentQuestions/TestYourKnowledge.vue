@@ -1,8 +1,8 @@
 <template>
   <div>
-    <v-carousel hide-delimiters >
+    <v-carousel hide-delimiters>
       <v-carousel-item
-        v-for="(cssQuestions, index) in cssQuestions"
+        v-for="(cssQuestions, index) in cssQuestions.slice(0, 3)"
         :key="index"
         max-width="700"
         class="mx-auto"
@@ -16,10 +16,18 @@
           </v-list-item-content>
         </v-list-item>
         <v-list color="transparent" class="d-grid">
-          <v-list-item class="answerDesign">A) {{cssQuestions.trueAnswer}}</v-list-item>
-          <v-list-item class="answerDesign">B) {{cssQuestions.firstFakeAnswer}}</v-list-item>
-          <v-list-item class="answerDesign">C) {{cssQuestions.secondFakeAnswer}}</v-list-item>
-          <v-list-item class="answerDesign">D) {{cssQuestions.thirdFakeAnswer}}</v-list-item>
+          <v-list-item class="answerDesign">{{
+            "A)" + cssQuestions.trueAnswer
+          }}</v-list-item>
+          <v-list-item class="answerDesign">{{
+            "B)" + cssQuestions.firstFakeAnswer
+          }}</v-list-item>
+          <v-list-item class="answerDesign">
+            {{ "C)" + cssQuestions.secondFakeAnswer }}</v-list-item
+          >
+          <v-list-item class="answerDesign">
+            {{ "D)" + cssQuestions.thirdFakeAnswer }}</v-list-item
+          >
         </v-list>
       </v-carousel-item>
     </v-carousel>

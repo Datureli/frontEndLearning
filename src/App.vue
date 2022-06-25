@@ -26,7 +26,7 @@ body {
 #app {
   font-family: Georgia, Helvetica, Arial, sans-serif;
   text-align: center;
-  background: black;
+  background: #000000;
 }
 
 .darkGradient {
