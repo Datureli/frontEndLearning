@@ -10,8 +10,10 @@
         <MiddleColumn />
 
         <RightColumn v-if="$vuetify.breakpoint.mdAndUp" />
-        <FirstColumnMobile v-if="$vuetify.breakpoint.smAndDown" />
-        <RightColumnMobile v-if="$vuetify.breakpoint.smAndDown" />
+        <div class="d-flex mx-auto justify-center">
+          <FirstColumnMobile v-if="$vuetify.breakpoint.smAndDown" />
+          <RightColumnMobile v-if="$vuetify.breakpoint.smAndDown" />
+        </div>
       </v-sheet>
     </v-row>
   </v-container>
@@ -23,7 +25,7 @@ import {
   MiddleColumn,
   RightColumn,
   FirstColumnMobile,
-  RightColumnMobile
+  RightColumnMobile,
 } from "../components/RecruitmentQuestionsLayout";
 
 export default {
@@ -32,7 +34,7 @@ export default {
     MiddleColumn,
     RightColumn,
     FirstColumnMobile,
-      RightColumnMobile
+    RightColumnMobile,
   },
 };
 </script>

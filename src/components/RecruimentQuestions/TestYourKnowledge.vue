@@ -52,6 +52,6 @@ export default {
 </script>
 <style>
 .answerDesign {
-  border-bottom: 1px solid black;
+  border: 1px solid black;
 }
 </style>

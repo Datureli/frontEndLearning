@@ -2,8 +2,8 @@
   <div>
     <v-sheet
     absolute
-      class="mx-auto mt-13"
-      height="410"
+      class="mx-auto mt-md-13"
+      :height="height"
       :width="width"
       color="darkGradient"
       :elevation="elevation"
@@ -62,6 +62,9 @@ export default {
   computed: {
     width() {
       return this.$vuetify.breakpoint.mdAndUp ? 800 : 500;
+    },
+    height() {
+      return this.$vuetify.breakpoint.mdAndUp ? 410 : 410
     },
     elevation() {
       return this.$vuetify.breakpoint.smAndDown ? 0 : 3;

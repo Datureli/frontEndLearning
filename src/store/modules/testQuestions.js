@@ -6,17 +6,47 @@ export default {
       {
         question: "Po co testujemy aplikacje?",
         answer:
-          "Testowanie oprogramowania ma na celu sprawdzenie jego poprawnego działania oraz zebranie informacji na jego temat.Gdy testy zakończą się niepowodzeniem, bardzo ważne jest, aby struktura testów jednostkowych zawierała przydatne błędy.Testowanie oprogramowania pozwala ocenić jego jakość i zmniejszyć ryzyko wystąpienia awarii podczas  eksploatacji.",
+          "Testowanie oprogramowania ma na celu sprawdzenie jego poprawnego działania oraz zebranie informacji na jego temat.Gdy testy zakończą się niepowodzeniem, bardzo ważne jest, aby struktura testów jednostkowych zawierała przydatne błędy.Testowanie oprogramowania pozwala ocenić jego jakość i zmniejszyć ryzyko wystąpienia awarii podczas eksploatacji.",
       },
       {
         question: "Czym jest testowanie?",
         answer:
-          "testowanie oprogramowania to proces obejmujący czynności, które wykraczają poza samo wykonywanie testów.W skład procesu testowego wchodzą również takie czynności jak: planowanie,  analiza, monitorowanie testów i nadzór nad testami, projektowanie i implementacja testów,  raportowanie o postępie i wynikach testów oraz dokonywanie oceny jakości przedmiotu testów. ",
+          "testowanie oprogramowania to proces obejmujący czynności, które wykraczają poza samo wykonywanie testów.W skład procesu testowego wchodzą również takie czynności jak: planowanie, analiza, monitorowanie testów i nadzór nad testami, projektowanie i implementacja testów,  raportowanie o postępie i wynikach testów oraz dokonywanie oceny jakości przedmiotu testów. ",
       },
       {
         question: "Czym jest testowanie dynamiczne?",
         answer:
           "Testowanie może wymagać uruchomienia testowanego modułu lub systemu – mamy wtedy do  czynienia z tzw. testowaniem dynamicznym ",
+      },
+      {
+        question: "Czym jest piramida testów?",
+        answer:
+          "Piramida testów to zróżnicowanie ilości testów w zależności od ich typów. Im wykonanie testu jest tańsze, szybsze, bardziej stabilne – tym powinno ich być więcej i znajdują się na niższym szczeblu drabiny, stanowiąc jej fundament. Jeżeli wykonanie testu zajmuje więcej czasu, jest mniej stabilne, angażuje pracę ludzką, tym tego typu testów jest mniej i są na czubku piramidy.Ideą piramidy testów jest posiadanie właściwego balansu pomiędzy automatyzacją testów na różnych poziomach w stosunku do czasu ich przeprowadzenia.",
+      },
+      {
+        question: "Jaka jest różnica pomiędzy firmware, a software?",
+        answer:
+          "Oba określenia mają związek z hardwarem czyli fizycznymi elementami urządzeń (np. komputer, CPU, Ram). Software jest to oprogramowanie takie jak chociażby Windows7, Saper czy MS Office które instalujemy na danym urządzeniu. Z kolei firmware jest to oprogramowanie wbudowane takie jak np. BIOS i nie może być bezpośredio odinstalowane tak jak każde inne oprogramowanie.",
+      },
+      {
+        question: "Kiedy należy skończyć testować oprogramowanie? Podaj przykłady.",
+        answer:
+          " wystarczające pokrycie wymagań - wykonaliśmy poprawnie 95% testów pokrywających wszystkie wymagania,   zagęszczenie defektów - występuje nie więcej niż 5 defektów przypisanych do każdego z rozdziału wymagań,   koszt - testy trwają już 2 miesiące i nie możemy sobie pzwolić na dalsze testy,   ramy czasowe - testy są przewidziane na 3 miesiące i ani dnia dłużej, ryzyko sprowadzone jest do akcpetowalnego poziomu - znamy błędy występujące w oprogramowaniu i je akceptujemy",
+      },
+      {
+        question: "Co zrobić gdy nie jesteśmy pewni czy mamy do czynienia z błędem?",
+        answer:
+          "Zawsze warto poszukać jakiś twardych dowodów na które możemy się powołać przy zgłaszaniu błędu. Niestety nie zawsze jest to jasne - i co właśnie wtedy. Można zasięgnąc wiedzy u programistów, project/product managera, product ownera i innych. Często bywa tak, że zastana sytuacja jest nie do zaakceptowania, np. oprogramowanie/strona www otwiera się minutę bądź dłużej ale nie znajdziemy w wymaganiach informacji o czasie potrzebnym na otwarcie. Pamiętajcie wtedy, że zawsze można zgłosić defekt powołując się na użytkownika ze zdrowym rozsądkiem (tzw. 'reasonable end user') który najnormalniej nie będzie czekał.",
+      },
+      {
+        question: "Od czego zależy ryzyko projektowe i co się na nie składa?",
+        answer:
+          "Trzeba w tym miejscu wymienić wpływ i możliwość wystąpienia błędu. Ocena wpływu to zadanie analityka testów (business value) podczas gdy ocena możliwości wystąpienia błędu to zadanie dla technicznego analityka testów (technical impact). Dobrze jest tu także opisać jak wygląda identyfikacja ryzyk, różnice pomiędzy ryzykiem projektowym, a produktowym i co robimy żeby je zminimalizować.",
+      },
+      {
+        question: "Jak postępować z informacją, że u mnie działa?",
+        answer:
+          "Dobrze jest upewnić się, czy programista reprodukuje defekt na tym samym środowisku i postępuje dokładnie krok po kroku z naszymi instrukcjami. Byćmoże jest jakas nieznaczna różnica która ma wpływ na ostateczny rezultat. Zdarza się też, że programiści nie używają wersji instalacyjnej oprogramowania, ale budują je z kodu. Niezależnie od tego, o ile to oczywiście możliwe, dobrze jest testować na środowisku które jest jaknajbardziej zbliżone do tego w którym pracuje klient.",
       },
       {
         question: "Czym jest testowanie statyczne?",
@@ -116,6 +146,31 @@ export default {
           "Model cyklu życia oprogramowania opisuje rodzaje czynności wykonywanych na poszczególnych etapach projektu wytwarzania oprogramowania oraz powiązania logiczne i chronologiczne między tymi  czynnościami. Istnieje wiele różnych modeli cyklu życia oprogramowania, a każdy z nich wymaga  innego podejścia do testowania",
       },
       {
+        question: "Czym są smoke testy (testy dymne)?",
+        answer:
+          "Smoke Testy to wybrany podzbiór wszystkich przypadków testowych, które pokrywają główne funkcjonalności. Selekcja takich testów umożliwia szybką weryfikację, czy kluczowe funkcjonalności programu działają poprawnie – ma to duże znaczenie w automatyzacji.",
+      },
+      {
+        question: "Czym jest BDD i TDD. Omów te dwa pojęcia",
+        answer:
+          "TDD (Test-Driven Development) jest podejściem do tworzenia oprogramowania, w którym główną ideą jest w pierwszej kolejności pisanie testów do nieistniejącej funkcjonalności, a dopiero potem napisanie kodu implementującego tę funkcjonalność. BDD (Behavior-Driven Development) to podejście będące rozwinięciem TDD. Testy pisane z wykorzystaniem składni języka naturalnego (np. zdań w języku angielskim), które wyrażają zachowanie i oczekiwane rezultaty. Kryteria akceptacyjne są pisane w formie scenariuszy i korzystają ze słów kluczowych Given (początkowy warunek), When (opis występującego zdarzenia) oraz Then (oczekiwany rezultat). Dużą zaletą podejścia BDD jest to, że testy zrozumiałe są dla pracowników nietechnicznych. Mogą one również stanowić swego rodzaju dokumentację systemu.",
+      },
+      {
+        question: "Jakie są rodzaje testów",
+        answer:
+          "Testy funkcjonalne (czarnoskrzynkowe) – analizują zewnętrzne zachowanie oprogramowania, traktując je jak czarną skrzynkę, Testy niefunkcjonalne – określają parametry oprogramowania takie jak: wydajność, użyteczność, zdolność do pracy na różnych platformach, Testy białoskrzynkowe (strukturalne) – testy te mogą być oparte na architekturze systemu lub kodzie źródłowym aplikacji. Bazują na budowie wewnętrznej, która jest zwykle „ukryta” przed użytkownikiem końcowym, Testy regresji – ponowne przetestowanie programu po dokonaniu w nim modyfikacji, w celu sprawdzenia, że w wyniku zmian nie powstały nowe defekty lub nie ujawniły się istniejące wcześniej.",
+      },
+      {
+        question: "Czym są i kto tworzy testy jednostkowe?",
+        answer:
+          "Testy jednostkowe (unit tests) to zbiór testów, które weryfikują, czy jednostka kodu (np. metoda, klasa, serwis) działa zgodnie z oczekiwaniami. Są one zwykle tworzone przez programistów w ramach wytwarzania oprogramowania. Testy te uruchamiane są w izolacji, co oznacza, że nie jesteśmy w żaden sposób związani z innymi elementami systemu. Testy jednostkowe są nieodłącznym elementem wytwarzania oprogramowania w podejściu TDD (Test Driven Development).",
+      },
+      {
+        question: "Jakie informacje powinny się znaleźć w zgłoszeniu defektu?",
+        answer:
+          "Szczegóły zgłoszenia często zależą od narzędzia (tzw. bugtrackera) lub od przyjętego podejścia w danej organizacji. Można jednak wskazać kilka elementów, które zwykle są niezbędne do zreprodukowania i naprawienia defektu. nazwa/tytuł (często ze wskazaniem jakiego obszaru lub jakiej aplikacji dotyczy defekt) kroki do zreprodukowania  aktualny oraz oczekiwany rezultat wersja oprogramowania/branch informacja o środowisku informacja, czy występuje na innym (wyższym) środowisku data i czas wystąpienia  zrzut ekranu lub film",
+      },
+      {
         question: "Czym są testy end-to-end?",
         answer:
           "Podczas gdy testy jednostkowe zapewniają programistom pewien stopień pewności, testy jednostkowe i modułowe mają ograniczone możliwości zapewnienia całościowego pokrycia aplikacji po wdrożeniu w środowisku produkcyjnym.W rezultacie testy end-to-end (E2E) zapewniają pokrycie tego, co jest prawdopodobnie najważniejszym aspektem aplikacji: co się dzieje, gdy użytkownicy faktycznie korzystają z twoich aplikacji. Innymi słowy, testy E2E weryfikują wszystkie warstwy w Twojej aplikacji.",
@@ -196,6 +251,16 @@ export default {
         question: "Czym jest mockowanie?",
         answer:
           "Mockowanie to technika izolowania obiektów testowych poprzez zastępowanie zależności obiektami, które można kontrolować i sprawdzać.",
+      },
+      {
+        question: "Testy białoskrzynkowe a czarnoskrzynkowe",
+        answer:
+          "Testy czarnoskrzynkowe (black box) bazują na specyfikacji, bez wnikania w kod programu. Dotyczą one “widocznego” zachowania aplikacji, a nie implementacji, do której wglądu nie ma użytkownik końcowy.Testy białoskrzynkowe (white box) wymagają analizy struktury aplikacji lub systemu. Dzięki takiemu rodzajowi testów określić stopień, w jakim dany element został przetestowany. Testy te mają na celu jak najlepsze pokrycie różnych ścieżek programu. ",
+      },
+      {
+        question: "Testy funkcjonalne a niefunkcjonalne",
+        answer:
+          "Funkcjonalności to nic innego jak czynności wykonywane przez aplikacje. Testy funkcjonalne analizują zewnętrzne zachowanie oprogramowania, traktując je jako czarną skrzynkę.Testy niefunkcjonalne skupiają się na charakterystyce działania aplikacji i obejmują: testy wydajności, użyteczności, niezawodności, bezpieczeństwa oraz testy możliwości pracy na różnych platformach.  ",
       },
       {
         question: "Wyjaśnij, na czym polega cykl życia błędu",

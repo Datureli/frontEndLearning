@@ -1,7 +1,33 @@
 <template>
-    <v-card flat  elevation="10" color="transparent" class="align-end pa-5" >
-        <v-row justify="space-around">
-            categories
-        </v-row>
-    </v-card>
+  <v-card width="50%" elevation="5" color="transparent" class="align-end pa-5">
+    <v-dialog
+      v-model="dialog"
+      fullscreen
+      @keydown.esc="dialog = false"
+      transition="dialog-bottom-transition"
+    >
+      <template v-slot:activator="{ on, attrs }">
+          <h2 v-bind="attrs" v-on="on">
+            {{ "Question Categories" }}
+          </h2>
+      </template>
+
+      <v-card color="darkGradient">
+        <v-btn x-large style="right: 1%" icon dark @click="closeModal" absolute>
+          <v-icon>mdi-close</v-icon>
+        </v-btn>
+      </v-card>
+    </v-dialog>
+  </v-card>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    elementVisible: true,
+    dialog: false,
+    showPassword: false,
+    loggedIn: false,
+  }),
+};
+</script>
