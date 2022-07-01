@@ -180,7 +180,7 @@ export default {
       {
         question: "Wyjaśnij funkcję parseInt",
         answer:
-          "Przetwarza argument w postaci łańcucha znaków i zwraca liczbę całkowitą typu integer , o zadanej podstawie.Pozwala przekształcić podany tekst na liczbę całkowitą.",
+          "Możesz zamienić String na liczbę całkowitą używając wbudowanej funkcji parseInt(). Funkcja ta przyjmuje podstawę do konwersji jako opcjonalny drugi argument, który zawsze należy podawać:",
       },
       {
         question: "Jak działa fetch api?",
