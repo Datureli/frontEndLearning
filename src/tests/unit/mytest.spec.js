@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import Login from '../components/login/Login'
+import Login from '@/components/login/Login'
 
 
 describe('login button test', () => {
