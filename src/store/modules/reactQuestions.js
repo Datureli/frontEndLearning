@@ -14,6 +14,11 @@ export default {
           "Tworzy elementy reactowe,które po renderowaniu są przetwarzane na węzły document object model",
       },
       {
+        question: "Różnica między props a state?",
+        answer:
+          "State używa się do przechowywania danych w bieżącym widoku.Natomiast props używamy do przekazania danych do komponentu dziecka.",
+      },
+      {
         question: "jakie są zasady korzystania z hooków?",
         answer:
           "Wywołuj hooki tylko z najwyższego poziomu kodu  Nie wywołuj hooków wewnątrz pętli, instrukcji warunkowych czy zagnieżdżonych funkcji. Korzystaj z hooków tylko z najwyższego poziomu kodu twoich komponentów funkcyjnych, jeszcze przed zwróceniem wartości. Przestrzegając tej zasady, zyskujesz pewność, że hooki zostaną wywołane w tej samej kolejności, za każdym razem gdy komponent jest renderowany. To właśnie pozwala Reactowi na właściwe przechowywanie stanu pomiędzy kolejnymi wywołaniami useState i useEffect (Jeśli ciekawi cię ten temat, dogłębnie wyjaśnimy go w kolejnym podrozdziale.)    ",

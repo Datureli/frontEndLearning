@@ -15,30 +15,30 @@ export default {
         Interpolacja ciągów JavaScript to proces osadzania wyrażenia w części ciągu.Literał szablonu służy do osadzania wyrażeń. Za pomocą interpolacji można dodawać do ciągu wartości, takie jak zmienne i obliczenia matematyczne.`,
       },
       {
-        question: "jak wstawić ikonę obok adresu www?",
+        question: `jak wstawić ikonę obok adresu www?`,
 
         answer: `Polecenie to pozwala dodać ikonkę (favicon.ico), która będzie widoczna w przeglądarce przy adresie naszej strony.ico pozwala zapisać dwie wersje rozmiaru w jednym pliku. Niektóre przeglądarki - nie MSIE 6 - pozwalając również używać innych formatów graficznych, takich jak np. PNG.`,
       },
 
       {
-        question: "Czym jest tag blockquote?",
+        question: `Czym jest tag blockquote?`,
         answer:
-          "Tag blockquote określa treść cytowaną ze źródła zewnętrznego (gazeta, praca naukowa itp.",
+          `Tag blockquote określa treść cytowaną ze źródła zewnętrznego (gazeta, praca naukowa itp.`,
       },
       {
-        question: "Czym jest innerHtml?",
+        question: `Czym jest innerHtml?`,
         answer:
-          "Właściwość innerHTML umożliwia odczyt i ustawianie html, jaki jest we wnętrzu danego elementu:",
+          `Właściwość innerHTML umożliwia odczyt i ustawianie html, jaki jest we wnętrzu danego elementu:`,
       },
       {
-        question: "Czym jest html canvas?",
+        question: `Czym jest html canvas?`,
         answer:
-          "element języka HTML wprowadzony w HTML 5 pozwalający na dynamiczne, skryptowe renderowanie kształtów i obrazów bitmapowych. Dzięki wprowadzeniu obiektu canvas możliwe stało się tworzenie dynamicznych dwu i trójwymiarowych animacji czy gier działających w przeglądarkach bez dodatkowych wtyczek.",
+          `element języka HTML wprowadzony w HTML 5 pozwalający na dynamiczne, skryptowe renderowanie kształtów i obrazów bitmapowych. Dzięki wprowadzeniu obiektu canvas możliwe stało się tworzenie dynamicznych dwu i trójwymiarowych animacji czy gier działających w przeglądarkach bez dodatkowych wtyczek.`,
       },
       {
-        question: "Które przeglądarki wspierają HTML5?",
+        question: `Które przeglądarki wspierają HTML5?`,
         answer:
-          "Ostatnie wersje Safari, Google Chrome, Mozilla Firefox oraz Opera – wszystkie wspierają wiele funkcjonalności HTML5. Internet Explorer od wersji 9.0 również wspiera niektóre z funkcjonalności.Mobilne przeglądarki internetowe, które zostały zainstalowane na urządzeniach jak iPhone, iPad oraz Android doskonale wpierają HTML5.",
+          `Ostatnie wersje Safari, Google Chrome, Mozilla Firefox oraz Opera – wszystkie wspierają wiele funkcjonalności HTML5. Internet Explorer od wersji 9.0 również wspiera niektóre z funkcjonalności.Mobilne przeglądarki internetowe, które zostały zainstalowane na urządzeniach jak iPhone, iPad oraz Android doskonale wpierają HTML5.`,
       },
       {
         question: "Czym jest twarda spacja & nbspHtml?",

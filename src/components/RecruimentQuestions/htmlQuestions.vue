@@ -14,8 +14,8 @@
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
-          style="text-align:justify; word-spacing:-2px;"
-            class="white--text  text-h6 text-wrap"
+            style="text-align:justify; word-spacing:-2px; "
+            class="white--text text-h6 text-wrap"
             v-show="disable"
             v-text="htmlQuestions.answer"
           ></v-list-item-subtitle>
@@ -28,12 +28,14 @@
 <script>
 import { mapState } from "vuex";
 export default {
-  data() {
-    return {
-      page: null,
-    };
-  },
   computed: {
+    betterString() {
+      this.htmlQuestions
+        .split("")
+        .reverse()
+        .join("");
+      return this.htmlQuestionsF;
+    },
     ...mapState(["disable"]),
     ...mapState("htmlQuestions", ["htmlQuestions"]),
   },

@@ -121,7 +121,7 @@ import loginAnimation from "./LoginAnimation";
 import MyInformation from "./MyInformation";
 import ChangePassword from "./ChangePassword";
 import MessageSection from "./MessageSection";
-export default {  
+export default {
   data: () => ({
     username: "",
     password: "",
