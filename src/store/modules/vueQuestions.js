@@ -94,7 +94,7 @@ export default {
       {
         question: "Wyjaśnij cykl życia w Vue",
         answer:
-          "Jest to proces instancji vue wewnątrz której uruchamiane zostają pewne funkcje które przechodzą przez proces tworzenia i aktualizowania drzewa DOM.Dzięki temu wiemy jak vue działa pod spodem.Wszystkie elementy cyklu zycia posiadają dostęp do this content przypisaną do instancji dzięki czemu możemy uzyskać dostęp do danych,computed oraz metod.",
+          "Jest to proces instancji vue wewnątrz której uruchamiane zostają pewne funkcje które przechodzą przez proces tworzenia i aktualizowania drzewa DOM.Dzięki temu wiemy jak vue działa pod spodem.używając tych haków, będziesz wiedzieć, kiedy Twój komponent zostanie utworzony, dodany do DOM, zaktualizowany lub zniszczony.Wszystkie elementy cyklu zycia posiadają dostęp do this content przypisaną do instancji dzięki czemu możemy uzyskać dostęp do danych,computed oraz metod.",
         secondAnswer:
           "Cykl życia pozwala nam wiedzieć kiedy nasz komponent powstał,kiedy zostal dodany do dom,zaktualizowany lub zniszcony.Zasadniczo każde główne zdarzenie cyklu życia Vue jest podzielone na dwa punkty zaczepienia, które są wywoływane tuż przed tym zdarzeniem, a następnie tuż po nim. Istnieją cztery główne zdarzenia (8 głównych punktów zaczepienia), które możesz wykorzystać w swojej aplikacji Vue.",
         thirdPartOfAnswer:
@@ -103,7 +103,7 @@ export default {
       {
         question: "Jak stworzyć two-way binding w Vue js?",
         answer:
-          "Do stworzenia służy dyrektywa v-model.W obustronnym przepływie danych dane albo model jest przypięty do DOM i dom jest przypięty do modelu",
+          "Do stworzenia służy dyrektywa v-model.W obustronnym przepływie danych dane albo model jest przypięty do DOM i dom jest przypięty do modelu.Pamiętaj, że v-model zignoruje wartość początkową, sprawdzone lub wybrane atrybuty znajdujące się na dowolnych elementach formularza. Dlatego zawsze używa danych instancji Vue jako źródła prawdy.",
       },
       {
         question: "Jak działają layouts w nuxt?",
@@ -113,12 +113,12 @@ export default {
       {
         question: "Czym są sloty?",
         answer:
-          "Sloty są mechanizmem, który pozwala nam na tworzenie komponentów wielokrotnego użytku. Mechanizm ten na pewno ułatwia korzystanie z reguły DRY( Don’t Repeat Yourself). Cały trik polega na tym że sloty dają nam możliwość umieszczenia lub zmiany treści jeżeli komponent dziecka zaimportujemy do rodzica. Sloty w Vue.js możemy rozumieć jako miejsce w ktorym umieszczamy nową treść lub pozostawiamy tą domyślnie zadeklarowaną.",
+          "Sloty są mechanizmem, który pozwala nam na tworzenie komponentów wielokrotnego użytku. Mechanizm ten na pewno ułatwia korzystanie z reguły DRY. Cały trik polega na tym że sloty dają nam możliwość umieszczenia lub zmiany treści jeżeli komponent dziecka zaimportujemy do rodzica. Sloty w Vue.js możemy rozumieć jako miejsce w ktorym umieszczamy nową treść lub pozostawiamy tą domyślnie zadeklarowaną.",
       },
       {
         question: "Czym są scoped slots?",
         answer:
-          "Wymieniony rodzaj slotów jest szczególnie przydatny jeżeli chcielibyśmy przekazać dane z komponentu dziecka posiadajcego sloty do rodzica",
+          "Slot to placeholder w komponencie dziecka, który jest wypełniony treścią przekazaną od rodzica. Zawartość zwykłego slotu jest kompilowana w zakresie rodzica, a następnie przekazywana do komponentu podrzędnego.W związku z tym nie można używać właściwości komponentów dziecka w zawartości slot. Ale slot w zakresie umożliwiają przekazywanie danych składników podrzędnych do zakresu nadrzędnego, a następnie używanie tych danych w zawartości slot.",
       },
       {
         question: "Struktura w nuxt js?",
@@ -143,6 +143,26 @@ export default {
           "Wszystkie propsy działają tylko w jednym kierunku,z komponentu rodzica do komponentu dziecka.Jeżeli zajdzie jakaś zmiana w komponencie rodzina to automatycznie aktualizuje komponent dziecka ale nie działa to w drugą strone,zapobiega to mutowaniu stanu rodzica.",
       },
       {
+        question: "Jakie są metody wykrywania mutacji macierzowych?",
+        answer:
+          "Jak sama nazwa wskazuje, metody mutacji modyfikują oryginalną macierz.Poniżej znajduje się lista metod mutacji tablicy, które wyzwalają aktualizacje widoku.push()  pop()  shift()  unshift()  splice()  sort()  reverse()",
+      },
+      {
+        question: "Jak korzystasz z obsługi zdarzeń?(event handlers)",
+        answer:
+          "Możesz użyć obsługi zdarzeń w vue podobnej do zwykłego javascript. Wywołania metod obsługują również specjalną zmienną $event.",
+      },
+      {
+        question: "Jakie są metody wykrywania nie-  mutacji w macierzach?",
+        answer:
+          "Metody, które nie mutują oryginalnej tablicy, ale zawsze zwracają nową tablicę, nazywane są metodami niemutacyjnymi. filter()  concat()  slice()",
+      },
+      {
+        question: "Jakie są ograniczenia wykrywania zmian obiektów?",
+        answer:
+          "Vue nie może wykryć zmian dla obiektu podczas dodawania lub usuwania właściwości.",
+      },
+      {
         question: "po co używamy atrybutu key w dyrektywie v-for?",
         answer:
           "Aby śledzić tożsamość każdego węzła, a tym samym ponownie używać i zmieniać kolejność istniejących elementów, musisz podać unikalny atrybut klucza dla każdego elementu w iteracji v-for.Idealną wartością klucza byłby unikalny identyfikator każdego przedmiotu. W związku z tym zawsze zaleca się dostarczanie klucza z v-for, gdy tylko jest to możliwe, chyba że iterowana zawartość DOM jest prosta.Nie należy używać wartości innych niż pierwotne, takich jak obiekty i tablice, jako kluczy v-for. Zamiast tego użyj ciągów lub wartości liczbowych.",
@@ -150,9 +170,7 @@ export default {
       {
         question: "jaka jest różnica między v-show i v-if?",
         answer:
-          "Dyrektywa v-show, kiedy warunek nie jest spełniony nadaje elementowi styl display: none;. Oznacza to, że jest on zawsze obecny w drzewie DOM, ale czasami po prostu niewidoczny.Warto wspomnieć, że dyrektywa v-else nie działa razem z v-show.",
-        secondAnswer:
-          "Dyrektywa v-if służy do warunkowego renderowania bloku.Jest lazy co oznacza, że ​​jeśli warunek początkowy jest fałszywy, nie wyrenderuje bloku, dopóki warunek nie stanie się spełniony.v-if całkowicie niszczy i odtwarza elementy podczas zmiany stanu.Ma niższy początkowy koszt renderowania, ale wysoki koszt przełączania, więc jeśli twój stan nie zmienia się często w czasie wykonywania, użyj dyrektywy v-if.Dyrektywa v-show jest również używana do warunkowego renderowania bloku. v-show zawsze renderuje element.Ma wysoki koszt początkowego renderowania, ale mniejszy koszt przełączania.",
+          "v-if renderuje element do DOM tylko wtedy, gdy wyrażenie będzie true, podczas gdy v-show renderuje wszystkie elementy do DOM, a następnie używa właściwości wyświetlania CSS, aby pokazać lub ukryć elementy na podstawie wyrażenia.dyrektywa v-if dodaje lub usuwa elementy DOM na podstawie podanego wyrażenia.Dyrektywa v-show, kiedy warunek nie jest spełniony nadaje elementowi styl display: none;. Oznacza to, że jest on zawsze obecny w drzewie DOM, ale czasami po prostu niewidoczny.Warto wspomnieć, że dyrektywa v-else nie działa razem z v-show.v-if ma wyższe koszty przełączania, podczas gdy v-show ma wyższe początkowe koszty renderowania. tj. v-show ma przewagę wydajnościową, jeśli elementy są często włączane i wyłączane, podczas gdy v-if ma przewagę, jeśli chodzi o początkowy czas renderowania.v-if obsługuje zakładkę <template>, ale v-show nie obsługuje.",
       },
       {
         question: "Czym jest atrybut key?",
@@ -273,11 +291,7 @@ export default {
       {
         question: "Wymień wady i zalety mixinów",
         answer:
-          "Mixiny umożliwiają nam współdzielenie logiki między komponentami.Kawałki zdefiniowane w mixinach mogą być używane w komponencie tak, jakby były zdefiniowane w samym komponencie.",
-        secondAnswer:
-          "Mixiny mogą być kolekcjami luźno powiązanych fragmentów kodu bez dobrze zdefiniowanego interfejsu ze światem zewnętrznym. Używanie więcej niż jednego mixinu na raz w tym samym komponencie może spowodować, że komponent będzie trudny do zrozumienia i użycia.",
-        thirdPartOfAnswer:
-          "Bardziej praktycznym problemem, który może wystąpić podczas używania mixinów w Vue, jest kolizja nazw, co ma miejsce, gdy używa się dwóch lub więcej mixinów deklarujących nazwy.Inną kwestią jest to, że mixiny nie oferują czegoś podobnego do konstruktora klas.",
+          "Mixiny umożliwiają nam współdzielenie logiki między komponentami.Kawałki zdefiniowane w mixinach mogą być używane w komponencie tak, jakby były zdefiniowane w samym komponencie. Używanie więcej niż jednego mixinu na raz w tym samym komponencie może spowodować, że komponent będzie trudny do zrozumienia i użycia.Bardziej praktycznym problemem, który może wystąpić podczas używania mixinów w Vue, jest kolizja nazw, co ma miejsce, gdy używa się dwóch lub więcej mixinów deklarujących nazwy.",
       },
       {
         question: "Czym jest atrybut ref?",
@@ -329,11 +343,12 @@ export default {
       {
         question: "Czym jest virtual DOM?",
         answer:
-          "virtual dom to obiekt javascript reprezentujący document object model(dom)Vue aktualizuje virtual dom zamiast aktualizowac po prostu dom.Dzięki temu redukujemy koszt aktualizacji prawdziwego dom.Wirtualny dom oferuje nam możliwość kontrolowania w którym momencie virtual dom ma być wyrenderowany.Oferuje również możliwość polepszenia wydajności naszych aplikacji internetowych poprzez zmniejszenie ilosci aktualizacji dla dom",
+          "virtual dom to obiekt javascript reprezentujący document object model(dom) Wirtualny DOM to reprezentacja oryginalnego DOM HTML w formie drzewa w pamięci i aktualizowana bez wpływu na oryginalny DOM.Dzięki temu redukujemy koszt aktualizacji prawdziwego dom.Wirtualny dom oferuje nam możliwość kontrolowania w którym momencie virtual dom ma być wyrenderowany.Oferuje również możliwość polepszenia wydajności naszych aplikacji internetowych poprzez zmniejszenie ilosci aktualizacji dla dom",
       },
       {
         question: "Wymień funkcjonalności w Vue",
-        answer: "Raktywność,templates,komponenty,transition,routing",
+        answer:
+          " virtual DOM, Komponenty: używane do tworzenia niestandardowych elementów wielokrotnego użytku w aplikacjach VueJS.  Templates: VueJS zapewnia szablony oparte na HTML, które wiążą DOM z danymi instancji Vue.Routing - Nawigacja między stronami odbywa się za pomocą vue-router Niewielka waga: VueJS jest lekką biblioteką w porównaniu do innych frameworków.",
       },
       {
         question: "Jak działa Vue?",
@@ -356,7 +371,7 @@ export default {
       },
       {
         question: "Opisz dyrektywe v-for",
-        answer: "Pozwala na wykonanie pętli na powiązanym elemencie DOM.",
+        answer: "Wbudowana dyrektywa v-for pozwala nam przechodzić przez elementy w tablicy lub obiekcie. Możesz wykonać iterację na każdym elemencie w tablicy lub obiekcie.Pozwala na wykonanie pętli na powiązanym elemencie DOM.",
       },
       {
         question: "Czym jest x-templates",
@@ -386,7 +401,7 @@ export default {
       {
         question: "co to jest flux?",
         answer:
-          "Flux to wzorzec projektowy stworzony do ujednolicenia przepływu danych w aplikacjach.Posiada trzy części: dispatch, store i view.View to część w której użytkownik komunikuje się z aplikacją.Store to w dużym uproszczeniu obiekt z stanem aplikacji.Dispatcher to centralna część fluxa z której wysłamy prośby o zmianę stanu aplikacji.",
+          "Flux to wzorzec projektowy stworzony do ujednolicenia przepływu danych w aplikacjach.Posiada trzy części: dispatch, store i view.View to część w której użytkownik komunikuje się z aplikacją.Store to w dużym uproszczeniu obiekt z stanem aplikacji.Dispatcher to centralna część fluxa z której wysłamy prośby o zmianę stanu aplikacji.Przede wszystkim aktualizacja danych na frontcie, szczególnie gdy jest zbudowany z komponentów, wymaga ciągłej wymiany informacji między nimi. Łatwo wpaść w dwie bardzo głębokie dziury związane z aktualizacjami: kaskada update'ów (propagacja danych) oraz piekiełko eventowe, gdzie każda zmiana odpala parę trudnych do śledzenia eventów. Flux rozwiązuje ten problem.",
       },
       {
         question: "Jak composition api zmniejsza koszty pamięci",
@@ -433,6 +448,21 @@ export default {
         question: "Wyjaśnij na czym polega przepływ danych w vue",
         answer:
           "Vue używa one-way data flow.Dane są przekazywane do komponentu dziecka z komponentu rodzica za pomocą właściwości props",
+      },
+      {
+        question: "Czym jest instancja vue?",
+        answer:
+          "Każda aplikacja Vue działa, tworząc nową instancję Vue z funkcją Vue. Ogólnie zmienna vm (skrót od ViewModel) służy do odwoływania się do instancji Vue. Możesz utworzyć instancję vue jak poniżej, var vm = new vue",
+      },
+      {
+        question: "How do you achieve conditional group of elements?",
+        answer:
+          "Możesz uzyskać warunkową grupę elementów (przełączanie wielu elementów na raz) przez zastosowanie dyrektywy v-if na elemencie <template>, który działa jako niewidoczny wrapper (bez renderowania) dla grupy elementów.",
+      },
+      {
+        question: "Jak ponownie wykorzystujesz elementy z kluczowym atrybutem?",
+        answer:
+          "Vue zawsze stara się renderować elementy tak wydajnie, jak to tylko możliwe. Dlatego stara się ponownie wykorzystać elementy, zamiast budować je od zera. Ale to zachowanie może powodować problemy w kilku scenariuszach.   Na przykład, jeśli spróbujesz wyrenderować ten sam element wejściowy w blokach v-if i v-else, to zachowa on poprzednią wartość, jak poniżej,Możemy oddzielić oba elementy wejściowe, stosując atrybut klucza jak poniżej,",
       },
       {
         question: "Różnica między script a script setup",
@@ -495,7 +525,7 @@ export default {
   },
   mutations: {
     randomVueQuestion(state) {
-      state.vueQuestions.sort(() => Math.floor( Math.random() - 0.5));
+      state.vueQuestions.sort(() => Math.floor(Math.random() - 0.5));
     },
   },
   actions: {

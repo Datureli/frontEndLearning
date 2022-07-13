@@ -4,9 +4,9 @@ export default {
   state: {
     reactQuestions: [
       {
-        question: "Czym jest defaultProps?",
+        question: "Czym jest create-react-app?",
         answer:
-          "defaultProps pozwala nam na ustawienie propsów,ustawienie wartości domyślnej dla propsów",
+          "Środowisko pracy stworzone przez Create React App nie tylko umożliwi ci stosowanie najnowszych funkcjonalności języka JavaScript, lecz także zoptymalizuje twój kod przed oddaniem go do użytku i ogólnie znacznie usprawni twoją pracę. Aby móc skorzystać z tego rozwiązania na swoim komputerze,Create React App nie obsługuje ani logiki backendu ani baz danych; tworzy jedynie frontendowy potok budowania (ang. build pipeline). Dzięki temu możesz go używać z dowolnie wybranym przez siebie backendem.  ",
       },
       {
         question: "Czym jest jsx?",
@@ -14,9 +14,24 @@ export default {
           "Tworzy elementy reactowe,które po renderowaniu są przetwarzane na węzły document object model",
       },
       {
+        question: "Komponenty funkcyjne w react",
+        answer:
+          "Cechy charakterystyczne komponentów funkcyjnych: otrzymują dane od rodziców za pośrednictwem obiektu prop  są pozbawione stan  zajmują się prezentacją a nie logiką aplikacji",
+      },
+      {
+        question: "Komponenty klasowe w react",
+        answer:
+          ". Propsy są niemutowanlne w React’cie więc nie nigdy nie ulegają zmianie. Ale this jest i zawsze był mutowalny.",
+      },
+      {
+        question: "Czym jest conditional rendering?",
+        answer:
+          "Renderowanie warunkowe działa w Reakcie tak samo jak instrukcje warunkowe w javascripcie. Aby stworzyć elementy odzwierciedlające aktualny stan aplikacji, należy użyć instrukcji if lub operatora warunkowego oraz pozwolić Reactowi je dopasować poprzez aktualizację interfejsu użytkownika.",
+      },
+      {
         question: "Różnica między props a state?",
         answer:
-          "State używa się do przechowywania danych w bieżącym widoku.Natomiast props używamy do przekazania danych do komponentu dziecka.",
+          "State używa się do przechowywania danych w bieżącym widoku.Natomiast props używamy do przekazania danych do komponentu dziecka.props zawsze napływają do komponentu z zewnątrz. Drugim obiektem, który służy do zarządzania danymi w komponentach, jest state. Dzięki nim komponent może zarządzać stanem od wewnątrz. state jest dostępne wyłącznie w komponentach klasowych.",
       },
       {
         question: "jakie są zasady korzystania z hooków?",
@@ -29,6 +44,11 @@ export default {
         question: "Kiedy powinno się korzystać z hooków?",
         answer:
           " Jeśli po stworzeniu komponentu funkcyjnego zorientujesz się, że potrzebujesz przechować kilka wartości w stanie, dotychczas musiałeś zamienić taki komponent na klasę. Teraz możesz skorzystać z hooka z wewnątrz istniejącego komponentu funkcyjnego",
+      },
+      {
+        question: "Listy i klucze?",
+        answer:
+          " „Klucz” (ang. key) jest specjalnym atrybutem o typie łańcucha znaków, który musisz dodać podczas tworzenia elementów listy.Klucze pomagają Reaktowi zidentyfikować, które elementy uległy zmianie, zostały dodane lub usunięte. Klucze powinny zostać nadane elementom wewnątrz tablicy, aby elementy zyskały stabilną tożsamość:Nie zalecamy używania indeksów jako kluczy, jeżeli kolejność elementów może ulec zmianie.Może to negatywnie wpłynąć na wydajność i spowodować problemy ze stanem komponentu. ",
       },
       {
         question: "Czym jest hook?",
