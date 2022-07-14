@@ -298,6 +298,7 @@ export default {
         answer:
           "ref pozwala nam uczynić dowolną zmienną reaktywną.Ref bierze argument i zwraca go owiniętego w obiekt z wartością,może być później użyty aby uzyskać dostęp lub zmutować wartość reaktywnej zmiennej.W innych słowach ref wytwarza reaktywną referencje dla naszej wartości.",
       },
+      
       {
         question: "Czym jest multi root template?",
         answer:

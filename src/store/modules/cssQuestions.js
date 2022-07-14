@@ -29,6 +29,10 @@ export default {
         answer: `Model pudełkowy to opis budowy elementów blokowych na stronie www.Pozwala wyobrazić sobie w jaki sposób poszczególne elementy składają się na wielkość całego pudełka.Tymi elementami są marginesy zewnetrzne, obramowanie, marginesy wewnętrzne oraz szerokość.`,
       },
       {
+        question: `border-box,content-box,padding-box - różnice`,
+        answer: `Jest to domyślny styl, jak określa go standard CSS. Własności width i height są wymierzane zawierając tylko zawartość, ale nie border, margin lub padding.Własności width i height zawierają rozmiar dopełnienia (padding), ale nie zawierają obramowania (border) ani marginesu (margin).Własności width i height zawierają dopełnienie i obramowanie, ale nie margines. Jest to model pudełkowy używany przez Internet Explorer, kiedy dokument nie jest w trybie zgodności ze standardami`,
+      },
+      {
         question: `Opisz zalety Sass`,
         answer: `Sass to preprocesor CSS,który pozwala na znacznie szybszą i wydajniejszą pracę z arkuszami stylów.Preprocesory pozwalają na programowanie wśród arkuszy stylów, co daje ogromne możliwości przyspieszenia pracy.przeglądarki czytają kod CSS, a kod w formacie Sass będzie dla nich niezrozumiały. Rozwiązaniem tego problemu jest kompilacja plików Sass do wyjściowego CSS`,
         secondAnswer: `W Sass możemy używać zmiennych,Zagnieżdzanie.Mixins.DziedziczenieKolejna bardzo mocna cecha. Dzięki dziedziczeniu możemy przekazywać część zastosowanych deklaracji z jednego obiektu na drugi. To z kolei ponownie pozwala nam na podążanie za regułą DRY. Aby dany element odziedziczył cechy swego przodka należy wstawić wyrażenie @extend a następnie selektor z którego mamy dziedziczyć. W przykładzie wykorzystamy klasę alert (która może formatować jakiś komunikat) i dodamy kolejne jej odmiany:`,
@@ -43,9 +47,12 @@ export default {
         answer: `To zaprezentowana wraz z premierą CSS 3 możliwość przypisania stylów do selektora nie na podstawie nazwy czy klasy, ale na podstawie jego atrybutów HTML-u. Selektor atrybutu można zatem zastosować do wszystkich obiektów w dokumencie, które mają np. określone wymiary czy też linków prowadzących nawet pod konkretne adresy. `,
       },
       {
+        question: `grid vs flexbox`,
+        answer: `Podstawową i zasadniczą różnicą między tymi dwiema właściwościami jest to, że Flexbox jest właściwością jednowymiarową. To znaczy, że możemy dzięki niej układać elementy w poziomie LUB w pionie, natomiast Grid jest dwuwymiarowy i daje nam możliwość pracy w poziomie ORAZ w pionie.Dzięki gridowi możemy tworzyć bardziej asymetryczne układy stron internetowych, ponieważ daje nam większą kontrolę nad elementami.Dodatkowo mamy możliwość usytuowania elementów w taki sposób, aby nachodziły na siebie bez zakłócania reszty elementów tak jak robiła to właściwość float, po użyciu której często spotykaną praktyką było pisanie tak zwanych "Clearfixów".Są również sytuacje, których grid jest wręcz must use, jak na przykład asymetryczny układ bloga lub ciekawa galeria zdjęć:`,
+      },
+      {
         question: `Jaka jest różnica między CSS Grid i Flexboksem?`,
         answer: `Grid tworzy siatkę, która jest dwuwymiarowa i składa się z kolumn i wersów. Odrębne podejście wykorzystuje się w przypadku Flexboksów, czyli takiemu podejściu do umiejscawiania i wyrównywania obiektów na stronie, gdzie występują one w jednym „wymiarze”: w poziomie lub w pionie.`,
-        secondAnswer: ``,
       },
       {
         question: `Jakie są typy selektorów w css?`,

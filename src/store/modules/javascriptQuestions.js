@@ -328,6 +328,11 @@ export default {
           "zwraca największą liczbę całkowitą mniejszą lub równą podanej liczbie.",
       },
       {
+        question: "Czym jest JSON?",
+        answer:
+          "JSON (ang. JavaScript Object Notation) to otwarty format zapisu struktur danych. Jego przeznaczeniem jest najczęściej wymiana danych pomiędzy aplikacjami. JSON składa się z par atrybut – wartość oraz typów danych tablicowych. Notacja JSONa jest zbieżna z obiektami w języku JavaScript..Jaki problem rozwiązuje JSON?: Często zachodzi potrzeba wymiany danych pomiędzy aplikacjami lub pomiędzy składowymi architektury (np. pomiędzy front-endem a back-endem aplikacji). Wysyłając wartości liczbowe lub prosty string nie mamy żadnego dylematu – problem zaczyna się wtedy, kiedy chcemy przekazać tablicę, obiekt, lub serię danych zawartych w jednej zmiennej. Właśnie w takim przypadku używamy formatu JSON.",
+      },
+      {
         question: "Jak działa JSON.parse",
         answer:
           "Przekształca tekst w formacie JSON na wartości proste i obiekty obsługiwane przez JavaScript. JSON jest specjalnym formatem zapisu różnych danych o typach występujących w języku JavaScript, ale z dodatkowymi ograniczeniami. Polegają one m.in. na tym, że wszystkie wartości tekstowe - w tym klucze obiektów - muszą być ujęte w znaki cudzysłowu, a nie apostrofy. Dane muszą być zapisane wprost przy pomocy literałów, a nie z użyciem operatora new oraz tworzone w całości za jednym razem bez używania zmiennych pomocniczych. Ponadto w formacie JSON można zapisać tylko następujące typy danych: Object, Array, String, Boolean, Number, Null.",
@@ -385,6 +390,11 @@ export default {
         question: "opisz atrybut defer?",
         answer:
           "W przypadku kiedy JavaScript manipuluje drzewem DOM, można wykorzystać defer. Dzięki temu, skrypty w nagłówku będą potraktowane z takim priorytetem, jakby były na samym końcu strony. W przypadku kiedy chcemy pogodzić asynchroniczne ładowanie i możliwość manipulacją drzewem DOM, można wykorzystać bibliotekę require.js.",
+      },
+      {
+        question: "różnice między splice vs slice",
+        answer:
+          "Obie potrafią usuwać wybrane elementy, które następnie zwracają.splice – modyfikuje oryginalną tablicę.slice – tworzy i modyfikuje kopię oryginalnej tablicy.Sprawdźmy metodę slice. Widzimy, że po każdym jej wywołaniu uzyskujemy ten sam wynik. No jasne – w końcu za każdym razem metoda tworzy sobie nową kopię oryginalnej tablicy i na niej pracuje.Z kolei metoda splice pracuje cały czas na tej samej tablicy. W naszym przykładzie najpierw wycina pierwszych dwóch bohaterów, zostają Quasimodo oraz Stich. Potem wycina kolejnych dwóch, nie zostaje już nikt, tablica jest pusta.   Co ważne – metoda splice potrafi również dodawać elementy do tablicy.",
       },
       {
         question: "czym jest class?",
