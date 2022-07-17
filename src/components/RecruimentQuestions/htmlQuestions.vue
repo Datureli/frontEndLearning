@@ -29,13 +29,6 @@
 import { mapState } from "vuex";
 export default {
   computed: {
-    betterString() {
-      this.htmlQuestions
-        .split("")
-        .reverse()
-        .join("");
-      return this.htmlQuestionsF;
-    },
     ...mapState(["disable"]),
     ...mapState("htmlQuestions", ["htmlQuestions"]),
   },

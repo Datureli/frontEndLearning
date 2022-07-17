@@ -163,13 +163,23 @@ export default {
         answer: `pętla for jest typowo "manualna". Trzeba ustawić licznik, kiedy ma się zakończyć i jak ma być zwiększany. Dodatkowo ręcznie trzeba się odwoływać do danego elementu w tablicy.`,
       },
       {
+        question: "Zakres globalny i obiekt globalny",
+        answer: `Gdy uruchamiamy kod JavaScript, dla takiego kodu zawsze powstaje zakres globalny, a także obiekt globalny. Obiekt ten w przypadku przeglądarki nazywa się window. Zarówno w zakresie globalnym, jak i w obiekcie globalnym mogą powstawać zmienne, które mają zasięg globalny. Zasięg globalny oznacza, że
+        zmienne dostępne są w całym kodzie.`,
+      },
+      {
         question: "Czym jest dependency injection?",
         answer: `to wzorzec projektowy polegający na tym, że obiekt nie inicjalizuje swoich zależności sam, tylko przyjmuje je z zewnątrz poprzez tzw. „wstrzykiwanie”. Główną zaletą takiego podejścia jest między innymi łatwiejsze pisanie testów jednostkowych. Użycie DI może również sprawić, że nasze obiekty będą ze sobą luźniej powiązane (ang. loose coupling).`,
       },
       {
         question: "Jak działa pętle while",
         answer:
-          "W pętli tego typu nie definiujemy ani początkowego licznika, ani nie definiujemy zmiany licznika.Musimy te rzeczy zrobić ręcznie.Pętlę while zazwyczaj stosuje się w sytuacjach, kiedy nie wiemy dokładnie, ile iteracji ma się wykonać.Wyobraź sobie, że chcesz wygenerować unikalny numer ID albo jakąś liczbę.Generujesz więc daną rzecz, następnie sprawdzasz czy wynik pasuje do założeń. Jak nie pasuje, generujesz dalej. I tak do skutku aż trafisz.",
+          "Pętla while jest trochę inna i warunek zakończenia pętli jest na początku instrukcji:.Jeżeli warunek od razu jest fałszywy, nie zostanie wykonana żadna operacja. Oczywiście, jeżeli znowu wstawimy do instrukcji while stałą wartość true to otrzymamy nieskończoną pętlę.W pętli tego typu nie definiujemy ani początkowego licznika, ani nie definiujemy zmiany licznika.Musimy te rzeczy zrobić ręcznie.Pętlę while zazwyczaj stosuje się w sytuacjach, kiedy nie wiemy dokładnie, ile iteracji ma się wykonać.Wyobraź sobie, że chcesz wygenerować unikalny numer ID albo jakąś liczbę.Generujesz więc daną rzecz, następnie sprawdzasz czy wynik pasuje do założeń. Jak nie pasuje, generujesz dalej. I tak do skutku aż trafisz.",
+      },
+      {
+        question: "Jak działa pętla do while",
+        answer:
+          "Pętla do...while działa dopóty, dopóki warunek w pętli nie będzie wartością false:Warunek pętli jest na końcu wyrażenia, dlatego też pętla do...while wykona się zawsze przynajmniej raz.Jeżeli do warunku wstawimy po prostu wartość true, pętla będzie się kręcić w nieskończoność.",
       },
       {
         question: "Opisz typy danych w javascript",
@@ -248,6 +258,11 @@ export default {
           "Jest to skrócona wersja sprawdzenia czy zmienna to Boolean(true albo false)",
       },
       {
+        question: "pętla for in vs for of",
+        answer:
+          "Pętla for...of używana jest do iterowania po obiektach iterowalnych jak string, tablice, struktury danych jak Map czy Set. Pętla for...in jest używana głównie do iterowania po właściwościach obiektów i najlepiej użyć jej właśnie tylko do tego.Iterując w pętli for of po stringu np 'hey' zostaną zwrócone nam litery h-e-y,natomiast pętla for in nie jest zalecana do wartości string,zwróciłaby nam w tym przypadku 0,1,2.Jeżeli stworzymy sobie obiekt, nie możemy po nim iterować tak po prostu używając pętli for...of i pobrać jego wartości. Do tego powstała właśnie pętla for...in:Przy takie iteracji pobieramy tylko i wyłącznie właściwości poszczególnych obiektów, inaczej mówiąc klucze tych obiektów.pętla for...of idealnie nadaje się do iterowania po stringach, tablicach, strukturach jak Set i Map, nie nadaje się za to do iterowania po obiektachpętla for...in idealnie nadaje się do iterowania po obiektach, dzięki niej pobieramy kolejne właściwości obiektu.w tych pętlach też można użyć break oraz continue",
+      },
+      {
         question: "Czym jest IIFE?",
         answer:
           "Immediately Invoked Function Expression — Funkcja natychmiastowa jest wywoływana automatycznie bezpośrednio po jej odczytaniu.Uzyskujemy ją przez deklarację funkcji anonimowej (bez nazwy) w nawiasach okrągłych, przez co taka konstrukcja jest traktowana jako wyrażenie. Po wyrażeniu dodajemy kolejne dwa nawiasy, przez co jest ono automatycznie wywoływane.Dzięki wykorzystaniu funkcji natychmiastowych ograniczamy zakres (scope) zmiennych tylko do tej metody.Zmniejsza to tym samym potencjalne konflikty z innymi bibliotekami.",
@@ -283,9 +298,19 @@ export default {
           "Interfejs API, czyli aplikacyjny interfejs programistyczny, jest zestawem reguł definiujących sposób, w jaki aplikacje lub urządzenia mogą się ze sobą łączyć i komunikować. Interfejs API REST to interfejs API zgodny z zasadami projektowania REST, czyli stylem architektury representational state transfer.",
       },
       {
+        question: "Czym jest npm?",
+        answer:
+          "Rozwinięciem skrótu NPM jest Node Package Manager. NPM pełni dwie funkcje. Pierwszą z nich to repozytorium otwartych i darmowych bibliotek, frameworków, narzędzi i wszelkiego rodzaju projektów, które są uruchamiane za pomocą Node.js.Jeżeli chcemy zainstalować jakąś paczkę z repozytorium NPM musimy użyć konsoli systemowej. I to jest właśnie druga funkcja NPM, jest to narzędzie linii komend. Za pomocą prostej komendy npm install nazwa_paczki możemy pobrać dowolną paczkę kodu i użyć jej w naszej aplikacji.",
+      },
+      {
         question: "czym jest funkcja wyższego rzędu?",
         answer:
           "Funkcja wyższego rzędu to funkcja, która przyjmuje inne funkcje jako parametry lub też taka, której wynik również jest funkcją. Przykładowa funkcja wyższego rzędu to map służąca do zwracania listy z wynikami funkcji dla wszystkich elementów z danej listy.",
+      },
+      {
+        question: "instrukcja break i continue",
+        answer:
+          "W instrukcjach iteracyjnych słowo kluczowe break bezwarunkowo przerywa wykonwyanie się pętli. Jest to proste rozwiązanie i ma zastosowanie w sytuacji, gdy dalsze powtarzanie instrukcji w pętli, nie są już potrzebne.Słowo kluczowe continue, powoduje wznowienie działania pętli i zaprzestanie wykonywania dalszych instrukcji dla danego powtórzenia. Stosuje się je w przypadku, gdy w danej iteracji pętli nie ma konieczności wykonania instrukcje, które występują po słowie kluczowym continue, ale znajdują się w bloku danej pętli. Popatrzmy na przykład:",
       },
       {
         question: "Jakie są zasady korzystania z rest api?",
@@ -456,7 +481,7 @@ export default {
 
   mutations: {
     randomJavascriptQuestion(state) {
-      state.javascriptQuestions.sort(() => Math.floor( Math.random() - 0.5));
+      state.javascriptQuestions.sort(() => Math.floor(Math.random() - 0.5));
     },
   },
   actions: {

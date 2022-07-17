@@ -5,45 +5,46 @@ export default {
     htmlQuestions: [
       {
         question: `Czym jest Html?`,
-        
-        answer: `HTML (Hypertext Markup Language) to język znaczników służący do prezentacji treści na stronach internetowych,który jest oparty o hiperłącza łączące poszczególne dokumenty pomiędzy sobą.Przeglądarki internetowe jednoznacznie interpretują kod HTML i na jego bazie przedstawiają treść końcowym użytkownikom.`,
+        answer: `HTML (hypertext Markup Language) to język znaczników służący do prezentacji treści na stronach internetowych, który jest oparty o hiperłącza łączące poszczególne dokumenty pomiędzy sobą. Przeglądarki internetowe jednoznacznie interpretują kod html i na jego bazie przedstawiają treść końcowym użytkownikom.`,
       },
       {
         question: `Czym jest string interpolation?`,
-
-        answer: `
-        Interpolacja ciągów JavaScript to proces osadzania wyrażenia w części ciągu.Literał szablonu służy do osadzania wyrażeń. Za pomocą interpolacji można dodawać do ciągu wartości, takie jak zmienne i obliczenia matematyczne.`,
+        answer: `Interpolacja ciągów JavaScript to proces osadzania wyrażenia w części ciągu. Literał szablonu służy do osadzania wyrażeń. Za pomocą interpolacji można dodawać do ciągu wartości, takie jak zmienne i obliczenia matematyczne.`,
       },
       {
         question: `jak wstawić ikonę obok adresu www?`,
 
-        answer: `Polecenie to pozwala dodać ikonkę (favicon.ico), która będzie widoczna w przeglądarce przy adresie naszej strony.ico pozwala zapisać dwie wersje rozmiaru w jednym pliku. Niektóre przeglądarki - nie MSIE 6 - pozwalając również używać innych formatów graficznych, takich jak np. PNG.`,
+        answer: `Favicon jest małą ikoną, która wyświetla się obok tytułu witryny w przeglądarce. Służy jako element rozpoznawczy, budujący zaufanie wśród odbiorców, ponieważ pomaga im wizualnie zidentyfikować witrynę internetową.Pierwszym sposobem dodania favicon jest umieszczenie go w public_html.`,
+      },
+      {
+        question: `Strony statyczne vs dynamiczne?`,
+        answer: `Statyczne strony są sposobem na poprawienie wydajności naszego produktu. Zapytanie HTTP o dynamiczną stronę skutkuje dłuższym czasem oczekiwania, ponieważ przed otrzymaniem odpowiedzi, skrypt wykona zapytanie o dane do bazy danych, przetworzenie, uzupełnienie HTML danymi i dopiero odpowiedź.Przetwarzanie danych użytkownika po stronie serwera jest często źródłem problemów z bezpieczeństwem danych. Brak przetwarzania równa się brak dostępu do bazy danych. Dopóki statyczne pliki na hostingu są bezpieczne, twoja statyczna strona również za taką uchodzi.`,
       },
 
       {
         question: `Czym jest tag blockquote?`,
-        answer:
-          `Tag blockquote określa treść cytowaną ze źródła zewnętrznego (gazeta, praca naukowa itp.`,
+        answer: `Tag blockquote określa treść cytowaną ze źródła zewnętrznego (gazeta, praca naukowa itp.`,
+      },
+      {
+        question: `różnica pomiędzy div a span?`,
+        answer: `jeśli chodzi o wyświetlanie tagów, przeglądarka rozróżnia trzy grupy elementów: liniowe np span,em,strong, blokowe div,p,article, liniowo-blokowe: input textarea. Elementy liniowe nie spowodują przejścia do nowej linii, będą wyświetlać się obok siebie, w jednej lini. Blokowe z kolei będą zachowywać się jak pudełka, które ustawiasz jeden pod drugim, a więc nigdy nie wyświetlą się obok siebie, chyba ,że zmienimy to za pomocą css. Liniowo-blokowe z kolei będą zachowywać się jak liniowe, jeśli chodzi o położenie a więc wyświetlać będą się obok siebie, natomiast różnią się od nich tym, że możesz nadać im różne wielkości. Domyślnie, elementom liniowym przeglądarka ustawia właściwość "display" na "inline". Blokowym na "block", a liniowo blokowym na "inline-block". Na przykład tag <span> nie spowoduje przejścia tekstu do nowej linii, bo jest elementem liniowym i przeglądarka z automatu nadaje mu styl display na inline:`,
       },
       {
         question: `Czym jest innerHtml?`,
-        answer:
-          `Właściwość innerHTML umożliwia odczyt i ustawianie html, jaki jest we wnętrzu danego elementu:`,
+        answer: `Właściwość innerHTML umożliwia odczyt i ustawianie html, jaki jest we wnętrzu danego elementu:`,
       },
       {
         question: `Czym jest html canvas?`,
-        answer:
-          `element języka HTML wprowadzony w HTML 5 pozwalający na dynamiczne, skryptowe renderowanie kształtów i obrazów bitmapowych. Dzięki wprowadzeniu obiektu canvas możliwe stało się tworzenie dynamicznych dwu i trójwymiarowych animacji czy gier działających w przeglądarkach bez dodatkowych wtyczek.`,
+        answer: `element języka HTML wprowadzony w HTML5 pozwalający na dynamiczne, skryptowe renderowanie kształtów i obrazów bitmapowych. Dzięki wprowadzeniu obiektu canvas możliwe stało się tworzenie dynamicznych dwu i trójwymiarowych animacji czy gier działających w przeglądarkach bez dodatkowych wtyczek.`,
       },
       {
         question: `Które przeglądarki wspierają HTML5?`,
-        answer:
-          `Ostatnie wersje Safari, Google Chrome, Mozilla Firefox oraz Opera – wszystkie wspierają wiele funkcjonalności HTML5. Internet Explorer od wersji 9.0 również wspiera niektóre z funkcjonalności.Mobilne przeglądarki internetowe, które zostały zainstalowane na urządzeniach jak iPhone, iPad oraz Android doskonale wpierają HTML5.`,
+        answer: `Ostatnie wersje Safari, Google Chrome, Mozilla Firefox oraz Opera – wszystkie wspierają wiele funkcjonalności HTML5. Internet Explorer od wersji 9.0 również wspiera niektóre z funkcjonalności.Mobilne przeglądarki internetowe, które zostały zainstalowane na urządzeniach jak iPhone, iPad oraz Android wpierają HTML5.`,
       },
       {
         question: "Czym jest twarda spacja & nbspHtml?",
         answer:
-          "jak chcemy użyć więcej niż jednej spacji,możemy tego dokonać poprzez dodanie znaku specjalnego.Znak specjalny to odpowiednik znaku wprowadzanego z klawiatury (np. spacji) posiadający specjalny zapis html. Każdy znak specjalny zaczyna się od znaku & (ampersand) i kończy się średnikiem.Znak specjalny niełamliwej spacji to &nbsp; (non-breaking space).W zasadzie jedynym prawidłowym zastosowaniem tego specjalnego znaku jest zapobieżenie rozdzielenia wyrazów przy przenoszeniu do następnej linii",
+          "jak chcemy użyć więcej niż jednej spacji,możemy tego dokonać poprzez dodanie znaku specjalnego.Znak specjalny to odpowiednik znaku wprowadzanego z klawiatury (np. spacji) posiadający specjalny zapis html. Każdy znak specjalny zaczyna się od znaku & (ampersand) i kończy się średnikiem.Znak specjalny niełamliwej spacji to &nbsp; (non-breaking space).W zasadzie jedynym prawidłowym zastosowaniem tego specjalnego znaku jest zapobieganie rozdzielenia wyrazów przy przenoszeniu do następnej linii",
       },
       {
         question: "Co to jest div?",
@@ -175,7 +176,7 @@ export default {
 
   mutations: {
     randomHtmlQuestion(state) {
-      state.htmlQuestions.sort(() => Math.floor( Math.random() - 0.5));
+      state.htmlQuestions.sort(() => Math.floor(Math.random() - 0.5));
     },
   },
   actions: {
