@@ -60,29 +60,25 @@ export default {
         question:
           "Czy HTML jest wstecznie kompatybilny ze starszymi przeglądarkami?",
         answer:
-          "Tak! HTML5 został zaprojektowany tak, aby w miarę możliwości, być kompatybilny ze starszymi przeglądarkami.Nowe funkcjonalności opierają się na tych istniejących i pozwalają na wyświetlenie awaryjnej zawartości dla starszych przeglądarek.",
+          "Tak, HTML5 został zaprojektowany tak, aby w miarę możliwości, być kompatybilny ze starszymi przeglądarkami.Nowe funkcjonalności opierają się na tych istniejących i pozwalają na wyświetlenie awaryjnej zawartości dla starszych przeglądarek.",
       },
       {
         question: "Wymień niektóre z nowych funkcji HTML5.",
         answer:
-          "nowe elementy składni,header,footer oraz section,Forms 2.0 – ulepszenie formularzy internetowych, został przedstawiony nowy atrybut - input,WebSocket następna generacja dwukierunkowej komunikacji dla aplikacji internetowych,Server-Sent Event, HTML5 wprowadza zdarzenia, które przechodzą z serwera WWW do przeglądarki internetowej,Canvas – obsługuje dwuwymiarową powierzchnię rysunkową, które może zostać oprogramowana przy użyciu JavaScript;",
-        secondAnswer:
-          "Audio & Video – od teraz można umieszczać nagrania audio oraz filmy video na stronach internetowych bez uciekania się do wtyczek firm trzecich; Geolocation – od teraz użytkownicy mogą zdecydować czy chcą podzielić się fizyczną lokalizacją z aplikacją internetową; Microdata – pozwala na tworzenie swoich własnych słowników poza językiem HTML5, które pozwalają na rozszerzenie strony internetowej przy użyciu niestandardowej semantyki; Drag & drop – od teraz można przeciągać i opuszczać elementy z jednego miejsca do drugiego w obrębie tej samej strony internetowej.",
-        thirdPartOfAnswer:
-          "Persistent Local Storage – przy użyciu tej funkcjonalności aplikacje webowe mogą przechowywać dane lokalnie bez użycia przeglądarki użytkownika. Wcześniej dane te musiały być przechowywane w ciasteczkach, włączając w to każde pojedyncze żądanie. Lokalne przechowywanie pamięci jest bezpieczniejsze, pozwala na przechowywanie większej ilości danych bez negatywnego wpływu na wydajność strony internetowej;",
+          "Nowe elementy składni,header,footer,section ,audio i video,drag and drop. Forms 2.0 – ulepszenie formularzy internetowych, został przedstawiony nowy atrybut - input, WebSocket następna generacja dwukierunkowej komunikacji dla aplikacji internetowych, Server-Sent Event, HTML5 wprowadza zdarzenia, które przechodzą z serwera www do przeglądarki internetowej, Canvas – obsługuje dwuwymiarową powierzchnię rysunkową, które może zostać oprogramowana przy użyciu JavaScript. Persistent Local Storage – przy użyciu tej funkcjonalności aplikacje webowe mogą przechowywać dane lokalnie bez użycia przeglądarki użytkownika.",
       },
       {
         question: "Czy tagi i elementy w html to to samo?",
         answer:
-          "Nie, elementy w html są definiowane poprzez początkowy tag,mogą zawierać jakiś kontent wewnątrz i tag zamykający.Przykład: <h1>Heading</h1> to element html natomiast <h1>jakiś kontent</h1> to tag zamykajacy",
+          "Nie, elementy w html są definiowane poprzez początkowy tag, mogą zawierać jakiś kontent wewnątrz i tag zamykający.Przykład: <h1>Heading</h1> to element html natomiast <h1>jakiś kontent</h1> to tag zamykajacy.",
       },
       {
         question: "Czym są tagi i atrybuty w html?",
         answer:
-          "Tagi to podstawowy komponent w html który definiuje jak dany kontent będzie ustruktyryzowany/formatowany,natomiast atrybuty są używane wraz ztagami html by zdefiniować charakterystyke elementu",
+          "Tagi to podstawowy komponent w html który definiuje jak dany kontent będzie ustruktyryzowany,natomiast atrybuty są używane wraz z tagami html by zdefiniować charakterystyke elementu.",
       },
       {
-        question: "Jaki jest cel używania sekcji ‘section’ w HTML5?",
+        question: "Jaki jest cel używania sekcji section w HTML5?",
         answer:
           "Znacznik ten reprezentuje rozdział dokumentu lub sekcję aplikacji. Może być użyty razem ze znacznikami h1-h6, które wskazują na strukturę dokumentu.",
       },
@@ -96,14 +92,12 @@ export default {
       },
       {
         question: "Czym jest tag picture?",
-        answer: `Tag picture zapewnia programistom stron internetowych większą elastyczność w określaniu zasobów obrazu. Zamiast jednego obrazu skalowanego w górę lub w dół to, w zależności od rozmiaru viewportu, można dobrać wiele obrazów tak, żeby dla każdej rozdzielczości ładnie wypełnić okno przeglądarki.`,
-        secondAnswer:
-          "Element picture ma dwa różne tagi: jeden lub więcej tagów source oraz jeden tag img.Tag source ma następujące właściwości:srcset (wymagany): określa URL obrazu do wyświetlenia, media: akceptuje wszelkie prawidłowe media query, które normalnie byłyby ustawione w CSS,rozmiary: definiuje pojedynczy deskryptor szerokości, media query z deskryptorem szerokości lub rozdzieloną przecinkami listę media query z deskryptorem szerokości type: określa typ MIME",
+        answer: `Tag picture zapewnia programistom stron internetowych większą elastyczność w określaniu zasobów obrazu. Zamiast jednego obrazu skalowanego w górę lub w dół to, w zależności od rozmiaru viewportu, można dobrać wiele obrazów tak, żeby dla każdej rozdzielczości ładnie wypełnić okno przeglądarki."Element picture ma dwa różne tagi: jeden lub więcej tagów source oraz jeden tag img.`,
       },
       {
         question: "Czym jest Web Socket?",
         answer:
-          "Web sockets to technologia następnej generacji do dwukierunkowej komunikacji dla aplikacji internetowych, która działa na jednym gnieździe i jest wystawiona za pomocą interfejsu napisanego w JavaScript dla przeglądarek zgodnych z HTML5,Po uzyskaniu połączenia gniazda z serwerem WWW, możesz wysyłać dane z przeglądarki do serwera po wywołaniu metody send() oraz odbierać dane z serwera dzięki obsłudze zdarzenia onmessage",
+          "Web sockets to technologia następnej generacji do dwukierunkowej komunikacji dla aplikacji internetowych, która działa na jednym gnieździe i jest wystawiona za pomocą interfejsu napisanego w JavaScript dla przeglądarek zgodnych z HTML5, Po uzyskaniu połączenia gniazda z serwerem WWW, możesz wysyłać dane z przeglądarki do serwera po wywołaniu metody send() oraz odbierać dane z serwera dzięki obsłudze zdarzenia onmessage",
       },
       {
         question: "Czym jest tag article?",
@@ -113,7 +107,7 @@ export default {
       {
         question: "Objaśnij semantyczny html",
         answer:
-          "Semantyczny HTML to kod napisany za pomocą tagów które mają określone znaczenie i mogą być odpowiednio interpretowane przez przeglądarkę i developera. Dla odróżnienia tagi które nie są semantyczne są obojętne tzn. nie mówią wprost nic na temat swojej zawartości.Kluczowymi kwestiami stosowania semantycznego html jest accessibility oraz SEO.Do grupy tagów nie semantycznych należy div lub span.",
+          "Semantyczny HTML to kod napisany za pomocą tagów które mają określone znaczenie i mogą być odpowiednio interpretowane przez przeglądarkę i developera. Dla odróżnienia tagi które nie są semantyczne są obojętne tzn. nie mówią wprost nic na temat swojej zawartości.Kluczowymi kwestiami stosowania semantycznego html jest accessibility oraz seo. Do grupy tagów nie semantycznych należy div lub span.",
       },
 
       {
@@ -139,12 +133,12 @@ export default {
       {
         question: "Czym są atrybuty niestandardowe w HTML5?",
         answer:
-          "Atrybuty niestandardowe rozpoczynają się od data- i będą nazywane na podstawie twoich preferencji.Składa się z dwóch atrybutów, data-subject oraz data-level.Użytkownik będzie mógł pobrać wartości tych atrybutów używając JavaScript lub CSS w podobny sposób jak w przypadku korzystania ze standardowych atrybutów.",
+          "Atrybuty niestandardowe rozpoczynają się od data- i będą nazywane na podstawie twoich preferencji. Składa się z dwóch atrybutów, data-subject oraz data-level. Użytkownik będzie mógł pobrać wartości tych atrybutów używając JavaScript lub css w podobny sposób jak w przypadku korzystania ze standardowych atrybutów.",
       },
       {
         question: "Do czego służy znacznik footer?",
         answer:
-          "Tag footer definiuje stopkę dokumentu lub sekcji i powinien zawierać informacje o stronie, która go zawiera.Ten tag zwykle zawiera informacje o autorze, prawach autorskich,dane kontaktowe, mapę witryny,powrót do góry oraz linki do powiązanych dokumentów,",
+          "Tag footer definiuje stopkę dokumentu lub sekcji i powinien zawierać informacje o stronie, która go zawiera. Ten tag zwykle zawiera informacje o autorze, prawach autorskich, dane kontaktowe, mapę witryny,powrót do góry oraz linki do powiązanych dokumentów,",
       },
       {
         question: "Czym jest Web Forms 2.0?",
@@ -157,19 +151,19 @@ export default {
           "Tag header reprezentuje kontener na treść wprowadzającą lub zestaw linków nawigacyjnych. Zazwyczaj zawiera logo, linki nawigacyjne lub nagłówki.",
       },
       {
-        question: " Co masz na myśli mówiąc o przechowywaniu sesji w HTML5?",
+        question: "przechowywanie sesji w HTML5?",
         answer:
           "HTML5 przedstawił nowy atrybut sessionStorage , który może być wykorzystywany przez strony aby dodawać dane do sesji i będzie dostępny dla każdej strony otwartej w tym oknie, tj. jak tylko zamkniesz okno sesja będzie pusta.",
       },
       {
         question: "Czym jest accessibility?(dostępność)",
         answer:
-          "Accessibility to tworzenie aplikacji w sposób który jest łatwy do interpretacji dla przeglądarki i/lub specjalnych urządzeń przystosowanych przez osoby niepełnosprawne. Po prostu przeglądarka wie kiedy ma do czynienia z obrazkiem, nawigacją czy artykułem.",
+          "Accessibility to tworzenie aplikacji w sposób który jest łatwy do interpretacji dla przeglądarki lub specjalnych urządzeń przystosowanych przez osoby niepełnosprawne. Po prostu przeglądarka wie kiedy ma do czynienia z obrazkiem, nawigacją czy artykułem.",
       },
       {
         question: "Jakie są wady ciasteczek?",
         answer:
-          "Ciasteczka mają następujące wady: ciasteczka są dołączone do każdego żądania HTTP a tym samym prowadzą do spowolnienia aplikacji internetowej przez przekazywanie tych samych danych; ciasteczka są dołączone do każdego żądania HTTP a tym samym wysyłamy nieszyfrowane dane przez internet; ciasteczka są ograniczone do około 4KB. Liczba ta nie wystarczy do przechowywania wszystkich niezbędnych danych.",
+          "Ciasteczka są dołączone do każdego żądania HTTP a tym samym prowadzą do spowolnienia aplikacji internetowej przez przekazywanie tych samych danych; ciasteczka są dołączone do każdego żądania HTTP a tym samym wysyłamy nieszyfrowane dane przez internet; ciasteczka są ograniczone do około 4KB. Liczba ta nie wystarczy do przechowywania wszystkich niezbędnych danych.",
       },
     ],
   },
