@@ -6,17 +6,12 @@ export default {
       {
         question: "Jak zadeklarować zmienną w javascript?",
         answer:
-          "Aby zadeklarować zmienną, powinniśmy posłużyć się jednym ze słów kluczowych var,let lub const.Pod zmienne możemy podstawić dowolne wartości jakie będziemy chcieli.Zaleca się używanie let oraz const zamiast var.Dzięki nim nasze skrypty stają się bardziej optymalne pod względem zarządzania pamięcią, ale i potencjalnie unikamy niektórych problematycznych sytuacji.Zmienne o takiej samej nazwie,ale utworzone przy pomocy różnej wielkości liter to dwie różne zmienne.Nazwa zmiennej nie może zaczynać się od cyfry,nie może zawierać spacji,kropki, przecinka ani myślnika (można natomiast używać podkreślenia),nazwą zmiennej nie może być słowo kluczowe zarezerwowane przez JavaScript",
-      },
-      {
-        question: "Czym jest grid?",
-        answer:
-          "Grid to struktura, która pozwala na umieszczanie zawartości zarówno pionowo, jak i poziomo, w spójny i łatwy w zarządzaniu sposób. Grid obejmują dwa kluczowe elementy: wiersze i kolumny.Pozwala nam na układanie treści tak, by była ona czytelna dla użytkownika. Dzięki takim zabiegom, strona posiada bardziej estetyczny wygląd, jest przejrzysta i bardziej przyjazna dla użytkownika.",
+          "Aby zadeklarować zmienną, powinniśmy posłużyć się jednym ze słów kluczowych var, let lub const. Pod zmienne możemy podstawić dowolne wartości jakie będziemy chcieli. Zaleca się używanie let oraz const zamiast var. Dzięki nim nasze skrypty stają się bardziej optymalne pod względem zarządzania pamięcią, ale i potencjalnie unikamy niektórych problematycznych sytuacji. Zmienne o takiej samej nazwie,ale utworzone przy pomocy różnej wielkości liter to dwie różne zmienne. Nazwa zmiennej nie może zaczynać się od cyfry, nie może zawierać spacji, kropki, przecinka ani myślnika (można natomiast używać podkreślenia), nazwą zmiennej nie może być słowo kluczowe zarezerwowane przez JavaScript",
       },
       {
         question: "Czym jest debugowanie?",
         answer:
-          "Termin debugowanie może oznaczać wiele różnych rzeczy, ale najbardziej dosłownie oznacza usuwanie usterek z kodu. Teraz istnieje wiele sposobów, aby to zrobić. Na przykład możesz debugować, skanując kod w celu szukania literówek lub używając analizatora kodu. Kod można debugować przy użyciu profilera wydajności. Możesz też debugować za pomocą debugera. Debuger to bardzo wyspecjalizowane narzędzie dewelopera, które jest dołączane do uruchomionej aplikacji i umożliwia sprawdzanie kodu.",
+          "Termin ten oznacza usuwanie usterek z kodu. Na przykład możesz debugować, skanując kod w celu szukania literówek lub używając analizatora kodu. Kod można debugować przy użyciu profilera wydajności.  Debuger to bardzo wyspecjalizowane narzędzie dewelopera, które jest dołączane do uruchomionej aplikacji i umożliwia sprawdzanie kodu.",
       },
       {
         question: "Jak działa słowo kluczowe new?",
@@ -26,12 +21,11 @@ export default {
       {
         question: "Czym jest konstruktor?",
         answer:
-          "Konstruktor jest szczególną metodą, która służy tworzeniu i inicjalizowaniu obiektu zdefiniowanego słowem kluczowym class.Dozwolony jest tylko jeden konstruktor w danej klasie.Jeśli klasa posiada więcej niż jedno wystąpienie metody constructor, wygenerowany zostanie błąd SyntaxError.Aby wywołać konstruktor klasy bazowej, należy użyć słowa kluczowego super",
+          "Konstruktor jest szczególną metodą, która służy tworzeniu i inicjalizowaniu obiektu zdefiniowanego słowem kluczowym class. Dozwolony jest tylko jeden konstruktor w danej klasie. Jeśli klasa posiada więcej niż jedno wystąpienie metody constructor, wygenerowany zostanie błąd SyntaxError. Aby wywołać konstruktor klasy bazowej, należy użyć słowa kluczowego super",
       },
       {
         question: "Czym jest metoda GET?",
-        answer:
-          "Metoda GET służy do pobierania danych z interfejsu API. Chcemy, aby to żądanie API działało asynchronicznie, dlatego używamy funkcji opartej na obietnicy ze słowami kluczowymi async/await.",
+        answer: "Metoda GET służy do pobierania danych z interfejsu API.",
       },
       {
         question: "Różnica między deklaracją funkcji a deklaracją klasy?",
@@ -44,24 +38,24 @@ export default {
           "Słowo kluczowe super jest wykorzystywane do udostępniania i korzystania z funkcji klasy po której nasz obiekt dziedziczy.",
       },
       {
-        question: "Czym jest instrukcja try w api call?",
+        question: "Czym jest instrukcja try i caych w api call?",
         answer:
-          "instrukcja try pozwala zdefiniować blok kodu, który ma być testowany pod kątem błędów podczas wykonywania.Instrukcja catch umożliwia zdefiniowanie bloku kodu, który ma zostać wykonany, jeśli w bloku try wystąpi błąd.try służy do sprawdzania błędów, podczas gdy catch służy do obsługi błędu, jeśli taki wystąpi.",
+          "instrukcja try pozwala zdefiniować blok kodu, który ma być testowany pod kątem błędów podczas wykonywania. Instrukcja catch umożliwia zdefiniowanie bloku kodu, który ma zostać wykonany, jeśli w bloku try wystąpi błąd. Try służy do sprawdzania błędów, podczas gdy catch służy do obsługi błędu, jeśli taki wystąpi.",
       },
       {
-        question: "Czym jest funkcja some()?",
+        question: "Czym jest funkcja some?",
         answer:
-          "Metoda some() zwróci prawdę, jeżeli chociaż dla jednego elementu użyta funkcja zwróci prawdę.",
+          "Metoda some zwróci prawdę, jeżeli chociaż dla jednego elementu użyta funkcja zwróci prawdę.",
       },
       {
         question: "Czym jest funkcja reduce?",
         answer:
-          "Dzięki reduce możemy wykonywać operacje na tablicy redukując ją, w wyniku uzyskując jakiś wynik.Funkcja robi iterację po tablicy.W pierwszej iteracji pod pierwszy parametr wstawiany jest pierwszy element tablicy, a pod drugi kolejny.Funkcja zwraca jakiś wynik. W kolejnej iteracji podstawiany jest on pod pierwszy parametr, a do drugiego parametru trafia kolejny element w tablicy.",
+          "Dzięki reduce możemy wykonywać operacje na tablicy redukując ją, w wyniku uzyskując jakiś wynik. Funkcja robi iterację po tablicy. W pierwszej iteracji pod pierwszy parametr wstawiany jest pierwszy element tablicy, a pod drugi kolejny. Funkcja zwraca jakiś wynik. W kolejnej iteracji podstawiany jest on pod pierwszy parametr, a do drugiego parametru trafia kolejny element w tablicy.",
       },
       {
-        question: "Czym jest funkcja map()?",
+        question: "Czym jest funkcja map?",
         answer:
-          "Metoda map() robi pętlę po tablicy i każdorazowo zwraca nowy element tablicy.W wyniku po zakończeniu całej pętli zwracana jest nowa tablica z taką samą liczbą elementów:.",
+          "Metoda map robi pętlę po tablicy i każdorazowo zwraca nowy element tablicy.W wyniku po zakończeniu całej pętli zwracana jest nowa tablica z taką samą liczbą elementów.",
       },
       {
         question: "Czym są getery i setery",
@@ -81,7 +75,7 @@ export default {
       {
         question: "Czym jest obiekt w javascript?",
         answer:
-          "Obiekty JavaScript to kontenery dla nazwanych wartości, zwanych właściwościami i metodami. W JS prawie wszystko jest obiektem:Obiekty są zmiennymi, ale mogą zawierać wiele wartości. Wartości są zapisywane jako pary nazwa: wartość (nazwa i wartość oddzielone dwukropkiem). Pary te oddziela przecinek.",
+          "Obiekty JavaScript to kontenery dla nazwanych wartości, zwanych właściwościami i metodami. W JS prawie wszystko jest obiektem: Obiekty są zmiennymi, ale mogą zawierać wiele wartości.",
       },
       {
         question: "Jak możemy tworzyć obiekty w javascript?",
@@ -92,7 +86,7 @@ export default {
         question:
           "Czy JavaScript wspiera dziedziczenie? Jeżeli tak, to w jaki sposób?",
         answer:
-          "JavaScript w przeciwieństwie do wielu innych języków, np. Javy nie ma dedykowanego mechanizmu dla klas.W JS wszystko jest obiektem, nawet funkcje.W efekcie czego można zaimplementować mechanizm dziedziczenia, opierając się na prototypach.",
+          "JavaScript w przeciwieństwie do wielu innych języków, np. Javy nie ma dedykowanego mechanizmu dla klas.W JS wszystko jest obiektem, nawet funkcje. W efekcie czego można zaimplementować mechanizm dziedziczenia, opierając się na prototypach.",
       },
       {
         question: "Czym jest endpoint?",
@@ -102,32 +96,32 @@ export default {
       {
         question: "Co w javascript nie jest obiektem?",
         answer:
-          "Wszystkie wartości JavaScript, z wyjątkiem prymitywów, są obiektami.Prymitywna wartość jest to wartość, która ma właściwości lub metody. Prymitywny typ danych to dane, które posiadają pierwotną wartość.  JavaScript definiuje 5 typów prymitywnych typów danych:",
+          "Wszystkie wartości JavaScript, z wyjątkiem prymitywów, są obiektami.Prymitywna wartość jest to wartość, która ma właściwości lub metody. Prymitywny typ danych to dane, które posiadają pierwotną wartość.  JavaScript definiuje 5 prymitywnych typów danych:",
       },
       {
         question: "Jaka jest różnica między var,let a const?",
         answer:
-          "Pierwsza i najważniejsza różnica między let/const a var to zasięg zmiennych.W przypadku let/const zmienne mają zasięg blokowy, co w skrócie oznacza od klamry do klamry.Zmienne deklarowane za pomocą var mają natomiast zasięg funkcyjny, czyli ich zasięg określa ciało funkcji.Ostatnią różnicą jest to, że deklarując zmienną globalną var (poza ciałem funkcji),dodawana jest ona jako właściwość obiektu window.W przypadku let nic takiego się nie dzieje",
+          "Pierwsza i najważniejsza różnica między let/const a var to zasięg zmiennych. W przypadku let/const zmienne mają zasięg blokowy, co w skrócie oznacza od klamry do klamry. Zmienne deklarowane za pomocą var mają natomiast zasięg funkcyjny, czyli ich zasięg określa ciało funkcji.Ostatnią różnicą jest to, że deklarując zmienną globalną var (poza ciałem funkcji), dodawana jest ona jako właściwość obiektu window. W przypadku let nic takiego się nie dzieje",
       },
       {
         question: "Czym jest temporal dead zone?",
         answer:
-          "Miejsce przed deklaracją zmiennej let/const zwie się temporal dead zone, bo nie możemy odwoływać się do zmiennej, której jeszcze nie zadeklarowaliśmy.Dzięki takiemu zabiegowi nasz kod staje się bardziej logiczny",
+          "Miejsce przed deklaracją zmiennej let/const zwie się temporal dead zone, bo nie możemy odwoływać się do zmiennej, której jeszcze nie zadeklarowaliśmy. Dzięki takiemu zabiegowi nasz kod staje się bardziej logiczny",
       },
       {
         question: "Czym jest prototyp?",
         answer:
-          "Gdy tworzysz pojedynczy obiekt jakiegoś typu, dostaje on właściwość [[Prototype]], która wskazuje na jego obiekt prototyp. Na ten sam obiekt wskazuje też właściwość prototype w konstruktorze danego typu. Zasada ta tyczy się każdego typu danych:",
+          "Każdy obiekt posiada prywatną własność łączącą go z innym obiektem zwanym jego prototypem. Obiekt prototype posiada swój własny prototyp, i tak dalej aż obiekt osiągnie null jako swój prototyp. null nie ma prototypu i działa jak zakończenie łańcucha prototypów.",
       },
       {
         question: "Czym jest Hoisting??",
         answer:
-          "To wbudowany w JavaScript mechanizm wynoszący deklarację zmiennych bez ich inicjowania na początek funkcji.JavaScript lubi pomagać programiście. I tak na początek kodu wynoszone są deklaracje takie jak var / let/ const / function / class. Różnica jest w sposobie takiego wynoszenia.",
+          "To wbudowany w JavaScript mechanizm wynoszący deklarację zmiennych bez ich inicjowania na początek funkcji.Na początek kodu wynoszone są deklaracje takie jak var, let, const, function, class. Różnica jest w sposobie takiego wynoszenia.",
       },
       {
         question: "opisz inkrementacje i dekrementacje",
         answer:
-          "Operatory inkrementacji i dekrementacji, mogą występować przed zmienną lub po zmiennej.Gdy występuje przed zmienną, zwiększenie jej wartości nastąpi w danej instrukcji. Jeżeli występuje po zmiennej, zwiększona wartość wystąpi dopiero w kolejnej instrukcji",
+          "Operatory inkrementacji i dekrementacji, mogą występować przed zmienną lub po zmiennej. Gdy występuje przed zmienną, zwiększenie jej wartości nastąpi w danej instrukcji. Jeżeli występuje po zmiennej, zwiększona wartość wystąpi dopiero w kolejnej instrukcji",
       },
       {
         question: "Opisz operatory porównania",
@@ -141,22 +135,21 @@ export default {
       },
       {
         question: "Czym jest ternary operator?",
-        answer:
-          "Operator warunkowy (tak zwany ternary operator), to tak naprawdę skrócona wersja warunku if:",
+        answer: "Operator warunkowy to skrócona wersja warunku if",
       },
       {
         question: "Jaka jest różnica między map a forEach?",
         answer:
-          "W teori efekt działania jest taki sam.Map zwraca nam nową tablice natomiast forEach zwraca undefined.Map jest o wiele szybszy niż forEach(60%)",
+          "W teori efekt działania jest taki sam. Map zwraca nam nową tablice natomiast forEach zwraca undefined. Map jest o wiele szybszy niż forEach(60%)",
       },
       {
         question: "Jak wyczyścić tablice?",
         answer:
-          "Można to zrobić na wiele sposobów, zerując jej długość: arrayList.length = 0;. Możliwe jest także użycie arrayList = [], co sprawi, że wartością zmiennej arrayList będzie nowy obiekt Array. Należy tu jednak pamiętać, że drugą metodę można stosować tylko wtedy, gdy do pierwszego obiektu Array nie ma w kodzie żadnych referencji.",
+          "Można to zrobić na wiele sposobów, zerując jej długość: arrayList.length = 0. Możliwe jest także użycie arrayList = [], co sprawi, że wartością zmiennej arrayList będzie nowy obiekt Array. Należy tu jednak pamiętać, że drugą metodę można stosować tylko wtedy, gdy do pierwszego obiektu Array nie ma w kodzie żadnych referencji.",
       },
       {
         question: "Czym jest instrukcja switch?",
-        answer: `Instrukcja switch jest kolejnym sposobem tworzenia warunków - tym razem na zasadzie przyrównania wyniku do konkretnych wartości.Każdy przypadek kończy się słowem break, które kończy wykonywanie instrukcji switch.Jeżeli pominiemy to słowo, wtedy nawet przy pomyślnym przyrównaniu zostaną wykonane kolejne sprawdzenia, co często może powodować błędy.Dodatkowo instrukcja switch ma specjalny przypadek default który będzie wybierany, gdy wszystkie inne przypadki będą błędne (odpowiednik else w instrukcji if).Warto zaznaczyć, że instrukcja switch nie służy do testowania warunków, a do przyrównywania zmiennej do wartości:`,
+        answer: `Instrukcja switch jest kolejnym sposobem tworzenia warunków - tym razem na zasadzie przyrównania wyniku do konkretnych wartości. Każdy przypadek kończy się słowem break, które kończy wykonywanie instrukcji switch. Jeżeli pominiemy to słowo, wtedy nawet przy pomyślnym przyrównaniu zostaną wykonane kolejne sprawdzenia, co często może powodować błędy.Dodatkowo instrukcja switch ma specjalny przypadek default który będzie wybierany, gdy wszystkie inne przypadki będą błędne (odpowiednik else w instrukcji if). Warto zaznaczyć, że instrukcja switch nie służy do testowania warunków, a do przyrównywania zmiennej do wartości`,
       },
       {
         question: "Omów pętle for",
@@ -164,8 +157,7 @@ export default {
       },
       {
         question: "Zakres globalny i obiekt globalny",
-        answer: `Gdy uruchamiamy kod JavaScript, dla takiego kodu zawsze powstaje zakres globalny, a także obiekt globalny. Obiekt ten w przypadku przeglądarki nazywa się window. Zarówno w zakresie globalnym, jak i w obiekcie globalnym mogą powstawać zmienne, które mają zasięg globalny. Zasięg globalny oznacza, że
-        zmienne dostępne są w całym kodzie.`,
+        answer: `Gdy uruchamiamy kod JavaScript, dla takiego kodu zawsze powstaje zakres globalny, a także obiekt globalny. Obiekt ten w przypadku przeglądarki nazywa się window. Zarówno w zakresie globalnym, jak i w obiekcie globalnym mogą powstawać zmienne, które mają zasięg globalny. Zasięg globalny oznacza, że zmienne dostępne są w całym kodzie.`,
       },
       {
         question: "Czym jest dependency injection?",
@@ -174,7 +166,7 @@ export default {
       {
         question: "Jak działa pętle while",
         answer:
-          "Pętla while jest trochę inna i warunek zakończenia pętli jest na początku instrukcji:.Jeżeli warunek od razu jest fałszywy, nie zostanie wykonana żadna operacja. Oczywiście, jeżeli znowu wstawimy do instrukcji while stałą wartość true to otrzymamy nieskończoną pętlę.W pętli tego typu nie definiujemy ani początkowego licznika, ani nie definiujemy zmiany licznika.Musimy te rzeczy zrobić ręcznie.Pętlę while zazwyczaj stosuje się w sytuacjach, kiedy nie wiemy dokładnie, ile iteracji ma się wykonać.Wyobraź sobie, że chcesz wygenerować unikalny numer ID albo jakąś liczbę.Generujesz więc daną rzecz, następnie sprawdzasz czy wynik pasuje do założeń. Jak nie pasuje, generujesz dalej. I tak do skutku aż trafisz.",
+          "W Pętli while warunek zakończenia pętli jest na początku instrukcji.Jeżeli warunek od razu jest fałszywy, nie zostanie wykonana żadna operacja. Oczywiście, jeżeli znowu wstawimy do instrukcji while stałą wartość true to otrzymamy nieskończoną pętlę. W pętli tego typu nie definiujemy ani początkowego licznika, ani nie definiujemy zmiany licznika. Musimy te rzeczy zrobić ręcznie. Pętlę while zazwyczaj stosuje się w sytuacjach, kiedy nie wiemy dokładnie, ile iteracji ma się wykonać.Wyobraź sobie, że chcesz wygenerować unikalny numer ID albo jakąś liczbę.Generujesz więc daną rzecz, następnie sprawdzasz czy wynik pasuje do założeń. Jak nie pasuje, generujesz dalej. I tak do skutku aż trafisz.",
       },
       {
         question: "Jak działa pętla do while",
@@ -184,24 +176,18 @@ export default {
       {
         question: "Opisz typy danych w javascript",
         answer:
-          "Dane możemy podzielić na typy proste(prymitywne) oraz złożone.Do typów prymitywnych zaliczamy:Number,string,bigInt,boolean,undefined,null,symbol a do złożonych:Object (w tym Array, Map i Set).Kolejną charakterystyczną cechą rozróżniającą typy prymitywne od obiektów jest to, że te pierwsze w przeciwieństwie do obiektów są niemutowalne.Mutowalnymi określamy takie dane, którym w czasie ich istnienia możemy zmieniać części składowe:",
+          "Dane możemy podzielić na typy proste(prymitywne) oraz złożone. Do typów prymitywnych zaliczamy: Number, string, bigInt, boolean, undefined, null,symbol a do złożonych:Object (w tym Array, Map i Set).Kolejną charakterystyczną cechą rozróżniającą typy prymitywne od obiektów jest to, że te pierwsze w przeciwieństwie do obiektów są niemutowalne.Mutowalnymi określamy takie dane, którym w czasie ich istnienia możemy zmieniać części składowe",
       },
 
       {
         question: "Wyjaśnij funkcję parseInt",
         answer:
-          "Możesz zamienić String na liczbę całkowitą używając wbudowanej funkcji parseInt(). Funkcja ta przyjmuje podstawę do konwersji jako opcjonalny drugi argument, który zawsze należy podawać:",
+          "Możesz zamienić String na liczbę całkowitą używając wbudowanej funkcji parseInt. Funkcja ta przyjmuje podstawę do konwersji jako opcjonalny drugi argument, który zawsze należy podawać",
       },
       {
         question: "Jak działa fetch api?",
         answer:
           "Najpierw określamy ścieżkę (Fetch), po drugie żądamy danych z serwera (Request), po trzecie określamy typ treści (Body) i wreszcie uzyskujemy dostęp do danych (Response).",
-      },
-
-      {
-        question: "Czym jest tag time?",
-        answer:
-          "Time określa czytelną dla człowieka datę oraz godzinę. Można go również używać do kodowania daty i godziny w sposób możliwy do odczytu maszynowego, dzięki czemu przeglądarki mogą oferować dodawanie przypomnień do kalendarza.time pozwala również wyszukiwarkom na generowanie inteligentniejszych wyników wyszukiwania.",
       },
       {
         question: "Jak dodać element do tablicy?",
@@ -220,31 +206,31 @@ export default {
       },
       {
         question: "Jak sprawdzić czy zmienna jest tablicą?",
-        answer: `Żeby sprawdzić czy dana zmienna jest tablicą, powinniśmy skorzystać z metody Array.isArray(). Wynika to z faktu, że tablice w Javascript także są obiektami i typeof zwraca nam "object"`,
+        answer: `Żeby sprawdzić czy dana zmienna jest tablicą, powinniśmy skorzystać z metody Array.isArray(). Wynika to z faktu, że tablice w Javascript także są obiektami i typeof zwraca nam object`,
       },
       {
         question: "Opisz działanie setTimeout",
-        answer: `Wywołuje funkcję po określonym czasie opóźnienia.setTimeout oczekuje dwóch argumentów, jednej referencji do funkcji wywołania zwrotnego oraz opóźnienia w milisekundach. setTimeout może również akceptować argumenty po opóźnieniu, a dodatkowe wartości zostaną przekazane do funkcji wywołania zwrotnego. Timer można wyłączyć przy użyciu metody clearTimeout.`,
+        answer: `Wywołuje funkcję po określonym czasie opóźnienia. setTimeout oczekuje dwóch argumentów, jednej referencji do funkcji wywołania zwrotnego oraz opóźnienia w milisekundach. setTimeout może również akceptować argumenty po opóźnieniu, a dodatkowe wartości zostaną przekazane do funkcji wywołania zwrotnego. Timer można wyłączyć przy użyciu metody clearTimeout.`,
       },
       {
         question: "Do czego służy setInterval?",
         answer:
-          "Ustawia opóźnienie do cyklicznego wywoływania określonej funkcji.Możliwe jest anulowanie wykonania fukcji poprzez wywołanie window.clearInterval().Jeżeli funkcja ma zostać wykonana tylko raz a nie być wykonywana cyklicznie to należy skorzystać z  window.setTimeout().",
+          "Ustawia opóźnienie do cyklicznego wywoływania określonej funkcji.Możliwe jest anulowanie wykonania fukcji poprzez wywołanie window.clearInterval(). Jeżeli funkcja ma zostać wykonana tylko raz a nie być wykonywana cyklicznie to należy skorzystać z setTimeout.",
       },
       {
         question: "Opisz pętle forEach",
         answer:
-          "Wykonuje dostarczoną funkcję jeden raz na każdy element tablicy.Funkcja callback wywoływana jest jedynie dla indeksów tablicy, którym została przypisana wartość; nie jest wywoływana dla indeksów, które zostały usunięte i tych, którym nigdy nie została przypisana żadna wartość.Funkcja callback jest wywoływana z trzema argumentami: wartością elementu, jego indeksem i obiektem tablicy, w którym się ten element zawiera.",
+          "Wykonuje dostarczoną funkcję jeden raz na każdy element tablicy.Funkcja callback wywoływana jest jedynie dla indeksów tablicy, którym została przypisana wartość; nie jest wywoływana dla indeksów, które zostały usunięte i tych, którym nigdy nie została przypisana, żadna wartość.Funkcja callback jest wywoływana z trzema argumentami: wartością elementu, jego indeksem i obiektem tablicy, w którym się ten element zawiera.",
       },
       {
         question: "Do czego służy array.indexOf?",
         answer:
-          "Zwraca pierwszy,najmniejszy indeks elementu w tablicy równego podanej wartości lub -1, gdy nie znaleziono takiego elementu.",
+          "Zwraca pierwszy, najmniejszy indeks elementu w tablicy równego podanej wartości lub -1, gdy nie znaleziono takiego elementu.",
       },
       {
         question: "Jaka jest różnica między null a undefined?",
         answer:
-          "undefined – coś nie zostało zainicjalizowane, null – coś jest aktualnie niedostępne.W JavaScript undefined oznacza, że zmienna została zadeklarowana ale jeszcze nie ma żadnej przypisanej wartości.Null może być reprezentowane jako wartość, bezwartości, inaczej mówiąc możemy przypisać do zmiennej temp pudełko z cyferką 5, albo samo pudełko, samo pudełko jest nullem.Pomimo tego, że operator typeof zwraca nam typ object, zmienna z wartością null nic nie reprezentuje.to że null zwraca typ object jest błędem z czasów powstawania języka.Gdy trafimy na błąd związany z undefined w konsoli przeglądarki będziemy wiedzieć, że o czymś zapomnieliśmy, odwołujemy się do czegoś co nie istnieje.Wartość null i undefined reprezentują puste, nieokreślone wartości. Jeżeli porównamy oba typy przez potrójny znak równości i wypiszemy do konsoli, zobaczymy wartość false",
+          "undefined – coś nie zostało zainicjalizowane, null – coś jest aktualnie niedostępne. W JavaScript undefined oznacza, że zmienna została zadeklarowana ale jeszcze nie ma żadnej przypisanej wartości. Null może być reprezentowane jako wartość, bezwartości, inaczej mówiąc możemy przypisać do zmiennej temp pudełko z cyferką 5, albo samo pudełko, samo pudełko jest nullem.Pomimo tego, że operator typeof zwraca nam typ object, zmienna z wartością null nic nie reprezentuje.to że null zwraca typ object jest błędem z czasów powstawania języka.Gdy trafimy na błąd związany z undefined w konsoli przeglądarki będziemy wiedzieć, że o czymś zapomnieliśmy, odwołujemy się do czegoś co nie istnieje.Wartość null i undefined reprezentują puste, nieokreślone wartości. Jeżeli porównamy oba typy przez potrójny znak równości i wypiszemy do konsoli, zobaczymy wartość false",
       },
       {
         question: "Co to są funkcje?",
@@ -265,7 +251,7 @@ export default {
       {
         question: "Czym jest IIFE?",
         answer:
-          "Immediately Invoked Function Expression — Funkcja natychmiastowa jest wywoływana automatycznie bezpośrednio po jej odczytaniu.Uzyskujemy ją przez deklarację funkcji anonimowej (bez nazwy) w nawiasach okrągłych, przez co taka konstrukcja jest traktowana jako wyrażenie. Po wyrażeniu dodajemy kolejne dwa nawiasy, przez co jest ono automatycznie wywoływane.Dzięki wykorzystaniu funkcji natychmiastowych ograniczamy zakres (scope) zmiennych tylko do tej metody.Zmniejsza to tym samym potencjalne konflikty z innymi bibliotekami.",
+          "Immediately Invoked Function Expression — Funkcja natychmiastowa jest wywoływana automatycznie bezpośrednio po jej odczytaniu. Uzyskujemy ją przez deklarację funkcji anonimowej (bez nazwy) w nawiasach okrągłych, przez co taka konstrukcja jest traktowana jako wyrażenie. Po wyrażeniu dodajemy kolejne dwa nawiasy, przez co jest ono automatycznie wywoływane.Dzięki wykorzystaniu funkcji natychmiastowych ograniczamy zakres (scope) zmiennych tylko do tej metody.Zmniejsza to tym samym potencjalne konflikty z innymi bibliotekami.",
       },
       {
         question: "Co to jest “callback hell” i jak można się go pozbyć?",
@@ -283,11 +269,6 @@ export default {
           "Obydwa słowa kluczowe wiążą się z obietnicami. Pierwsze z nich - async - wstawione przed deklaracją funkcji sprawi, że taka funkcja zwróci obietnicę. Drugie z nich - await - może wystąpić tylko wewnątrz funkcji poprzedzonej przez async i powinno się znaleźć przed wykonaniem funkcji asynchronicznej. Sprawi, że wykonanie nie przejdzie dalej, dopóki obietnica nie zostanie wykonana. Dzięki temu asynchroniczny kod przypomina swoim zachowaniem kod synchroniczny.",
       },
       {
-        question: "Czym są async/await?",
-        answer:
-          "Obydwa słowa kluczowe wiążą się z obietnicami.Async - wstawione przed deklaracją funkcji sprawi, że taka funkcja zwróci obietnicę.Await może wystąpić tylko wewnątrz funkcji poprzedzonej przez async i powinno się znaleźć przed wykonaniem funkcji asynchronicznej. Sprawi, że wykonanie nie przejdzie dalej, dopóki obietnica nie zostanie wykonana. Dzięki temu asynchroniczny kod przypomina swoim zachowaniem kod synchroniczny.",
-      },
-      {
         question: "Czym jest currying i w jakich sytuacjach się go stosuje?",
         answer:
           "Currying to technika pracy z funkcjami, polegająca na ich transformacji w następujący sposób: f(a, b, c) do f(a)(b)(c). Dzięki temu de facto rozbija funkcję mającą wiele parametrów do wielu funkcji mającej po jednym parametrze.",
@@ -300,7 +281,7 @@ export default {
       {
         question: "Czym jest npm?",
         answer:
-          "Rozwinięciem skrótu NPM jest Node Package Manager. NPM pełni dwie funkcje. Pierwszą z nich to repozytorium otwartych i darmowych bibliotek, frameworków, narzędzi i wszelkiego rodzaju projektów, które są uruchamiane za pomocą Node.js.Jeżeli chcemy zainstalować jakąś paczkę z repozytorium NPM musimy użyć konsoli systemowej. I to jest właśnie druga funkcja NPM, jest to narzędzie linii komend. Za pomocą prostej komendy npm install nazwa_paczki możemy pobrać dowolną paczkę kodu i użyć jej w naszej aplikacji.",
+          "Rozwinięciem skrótu NPM jest Node Package Manager. NPM pełni dwie funkcje. Pierwszą z nich to repozytorium otwartych i darmowych bibliotek, frameworków, narzędzi i wszelkiego rodzaju projektów, które są uruchamiane za pomocą Node.js. Jeżeli chcemy zainstalować jakąś paczkę z repozytorium NPM musimy użyć konsoli systemowej. I to jest właśnie druga funkcja NPM, jest to narzędzie linii komend. Za pomocą prostej komendy npm install nazwa_paczki możemy pobrać dowolną paczkę kodu i użyć jej w naszej aplikacji.",
       },
       {
         question: "czym jest funkcja wyższego rzędu?",
@@ -315,17 +296,13 @@ export default {
       {
         question: "Jakie są zasady korzystania z rest api?",
         answer:
-          "Wszystkie żądania wysyłane do interfejsu API dotyczące tego samego zasobu powinny wyglądać tak samo.Interfejs API REST powinien zapewniać przypisanie jednego elementu danych, takiego jak nazwa lub adres e-mail użytkownika, do jednego identyfikatora URl.Rozdzielenie klienta i serwera - Podczas projektowania interfejsu API REST aplikacje klienta i serwera muszą być całkowicie niezależne od siebie. Aplikacja kliencka powinna dysponować wyłącznie informacją o identyfikatorze URI żądanego zasobu. Nie może ona wchodzić w interakcje z aplikacją serwera w żaden inny sposób. Podobnie aplikacja serwera nie powinna modyfikować aplikacji klienckiej, a jedynie przekazywać jej żądane dane za pośrednictwem protokołu HTTP.",
-        secondAnswer:
-          "Bezstanowość. Interfejsy API REST są bezstanowe. To oznacza, że każde żądanie musi zawierać wszystkie informacje niezbędne do jego przetworzenia. Innymi słowy, interfejsy API REST nie wymagają żadnych sesji po stronie serwera. Aplikacje serwera nie mogą przechowywać żadnych danych związanych z żądaniem klienta.Możliwość buforowania. Gdy to możliwe, powinna być dostępna opcja buforowania zasobów po stronie klienta lub serwera. Odpowiedzi serwera muszą również zawierać informację o tym, czy buforowanie dostarczonego zasobu jest dozwolone. Celem jest zwiększenie wydajności po stronie klienta przy jednoczesnym zwiększeniu skalowalności po stronie serwera.",
-        thirdPartOfAnswer:
-          "Warstwowa architektura systemu. W interfejsach API REST wywołania i odpowiedzi przechodzą przez różne warstwy. Z reguły nie należy zakładać, że aplikacje klienta i serwera łączą się ze sobą bezpośrednio. Pętla komunikacyjna może obejmować pewną liczbę elementów pośredniczących. Interfejsy API REST muszą być zaprojektowane w taki sposób, aby ani klient, ani serwer nie miał informacji o tym, czy komunikuje się z aplikacją końcową, czy elementem pośredniczącym.Kod na żądanie (opcjonalnie). Interfejsy API REST zwykle wysyłają zasoby statyczne, ale w niektórych przypadkach odpowiedzi mogą również zawierać kod wykonywalny (np. aplety Java). W takich przypadkach kod powinien być uruchamiany tylko na żądanie.",
+          "Interfejs API REST powinien zapewniać przypisanie jednego elementu danych, takiego jak nazwa lub adres e-mail użytkownika, do jednego identyfikatora URl. Rozdzielenie klienta i serwera - Podczas projektowania interfejsu API REST aplikacje klienta i serwera muszą być całkowicie niezależne od siebie. Aplikacja kliencka powinna dysponować wyłącznie informacją o identyfikatorze URI żądanego zasobu. Nie może ona wchodzić w interakcje z aplikacją serwera w żaden inny sposób. Podobnie aplikacja serwera nie powinna modyfikować aplikacji klienckiej, a jedynie przekazywać jej żądane dane za pośrednictwem protokołu HTTP.Bezstanowość. Interfejsy API REST są bezstanowe. To oznacza, że każde żądanie musi zawierać wszystkie informacje niezbędne do jego przetworzenia.",
       },
       {
         question:
           "Jakie są zalety i wady rozszerzania wbudowanych obiektów JavaScript?",
         answer:
-          "Rozszerzanie wbudowanych obiektów uważane jest złą praktykę. W ten sposób zmieniamy zachowanie obiektów. I o ile mowa o obiekcie, z którego będzie działał tylko konkretny kod, to problem nie jest duży, ale w przypadku zewnętrznego kodu, który wykorzysta rozszerzony obiekt, nic nie będzie działać. Dobrą praktyką jest korzystanie ze wbudowanych metod. Dodawanie własnych metod do obiektów może być problematyczne także ze względu na interferencje z bibliotekami, które same mogą rozszerzać obiekty o te same metody. Wówczas dojdzie do konfliktu, nadpisania, i kod po prostu nie będzie działał. Zaletą rozszerzania wbudowanych typów może być natomiast to, że można zbudować w ten sposób polyfill, przez co kod będzie działał również na starszym oprogramowaniu, przeglądarkach nieobsługujących nowszych wersji JavaScript.",
+          "Rozszerzanie wbudowanych obiektów uważane jest za złą praktykę. W ten sposób zmieniamy zachowanie obiektów. I o ile mowa o obiekcie, z którego będzie działał tylko konkretny kod, to problem nie jest duży, ale w przypadku zewnętrznego kodu, który wykorzysta rozszerzony obiekt, nic nie będzie działać. Dobrą praktyką jest korzystanie ze wbudowanych metod. Dodawanie własnych metod do obiektów może być problematyczne także ze względu na interferencje z bibliotekami, które same mogą rozszerzać obiekty o te same metody. Wówczas dojdzie do konfliktu, nadpisania, i kod po prostu nie będzie działał. Zaletą rozszerzania wbudowanych typów może być natomiast to, że można zbudować w ten sposób polyfill, przez co kod będzie działał również na starszym oprogramowaniu, przeglądarkach nieobsługujących nowszych wersji JavaScript.",
       },
       {
         question: "Czym jest obietnica(promise)?",
@@ -384,7 +361,7 @@ export default {
       {
         question: "czym jest redundancja danych?",
         answer:
-          "Redundancja (łac. redundantia „powódź, nadmiar, zbytek”) – nadmiarowość w stosunku do tego, co konieczne lub zwykłe. Określenie może odnosić się zarówno do nadmiaru zbędnego lub szkodliwego, niecelowo zużywającego zasoby, jak i do pożądanego zabezpieczenia na wypadek uszkodzenia części systemu.",
+          "Redundancja – nadmiarowość w stosunku do tego, co konieczne lub zwykłe. Określenie może odnosić się zarówno do nadmiaru zbędnego lub szkodliwego, niecelowo zużywającego zasoby, jak i do pożądanego zabezpieczenia na wypadek uszkodzenia części systemu.",
       },
       {
         question: "Czym jest transpilacja?",
@@ -394,22 +371,22 @@ export default {
       {
         question: "Czym jest typ bigINt?",
         answer:
-          "Typ ten powstał po to aby operować na bardzo dużych liczbach, z którymi nie radzi sobie typ number. Mowa tu o liczbach większych niż 2^53. Wtedy typ number traci swoją precyzję i dlatego powstał typ bigint.deklaruje się go używając litery n na końcu liczby:",
+          "Typ ten powstał po to aby operować na bardzo dużych liczbach, z którymi nie radzi sobie typ number. Mowa tu o liczbach większych niż 2^53. Wtedy typ number traci swoją precyzję i dlatego powstał typ bigint. Deklaruje się go używając litery n na końcu liczby",
       },
       {
         question: "Co nowego pojawiło się es6?",
         answer:
-          "Klasy definiowane za pomocą Class,Zmienne let oraz const oraz nowe podejście do zakresu (scope) zmiennych.Łańcuchy szablonowe plus możliwość tworzenia np. wieloliniowych String,Przypisywanie wartości z użyciem Destructuring,Mechanizm Promises zapewniający nowe podejście do programowanie asynchronicznego,Arrow functions – funkcje definiowanie z użyciem strzałki czyli =>,Natywne moduły,Nowe metody String, Math, Array czy Number",
+          "Klasy definiowane za pomocą Class, zmienne let oraz const oraz nowe podejście do zakresu (scope) zmiennych.Łańcuchy szablonowe plus możliwość tworzenia np. wieloliniowych String, przypisywanie wartości z użyciem Destructuring,Mechanizm Promises zapewniający nowe podejście do programowania asynchronicznego,Arrow functions – funkcje definiowanie z użyciem strzałki czyli =>,Natywne moduły,Nowe metody String, Math, Array czy Number",
       },
       {
         question: "różnice pomiędzy == a ===?",
         answer:
-          "Podwójny operator sprawdza wartość,natomiast potrójny wartość i typ.Potrójny operator sprawdza czy wartości po obu stronach są identyczne.W praktyce wykorzystuje się to często przy funkcjach które zwracają raz wartość liczbową a raz wartość boolean.jeżeli mamy '2′ == 2 to JS zmieni typ pierwszego parametru na number. Jeśli pierwszy jest null a drugi undefined, zwróć true. ",
+          "Podwójny operator sprawdza wartość,natomiast potrójny wartość i typ.Potrójny operator sprawdza czy wartości po obu stronach są identyczne.W praktyce wykorzystuje się to często przy funkcjach które zwracają raz wartość liczbową a raz wartość boolean. jeżeli mamy '2′ == 2 to JS zmieni typ pierwszego parametru na number. Jeśli pierwszy jest null a drugi undefined, zwróci true. ",
       },
       {
         question: "Jak działa async?",
         answer:
-          "Aby JavaScript nie blokował drzewa renderowania można wykorzystać regułę async. Atrybut async powoduje, że kod JS jest wykonywany niezależnie od etapu ładowania się strony i nie wpływa na ścieżkę renderowania. Atrybut ten może być z powodzeniem zastosowany w przypadku skryptów do:analityki internetowej,dodatkowych widgetów do strony.",
+          "Aby JavaScript nie blokował drzewa renderowania można wykorzystać regułę async. Atrybut async powoduje, że kod JS jest wykonywany niezależnie od etapu ładowania się strony i nie wpływa na ścieżkę renderowania. Atrybut ten może być z powodzeniem zastosowany w przypadku skryptów do analityki internetowej,dodatkowych widgetów do strony.",
       },
       {
         question: "opisz atrybut defer?",
@@ -419,7 +396,7 @@ export default {
       {
         question: "różnice między splice vs slice",
         answer:
-          "Obie potrafią usuwać wybrane elementy, które następnie zwracają.splice – modyfikuje oryginalną tablicę.slice – tworzy i modyfikuje kopię oryginalnej tablicy.Sprawdźmy metodę slice. Widzimy, że po każdym jej wywołaniu uzyskujemy ten sam wynik. No jasne – w końcu za każdym razem metoda tworzy sobie nową kopię oryginalnej tablicy i na niej pracuje.Z kolei metoda splice pracuje cały czas na tej samej tablicy. W naszym przykładzie najpierw wycina pierwszych dwóch bohaterów, zostają Quasimodo oraz Stich. Potem wycina kolejnych dwóch, nie zostaje już nikt, tablica jest pusta.   Co ważne – metoda splice potrafi również dodawać elementy do tablicy.",
+          "Obie metody potrafią usuwać wybrane elementy, które następnie zwracają.splice – modyfikuje oryginalną tablicę.slice – tworzy i modyfikuje kopię oryginalnej tablicy.W przypadku slice po każdym jej wywołaniu uzyskujemy ten sam wynik ponieważ za każdym razem metoda tworzy sobie nową kopię oryginalnej tablicy i na niej pracuje. Z kolei metoda splice pracuje cały czas na tej samej tablicy. W naszym przykładzie najpierw wycina pierwszych dwóch bohaterów, zostają Quasimodo oraz Stich. Potem wycina kolejnych dwóch, nie zostaje już nikt, tablica jest pusta.   Co ważne – metoda splice potrafi również dodawać elementy do tablicy.",
       },
       {
         question: "czym jest class?",
@@ -429,52 +406,43 @@ export default {
       {
         question: "Czym jest symbol w javascript?",
         answer:
-          "Funkcja Symbol zwraca wartość typu symbol, Każdy symbol zwrócony przez Symbol jest unikalny.Symbol powinien być użyty jako identyfikator własności obiektu, został zaprojektowany jedynie w tym celu.typ Symbol jest typem prostym",
+          "Funkcja Symbol zwraca wartość typu symbol, Każdy symbol zwrócony przez Symbol jest unikalny. Symbol powinien być użyty jako identyfikator własności obiektu, został zaprojektowany jedynie w tym celu.typ Symbol jest typem prostym",
       },
       {
         question: "Opisz słowo kluczowe this",
         answer:
-          "Można powiedzieć, że jest to referencja do obiektu, który wywołał daną funkcję.w zakresie globalnym “this” jest po prostu referencją do obiektu ‘window’ i mogą być w zasadzie stosowane zamiennie.",
+          "Można powiedzieć, że jest to referencja do obiektu, który wywołał daną funkcję. W zakresie globalnym “this” jest po prostu referencją do obiektu window i mogą być w zasadzie stosowane zamiennie.",
       },
       {
         question: "Czym jest funkcja strzałkowa?",
         answer:
-          "Funkcja anonimowa to taka funkcja, która nie ma swojej nazwy. Funkcje takie wykorzystywane są jako funkcje zwrotne, które przekazujemy do innych funkcji.Przy skracaniu zapisu obowiązuje nas kilka dość prostych zasad. Jeżeli funkcja wymaga tylko jednego parametru, wtedy mogę (ale nie muszę!) pominąć nawiasy:Jeżeli parametrów jest więcej, lub nie ma żadnego, wtedy nawiasy muszą zostać:Jeżeli funkcja ma tylko jedną instrukcję, mogę pominąć też klamry:A dodatkowo jeżeli jedyną instrukcją jest instrukcja return, także i jej możemy się pozbyć:Natomiast jeżeli funkcja ma więcej instrukcji - klamry muszą pozostać:Korzystając z funkcji strzałkowych należy pamiętać, że nie tworzą one własnego kontekstu this. W związku z tym nie mogą być wykorzystywane jako konstruktor nowego obiektu.",
-        secondAnswer:
-          "Dodatkowymi cechami, które odróżniają je od klasycznych funkcji są:Funkcje strzałkowe nie mają wiązania this i super. Dlatego nie powinniśmy ich używać do definiowania metod w obiektach i klasachNie posiadają właściwości arguments i new.targetUżycie dla nich call, apply i bind nie da oczekiwanych rezultatów. Wynika to właśnie z faktu, że nie ma tutaj wiązania thisNie można ich używać jako konstruktoryNie wolno używać w nich yield",
+          "Funkcja strzałkowa ma krótszą składnię niż zwykłe wyrażenie funkcji oraz nie posiada własnego this, argumentów, super, tudzież właściwości new.target. Taki sposób wyrażenia funkcji najlepiej wykorzystać przy tworzeniu funkcji bez metod, ponadto nie mogą zostać one użyte jako konstruktory.",
+      
       },
       {
         question: "Czym jest wyrażenie funkcyjne?",
         answer:
-          "Zmienne w JavaScripcie mogą przechowywać funkcję.wyrażeniem funkcyjnym  jest podstawieniem funkcji pod zmienną.Wyrażenie i definicja różnią się od siebie nie tylko sposobem zapisu, ale także tym, jak taki kod jest interpretowany przez przeglądarkę.Funkcja stworzona za pomocą deklaracji jest od razu dostępna dla całego skryptu. Wynika to z działania mechanizmu hoistingu,który przenosi taką deklarację na początek danego zakresu kodu (skryptu lub funkcji)W przypadku wyrażeń funkcyjnych takie odwołanie skończy się błędem.",
-        secondAnswer:
-          "Istnieje jeszcze jedna różnica między obydwoma zapisami. Przy stosowaniu deklaracji, dana funkcja zapisywana jest jako klucz obiektu Window (to samo ma miejsce, gdy tworzymy globalną zmienną za pomocą zmiennej var). W przypadku wyrażenia poprzedzonego słowem const/let nie ma to miejsca.",
+          "Zmienne w JavaScripcie mogą przechowywać funkcję.wyrażeniem funkcyjnym  jest podstawienie funkcji pod zmienną.Wyrażenie i definicja różnią się od siebie nie tylko sposobem zapisu, ale także tym, jak taki kod jest interpretowany przez przeglądarkę. Funkcja stworzona za pomocą deklaracji jest od razu dostępna dla całego skryptu. Wynika to z działania mechanizmu hoistingu,który przenosi taką deklarację na początek danego zakresu kodu (skryptu lub funkcji).W przypadku wyrażeń funkcyjnych takie odwołanie skończy się błędem.",
       },
       {
         question: "Opisz działanie return",
         answer:
-          "Każda funkcja zwraca jakąś wartość. Domyślnie jest nią undefined.Instrukcja return zwraca wartość i przerywa dalsze działanie danej funkcji.W wielu edytorach kod leżący za return będzie miał przytłumione kolory, co symbolizuje, że taki kod nigdy sie nie wykona. Instrukcji return może być wiele dla jednej funkcji. Zawsze jednak wykonana zostanie tylko jedna. Instrukcja return może zwracać dowolną wartość.",
+          "Każda funkcja zwraca jakąś wartość. Domyślnie jest nią undefined.Instrukcja return zwraca wartość i przerywa dalsze działanie danej funkcji. W wielu edytorach kod leżący za return będzie miał przytłumione kolory, co symbolizuje, że taki kod nigdy sie nie wykona. Instrukcji return może być wiele dla jednej funkcji. Zawsze jednak wykonana zostanie tylko jedna. Instrukcja return może zwracać dowolną wartość.",
       },
       {
         question: "Opisz pracę z plikiem psd",
         answer:
-          "PSD, to projekt graficzny bazujacy na programie Adobe Photoshop.Plik ten dostarcza wszystkich niezbędnych grafik, z jakich składa się strona, jak i informacji pozwalających na jej zakodowanie. Dzięki takiej wizualizacji Web Developer jest w stanie przenieść projekt na kod HTML. Profesjonalne przygotowanie takiego projektu zapobiega problemom, które uniemożliwiają pracę, bądź wydłużają jej czas. ",
-        secondAnswer:
-          "Każdy projekt powinien składać się z uporządkowanych warstw zawierających po jednym elemencie (ikonka, grafika, kształt, tekst). Osadzenie na oddzielnych warstwach (z dodatkowym opisem) znacząco przyśpiesza pracę podczas ustalania atrybutów, jak i wycinania potrzebnych grafik do zamieszczenia na stronie.Jeśli dany element posiada dodatkowy stan (np. rozwinięcie menu po najechaniu myszką albo kliknięcie przycisk) powinien być uwzględniony w projekcie. Developer musi wiedzieć, że coś będzie interaktywne, aby móc to zakodować.",
+          "Psd to projekt graficzny bazujacy na programie Adobe Photoshop. Plik ten dostarcza wszystkich niezbędnych grafik, z jakich składa się strona, jak i informacji pozwalających na jej zakodowanie. Dzięki takiej wizualizacji Web Developer jest w stanie przenieść projekt na kod Html. ",
       },
       {
         question: "Na czym polega destrukturyzacja?",
         answer:
-          "Umożliwia przypisanie własności tablicy lub obiektu do zmiennych z wykorzystaniem składni przypominającej składnię tablic czy literałów obiektowych. Może być ona niezwykle zwięzła, a jednocześnie znacznie czytelniejsza od tradycyjnego kodu służącego do uzyskania dostępu do własności.",
-        secondAnswer:
-          "Nie korzystając z przypisania destrukturyzującego, dostęp do pierwszych trzech elementów tablicy możemy uzyskać w następujący sposób:var first = jakaśTamTablica[0]  var second = jakaśTamTablica[1]; var third = jakaśTamTablica[2];Jeśli natomiast zastosujemy przypisanie destrukturyzujące, ten sam kod można wyrazić w bardziej zwięzły i czytelny sposób: var [first, second, third] = jakaśTamTablica;",
+          "Umożliwia przypisanie własności tablicy lub obiektu do zmiennych z wykorzystaniem składni przypominającej składnię tablic czy literałów obiektowych.",
       },
       {
         question: "jakie są różnice między arrow function a regular function?",
         answer:
-          "Funkcja strzałkowa ma krótszą składnię niż zwykłe wyrażenie funkcji oraz nie posiada własnego this, argumentów, super, tudzież właściwości new.target. Taki sposób wyrażenia funkcji najlepiej wykorzystać przy tworzeniu funkcji bez metod, ponadto nie mogą zostać one użyte jako konstruktory.Dwa czynniki, które wpłynęły na wprowadzenie funkcji strzałkowych: krótszy zapis funkcji i brak wiązania this.",
-        secondAnswer:
-          "Przed wprowadzeniem funkcji strzałkowych każda nowa funkcja deniniowała swoją własną wartość this (nowy obiekt w przypadku konstruktora, undefined w wywołaniach funkcji strict mode, obiekt bazowy jeśli funkcja jest wywoływana jako `metoda obiektowa`, itp.). Okazało się to niekorzystne przy obiektowym stylu programowania.Funkcja strzałkowa nie posiada własnego this; używana jest wartość this kontekstu wykonania. W związku z tym, w poniższym kodzie, this użyty w funkcji, który jest przekazywany do setInterval, ma taką samą wartość jak this w funkcji otaczającej:",
+          "Funkcja strzałkowa ma krótszą składnię niż zwykłe wyrażenie funkcji oraz nie posiada własnego this, argumentów, super, tudzież właściwości new.target. Taki sposób wyrażenia funkcji najlepiej wykorzystać przy tworzeniu funkcji bez metod, ponadto nie mogą zostać one użyte jako konstruktory.",
       },
     ],
   },
