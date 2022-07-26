@@ -16,11 +16,11 @@
               <v-expand-transition>
                 <div v-if="hover" class="transition-fast-in-fast-out">
                   <v-btn x-small absolute icon class="mt-1" @click="removeCategory(firstColumn)">
-                    <v-icon>mdi-close</v-icon>
+                    <v-icon >mdi-close</v-icon>
                   </v-btn>
                 </div>
               </v-expand-transition>
-
+             
               <v-card-text> </v-card-text>
             </v-card>
           </v-hover>
@@ -35,6 +35,7 @@ import { mapActions, mapState } from "vuex";
 export default {
   computed: {
     ...mapState("firstColumn", ["firstColumn"]),
+    // eslint-disable-next-line vue/return-in-computed-property
     width() {
       switch (this.$vuetify.breakpoint.name) {
         case "md":
@@ -48,7 +49,7 @@ export default {
   },
   methods: {
     removeCategory(firstColumn) {
-      this.firstColumn.splice(this.firstColumn.indexOf(firstColumn), 1);
+      this.firstColumn.splice(this.firstColumn.indexOf(firstColumn), 1, "empty slot");
     },
     ...mapActions("questions", [
       "randomHtmlQuestion",

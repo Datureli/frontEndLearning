@@ -14,6 +14,7 @@
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
+            style="text-align:justify; word-spacing:-2px;"
             class="white--text  text-h6 text-wrap"
             v-show="disable"
             v-text="generalQuestions.answer"
