@@ -3,8 +3,8 @@
     <v-list color="transparent">
       <v-list-item-group active-class="green--text">
         <v-list-item
-          v-for="(firstColumn, index) in firstColumn"
-          :key="index"
+          v-for="firstColumn in firstColumn"
+          :key="firstColumn"
           :to="firstColumn.link"
         >
           <v-icon>{{ firstColumn.icon }}</v-icon>
