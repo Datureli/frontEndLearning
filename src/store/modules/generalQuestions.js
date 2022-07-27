@@ -11,12 +11,7 @@ export default {
       {
         question: "Czym jest useStrict?",
         answer:
-          "Use strict to zakres reguł, które muszą zostać przestrzegane w kodzie. Dzięki temu każdy programista pracujący na kodzie, który oparty jest o ten mechanizm, musi podobnie tworzyć oprogramowanie, aby nie powstawały błędy. Na przykład deklarując zmienną bez kluczowego słowa var, zadziała dla kodu, który nie ma mechanizmu use strict, jeżeli spróbujemy uruchomić kod, w którym mamy deklarację zmiennej bez słowa kluczowego var i z użyciem mechanizmu use strict wtedy aplikacja zgłosi błąd.Dzięki use stricts:Wyłapujemy pewne typowe błędy,wpadki programisty,zwracam nam błąd gdy podejmowanie są działa uznane za niebezpieczne.Mechanizm use strict pozwala na nałożenie pewnych reguł w JavaScript, dzięki którym kod będzie spójny i nie będzie powielać błędów.",
-      },
-      {
-        question: "Czym jest defaultProps?",
-        answer:
-          "defaultProps pozwala nam na ustawienie propsów,ustawienie wartości domyślnej dla propsów",
+          "Use strict to zakres reguł, które muszą zostać przestrzegane w kodzie. Dzięki temu każdy programista pracujący na kodzie, który oparty jest o ten mechanizm, musi podobnie tworzyć oprogramowanie, aby nie powstawały błędy. Na przykład deklarując zmienną bez kluczowego słowa var, zadziała dla kodu, który nie ma mechanizmu use strict, jeżeli spróbujemy uruchomić kod, w którym mamy deklarację zmiennej bez słowa kluczowego var i z użyciem mechanizmu use strict wtedy aplikacja zgłosi błąd.Dzięki use stricts:Wyłapujemy pewne typowe błędy,wpadki programisty,zwracam nam błąd gdy podejmowanie są działa uznane za niebezpieczne. Mechanizm use strict pozwala na nałożenie pewnych reguł w JavaScript, dzięki którym kod będzie spójny i nie będzie powielać błędów.",
       },
       {
         question: "Czym jest izomorfizm",
@@ -26,17 +21,17 @@ export default {
       {
         question: "Czym jest docker?",
         answer:
-          "Docker to platforma Open Source służąca do tworzenia i wdrażania aplikacji kontenerowych oraz zarządzania nimi. Umożliwia programistom pakowanie aplikacji w kontenery — standardowe wykonywalne komponenty łączące kod źródłowy aplikacji z zależnościami i bibliotekami systemu operacyjnego wymaganymi do uruchomienia tego kodu w dowolnym środowisku.  Kontenery upraszczają dostarczanie rozproszonych aplikacji i stają się coraz popularniejsze w miarę jak organizacje coraz częściej tworzą rozwiązania z myślą o chmurze i wykorzystują hybrydowe środowiska",
+          "Docker to platforma Open Source służąca do tworzenia i wdrażania aplikacji kontenerowych oraz zarządzania nimi. Umożliwia programistom pakowanie aplikacji w kontenery — standardowe wykonywalne komponenty łączące kod źródłowy aplikacji z zależnościami i bibliotekami systemu operacyjnego wymaganymi do uruchomienia tego kodu w dowolnym środowisku. Kontenery upraszczają dostarczanie rozproszonych aplikacji i stają się coraz popularniejsze w miarę jak organizacje coraz częściej tworzą rozwiązania z myślą o chmurze i wykorzystują hybrydowe środowiska",
       },
       {
         question: "Czym jest domena?",
         answer:
-          "Domena (adres internetowy) to unikalna nazwa w Internecie, pod którą można umieścić serwis www.Aby strona www była dostępna w internecie,potrzebujemy serwera na który będzie wskazywać nasza unikalna nazwa.Domeny opierają się na systemie DNS, czyli Domain Name System. Jest to sieć rozproszonych po świecie serwerów. Dzięki DNS możemy używać zrozumiałych nazw witryn zamiast skomplikowanych adresów IP.Każdą z domen obsługują przynajmniej dwa serwery DNS, aby w przypadku awarii jednego z nich uniknąć sytuacji przestoju w działaniu strony internetowej.",
+          "Domena (adres internetowy) to unikalna nazwa w Internecie, pod którą można umieścić serwis www. Aby strona www była dostępna w internecie, potrzebujemy serwera na który będzie wskazywać nasza unikalna nazwa. Domeny opierają się na systemie DNS, czyli Domain Name System. Jest to sieć rozproszonych po świecie serwerów. Dzięki DNS możemy używać zrozumiałych nazw witryn zamiast skomplikowanych adresów IP. Każdą z domen obsługują przynajmniej dwa serwery DNS, aby w przypadku awarii jednego z nich uniknąć sytuacji przestoju w działaniu strony internetowej.",
       },
       {
         question: "Jak działa DNS?",
         answer:
-          "DNS (Domain Name System) to protokół, którego główna funkcja polega na tłumaczeniu łatwych do zapamiętania przez człowieka nazw domen na zrozumiałe dla komputerów dane liczbowe.Działanie systemu DNS przebiega zgodnie z następującymi etapami. Użytkownik wpisuje w polu adresu przeglądarki określoną nazwę domeny, system za pośrednictwem przeglądarki nawiązuje komunikację z lokalnym serwerem DNS, przesyłając prośbę o przetłumaczenie nazwy domeny na adres IP.Lokalny serwer przesyła zapytanie o numer IP do jednego z 13 głównych serwerów na świecie.Serwer główny przekazuje informację na temat lokalizacji (adresu IP) serwera, na którym przechowywane są strony internetowe z określoną końcówką domenyerwer DNS dostarcza w informacji zwrotnej do komputera użytkownika (do przeglądarki stron internetowych) numer odpowiadający konkretnej domenie.6. Komputer nawiązuje połączenie z adresem IP, co umożliwia wyświetlenie zawartości strony www.Wszystko dzieje się w bardzo krótkim czasie, dlatego działanie serwera DNS jest dla nas niezauważalne.",
+          "DNS (Domain Name System) to protokół, którego główna funkcja polega na tłumaczeniu łatwych do zapamiętania przez człowieka nazw domen na zrozumiałe dla komputerów dane liczbowe. Działanie systemu DNS przebiega zgodnie z następującymi etapami. Użytkownik wpisuje w polu adresu przeglądarki określoną nazwę domeny, system za pośrednictwem przeglądarki nawiązuje komunikację z lokalnym serwerem DNS, przesyłając prośbę o przetłumaczenie nazwy domeny na adres IP.Lokalny serwer przesyła zapytanie o numer IP do jednego z 13 głównych serwerów na świecie. Serwer główny przekazuje informację na temat lokalizacji (adresu IP) serwera, na którym przechowywane są strony internetowe z określoną końcówką domenyerwer DNS dostarcza w informacji zwrotnej do komputera użytkownika (do przeglądarki stron internetowych) numer odpowiadający konkretnej domenie.6. Komputer nawiązuje połączenie z adresem IP, co umożliwia wyświetlenie zawartości strony www.Wszystko dzieje się w bardzo krótkim czasie, dlatego działanie serwera DNS jest dla nas niezauważalne.",
       },
       {
         question: "Co wpływa na szybkość odpowiedzi serwera DNS?",
