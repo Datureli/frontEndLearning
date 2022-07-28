@@ -8,19 +8,37 @@
           :to="firstColumn.link"
         >
           <v-icon>{{ firstColumn.icon }}</v-icon>
+          <p
+            style="width: 300px;"
+            class="text-h5 mx-auto justify-center"
+            v-if="firstColumn.title == null"
+          >
+            empty slot
+          </p>
           <v-list-item-title class="ml-5">{{
             firstColumn.title
           }}</v-list-item-title>
+
           <v-hover v-slot="{ hover }">
-            <v-card color="transparent" outlined>
+            <v-card
+              color="transparent"
+              v-if="firstColumn.title != null"
+              outlined
+            >
               <v-expand-transition>
                 <div v-if="hover" class="transition-fast-in-fast-out">
-                  <v-btn x-small absolute icon class="mt-1" @click="removeCategory(firstColumn)">
-                    <v-icon >mdi-close</v-icon>
+                  <v-btn
+                    x-small
+                    absolute
+                    icon
+                    class="mt-1"
+                    @click="removeCategory(firstColumn)"
+                  >
+                    <v-icon>mdi-close</v-icon>
                   </v-btn>
                 </div>
               </v-expand-transition>
-             
+
               <v-card-text> </v-card-text>
             </v-card>
           </v-hover>
@@ -49,7 +67,11 @@ export default {
   },
   methods: {
     removeCategory(firstColumn) {
-      this.firstColumn.splice(this.firstColumn.indexOf(firstColumn), 1, "empty slot");
+      this.firstColumn.splice(
+        this.firstColumn.indexOf(firstColumn),
+        1,
+        "empty slot"
+      );
     },
     ...mapActions("questions", [
       "randomHtmlQuestion",
