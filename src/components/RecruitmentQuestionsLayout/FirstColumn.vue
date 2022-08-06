@@ -79,6 +79,7 @@
 
 <script>
 import { mapActions, mapState } from "vuex";
+import SlotVue from '../materials/Slot.vue';
 export default {
   data() {
     return {
@@ -104,7 +105,7 @@ export default {
       this.firstColumn.splice(
         this.firstColumn.indexOf(firstColumn),
         1,
-        "empty slot"
+        SlotVue
       );
     },
     ...mapActions("questions", [

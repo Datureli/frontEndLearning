@@ -31,11 +31,32 @@ export default {
       },
       {
         question: `Czym jest innerHtml?`,
-        answer: `Właściwość innerHTML umożliwia odczyt i ustawianie html, jaki jest we wnętrzu danego elementu:`,
+        answer: `Właściwość innerHTML umożliwia odczyt i ustawianie html, jaki jest we wnętrzu danego elementu`,
+      },
+      {
+        question: `rodzaje list w html`,
+        answer: `Wyróżniamy listę uporządkowaną - Ol, która wyświetla elementy listy w sposób uporządkowany czyli numeryczny lub alfabetyczny. Lista nieuporządkowana - UL to lista która wyświetla elementy w sposób nieuporządkowany w formacie pubktowym lub dowolnym innym formacie. Lista definicji - dl, porządkuje elementy w taki sposób, w jaki są ułożone w słowniku.`,
+      },
+      {
+        question: `Do czego służą metatagi?`,
+        answer: `Metatagi w HTML są używane przez programistę do informowania przeglądarki o opisie strony, autorze szablonu, zestawie znaków, słowach kluczowych i wielu innych.
+        Metatagi są używane do optymalizacji wyszukiwarek, aby poinformować wyszukiwarkę o zawartości strony.`,
+      },
+      {
+        question: `Jak sprawdzić wydajność swojego kodu?`,
+        answer: `Google PageSpeed Insights tool, Przeglądarka Chrome (zakładki Audits, Performance), W3C validator do sprawdzania poprawności kodu HTML i CSS, caniuse.com do sprawdzenia zgodności funkcji z przeglądarką.`,
+      },
+      {
+        question: `Jakie są sposoby na zmniejszenie czasu ładowania strony?`,
+        answer: `Optymalizacja zdjęc i filmów na stronie.Optymalizacja plików blokujących renderowanie np. minifikacja plików. Przeniesienie skryptów z nagłówka do stopki lub stosowanie asynchronicznego ładowania skryptów `,
       },
       {
         question: `Czym jest html canvas?`,
         answer: `element języka HTML wprowadzony w HTML5 pozwalający na dynamiczne, skryptowe renderowanie kształtów i obrazów bitmapowych. Dzięki wprowadzeniu obiektu canvas możliwe stało się tworzenie dynamicznych dwu i trójwymiarowych animacji czy gier działających w przeglądarkach bez dodatkowych wtyczek.`,
+      },
+      {
+        question: `Czym jest atrybut srcset?`,
+        answer: `Atrybut ten możemy dodać do elementów img oraz source w html.Atrybut srcset wykorzystany wraz z elementem img pozwala nam określić adres obrazka, który chcemy, aby był reprezentowany przez dany element img w określonej sytuacji.Atrybut srcset wykorzystany wraz z elementem source pozwala nam określić adres obrazka, który chcemy, aby był reprezentowany przez dany element source w określonej sytuacji`,
       },
       {
         question: `Które przeglądarki wspierają HTML5?`,

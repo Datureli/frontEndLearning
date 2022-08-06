@@ -381,7 +381,7 @@ export default {
       {
         question: "różnice pomiędzy == a ===?",
         answer:
-          "Podwójny operator sprawdza wartość,natomiast potrójny wartość i typ.Potrójny operator sprawdza czy wartości po obu stronach są identyczne.W praktyce wykorzystuje się to często przy funkcjach które zwracają raz wartość liczbową a raz wartość boolean. jeżeli mamy '2′ == 2 to JS zmieni typ pierwszego parametru na number. Jeśli pierwszy jest null a drugi undefined, zwróci true. ",
+          "== to operator równości, czyli zwraca prawdę, jeżeli wartości są sobie równe. Natomiast operator identyczności ("===") zwraca prawdę, jeżeli wartości są sobie równe, a zmienne są tego samego typu.W praktyce wykorzystuje się to często przy funkcjach które zwracają raz wartość liczbową a raz wartość boolean. jeżeli mamy '2' == 2 to JS zmieni typ pierwszego parametru na number. Jeśli pierwszy jest null a drugi undefined, zwróci true. ",
       },
       {
         question: "Jak działa async?",
