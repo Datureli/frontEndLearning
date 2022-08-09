@@ -20,13 +20,13 @@ export default {
 <style>
 html,
 body {
-  height: 100%;
+  height: auto;
+  width: 100%;
   overflow: hidden;
 }
 #app {
   font-family: Georgia, Helvetica, Arial, sans-serif;
   text-align: center;
-  background: #000000;
 }
 
 .darkGradient {

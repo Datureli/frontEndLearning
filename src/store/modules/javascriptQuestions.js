@@ -289,6 +289,16 @@ export default {
           "Funkcja wyższego rzędu to funkcja, która przyjmuje inne funkcje jako parametry lub też taka, której wynik również jest funkcją. Przykładowa funkcja wyższego rzędu to map służąca do zwracania listy z wynikami funkcji dla wszystkich elementów z danej listy.",
       },
       {
+        question: "Opisz PromiseAll?",
+        answer:
+          "jeśli chcemy obsłużyć więcej niż jedną obietnicę naraz, a nie zależy nam na kolejności w jakiej obietnice te zostaną rozwiązane, wtedy możemy posłużyć się metodą Promise.all([…]).Jako parametr przyjmuje ona w tablicy, egzemplarze obietnic. Jeśli wszystkie obietnice zostaną spełnione, Promise.all() zwraca obiekt Promise wraz z tablicą wartości zwróconych ze wszystkich spełnionych obietnic. Kolejność wartości zwróconych w tablicy jest taka sama jak kolejność obiektów Promise przekazanych do Promise.all().",
+      },
+      {
+        question: "Opisz Promise.race",
+        answer:
+          "W odróżnieniu od metody Promise.all(), która czekała do momentu rozwiązania wszystkich obietnic, metoda Promise.race() zwróci pierwszą zakończoną obietnicę.",
+      },
+      {
         question: "instrukcja break i continue",
         answer:
           "W instrukcjach iteracyjnych słowo kluczowe break bezwarunkowo przerywa wykonwyanie się pętli. Jest to proste rozwiązanie i ma zastosowanie w sytuacji, gdy dalsze powtarzanie instrukcji w pętli, nie są już potrzebne.Słowo kluczowe continue, powoduje wznowienie działania pętli i zaprzestanie wykonywania dalszych instrukcji dla danego powtórzenia. Stosuje się je w przypadku, gdy w danej iteracji pętli nie ma konieczności wykonania instrukcje, które występują po słowie kluczowym continue, ale znajdują się w bloku danej pętli. Popatrzmy na przykład:",
@@ -307,7 +317,7 @@ export default {
       {
         question: "Czym jest obietnica(promise)?",
         answer:
-          "Obiekty Promise zostały wprowadzone od ECMAScript 6 jako natywne wsparcie dla operacji asynchronicznych Są tak nazwane, bo wykonywana funkcja asynchroniczna musi złożyć obietnicę dostarczenia w przyszłości wartości. Przetwarzanie metody asynchronicznej może zakończyć się powodzeniem – wtedy wywołujemy metodę resolve() lub porażką – wtedy metodę reject();Na obiekcie Promise zwróconym przez metodę możemy wywołać dwie metody:then  odpowiedzialną za przetwarzanie udanego wywołania;  catch odpowiedzialną za obsługę błędów.",
+          "bietnice wprowadzono, aby ułatwić pracę z kodem asynchronicznym, zapobiec tworzeniu piekła wywołań zwrotnych oraz uczynić kod bardziej czytelnym i łatwiejszym w utrzymaniu. Ich podstawowymi zaletami są: lepsza kontrola w zakresie synchronizacji wywołań (brak wyścigów), obsługa błędów oraz lepsza czytelność.Obiekty Promise zostały wprowadzone od ECMAScript 6 jako natywne wsparcie dla operacji asynchronicznych Są tak nazwane, bo wykonywana funkcja asynchroniczna musi złożyć obietnicę dostarczenia w przyszłości wartości.Obietnica może znajdować się w jednym z trzech stanów:spełniona/rozwiązana (fulfilled/resolved) – gdy powiązane z nią zadanie zwraca żądaną wartość,odrzucona (rejected) – gdy zadanie nie zwraca wartości, np. z powodu wyjątku lub zwrócona wartość jest nieprawidłowa,oczekująca (pending) – to stan od rozpoczęcia żądania do otrzymania wyniku. Przetwarzanie metody asynchronicznej może zakończyć się powodzeniem – wtedy wywołujemy metodę resolve() lub porażką – wtedy metodę reject();Na obiekcie Promise zwróconym przez metodę możemy wywołać dwie metody:then  odpowiedzialną za przetwarzanie udanego wywołania;  catch odpowiedzialną za obsługę błędów.",
       },
       {
         question: "Czym jest pętla zdarzeń",

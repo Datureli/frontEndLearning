@@ -12,7 +12,7 @@
           <v-list-item-title class="ml-5">{{
             firstColumn.title
           }}</v-list-item-title>
-          <div class="text-center" v-if="firstColumn.title == null">
+          <div class="text-center mr-10" v-if="firstColumn.title == null">
             <v-dialog v-model="dialog" width="500" persistent>
               <template v-slot:activator="{ on, attrs }">
                 <v-btn color="green lighten-2" dark v-bind="attrs" v-on="on">
