@@ -6,12 +6,12 @@
       @keydown.esc="dialog = false"
       transition="dialog-bottom-transition"
     >
+    
       <template v-slot:activator="{ on, attrs }">
         <v-btn id="login" color="transparent" dark v-bind="attrs" v-on="on">
           {{ !loggedIn ? "login" : "my account" }}
         </v-btn>
       </template>
-
       <v-card color="darkGradient">
         <v-btn x-large style="right: 1%" icon dark @click="closeModal" absolute>
           <v-icon>mdi-close</v-icon>
@@ -141,7 +141,9 @@ export default {
     },
     closeModal() {
       this.dialog = false;
-      this.$router.push({ path: "/about" });
+      if ( this.$route.name == 'Login' ) {
+        this.$router.push({ path: '/about'})
+      }
     },
     isUserLogin() {
       this.username.length > 0 && this.password.length > 0

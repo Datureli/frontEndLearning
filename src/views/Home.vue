@@ -1,6 +1,6 @@
 <template>
   <v-container fluid style="background: black; height: 100vh">
-    <v-lazy fill-height>
+    <v-lazy>
       <v-img
         max-width="500"
         class="mx-auto"
