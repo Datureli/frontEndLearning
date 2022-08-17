@@ -13,7 +13,7 @@
             firstColumn.title
           }}</v-list-item-title>
           <div class="text-center mr-10" v-if="firstColumn.title == null">
-            <v-dialog v-model="dialog" width="500" persistent>
+            <v-dialog v-model="dialog" width="500">
               <template v-slot:activator="{ on, attrs }">
                 <v-btn color="green lighten-2" dark v-bind="attrs" v-on="on">
                   empty slot
@@ -21,19 +21,22 @@
               </template>
 
               <v-card>
-                <v-card-title class="text-h5 grey lighten-2">
-                  Wybierz kategorię
-                </v-card-title>
-
+                <div class="d-flex justify-space-between text-h5 grey lighten-2">
+                  <v-card-title>
+                    Wybierz kategorię
+                  </v-card-title>
+                  <v-btn class="mr-5 mt-3">
+                    Upload
+                  </v-btn>
+                </div>
+                    <v-card-title>
+                    Najczęściej uzywane
+                  </v-card-title>
                 <v-card-text>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                 
                 </v-card-text>
 
                 <v-divider></v-divider>
@@ -79,7 +82,7 @@
 
 <script>
 import { mapActions, mapState } from "vuex";
-import SlotVue from '../materials/Slot.vue';
+import SlotVue from "../materials/Slot.vue";
 export default {
   data() {
     return {
