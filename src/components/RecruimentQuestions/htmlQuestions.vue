@@ -1,5 +1,5 @@
 <template>
-  <v-carousel hide-delimiters @change="page = 1" class="mt-1">
+  <v-carousel hide-delimiters>
     <v-carousel-item
       v-for="(htmlQuestions, index) in htmlQuestions"
       :key="index"
@@ -14,37 +14,19 @@
           ></v-list-item-subtitle>
 
           <v-list-item-subtitle
-                      style="text-align:justify;
-word-spacing:-2px; "
-            class="white--text text-h6 text-wrap"
+   class="white--text text-justify text-h6 text-wrap"
             v-show="disable"
-            v-text="
-              page === 1
-                ? htmlQuestions.answer
-                : page === 2
-                ? htmlQuestions.secondAnswer
-                : htmlQuestions.thirdPartOfAnswer
-            "
+            v-text="htmlQuestions.answer"
           ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
-        <v-pagination
-          style="position: absolute; bottom: 18%; right:36%"
-          v-model="page"
-          :length="3"
-        ></v-pagination>
   </v-carousel>
 </template>
 
 <script>
 import { mapState } from "vuex";
 export default {
-  props: {
-    page: {
-      type: Number,
-    },
-  },
   computed: {
     ...mapState(["disable"]),
     ...mapState("htmlQuestions", ["htmlQuestions"]),
