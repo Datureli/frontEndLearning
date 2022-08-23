@@ -29,7 +29,7 @@ import { mapState } from "vuex";
 export default {
   computed: {
     ...mapState(["disable"]),
-    ...mapState("htmlQuestions", ["htmlQuestions"]),
+    ...mapState("htmlQuestions", ["htmlQuestions"] ),
   },
 };
 </script>
