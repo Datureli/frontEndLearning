@@ -1,6 +1,6 @@
 ## Table of contents
 * [General info](#general-info)
-* [Features](#Features && steps for reproduction)
+* [Features](#Features)
 * [Technologies](#technologies)
 * [Status](#status)
 * [Setup](#setup)
