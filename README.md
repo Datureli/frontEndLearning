@@ -1,13 +1,13 @@
 ## Table of contents
 * [General info](#general-info)
-* [Features](#features)
+* [Features](#Features && steps for reproduction)
 * [Technologies](#technologies)
 * [Status](#status)
 * [Setup](#setup)
 
 ## General info
 At the beginning, this application was created to learn front-end recruitment questions, then it was extended to learn English.
-Thanks to this application, you can easily recall the most important issues in the field of the front end
+thanks to this application you will remember the most important front-end topics.
 
 ## Features && steps for reproduction
 * Learn front-end topics by learning questions - To start learning, click on the navigation hidden under the hamburger menu in the upper left corner and then press "recruitment questions".
