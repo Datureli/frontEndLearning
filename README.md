@@ -6,10 +6,11 @@
 * [Setup](#setup)
 
 ## General info
-this project is an advanced front-end learning platform,preparing for recruitment interviews
+At the beginning, this application was created to learn front-end recruitment questions, then it was extended to learn English.
+Thanks to this application, you can easily recall the most important issues in the field of the front end
 
 ## Features
-* Learn front-end topics by learning questions
+* Learn front-end topics by learning questions - 
 * randomQuestion function
 * disable answers 
 * Learn english IT words
