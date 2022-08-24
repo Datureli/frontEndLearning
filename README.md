@@ -9,7 +9,7 @@
 At the beginning, this application was created to learn front-end recruitment questions, then it was extended to learn English.
 thanks to this application you will remember the most important front-end topics.
 
-## Features && steps for reproduction
+## Features
 * Learn front-end topics by learning questions - To start learning, click on the navigation hidden under the hamburger menu in the upper left corner and then press "recruitment questions".
 * category selection - on the left there is a column with categories, To switch between categories, left click on the title, in the middle there will be questions and an answer to them with arrows allowing you to change the questions.
 * below the question container, several icons will appear which, when clicked, trigger specific functions
