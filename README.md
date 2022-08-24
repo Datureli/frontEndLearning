@@ -18,6 +18,7 @@ thanks to this application you will remember the most important front-end topics
   - play music icon - the next three buttons allow you to listen to music while learning, the first and third buttons are used to change to the previous and next       music track, the button in the middle with the note icon is used to start and pause the music.
   - hearth icon - this function adds a question to the favorites list, this feature is under development at the moment, At the moment, when hovering over, the        	  function shows a tooltip that displays "You need to be login".
   - disable answers -  the function disables answers to questions.
+
 * Learn english IT words - to go to this section go to navigation by pressing hamburger menu and select "Angielski"
 * the English section is divided into four categories:
   - describe yourself - this function randomizes sentences in English from the board.
@@ -41,6 +42,7 @@ working on
 To run this project, you need to clone this project and install it locally using npm:
 
 ```
+$ git clone https://github.com/Datureli/frontEndLearning.git
 $ cd frontEndLearning
 $ npm install
 $ npm run serve
