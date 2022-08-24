@@ -22,8 +22,8 @@ thanks to this application you will remember the most important front-end topics
 * Learn English IT words - to go to this section, go to navigation by pressing hamburger menu and select "Angielski"
 * The English section is divided into four categories:
   - Describe yourself - this function randomizes sentences in English from the board.
-  - Learning words - displays words in English with their translation into Polish. After the user has gone through the ten questions, a modal window will appear     	 prompting the user to repeat the words. In the future, after clicking "yes", a test will appear to check the user's knowledge.
-  - Industry dictionary - this feature is under development, this function will connect to the dictionary API and display the words with their translation.
+  - Learning words - displays words in English with their translation into Polish. After the user has gone through the ten questions, a modal window will appear,     	 prompting the user to repeat the words. In the future, after clicking "yes", a test will appear to check the user's knowledge.
+  - Industry dictionary - this feature is under development. This function will connect to the dictionary API and display the words with their translation.
   - Flashcards - just flashcards, after clicking on the selected flashcard, it shows the answer to the question. Contains a randomizing function.
 
 
