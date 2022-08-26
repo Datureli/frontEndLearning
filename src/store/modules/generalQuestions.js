@@ -14,6 +14,11 @@ export default {
           "Use strict to zakres reguł, które muszą zostać przestrzegane w kodzie. Dzięki temu każdy programista pracujący na kodzie, który oparty jest o ten mechanizm, musi podobnie tworzyć oprogramowanie, aby nie powstawały błędy. Na przykład deklarując zmienną bez kluczowego słowa var, zadziała dla kodu, który nie ma mechanizmu use strict, jeżeli spróbujemy uruchomić kod, w którym mamy deklarację zmiennej bez słowa kluczowego var i z użyciem mechanizmu use strict wtedy aplikacja zgłosi błąd.Dzięki use stricts:Wyłapujemy pewne typowe błędy,wpadki programisty,zwracam nam błąd gdy podejmowanie są działa uznane za niebezpieczne. Mechanizm use strict pozwala na nałożenie pewnych reguł w JavaScript, dzięki którym kod będzie spójny i nie będzie powielać błędów.",
       },
       {
+        question: "Opisz generatory stron statycznych",
+        answer:
+          "Skupiają się na jednym zadaniu: stworzeniu plików HTML/CSS/JS przetwarzając dynamiczną zawartość na wynik będący stroną statyczną. Wszystko bez budowy architektury serwerowej.",
+      },
+      {
         question: "Czym jest izomorfizm",
         answer:
           "Aplikacja izomorficzna to taka, która dzieli prawie cały swój kod między serwerem i klientem.",

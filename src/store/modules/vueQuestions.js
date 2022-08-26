@@ -201,7 +201,7 @@ export default {
       {
         question: "Czemu nie powinniśmy używać v-if razem z v-for?",
         answer:
-          "Nie powinniśmy używać razem tych dyrektyw ponieważ v-for posiada większy priorytet niż v-if",
+          "Nie powinniśmy używać razem tych dyrektyw ponieważ v-if posiada większy priorytet niż v-for",
       },
       {
         question: "Czym jest updated hook?",
