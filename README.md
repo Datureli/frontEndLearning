@@ -33,7 +33,6 @@ Project is created with:
 * vuetify ^2.6.1
 * vue-router ^3.5.3
 * vuex ^3.6.2
-* axios ^0.24.0
 
 ## Status
 working on
