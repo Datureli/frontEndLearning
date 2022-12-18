@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="mx-auto" style="background: orange; height: 521px;">
+  <v-container fluid class="mx-auto"  min-height="100vh" height="auto" style="background: orange;">
     <v-select
       v-model="select"
       class="pa-5 mt-0 mx-auto"

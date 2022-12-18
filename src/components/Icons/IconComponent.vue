@@ -18,8 +18,6 @@ import {
   MusicComponent,
   HeartIcon,
   DisableComponent,
-  ChangeTheme,
-  TranslateIcon,
 } from "../Icons";
 
 export default {
@@ -29,8 +27,6 @@ export default {
     RandomQuestionLoop,
     HeartIcon,
     DisableComponent,
-    ChangeTheme,
-    TranslateIcon,
   },
 };
 </script>

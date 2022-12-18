@@ -1,10 +1,12 @@
 <template>
   <div>
     <v-card
-      width="750"
-      height="370"
-      class="text-h6 mx-auto pa-5"
+      max-width="750"
+      min-height="100vh"
+      height="100%"
+      class="text-h6 text-left mx-auto pa-7"
       color="orange"
+      elevation="0"
     >
       <div
         v-for="englishSentence in englishSentences.slice(0, 5)"

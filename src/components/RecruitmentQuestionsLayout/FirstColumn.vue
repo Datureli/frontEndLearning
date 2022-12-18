@@ -7,9 +7,9 @@
           :key="firstColumn"
           :to="firstColumn.link"
         >
-          <v-icon>{{ firstColumn.icon }}</v-icon>
+          <v-icon large :color="firstColumn.color">{{ firstColumn.icon }}</v-icon>
 
-          <v-list-item-title class="ml-5">{{
+          <v-list-item-title class="ml-5 text-h6">{{
             firstColumn.title
           }}</v-list-item-title>
           <div class="text-center mr-10" v-if="firstColumn.title == null">

@@ -11,12 +11,32 @@ export default {
       {
         question: "Czym jest jsx?",
         answer:
-          "Tworzy elementy reactowe,które po renderowaniu są przetwarzane na węzły document object model",
+          "Tworzy elementy reactowe,które po renderowaniu są przetwarzane na węzły document object model. Kompilator JSX, np. Babel parsuje kod JavaScript (JSX), znajduje wszystkie odwołania do tagów html i zastępuje je wywołaniem funkcji React.createElement lub w przypadku, gdy nazwa tagu jest z dużej litery, kompilator używa zmiennej komponentu.",
       },
       {
         question: "Komponenty funkcyjne w react",
         answer:
           "Cechy charakterystyczne komponentów funkcyjnych: otrzymują dane od rodziców za pośrednictwem obiektu prop  są pozbawione stan  zajmują się prezentacją a nie logiką aplikacji",
+      },
+      {
+        question: "Co to jest Flux i jaka jest różnica między Flux a Redux",
+        answer:
+          "Flux jest to architektura aplikacji zaproponowana przez Facebook-a, twórcy frameworka React.js. Flux nie jest to konkretna biblioteka ale architektura, której głównym elementem jest funkcja Dispatcher, A całość używa architektury podobnej do Publish/Subscribe lub EventEmitter. Flux korzysta z jedno kierunkowego przepływu danych w celu utrzymywania stanu aplikacji. I ile Flux jest to nazwa architektury to Redux jest to już biblioteka, która implementuje ją tą.",
+      },
+      {
+        question: "Cykl życia komponentów w react",
+        answer:
+          "Komponent w React może być w 3 stanach. Montowania - komponent jest dodany do drzewa DOM wywoływane są funkcje:constructor()componentWillMount()render()componentDidMount()Update-u - zmiana właściwości (ang. props) powoduje, że powinien zmienić swój stan wywoływane są funkcje:componentWillReceiveProps()shouldComponentUpdate()componentWillUpdate()render()componentDidUpdate()Odmontowywania - komponent jest usuwany z drzewa DOM wywoływana jest funkcja:componentWillUnmount() Dodatkowo jest jeszcze jedna funkcja dodana w React 16 - componentDidCatch, który wywołuje się, gdy w funkcji render zostanie wyrzucony wyjątek, niestety nie działa razem z funkcjami obsługi zdarzeń." ,
+      },
+      {
+        question: "Co to są komponenty wyższego rzędu?",
+        answer:
+          "Komponenty wyższego rzędu (ang. Higher Order Component - HOC), zasada jest podobna do funkcji wyższego rzędu. Komponenty tego typu do funkcje, które przyjmują komponenty jako argument oraz zwracają nowy argument. Przykładem może być funkcja connect z biblioteki Redux.",
+      },
+      {
+        question: "Co to są render props?",
+        answer:
+          "Render props są to właściwości komponentu, które zawierają funkcje, która otrzymuje stan komponentu lub jakieś inne dane i zwraca kod jsx:",
       },
       {
         question: "Komponenty klasowe w react",
@@ -56,6 +76,23 @@ export default {
           "Czym jest hook? Hook jest specjalną funkcją, która pozwala „zahaczyć się” w wewnętrzne mechanizmy Reacta. Na przykład useState jest hookiem, który pozwala korzystać ze stanu w komponencie funkcyjnym. W kolejnych rozdziałach poznamy inne hooki.Hooki nie działają w klasach. Ale możesz używać ich zamiast klas.",
       },
       {
+        question: "VDOM?",
+        answer:
+          "wirtualna reprezentacja DOM, czyli modelu obiektowego strony. W celu optymalizacji ilości operacji zmiany HTML React przeprowadza wszystkie operacja na wirtualnym modelu - aktualizuje go w oparciu o przetworzone dane i porównuje z poprzednią wersją, po czym oblicza jakie elementy HTML należy dodać, usunąć lub zmienić."
+      },
+      {
+        question: "Czym jest babel?",
+        answer:
+          "Babel to tak zwany transpilator (lub kompilator), czyli narzędzie pozwalające na przekształcanie kodu źródłowego napisanego w jednym języku na inny. Dzięki odpowiednim presetom oraz pluginom możemy już dziś pisać aplikacje wykorzystując standard ECMAScript 2017 i transpilować go do wersji ECMAScript 5, którą obsługuje nawet Internet Explorer 8. To również dzięki Babel jesteśmy w stanie używać składni JSX. Należy pamiętać, iż o ile babel pozwala nam na dodanie funkcjonalności, która nie jest jeszcze oficjalnym standardem ECMAScript, o tyle musimy liczyć się z tym, że używana w tym wypadku przez nas funkcjonalność (lub jej składnia) może ulec zmianie lub zostać ostatecznie odrzucona."
+      },
+
+      {
+        question: "Czym jest webpack?",
+        answer:
+          "Webpack pełni wiele funkcji, ale jego podstawową jest przetwarzanie wszelkich zasobów naszej aplikacji, takich jak plik JS, grafiki, arkusze CSS w celu przygotowania tzw. bundli czyli pakietów, które mogą odczytywać przeglądarki. Moduły npm w dużej większości składają się z dziesiątek plików, setek zależności, różnych wersji etc. - przeglądarki nie są jeszcze gotowe na obsłużenie tak dostarczanych aplikacji. Dzięki odpowiedniej konfiguracji Webpack jest w stanie zebrać cały kod naszej aplikacji i zapisać go do jednego (lub więcej) plików wynikowych, dzięki czemu możemy bez problemu dostarczyć go przeglądarce (a przy okazji, używając Babel zmienić na kod, który będzie ona w stanie rozpoznać). Zastępuje on rozwiązania takie jak gulp, grunt czy browserify - jest w stanie przetworzyć na bieżąco nasz kod LESS/SASS do CSS, skompresować pliki graficzne i skopiować je do odpowiedniego katalogu tak, by były dostępne dla aplikacji niezależnie od tego gdzie ją uruchamiamy. Webpack monitoruje nasze zmiany w czasie rzeczywistym dzięki czemu po zapisaniu kodu nasza strona natychmiast aktualizuje się bez konieczności odświeżania przeglądarki Webpack uruchamiany jest w środowisku developerskim, lub w celu stworzenia produkcyjnej wersji aplikacji, dlatego też musi on mieć dostęp do wszystkich materiałów, które chcemy na stałe zapisać w publicznych plikach aplikacji. Tak wygenerowane pliki następnie umieszczamy na dowolnym serwerze HTTP w celu udostępnienia w Internecie."
+      },
+    
+      {
         question: "Czym jest hook?",
         answer:
           "useState() – The state of your application is guaranteed to change at some time. The useState() hook is a function that accepts one parameter, the initial state (which might be the value of a variable, an object, or any other sort of data in your component), and returns two values: the current state and a function that can be used to update the state.",
@@ -77,6 +114,11 @@ export default {
         question: "Czym jest useState?",
         answer:
           "useState jest hookiem, wywołujemy go wewnątrz komponentu funkcyjnego, gdy chcemy dodać stan lokalny. React zachowa ten stan podczas ponownego renderowania.useState zwraca dwie rzeczy: aktualną wartość stanu oraz funkcję, która pozwala zaktualizować komponent. Wywołanie funkcji będzie działać podobnie do this.setState, który zaktualizuje wartość stanu, z tym wyjątkiem, że nie scali nowego i starego stanu ze sobą.",
+      },
+      {
+        question: "Rodzaje komponentów w react",
+        answer:
+          "React wyróżnia dwa typu komponentów: komponent bezstanowy (ang. stateless functional component, SFC) będący funkcją, oraz komponent stanowy (ang. stateful functional component) reprezentowany przez klasę. Na początek utworzymy nasz komponent jako komponent SFC.        Wspomnianym drugim typem komponentów są komponenty stanowe - odróżnia je nie tylko to, że posiadają one stan, czyli mogą przechowywać dane odnośnie swojej reprezentacji (przykładowo komponent na wprowadzanie tekstu - <input> zawierałby informacje o aktualnie wpisanym tekście), ale posiadają też funkcje cyklu życia. Funkcje cyklu życia wywoływane są w określonych momentach i pozwalają na przygotowanie i sterowanie działaniem komponentu. Komponenty stanowe opisywane są przez klasę React.Component i muszą implementować przynajmniej funkcję render, która zwraca kod JSX komponentu.Nazwa naszego komponentu - Tweet - nie przypadkowo zaczyna się dużą literą. W ten sposób dajemy znać JSX, że chodzi nam o komponent, a nie o znacznik HTML. Jeżeli utworzymy komponent header i nie użyjemy wielkiej litery, podczas transformacji zostanie on potraktowany jako znacznik HTML i nie uzyskamy oczekiwanego efektu",
       },
     ],
   },
