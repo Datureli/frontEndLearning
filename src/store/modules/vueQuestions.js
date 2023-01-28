@@ -84,7 +84,7 @@ export default {
       {
         question: "Czym jest vue?",
         answer:
-          "vue.js to open-source,progresywny framework javascript stworzony do tworzenia interfejsów użytkownika.Jest łatwy w użyciu i w integracji z innymi bibliotekami.Oparty jest o wzorzec projektowy flux",
+          "vue.js to open-source,progresywny framework javascript stworzony do tworzenia interfejsów użytkownika. Jest łatwy w użyciu i w integracji z innymi bibliotekami.Oparty jest o wzorzec projektowy flux",
       },
       {
         question: "Czym jest atrybut ref?",
@@ -261,7 +261,7 @@ export default {
       {
         question: "Jaka jest różnica między ref a reactive?",
         answer:
-          "Ref może przyjmować jako argumenty prymitywy tak samo jak Obiekty, podczas gdy reactive może przyjmować jako argumenty tylko Obiekty.Ref ma właściwość .value, której musisz użyć, aby uzyskać jej zawartość, ale dzięki funkcji reactive możesz uzyskać do niej bezpośredni dostęp.za pomocą ref możesz zastąpić całą instancję obiektu, ale korzystając z reactive nie możesz",
+          "Ref może przyjmować jako argumenty prymitywy tak samo jak Obiekty, podczas gdy reactive może przyjmować jako argumenty tylko Obiekty.Aby wyświetlić dane poprzez ref musimy się do nich dostać poprzez dodanie .value, dzięki funkcji reactive możesz uzyskać do niej bezpośredni dostęp.za pomocą ref możesz zastąpić całą instancję obiektu, ale korzystając z reactive nie możesz",
       },
       {
         question: "Czym jest beforeEnter?",
@@ -307,7 +307,7 @@ export default {
       {
         question: "Czym jest setup w composition api?",
         answer:
-          "Composition api wprowadza opcję setup, która jest uruchamiana przed każdym przechwyceniem cyklu życia.Setup zostanie uruchomiony przed utworzeniem komponentu, gdy właściwości zostaną rozwiązane i będą gotowe do użycia.Funkcja setup() przyjmuje dwa argumenty: pierwszy to props a drugi context.kontekst jest normalnym obiektem JS i nie jest reaktywny.",
+          "Composition api wprowadza opcję setup, która jest uruchamiana przed każdym przechwyceniem cyklu życia.Setup zostanie uruchomiony przed utworzeniem komponentu, gdy właściwości zostaną rozwiązane i będą gotowe do użycia.Funkcja setup() przyjmuje dwa argumenty: pierwszy to props a drugi context.kontekst jest normalnym obiektem JS i nie jest reaktywny.Code inside <script setup> will execute every time an instance of the component is created, and anything declared inside the <script setup> context will be accessible in the <template>. We no longer need to give the template access to the data by returning it from inside the setup() hook.",
       },
       {
         question: "Czym są filtry?",
@@ -412,7 +412,7 @@ export default {
       {
         question: "Na czym polega reaktywność w vue",
         answer:
-          "Wszystkie właściwości zdefiniowane w instancji vue są reaktywne.Oznacza to,że jeżeli zajdzie jakaś zmiana to komponent automatycznie się zaktualizuje.Podczas inicjalizacji wszystkie właściwości są konwertowane do getterów oraz setterów,dzięki temu vue wie kiedy należy dokonać aktualizacji",
+          "Wszystkie właściwości zdefiniowane w instancji vue są reaktywne.Oznacza to,że jeżeli zajdzie jakaś zmiana to komponent automatycznie się zaktualizuje. Podczas inicjalizacji wszystkie właściwości są konwertowane do getterów oraz setterów, dzięki temu vue wie kiedy należy dokonać aktualizacji. Vue nie może wykryć, kiedy element tablicy jest modyfikowany za pomocą indeksu. Tutaj również należy użyć Vue.set.",
       },
       {
         question: "Czym jest single file component?",
@@ -484,9 +484,9 @@ export default {
       {
         question: "Czym jest props?",
         answer:
-          "Propsy to niestandardowe atrybuty, które można zarejestrować w komponencie. są używane do przekazywania informacji z komponentu rodzica do komponentu dziecka.Można go zarejestrować w komponencie aby przekazać dane do jednego z komponentów dziecka.Dane w props mogą przepływać tylko jednostronnie,z komponentu rodzica do komponentu dziecka.To oznacza ,że nie jesteśmy w stanie przesłać propsa z komponentu dziecka do rodzica.",
+          "Propsy to niestandardowe atrybuty, które można zarejestrować w komponencie. są używane do przekazywania informacji z komponentu rodzica do komponentu dziecka. Można go zarejestrować w komponencie aby przekazać dane do jednego z komponentów dziecka.Dane w props mogą przepływać tylko jednostronnie,z komponentu rodzica do komponentu dziecka.To oznacza ,że nie jesteśmy w stanie przesłać propsa z komponentu dziecka do rodzica.",
         secondAnswer:
-          "Propsy są read-only a to oznacza ,że nie mogą zostać zmodyfikowane przez komponent dziecka ponieważ wartość należy do komponentu rodzica",
+          "Propsy służą tylko do odczytu a to oznacza ,że nie mogą zostać zmodyfikowane przez komponent dziecka ponieważ wartość należy do komponentu rodzica",
       },
       {
         question: "czym jest mapState?",
@@ -518,7 +518,7 @@ export default {
       {
         question: "Jaka jest różnica między watch a watchEffect",
         answer:
-          "W watchEffect główna różnica polega na tym, że nie obserwujesz jednej konkretnej wartości reaktywnej, ale każdą reaktywną wartość w funkcji zwrotnej.Hook działa jak computed hook lub computed option, ale zamiast zwracać wartość, używasz jej do wyzwalania efektów ubocznych.Ponieważ po prostu definiujesz funkcję zwrotną i jest ona uruchamiana automatycznie, jeśli zmieni się jedna z reaktywnych zmiennych, których używasz w jej wnętrzu. Ale to zachowanie może być problematyczne. Jeśli chcesz wywołać funkcję zwrotną tylko wtedy, gdy zmieni się jedna lub wiele określonych zmiennych, musisz użyć watch() zamiast watchEffect().",
+          "W watchEffect główna różnica polega na tym, że nie obserwujesz jednej konkretnej wartości reaktywnej, ale każdą reaktywną wartość w funkcji zwrotnej. Hook działa jak computed hook lub computed option, ale zamiast zwracać wartość, używasz jej do wyzwalania efektów ubocznych.Ponieważ po prostu definiujesz funkcję zwrotną i jest ona uruchamiana automatycznie, jeśli zmieni się jedna z reaktywnych zmiennych, których używasz w jej wnętrzu. Ale to zachowanie może być problematyczne. Jeśli chcesz wywołać funkcję zwrotną tylko wtedy, gdy zmieni się jedna lub wiele określonych zmiennych, musisz użyć watch() zamiast watchEffect().",
         secondAnswer:
           "Co więcej, użycie watch() umożliwia nam również dostęp do poprzedniej wartości obserwowanych zmiennych.I think the easiest way to remember the difference between watch and watchEffect() is to think of watchEffect() like a variant of computed() that doesnt return a value but triggers side-effects.",
       },

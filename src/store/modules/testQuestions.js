@@ -151,6 +151,26 @@ export default {
           "Smoke Testy to wybrany podzbiór wszystkich przypadków testowych, które pokrywają główne funkcjonalności. Selekcja takich testów umożliwia szybką weryfikację, czy kluczowe funkcjonalności programu działają poprawnie – ma to duże znaczenie w automatyzacji.",
       },
       {
+        question: "Czym są wartości brzegowe?",
+        answer:
+          "Analizęi ustalenie wartości brzegowych wykonuje sięw celu zaprojektowania testu celującego bezpośrednio w krawędzie przedziału (warunku) z uwagi na to, że jest to miejsce szczególnie narażone na błędy.Aplikacja zawiera filtr, który używa zakresu dat do zawężenia prezentowanych wyników (wyszukiwanie). Załóżmy, że filtr oferuje opcje wyszukiwania: bieżący miesiąc, bieżący rok, poprzedni rok. Trudno sobie wyobrazić, że tester będzie wprowadzał 059d85d3d9ef86c601f68775a9b1e31c059d85d3d9ef86c601f68775a9b1e31c 132 Testowanie oprogramowania. Podręcznik dla początkujących (generował) co najmniej 365x2 (2 lata — historia) wartości w celu weryfikacji zachowania aplikacji. Bywa, że warunek ilościowy nie jest jedynym i dodatkowo należy zróżnicowaćdane, co zwielokrotniłoby ilośćwierszy. W tym celu należy posłużyćsię analiząwartości brzegowych, tzn. maksymalnymi i minimalnymi wartościami, które  będą wykorzystywane w decyzyjnym warunku filtra.",
+      },
+      {
+        question: "kiedy nie automatyzować?",
+        answer:
+          "Nie powinniśmy próbować automatyzacji testy negatywne lub awaryjne , ponieważ w przypadku tych testów testerzy muszą myśleć analitycznie, a testy negatywne nie są naprawdę proste, aby dać wynik pozytywny lub negatywny, który może nam pomóc.",
+      },
+      {
+        question: "Scenariusze w których testy automatyzujące są konieczne",
+        answer:
+          "Porównanie dwóch obrazów piksel po pikselu.Porównanie dwóch arkuszy kalkulacyjnych zawierających tysiące wierszy i kolumn.Testowanie aplikacji pod obciążeniem 100 000 użytkowników.Testy wydajności.Testowanie aplikacji w różnych przeglądarkach i równolegle w różnych systemach operacyjnych.",
+      },  
+      {
+        question: "czym jest testowanie automatyzujące",
+        answer:
+          "Testowanie automatyczne to technika testowania oprogramowania służąca do testowania i porównywania rzeczywistych wyników z oczekiwanymi.Koszty automatyzacji są początkowo naprawdę wyższe. Obejmuje koszt narzędzia, następnie koszt zasobu testującego automatyzację i jego szkolenie.Ale kiedy skrypty są gotowe, można je wykonywać setki razy wielokrotnie z tą samą dokładnością i dość szybko. Pozwoli to zaoszczędzić wiele godzin ręcznego testowania. Tak więc koszt stopniowo maleje i ostatecznie staje się opłacalną metodą Testowanie regresji .",
+      },
+      {
         question: "Czym jest BDD i TDD. Omów te dwa pojęcia",
         answer:
           "TDD (Test-Driven Development) jest podejściem do tworzenia oprogramowania, w którym główną ideą jest w pierwszej kolejności pisanie testów do nieistniejącej funkcjonalności, a dopiero potem napisanie kodu implementującego tę funkcjonalność. BDD (Behavior-Driven Development) to podejście będące rozwinięciem TDD. Testy pisane z wykorzystaniem składni języka naturalnego (np. zdań w języku angielskim), które wyrażają zachowanie i oczekiwane rezultaty. Kryteria akceptacyjne są pisane w formie scenariuszy i korzystają ze słów kluczowych Given (początkowy warunek), When (opis występującego zdarzenia) oraz Then (oczekiwany rezultat). Dużą zaletą podejścia BDD jest to, że testy zrozumiałe są dla pracowników nietechnicznych. Mogą one również stanowić swego rodzaju dokumentację systemu.",

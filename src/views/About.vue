@@ -2,10 +2,9 @@
   <v-container fluid>
     <v-row>
       <v-sheet
-        height="540"
+        height="660"
         width="100%"
-        max-width="1500"
-        class="darkGradient justify-center d-md-flex d-lg-flex d-grid"
+        class="darkGradient mx-auto justify-center d-md-flex d-grid"
       >
         <FirstColumn v-if="$vuetify.breakpoint.mdAndUp" />
         <MiddleColumn />

@@ -6,7 +6,11 @@ export default {
       {
         question: "Jak zadeklarować zmienną w javascript?",
         answer:
-          "Aby zadeklarować zmienną, powinniśmy posłużyć się jednym ze słów kluczowych var, let lub const. Pod zmienne możemy podstawić dowolne wartości jakie będziemy chcieli. Zaleca się używanie let oraz const zamiast var. Dzięki nim nasze skrypty stają się bardziej optymalne pod względem zarządzania pamięcią, ale i potencjalnie unikamy niektórych problematycznych sytuacji. Zmienne o takiej samej nazwie,ale utworzone przy pomocy różnej wielkości liter to dwie różne zmienne. Nazwa zmiennej nie może zaczynać się od cyfry, nie może zawierać spacji, kropki, przecinka ani myślnika (można natomiast używać podkreślenia), nazwą zmiennej nie może być słowo kluczowe zarezerwowane przez JavaScript",
+          "Aby zadeklarować zmienną, powinniśmy posłużyć się jednym ze słów kluczowych var, let lub const. Pod zmienne możemy podstawić dowolne wartości jakie będziemy chcieli. Zaleca się używanie let oraz const zamiast var. Dzięki nim nasze skrypty stają się bardziej optymalne pod względem zarządzania pamięcią, ale i potencjalnie unikamy niektórych problematycznych sytuacji.  Nazwa zmiennej nie może zaczynać się od cyfry, nie może zawierać spacji, kropki, przecinka ani myślnika (można natomiast używać podkreślenia), nazwą zmiennej nie może być słowo kluczowe zarezerwowane przez JavaScript",
+          hint: [
+            'Zmienne o takiej samej nazwie,ale utworzone przy pomocy różnej wielkości liter to dwie różne zmienne.',
+            
+          ]
       },
       {
         question: "Czym jest debugowanie?",
