@@ -1,5 +1,5 @@
 <template>
-  <v-card v-if="this.$route.path === '/about'" :width="width" class="mt-10" color="transparent" elevation="0">
+  <v-card   :width="width" class="mt-10" color="transparent" elevation="0">
     <v-list color="transparent">
       <v-list-item-group active-class="green--text">
         <v-list-item

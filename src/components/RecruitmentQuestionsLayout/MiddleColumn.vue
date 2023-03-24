@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mx-auto">
     <v-sheet
       class="mx-auto mt-md-13"
       :height="height"
@@ -7,29 +7,18 @@
       color="darkGradient"
       :elevation="elevation"
     >
-      <div v-if="this.$route.path === '/about'" class="pa-5">
+      <div v-if="$route.path === '/about'" class="pa-5">
         <div class="d-grid justify-center mt-15">
           <h1 class="text-h2 font-weight-black">
             Choose Category
           </h1>
         </div>
       </div>
-
-      <CssQuestions v-if="this.$route.path === '/about/cssquestions'" />
-      <JavascriptQuestions v-if="this.$route.path === '/about/javascript'" />
-      <HtmlQuestions v-if="this.$route.path === '/about/htmlquestions'" />
-      <VueQuestions v-if="this.$route.path === '/about/vue'" />
-      <GitQuestions v-if="this.$route.path === '/about/gitquestions'" />
-      <ReactQuestions v-if="this.$route.path === '/about/react'" />
-      <GeneralQuestions v-if="this.$route.path === '/about/general'" />
-      <TestQuestions v-if="this.$route.path === '/about/test'" />
-      <TypeScriptQuestions v-if="this.$route.path === '/about/typescript'" />
-      <TestYourKnowledge v-if="this.$route.path === '/about/test-knowledge'" />
+      <component :is="currentComponent" />
+      <IconComponent v-if="$route.path !== '/about'" class="mt-3" />
     </v-sheet>
-    <IconComponent v-if="this.$route.path != '/about'" class="mt-3" />
   </div>
 </template>
-
 <script>
 import {
   HtmlQuestions,
@@ -44,7 +33,24 @@ import {
   TestYourKnowledge,
 } from "../RecruimentQuestions";
 import IconComponent from "../Icons/IconComponent";
+
 export default {
+  data() {
+    return {
+      componentsTable: {
+        "/about/cssquestions": CssQuestions,
+        "/about/javascript": JavascriptQuestions,
+        "/about/htmlquestions": HtmlQuestions,
+        "/about/vue": VueQuestions,
+        "/about/gitquestions": GitQuestions,
+        "/about/react": ReactQuestions,
+        "/about/general": GeneralQuestions,
+        "/about/test": TestQuestions,
+        "/about/typescript": TypeScriptQuestions,
+        "/about/test-knowledge": TestYourKnowledge,
+      },
+    };
+  },
   components: {
     HtmlQuestions,
     CssQuestions,
@@ -60,16 +66,18 @@ export default {
   },
   computed: {
     width() {
-      return this.$vuetify.breakpoint.mdAndUp ? 800 : 500;
+      return this.$vuetify.breakpoint.mdAndUp ? 800 : "100%";
     },
     height() {
-      return this.$vuetify.breakpoint.mdAndUp ? 410 : 410
+      return this.$vuetify.breakpoint.mdAndUp ? 410 : 410;
     },
     elevation() {
       return this.$vuetify.breakpoint.smAndDown ? 0 : 3;
     },
+    currentComponent() {
+      const path = this.$route.path;
+      return this.componentsTable[path] || null;
+    },
   },
 };
 </script>
-
-

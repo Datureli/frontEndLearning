@@ -161,6 +161,11 @@ export default {
           "Nie powinniśmy próbować automatyzacji testy negatywne lub awaryjne , ponieważ w przypadku tych testów testerzy muszą myśleć analitycznie, a testy negatywne nie są naprawdę proste, aby dać wynik pozytywny lub negatywny, który może nam pomóc.",
       },
       {
+        question: "Co to jest suma kontrolna?",
+        answer:
+          "Suma kontrolna (ang. checksum) to liczba wygenerowana na podstawie danych, których poprawnośćma ona potwierdzićw przyszłości.Ów ciąg znaków generuje sięna przyk ład dla plików wymiany danych pomiędzy systemami. Plik z sumąkontrolnąprzekazywany jest wraz ze zbiorem głównym danych. Aplikacja odbierająca (wczytująca) otrzymany plik źródłowy równieżgeneruje sumękontrolnąi porównuje jąz plikiem sumy otrzymanej z zewnętrznego systemu. Jeżeli obie sumy sięzgadzają, to można przyjąć, że dane w trakcie przesyłania nie uległy uszkodzeniu. W przypadku wykrycia niegodności należy przyjąć, że dane uległy przekłamaniu. Specyficznym rodzajem sumy kontrolnej sąliczby kontrolne na przykład w numerze PESEL lub NIP.",
+      },
+      {
         question: "Scenariusze w których testy automatyzujące są konieczne",
         answer:
           "Porównanie dwóch obrazów piksel po pikselu.Porównanie dwóch arkuszy kalkulacyjnych zawierających tysiące wierszy i kolumn.Testowanie aplikacji pod obciążeniem 100 000 użytkowników.Testy wydajności.Testowanie aplikacji w różnych przeglądarkach i równolegle w różnych systemach operacyjnych.",

@@ -1,21 +1,19 @@
 <template>
-  <v-container fluid>
-    <v-row>
-      <v-sheet
-        height="660"
-        width="100%"
-        class="darkGradient mx-auto justify-center d-md-flex d-grid"
-      >
+  <v-container fluid width="100%" class="mx-auto d-flex justify-center">
+    <v-sheet height="660" width="100%" class="darkGradient d-md-flex d-grid">
+      <div>
         <FirstColumn v-if="$vuetify.breakpoint.mdAndUp" />
-        <MiddleColumn />
+        <HotkeyTips v-if="$vuetify.breakpoint.mdAndUp" />
+      </div>
 
-        <RightColumn v-if="$vuetify.breakpoint.mdAndUp" />
-        <div class="d-flex mx-auto justify-center">
-          <FirstColumnMobile v-if="$vuetify.breakpoint.smAndDown" />
-          <RightColumnMobile v-if="$vuetify.breakpoint.smAndDown" />
-        </div>
-      </v-sheet>
-    </v-row>
+      <MiddleColumn />
+
+      <RightColumn v-if="$vuetify.breakpoint.mdAndUp" />
+      <div class="d-flex mx-auto justify-center">
+        <FirstColumnMobile v-if="$vuetify.breakpoint.smAndDown" />
+        <RightColumnMobile v-if="$vuetify.breakpoint.smAndDown" />
+      </div>
+    </v-sheet>
   </v-container>
 </template>
 
@@ -27,7 +25,7 @@ import {
   FirstColumnMobile,
   RightColumnMobile,
 } from "../components/RecruitmentQuestionsLayout";
-
+import HotkeyTips from "../components/RecruimentQuestions/HotkeyTips";
 export default {
   components: {
     FirstColumn,
@@ -35,6 +33,13 @@ export default {
     RightColumn,
     FirstColumnMobile,
     RightColumnMobile,
+    HotkeyTips,
   },
 };
 </script>
+
+<style>
+.container {
+  padding: 0;
+}
+</style>

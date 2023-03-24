@@ -18,12 +18,6 @@ export default {
 </script>
 
 <style>
-html,
-body {
-  height: auto;
-  width: 100%;
-  overflow: hidden;
-}
 #app {
   font-family: Georgia, Helvetica, Arial, sans-serif;
   text-align: center;

@@ -6,12 +6,12 @@ export default {
       {
         question: "Czym jest Vuex?",
         answer:
-          "Dzięki Vuex możemy przechowywać stan naszej aplikacji Vue w centralnej lokalizacji.Pozwala nam pobierać i ustawiać stan współdzielenia oraz automatycznie propagować wszelkie zmiany dokonane we wspólnym stanie do wszystkich komponentów.",
+          "Vuex to wzorzec zarządzania stanem + biblioteka dla aplikacji Vue.js.Dzięki Vuex możemy przechowywać stan naszej aplikacji Vue w centralnej lokalizacji. Pozwala nam pobierać i ustawiać stan współdzielenia oraz automatycznie propagować wszelkie zmiany dokonane we wspólnym stanie do wszystkich komponentów.",
       },
       {
         question: "Czym jest created hook",
         answer:
-          "Jest to pierwszy hook który działa w naszym komponencie.Wywoływany synchronicznie po utworzeniu instancji.Na tym etapie instancja zakończyła przetwarzanie opcji,co oznacza,że skonfigurowano obserwację danych, obliczono właściwości, metody, wywołania zwrotne watch / event. Jednak faza montażu nie została rozpoczęta, a właściwość $ el nie będzie jeszcze dostępna.W odróżnieniu od innych hooks,creation hook działą również podczas server-side renderingu.Nie posiada dostępu do dom ani docelowego elemntu montażowego",
+          "Jest to pierwszy hook który działa w naszym komponencie. Wywoływany synchronicznie po utworzeniu instancji.Na tym etapie instancja zakończyła przetwarzanie opcji,co oznacza,że skonfigurowano obserwację danych, obliczono właściwości, metody, wywołania zwrotne watch / event. Jednak faza montażu nie została rozpoczęta, a właściwość $ el nie będzie jeszcze dostępna.W odróżnieniu od innych hooks,creation hook działą również podczas server-side renderingu.Nie posiada dostępu do dom ani docelowego elemntu montażowego",
       },
       {
         question: "Czym jest mounted hook",
@@ -21,48 +21,32 @@ export default {
       {
         question: "Czym są komponenty?",
         answer:
-          "Komponenty są to instancje Vue, dzięki którym możemy wielokrotnie wykorzystywać te same części kodu w uniwersalny sposób.Unikamy w ten sposób powtarzania się, czyli przestrzegamy zasady DRY.Dzięki temu aplikacja wygląda czysto i przejrzyście, a w przypadku błędów nie musimy poprawiać ich w wielu miejscach.",
-        secondAnswer:
-          "Komponent definiujemy za pomocą Vue.component.Pierwszym argumentem metody jest nazwa elementu DOM, z którego będziemy korzystać w szablonach. Drugi parametr to obiekt, który w tym przypadku posiada dwie właściwości. Najważniejszą z nich jest template, który w efekcie będzie podmieniany w realnym drzewie DOM za każdym razem, kiedy użyjemy komponentu. Drugą właściwością obiektu jest metoda data (metoda, nie obiekt!) zwracająca obiekt z danymi, które będą dostępne w zakresie pojedynczego komponentu.",
-        thirdPartOfAnswer:
-          "Komponenty można zagnieżdżać wewnątrz siebie budując jednocześnie bardziej zaawansowane struktury szablonów. W przykładzie poniżej stworzono dwa proste przykłady: parent i child. Wykorzystane tu zostały specjalne tagi <slot></slot>, które stanowią placeholder. W ich miejscu renderowane jest to, co zostało umieszczone w elemencie rodzica.",
+          "Komponenty są to instancje Vue, dzięki którym możemy wielokrotnie wykorzystywać te same części kodu w uniwersalny sposób. Unikamy w ten sposób powtarzania się, czyli przestrzegamy zasady DRY. Dzięki temu aplikacja wygląda czysto i przejrzyście, a w przypadku błędów nie musimy poprawiać ich w wielu miejscach.W komponencie template jest podmieniany w realnym drzewie DOM za każdym razem, kiedy użyjemy komponentu. Komponenty można zagnieżdżać wewnątrz siebie budując jednocześnie bardziej zaawansowane struktury szablonów. ",
       },
       {
         question: "Jakie są zalety Vue.js?",
         answer:
-          "vue js posiada niski próg wejścia.Framework jest lekki,waży tylko 18-23 kb,Vue js jest szybszym frameworkiem niż Angular czy React,virtual DOM,data binding,komponentyAnimation/Transition.",
-        secondAnswer:
-          "Jest oparty na komponentach oraz jednostronnym przepływie danych, i podobnie do Angulara posiada proste szablony z dobrą składnią. Vue nie potrzebuje konfiguracji środowiska,Posiada bardzo szczegołową dokumentacje",
-        thirdPartOfAnswer:
-          "Vue pozwala na tworzenie prostych aplikacji webowych opartych o Model-view-viewmodel.",
+          "Vue js posiada niski próg wejścia.Framework jest lekki,waży tylko 18-23 kb,virtual DOM,data binding,komponentyAnimation/Transition. Jest oparty na komponentach oraz jednostronnym przepływie danych, i podobnie do Angulara posiada proste szablony z dobrą składnią. Vue nie potrzebuje konfiguracji środowiska,Posiada bardzo szczegołową dokumentacje",
       },
       {
         question: "Czym jest composition api?",
         answer:
-          "Composition API to nowa struktura do budowania komponentów Vue w celu poprawy czytelności kodu i ponownego wykorzystania.pozwala na pisanie komponentów w sposób oparty na funkcjach.Nowe API umożliwia hermetyzację logiki w tzw. „composition functions” i pozwala używać jej ponownie we wszystkich komponentach.",
+          "Composition API to nowa struktura do budowania komponentów Vue, wprowadzona w wersji 3 w celu poprawy czytelności kodu i ponownego wykorzystania. Pozwala na pisanie komponentów w sposób oparty na funkcjach.",
       },
       {
         question: "Jaka jest różnica między vue a nuxt?",
         answer:
-          "Nuxt.js i Vue.js obsługują logikę w różny sposób.Główna różnica polega na tym,że vue zawsze działa po stronie klienta,nuxt nie.",
-        secondAnswer:
-          "Nuxt używa plików cookie w pamięci lokalnej — ponieważ są one zawsze dostępne.Z Vue nie mamy tego rodzaju problemów, ponieważ zawsze działa po stronie klienta.",
-        thirdPartOfAnswer:
-          "Nuxt generuje własny router w oparciu o strukturę folderów, podczas gdy w przypadku vue należy to zrobić ręcznie.Automatycznie generowane zalety routera polegają na tym, że łatwiej i szybciej go utworzyć. Po prostu tworzysz katalog i pliki, a Nuxt wykonuje całą pracę. Ale minusem jest to, że jest mniej kontrolowalny i zarządzalny niż ręcznie napisany.",
+          "Nuxt.js i Vue.js obsługują logikę w różny sposób.Główna różnica polega na tym,że vue zawsze działa po stronie klienta,nuxt nie.Nuxt używa plików cookie w pamięci lokalnej — ponieważ są one zawsze dostępne.Z Vue nie mamy tego rodzaju problemów, ponieważ zawsze działa po stronie klienta.Nuxt generuje własny router w oparciu o strukturę folderów, podczas gdy w przypadku vue należy to zrobić ręcznie.Automatycznie generowane zalety routera polegają na tym, że łatwiej i szybciej go utworzyć. Po prostu tworzysz katalog i pliki, a Nuxt wykonuje całą pracę.",
       },
       {
         question: "Czym są komponenty funkcyjne",
         answer:
-          "Oznacz to , że komponenty są bezstanowe (brak danych reaktywnych) i bezinstancyjne (bez tego kontekstu)",
-        secondAnswer:
-          "W komponentach funkcyjnych otrzymuje 2 parametry: funkcję callback zwracającą VNode oraz obiekt context.W komponentach funkcyjnych nie występuja life hooki.",
-        thirdPartOfAnswer:
-          "Komponenty funkcyjne cechuje prostota, zwięzłość i przewidywalność. Nie musimy przejmować się stanem ani innymi funkcjonalnościami, dodającymi zbędną złożoność.Komponenty pozbawione stanu są świetnym sposobem na redukowanie złożoności aplikacji.",
+          "Komponenty funkcyjne cechuje prostota, zwięzłość i przewidywalność. Nie musimy przejmować się stanem ani innymi funkcjonalnościami, dodającymi zbędną złożoność.Komponenty pozbawione stanu są świetnym sposobem na redukowanie złożoności aplikacji.W komponentach funkcyjnych otrzymuje 2 parametry: funkcję callback zwracającą VNode oraz obiekt context.W komponentach funkcyjnych nie występuja life hooki",
       },
       {
         question: "Czym są mixiny?",
         answer:
-          "mixiny to funkcje które pozwalają nam na reużywalność kodu pomiędzy komponentami w vue.Jest to objekt javascript który może zawierać każdą opcję jaką zawiera komponent.Mixiny są pisane w odrebnym pliku i mogą być dzielone pomiędzy komponentami",
+          "mixiny to funkcje które pozwalają nam na reużywalność kodu pomiędzy komponentami w vue. Jest to objekt javascript który może zawierać każdą opcję jaką zawiera komponent.Mixiny są pisane w odrebnym pliku i mogą być dzielone pomiędzy komponentami",
       },
       {
         question: "Do czego nam plik main.js w vue?",
@@ -77,7 +61,7 @@ export default {
       {
         question: "Czym jest composition functions?",
         answer:
-          "W celu wyciągnięcia logiki z komponentów używamy composition functions. Pozwalają one nam na wyciągnięcie reaktywnego stanu oraz funkcjonalności poza komponent i używanie ich w dowolnym miejscu aplikacji. Z racji posiadania własnego stanu niezależnego od komponentów, w którym są używane, mogą w pewnym stopniu zastąpić Vuexa. Są odpowiednikami mixinów używanych w Options API.",
+          "W celu wyciągnięcia logiki z komponentów używamy composition functions. Pozwalają one nam na wyciągnięcie reaktywnego stanu oraz funkcjonalności poza komponent i używanie ich w dowolnym miejscu aplikacji. Są odpowiednikami mixinów używanych w Options API.",
         secondAnswer:
           "W komponentach dokonujemy destrukturyzacji na obiekcie zwracanym przez funkcje i wyciągamy interesujące nas dane i funkcje. Dzięki destrukturyzacji omijamy konflikty nazw właściwości, które pobieramy. Zwracane właściwości możemy stworzyć jako read-only i w ten sposób zapobiec ich mutacji bezpośrednio zmieniając ich wartość. Wtedy możemy wdrożyć taką samą zasadę działania jak w przypadku mutacji w Vuexie.",
       },
@@ -121,6 +105,11 @@ export default {
           "Slot to placeholder w komponencie dziecka, który jest wypełniony treścią przekazaną od rodzica. Zawartość zwykłego slotu jest kompilowana w zakresie rodzica, a następnie przekazywana do komponentu podrzędnego.W związku z tym nie można używać właściwości komponentów dziecka w zawartości slot. Ale slot w zakresie umożliwiają przekazywanie danych składników podrzędnych do zakresu nadrzędnego, a następnie używanie tych danych w zawartości slot.",
       },
       {
+        question: "Jaka jest różnica między slots a scoped slots?",
+        answer:
+          "Slot to placeholder w komponencie dziecka, który jest wypełniony treścią przekazaną od rodzica. Zawartość zwykłego slotu jest kompilowana w zakresie rodzica, a następnie przekazywana do komponentu podrzędnego.W związku z tym nie można używać właściwości komponentów dziecka w zawartości slot. Ale slot w zakresie umożliwiają przekazywanie danych składników podrzędnych do zakresu nadrzędnego, a następnie używanie tych danych w zawartości slot.",
+      },
+      {
         question: "Struktura w nuxt js?",
         answer:
           "assets jest to miejsce, w którym możemy przechowywać nieprzetworzone pliki, taki jak np. less czy sass.Nuxt.js wspiera wiele różnych preprocesorów i to jest dobre miejsce na trzymanie ich źródeł.components to folder zawierający fundament działania Vue.js a więc wszystkie nasze reużywalne komponenty.layouts i pages – tutaj znajdują się główne szablony naszego frontendu. Każda strona obsługiwana przez routing znajduje się w katalogu pages i jest opakowana przez główny szablon. Szablony te służą głównie do ustandaryzowania pewnych elementów na frontendzie dla wielu stron takich jak wspólny nagłówek i stopka czy jednolite menu na każdej podstronie.",
@@ -132,7 +121,7 @@ export default {
       {
         question: "Cykl życia w composition api",
         answer:
-          "W API Composition musimy zaimportować haki cyklu życia do naszego projektu, zanim będziemy mogli ich użyć. Ma to pomóc w utrzymaniu jak najmniejszych projektów.",
+          "W vue 3 musimy zaimportować haki cyklu życia do naszego projektu, zanim będziemy mogli ich użyć. Ma to pomóc w utrzymaniu jak najmniejszych projektów.",
         secondAnswer:
           "onBeforeMount - wywołane przed rozpoczęciem montażu onMounted - wywoływane, gdy komponent jest montowany onBeforeUpdate - wywoływana, gdy reaktywne dane ulegają zmianie i przed ponownym renderowaniem onUpdated - wywołana po ponownym renderowaniu onBeforeUnmount - wywołana przed zniszczeniem instancji Vue onUnmounted - wywoływana po zniszczeniu instancji onActivated - wywoływane, gdy aktywny jest komponent onDeactivated - wywoływana, gdy utrzymywany przy życiu komponent jest dezaktywowany onErrorCaptured - wywoływana, gdy zostanie przechwycony błąd z komponentu potomnego",
       },
@@ -163,9 +152,9 @@ export default {
           "Vue nie może wykryć zmian dla obiektu podczas dodawania lub usuwania właściwości.",
       },
       {
-        question: "po co używamy atrybutu key w dyrektywie v-for?",
+        question: "po co używamy atrybutu    w dyrektywie v-for?",
         answer:
-          "Aby śledzić tożsamość każdego węzła, a tym samym ponownie używać i zmieniać kolejność istniejących elementów, musisz podać unikalny atrybut klucza dla każdego elementu w iteracji v-for.Idealną wartością klucza byłby unikalny identyfikator każdego przedmiotu. W związku z tym zawsze zaleca się dostarczanie klucza z v-for, gdy tylko jest to możliwe, chyba że iterowana zawartość DOM jest prosta.Nie należy używać wartości innych niż pierwotne, takich jak obiekty i tablice, jako kluczy v-for. Zamiast tego użyj ciągów lub wartości liczbowych.",
+          "Aby śledzić tożsamość każdego węzła, a tym samym ponownie używać i zmieniać kolejność istniejących elementów, musisz podać unikalny atrybut klucza dla każdego elementu w iteracji v-for. Vue używa atrybutu klucza do tworzenia unikalnych powiązań dla tożsamości każdego węzła.Idealną wartością klucza byłby unikalny identyfikator każdego przedmiotu. W związku z tym zawsze zaleca się dostarczanie klucza z v-for, gdy tylko jest to możliwe, chyba że iterowana zawartość DOM jest prosta.Nie należy używać wartości innych niż pierwotne, takich jak obiekty i tablice, jako kluczy v-for. Zamiast tego użyj ciągów lub wartości liczbowych. Użyjemy id zgłoszenia, ponieważ id zgłoszenia nigdy nie byłby równy id innego zgłoszenia zgłoszenie. Ponieważ używamy wartości dynamicznych, będziemy musieli użyć v-bind, aby powiązać nasz klucz z id zgłoszenia:",
       },
       {
         question: "jaka jest różnica między v-show i v-if?",
@@ -181,7 +170,7 @@ export default {
         question:
           "Podaj różnicę między one-way-data flow a two-way data binding",
         answer:
-          "W przepływie jednostronnym,wizualna warstwa aplikacji nie aktualizuje się automatycznie kiedy dane ulegają zmianie.W przypadku two-way data binding zmiany dokonywane są automatycznie.Przykłady użycia one-way w Vue to v-bind natomiast two-way to v-model",
+          "W przepływie jednostronnym,wizualna warstwa aplikacji nie aktualizuje się automatycznie kiedy dane ulegają zmianie. W przypadku two-way data binding zmiany dokonywane są automatycznie.Przykłady użycia one-way w Vue to v-bind natomiast two-way to v-model",
       },
       {
         question: "opisz beforeCreate",
@@ -222,6 +211,11 @@ export default {
         question: "opisz Mounted hook",
         answer:
           "W mounted hook posiadasz pełny dostęp do reaktywnego komponentu,template oraz wyrenderowanego drzewa DOM(poprzez this.$el).Należy go używać w przypadku gdy chcemy modyfikować DOM,w szczególności przy integracji z innymi bibliotekami innymi niż vue.Należy wspomnieć,że mounted hook nie gwarantuje nam ,że element będzie dodany do drzewa dom na tym etapie",
+      },
+      {
+        question: "Czym różni się computed od methods?",
+        answer:
+          "różnica polega na tym, że właściwości computed są buforowane na podstawie ich reaktywnych zależności. Właściwość computed zmieni się tylko wtedy gdy niektóre z jego reaktywnych elementów ulegną zmianie",
       },
       {
         question: "Czym jest beforeUpdate hook?",
@@ -372,7 +366,7 @@ export default {
       },
       {
         question: "Opisz dyrektywe v-for",
-        answer: "Wbudowana dyrektywa v-for pozwala nam przechodzić przez elementy w tablicy lub obiekcie. Możesz wykonać iterację na każdym elemencie w tablicy lub obiekcie.Pozwala na wykonanie pętli na powiązanym elemencie DOM.",
+        answer: "Wbudowana dyrektywa v-for pozwala nam przechodzić przez elementy w tablicy lub obiekcie. Możesz wykonać iterację na każdym elemencie w tablicy lub obiekcie. Pozwala na wykonanie pętli na powiązanym elemencie DOM. Dyrektywa v-for wymaga określonej składni na wzór item in items. Gdzie items oznacza nasze dane a słowo item jest aliasem dla każdego iterowanego elementu",
       },
       {
         question: "Czym jest x-templates",
@@ -386,12 +380,12 @@ export default {
       },
       {
         question: "Opisz dyrektywe v-bind",
-        answer: "Pozwala na wiązanie wyrażeń do atrybutów elementów DOM.",
+        answer: "Pozwala na wiązanie wyrażeń do atrybutów elementów DOM. Jednak v-bind wiąże dane tylko w jeden sposób. Oznacza to, że możemy przekazać dane do komponentu, ale jeśli wpiszemy nasze dane wejściowe - nasza pierwotna wartość nie zostanie zmieniona. Może się to wydawać niewielką różnicą, ale oznacza to, że nasze dane mogą nie być zsynchronizowane z tym, co faktycznie znajduje się na danych wejściowych, które mają modelować. Zawsze chcemy mieć pewność, że nasz stan jest zgodny z naszymi danymi - dlatego należy zachować ostrożność przy wyborze między v-modelem a v-bind.",
       },
       {
         question: "Opisz dyrektywe v-model",
         answer:
-          "Pozwala na wiązanie elementów DOM takich jak na przykład input do pól obiektu data.v-model zignoruje wartość początkową, sprawdzone lub wybrane atrybuty znajdujące się na dowolnych elementach formularza. Dlatego zawsze używa danych instancji Vue jako źródła prawdy",
+          "Pozwala na wiązanie elementów DOM takich jak na przykład input do pól obiektu data. jeśli zmienią się nasze dane, zmienią się też nasze dane wejściowe, a jeśli zmienią się nasze dane wejściowe, zmienią się też nasze dane. v-model zignoruje wartość początkową, sprawdzone lub wybrane atrybuty znajdujące się na dowolnych elementach formularza. Dlatego zawsze używa danych instancji Vue jako źródła prawdy. ",
       },
       {
         question: "Jakie są obsługiwane modyfikatory w v-model?",
@@ -448,7 +442,12 @@ export default {
       {
         question: "Wyjaśnij na czym polega przepływ danych w vue",
         answer:
-          "Vue używa one-way data flow.Dane są przekazywane do komponentu dziecka z komponentu rodzica za pomocą właściwości props",
+          "Vue używa one-way data flow.Dane są przekazywane do komponentu dziecka z komponentu rodzica za pomocą właściwości props. Gdy komponent rodzica aktualizuje wartość propsów, jest ona automatycznie aktualizowana w komponencie dziecka.Nie powinno się dokonywać mutacji wewnątrz komponentu dziecka. Komponent dziecka może komunikować się  z rodzicem za pomocą słowa emit.",
+      },
+      {
+        question: "Wymień najczęstszą przyczynę wycieków pamięci w aplikacjach Vue.js i sposoby ich rozwiązania.",
+        answer:
+          "Wycieki pamięci w aplikacjach Vue.js często wynikają z używania zewnętrznych bibliotek, które tworzą własne instancje i/lub manipulują DOM.Dyrektywa v-if i router Vue niszczą instancje komponentów Vue; jednak czyszczenie po dowolnej bibliotece innej firmy powinno być wykonywane ręcznie w haku cyklu życia beforeDestroy().Załóżmy na przykład, że wewnątrz naszego komponentu używamy fikcyjnej biblioteki PowerGraph.js. Tworzy instancję wykresu, która wyświetla niektóre dane na stronie:Musimy wywołać metodę destroy() instancji grafu, jeśli jest dostarczona, lub zaimplementować własną metodę czyszczenia:Jeśli czyszczenie nie zostanie wykonane, zanim nasz komponent zostanie zniszczony, ta pamięć nigdy nie zostanie zwolniona. Stąd wyciek pamięci.",
       },
       {
         question: "Czym jest instancja vue?",

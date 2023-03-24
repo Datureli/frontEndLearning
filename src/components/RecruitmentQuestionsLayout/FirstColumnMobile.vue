@@ -1,5 +1,5 @@
 <template>
-  <v-card width="50%" elevation="5" color="transparent" class="align-end pa-5">
+  <v-card width="50%" height="200" elevation="5" color="transparent" class="align-end pa-5 mt-auto">
     <v-dialog
       v-model="dialog"
       fullscreen
@@ -31,3 +31,9 @@ export default {
   }),
 };
 </script>
+
+<style>
+.card {
+  position: relative;
+}
+</style>
