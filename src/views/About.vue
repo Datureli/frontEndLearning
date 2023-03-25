@@ -1,6 +1,6 @@
 <template>
-  <v-container fluid width="100%" class="mx-auto d-flex justify-center">
-    <v-sheet height="660" width="100%" class="darkGradient d-md-flex d-grid">
+  <v-container fluid class="mx-auto" >
+    <v-sheet class="darkGradient mx-auto d-md-flex d-grid">
       <div>
         <FirstColumn v-if="$vuetify.breakpoint.mdAndUp" />
         <HotkeyTips v-if="$vuetify.breakpoint.mdAndUp" />

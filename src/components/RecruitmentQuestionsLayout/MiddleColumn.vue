@@ -3,7 +3,8 @@
     <v-sheet
       class="mx-auto mt-md-13"
       :height="height"
-      :width="width"
+      width="100%"
+      :min-width="width"
       color="darkGradient"
       :elevation="elevation"
     >
@@ -15,8 +16,8 @@
         </div>
       </div>
       <component :is="currentComponent" />
-      <IconComponent v-if="$route.path !== '/about'" class="mt-3" />
     </v-sheet>
+    <IconComponent v-if="$route.path !== '/about'" class="mt-3" />
   </div>
 </template>
 <script>

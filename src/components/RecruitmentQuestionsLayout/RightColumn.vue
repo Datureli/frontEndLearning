@@ -1,51 +1,61 @@
 <template>
-  <v-card max-width="225" class="mt-12 d-grid" outlined color="transparent">
+  <v-card class="mt-12" outlined color="transparent" max-width="600">
     <h3 class="text-md-h6">Test your knowledge</h3>
     <v-form class="pa-4" v-model="isFilled">
       <v-select
-        absolute
         v-model="category"
         :rules="categoryRules"
-        class="mt-5"
         :items="firstColumn"
         item-text="title"
         label="Category"
         persistent-hint
         return-object
         single-line
+        class="mt-5"
       ></v-select>
       <v-select
-        class="mt-5 pt-0"
         :rules="numberOfQuestionsRules"
         :items="numberOfQuestions"
         label="Number of questions"
+        class="mt-5 pt-0"
       ></v-select>
       <v-select
         :rules="difficultyRules"
-        class="mt-5 pt-0"
         :items="difficulty"
         item-text="name"
-        label="difficulty level"
+        label="Difficulty level"
         persistent-hint
         return-object
         single-line
+        class="mt-5 pt-0"
       ></v-select>
       <v-select
         :rules="timeRules"
-        class="mt-5 pt-0"
         :items="time"
         label="Time"
         persistent-hint
         return-object
         single-line
+        class="mt-5 pt-0"
       ></v-select>
     </v-form>
-    <v-btn :disabled="!isFilled" :to="'/about/test-knowledge'">start</v-btn>
+    <v-responsive>
+      <v-btn
+        :disabled="!isFilled"
+        :to="'/about/test-knowledge'"
+        class="mx-auto"
+        rounded
+        color="primary"
+      >
+        Start
+      </v-btn>
+    </v-responsive>
   </v-card>
 </template>
 
 <script>
 import { mapState } from "vuex";
+
 export default {
   data() {
     return {
@@ -67,3 +77,32 @@ export default {
   },
 };
 </script>
+
+<style>
+.v-card__title {
+  justify-content: center;
+}
+
+.v-card__text {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.v-card__form {
+  width: 100%;
+}
+
+.v-select__selections {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.v-select__selection {
+  flex: 1 1 auto;
+}
+
+.v-input__control {
+  width: 100%;
+}
+</style>
