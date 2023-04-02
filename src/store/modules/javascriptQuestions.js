@@ -15,17 +15,17 @@ export default {
       {
         question: "Czym jest debugowanie?",
         answer:
-          "Termin ten oznacza usuwanie usterek z kodu. Na przykład możesz debugować, skanując kod w celu szukania literówek lub używając analizatora kodu. Kod można debugować przy użyciu profilera wydajności.  Debuger to bardzo wyspecjalizowane narzędzie dewelopera, które jest dołączane do uruchomionej aplikacji i umożliwia sprawdzanie kodu.",
+          "Można powiedzieć, że debugowanie to proces znajdowania i eliminowania błędów (tzw. bugów) w kodzie programu. W praktyce oznacza to analizowanie i testowanie kodu w celu zidentyfikowania i zrozumienia problemów, które prowadzą do nieoczekiwanych zachowań lub awarii aplikacji. Debugowanie może obejmować różne narzędzia, takie jak debugger, logi, testy jednostkowe, analizatory kodu i wiele innych. Celem debugowania jest zapewnienie, że program działa zgodnie z oczekiwaniami i spełnia wymagania funkcjonalne i niefunkcjonalne.",
       },
       {
         question: "Jak działa słowo kluczowe new?",
         answer:
-          "Operator new tworzy nową instancję typu obiektu zdenifiowanego przez użytkownika lub instancję wbudowanego typu obiektu, który posiada konstruktor.",
+          "słowo kluczowe new w JavaScript służy do tworzenia nowych obiektów na podstawie konstruktora (funkcji). W momencie wywołania new, tworzona jest nowa instancja obiektu, a następnie konstruktor jest wywoływany z nowym obiektem jako kontekstem (this). Konstruktor może następnie manipulować nowym obiektem i zwrócić go jako wartość z new. Słowo kluczowe new jest często używane w połączeniu z funkcjami konstruktora, ale może być także użyte w połączeniu z niektórymi wbudowanymi typami obiektów, takimi jak Array, Date czy RegExp.",
       },
       {
         question: "Czym jest konstruktor?",
         answer:
-          "Konstruktor jest szczególną metodą, która służy tworzeniu i inicjalizowaniu obiektu zdefiniowanego słowem kluczowym class. Dozwolony jest tylko jeden konstruktor w danej klasie. Jeśli klasa posiada więcej niż jedno wystąpienie metody constructor, wygenerowany zostanie błąd SyntaxError. Aby wywołać konstruktor klasy bazowej, należy użyć słowa kluczowego super",
+          "konstruktor jest metodą, która służy do tworzenia i inicjalizacji obiektów zdefiniowanych za pomocą klasy (class) w języku JavaScript. Jest to specjalna metoda, która jest wywoływana w momencie tworzenia nowej instancji klasy, dzięki czemu można zainicjalizować pola obiektu oraz wykonać inne operacje potrzebne do poprawnego działania obiektu. Konstruktor może przyjmować parametry, które są przekazywane podczas tworzenia instancji klasy. Można zdefiniować tylko jeden konstruktor w klasie, a do wywołania konstruktora klasy bazowej służy słowo kluczowe 'super'.",
       },
       {
         question: "Czym jest metoda GET?",

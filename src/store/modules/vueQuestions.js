@@ -201,54 +201,44 @@ export default {
           "Uruchamia się podczas gdy data w naszym komponencie ulega zmianie oraz cykl update się rozpoczyna,zaraz przed tym DOM jest patched oraz rerenderowany.Używamy go jeżeli potrzebujemy dostać się do new state w jakiejkolwiek reactive data naszego komponentu zanim zostanie wyrenderowany.Podczas wywołania tego hooka dom komponentu zostanie zaktualizowany więc możemy wykonywać operacje na drzewie dom.Należy jednak pamiętam ,że w większości przypadków powinieneś unikać zmiany state podczas uzywania tego hooka.Aby dokonać zmian lepiej jest użyć właściwości computed lub watcher.",
       },
       {
-        question: "Czym jest beforeDestroy hook?",
+        question: "W jakim celu używa się metody beforeDestroy hook w Vue.js?",
         answer:
-          "Jest uruchamiany zaraz przed zniszczeniem komponentu.Komponent nadal będzie istniał i będzie funkcjonalny.Używamy go gdy chcemy wyczyścić eventy lub reaktywność.Na ten moment instancja jest w pełni funkcjonalna.Nie jest renderowany po stronie serwera",
+          "beforeDestroy hook to metoda w Vue.js, która jest wywoływana tuż przed zniszczeniem komponentu. W tym momencie komponent jest wciąż funkcjonalny, ale już nie będzie renderowany. Przy użyciu tej metody można wykonać operacje czyszczenia eventów lub reaktywnych obserwatorów, które zostały zainicjowane podczas tworzenia komponentu. Jest to dobry moment, aby zwolnić zasoby lub anulować subskrypcje. W przypadku renderowania na serwerze, ta metoda nie zostanie uruchomiona.",
       },
       {
-        question: "Jakie modyfikatory zdarzeń udostępnia vue?",
+        question: "Jakie modyfikatory zdarzeń są dostępne w Vue.js i jakie są ich funkcje?",
         answer:
-          "Normalnie JavaScript udostępnia event.preventDefault() lub event.stopPropagation() wewnątrz modułów obsługi zdarzeń.Możesz użyć metod dostarczanych przez vue, ale te metody są przeznaczone do logiki danych, a nie do obsługi zdarzeń DOM. Vue udostępnia poniżej modyfikatory zdarzeń dla v-on, a te modyfikatory są przyrostkami dyrektywy oznaczonymi kropką.stop .prevent .capture .self .once .passive",
+          "W Vue.js mamy możliwość używania modyfikatorów zdarzeń, które są dodatkowymi atrybutami dyrektywy v-on i pozwalają na dostosowanie zachowania zdarzenia. Choć wewnątrz modułów obsługi zdarzeń standardowe metody JavaScript, takie jak event.preventDefault() lub event.stopPropagation() są dostępne, Vue.js udostępnia kilka dodatkowych modyfikatorów zdarzeń. Poniżej przedstawione są modyfikatory zdarzeń dla dyrektywy v-on..stop - zatrzymuje propagację zdarzenia, .prevent - zapobiega domyślnej akcji zdarzenia, .capture - obsługuje zdarzenie w trybie przechwytywania, .self - wywołuje obsługę zdarzenia tylko wtedy, gdy zdarzenie zostało wywołane przez element, na którym dyrektywa jest umieszczona, .once - uruchamia obsługę zdarzenia tylko raz, .passive - określa, że obsługa zdarzenia nie będzie wywoływać metod, które mogą spowolnić przetwarzanie zdarzeń przewijania (scrolling) na urządzeniach dotykowych. Wszystkie te modyfikatory są dostępne jako przyrostki dyrektywy v-on i umożliwiają dostosowanie sposobu działania obsługi zdarzeń.",
       },
       {
         question: "Czym są kluczowe modyfikatory?",
         answer:
-          "Vue obsługuje modyfikatory klawiszy na v-on do obsługi zdarzeń związanych z klawiaturą. Weźmy przykład zdarzenia keyup z enter keycode..enter .tab .delete (captures both “Delete” and “Backspace” keys) .esc .space .up .down .left .right",
+          "Kluczowe modyfikatory to specjalne modyfikatory, które są używane z dyrektywą v-on w Vue.js do obsługi zdarzeń klawiatury. Przykładem może być zdarzenie keyup dla konkretnego klawisza, takiego jak Enter. W Vue.js istnieje kilka kluczowych modyfikatorów, które ułatwiają obsługę zdarzeń związanych z klawiaturą. Poniżej przedstawione są niektóre z tych kluczowych modyfikatorów.enter - odpowiada za klawisz Enter, .tab - odpowiada za klawisz Tab,  .delete - odpowiada za klawisze 'Delete' i 'Backspace',  .esc - odpowiada za klawisz Escape,  .space - odpowiada za klawisz spacji,  .up - odpowiada za strzałkę w górę,  .down - odpowiada za strzałkę w dół,  .left - odpowiada za strzałkę w lewo,  .right - odpowiada za strzałkę w prawo.  Kluczowe modyfikatory są przyrostkami dyrektywy v-on i pozwalają na łatwe i wygodne obsługiwanie zdarzeń klawiatury w Vue.js.",
       },
       {
-        question: "Czym jest destroyed hook?",
+        question: "Co to jest destroyed hook w Vue.js i kiedy jest wywoływany?",
         answer:
-          "Podczas gdy osiągamy stan destroyed hook,praktycznie nic nie pozostaje w naszym komponencie.Wszystko co zostało z nim powiązane zostaje usunięte.Używamy go gdy chcemy wyczyścić lub poinformować server ,że komponent został zniszczony.",
+          "Destroyed hook w Vue.js jest to hook, który jest wywoływany, gdy komponent został zniszczony i nie istnieje już w drzewie komponentów Vue. W tym momencie nie pozostaje praktycznie nic w komponencie. Wszystkie event listenery i subskrypcje, które zostały utworzone przez komponent, są usuwane, a także wszystkie referencje do elementów DOM, które zostały utworzone przez komponent, są zwalniane z pamięci. Używamy tego hooka, gdy chcemy wyczyścić zasoby, które zostały utworzone przez komponent lub poinformować serwer, że komponent został usunięty. Jest to ostatni hook cyklu życia komponentu w Vue.js i po jego wywołaniu komponent jest usuwany z drzewa komponentów Vue",
       },
       {
-        question: "Czym jest activated i dezactivated hook?",
+        question: "Do czego służą hooki activated i deactivated w Vue.js i jak są używane w połączeniu z tagiem <keep-alive>?",
         answer:
-          "Służą utrzymywania przy życiu komponentów.Pozwalają nam wykryć kiedy komponent owinięty w tag <keep-alive>.Możemy użyć ich do fetchowania data dla naszego komponentu oraz aby uchwycić zmiany naszego state.Zachowuje się jak created oraz beforedestroy bez potrzeby tworzenia komponentu na nowo",
+          "Activated i deactivated hooks w Vue.js są używane w połączeniu z komponentem <keep-alive> i służą do zarządzania stanem i zachowaniem komponentów podczas przełączania między nimi. Komponenty owinięte w tag <keep-alive> nie są usuwane z drzewa komponentów Vue, gdy użytkownik przechodzi do innego widoku, ale są przechowywane w pamięci, aby umożliwić szybsze przełączanie między nimi w przyszłości. Hook activated jest wywoływany, gdy użytkownik powraca do komponentu, podczas gdy hook deactivated jest wywoływany, gdy użytkownik przechodzi do innego widoku i komponent jest deaktywowany. Możemy użyć tych hooków do wykonywania działań takich jak pobieranie danych dla komponentu, aktualizowanie stanu lub subskrybowanie zdarzeń. Te hooki zachowują się jak created i beforeDestroy, ale umożliwiają nam zachowanie stanu komponentu i uniknięcie konieczności tworzenia go na nowo za każdym razem, gdy użytkownik do niego powraca.",
       },
       {
-        question: "Czym są destructing hooks?",
+        question: "Jakie są różnice między ref a reactive w Vue.js?",
         answer:
-          "Zarówno ref jak i reactive mogą sprawić ,że wartość będzie reaktywna.Jednak różnią się od siebie w użyciu i dostępie.Ref można bezpośrednio przypisać do pojedynczej zmiennej lub stałej,podczas gdy reaktywność może być używana jako zwykła funkcja data,to sprawia ,że cały obiekt jaki obejmuje jest reaktywny.Ref potrzebuje wartości(value) aby uzyskać dostęp do kontentu,podczas gdy reactive ma bezpośredni dostęp",
-      },
-      {
-        question: "Jaka jest różnica między ref a reactive?",
-        answer:
-          "Ref może przyjmować jako argumenty prymitywy tak samo jak Obiekty, podczas gdy reactive może przyjmować jako argumenty tylko Obiekty.Aby wyświetlić dane poprzez ref musimy się do nich dostać poprzez dodanie .value, dzięki funkcji reactive możesz uzyskać do niej bezpośredni dostęp.za pomocą ref możesz zastąpić całą instancję obiektu, ale korzystając z reactive nie możesz",
-      },
-      {
-        question: "Czym jest beforeEnter?",
-        answer:
-          "the route you want to go to — to the one you come from — from callback to call when you are done — next",
+          "W Vue.js ref i reactive są dwoma różnymi funkcjami służącymi do reaktywnego przetwarzania danych. Ref jest używany do tworzenia reaktywnych referencji do wartości, które mogą być prymitywami lub obiektami, a także do przekazywania danych między komponentami. Reactive natomiast służy do tworzenia reaktywnych obiektów, które mogą zawierać w sobie wiele wartości lub właściwości, ale jako argument przyjmuje tylko obiekty. Aby uzyskać dostęp do wartości przechowywanych w ref, musisz dodać .value, natomiast w reactive można bezpośrednio uzyskać dostęp do właściwości obiektu.Główna różnica między ref a reactive polega na tym, że ref pozwala na reaktywne przetwarzanie zarówno prymitywów, jak i obiektów, podczas gdy reactive działa tylko z obiektami. Ponadto, przy użyciu ref możemy zastąpić całą instancję wartości, podczas gdy w reactive możemy jedynie modyfikować jego właściwości. W praktyce, ref jest częściej używany do przekazywania pojedynczych wartości między komponentami, podczas gdy reactive jest bardziej odpowiedni do zarządzania stanem i danych złożonych obiektów wewnątrz jednego komponentu.",
       },
       {
         question: "Czym jest toRefs?",
         answer:
-          "Konwertuje reaktywny obiekt na zwykły obiekt, w którym każda właściwość wynikowego obiektu jest odnośnikiem wskazującym na odpowiednią właściwość oryginalnego obiektu. Każdy indywidualny ref jest tworzony za pomocą toRef.. Zamiast tego musimy użyć funkcji toRefs, która pozwoli nam wypakować właściwości nie tracąc reaktywności.",
+          "Funkcja toRefs w Vue.js konwertuje reaktywny obiekt na zwykły obiekt, w którym każda właściwość wynikowego obiektu jest odnośnikiem wskazującym na odpowiednią właściwość oryginalnego obiektu. Dzięki temu uzyskujemy dostęp do właściwości obiektu bez konieczności korzystania z .value, co zachowuje reaktywność. Funkcja ta zwraca nowy obiekt zawierający odnośniki do właściwości oryginalnego obiektu, a nie jego kopię.",
       },
       {
         question: "Jak uzywać propsów w composition api?",
         answer:
-          "Aby uzyskać dostęp do propsów w setup function,musimy przekazać go jako argument.Nadal obowiązuje tu zasada braku destrukturyzacji,ponieważ jeśli to zrobimy, stracimy reaktywność.",
+          "Aby używać propsów w Composition API, musimy przekazać je jako argument do funkcji setup(). Następnie możemy uzyskać do nich dostęp bezpośrednio, używając nazwy propsa. Jest to możliwe dzięki temu, że propsy są już reaktywne i są przekazywane do komponentu przez referencję. Należy jednak pamiętać, że nie powinniśmy destrukturyzować propsów w setup(), ponieważ wtedy tracimy reaktywność. W przypadku destrukturyzacji należy użyć funkcji toRefs(), która pozwala na uzyskanie reaktywnych referencji do każdej właściwości propsa..",
       },
       {
         question: "Co to są composables?",
@@ -263,55 +253,53 @@ export default {
       {
         question: "Wymień wady i zalety mixinów",
         answer:
-          "Mixiny umożliwiają nam współdzielenie logiki między komponentami.Kawałki zdefiniowane w mixinach mogą być używane w komponencie tak, jakby były zdefiniowane w samym komponencie. Używanie więcej niż jednego mixinu na raz w tym samym komponencie może spowodować, że komponent będzie trudny do zrozumienia i użycia.Bardziej praktycznym problemem, który może wystąpić podczas używania mixinów w Vue, jest kolizja nazw, co ma miejsce, gdy używa się dwóch lub więcej mixinów deklarujących nazwy.",
+          "Mixiny umożliwiają nam współdzielenie logiki między komponentami. Kawałki kodu zdefiniowane w mixinach mogą być używane w komponencie tak, jakby były zdefiniowane w samym komponencie. Używanie więcej niż jednego mixinu w tym samym komponencie może jednak spowodować, że komponent stanie się trudny do zrozumienia i użycia. Bardziej praktycznym problemem, który może wystąpić podczas używania mixinów w Vue.js, jest kolizja nazw, co ma miejsce, gdy dwa lub więcej mixinów deklaruje te same nazwy."
       },
       {
         question: "Czym jest atrybut ref?",
         answer:
-          "ref pozwala nam uczynić dowolną zmienną reaktywną.Ref bierze argument i zwraca go owiniętego w obiekt z wartością,może być później użyty aby uzyskać dostęp lub zmutować wartość reaktywnej zmiennej.W innych słowach ref wytwarza reaktywną referencje dla naszej wartości.",
+          "Atrybut ref w Vue.js pozwala nam uczynić dowolną zmienną reaktywną. Ref bierze argument i zwraca go owiniętego w obiekt z wartością, który może być później użyty do uzyskania dostępu lub zmiany wartości tej reaktywnej zmiennej. Innymi słowy, ref wytwarza reaktywną referencję dla naszej wartości.",
       },
       
       {
         question: "Czym jest multi root template?",
         answer:
-          "W vue 2 mogliśmy mieć tylko jeden główny element wewnątrz template.W vue 3 uległo to zmianie dzięki funkcji fragmens,dzięki temu nie musimy więcej posiadać tylko jednego głównego elementu.",
+          "Multi-root template to funkcja wprowadzona w Vue 3, która pozwala na posiadanie więcej niż jednego głównego elementu wewnątrz template. W Vue 2 mogliśmy mieć tylko jeden główny element wewnątrz template, co wprowadzało pewne ograniczenia. Dzięki funkcji fragments w Vue 3 nie musimy już posiadać tylko jednego głównego elementu.",
       },
       {
         question: "Czym jest setup w composition api?",
         answer:
-          "Composition api wprowadza opcję setup, która jest uruchamiana przed każdym przechwyceniem cyklu życia.Setup zostanie uruchomiony przed utworzeniem komponentu, gdy właściwości zostaną rozwiązane i będą gotowe do użycia.Funkcja setup() przyjmuje dwa argumenty: pierwszy to props a drugi context.kontekst jest normalnym obiektem JS i nie jest reaktywny.Code inside <script setup> will execute every time an instance of the component is created, and anything declared inside the <script setup> context will be accessible in the <template>. We no longer need to give the template access to the data by returning it from inside the setup() hook.",
+          "W Vue Composition API, opcja setup jest nowym sposobem na definiowanie logiki komponentu. Jest to funkcja, która jest uruchamiana przed montażem komponentu i przed każdym przechwyceniem cyklu życia. Funkcja setup() przyjmuje dwa argumenty: pierwszy to props, a drugi context. Kontekst jest normalnym obiektem JS i nie jest reaktywny. Kod wewnątrz tagu <script setup> zostanie wykonany za każdym razem, gdy zostanie utworzona instancja komponentu, a wszystko zadeklarowane w kontekście <script setup> będzie dostępne w szablonie. Nie musimy już zwracać danych z funkcji setup() w celu udostępnienia ich w szablonie, ponieważ są one automatycznie reaktywne. Dzięki temu setup pozwala na bardziej modularne i czytelne definiowanie logiki komponentu."
       },
       {
         question: "Czym są filtry?",
         answer:
-          "Filtry są używane do formatownia tekstu w naszej aplikacji.Są używane wraz z interpolacją v-bind.",
+          "filtry w Vue.js to specjalne funkcje, które pozwalają na formatowanie tekstu przed wyświetleniem go w szablonie. Dzięki nim możemy np. zmienić wielkość liter, dodać separator między cyframi czy sformatować datę. Filtry używane są wraz z interpolacją {{ }} lub dyrektywą v-bind.",
       },
       {
         question: "props w composition api?",
         answer:
-          "Metoda setup przyjmuje dwa parametry: props i context. Wszystkie zbindowane właściwości mamy dostępne poprzez obiekt props. Ważnym jest, że nie możemy zdestrukturyzować argumentu props, ponieważ utracimy wtedy reaktywność. Zamiast tego musimy użyć funkcji toRefs, która pozwoli nam wypakować właściwości nie tracąc reaktywności.",
+          "props w composition api to mechanizm, który pozwala na przekazywanie danych z rodzica do dziecka w komponencie Vue 3. W metodzie setup mamy dostęp do obiektu props, który zawiera wszystkie przekazane właściwości z rodzica. Warto zauważyć, że props są w Vue 3 tylko do odczytu, więc nie możemy bezpośrednio ich mutować w komponencie potomnym. Aby zachować reaktywność, gdy pracujemy z propsami w composition api, nie możemy destrukturyzować argumentu props, ponieważ utracimy wtedy reaktywność. Zamiast tego musimy użyć funkcji toRefs, która pozwoli nam wypakować właściwości nie tracąc reaktywności.",
       },
       {
         question: "jakie są zalety nuxt.js?",
         answer:
-          "Obsługa modelu SSR, czyli możemy tworzyć kod, który działa zarówno po stronie serwera, jak i klienta, co ma ogromne znaczenie dla SEO.Obsługa modelu strony statycznej, a więc możemy stworzyć czystą stronę w html dla wszystkich naszych zaprogramowanych reguł routingu.Domyślna obsługa i konfiguracja dla wielu bibliotek interfejsu graficznego",
-        secondAnswer:
-          "Ustrukturyzowana budowa – nie musimy zastanawiać się, gdzie dany element powinien się znaleźć w strukturze katalogów.Pełna obsługa routingu, wielojęzyczności, kontroli dostępu, middlewares.Pełna obsługa kompilacji ES6/ES7/ES8 – nie musimy wchodzić w szczegóły znajomości takich narzędzi, jak Webpack czy Babel i martwić się o to, czy nasz kod zadziała na wszystkich przeglądarkach.Dostępny analizator wygenerowanego kodu naszej aplikacji – w przejrzysty sposób obrazuje jak poszczególne moduły wpływają na rozmiar wynikowego kodu css oraz js.",
+        "Nuxt.js oferuje wiele zalet, takich jak obsługa modelu SSR, co pozwala na tworzenie kodu, który działa zarówno po stronie serwera, jak i klienta, co jest istotne dla SEO. Dodatkowo, framework obsługuje model strony statycznej, co pozwala na tworzenie czystej strony w HTML dla wszystkich zaprogramowanych reguł routingu. Nuxt.js ma również domyślną obsługę i konfigurację wielu bibliotek interfejsu graficznego oraz ustrukturyzowaną budowę, dzięki czemu nie musimy martwić się, gdzie dany element powinien się znaleźć w strukturze katalogów.Framework zapewnia również pełną obsługę routingu, wielojęzyczności, kontroli dostępu oraz middlewares. Dodatkowo, Nuxt.js obsługuje kompilację ES6/ES7/ES8, co pozwala na uniknięcie konieczności posiadania szczegółowej znajomości narzędzi takich jak Webpack czy Babel oraz umożliwia działanie kodu na wszystkich przeglądarkach. Framework oferuje także analizator wygenerowanego kodu naszej aplikacji, który w przejrzysty sposób obrazuje, jak poszczególne moduły wpływają na rozmiar wynikowego kodu CSS oraz JS."
       },
       {
-        question: "Czym jest nuxt?",
+        question: "Czym jest framework Nuxt?",
         answer:
-          "Nuxt.js jest to framework wykorzystujący Vue.js, który dodaje możliwość tworzenia aplikacji w oparciu o model SPA (ang. Single Page Application), SSR (ang. Server Side Rendering) lub statycznych plików html.Nuxt od razu konfiguruje Webpack w taki sposób, aby serwer developerski kompilował zmiany na bieżąco. Oznacza to, że aby zobaczyć zmiany wystarczy zapisać edytowany plik. Nie trzeba natomiast kompilować aplikacji od nowa za każdym razem, tak jak w “czystym” Vue.",
+          "Nuxt.js to framework wykorzystujący Vue.js, który dodaje możliwość tworzenia aplikacji w oparciu o model SPA (Single Page Application), SSR (Server Side Rendering) lub statycznych plików HTML. Framework ten oferuje wbudowane funkcjonalności, takie jak automatyczna konfiguracja Webpacka, dzięki czemu serwer developerski kompiluje zmiany na bieżąco. Oznacza to, że aby zobaczyć zmiany, wystarczy zapisać edytowany plik, a nie trzeba kompilować aplikacji od nowa za każdym razem, jak w 'czystym' Vue. Nuxt.js pozwala na tworzenie aplikacji, które są wydajne i łatwe w utrzymaniu, ponieważ oferuje wiele wbudowanych funkcjonalności i ułatwień, które przyspieszają i usprawniają pracę programisty.",
       },
       {
         question: "Wyjaśnij reaktywność w composition api?",
         answer:
-          "Wartości zadeklarowane w setup nie są domyślnie reaktywne.W setup, aby odzwierciedlić zmiany, musisz upewnić się, że wartość jest reaktywna, używając opcji Ref lub Reactive.Słowo kluczowe „this” nie jest dostępne w setup. W Options API słowo kluczowe „this” odnosi się do komponentu, ale w Composition API „this” będzie niezdefiniowane.Ponieważ setup jest wywoływana przed jakimkolwiek innym przechwyceniem cyklu życia, „this” nie będzie odwołaniem do bieżącej aktywnej instancji i dlatego nie będzie zachowywać się jak w innych opcjach.",
+          "W Composition API wartości zadeklarowane w funkcji setup nie są domyślnie reaktywne, co oznacza, że nie będą automatycznie odświeżać widoku w przypadku ich zmian. Aby uzyskać reaktywność, należy użyć opcji Ref lub Reactive. Warto zauważyć, że słowo kluczowe 'this' nie jest dostępne w setup, a w Options API odnosi się ono do komponentu. W Composition API 'this' nie będzie odwołaniem do bieżącej aktywnej instancji i dlatego nie będzie zachowywać się jak w innych opcjach. Ponieważ setup jest wywoływana przed jakimkolwiek innym przechwyceniem cyklu życia, należy uważać, jak korzysta się z this w setup.",
       },
       {
         question: "Czym jest Destroy hook?",
         answer:
-          "Destroyed — Called after a Vue instance has been destroyed. When this hook is called, all directives of the Vue instance have been unbound, all event listeners have been removed, and all child Vue instances have also been destroyed. Please note that this hook is not called during sever-side rendering.",
+          "Hook Destroy w Vue.js jest jednym z hooków cyklu życia, który jest wywoływany po tym, jak instancja Vue została zniszczona. Kiedy hook ten zostanie wywołany, wszystkie dyrektywy instancji Vue zostaną odłączone, wszystkie słuchacze zdarzeń zostaną usunięte, a wszystkie podrzędne instancje Vue również zostaną zniszczone. Należy zauważyć, że hook Destroy nie jest wywoływany podczas renderowania po stronie serwera.",
       },
       {
         question: "Czym jest virtual DOM?",
@@ -321,65 +309,56 @@ export default {
       {
         question: "Wymień funkcjonalności w Vue",
         answer:
-          " virtual DOM, Komponenty: używane do tworzenia niestandardowych elementów wielokrotnego użytku w aplikacjach VueJS.  Templates: VueJS zapewnia szablony oparte na HTML, które wiążą DOM z danymi instancji Vue.Routing - Nawigacja między stronami odbywa się za pomocą vue-router Niewielka waga: VueJS jest lekką biblioteką w porównaniu do innych frameworków.",
+          "Virtual DOM to abstrakcyjna, wirtualna reprezentacja obiektów DOM, czyli drzewa elementów HTML, które istnieje w pamięci przeglądarki. Virtual DOM pozwala na dokonywanie zmian w interfejsie użytkownika, bez bezpośredniej manipulacji na oryginalnym DOM. Zmiany dokonane na Virtual DOM są następnie porównywane z oryginalnym DOM, a następnie zmiany są aktualizowane tylko w tych elementach, które faktycznie się zmieniły. Dzięki temu Virtual DOM pozwala na znaczne przyspieszenie aktualizacji interfejsu użytkownika i poprawę wydajności aplikacji internetowych.",
       },
       {
         question: "Jak działa Vue?",
         answer:
-          "Zasadniczą czynnością, jaką musimy wykonać na samym początku jest powiązanie obiektu Vue z konkretnym elementem DOM w naszym dokumencie. Instancja Vue musi wiedzieć, w jakim zakresie ma działać i trzeba to wyraźnie zdefiniować. Robimy to poprzez podanie nazwy selectora właściwości el obiektu, którego przekazujemy jako argument konstruktora Vue().Dzięki temu każde dziecko zdefiniowanego elementu będzie obserwowane i przetwarzane jako wirtualne drzewo DOM (Virtual DOM).",
-        secondAnswer:
-          "Właściwość data zawiera pola, których będziemy używać do przechowywania naszych danych, methods przetrzymuje definicje metod dostępnych w zasięgu instancji. Metody kryjące się w computed to wartości obliczane dynamicznie. Definiujemy je jako metody, jednakże w momencie ich użycia korzystamy z nich jak ze zwykłego pola (Vue oblicza je automatycznie).",
-        thirdPartOfAnswer:
-          "Ważną kwestią jest sposób odwoływania się do jednej z powyższych właściwości, który odbywa się pośrednictwem referencji this. Jest to możliwe dzięki temu, że Vue łączy wszystkie właściwości z główną instancją obiektu, co daje do nich bezpośredni dostęp.",
+          "Vue działa poprzez powiązanie instancji Vue z konkretnym elementem DOM w naszym dokumencie. Do zdefiniowania zakresu działania instancji Vue wykorzystujemy właściwość el, która przyjmuje selektor określający element, do którego chcemy przypisać instancję Vue. Następnie, każde dziecko zdefiniowanego elementu jest obserwowane i przetwarzane jako wirtualne drzewo DOM (Virtual DOM).Właściwość data zawiera pola, w których przechowujemy dane, a methods przechowuje definicje metod dostępnych w zasięgu instancji. Metody obliczane dynamicznie definiujemy jako właściwości computed. Odwołanie do właściwości odbywa się poprzez referencję this, która łączy wszystkie właściwości z główną instancją obiektu i daje do nich bezpośredni dostęp.",
       },
       {
         question: "Czym są dyrektywy?",
         answer:
-          "Dyrektywy są specjalnymi atrybutami znajdującymi swoje zastosowanie w szablonach.Poprzedzane są prefiksem v-, na przykład: v-if, v-else, v-for, v-model, v-bind. Warto pamiętać, że wiele z nich posiada aliasy, które mogą być używane zamiennie.",
+          "Dyrektywy w Vue.js to specjalne atrybuty, które możemy dodać do elementów HTML w szablonach, aby uzyskać pewne zachowanie. Dyrektywy poprzedzane są prefiksem v-, na przykład: v-if, v-for, v-model, v-bind. Każda dyrektywa ma swoje unikalne zastosowanie i parametry. Na przykład, v-if pozwala na dynamiczne dodawanie lub usuwanie elementów z drzewa DOM na podstawie wyrażenia logicznego, v-for umożliwia iterowanie po kolekcji danych i generowanie powtarzających się elementów HTML. Warto pamiętać, że wiele dyrektyw posiada również aliasy, które możemy użyć zamiennie.",
       },
       {
         question: "Opisz dyrektywe v-on",
         answer:
-          "Pozwala na wiązanie event listenerów do wybranych elementów DOM.",
+          "Dyrektywa v-on pozwala na wiązanie event listenerów do wybranych elementów DOM. Za pomocą dyrektywy v-on możemy reagować na różne zdarzenia wywoływane przez użytkownika, takie jak kliknięcie przycisku, wpisanie tekstu do pola tekstowego itp. Dyrektywa ta jest zwykle używana w połączeniu z argumentem, który określa rodzaj zdarzenia, na które chcemy reagować, na przykład v-on:click lub v-on:input. Warto również pamiętać, że możemy łączyć dyrektywę v-on z wyrażeniami JS, co pozwala na bardziej zaawansowaną logikę obsługi zdarzeń.",
       },
       {
         question: "Opisz dyrektywe v-for",
-        answer: "Wbudowana dyrektywa v-for pozwala nam przechodzić przez elementy w tablicy lub obiekcie. Możesz wykonać iterację na każdym elemencie w tablicy lub obiekcie. Pozwala na wykonanie pętli na powiązanym elemencie DOM. Dyrektywa v-for wymaga określonej składni na wzór item in items. Gdzie items oznacza nasze dane a słowo item jest aliasem dla każdego iterowanego elementu",
+        answer: "Dyrektywa v-for to wbudowana dyrektywa w Vue.js, która umożliwia iterowanie po elementach w tablicy lub obiekcie i dynamiczne generowanie treści na stronie internetowej. Aby użyć dyrektywy v-for, musimy przekazać do niej źródło danych, np. tablicę lub obiekt, oraz określić nazwę aliasu dla każdego elementu iterowanego w naszym szablonie.W tym przypadku, dla każdego elementu w tablicy 'items', Vue.js wygeneruje element li z tekstem odpowiadającym wartości elementu tablicy. W powyższym przykładzie, alias 'item' odnosi się do każdego elementu w tablicy 'items', a wartość '{{ item }}' wyświetla zawartość tego elementu na stronie internetowej.",
       },
       {
         question: "Czym jest x-templates",
         answer:
-          "Oprócz zwykłych szablonów i szablonów wbudowanych, możesz również definiować szablony za pomocą elementu skryptu typu text/x-template, a następnie odwołując się do szablonu za pomocą identyfikatora.",
-      },
-      {
-        question: "Czym jest tag keep-alive?",
-        answer:
-          "to abstrakcyjny komponent używany do zachowania stanu komponentu lub uniknięcia ponownego renderowania.Gdy owiniesz tag wokół komponentu dynamicznego, buforuje on instancje nieaktywnego komponentu bez ich niszczenia.",
+          "Element script z atrybutem type='text/x-template' jest wykorzystywany do definicji szablonów, które mogą być wykorzystane w aplikacji Vue. Jest to przydatne, gdy chcemy zaprojektować wielokrotnie używane szablony, które nie są wyświetlane na początku, lecz są renderowane dynamicznie na żądanie. Definicje szablonów w elementach script typu text/x-template są ignorowane przez przeglądarki, więc nie wyświetlają się na stronie, a jedynie są wykorzystywane przez Vue w celu renderowania komponentów. Aby uzyskać dostęp do takiego szablonu w kodzie, należy użyć selektora # i nazwy identyfikatora szablonu, np. #my-template.",
       },
       {
         question: "Opisz dyrektywe v-bind",
-        answer: "Pozwala na wiązanie wyrażeń do atrybutów elementów DOM. Jednak v-bind wiąże dane tylko w jeden sposób. Oznacza to, że możemy przekazać dane do komponentu, ale jeśli wpiszemy nasze dane wejściowe - nasza pierwotna wartość nie zostanie zmieniona. Może się to wydawać niewielką różnicą, ale oznacza to, że nasze dane mogą nie być zsynchronizowane z tym, co faktycznie znajduje się na danych wejściowych, które mają modelować. Zawsze chcemy mieć pewność, że nasz stan jest zgodny z naszymi danymi - dlatego należy zachować ostrożność przy wyborze między v-modelem a v-bind.",
+        answer: "Dyrektywa v-bind w Vue.js pozwala na wiązanie danych do atrybutów elementów DOM. Jednakże, v-bind wiąże dane tylko w jeden sposób, co oznacza, że możemy przekazać dane do komponentu, ale jeśli zmienimy te dane wejściowe, to nasza pierwotna wartość nie zostanie zmieniona. To może wydawać się niewielką różnicą, ale może spowodować niezgodność danych, co może prowadzić do problemów. Dlatego należy zachować ostrożność przy wyborze między v-bind a innymi dyrektywami, takimi jak v-model.",
       },
       {
         question: "Opisz dyrektywe v-model",
         answer:
-          "Pozwala na wiązanie elementów DOM takich jak na przykład input do pól obiektu data. jeśli zmienią się nasze dane, zmienią się też nasze dane wejściowe, a jeśli zmienią się nasze dane wejściowe, zmienią się też nasze dane. v-model zignoruje wartość początkową, sprawdzone lub wybrane atrybuty znajdujące się na dowolnych elementach formularza. Dlatego zawsze używa danych instancji Vue jako źródła prawdy. ",
+          "Dyrektywa v-model to jedna z najczęściej używanych dyrektyw w Vue.js. Pozwala na dwukierunkowe wiązanie danych między elementami formularza w HTML a danymi w obiekcie data w instancji Vue. Oznacza to, że gdy użytkownik wprowadza zmiany w polu formularza, zmieniają się również dane w obiekcie data, a gdy dane w obiekcie data są zmienione programowo, zmiany te są automatycznie propagowane do pól formularza.Dyrektywa v-model jest szczególnie przydatna w przypadku tworzenia formularzy, ponieważ pozwala na łatwe zarządzanie stanem formularza. Jest również często używana do włączania i wyłączania elementów interfejsu użytkownika na podstawie stanu danych.",
       },
       {
         question: "Jakie są obsługiwane modyfikatory w v-model?",
         answer:
-          "Dyrektywa v-model obsługuje trzy modyfikatory.lazy: Domyślnie v-model synchronizuje dane wejściowe z danymi po każdym zdarzeniu wejściowym. Możesz dodać modyfikator lazy, aby zamiast tego synchronizować zdarzenia po zmianie.number: Jeśli chcesz, aby dane wprowadzane przez użytkownika były automatycznie umieszczane jako liczba.3.trim: jeśli chcesz, aby białe znaki z danych wprowadzonych przez użytkownika były przycinane automatycznie.",
+          "Jest kilka obsługiwanych modyfikatorów w dyrektywie v-model:.lazy - domyślnie v-model synchronizuje dane wejściowe z danymi po każdym zdarzeniu wejściowym. Możesz dodać modyfikator lazy, aby zamiast tego synchronizować zdarzenia po zmianie. .number - konwertuje dane wejściowe na liczbę. Jeśli chcesz, aby dane wprowadzane przez użytkownika były automatycznie umieszczane jako liczba. .trim - usuwa białe znaki z danych wprowadzonych przez użytkownika na początku i końcu.",
       },
 
       {
         question: "co to jest flux?",
         answer:
-          "Flux to wzorzec projektowy stworzony do ujednolicenia przepływu danych w aplikacjach.Posiada trzy części: dispatch, store i view.View to część w której użytkownik komunikuje się z aplikacją.Store to w dużym uproszczeniu obiekt z stanem aplikacji.Dispatcher to centralna część fluxa z której wysłamy prośby o zmianę stanu aplikacji.Przede wszystkim aktualizacja danych na frontcie, szczególnie gdy jest zbudowany z komponentów, wymaga ciągłej wymiany informacji między nimi. Łatwo wpaść w dwie bardzo głębokie dziury związane z aktualizacjami: kaskada update'ów (propagacja danych) oraz piekiełko eventowe, gdzie każda zmiana odpala parę trudnych do śledzenia eventów. Flux rozwiązuje ten problem.",
+          "Flux to wzorzec architektoniczny, który został stworzony do ujednolicenia przepływu danych w aplikacjach. Pozwala na łatwiejsze zarządzanie stanem aplikacji poprzez wprowadzenie trzech głównych elementów: dispatcher, store i view. Dispatcher jest centralną częścią Fluxa, z której wysyłamy akcje i prośby o zmianę stanu aplikacji. Store to miejsce, w którym przechowywany jest stan aplikacji, a View to elementy interfejsu użytkownika, które są odpowiedzialne za wyświetlanie danych i reagowanie na akcje użytkownika. Flux pozwala na bardziej jednoznaczne i łatwiejsze przepływanie danych w aplikacji, unikając kaskadowych aktualizacji i problemów związanych z eventami.",
       },
       {
         question: "Jak composition api zmniejsza koszty pamięci",
         answer:
-          "Kod napisany w Composition API i script setup jest bardziej wydajny i przyjazny dla minifikacji niż odpowiednik Options API.Dzieje się tak, ponieważ szablon w komponencie script setup jest kompilowany jako funkcja wbudowana w ten sam zakres kodu script setup. W przeciwieństwie do dostępu do właściwości z tego, skompilowany kod szablonu może bezpośrednio uzyskiwać dostęp do zmiennych zadeklarowanych wewnątrz ustawienia skryptu, bez pośrednika między nimi. Prowadzi to również do lepszej minifikacji, ponieważ wszystkie nazwy zmiennych można bezpiecznie skrócić.",
+          "Kod napisany w Composition API i skrypcie setup jest bardziej wydajny i przyjazny dla minifikacji niż jego odpowiednik w Options API. Dzieje się tak, ponieważ szablon w komponencie script setup jest kompilowany jako funkcja wbudowana w ten sam zakres kodu script setup. Oznacza to, że skompilowany kod szablonu może bezpośrednio uzyskiwać dostęp do zmiennych zadeklarowanych wewnątrz ustawienia skryptu, bez pośrednika między nimi. Ponadto, składnia Composition API pozwala na wykorzystanie bardziej zoptymalizowanych metod deklarowania zmiennych i funkcji, co przekłada się na mniejsze użycie pamięci. W przypadku Options API, zmienne są deklarowane jako właściwości obiektu, co może prowadzić do niepotrzebnego tworzenia dodatkowych obiektów i zwiększenia użycia pamięci .Lepsza wydajność i mniejsze użycie pamięci mają również pozytywny wpływ na minifikację kodu. Wszystkie nazwy zmiennych mogą być bezpiecznie skrócone, co przekłada się na jeszcze mniejszy rozmiar pliku i szybsze ładowanie strony.",
       },
       {
         question: "Na czym polega reaktywność w vue",
@@ -389,12 +368,12 @@ export default {
       {
         question: "Czym jest single file component?",
         answer:
-          "Jest to plik z rozszerzeniem vue zawierającym komponent vue.W przeciwieństwie do stndardowego podziału plików na style,szkielet oraz logike w odrębnych plikach,w single file component wszystko znajduje się w jednym pliku.",
+          "Single file component to plik o rozszerzeniu .vue zawierający całość komponentu Vue, czyli zarówno kod JavaScript, jak i HTML oraz style CSS. W odróżnieniu od tradycyjnego podejścia, gdzie poszczególne elementy znajdują się w oddzielnych plikach, single file component pozwala na przechowywanie wszystkich informacji w jednym pliku, co ułatwia zarządzanie i utrzymanie kodu",
       },
       {
         question: "Co to jest rejestracja globalna w komponentach?",
         answer:
-          "Komponenty zarejestrowane globalnie mogą być użyte w szablonie dowolnej głównej instancji Vue (nowej Vue) utworzonej po rejestracji.",
+          "Rejestracja globalna w komponentach polega na zarejestrowaniu komponentu w instancji Vue tak, aby mógł być używany w dowolnym miejscu w aplikacji. Po zarejestrowaniu globalnym, komponent jest dostępny w szablonie każdej nowej instancji Vue utworzonej po rejestracji. Aby zarejestrować komponent globalnie, można użyć metody Vue.component().",
       },
       {
         question: "Opisz walidacje dostępne dla propsów",
@@ -404,12 +383,12 @@ export default {
       {
         question: "Co to są dyrektywy niestandardowe?",
         answer:
-          "Dyrektywy niestandardowe to małe polecenia, które można dołączyć do elementów DOM. Są one poprzedzone v-, aby poinformować bibliotekę, że używasz specjalnego fragmentu znaczników i aby zachować spójność składni. Są one zazwyczaj przydatne, jeśli potrzebujesz niskopoziomowego dostępu do elementu HTML, aby kontrolować pewne zachowanie.",
+          "Dyrektywy niestandardowe to polecenia, które możemy dodać do elementów DOM w celu wpływania na ich zachowanie lub stylowanie. Aby oznaczyć dyrektywę jako niestandardową, musimy dodać przedrostek 'v-' do nazwy dyrektywy. W celu zastosowania dyrektywy do elementu możemy użyć jej nazwy w atrybucie elementu, np. v-my-custom-directive. Dyrektywy niestandardowe są często używane w celu manipulacji DOM lub dostosowywania zachowania komponentów Vue."
       },
       {
         question: "Co to jest router i jakie są jego funkcje?",
         answer:
-          "Vue Router to oficjalna biblioteka routingu dla aplikacji jednostronicowych zaprojektowana do użytku z frameworkiem Vue.js.Zagnieżdżone mapowanie trasy/widoku Modułowa, oparta na komponentach konfiguracja routera Parametry trasy, zapytanie, symbole wieloznaczne.Szczegółowa kontrola nawigacji Linki z automatycznymi aktywnymi klasami CSS Tryb historii HTML5 lub tryb skrótu z automatycznym przywracaniem w IE9 Przywróć pozycję przewijania po powrocie do trybu historii",
+          "Router jest oficjalną biblioteką routingu dla aplikacji jednostronicowych, która została zaprojektowana do użytku z frameworkiem Vue.js. Jego główną funkcją jest obsługa nawigacji między różnymi widokami aplikacji bez konieczności odświeżania strony. Biblioteka ta pozwala na zdefiniowanie tras/widoków aplikacji, zagnieżdżone mapowanie tras, konfigurację routera opartą na komponentach oraz kontrolę nawigacji przy użyciu parametrów trasy, zapytań oraz symboli wieloznacznych. Oprócz tego Vue Router oferuje linki z automatycznymi aktywnymi klasami CSS, tryb historii HTML5 lub tryb skrótu z automatycznym przywracaniem w IE9 oraz przywracanie pozycji przewijania po powrocie do trybu historii.",
       },
       {
         question:
@@ -420,7 +399,7 @@ export default {
       {
         question: "Wyjaśnij na czym polega przepływ danych w vue",
         answer:
-          "Vue używa one-way data flow.Dane są przekazywane do komponentu dziecka z komponentu rodzica za pomocą właściwości props. Gdy komponent rodzica aktualizuje wartość propsów, jest ona automatycznie aktualizowana w komponencie dziecka.Nie powinno się dokonywać mutacji wewnątrz komponentu dziecka. Komponent dziecka może komunikować się  z rodzicem za pomocą słowa emit.",
+          "w architekturze Vue stosowany jest przepływ danych jednokierunkowy (one-way data flow). Dane są przekazywane z komponentu rodzica do komponentu potomnego poprzez propsy - właściwości przekazywane do komponentu potomnego z komponentu rodzica. Gdy wartość propsów w komponencie rodzica zostaje zaktualizowana, ta sama wartość zostaje automatycznie zaktualizowana w komponencie potomnym.W komponencie potomnym nie powinno się mutować danych propsów, ponieważ nie powinno się zmieniać stanu komponentu potomnego bezpośrednio. Jeśli chcemy zmienić wartość propsa w komponencie potomnym, powinniśmy skorzystać z mechanizmu zdarzeń emitowanych przez komponent potomny za pomocą metody emit(), a następnie przechwycić je w komponencie rodzica za pomocą słowa kluczowego v-on. Taki sposób komunikacji między komponentami nazywa się także 'emitowanie zdarzeń' lub 'emit-and-catch '",
       },
       {
         question: "Wymień najczęstszą przyczynę wycieków pamięci w aplikacjach Vue.js i sposoby ich rozwiązania.",
@@ -430,45 +409,33 @@ export default {
       {
         question: "Czym jest instancja vue?",
         answer:
-          "Każda aplikacja Vue działa, tworząc nową instancję Vue z funkcją Vue. Ogólnie zmienna vm (skrót od ViewModel) służy do odwoływania się do instancji Vue. Możesz utworzyć instancję vue jak poniżej, var vm = new vue",
-      },
-      {
-        question: "How do you achieve conditional group of elements?",
-        answer:
-          "Możesz uzyskać warunkową grupę elementów (przełączanie wielu elementów na raz) przez zastosowanie dyrektywy v-if na elemencie <template>, który działa jako niewidoczny wrapper (bez renderowania) dla grupy elementów.",
+          "Instancja Vue to obiekt, który reprezentuje część aplikacji Vue, a konkretnie jeden komponent. Instancja Vue jest tworzona za pomocą konstruktora Vue i pozwala na określenie danych, metod, obserwatorów i wiele innych właściwości i funkcji, które składają się na logikę komponentu. Każdy komponent w aplikacji Vue jest reprezentowany przez swoją własną instancję Vue. Dlatego, tworząc instancję Vue, powinniśmy wskazać, którego komponentu to instancja jest reprezentacją. Przykładowo, możemy stworzyć instancję Vue, aby reprezentować główny komponent naszej aplikacji, jak również możemy stworzyć wiele instancji Vue, aby reprezentować wiele komponentów.",
       },
       {
         question: "Jak ponownie wykorzystujesz elementy z kluczowym atrybutem?",
         answer:
-          "Vue zawsze stara się renderować elementy tak wydajnie, jak to tylko możliwe. Dlatego stara się ponownie wykorzystać elementy, zamiast budować je od zera. Ale to zachowanie może powodować problemy w kilku scenariuszach.   Na przykład, jeśli spróbujesz wyrenderować ten sam element wejściowy w blokach v-if i v-else, to zachowa on poprzednią wartość, jak poniżej,Możemy oddzielić oba elementy wejściowe, stosując atrybut klucza jak poniżej,",
+          "Vue zawsze stara się renderować elementy w jak najbardziej wydajny sposób. Dlatego próbuje ponownie wykorzystać elementy, zamiast tworzyć je od nowa. Jednak takie zachowanie może prowadzić do problemów w niektórych scenariuszach. Aby temu zapobiec, można użyć atrybutu klucza (key attribute), który pozwala na uniknięcie problemów związanych z ponownym wykorzystywaniem elementów. Na przykład, jeśli spróbujemy wyrenderować ten sam element input w blokach v-if i v-else, to wartość zostanie zachowana",
       },
       {
         question: "Różnica między script a script setup",
         answer:
-          "Kod wewnątrz jest kompilowany jako zawartość funkcji setup() komponentu. Oznacza to, że w przeciwieństwie do normalnego skryptu, który jest wykonywany tylko raz, gdy komponent jest importowany po raz pierwszy, kod wewnątrz ustawienia skryptu będzie wykonywany za każdym razem, gdy tworzona jest instancja komponentu.",
+          "Składnia script setup to nowa funkcjonalność wprowadzona w Vue 3. Kod wewnątrz jest kompilowany jako zawartość funkcji setup() komponentu. Oznacza to, że w przeciwieństwie do normalnego skryptu, który jest wykonywany tylko raz, gdy komponent jest importowany po raz pierwszy, kod wewnątrz setup() będzie wykonywany za każdym razem, gdy tworzona jest instancja komponentu. Funkcja setup() ma na celu uproszczenie kodu i zapewnienie lepszej wydajności, ponieważ umożliwia łatwe i bezpośrednie importowanie właściwości i metod z komponentu, a także zapewnia automatyczne zarządzanie reaktywnością.",
       },
       {
         question:
           "Jak komunikować się z komponentu dziecka to komponentu rodzica?",
         answer:
-          "Jeśli chcesz, aby dziecko chciało ponownie komunikować się z rodzicem, wyemituj zdarzenie od dziecka za pomocą obiektu $emit do rodzica,",
-      },
-      {
-        question: "Kiedy komponent potrzebuje pojedynczego elementu głównego?",
-        answer:
-          " W Vue 2 każdy komponent musi mieć jeden element główny,gdy szablon ma więcej niż jeden element. W takim przypadku musisz owinąć elementy elementem nadrzędnym.W przeciwnym razie wystąpi błąd, mówiący, że Szablon komponentu powinien zawierać dokładnie jeden element główny.W vue 3 komponenty mogą mieć wiele węzłów głównych. Ten sposób dodawania wielu węzłów głównych nazywa się fragmentami.",
+          "eśli chcesz przekazać informacje z komponentu dziecka do komponentu rodzica, możesz użyć metody $emit, która wysyła zdarzenie do rodzica. Aby to zrobić, musisz wpierw zdefiniować zdarzenie w komponencie dziecka, a następnie wywołać metodę $emit, podając nazwę zdarzenia i opcjonalnie przekazując dane. W rodzicu musisz zarejestrować obsługę zdarzenia, korzystając z atrybutu v-on lub @ i podając nazwę zdarzenia i funkcję obsługi. Funkcja obsługi zostanie wywołana, gdy dziecko wyemituje zdarzenie, a dane przekazane za pomocą $emit będą przekazane do funkcji obsługi jako argumenty. Ogólnie rzecz biorąc, aby skutecznie komunikować się między komponentami dziecka i rodzica w Vue.js, musisz zrozumieć, jak działa system zdarzeń i jak korzystać z metod $emit i atrybutu v-on lub @. Ważne jest również, aby wybrać odpowiednie nazwy zdarzeń i upewnić się, że przekazywane dane są zgodne z oczekiwaniami.",
       },
       {
         question: "Czym jest props?",
         answer:
-          "Propsy to niestandardowe atrybuty, które można zarejestrować w komponencie. są używane do przekazywania informacji z komponentu rodzica do komponentu dziecka. Można go zarejestrować w komponencie aby przekazać dane do jednego z komponentów dziecka.Dane w props mogą przepływać tylko jednostronnie,z komponentu rodzica do komponentu dziecka.To oznacza ,że nie jesteśmy w stanie przesłać propsa z komponentu dziecka do rodzica.",
-        secondAnswer:
-          "Propsy służą tylko do odczytu a to oznacza ,że nie mogą zostać zmodyfikowane przez komponent dziecka ponieważ wartość należy do komponentu rodzica",
+          "Propsy to niestandardowe atrybuty, które można zarejestrować w komponencie. Służą do przekazywania informacji z komponentu rodzica do komponentu dziecka. Propsy można zarejestrować w komponencie, aby przekazać dane do jednego z komponentów dziecka. Dane w propsach mogą przepływać tylko jednostronnie - z komponentu rodzica do komponentu dziecka. Oznacza to, że nie jest możliwe przekazywanie propsów z komponentu dziecka do rodzica. Propsy są tylko do odczytu, co oznacza, że nie mogą zostać zmodyfikowane przez komponent dziecka, ponieważ wartość należy do komponentu rodzica.",
       },
       {
         question: "czym jest mapState?",
         answer:
-          "życie mapState() pozwala na pobranie i przypisanie do lokalnego scope wartości bezpośrednio z sekcji state w store. W ten sposób otrzymujemy czyste dane – bez żadnych modyfikacji. Ma to duży sens, jeśli są to typy proste – jakaś flaga będąca wartością boolean (true/false), np. flaga „loading” itp.",
+          "mapState() to funkcja, która pozwala na pobranie i przypisanie wartości bezpośrednio z sekcji state w store do lokalnego scope. W ten sposób otrzymujemy czyste dane - bez żadnych modyfikacji. Ma to duży sens, szczególnie w przypadku prostych typów, takich jak flaga boolean, np. flaga 'loading' itp. Użycie funkcji mapState() upraszcza proces dostępu do danych w store i ułatwia ich użycie w komponentach. Pozwala nam na dostęp i przypisanie wartości stanu w sposób bardziej deklaratywny, bez konieczności martwienia się o szczegóły implementacyjne Vuex store.",
       },
       {
         question: "czym jest pinia?",
@@ -483,21 +450,17 @@ export default {
       {
         question: "Czym są sunspense components",
         answer:
-          "Suspense components to nowa funkcja w vue 3 której ogólną ideą jest umożliwienie komponentom „zawieszenia” renderowania.Gdy wszystkie informacje będą dostępne, js ponownie spróbuje wyrenderować komponent.Aby to osiągnąć Komponent może rzucić Promise w swojej metodzie renderowania.łapie rzuconą Obietnicę i szuka najbliższego Suspensekomponentu na drzewie, które działa jak rodzaj granicy. SuspenseSkładnik bierze element jako fallbackpodpora, która będzie wyświetlana, gdy wszystkie dzieci w jego poddrzewem zawiesinie, bez względu na to gdzie i dlaczego.",
+          "W Vue 3 dodano funkcjonalność Suspense, która ma podobną ideę - umożliwienie komponentom 'zawieszenia' renderowania, gdy potrzebne dane są jeszcze ładowane. Komponent Suspense służy jako rodzaj granicy, który otacza inne komponenty, a jeśli te zawieszają się na ładowaniu danych, Suspense wyświetla fallback element lub komponent.W Vue 3, aby osiągnąć to zachowanie, możemy użyć dyrektywy v-wait lub komponentu Suspense. Gdy komponent zawiesi się na ładowaniu, dyrektywa lub komponent wyświetlą fallback treść, a gdy dane będą gotowe, komponent zostanie wyrenderowany z właściwą treścią.",
       },
       {
         question: "Jaka jest różnica między composition api a option api?",
         answer:
-          "Composition API. Udostępnia nowy sposób tworzenia komponentów, który znacząco różni się od podejścia zaprezentowanego w poprzedniej wersji frameworka.Przede wszystkim większa elastyczność w układaniu logiki kodu, jego lepsza reużywalność oraz poprawiona czytelność dzięki mniejszej ilości zagłębień.Doświadczenie pokazało, że większe aplikacje oparte o Vue.js w wersji 2 były ciężkie do utrzymania, do rozbudowy oraz do diagnozowania błędów.",
-        secondAnswer:
-          "Composition api posiada setup hook wewnątrz którego piszemy swój kod. Wewnątrz setup hook możemy pogrupować części naszego kodu według logicznego porządku.Dzięki composition api nie musimy więc używać Mixinów.",
+          "W Vue.js, Option API to tradycyjny sposób tworzenia komponentów, który jest obecny już od pierwszej wersji frameworka. Polega on na definiowaniu opcji (options) w obiekcie komponentu, takich jak data, methods, computed itp. W tym podejściu, kod komponentu jest zorganizowany w różnych metodach, a dane i metody są definiowane na jednym poziomie.Composition API to nowszy sposób tworzenia komponentów w Vue.js 3, który został wprowadzony w celu poprawy czytelności i łatwości w utrzymaniu kodu w większych projektach. W Composition API, logika komponentu jest zorganizowana w funkcji setup, która zawiera całą logikę kodu. Funkcja ta może zawierać różne hooki (hook functions), takie jak reactive, computed, watch, ref i wiele innych, które umożliwiają organizowanie kodu w bardziej logiczny sposób..Jedną z zalet Composition API jest możliwość wykorzystywania tych samych hooków w wielu komponentach, co znacząco zwiększa ich reużywalność. Dzięki temu unika się również problemów z Mixinami, które były stosowane w Option API w celu uzyskania podobnej funkcjonalności.Podsumowując, Composition API to nowszy sposób tworzenia komponentów w Vue.js 3, który umożliwia bardziej elastyczne i logiczne organizowanie kodu, a także zwiększa jego czytelność i reużywalność w większych projektach.",
       },
       {
         question: "Jaka jest różnica między watch a watchEffect",
         answer:
-          "W watchEffect główna różnica polega na tym, że nie obserwujesz jednej konkretnej wartości reaktywnej, ale każdą reaktywną wartość w funkcji zwrotnej. Hook działa jak computed hook lub computed option, ale zamiast zwracać wartość, używasz jej do wyzwalania efektów ubocznych.Ponieważ po prostu definiujesz funkcję zwrotną i jest ona uruchamiana automatycznie, jeśli zmieni się jedna z reaktywnych zmiennych, których używasz w jej wnętrzu. Ale to zachowanie może być problematyczne. Jeśli chcesz wywołać funkcję zwrotną tylko wtedy, gdy zmieni się jedna lub wiele określonych zmiennych, musisz użyć watch() zamiast watchEffect().",
-        secondAnswer:
-          "Co więcej, użycie watch() umożliwia nam również dostęp do poprzedniej wartości obserwowanych zmiennych.I think the easiest way to remember the difference between watch and watchEffect() is to think of watchEffect() like a variant of computed() that doesnt return a value but triggers side-effects.",
+          "óżnica między watch a watchEffect polega na tym, że watch() pozwala na obserwację konkretnej reaktywnej wartości lub listy wartości i wywołuje funkcję zwrotną tylko wtedy, gdy któraś z nich się zmieni. Daje nam to kontrolę nad tym, co dokładnie obserwujemy.Z drugiej strony, watchEffect() obserwuje każdą reaktywną wartość w funkcji zwrotnej i wywołuje ją automatycznie, gdy któraś z nich ulegnie zmianie. Nie potrzebuje ona dodatkowej konfiguracji, co sprawia, że jest łatwiejsza w użyciu, ale może prowadzić do niepotrzebnego renderowania, jeśli nie jest używana ostrożniePodsumowując, watch() daje nam większą kontrolę nad tym, co obserwujemy, a watchEffect() jest łatwiejszy w użyciu, ale może prowadzić do niepotrzebnego renderowania.",
       },
     ],
   },

@@ -117,7 +117,6 @@
 <script>
 import { mapState } from "vuex";
 import FavoriteSection from "./FavoriteSection";
-import loginAnimation from "./LoginAnimation";
 import MyInformation from "./MyInformation";
 import ChangePassword from "./ChangePassword";
 import MessageSection from "./MessageSection";
@@ -155,7 +154,6 @@ export default {
     setTimeout(() => (this.elementVisible = false), 3000);
   },
   components: {
-    loginAnimation,
     MyInformation,
     FavoriteSection,
     ChangePassword,
@@ -163,3 +161,4 @@ export default {
   },
 };
 </script>
+
