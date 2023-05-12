@@ -20,56 +20,56 @@ const routes = [
       {
         path: "cssquestions",
         component: () =>
-          import("../components/RecruimentQuestions/CssQuestions"),
-        name: "CssQuestions",
+          import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
+        name: "RecruitmentQuestion",
       },
       {
         path: "javascript",
         component: () =>
-          import("../components/RecruimentQuestions/JavascriptQuestions"),
+          import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
         name: "JavascriptQuestions",
       },
       {
         path: "vue",
         component: () =>
-          import("../components/RecruimentQuestions/VueQuestions"),
+          import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
         name: "VueQuestions",
       },
       {
         path: "react",
         component: () =>
-          import("../components/RecruimentQuestions/ReactQuestions"),
+          import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
         name: "ReactQuestions",
       },
       {
         path: "test",
         component: () =>
-          import("../components/RecruimentQuestions/TestQuestions"),
+          import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
         name: "TestQuestions",
       },
       {
         path: "typescript",
         component: () =>
-          import("../components/RecruimentQuestions/TypeScriptQuestions"),
+          import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
         name: "TypeScriptQuestions",
       },
       {
         path: "general",
         component: () =>
-          import("../components/RecruimentQuestions/GeneralQuestions"),
+          import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
         name: "GeneralQuestions",
       },
 
       {
         path: "htmlquestions",
         component: () =>
-          import("../components/RecruimentQuestions/HtmlQuestions"),
+          import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
         name: "HtmlQuestions",
       },
       {
         path: "gitquestions",
         component: () =>
-          import("../components/RecruimentQuestions/GitQuestions"),
+          import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
         name: "GitQuestions",
       },
       {

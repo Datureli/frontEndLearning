@@ -1,11 +1,11 @@
 <template>
-  <v-container fluid class="mx-auto">
-    <v-sheet class="darkGradient mx-auto">
-      <v-row justify="center">
+  <v-container fluid>
+    <v-sheet class="darkGradient">
+      <v-row>
         <v-col v-if="$vuetify.breakpoint.mdAndUp" cols="12" sm="6" md="2">
           <FirstColumn />
         </v-col>
-        <v-col cols="12" sm="6" md="7">
+        <v-col justify="center" cols="12" sm="6" md="8">
           <MiddleColumn />
         </v-col>
         <v-col v-if="$vuetify.breakpoint.mdAndUp" cols="12" sm="6" md="2">

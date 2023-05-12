@@ -1,11 +1,9 @@
 <template>
-  <div class="mx-auto">
+  <div class="mx-auto" >
     <v-sheet
-      class="mx-auto mt-md-13"
+      class="mx-auto mt-md-10"
       :height="height"
-      width="100%"
-      :min-width="width"
-      color="darkGradient"
+      color="red"
       :elevation="elevation"
     >
       <div v-if="$route.path === '/about'" class="pa-5">
@@ -15,62 +13,29 @@
           </h1>
         </div>
       </div>
-      <component :is="currentComponent" />
+      <RecruitmentQuestion />
+
     </v-sheet>
-    <IconComponent v-if="$route.path !== '/about'" class="mt-3" />
+    <IconComponent v-if="$route.path !== '/about'" class="mt-5" />
   </div>
 </template>
 <script>
-import {
-  HtmlQuestions,
-  CssQuestions,
-  JavascriptQuestions,
-  VueQuestions,
-  GitQuestions,
-  TestQuestions,
-  TypeScriptQuestions,
-  ReactQuestions,
-  GeneralQuestions,
-  TestYourKnowledge,
-} from "../RecruimentQuestions";
 import IconComponent from "../Icons/IconComponent";
+import RecruitmentQuestion from '../RecruimentQuestions/RecruitmentQuestion'
 
 export default {
-  data() {
-    return {
-      componentsTable: {
-        "/about/cssquestions": CssQuestions,
-        "/about/javascript": JavascriptQuestions,
-        "/about/htmlquestions": HtmlQuestions,
-        "/about/vue": VueQuestions,
-        "/about/gitquestions": GitQuestions,
-        "/about/react": ReactQuestions,
-        "/about/general": GeneralQuestions,
-        "/about/test": TestQuestions,
-        "/about/typescript": TypeScriptQuestions,
-        "/about/test-knowledge": TestYourKnowledge,
-      },
-    };
-  },
   components: {
-    HtmlQuestions,
-    CssQuestions,
-    JavascriptQuestions,
-    VueQuestions,
-    GitQuestions,
-    TestQuestions,
-    TypeScriptQuestions,
-    ReactQuestions,
-    GeneralQuestions,
     IconComponent,
-    TestYourKnowledge,
+    RecruitmentQuestion
   },
   computed: {
+    /*
     width() {
       return this.$vuetify.breakpoint.mdAndUp ? 800 : "100%";
     },
+    */
     height() {
-      return this.$vuetify.breakpoint.mdAndUp ? 410 : 410;
+      return this.$vuetify.breakpoint.mdAndUp ? 390 : 410;
     },
     elevation() {
       return this.$vuetify.breakpoint.smAndDown ? 0 : 3;

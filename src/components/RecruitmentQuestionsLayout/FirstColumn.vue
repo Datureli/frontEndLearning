@@ -1,5 +1,5 @@
 <template>
-  <v-card :width="width" class="mt-10" color="transparent" elevation="0">
+  <v-card :width="width" class="mt-10" color="red" elevation="0">
     <v-list color="transparent">
       <v-list-item-group active-class="green--text">
         <v-list-item
@@ -7,7 +7,9 @@
           :key="firstColumn"
           :to="firstColumn.link"
         >
-          <v-icon large :color="firstColumn.color">{{ firstColumn.icon }}</v-icon>
+          <v-icon large :color="firstColumn.color">{{
+            firstColumn.icon
+          }}</v-icon>
 
           <v-list-item-title class="ml-5 text-h6">{{
             firstColumn.title
@@ -21,7 +23,9 @@
               </template>
 
               <v-card>
-                <div class="d-flex justify-space-between text-h5 grey lighten-2">
+                <div
+                  class="d-flex justify-space-between text-h5 grey lighten-2"
+                >
                   <v-card-title>
                     Wybierz kategorię
                   </v-card-title>
@@ -29,14 +33,13 @@
                     Upload
                   </v-btn>
                 </div>
-                    <v-card-title>
-                    Najczęściej uzywane
-                  </v-card-title>
+                <v-card-title>
+                  Najczęściej uzywane
+                </v-card-title>
                 <v-card-text>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                 
                 </v-card-text>
 
                 <v-divider></v-divider>
@@ -97,7 +100,7 @@ export default {
         case "md":
           return 215;
         case "lg":
-          return 260;
+          return 250;
         case "xl":
           return 400;
       }
