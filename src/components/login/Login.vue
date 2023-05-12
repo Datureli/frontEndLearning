@@ -70,7 +70,6 @@
                 Login
               </h1>
             </v-card-title>
-            <v-card-text>
               <v-form>
                 <v-text-field
                   hide-details="auto"
@@ -89,7 +88,6 @@
                   @click:append="showPassword = !showPassword"
                 />
               </v-form>
-            </v-card-text>
             <v-card-actions>
               <v-btn
                 block
@@ -100,7 +98,7 @@
                 >Login</v-btn
               >
             </v-card-actions>
-            <v-card-text class="text-center">
+            <v-card-text class="justify-center">
               Not a member yet?
               <router-link :to="{ name: 'SignUp' }">
                 Sign up
@@ -120,6 +118,7 @@ import FavoriteSection from "./FavoriteSection";
 import MyInformation from "./MyInformation";
 import ChangePassword from "./ChangePassword";
 import MessageSection from "./MessageSection";
+
 export default {
   data: () => ({
     username: "",
@@ -129,6 +128,7 @@ export default {
     showPassword: false,
     loggedIn: false,
   }),
+
   computed: {
     ...mapState("login", ["loginRules", "passwordRules", "loginSections"]),
     ...mapState("register", ["registeredUsers"]),
@@ -138,12 +138,14 @@ export default {
     logOut() {
       this.loggedIn = !this.loggedIn;
     },
+
     closeModal() {
       this.dialog = false;
       if ( this.$route.name == 'Login' ) {
         this.$router.push({ path: '/about'})
       }
     },
+
     isUserLogin() {
       this.username.length > 0 && this.password.length > 0
         ? (this.loggedIn = true && this.$router.push({ path: "login" }))
