@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mt-10" outlined color="red" max-width="600">
+  <v-card class="mt-10" outlined color="transparent" max-width="600">
     <h3 class="text-md-h6">Test your knowledge</h3>
     <v-form class="pa-4" v-model="isFilled">
       <v-select

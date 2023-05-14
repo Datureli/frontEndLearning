@@ -1,11 +1,11 @@
 <template>
   <v-container fluid>
-    <v-sheet class="darkGradient">
+    <v-sheet class="darkGradient full-height">
       <v-row>
         <v-col v-if="$vuetify.breakpoint.mdAndUp" cols="12" sm="6" md="2">
           <FirstColumn />
         </v-col>
-        <v-col justify="center" cols="12" sm="6" md="8">
+        <v-col justify="center" cols="12" md="8">
           <MiddleColumn />
         </v-col>
         <v-col v-if="$vuetify.breakpoint.mdAndUp" cols="12" sm="6" md="2">
@@ -47,5 +47,10 @@ export default {
 <style scoped>
 .container {
   padding: 0;
+}
+
+.full-height {
+  height: 100vh;
+
 }
 </style>

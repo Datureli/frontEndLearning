@@ -1,11 +1,23 @@
 <template>
-  <v-carousel hide-delimiters v-if="questions">
-    <v-carousel-item v-for="(question, index) in questions" :key="index" max-width="700" class="mx-auto">
+  <v-carousel hide-delimiters v-if="questions" progress="primary">
+    <v-carousel-item
+      v-for="(question, index) in questions"
+      :key="index"
+      max-width="700"
+      class="mx-auto myCarousel"
+    >
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="font-weight-black text-h4 text-wrap" v-text="question.question"></v-list-item-title>
+          <v-list-item-title
+            class="font-weight-black text-h4 text-wrap"
+            v-text="question.question"
+          ></v-list-item-title>
 
-          <v-list-item-subtitle class="white--text text-justify text-h6 text-wrap" v-show="disable" v-text="question.answer"></v-list-item-subtitle>
+          <v-list-item-subtitle
+            class="white--text text-justify text-h6 text-wrap"
+            v-show="disable"
+            v-text="question.answer"
+          ></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
@@ -26,7 +38,7 @@ export default {
     ...mapState("generalQuestions", ["generalQuestions"]),
     ...mapState("testQuestions", ["testQuestions"]),
     ...mapState(["disable"]),
-    
+
     questions() {
       const path = this.$route.path;
       switch (path) {
@@ -55,3 +67,18 @@ export default {
   },
 };
 </script>
+
+<style>
+.v-window__next,
+.v-window__prev {
+  top: calc(85% - 20px);
+  margin-top: 0.7rem;
+}
+.v-window__next {
+  margin-left: 5rem;
+}
+
+.v-window__prev {
+  margin-right: 5rem;
+}
+</style>

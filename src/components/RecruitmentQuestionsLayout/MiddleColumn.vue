@@ -1,9 +1,9 @@
 <template>
-  <div class="mx-auto" >
+  <div class="mx-auto">
     <v-sheet
       class="mx-auto mt-md-10"
       :height="height"
-      color="red"
+      color="darkGradient"
       :elevation="elevation"
     >
       <div v-if="$route.path === '/about'" class="pa-5">
