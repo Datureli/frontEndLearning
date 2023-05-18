@@ -1,5 +1,11 @@
 <template>
-  <v-carousel hide-delimiters v-if="questions" progress="primary">
+  <v-carousel
+    hide-delimiters
+    v-if="questions"
+    progress="primary"
+    @keydown.native.left="previousQuestion"
+    @keydown.native.right="nextQuestion"
+  >
     <v-carousel-item
       v-for="(question, index) in questions"
       :key="index"
@@ -8,16 +14,15 @@
     >
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title
-            class="font-weight-black text-h4 text-wrap"
-            v-text="question.question"
-          ></v-list-item-title>
+          <v-list-item-title class="font-weight-black text-h4 text-wrap">{{
+            question.question
+          }}</v-list-item-title>
 
           <v-list-item-subtitle
             class="white--text text-justify text-h6 text-wrap"
             v-show="disable"
-            v-text="question.answer"
-          ></v-list-item-subtitle>
+            >{{ question.answer }}</v-list-item-subtitle
+          >
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
@@ -27,6 +32,16 @@
 <script>
 import { mapState } from "vuex";
 export default {
+  methods: {
+    previousQuestion() {
+      this.$refs.carousel.prev();
+    },
+
+    nextQuestion() {
+      this.$refs.carousel.next();
+    },
+  },
+
   computed: {
     ...mapState("htmlQuestions", ["htmlQuestions"]),
     ...mapState("cssQuestions", ["cssQuestions"]),

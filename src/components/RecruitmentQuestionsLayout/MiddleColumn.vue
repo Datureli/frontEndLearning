@@ -1,7 +1,7 @@
 <template>
   <div class="mx-auto">
     <v-sheet
-      class="mx-auto mt-md-10"
+      class="mt-md-10"
       :height="height"
       color="darkGradient"
       :elevation="elevation"
@@ -29,11 +29,6 @@ export default {
     RecruitmentQuestion
   },
   computed: {
-    /*
-    width() {
-      return this.$vuetify.breakpoint.mdAndUp ? 800 : "100%";
-    },
-    */
     height() {
       return this.$vuetify.breakpoint.mdAndUp ? 390 : 410;
     },

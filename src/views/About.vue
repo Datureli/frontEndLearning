@@ -11,12 +11,6 @@
         <v-col v-if="$vuetify.breakpoint.mdAndUp" cols="12" sm="6" md="2">
           <RightColumn />
         </v-col>
-        <v-col class="d-flex justify-center" v-if="$vuetify.breakpoint.smAndDown" cols="12">
-          <FirstColumnMobile />
-        </v-col>
-        <v-col class="d-flex justify-center" v-if="$vuetify.breakpoint.smAndDown" cols="12">
-          <RightColumnMobile />
-        </v-col>
       </v-row>
     </v-sheet>
   </v-container>
@@ -27,19 +21,13 @@ import {
   FirstColumn,
   MiddleColumn,
   RightColumn,
-  FirstColumnMobile,
-  RightColumnMobile,
 } from "../components/RecruitmentQuestionsLayout";
-import HotkeyTips from "../components/RecruimentQuestions/HotkeyTips";
 
 export default {
   components: {
     FirstColumn,
     MiddleColumn,
     RightColumn,
-    FirstColumnMobile,
-    RightColumnMobile,
-    HotkeyTips,
   },
 };
 </script>
@@ -51,6 +39,5 @@ export default {
 
 .full-height {
   height: 100vh;
-
 }
 </style>

@@ -2,7 +2,10 @@
   <div>
     <v-btn
       v-shortkey="['2']"
-      @shortkey="randomLoop(); changeStatus();"
+      @shortkey="
+        randomLoop();
+        changeStatus();
+      "
       v-if="disableLoop"
       @click="
         randomLoop();
@@ -28,7 +31,7 @@ export default {
   },
   methods: {
     resetInterval() {
-      this.disableLoop = !this.disableLoop
+      this.disableLoop = !this.disableLoop;
     },
     changeStatus() {
       this.disableLoop = !this.disableLoop;
