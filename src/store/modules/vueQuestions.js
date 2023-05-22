@@ -153,7 +153,7 @@ export default {
       {
         question: "opisz beforeCreate",
         answer:
-          "BeforeCreate to jedna z tzw. 'hook functions' (funkcji hook), która jest wywoływana podczas inicjalizacji komponentu w Vue.js. Jest to moment, gdy Vue tworzy instancję komponentu, ale jeszcze nie ma dostępu do danych i metod, które zostały zdefiniowane wewnątrz komponentu.W tym momencie można wykonać pewne czynności, które nie wymagają jeszcze dostępu do danych czy metod komponentu, np. inicjalizować połączenie z API lub wykonywać jakieś obliczenia. Jednakże, przed beforeCreate nie ma dostępu do reaktywnych danych, więc nie można jeszcze manipulować stanem komponentu.Po beforeCreate Vue inicjuje dane i podłącza eventy do komponentu, a następnie uruchamia kolejną hook function - created.",
+          "BeforeCreate to jedna z haków życia, która jest wywoływana podczas inicjalizacji komponentu w Vue.js. Jest to moment, gdy Vue tworzy instancję komponentu, ale jeszcze nie ma dostępu do danych i metod, które zostały zdefiniowane wewnątrz komponentu.W tym momencie można wykonać pewne czynności, które nie wymagają jeszcze dostępu do danych czy metod komponentu, np. inicjalizować połączenie z API lub wykonywać jakieś obliczenia. Jednakże, przed beforeCreate nie ma dostępu do reaktywnych danych, więc nie można jeszcze manipulować stanem komponentu.Po beforeCreate Vue inicjuje dane i podłącza eventy do komponentu, a następnie uruchamia kolejną hook function - created.",
       },
       {
         question: "Jaka jest różnica między Vue2 a Vue3?",

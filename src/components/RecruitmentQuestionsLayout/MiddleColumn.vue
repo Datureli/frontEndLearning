@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto">
+  <div>
     <v-sheet
       class="mt-md-10"
       :height="height"

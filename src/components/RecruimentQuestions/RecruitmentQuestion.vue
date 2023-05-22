@@ -1,10 +1,10 @@
 <template>
   <v-carousel
+    ref="carousel"
     hide-delimiters
     v-if="questions"
     progress="primary"
-    @keydown.native.left="previousQuestion"
-    @keydown.native.right="nextQuestion"
+    @keydown.left="previousSlide" @keydown.right="nextSlide" tabindex="0"
   >
     <v-carousel-item
       v-for="(question, index) in questions"
