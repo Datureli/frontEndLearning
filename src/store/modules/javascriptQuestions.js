@@ -9,13 +9,12 @@ export default {
           "Aby zadeklarować zmienną, powinniśmy posłużyć się jednym ze słów kluczowych var, let lub const. Pod zmienne możemy podstawić dowolne wartości jakie będziemy chcieli. Zaleca się używanie let oraz const zamiast var. Dzięki nim nasze skrypty stają się bardziej optymalne pod względem zarządzania pamięcią, ale i potencjalnie unikamy niektórych problematycznych sytuacji.  Nazwa zmiennej nie może zaczynać się od cyfry, nie może zawierać spacji, kropki, przecinka ani myślnika (można natomiast używać podkreślenia), nazwą zmiennej nie może być słowo kluczowe zarezerwowane przez JavaScript",
           hint: [
             'Zmienne o takiej samej nazwie,ale utworzone przy pomocy różnej wielkości liter to dwie różne zmienne.',
-            
           ]
       },
       {
         question: "Czym jest debugowanie?",
         answer:
-          "Można powiedzieć, że debugowanie to proces znajdowania i eliminowania błędów (tzw. bugów) w kodzie programu. W praktyce oznacza to analizowanie i testowanie kodu w celu zidentyfikowania i zrozumienia problemów, które prowadzą do nieoczekiwanych zachowań lub awarii aplikacji. Debugowanie może obejmować różne narzędzia, takie jak debugger, logi, testy jednostkowe, analizatory kodu i wiele innych. Celem debugowania jest zapewnienie, że program działa zgodnie z oczekiwaniami i spełnia wymagania funkcjonalne i niefunkcjonalne.",
+          "Debugowanie to proces znajdowania i eliminowania błędów w kodzie programu. Oznacza to analizowanie, testowanie i śledzenie działania kodu w celu zidentyfikowania i zrozumienia problemów, które prowadzą do nieoczekiwanych zachowań lub awarii aplikacji. Celem debugowania jest zapewnienie, że program działa zgodnie z oczekiwaniami i spełnia wymagania funkcjonalne i niefunkcjonalne. Poprawne debugowanie pozwala programistom zidentyfikować i naprawić błędy, usunąć nieprawidłowe działanie aplikacji oraz poprawić wydajność i jakość kodu."
       },
       {
         question: "Jak działa słowo kluczowe new?",
@@ -29,17 +28,17 @@ export default {
       },
       {
         question: "Czym jest metoda GET?",
-        answer: "Metoda GET służy do pobierania danych z interfejsu API.",
+        answer: "Metoda GET jest jednym z podstawowych rodzajów żądań HTTP używanych do pobierania danych z interfejsu API. Przesyłanie żądania GET oznacza, że klient (np. przeglądarka internetowa) prosi serwer o zwrócenie określonego zasobu.Podczas użycia metody GET, żądanie jest przesyłane do serwera w formie URL (Uniform Resource Locator) z parametrami, jeśli są potrzebne. Serwer odczytuje te parametry, przetwarza żądanie i zwraca odpowiedź zawierającą żądane dane. Odpowiedź serwera może być w formacie HTML, JSON, XML lub innym, zależnie od tego, jak skonfigurowany jest interfejs API.",
       },
       {
         question: "Różnica między deklaracją funkcji a deklaracją klasy?",
         answer:
-          "Ważną różnicą pomiędzy deklaracją funkcji a deklaracją klasy jest to, że deklaracje funkcji są przenoszone na początek (Hoisting) a klas nie. Najpierw musisz zadeklarować swoją klasę, by mieć do niej dostęp.",
+          "Deklaracje funkcji są przenoszone na początek (hoisting) w procesie wykonywania kodu, co oznacza, że można je wywoływać przed ich faktyczną deklaracją w kodzie. W praktyce oznacza to, że możemy używać funkcji przed ich zdefiniowaniem w kodzie.Z drugiej strony, deklaracje klas nie są podnoszone (not hoisted). Oznacza to, że musimy zadeklarować klasę przed jej użyciem w kodzie. Jeśli próbujemy odwołać się do klasy przed jej deklaracją, spowoduje to błąd.Inna ważna różnica między deklaracją funkcji a deklaracją klasy dotyczy sposobu, w jaki są one używane. Funkcje są używane do definiowania bloków kodu, które można wywoływać wielokrotnie w różnych miejscach programu. Klasy natomiast służą do tworzenia obiektów, które mają określone właściwości i metody.",
       },
       {
         question: "Czym jest super w javascript?",
         answer:
-          "Słowo kluczowe super jest wykorzystywane do udostępniania i korzystania z funkcji klasy po której nasz obiekt dziedziczy.",
+          "Słowo kluczowe super w JavaScript jest używane do odwoływania się do rodzica (klasy nadrzędnej) i wywoływania jego metod. Jest to przydatne w przypadku dziedziczenia klas, gdy chcemy skorzystać z funkcji zdefiniowanych w klasie nadrzędnej.",
       },
       {
         question: "Czym jest instrukcja try i caych w api call?",
@@ -49,17 +48,17 @@ export default {
       {
         question: "Czym jest funkcja some?",
         answer:
-          "Metoda some zwróci prawdę, jeżeli chociaż dla jednego elementu użyta funkcja zwróci prawdę.",
+          "Służy do sprawdzania, czy przynajmniej jeden element w tablicy spełnia określone kryterium, które jest zdefiniowane za pomocą funkcji zwrotnej (callback). W przypadku, gdy choć dla jednego elementu funkcja zwrotna zwróci wartość true, metoda some zwróci wartość true. W przeciwnym razie, gdy funkcja zwrotna zwróci wartość false dla wszystkich elementów, metoda some zwróci wartość false.",
       },
       {
         question: "Czym jest funkcja reduce?",
         answer:
-          "Dzięki reduce możemy wykonywać operacje na tablicy redukując ją, w wyniku uzyskując jakiś wynik. Funkcja robi iterację po tablicy. W pierwszej iteracji pod pierwszy parametr wstawiany jest pierwszy element tablicy, a pod drugi kolejny. Funkcja zwraca jakiś wynik. W kolejnej iteracji podstawiany jest on pod pierwszy parametr, a do drugiego parametru trafia kolejny element w tablicy.",
+          "Funkcja reduce jest jedną z funkcji dostępnych dla tablic w języku JavaScript. Służy do wykonania operacji na tablicy, redukując ją do pojedynczej wartości wynikowej. Funkcja reduce wykonuje iterację po elementach tablicy i używa funkcji zwrotnej (callback) do łączenia elementów w celu ostatecznego uzyskania wyniku.Funkcja zwrotna używana w reduce ma dwa parametry: akumulator (zwykle nazwany accumulator) i aktualny element (zwykle nazwany current). W pierwszej iteracji akumulator przyjmuje wartość początkową, która może być podana jako drugi argument metody reduce, lub jeśli pominięta, to pierwszy element tablicy staje się wartością początkową. Następnie funkcja zwrotna jest wywoływana dla każdego kolejnego elementu w tablicy, a jej wynik staje się nową wartością akumulatora dla kolejnej iteracji. Proces ten powtarza się, aż do przejścia przez wszystkie elementy tablicy, a ostateczny wynik jest zwracany.",
       },
       {
         question: "Czym jest funkcja map?",
         answer:
-          "Metoda map robi pętlę po tablicy i każdorazowo zwraca nowy element tablicy.W wyniku po zakończeniu całej pętli zwracana jest nowa tablica z taką samą liczbą elementów.",
+          "Metoda map robi pętlę po tablicy i każdorazowo zwraca nowy element tablicy. W wyniku po zakończeniu całej pętli zwracana jest nowa tablica z taką samą liczbą elementów.",
       },
       {
         question: "Czym są getery i setery",
@@ -319,9 +318,9 @@ export default {
           "Rozszerzanie wbudowanych obiektów uważane jest za złą praktykę. W ten sposób zmieniamy zachowanie obiektów. I o ile mowa o obiekcie, z którego będzie działał tylko konkretny kod, to problem nie jest duży, ale w przypadku zewnętrznego kodu, który wykorzysta rozszerzony obiekt, nic nie będzie działać. Dobrą praktyką jest korzystanie ze wbudowanych metod. Dodawanie własnych metod do obiektów może być problematyczne także ze względu na interferencje z bibliotekami, które same mogą rozszerzać obiekty o te same metody. Wówczas dojdzie do konfliktu, nadpisania, i kod po prostu nie będzie działał. Zaletą rozszerzania wbudowanych typów może być natomiast to, że można zbudować w ten sposób polyfill, przez co kod będzie działał również na starszym oprogramowaniu, przeglądarkach nieobsługujących nowszych wersji JavaScript.",
       },
       {
-        question: "Czym jest obietnica(promise)?",
+        question: "Czym jest promise?",
         answer:
-          "bietnice wprowadzono, aby ułatwić pracę z kodem asynchronicznym, zapobiec tworzeniu piekła wywołań zwrotnych oraz uczynić kod bardziej czytelnym i łatwiejszym w utrzymaniu. Ich podstawowymi zaletami są: lepsza kontrola w zakresie synchronizacji wywołań (brak wyścigów), obsługa błędów oraz lepsza czytelność.Obiekty Promise zostały wprowadzone od ECMAScript 6 jako natywne wsparcie dla operacji asynchronicznych Są tak nazwane, bo wykonywana funkcja asynchroniczna musi złożyć obietnicę dostarczenia w przyszłości wartości.Obietnica może znajdować się w jednym z trzech stanów:spełniona/rozwiązana (fulfilled/resolved) – gdy powiązane z nią zadanie zwraca żądaną wartość,odrzucona (rejected) – gdy zadanie nie zwraca wartości, np. z powodu wyjątku lub zwrócona wartość jest nieprawidłowa,oczekująca (pending) – to stan od rozpoczęcia żądania do otrzymania wyniku. Przetwarzanie metody asynchronicznej może zakończyć się powodzeniem – wtedy wywołujemy metodę resolve() lub porażką – wtedy metodę reject();Na obiekcie Promise zwróconym przez metodę możemy wywołać dwie metody:then  odpowiedzialną za przetwarzanie udanego wywołania;  catch odpowiedzialną za obsługę błędów.",
+          "Promise jest obiektem w JavaScript, który reprezentuje wartość, która może być dostępna teraz, w przyszłości lub nigdy. Obietnice zostały wprowadzone, aby ułatwić pracę z kodem asynchronicznym, unikając tak zwanej 'piramidy wywołań zwrotnych' i czyniąc kod bardziej czytelnym i łatwiejszym w utrzymaniu. Obiekty Promise mają trzy stany: 'pending' (oczekujący), 'fulfilled' (spełniony) i 'rejected' (odrzucony). W przypadku obietnicy w stanie oczekującym, może ona przejść do stanu spełnionego z wynikiem lub do stanu odrzuconego z powodem błędu. Możemy manipulować obietnicami przy użyciu metod takich jak 'then', 'catch' i 'finally'. Metoda 'then' jest wywoływana, gdy obietnica zostanie spełniona, a metoda 'catch' jest wywoływana, gdy obietnica zostanie odrzucona. Metoda 'finally' jest opcjonalna i jest wywoływana bez względu na to, czy obietnica została spełniona, czy odrzucona, umożliwiając nam wykonanie pewnych operacji końcowych. Dzięki temu, używając obietnic, możemy lepiej kontrolować przepływ asynchronicznego kodu i obsługiwać błędy w bardziej czytelny sposób.",
       },
       {
         question: "Czym jest pętla zdarzeń",

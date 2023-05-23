@@ -4,19 +4,27 @@
     hide-delimiters
     v-if="questions"
     progress="primary"
-    @keydown.left="previousSlide" @keydown.right="nextSlide" tabindex="0"
   >
     <v-carousel-item
       v-for="(question, index) in questions"
       :key="index"
       max-width="700"
+      @shortkey="changeArrowDirection"
+      v-shortkey="{ left: ['arrowleft'], right: ['arrowright'] }"
       class="mx-auto myCarousel"
     >
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="font-weight-black text-h4 text-wrap">{{
-            question.question
-          }}</v-list-item-title>
+          <v-list-item-title
+            class="font-weight-black text-wrap"
+            :class="
+              disable
+                ? 'text-h4'
+                : ['text-h2', 'mt-15', 'questionTextWithoutAnswer']
+            "
+            style="transition: 2s;"
+            >{{ question.question }}</v-list-item-title
+          >
 
           <v-list-item-subtitle
             class="white--text text-justify text-h6 text-wrap"
@@ -39,6 +47,17 @@ export default {
 
     nextQuestion() {
       this.$refs.carousel.next();
+    },
+
+    changeArrowDirection(event) {
+      switch (event.srcKey) {
+        case "left":
+          this.previousQuestion();
+          break;
+        case "right":
+          this.nextQuestion();
+          break;
+      }
     },
   },
 
@@ -95,5 +114,9 @@ export default {
 
 .v-window__prev {
   margin-right: 5rem;
+}
+
+.questionTextWithoutAnswer {
+  width: 100vw;
 }
 </style>
