@@ -53,10 +53,10 @@ export default {
       switch (event.srcKey) {
         case "left":
           this.previousQuestion();
-          break;
+          return;
         case "right":
           this.nextQuestion();
-          break;
+          return;
       }
     },
   },
