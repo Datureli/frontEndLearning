@@ -6,7 +6,7 @@ export default {
       {
         question: "Po co testujemy aplikacje?",
         answer:
-          "Testowanie oprogramowania ma na celu sprawdzenie jego poprawnego działania oraz zebranie informacji na jego temat.Gdy testy zakończą się niepowodzeniem, bardzo ważne jest, aby struktura testów jednostkowych zawierała przydatne błędy.Testowanie oprogramowania pozwala ocenić jego jakość i zmniejszyć ryzyko wystąpienia awarii podczas eksploatacji.",
+          "Testowanie oprogramowania ma na celu sprawdzenie jego poprawnego działania oraz zebranie informacji na jego temat. Gdy testy zakończą się niepowodzeniem, bardzo ważne jest, aby struktura testów jednostkowych zawierała przydatne błędy.Testowanie oprogramowania pozwala ocenić jego jakość i zmniejszyć ryzyko wystąpienia awarii podczas eksploatacji.",
       },
       {
         question: "Czym jest testowanie?",
@@ -16,27 +16,39 @@ export default {
       {
         question: "Czym jest testowanie dynamiczne?",
         answer:
-          "Testowanie może wymagać uruchomienia testowanego modułu lub systemu – mamy wtedy do  czynienia z tzw. testowaniem dynamicznym ",
+          "Testowanie dynamiczne polega na konieczności uruchomienia testowanego modułu lub systemu. Jest to proces, który pozwala na sprawdzenie zachowania i funkcjonalności systemu w czasie rzeczywistym. Przez testowanie dynamiczne można zidentyfikować potencjalne błędy i problemy, które mogą wystąpić podczas działania systemu. Jest to ważna część procesu testowania oprogramowania, umożliwiająca weryfikację, czy system działa zgodnie z oczekiwaniami.",
       },
       {
         question: "Czym jest piramida testów?",
         answer:
-          "Piramida testów to zróżnicowanie ilości testów w zależności od ich typów. Im wykonanie testu jest tańsze, szybsze, bardziej stabilne – tym powinno ich być więcej i znajdują się na niższym szczeblu drabiny, stanowiąc jej fundament. Jeżeli wykonanie testu zajmuje więcej czasu, jest mniej stabilne, angażuje pracę ludzką, tym tego typu testów jest mniej i są na czubku piramidy.Ideą piramidy testów jest posiadanie właściwego balansu pomiędzy automatyzacją testów na różnych poziomach w stosunku do czasu ich przeprowadzenia.",
+          "Piramida testów to model hierarchii różnych typów testów w ramach procesu testowania oprogramowania. Piramida ma na celu zrównoważenie ilości testów w zależności od ich kosztu, czasu wykonania i stabilności. Na niższym poziomie piramidy znajdują się testy, które są tańsze, szybsze i bardziej stabilne, dlatego powinno ich być wykonanych większa ilość - stanowią one fundament piramidy. Na szczycie piramidy znajdują się testy, które są bardziej czasochłonne, mniej stabilne i wymagają większego zaangażowania ludzkiego, dlatego są one mniej liczne. Ideą piramidy testów jest osiągnięcie odpowiedniego balansu pomiędzy automatyzacją testów na różnych poziomach a czasem potrzebnym do ich przeprowadzenia. Dzięki temu, piramida testów umożliwia efektywne zarządzanie procesem testowania, zapewniając odpowiednią jakość oprogramowania przy optymalnym wykorzystaniu zasobów.",
       },
       {
         question: "Jaka jest różnica pomiędzy firmware, a software?",
         answer:
-          "Oba określenia mają związek z hardwarem czyli fizycznymi elementami urządzeń (np. komputer, CPU, Ram). Software jest to oprogramowanie takie jak chociażby Windows7, Saper czy MS Office które instalujemy na danym urządzeniu. Z kolei firmware jest to oprogramowanie wbudowane takie jak np. BIOS i nie może być bezpośredio odinstalowane tak jak każde inne oprogramowanie.",
+          "Oprogramowanie (software) odnosi się do ogólnego pojęcia programów komputerowych, które są zainstalowane na urządzeniach i wykonują różnorodne zadania. Są to aplikacje, systemy operacyjne, gry, edytory tekstowe i wiele innych. Oprogramowanie może być zainstalowane, aktualizowane i odinstalowywane przez użytkownika w celu zmiany funkcjonalności urządzenia.Natomiast firmware to specyficzny rodzaj oprogramowania wbudowanego w sprzęt, takiego jak urządzenia elektroniczne, komputery, smartfony, konsolki, routery itp. Firmware jest zwykle zapisane w pamięci stałej urządzenia, na przykład w mikrokontrolerze lub pamięci flash. Często jest to niskopoziomowe oprogramowanie kontrolujące podstawowe funkcje i zachowanie sprzętu. Przykładem firmware'u może być BIOS w komputerze lub firmware w systemie Android w smartfonie.",
+      },
+      {
+        question: 'Jakie metody testowania znałeś i stosowałeś w swojej pracy?',
+        answer: 'Testowanie funkcjonalne: Skupia się na weryfikacji, czy oprogramowanie spełnia określone wymagania funkcjonalne. Testy funkcjonalne sprawdzają, czy aplikacja działa zgodnie z oczekiwaniami, czy wykonuje określone akcje i generuje poprawne wyniki. Testowanie akceptacyjne: Wykonywane przez użytkowników końcowych lub interesariuszy w celu sprawdzenia, czy oprogramowanie spełnia ich wymagania, oczekiwania i standardy. Celem jest potwierdzenie, czy system jest gotowy do wdrożenia.'
+      },
+      {
+        question: 'Jakie są różnice między testowaniem manualnym a automatycznym',
+        answer: 'Testy manualne Wykonywane są przez testerów, którzy ręcznie uruchamiają testy, wykonują kroki testowe i obserwują rezultaty, wymagają interakcji człowieka, który podejmuje decyzje i ocenia wyniki testów. Natomiast testy automatyczne wykorzystują narzędzia i skrypty do automatyzacji procesu testowania.Testy są pisane jako skrypty, które wykonują określone czynności i sprawdzają oczekiwane wyniki. Wykonuje testy szybciej i bardziej powtarzalnie niż testowanie manualne.'
       },
       {
         question: "Kiedy należy skończyć testować oprogramowanie? Podaj przykłady.",
         answer:
-          " wystarczające pokrycie wymagań - wykonaliśmy poprawnie 95% testów pokrywających wszystkie wymagania,   zagęszczenie defektów - występuje nie więcej niż 5 defektów przypisanych do każdego z rozdziału wymagań,   koszt - testy trwają już 2 miesiące i nie możemy sobie pzwolić na dalsze testy,   ramy czasowe - testy są przewidziane na 3 miesiące i ani dnia dłużej, ryzyko sprowadzone jest do akcpetowalnego poziomu - znamy błędy występujące w oprogramowaniu i je akceptujemy",
+          "Wystarczające pokrycie wymagań: Testy zostały wykonane w wystarczającym stopniu, aby pokryć co najmniej 95% wszystkich ustalonych wymagań. Wszystkie podstawowe funkcje i scenariusze zostały przetestowane zgodnie z planem.Zagęszczenie defektów: Liczba defektów przypisanych do poszczególnych wymagań jest na akceptowalnie niskim poziomie. Na przykład, nie więcej niż 5 defektów przypisanych do każdego z rozdziału wymagań.Koszt: Testowanie trwa już od pewnego czasu, a dalsze testy generowałyby nieproporcjonalne koszty w porównaniu do oczekiwanych korzyści. Na podstawie analizy kosztów i zysków, decyduje się o zakończeniu testowania.Ramy czasowe: Testowanie jest zaplanowane na określony okres, na przykład 3 miesiące, i nie można go przekroczyć ze względu na ustalone ograniczenia czasowe projektu.",
+      },
+      {
+        question: 'Czym jest testowanie Nie-funkcjonalne?',
+        answer: 'Oczywiście, testowanie nie funkcjonalne to ważna część procesu testowania oprogramowania. Obejmuje ono sprawdzanie cech i atrybutów oprogramowania, które nie są związane bezpośrednio z jego funkcjonalnością, ale mają wpływ na jakość, wydajność, użyteczność i inne aspekty systemu. '
       },
       {
         question: "Co zrobić gdy nie jesteśmy pewni czy mamy do czynienia z błędem?",
         answer:
-          "Zawsze warto poszukać jakiś twardych dowodów na które możemy się powołać przy zgłaszaniu błędu. Niestety nie zawsze jest to jasne - i co właśnie wtedy. Można zasięgnąc wiedzy u programistów, project/product managera, product ownera i innych. Często bywa tak, że zastana sytuacja jest nie do zaakceptowania, np. oprogramowanie/strona www otwiera się minutę bądź dłużej ale nie znajdziemy w wymaganiach informacji o czasie potrzebnym na otwarcie. Pamiętajcie wtedy, że zawsze można zgłosić defekt powołując się na użytkownika ze zdrowym rozsądkiem (tzw. 'reasonable end user') który najnormalniej nie będzie czekał.",
+          "Zawsze warto poszukać jakiś twardych dowodów na które możemy się powołać przy zgłaszaniu błędu. Można zasięgnąc wiedzy u programistów, project/product managera, product ownera i innych. Często bywa tak, że zastana sytuacja jest nie do zaakceptowania, np. oprogramowanie/strona www otwiera się minutę bądź dłużej ale nie znajdziemy w wymaganiach informacji o czasie potrzebnym na otwarcie. Pamiętajcie wtedy, że zawsze można zgłosić defekt powołując się na użytkownika ze zdrowym rozsądkiem (tzw. 'reasonable end user') który najnormalniej nie będzie czekał.",
       },
       {
         question: "Od czego zależy ryzyko projektowe i co się na nie składa?",
@@ -139,6 +151,21 @@ export default {
         question: "Czym jest component testing?",
         answer:
           "Aby przetestować większość komponentów Vue, należy je zamontować na DOM aby w pełni potwierdzić, że działają.W rezultacie stworzono ramy testowania komponentów, aby dać użytkownikom możliwość wykonywania tego w sposób niezawodny, zapewniając jednocześnie udogodnienia specyficzne dla Vue, takie jak integracja z Vuex, routerem Vue i innymi wtyczkami Vue.",
+      },
+      {
+        question: "Różnice pomiędzy weryfikacją a walidacją?",
+        answer:
+          "Aby przetestować większość komponentów Vue, należy je zamontować na DOM aby w pełni potwierdzić, że działają.W rezultacie stworzono ramy testowania komponentów, aby dać użytkownikom możliwość wykonywania tego w sposób niezawodny, zapewniając jednocześnie udogodnienia specyficzne dla Vue, takie jak integracja z Vuex, routerem Vue i innymi wtyczkami Vue.",
+      },
+      {
+        question: "Czym jest headless testing?",
+        answer:
+          "Headless testing to rodzaj testowania oprogramowania, w którym testy są wykonywane bez interfejsu graficznego (GUI). W tradycyjnym podejściu testowania, aplikacja jest uruchamiana w pełnym środowisku, a testy interakcji z nią są wykonywane poprzez manipulację GUI. Natomiast w headless testing, aplikacja jest uruchamiana w tle, bez wyświetlania interfejsu graficznego, a testy są wykonywane bezpośrednio na poziomie backendu lub za pomocą interfejsów programistycznych (API).",
+      },
+      {
+        question: "Czym są testy integracji?",
+        answer:
+          "Test integracji to rodzaj testowania oprogramowania, który ma na celu sprawdzenie poprawności współpracy pomiędzy różnymi komponentami lub modułami systemu. Podczas testu integracji, różne elementy systemu są łączone i testowane jako całość, aby upewnić się, że poprawnie komunikują się ze sobą, wymieniają informacje i współdziałają zgodnie z oczekiwaniami.",
       },
       {
         question: "Modele cyklu życia oprogramowania?",

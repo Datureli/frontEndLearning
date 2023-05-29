@@ -33,9 +33,24 @@ export default {
           "Pozwala opisać typ jeden z dwóch (lub wielu). Możemy go użyć z Type guardem. Type guard pozwala nam sprawdzić np. Czy dana zależność znajduje się w obiekcie. in to zależność JavaScriptowa, nie TS'owa. Type guardem może być również typeof czy też instanceof, metod na type guardy jest wiele.",
       },
       {
+        question: "Javascript vs typescript",
+        answer:
+          "TypeScript to nadzbiór języka JavaScript, który dodaje opcjonalne adnotacje typów i inne funkcje, takie jak interfejsy, klasy i przestrzenie nazw. JavaScript to dynamicznie typowany język, który jest używany głównie do tworzenia stron internetowych po stronie klienta, ale może być również używany do programowania po stronie serwera.TypeScript posiada opcjonalne adnotacje typów, podczas gdy JavaScript jest językiem o dynamicznych typach. Oznacza to, że w TypeScript można określić typ danych zmiennych, parametrów i wartości zwracanych, co może pomóc w wykrywaniu błędów związanych z typami w czasie kompilacji.",
+      },
+      {
         question: "czym jest alias typów?",
         answer:
           "Pozwala na zdefiniowanie aliasu danego typu. Jeśli zdefiniujemy sobie taki alias, będziemy mogli go używać w wielu miejscach.",
+      },
+      {
+        question: "Opisz tsconfig?",
+        answer:
+          "tsconfig.json jest plikiem konfiguracyjnym używanym w projektach opartych na TypeScript. Jest to plik w formacie JSON, który definiuje różne ustawienia i opcje kompilacji dla projektu TypeScript.Oto kilka ważnych opcji, które można skonfigurować w pliku tsconfig.json:'compilerOptions': Jest to sekcja, w której można określić opcje kompilatora TypeScript. Należą do nich m.in. ustawienia dotyczące targetu (docelowego poziomu JavaScript, na który ma być skompilowany kod), modułu (systemu modułów, np. CommonJS, ES6), ścieżki (do rozwiązywania modułów), strict (włączanie/wyłączanie restrykcyjnych sprawdzeń typów) i inne.'include': Określa, które pliki lub foldery mają być uwzględnione podczas kompilacji. Można tu używać wzorców glob, aby wskazać odpowiednie pliki do kompilacji.'exclude': Przeciwnie do 'include', określa, które pliki lub foldery mają być wykluczone z procesu kompilacji.'extends': Pozwala na rozszerzenie konfiguracji poprzez odwołanie się do innego pliku tsconfig.json. Można użyć tej opcji, aby dziedziczyć ustawienia z innej konfiguracji.'files': Pozwala na bezpośrednie określenie listy plików, które mają być uwzględnione w kompilacji. Ten parametr zastępuje automatyczne wyszukiwanie plików w strukturze projektu.'compilerOptions.outDir': Określa katalog docelowy, do którego mają być zapisane skompilowane pliki JavaScript.'compilerOptions.sourceMap': Umożliwia generowanie plików źródłowych (source maps), które pozwalają na debugowanie skompilowanego kodu TypeScript w oryginalnym kodzie TypeScript.'compilerOptions.noEmit': Jeśli ustawione na true, uniemożliwia generowanie plików wynikowych JavaScript podczas kompilacji.",
+      },
+        {
+        question: "Interoperacyjność w ts/js?",
+        answer:
+          "TypeScript i JavaScript mają pełną interoperacyjność, co oznacza, że można używać kodu TypeScript w projektach JavaScript i odwrotnie. TypeScript jest nadzbiorem języka JavaScript, co oznacza, że każdy poprawny kod JavaScript jest również poprawnym kodem TypeScript.Możesz rozszerzać istniejący kod JavaScript, dodając deklaracje typów, interfejsy, dekoratory i inne funkcje dostępne w TypeScript. To pozwala na silniejszą kontrolę typów i lepsze narzędzia deweloperskie.",
       },
       {
         question: "opisz funkcje w typescript?",

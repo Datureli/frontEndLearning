@@ -11,7 +11,7 @@
       max-width="700"
       @shortkey="changeArrowDirection"
       v-shortkey="{ left: ['arrowleft'], right: ['arrowright'] }"
-      class="mx-auto myCarousel"
+      class="mx-auto"
     >
       <v-list-item>
         <v-list-item-content>
@@ -28,9 +28,13 @@
 
           <v-list-item-subtitle
             class="white--text text-justify text-h6 text-wrap"
+            :style="question.answer.length > 700 ? 'overflow-y: scroll;' : ''"
             v-show="disable"
-            >{{ question.answer }}</v-list-item-subtitle
           >
+            <p  style="height: 250px;">
+              {{ question.answer }}
+            </p>
+          </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
@@ -118,5 +122,8 @@ export default {
 
 .questionTextWithoutAnswer {
   width: 100vw;
+}
+::-webkit-scrollbar {
+  width: 10px;
 }
 </style>

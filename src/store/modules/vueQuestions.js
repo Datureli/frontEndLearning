@@ -6,7 +6,7 @@ export default {
       {
         question: "Czym jest Vuex?",
         answer:
-          "Vuex to wzorzec zarządzania stanem + biblioteka dla aplikacji Vue.js.Dzięki Vuex możemy przechowywać stan naszej aplikacji Vue w centralnej lokalizacji. Pozwala nam pobierać i ustawiać stan współdzielenia oraz automatycznie propagować wszelkie zmiany dokonane we wspólnym stanie do wszystkich komponentów.",
+          "Vuex to wzorzec zarządzania stanem + biblioteka dla aplikacji Vue.js. Dzięki Vuex możemy przechowywać stan naszej aplikacji vue w centralnej lokalizacji. Pozwala nam pobierać i ustawiać stan współdzielenia oraz automatycznie propagować wszelkie zmiany dokonane we wspólnym stanie do wszystkich komponentów.",
       },
       {
         question: "Czym jest created hook",
@@ -91,7 +91,7 @@ export default {
       {
         question: "Czym są sloty?",
         answer:
-          "Sloty to mechanizm, który umożliwia tworzenie wielokrotnego użytku dla komponentów. Pozwalają one na wstawienie lub zmianę treści komponentu dziecka, który jest zaimportowany do komponentu rodzica. Sloty pozwalają na ułatwienie stosowania reguły DRY (Don't Repeat Yourself), czyli zasady unikania powtarzania się kodu. W Vue.js sloty możemy rozumieć jako miejsce, w które możemy wstawić nową treść lub pozostawić domyślnie zadeklarowaną treść.",
+          "Sloty to mechanizm, który umożliwia tworzenie wielokrotnego użytku dla komponentów. Pozwalają one na wstawienie lub zmianę treści komponentu dziecka, który jest zaimportowany do komponentu rodzica. Sloty pozwalają na ułatwienie stosowania reguły DRY czyli zasady unikania powtarzania się kodu. W Vue.js sloty możemy rozumieć jako miejsce, w które możemy wstawić nową treść lub pozostawić domyślnie zadeklarowaną treść.",
       },
       {
         question: "Czym są scoped slots?",
@@ -130,6 +130,11 @@ export default {
         "Framework Vue nie jest w stanie wykryć zmian w obiekcie podczas dodawania lub usuwania jego właściwości. Aby zmusić framework do wykrycia zmian w obiekcie, należy użyć metody Vue.set() lub Vue.delete().",
       },
       {
+        question: "Czym są style vars?",
+        answer:
+        "W Vue.js możemy używać tzw. stylowych zmiennych (style variables) w celu definiowania wartości stylów, które mogą być dynamicznie dostosowywane w zależności od stanu komponentu lub innych czynników. Są one szczególnie przydatne, gdy chcemy zastosować jedną wartość stylu w wielu miejscach w komponencie lub w całej aplikacji.",
+      },
+      {
         question: "Dlaczego używamy atrybutu klucza w dyrektywie v-for?",
         answer:
           "Aby zapewnić identyfikację każdego elementu w iteracji v-for oraz umożliwić Vue ponowne użycie i zmianę kolejności istniejących elementów, należy podać unikalny atrybut klucza dla każdego elementu. Atrybut klucza pozwala Vue na śledzenie tożsamości każdego węzła i tworzenie unikalnych powiązań między nimi. Zaleca się, aby kluczem był unikalny identyfikator dla każdego przedmiotu, a wartością klucza powinien być ciąg lub wartość liczbową, a nie obiekt lub tablica. Aby powiązać nasz klucz z identyfikatorem każdego przedmiotu, używamy dyrektywy v-bind.",
@@ -164,6 +169,11 @@ export default {
         question: "Co to są gettery?",
         answer:
           "Getter to w JavaScript jest funkcja, która służy do pobierania (get) wartości z obiektu. Gettery pozwalają na dostęp do wartości prywatnych z innych części kodu, bez bezpośredniego manipulowania nimi.W kontekście frameworka Vue, gettery są często używane do uzyskiwania wartości właściwości z obiektów reaktywnych. Gettery są automatycznie generowane przez system reaktywności Vue i pozwalają na dostęp do wartości właściwości, które są reaktywnie śledzone.",
+      },
+      {
+        question: "Czym jest funkcja teleport?",
+        answer:
+          "Funkcja teleport w Vue 3 jest używana do renderowania elementu w innym miejscu w drzewie DOM, poza komponentem, w którym jest zdefiniowana. Pozwala to na renderowanie elementów na różnych poziomach drzewa DOM bez konieczności ich umieszczania w komponencie macierzystym. Funkcja teleport jest przydatna, gdy chcesz renderować elementy poza bieżącym komponentem, na przykład na samym końcu strony lub w innym kontenerze.",
       },
       {
         question: "Czemu nie powinniśmy używać v-if razem z v-for?",
@@ -221,7 +231,7 @@ export default {
           "Destroyed hook w Vue.js jest to hook, który jest wywoływany, gdy komponent został zniszczony i nie istnieje już w drzewie komponentów Vue. W tym momencie nie pozostaje praktycznie nic w komponencie. Wszystkie event listenery i subskrypcje, które zostały utworzone przez komponent, są usuwane, a także wszystkie referencje do elementów DOM, które zostały utworzone przez komponent, są zwalniane z pamięci. Używamy tego hooka, gdy chcemy wyczyścić zasoby, które zostały utworzone przez komponent lub poinformować serwer, że komponent został usunięty. Jest to ostatni hook cyklu życia komponentu w Vue.js i po jego wywołaniu komponent jest usuwany z drzewa komponentów Vue",
       },
       {
-        question: "Do czego służą hooki activated i deactivated w Vue.js i jak są używane w połączeniu z tagiem <keep-alive>?",
+        question: "Do czego służą hooki activated i deactivated w Vue.js",
         answer:
           "Activated i deactivated hooks w Vue.js są używane w połączeniu z komponentem <keep-alive> i służą do zarządzania stanem i zachowaniem komponentów podczas przełączania między nimi. Komponenty owinięte w tag <keep-alive> nie są usuwane z drzewa komponentów Vue, gdy użytkownik przechodzi do innego widoku, ale są przechowywane w pamięci, aby umożliwić szybsze przełączanie między nimi w przyszłości. Hook activated jest wywoływany, gdy użytkownik powraca do komponentu, podczas gdy hook deactivated jest wywoływany, gdy użytkownik przechodzi do innego widoku i komponent jest deaktywowany. Możemy użyć tych hooków do wykonywania działań takich jak pobieranie danych dla komponentu, aktualizowanie stanu lub subskrybowanie zdarzeń. Te hooki zachowują się jak created i beforeDestroy, ale umożliwiają nam zachowanie stanu komponentu i uniknięcie konieczności tworzenia go na nowo za każdym razem, gdy użytkownik do niego powraca.",
       },
@@ -359,6 +369,10 @@ export default {
         question: "Jak composition api zmniejsza koszty pamięci",
         answer:
           "Kod napisany w Composition API i skrypcie setup jest bardziej wydajny i przyjazny dla minifikacji niż jego odpowiednik w Options API. Dzieje się tak, ponieważ szablon w komponencie script setup jest kompilowany jako funkcja wbudowana w ten sam zakres kodu script setup. Oznacza to, że skompilowany kod szablonu może bezpośrednio uzyskiwać dostęp do zmiennych zadeklarowanych wewnątrz ustawienia skryptu, bez pośrednika między nimi. Ponadto, składnia Composition API pozwala na wykorzystanie bardziej zoptymalizowanych metod deklarowania zmiennych i funkcji, co przekłada się na mniejsze użycie pamięci. W przypadku Options API, zmienne są deklarowane jako właściwości obiektu, co może prowadzić do niepotrzebnego tworzenia dodatkowych obiektów i zwiększenia użycia pamięci .Lepsza wydajność i mniejsze użycie pamięci mają również pozytywny wpływ na minifikację kodu. Wszystkie nazwy zmiennych mogą być bezpiecznie skrócone, co przekłada się na jeszcze mniejszy rozmiar pliku i szybsze ładowanie strony.",
+      },
+      {
+        question: "Jaka jest różnica w reaktywności dla vue 2 i 3",
+        answer: 'Vue 2 używał Object.defineProperty do monitorowania zmian w obiektach i właściwościach. W Vue 3 został wprowadzony Proxy, który oferuje bardziej efektywny sposób monitorowania zmian. Proxy pozwala na dynamiczną interakcję z obiektami i dostarcza więcej możliwości manipulacji i śledzenia zmian.W Vue 2 reaktywność na poziomie tablic była ograniczona. Trzeba było korzystać z dedykowanych metod, takich jak $set, aby dokonać reaktywnej zmiany w tablicy. Vue 3 wprowadził nowe metody tablicowe, takie jak push, pop, splice itp., które są reaktywne i automatycznie odzwierciedlają zmiany w widoku. W Vue 2, globalny stan aplikacji był trudny do zarządzania i aktualizacji. W Vue 3, dzięki wprowadzeniu funkcji reactive i ref, globalny stan może być łatwiej tworzony i zarządzany, co ułatwia współdzielenie danych między komponentami.'
       },
       {
         question: "Na czym polega reaktywność w vue",

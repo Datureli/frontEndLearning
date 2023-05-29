@@ -274,9 +274,29 @@ export default {
           "Pair programming, czyli programowanie w parach, polega na jednoczesnej pracy dwóch programistów nad jednym kodem.jeden z nich jest “kierowcą”, a drugi “pasażerem” lub „nawigatorem”Kierowca odpowiada za pisanie kodu, a pasażer przygląda się, zadaje pytania, dodaje pomysły i niekiedy naprowadza kierowcę. W tej technice często po pewnym czasie następuje zamiana roli..",
       },
       {
+        question: "Ajax vs async/await?",
+        answer:
+          "Choć w JavaScript wprowadzono asynchroniczne operacje za pomocą składni async/await, technologia AJAX nadal jest użyteczna i znajduje zastosowanie w wielu scenariuszach.Starsze przeglądarki mogą nie obsługiwać składni async/await lub innych nowych funkcji JavaScript. AJAX jest bardziej wszechstronny i może być stosowany na różnych przeglądarkach, nawet tych starszych.Integracja z zewnętrznymi API: AJAX jest powszechnie stosowany do komunikacji z zewnętrznymi API, takimi jak REST lub GraphQL, które zwracają dane w formacie JSON lub XML. Składnia async/await jest przydatna w obsłudze odpowiedzi z takich API, ale sam mechanizm AJAX nadal jest używany do wysyłania żądań do tych API. Dynamiczne ładowanie treści: AJAX jest często używany do dynamicznego ładowania treści na stronie, na przykład po kliknięciu przycisku lub przewinięciu strony. Możliwość asynchronicznego pobierania treści bez konieczności przeładowywania całej strony jest nadal wartościowa i wygodna.  Wysyłanie formularzy: AJAX jest często stosowany do asynchronicznego wysyłania formularzy bez konieczności odświeżania strony. Dzięki temu użytkownicy mogą przesyłać dane na serwer bez przerywania swojego doświadczenia na stronie. Dostęp do innych zasobów: AJAX pozwala na pobieranie innych zasobów, takich jak pliki obrazów, style CSS czy skrypty JavaScript, asynchronicznie. Może być używany do dynamicznego ładowania tych zasobów w trakcie interakcji użytkownika.",
+      },
+      {
+        question: "Dlaczego zainteresowałeś się programowaniem?",
+        answer:
+          "Programowanie oferuje ogromne pole do nauki i rozwoju. Świat technologii jest dynamiczny i zawsze pojawiają się nowe narzędzia, języki i technologie, które można poznać i opanować. Jestem podekscytowany możliwościami ciągłego rozwoju zawodowego w tej dziedzinie.Kolejnym powodem jest fakt, że programowanie jest niezwykle wszechstronne. Może być wykorzystywane we wszelkiego rodzaju branżach i dziedzinach, od aplikacji internetowych po sztuczną inteligencję i analizę danych. To oznacza, że mogę realizować różnorodne projekty i mieć wpływ na różne obszary życia.",
+      },
+      {
         question: "Czym są module bundlers?",
         answer:
           "Są to narzędzia, które biorą plik lub pliki JavaScriptowe wraz z ich zależnościami i łączą je w najczęściej jeden lub kilka plików wynikowych, często stosując przy tym różne optymalizacje jak konkatenacja - czyli łączenie wielu plików w jeden,minifikacja- pozbycie się zbędnych znaków z kodu aby zmniejszyć jego wagę,code-spliting-dzielenie kodu na kilka plików wyniokowych,three shaking- pozbywanie się nieużywanych części kodu.",
+      },
+      {
+        question: "Czym jest Jamstack?",
+        answer:
+          "JAMstack to podejście architektoniczne do budowy stron internetowych i aplikacji internetowych. Nazwa 'JAMstack' jest akronimem od JavaScript, APIs, oraz Markup (znaczniki). JAMstack wykorzystuje prezentację statyczną stron internetowych, a większość logiki biznesowej przenosi na stronę klienta oraz wykorzystuje zewnętrzne API do pobierania danych i wykonywania innych operacji.Prezentacja statyczna: Strony internetowe JAMstack są generowane statycznie podczas fazy budowy (build time) i dostarczane jako zestaw plików statycznych. Nie ma potrzeby generowania stron dynamicznie na serwerze za każdym razem, gdy użytkownik odwiedza stronę. Dzięki temu strony są szybkie, łatwe w cache'owaniu i skalowalne.  JavaScript na stronie klienta: Logika aplikacji, w tym interakcje użytkownika, jest obsługiwana za pomocą JavaScriptu na stronie klienta. Frameworki JavaScript, takie jak React, Vue.js czy Angular, są często wykorzystywane do tworzenia interaktywnych interfejsów użytkownika.    Użycie zewnętrznych API: JAMstack korzysta z zewnętrznych API do pobierania danych i wykonania różnych operacji, takich jak obsługa płatności, wysyłanie powiadomień itp. API dostarczają dynamiczne dane, które są wykorzystywane przez stronę klienta.    Szybkość i skalowalność: Dzięki statycznym plikom i cache'owaniu, strony JAMstack są bardzo szybkie i efektywne pod względem wydajności. Ponadto, skalowanie jest prostsze, ponieważ nie ma potrzeby obsługiwać dynamicznych zapytań na serwerze.  Bezpieczeństwo: Wykorzystanie prezentacji statycznej oraz oddzielenie logiki biznesowej na stronę klienta sprawia, że JAMstack jest bardziej odporny na ataki typowe dla stron dynamicznych.",
+      },
+      {
+        question: "Czym jest scrum?",
+        answer:
+          "Scrum jest metodyką zarządzania projektem, która została opracowana w celu zwiększenia efektywności i elastyczności w procesie tworzenia oprogramowania. Jest często stosowana w branży IT, ale może być również stosowana w innych dziedzinach, w których istnieje potrzeba elastycznego podejścia do zarządzania projektem.Proces Scrum składa się z krótkich iteracji nazywanych sprintami, które zwykle trwają od jednego do czterech tygodni. Każdy sprint rozpoczyna się od planowania, podczas którego zespół decyduje, jakie zadania zostaną wykonane. Następnie zespół pracuje nad wykonaniem tych zadań przez cały czas trwania sprintu. Codziennie odbywa się spotkanie zwane Daily Scrum, na którym członkowie zespołu dzielą się informacjami o postępie i planach na kolejny dzień. Po zakończeniu sprintu odbywa się retrospektywa, na której zespół ocenia swoją pracę i identyfikuje obszary do poprawy.",
       },
     ],
   },
