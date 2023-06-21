@@ -19,6 +19,11 @@ export default {
           "Cechy charakterystyczne komponentów funkcyjnych: otrzymują dane od rodziców za pośrednictwem obiektu prop  są pozbawione stan  zajmują się prezentacją a nie logiką aplikacji",
       },
       {
+        question: "Czym jest useLayoutEffect",
+        answer:
+          "useLayoutEffect to hook w bibliotece React, który jest podobny do useEffect, ale wywoływany jest synchronicznie po wykonaniu aktualizacji DOM-u, zanim przeglądarka przeprowadzi ponowne malowanie ekranu. Jest to przydatne w przypadkach, gdy chcemy wykonać operacje synchronicznie po aktualizacji DOM-u, na przykład mierzyć lub manipulować elementami na stronie.Główne różnice między useEffect a useLayoutEffect są związane z momentem ich wykonania:useEffect: Wywołuje efekt po zakończeniu aktualizacji komponentu i malowaniu na ekranie. Jest asynchroniczny i może działać po przeprowadzeniu ponownego malowania ekranu przez przeglądarkę. Może powodować migotanie wizualne, jeśli wprowadza opóźnienia w aktualizacji DOM-u. useLayoutEffect: Wywołuje efekt synchronicznie po aktualizacji komponentu i przed ponownym malowaniem ekranu. Działa przed przeglądarką, co oznacza, że operacje wykonane w useLayoutEffect nie spowodują migotania wizualnego. Jest bardziej odpowiedni do operacji, które wymagają dostępu do aktualnego stanu DOM-u, takich jak pomiary elementów lub manipulacje stylem.W większości przypadków zaleca się używanie useEffect, ponieważ jest bardziej wydajny i ma mniejszy wpływ na wydajność interfejsu użytkownika. useLayoutEffect jest bardziej użyteczny w sytuacjach, gdy potrzebujemy dostępu do aktualnego stanu DOM-u i manipulowania nim synchronicznie.",
+      },
+      {
         question: "Co to jest Flux i jaka jest różnica między Flux a Redux",
         answer:
           "Flux jest to architektura aplikacji zaproponowana przez Facebook-a, twórcy frameworka React.js. Flux nie jest to konkretna biblioteka ale architektura, której głównym elementem jest funkcja Dispatcher, A całość używa architektury podobnej do Publish/Subscribe lub EventEmitter. Flux korzysta z jedno kierunkowego przepływu danych w celu utrzymywania stanu aplikacji. I ile Flux jest to nazwa architektury to Redux jest to już biblioteka, która implementuje ją tą.",

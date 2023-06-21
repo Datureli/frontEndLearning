@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="mx-auto"  min-height="100vh" height="auto" style="background: orange;">
+  <v-container fluid class="mx-auto full-height">
     <v-select
       v-model="select"
       class="pa-5 mt-0 mx-auto"
@@ -22,33 +22,40 @@
 <script>
 import ItWordsCollection from "../components/EnglishSection/ItWordsCollection";
 import DescribeYourself from "../components/EnglishSection/DescribeYourself";
-import ItDictionary from '../components/EnglishSection/ItDictionary'
-import FlashCards from '../components/EnglishSection/FlashCards'
+import ItDictionary from "../components/EnglishSection/ItDictionary";
+import FlashCards from "../components/EnglishSection/FlashCards";
+
 export default {
-  data() {
-    return {
-      select: "",
-      englishSection: [
-        {
-          name: "opisz siebie",
-        },
-        {
-          name: "nauka słów",
-        },
-        {
-          name: "słowniczek branżowy",
-        },
-           {
-          name: "fiszki",
-        },
-      ],
-    };
-  },
+  data: () => ({
+    select: "",
+    englishSection: [
+      {
+        name: "opisz siebie",
+      },
+      {
+        name: "nauka słów",
+      },
+      {
+        name: "słowniczek branżowy",
+      },
+      {
+        name: "fiszki",
+      },
+    ],
+  }),
   components: {
     ItWordsCollection,
     DescribeYourself,
     ItDictionary,
-    FlashCards
+    FlashCards,
   },
 };
 </script>
+
+<style>
+.full-height {
+  height: 100vh;
+  width: 100%;
+  background-color: orange;
+}
+</style>

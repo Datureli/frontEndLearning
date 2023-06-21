@@ -223,9 +223,19 @@ export default {
           "CDNy są to usługi, które udostępniają developerom możliwość korzystania z zasobów takich jak biblioteki, frameworki czy zdjęcia bez konieczności dołączania dodatkowych plików do naszego katalogu z projektem.",
       },
       {
+        question: "Czym jest localStorage?",
+        answer:
+          "Local Storage (lokalne przechowywanie danych) to mechanizm dostępny w przeglądarkach internetowych, który umożliwia przechowywanie danych na poziomie klienta, czyli bez konieczności komunikacji z serwerem. Jest to rodzaj pamięci, która jest dostępna dla strony internetowej nawet po zamknięciu i ponownym otwarciu przeglądarki.Local Storage pozwala na przechowywanie danych w postaci klucza i wartości. Można w nim przechowywać różnego rodzaju dane, takie jak tekst, liczby, obiekty JavaScript, tablice itp. Dane są przechowywane w przeglądarce w postaci ciągu tekstowego, a lokalne przechowywanie danych jest specyficzne dla każdej domeny, na której działa strona internetowa.Kluczową cechą local storage jest to, że dane są trwałe i nie wygasają po zamknięciu przeglądarki. Mogą być wykorzystywane do przechowywania ustawień użytkownika, stanu aplikacji, preferencji, danych sesji i innych informacji, które mają być dostępne dla strony internetowej nawet po ponownym otwarciu przeglądark",
+      },
+      {
         question: "Co robimy z kodem zanim wrzucimy go na produkcje?",
         answer:
           "Najpierw przeprowadzamy code review, a następnie testy, aby upewnić się, że wszystko działa jak należy.",
+      },
+      {
+        question: "Czym jest stos wywołań?",
+        answer:
+          "Za każdym razem, gdy program wywołuje funkcję, do stosu wywołań jest dodawany wpis. Gdy aplikacja staje się złożona i funkcje są wielokrotnie wywoływane w obrębie innych funkcji, stos wywołań reprezentuje ślad wywołań funkcji.",
       },
       {
         question: "Czym jest Rwd?",

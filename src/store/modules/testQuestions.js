@@ -188,6 +188,11 @@ export default {
           "Nie powinniśmy próbować automatyzacji testy negatywne lub awaryjne , ponieważ w przypadku tych testów testerzy muszą myśleć analitycznie, a testy negatywne nie są naprawdę proste, aby dać wynik pozytywny lub negatywny, który może nam pomóc.",
       },
       {
+        question: "Czym są testy Uat?",
+        answer:
+          "Testy UAT (User Acceptance Testing) są rodzajem testów oprogramowania, które są przeprowadzane, aby sprawdzić, czy system lub aplikacja spełnia wymagania i oczekiwania użytkowników. Jest to końcowy etap testowania przed wdrożeniem systemu lub aplikacji do użytku przez rzeczywistych użytkowników.Celem testów UAT jest zapewnienie, że system działa zgodnie z oczekiwaniami użytkowników i spełnia określone kryteria akceptacji. Testy te są zazwyczaj przeprowadzane przez rzeczywistych użytkowników, którzy mają wiedzę i doświadczenie w korzystaniu z systemu lub aplikacji w kontekście swojej pracy lub działalności.",
+      },
+      {
         question: "Co to jest suma kontrolna?",
         answer:
           "Suma kontrolna (ang. checksum) to liczba wygenerowana na podstawie danych, których poprawnośćma ona potwierdzićw przyszłości.Ów ciąg znaków generuje sięna przyk ład dla plików wymiany danych pomiędzy systemami. Plik z sumąkontrolnąprzekazywany jest wraz ze zbiorem głównym danych. Aplikacja odbierająca (wczytująca) otrzymany plik źródłowy równieżgeneruje sumękontrolnąi porównuje jąz plikiem sumy otrzymanej z zewnętrznego systemu. Jeżeli obie sumy sięzgadzają, to można przyjąć, że dane w trakcie przesyłania nie uległy uszkodzeniu. W przypadku wykrycia niegodności należy przyjąć, że dane uległy przekłamaniu. Specyficznym rodzajem sumy kontrolnej sąliczby kontrolne na przykład w numerze PESEL lub NIP.",
@@ -196,6 +201,11 @@ export default {
         question: "Scenariusze w których testy automatyzujące są konieczne",
         answer:
           "Porównanie dwóch obrazów piksel po pikselu.Porównanie dwóch arkuszy kalkulacyjnych zawierających tysiące wierszy i kolumn.Testowanie aplikacji pod obciążeniem 100 000 użytkowników.Testy wydajności.Testowanie aplikacji w różnych przeglądarkach i równolegle w różnych systemach operacyjnych.",
+      },  
+      {
+        question: "Czym są testy regresji?",
+        answer:
+          "Testy regresji to rodzaj testów oprogramowania, które mają na celu sprawdzenie, czy wprowadzone zmiany w systemie nie powodują powstania nowych błędów ani nie naruszają istniejącej funkcjonalności. Są one wykonywane po wprowadzeniu modyfikacji lub poprawek w oprogramowaniu, takich jak nowe funkcje, poprawki defektów, zmiany w konfiguracji lub aktualizacje. Głównym celem testów regresji jest minimalizacja ryzyka wprowadzenia błędów lub defektów w systemie podczas modyfikacji. Choć zmiana może dotyczyć tylko określonych części kodu, istnieje możliwość, że wpłynie ona na inne obszary lub istniejące funkcje, które wcześniej działały poprawnie. Testy regresji pomagają wychwycić takie problemy, zapewniając, że istniejące funkcje są nadal sprawne po wprowadzeniu zmian.",
       },  
       {
         question: "czym jest testowanie automatyzujące",
@@ -210,7 +220,7 @@ export default {
       {
         question: "Jakie są rodzaje testów",
         answer:
-          "Testy funkcjonalne (czarnoskrzynkowe) – analizują zewnętrzne zachowanie oprogramowania, traktując je jak czarną skrzynkę, Testy niefunkcjonalne – określają parametry oprogramowania takie jak: wydajność, użyteczność, zdolność do pracy na różnych platformach, Testy białoskrzynkowe (strukturalne) – testy te mogą być oparte na architekturze systemu lub kodzie źródłowym aplikacji. Bazują na budowie wewnętrznej, która jest zwykle „ukryta” przed użytkownikiem końcowym, Testy regresji – ponowne przetestowanie programu po dokonaniu w nim modyfikacji, w celu sprawdzenia, że w wyniku zmian nie powstały nowe defekty lub nie ujawniły się istniejące wcześniej.",
+          "Testy funkcjonalne (czarnoskrzynkowe) analizują zewnętrzne zachowanie oprogramowania, traktując je jak czarną skrzynkę, Testy niefunkcjonalne – określają parametry oprogramowania takie jak: wydajność, użyteczność, zdolność do pracy na różnych platformach, Testy białoskrzynkowe (strukturalne) – testy te mogą być oparte na architekturze systemu lub kodzie źródłowym aplikacji. Bazują na budowie wewnętrznej, która jest zwykle „ukryta” przed użytkownikiem końcowym, Testy regresji – ponowne przetestowanie programu po dokonaniu w nim modyfikacji, w celu sprawdzenia, że w wyniku zmian nie powstały nowe defekty lub nie ujawniły się istniejące wcześniej.",
       },
       {
         question: "Czym są i kto tworzy testy jednostkowe?",
@@ -238,6 +248,11 @@ export default {
         question: "Jakie są cele testów?",
         answer:
           "Wśród głównych celów testowania wymienić należy znajdowanie błędów oraz zapobieganie defektom.Rzetelnie przeprowadzony proces testowania wpływa pozytywnie na jakość wytworzonego oprogramowania oraz dostarcza deweloperom informacji niezbędnych do dalszego rozwoju produktu.",
+      },
+      {
+        question: "Od czego zależy ryzyko projektowe i co się na nie składa?",
+        answer:
+          "Trzeba w tym miejscu wymienić wpływ i możliwość wystąpienia błędu. Ocena wpływu to zadanie analityka testów (business value) podczas gdy ocena możliwości wystąpienia błędu to zadanie dla technicznego analityka testów (technical impact). Dobrze jest tu także opisać jak wygląda identyfikacja ryzyk, różnice pomiędzy ryzykiem projektowym, a produktowym i co robimy żeby je zminimalizować.",
       },
       {
         question: "Co to są testy wydajnościowe",

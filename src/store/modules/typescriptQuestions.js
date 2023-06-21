@@ -68,6 +68,12 @@ export default {
           "Pozwalają nam one nadawać dynamicznie typy. Wyznaczają, w pewnym sensie, kolejny poziom abstrakcji. Mają zastosowanie w funkcjach, interfejsach i klasach.",
       },
       {
+        question: "Czym są asercje typów?",
+        answer:
+          "Asercje w TypeScript to mechanizm, który pozwala programiście wyrazić swoją pewność co do typu wartości w określonym miejscu kodu. Służą one do informowania kompilatora TypeScript, że znamy typ wartości bardziej dokładnie niż wynika to z analizy statycznej typów, na przykład gdy korzystamy z typów bardziej ogólnych lub wynikających z inferencji typów.Istnieją dwa rodzaje asercji w TypeScript:  Asertywny operator typu (as): Pozwala na ręczne przypisanie wartości do określonego typu, który nie jest bezpośrednio zgodny z typem aktualnej wartości. Przykład: W tym przykładzie używamy operatora as do asercji, że wartość value jest typu string, aby uzyskać dostęp do właściwości length. Bez asercji typ value byłby rozpoznany jako unknown, a kompilator nie pozwoliłby na bezpośrednie odwołanie się do właściwości length typu string.Składnia asercji typu (<Type>): Jest starszym stylem asercji w TypeScript. Przez wiele wersji języka była preferowana, ale obecnie zaleca się używanie operatora as. Przykład:Ten przykład używa składni asercji typu <Type> do asercji, że wartość value jest typu string, aby uzyskać dostęp do właściwości length. Podobnie jak w przypadku operatora as, bez asercji typ value byłby rozpoznany jako unknown.  Ważne jest, aby używać asercji z umiarem i tylko wtedy, gdy jesteśmy absolutnie pewni, że dana wartość ma oczekiwany typ. Niepoprawne asercje typu mogą prowadzić do błędów i nieprawidłowego zachowania programu",
+          codeExample: "const value: unknown = 'Hello, world!'const length: number = (value as string).length;"
+      },
+      {
         question: "Czym jest asercja typów?",
         answer:
           "Powiedzmy, że zadeklarowałeś w pewnym momencie zmieną typu any. Po jakimś czasie wiesz, że ta zmienna powinna być typu string. Za pomocą asercji typów możesz oznajmić TypeScriptowi, że wiesz, co robisz. Nie wpływa ona na runtime, jest używana tylko w procesie kompilacji. Asercję możemy zapisać na dwa sposoby.",
@@ -76,6 +82,11 @@ export default {
         question: "opisz typ never?",
         answer:
           "Typ never reprezentuje typ, który nigdy nie przemija. Może być sub typem każdego typu (oprócz samego siebie). Funkcja, która zwraca never, musi mieć tzw unreachable end point.",
+      },
+      {
+        question: "czym jest non null assertion operator?",
+        answer:
+          "Non-null assertion operator (!) to operator w TypeScript, który służy do asercji, że wartość nie jest typu null ani undefined. Operator ten informuje kompilator, że pomimo tego, że dany typ może być potencjalnie null lub undefined, programista jest pewien, że w danym miejscu wartość będzie zawsze dostępna.Składnia non-null assertion operatora to wykrzyknik ! umieszczony po zmiennej lub wyrażeniu.Warto jednak zachować ostrożność przy używaniu non-null assertion operatora, ponieważ może to prowadzić do błędów runtime, jeśli asercja okaże się fałszywa. Operator ten pozwala omijać statyczną analizę typów, więc warto go używać tylko wtedy, gdy jesteśmy absolutnie pewni, że wartość nie będzie null lub undefined. Przed zastosowaniem tego operatora należy dokładnie rozważyć kontekst i upewnić się, że asercja jest uzasadniona.",
       },
       {
         question: "Dlaczego powinniśmy używać typescripta?",

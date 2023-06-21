@@ -19,7 +19,12 @@ export default {
       {
         question: "Jak działa słowo kluczowe new?",
         answer:
-          "słowo kluczowe new w JavaScript służy do tworzenia nowych obiektów na podstawie konstruktora (funkcji). W momencie wywołania new, tworzona jest nowa instancja obiektu, a następnie konstruktor jest wywoływany z nowym obiektem jako kontekstem (this). Konstruktor może następnie manipulować nowym obiektem i zwrócić go jako wartość z new. Słowo kluczowe new jest często używane w połączeniu z funkcjami konstruktora, ale może być także użyte w połączeniu z niektórymi wbudowanymi typami obiektów, takimi jak Array, Date czy RegExp.",
+          "Słowo kluczowe new w JavaScript służy do tworzenia nowych obiektów na podstawie konstruktora (funkcji). W momencie wywołania new, tworzona jest nowa instancja obiektu, a następnie konstruktor jest wywoływany z nowym obiektem jako kontekstem (this). Konstruktor może manipulować nowym obiektem, dodając mu właściwości i metody. Na koniec, jeśli konstruktor nie zwraca jawnie innej wartości, to nowo utworzony obiekt jest zwracany jako wynik wywołania new.",
+      },
+      {
+        question: "Opisz typ bigInt?",
+        answer:
+          "W JavaScript typ danych BigInt został wprowadzony w standardzie ECMAScript 2020 i służy do obsługi liczb całkowitych o dowolnej precyzji. Jest to przydatne w przypadkach, gdy potrzebujemy manipulować bardzo dużymi liczbami, które przekraczają limity typu Number.Aby zadeklarować liczbę jako BigInt, dodaj literał n na końcu liczby. Warto zauważyć, że operacje na liczbach BigInt różnią się od operacji na typach danych numerycznych, takich jak Number. Nie można na przykład używać operatorów arytmetycznych +, -, * i / do bezpośrednich operacji na liczbach BigInt. Zamiast tego, należy używać odpowiednich metod dostępnych dla typu BigInt, takich jak BigInt.add(), BigInt.subtract(), BigInt.multiply() i BigInt.divide().Warto również zauważyć, że nie można mieszać typu BigInt z typem Number w operacjach arytmetycznych. Jeśli próbujesz wykonać operację między BigInt a Number, będzie konieczne przekonwertowanie jednego z typów, na przykład za pomocą BigInt() lub Number().Warto również pamiętać, że BigInt nie jest obsługiwany w niektórych starszych przeglądarkach. Przed użyciem BigInt warto sprawdzić, czy jest obsługiwany w danym środowisku.",
       },
       {
         question: "Czym jest konstruktor?",
@@ -29,6 +34,10 @@ export default {
       {
         question: "Czym jest metoda GET?",
         answer: "Metoda GET jest jednym z podstawowych rodzajów żądań HTTP używanych do pobierania danych z interfejsu API. Przesyłanie żądania GET oznacza, że klient (np. przeglądarka internetowa) prosi serwer o zwrócenie określonego zasobu.Podczas użycia metody GET, żądanie jest przesyłane do serwera w formie URL (Uniform Resource Locator) z parametrami, jeśli są potrzebne. Serwer odczytuje te parametry, przetwarza żądanie i zwraca odpowiedź zawierającą żądane dane. Odpowiedź serwera może być w formacie HTML, JSON, XML lub innym, zależnie od tego, jak skonfigurowany jest interfejs API.",
+      },
+      {
+        question: "Czym jest delegacja zdarzeń?",
+        answer: "Delegacja zdarzeń (ang. event delegation) to technika programowania polegająca na przypisywaniu obsługi zdarzeń do elementu nadrzędnego, zamiast do każdego pojedynczego elementu potomnego. W efekcie, zdarzenia występujące na elementach potomnych są przechwytywane i obsługiwane przez element nadrzędny.Dzięki temu możemy oszczędzić kodu i zwiększyć wydajność, szczególnie w przypadku dużej liczby elementów potomnych.Mechanizm delegacji zdarzeń polega na sprawdzeniu, który element potomny wywołał dane zdarzenie (na podstawie informacji o elemencie źródłowym zdarzenia) i podjęciu odpowiednich działań w zależności od tego elementu. Może to być realizowane przy użyciu metod takich jak event.target lub event.currentTarget, które dostarczają informacje o elemencie, na którym zdarzenie zostało wywołane.",
       },
       {
         question: "Różnica między deklaracją funkcji a deklaracją klasy?",
@@ -59,6 +68,11 @@ export default {
         question: "Czym jest funkcja map?",
         answer:
           "Metoda map robi pętlę po tablicy i każdorazowo zwraca nowy element tablicy. W wyniku po zakończeniu całej pętli zwracana jest nowa tablica z taką samą liczbą elementów.",
+      },
+      {
+        question: "Co robi metoda pop",
+        answer:
+          "metoda pop usuwa ostatni element z tablicy",
       },
       {
         question: "Czym są getery i setery",
@@ -165,6 +179,18 @@ export default {
       {
         question: "Czym jest dependency injection?",
         answer: `to wzorzec projektowy polegający na tym, że obiekt nie inicjalizuje swoich zależności sam, tylko przyjmuje je z zewnątrz poprzez tzw. „wstrzykiwanie”. Główną zaletą takiego podejścia jest między innymi łatwiejsze pisanie testów jednostkowych. Użycie DI może również sprawić, że nasze obiekty będą ze sobą luźniej powiązane (ang. loose coupling).`,
+      },
+      {
+        question: "Czym jest deklaracja przestrzeni nazw?",
+        answer: `Deklaracja przestrzeni nazw w języku C# służy do organizowania kodu w logiczne grupy i rozwiązywania konfliktów nazw między różnymi typami lub klasami. Przestrzenie nazw pozwalają uniknąć kolizji nazw, gdy w projekcie używamy różnych klas lub typów o tych samych nazwach.eklaracja przestrzeni nazw jest wprowadzana za pomocą słowa kluczowego namespace. Może być umieszczona na początku pliku lub wewnątrz innych przestrzeni nazw. Wewnątrz deklaracji przestrzeni nazw możemy definiować klasy, struktury, interfejsy i inne elementy kodu.`,
+      },
+      {
+        question: "Do czego służy słowo kluczowe using?",
+        answer: `using System; - słowo kluczowe using pozwala nam na włączenie do naszego programu przestrzeni nazw System. `,
+      },
+      {
+        question: "Czym jest garbage collector?",
+        answer: `Garbage Collector (GC) to mechanizm automatycznego zarządzania pamięcią, który jest dostępny w niektórych językach programowania, takich jak C# i Java. Jego głównym celem jest odciążenie programisty od ręcznego zarządzania pamięcią i zwalniania nieużywanych zasobów.Podstawowym zadaniem Garbage Collectora jest śledzenie i identyfikowanie obiektów w programie, które nie są już dostępne i nie są używane przez żadną część programu. Te nieużywane obiekty nazywane są "śmieciami" (garbage). Głównym powodem, dla którego obiekty stają się "śmieciami", jest utrata referencji do nich przez program.w JavaScript również występuje mechanizm Garbage Collectora. JavaScript jest językiem programowania z automatycznym zarządzaniem pamięcią, co oznacza, że programista nie musi ręcznie zarządzać alokacją i zwalnianiem pamięci.`,
       },
       {
         question: "Jak działa pętle while",
@@ -446,6 +472,11 @@ export default {
         question: "Opisz pracę z plikiem psd",
         answer:
           "Psd to projekt graficzny bazujacy na programie Adobe Photoshop. Plik ten dostarcza wszystkich niezbędnych grafik, z jakich składa się strona, jak i informacji pozwalających na jej zakodowanie. Dzięki takiej wizualizacji Web Developer jest w stanie przenieść projekt na kod Html. ",
+      },
+      {
+        question: "Jak działa metoda shift?",
+        answer:
+          "Shift usuwa pierwszy element z tablicy",
       },
       {
         question: "Na czym polega destrukturyzacja?",
