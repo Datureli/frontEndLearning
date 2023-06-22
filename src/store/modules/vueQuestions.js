@@ -286,6 +286,11 @@ export default {
           "Mixiny umożliwiają nam współdzielenie logiki między komponentami. Kawałki kodu zdefiniowane w mixinach mogą być używane w komponencie tak, jakby były zdefiniowane w samym komponencie. Używanie więcej niż jednego mixinu w tym samym komponencie może jednak spowodować, że komponent stanie się trudny do zrozumienia i użycia. Bardziej praktycznym problemem, który może wystąpić podczas używania mixinów w Vue.js, jest kolizja nazw, co ma miejsce, gdy dwa lub więcej mixinów deklaruje te same nazwy."
       },
       {
+        question: "Co oznacza opcja immediate: true?",
+        answer:
+          "W Vue 2, opcja immediate: true wewnątrz obiektu watch oznacza, że funkcja obsługi zostanie natychmiastowo wywołana po zdefiniowaniu obserwowanej właściwości.Domyślnie, gdy definiujemy obiekt watch w komponencie Vue, funkcja obsługi jest wywoływana tylko wtedy, gdy obserwowana właściwość ulegnie zmianie. Jednak dodając opcję immediate: true, funkcja obsługi zostanie wykonana również podczas inicjalizacji komponentu, nawet jeśli obserwowana właściwość nie uległa zmianie.Dzięki temu, jeśli w obiekcie watch mamy ustawione immediate: true dla danej właściwości, funkcja obsługi zostanie wykonana podczas inicjalizacji komponentu, co może być przydatne w przypadkach, gdy chcemy wykonać pewne operacje na początku, jeszcze przed zmianą obserwowanej właściwości."
+      },
+      {
         question: "Czym jest atrybut ref?",
         answer:
           "Atrybut ref w Vue.js pozwala nam uczynić dowolną zmienną reaktywną. Ref bierze argument i zwraca go owiniętego w obiekt z wartością, który może być później użyty do uzyskania dostępu lub zmiany wartości tej reaktywnej zmiennej. Innymi słowy, ref wytwarza reaktywną referencję dla naszej wartości.",
