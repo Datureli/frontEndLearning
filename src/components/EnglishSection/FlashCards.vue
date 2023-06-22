@@ -3,14 +3,14 @@
     <v-card
       width="250px"
       height="330px"
-      v-for="(question, index) in questions.slice(0, 3)"
+      v-for="(flashCard, index) in flashCards.slice(0, 3)"
       :key="index"
       class="rounded-lg mr-5"
       color="orange"
-      @click="toggleQuestion(question)"
+      @click="toggleQuestion(flashCard)"
     >
-      <p style="font-weight: 700" :key="question.change" class="mt-10 mx-auto text-h5 white--text text-wrap">
-        {{ question.change ? question.answer : question.question }}
+      <p :key="flashCard.change" class="mt-10 mx-auto text-h5 white--text text-wrap">
+        {{ flashCard.change ? flashCard.answer : flashCard.question }}
       </p>
     </v-card>
 
@@ -26,7 +26,7 @@
 export default {
   data() {
     return {
-      questions: [
+      flashCards: [
         {
           question: "What is git?",
           answer: "Git is a distributed version control system",
@@ -85,12 +85,12 @@ export default {
     };
   },
   methods: {
-    toggleQuestion(question) {
-      question.change = !question.change;
+    toggleQuestion(flashCards) {
+      flashCards.change = !flashCards.change;
     },
 
     randomizeQuestionCard() {
-      this.questions.sort(() => ~~Math.random() - 0.5);
+      this.flashCards.sort(() => ~~Math.random() - 0.5);
     },
   },
 };
