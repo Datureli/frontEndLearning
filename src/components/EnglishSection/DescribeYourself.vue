@@ -2,18 +2,23 @@
   <div>
     <v-card
       max-width="750"
-      min-height="100vh"
+      max-height="300"
       height="100%"
       class="text-h6 text-left mx-auto pa-7"
       color="orange"
-      elevation="0"
     >
-      <div
-        v-for="englishSentence in englishSentences.slice(0, 5)"
-        :key="englishSentence"
-      >
-        {{ englishSentence.sentence }}
-      </div>
+      <v-tooltip bottom>
+        <template #activator="{ on }">
+          <div
+            v-for="englishSentence in [activeSentence]"
+            :key="englishSentence.id"
+            v-on="on"
+          >
+            {{ englishSentence.englishVersionOfSentence }}
+          </div>
+        </template>
+        <span>{{ activeSentence.polishVersionOfSentence }}</span>
+      </v-tooltip>
     </v-card>
     <v-btn class="mt-1" @click="randomSentence">random</v-btn>
   </div>
@@ -23,41 +28,70 @@
 export default {
   methods: {
     randomSentence() {
-      this.englishSentences.sort(() => ~~Math.random() - 0.5);
+      this.englishSentences.sort(() => Math.random() - 0.5);
+      this.activeSentence = this.englishSentences[0];
     },
   },
   data() {
     return {
       englishSentences: [
         {
-          sentence:
+          englishVersionOfSentence:
             "My name is Paweł and I have been learning front end for almost two years",
+          polishVersionOfSentence:
+            "Nazywam się Paweł i od prawie dwóch lat uczę się frontendu",
         },
         {
-          sentence: "The technology I focus on most is vue js",
+          englishVersionOfSentence: "The technology I focus on most is vue js",
+          polishVersionOfSentence:
+            "Najbardziej skupiam się na technologii Vue.js",
         },
         {
-          sentence:
-            "I like its architecture, the way of writing code based on single file component, vue has extensive documentation and a large community focused around her I like the fact that it’s constantly challenging my brain",
+          englishVersionOfSentence:
+            "I like its architecture, the way of writing code based on single file component, Vue has extensive documentation and a large community focused around it. I like the fact that it constantly challenges my brain",
+          polishVersionOfSentence:
+            "Podoba mi się jej architektura, sposób pisania kodu oparty na komponentach w pojednym pliku, Vue posiada obszerną dokumentację i dużą społeczność skupioną wokół niego. Podoba mi się fakt, że stale stawia mi wyzwania",
         },
         {
-          sentence:
-            "  The more you write code, the more you understand there are problems you have never faced, the more you realize you don’t know",
+          englishVersionOfSentence:
+            "The more you write code, the more you understand there are problems you have never faced, the more you realize you don't know",
+          polishVersionOfSentence:
+            "Im więcej piszesz kodu, tym bardziej zdajesz sobie sprawę, że są problemy, z którymi nigdy się nie spotkałeś, tym bardziej zdajesz sobie sprawę, że wiele rzeczy nie wiesz",
         },
         {
-          sentence:
-            "I like the idea that I can create something that other people use, and enjoy.",
+          englishVersionOfSentence:
+            "I like the idea that I can create something that other people use and enjoy.",
+          polishVersionOfSentence:
+            "Podoba mi się pomysł, że mogę tworzyć coś, czego inni ludzie używają i cieszą się z tego.",
         },
         {
-          sentence:
-            "  I also love that I can create things from my imagination and see them come to life for others as well as for me.",
+          englishVersionOfSentence:
+            "I also love that I can create things from my imagination and see them come to life for others as well as for myself.",
+          polishVersionOfSentence:
+            "Uwielbiam także to, że mogę tworzyć rzeczy na podstawie mojej wyobraźni i widzieć, jak ożywają dla innych, a także dla mnie.",
         },
         {
-          sentence:
-            " andcommunity I don’t know any other profession with a community so big andactive and willing to help.The feeling you get from creating something from nothing.",
+          englishVersionOfSentence:
+            "I don't know any other profession with such a big and active community that is so willing to help. The feeling you get from creating something out of nothing.",
+          polishVersionOfSentence:
+            "Nie znam żadnej innej profesji z tak dużą i aktywną społecznością, która jest tak chętna do pomocy. To uczucie, które otrzymujesz, tworząc coś z niczego.",
         },
       ],
+      activeSentence: null,
     };
+  },
+  watch: {
+    englishSentences: {
+      immediate: true,
+      handler(sentences) {
+        if (sentences.length > 0) {
+          this.activeSentence = sentences[0];
+        }
+      },
+    },
+  },
+  created() {
+    this.randomSentence(); // Dodane wywołanie randomSentence po utworzeniu komponentu
   },
 };
 </script>
