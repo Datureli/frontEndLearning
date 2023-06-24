@@ -5,33 +5,33 @@ export default {
     htmlQuestions: [
       {
         question: `Czym jest Html?`,
-        answer: `HTML (hypertext Markup Language) to język znaczników służący do prezentacji treści na stronach internetowych, który jest oparty o hiperłącza łączące poszczególne dokumenty pomiędzy sobą. Przeglądarki internetowe jednoznacznie interpretują kod html i na jego bazie przedstawiają treść końcowym użytkownikom.`,
+        answer: `HTML (Hypertext Markup Language) to język znaczników służący do strukturyzowania i prezentacji treści na stronach internetowych. Jest podstawowym językiem używanym do tworzenia stron internetowych. Kod HTML składa się z różnych znaczników, które definiują strukturę dokumentu, włączając w to nagłówki, paragrafy, linki, obrazy i wiele innych elementów. Przeglądarki internetowe interpretują kod HTML i renderują go, aby przedstawić treść i układ strony użytkownikom.`,
       },
       {
         question: `Czym jest string interpolation?`,
-        answer: `Interpolacja ciągów JavaScript to proces osadzania wyrażenia w części ciągu. Literał szablonu służy do osadzania wyrażeń. Za pomocą interpolacji można dodawać do ciągu wartości, takie jak zmienne i obliczenia matematyczne.`,
+        answer: `nterpolacja ciągów w JavaScript to proces osadzania wyrażenia wewnątrz części ciągu tekstowego. W JavaScript możemy używać literałów szablonu (template literals) do osadzania wyrażeń wewnątrz ciągów. Dzięki temu możemy łatwo dodawać wartości, takie jak zmienne i obliczenia matematyczne, do ciągów tekstowych. Interpolacja ciągów znacznie ułatwia tworzenie czytelnych i dynamicznych ciągów w JavaScript.`,
       },
       {
         question: `jak wstawić ikonę obok adresu www?`,
 
-        answer: `Favicon jest małą ikoną, która wyświetla się obok tytułu witryny w przeglądarce. Służy jako element rozpoznawczy, budujący zaufanie wśród odbiorców, ponieważ pomaga im wizualnie zidentyfikować witrynę internetową.Pierwszym sposobem dodania favicon jest umieszczenie go w public_html.`,
+        answer: `Aby dodać ikonę obok adresu URL, umieść plik ikony o nazwie "favicon.ico" w katalogu głównym witryny i dodaj poniższy tag link w sekcji <head> w kodzie HTML:`,
       },
       {
         question: `Strony statyczne vs dynamiczne?`,
-        answer: `Statyczne strony są sposobem na poprawienie wydajności naszego produktu. Zapytanie HTTP o dynamiczną stronę skutkuje dłuższym czasem oczekiwania, ponieważ przed otrzymaniem odpowiedzi, skrypt wykona zapytanie o dane do bazy danych, przetworzenie, uzupełnienie HTML danymi i dopiero odpowiedź.Przetwarzanie danych użytkownika po stronie serwera jest często źródłem problemów z bezpieczeństwem danych. Brak przetwarzania równa się brak dostępu do bazy danych. Dopóki statyczne pliki na hostingu są bezpieczne, twoja statyczna strona również za taką uchodzi.`,
+        answer: `Strony statyczne i dynamiczne różnią się sposobem generowania i dostarczania treści na stronach internetowych.Strony statyczne są tworzone z wykorzystaniem prostych plików HTML i zasobów, które są przechowywane na serwerze i dostarczane bez żadnej dodatkowej logiki. Zwykle są to proste strony, które nie zmieniają się często. Zaletą stron statycznych jest ich szybkość i prostota, ponieważ nie wymagają przetwarzania danych po stronie serwera podczas wyświetlania.Strony dynamiczne są generowane dynamicznie po stronie serwera lub klienta za pomocą skryptów, takich jak PHP, Ruby, Python, JavaScript itp. Przed dostarczeniem strony do użytkownika, serwer przetwarza żądania, pobiera dane z bazy danych, przeprowadza obliczenia i generuje treść HTML. Strony dynamiczne mogą dostarczać bardziej interaktywne i personalizowane treści, ponieważ mogą reagować na dane użytkownika i zmienne warunki.`,
       },
 
       {
         question: `Czym jest tag blockquote?`,
-        answer: `Tag blockquote określa treść cytowaną ze źródła zewnętrznego (gazeta, praca naukowa itp.`,
+        answer: `Tag <blockquote> w HTML służy do oznaczania treści cytowanej ze źródła zewnętrznego, takiego jak gazeta, praca naukowa lub inny dokument. Jest używany do wyróżnienia fragmentów tekstu, które są cytowane lub powielane z innych źródeł.`,
       },
       {
-        question: `różnica pomiędzy div a span?`,
-        answer: `jeśli chodzi o wyświetlanie tagów, przeglądarka rozróżnia trzy grupy elementów: liniowe np span,em,strong, blokowe div,p,article, liniowo-blokowe: input textarea. Elementy liniowe nie spowodują przejścia do nowej linii, będą wyświetlać się obok siebie, w jednej lini. Blokowe z kolei będą zachowywać się jak pudełka, które ustawiasz jeden pod drugim, a więc nigdy nie wyświetlą się obok siebie, chyba ,że zmienimy to za pomocą css. Liniowo-blokowe z kolei będą zachowywać się jak liniowe, jeśli chodzi o położenie a więc wyświetlać będą się obok siebie, natomiast różnią się od nich tym, że możesz nadać im różne wielkości. Domyślnie, elementom liniowym przeglądarka ustawia właściwość "display" na "inline". Blokowym na "block", a liniowo blokowym na "inline-block". Na przykład tag <span> nie spowoduje przejścia tekstu do nowej linii, bo jest elementem liniowym i przeglądarka z automatu nadaje mu styl display na inline:`,
+        question: `Jaka jest różnica między tagiem div a span?`,
+        answer: `Różnica między tagiem <div> a <span> dotyczy ich domyślnego zachowania w wyświetlaniu oraz ich roli semantycznej.Div jest elementem blokowym, co oznacza, że jest traktowany jako oddzielny blok na stronie. Domyślnie zajmuje całą dostępną szerokość na stronie i powoduje przejście do nowej linii. Jest często używany do grupowania elementów i tworzenia sekcji na stronie. Możemy również zastosować do niego style CSS, aby dostosować jego wygląd i układ.Span, z kolei, jest elementem liniowym. Nie powoduje automatycznego przejścia do nowej linii i nie zajmuje całej szerokości dostępnej przestrzeni. Jest często używany do wyróżniania lub stylizowania fragmentów tekstu wewnątrz innych elementów. Może być również stosowany jako kontener dla innych elementów inline.`,
       },
       {
         question: `Czym jest innerHtml?`,
-        answer: `Właściwość innerHTML umożliwia odczyt i ustawianie html, jaki jest we wnętrzu danego elementu`,
+        answer: `Właściwość innerHTML jest właściwością dostępną w języku JavaScript, która umożliwia odczyt i ustawianie zawartości HTML znajdującej się wewnątrz danego elementu.Poprzez użycie właściwości innerHTML można odczytać całą zawartość HTML znajdującą się wewnątrz danego elementu jako tekst.`,
       },
       {
         question: `rodzaje list w html`,
@@ -39,38 +39,47 @@ export default {
       },
       {
         question: `Do czego służą metatagi?`,
-        answer: `Metatagi w HTML są używane przez programistę do informowania przeglądarki o opisie strony, autorze szablonu, zestawie znaków, słowach kluczowych i wielu innych.
-        Metatagi są używane do optymalizacji wyszukiwarek, aby poinformować wyszukiwarkę o zawartości strony.`,
+        answer: `Metatagi w HTML są używane przez programistów do przekazywania informacji o stronie internetowej przeglądarce lub wyszukiwarkom. Przez to, że są umieszczone w sekcji <head> dokumentu HTML, nie są one wyświetlane bezpośrednio na stronie dla użytkowników, ale dostarczają istotnych danych o stronie dla przeglądarek, narzędzi wyszukiwania i innych aplikacji.Metatag <title>: Określa tytuł strony, który jest wyświetlany na pasku tytułu przeglądarki i w wynikach wyszukiwania.Metatag <meta charset>: Określa zestaw znaków używanych w dokumencie HTML.Metatag <meta name="description">: Opisuje zawartość strony, który jest często wykorzystywany przez wyszukiwarki jako krótki opis wyświetlany w wynikach wyszukiwania.Metatag <meta name="keywords">: Określa słowa kluczowe związane ze stroną, które mogą pomóc wyszukiwarkom w indeksowaniu i kategoryzacji treści.`,
       },
       {
         question: `Jak sprawdzić wydajność swojego kodu?`,
-        answer: `Google PageSpeed Insights tool, Przeglądarka Chrome (zakładki Audits, Performance), W3C validator do sprawdzania poprawności kodu HTML i CSS, caniuse.com do sprawdzenia zgodności funkcji z przeglądarką.`,
+        answer: `Narzędzie Google PageSpeed Insights: Jest to narzędzie dostarczane przez Google, które analizuje wydajność strony internetowej na urządzeniach mobilnych i komputerach. Po wprowadzeniu adresu URL strony, narzędzie generuje raport z zaleceniami dotyczącymi optymalizacji strony pod kątem szybkości ładowania i innych czynników wydajnościowych.
+
+        Przeglądarka Chrome: Przeglądarka Chrome oferuje wbudowane narzędzia do analizy wydajności strony. Można z nich skorzystać, otwierając konsolę dewelopera i przejść do zakładki "Audits" lub "Performance". W zakładce "Audits" można przeprowadzić automatyczną kontrolę wydajności i otrzymać zalecenia dotyczące optymalizacji. Natomiast w zakładce "Performance" można nagrywać i analizować działanie strony w celu identyfikacji problematycznych obszarów i zoptymalizowania ich.
+        
+        W3C validator: W3C validator to narzędzie online do sprawdzania poprawności kodu HTML i CSS. Może pomóc w identyfikacji błędów składniowych, niezgodności i potencjalnych problemów, które mogą wpływać na wydajność strony.
+        
+        Can I use (caniuse.com): Jest to witryna internetowa, która umożliwia sprawdzenie zgodności funkcji, właściwości CSS i innych technologii webowych z różnymi przeglądarkami internetowymi. Można szybko sprawdzić, czy używane funkcje są obsługiwane przez docelowe przeglądarki i ewentualnie dostosować kod w zależności od potrzeb..`,
       },
       {
         question: `Jakie są sposoby na zmniejszenie czasu ładowania strony?`,
-        answer: `Optymalizacja zdjęc i filmów na stronie.Optymalizacja plików blokujących renderowanie np. minifikacja plików. Przeniesienie skryptów z nagłówka do stopki lub stosowanie asynchronicznego ładowania skryptów `,
+        answer: `Optymalizacja obrazów i plików multimedialnych: Zdjęcia i filmy są często głównymi czynnikami wpływającymi na czas ładowania strony. Można zastosować różne techniki optymalizacji, takie jak kompresja, skalowanie, wybór odpowiedniego formatu pliku i używanie zaawansowanych technik dostarczania obrazów, takich jak lazy loading (opóźnione ładowanie) czy responsive images (obrazki responsywne). Dzięki temu można zmniejszyć rozmiar plików i przyspieszyć ładowanie strony.
+
+        Minifikacja i kompresja plików: Minifikacja polega na usunięciu zbędnych białych znaków, komentarzy i niepotrzebnych znaczników z kodu źródłowego, co zmniejsza jego rozmiar. Kompresja natomiast polega na zmniejszeniu rozmiaru plików poprzez zastosowanie algorytmów takich jak GZIP. Minifikacja i kompresja dotyczą głównie plików CSS i JavaScript. Dzięki temu można zmniejszyć rozmiar plików i przyspieszyć ich pobieranie przez przeglądarkę.
+        
+        Optymalizacja plików blokujących renderowanie: Pliki blokujące renderowanie, takie jak skrypty JavaScript i arkusze stylów CSS, mogą spowolnić ładowanie strony. Ważne jest umieszczenie ich w odpowiednich miejscach i zastosowanie technik, takich jak asynchroniczne lub odroczone ładowanie, aby nie blokować procesu renderowania strony. Można przenieść skrypty z nagłówka do stopki strony lub stosować atrybuty asynchroniczne lub defer w tagach skryptów, aby przyspieszyć renderowanie treści.
+        
+        Caching (buforowanie): Wykorzystanie mechanizmu cache pozwala przeglądarce na przechowywanie zasobów strony, takich jak obrazy, style CSS i skrypty JavaScript, na lokalnym dysku użytkownika. Dzięki temu, gdy użytkownik ponownie odwiedzi stronę, nie musi pobierać wszystkich plików od nowa, co przyspiesza ładowanie. Można ustawić odpowiednie nagłówki cache dla plików na serwerze lub skorzystać z narzędzi do zarządzania cache.
+        
+        Redukcja ilości zapytań HTTP: Każde zapytanie HTTP do serwera wpływa na czas ładowania strony. Dlatego warto zredukować liczbę zapytań, łącząc pliki CSS i JavaScript w jednym pliku (concatenation) lub stosując techniki takie jak bundling czy tree shaking.`,
       },
       {
         question: `Czym jest html canvas?`,
-        answer: `element języka HTML wprowadzony w HTML5 pozwalający na dynamiczne, skryptowe renderowanie kształtów i obrazów bitmapowych. Dzięki wprowadzeniu obiektu canvas możliwe stało się tworzenie dynamicznych dwu i trójwymiarowych animacji czy gier działających w przeglądarkach bez dodatkowych wtyczek.`,
+        answer: `HTML canvas to element języka HTML wprowadzony w HTML5, który umożliwia dynamiczne i skryptowe renderowanie kształtów oraz obrazów bitmapowych. Dzięki wprowadzeniu obiektu canvas stało się możliwe tworzenie interaktywnych animacji, grafik dwu i trójwymiarowych oraz gier, które działają w przeglądarkach bez konieczności instalowania dodatkowych wtyczek.`,
       },
       {
         question: `Czym jest atrybut srcset?`,
-        answer: `Atrybut ten możemy dodać do elementów img oraz source w html.Atrybut srcset wykorzystany wraz z elementem img pozwala nam określić adres obrazka, który chcemy, aby był reprezentowany przez dany element img w określonej sytuacji.Atrybut srcset wykorzystany wraz z elementem source pozwala nam określić adres obrazka, który chcemy, aby był reprezentowany przez dany element source w określonej sytuacji`,
-      },
-      {
-        question: `Które przeglądarki wspierają HTML5?`,
-        answer: `Ostatnie wersje Safari, Google Chrome, Mozilla Firefox oraz Opera – wszystkie wspierają wiele funkcjonalności HTML5. Internet Explorer od wersji 9.0 również wspiera niektóre z funkcjonalności.Mobilne przeglądarki internetowe, które zostały zainstalowane na urządzeniach jak iPhone, iPad oraz Android wpierają HTML5.`,
+        answer: `Atrybut srcset jest używany w elementach <img> oraz <source> w HTML. Atrybut ten umożliwia określenie adresu obrazka, który ma być wyświetlany przez dany element w zależności od określonej sytuacji.Jeśli używamy atrybutu srcset w elemencie <img>, możemy określić kilka różnych wariantów obrazka wraz z odpowiadającymi im adresami URL. Przeglądarka może następnie wybrać i wyświetlić odpowiednią wersję obrazka w zależności od rozdzielczości ekranu, dostępnej przepustowości sieci lub innych czynników.`,
       },
       {
         question: "Czym jest tag time?",
         answer:
-          "Time określa czytelną dla człowieka datę oraz godzinę. Można go również używać do kodowania daty i godziny w sposób możliwy do odczytu maszynowego, dzięki czemu przeglądarki mogą oferować dodawanie przypomnień do kalendarza.time pozwala również wyszukiwarkom na generowanie inteligentniejszych wyników wyszukiwania.",
+          "Tag time w HTML służy do oznaczania daty i godziny. Może być używany do wyświetlania czytelnych dla człowieka dat i godzin na stronie. Pozwala także na kodowanie dat i godzin w sposób zrozumiały dla maszyn, co umożliwia przeglądarkom i wyszukiwarkom lepsze rozpoznawanie i obsługę tych informacji.",
       },
       {
         question: "Czym jest twarda spacja & nbspHtml?",
         answer:
-          "jak chcemy użyć więcej niż jednej spacji,możemy tego dokonać poprzez dodanie znaku specjalnego.Znak specjalny to odpowiednik znaku wprowadzanego z klawiatury (np. spacji) posiadający specjalny zapis html. Każdy znak specjalny zaczyna się od znaku & (ampersand) i kończy się średnikiem.Znak specjalny niełamliwej spacji to &nbsp; (non-breaking space).W zasadzie jedynym prawidłowym zastosowaniem tego specjalnego znaku jest zapobieganie rozdzielenia wyrazów przy przenoszeniu do następnej linii",
+          "jTwarda spacja (&nbsp;) w HTML to specjalny znak, który reprezentuje niełamliwą spację. Kiedy chcemy wstawiać więcej niż jedną spację między słowami lub elementami na stronie, możemy użyć twardych spacji.",
       },
       {
         question: "Co to jest div?",
@@ -80,23 +89,17 @@ export default {
       {
         question: "Czym jest label?",
         answer:
-          "Element definiuje etykietę dla pola formularza, po kliknięciu której uaktywnia się przypisane jej pole.",
-      },
-      {
-        question:
-          "Czy HTML jest wstecznie kompatybilny ze starszymi przeglądarkami?",
-        answer:
-          "Tak, HTML5 został zaprojektowany tak, aby w miarę możliwości, być kompatybilny ze starszymi przeglądarkami.Nowe funkcjonalności opierają się na tych istniejących i pozwalają na wyświetlenie awaryjnej zawartości dla starszych przeglądarek.",
+          "Tag label w HTML służy do definiowania etykiety dla pola formularza. Jest to element, który jest powiązany z określonym polem formularza i umożliwia aktywowanie tego pola poprzez kliknięcie na etykietę",
       },
       {
         question: "Wymień niektóre z nowych funkcji HTML5.",
         answer:
-          "Nowe elementy składni,header,footer,section ,audio i video,drag and drop. Forms 2.0 – ulepszenie formularzy internetowych, został przedstawiony nowy atrybut - input, WebSocket następna generacja dwukierunkowej komunikacji dla aplikacji internetowych, Server-Sent Event, HTML5 wprowadza zdarzenia, które przechodzą z serwera www do przeglądarki internetowej, Canvas – obsługuje dwuwymiarową powierzchnię rysunkową, które może zostać oprogramowana przy użyciu JavaScript. Persistent Local Storage – przy użyciu tej funkcjonalności aplikacje webowe mogą przechowywać dane lokalnie bez użycia przeglądarki użytkownika.",
+          "Nowe elementy semantyczne: HTML5 wprowadza wiele nowych elementów, takich jak <header>, <footer>, <section>, które mają na celu lepsze definiowanie struktury i znaczenia poszczególnych sekcji strony.  Obsługa multimediów: HTML5 wprowadza wsparcie dla elementów multimedialnych, takich jak <audio> i <video>, umożliwiających osadzanie i odtwarzanie dźwięku i wideo bez konieczności korzystania z wtyczek zewnętrznych. Przeciągnij i upuść (drag and drop): HTML5 wprowadza natywne wsparcie dla funkcji przeciągania i upuszczania elementów na stronie, umożliwiając interakcję użytkownika poprzez przeciąganie i upuszczanie elementów na stronie. Ulepszone formularze: HTML5 wprowadza nowe atrybuty i typy pól formularza, umożliwiające bardziej zaawansowane walidacje danych, obsługę daty, czasu, lokalizacji itp. WebSocket: Jest to technologia, która umożliwia dwukierunkową komunikację w czasie rzeczywistym między przeglądarką a serwerem, co pozwala na interaktywne aplikacje internetowe. Server-Sent Events: HTML5 wprowadza zdarzenia serwerowe (Server-Sent Events), które umożliwiają serwerowi przesyłanie strumieniowych danych do przeglądarki w czasie rzeczywistym. Canvas: Element <canvas> umożliwia programistom tworzenie interaktywnych grafik i animacji dwuwymiarowych za pomocą języka JavaScript. Persistent Local Storage: HTML5 wprowadza mechanizm przechowywania danych lokalnie w przeglądarce, który pozwala aplikacjom webowym przechowywać dane poza pamięcią podręczną przeglądarki, nawet po zamknięciu strony.",
       },
       {
         question: "Czy tagi i elementy w html to to samo?",
         answer:
-          "Nie, elementy w html są definiowane poprzez początkowy tag, mogą zawierać jakiś kontent wewnątrz i tag zamykający.Przykład: <h1>Heading</h1> to element html natomiast <h1>jakiś kontent</h1> to tag zamykajacy.",
+          "Tagi HTML to znaczniki używane do oznaczania różnych elementów i struktur w kodzie HTML. Przykładem tagu może być <h1>, który oznacza nagłówek pierwszego poziomu. Tagi mają swoje nazwy, zazwyczaj są otwierane <tag> i zamykane </tag>, a treść znajduje się między nimi.  Elementy HTML to pełne konstrukcje, które składają się z otwierającego tagu, treści (tekstu lub innych elementów) oraz zamykającego tagu. Na przykład <h1>Heading</h1> jest elementem HTML, gdzie <h1> to otwierający tag, 'Heading' to treść, a </h1> to zamykający tag.",
       },
       {
         question: "Czym są tagi i atrybuty w html?",
