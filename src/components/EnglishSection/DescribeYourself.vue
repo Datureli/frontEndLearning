@@ -7,7 +7,7 @@
       class="text-h6 text-left mx-auto pa-7"
       color="orange"
     >
-      <v-tooltip bottom>
+      <v-tooltip bottom max-width="750">
         <template #activator="{ on }">
           <div
             v-for="englishSentence in [activeSentence]"
@@ -17,7 +17,7 @@
             {{ englishSentence.englishVersionOfSentence }}
           </div>
         </template>
-        <span>{{ activeSentence.polishVersionOfSentence }}</span>
+        <span class="mt-10" style="margin-top: 20rem;">{{ activeSentence.polishVersionOfSentence }}</span>
       </v-tooltip>
     </v-card>
     <v-btn class="mt-1" @click="randomSentence">random</v-btn>
@@ -92,3 +92,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.v-tooltip {
+  background-color: red;
+}
+</style>

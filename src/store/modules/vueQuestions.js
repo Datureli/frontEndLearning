@@ -271,6 +271,11 @@ export default {
           "to funkcja, która wykorzystuje interfejs Vue Composition API do hermetyzacji i ponownego użycia logiki stanowej.Budując aplikacje frontendowe, często mamy potrzebę ponownego wykorzystania logiki do typowych zadań.jego funkcja formatująca hermetyzuje logikę bezstanową: pobiera dane wejściowe i natychmiast zwraca oczekiwane dane wyjściowe.",
       },
       {
+        question: "Czym sie roznią mixiny od composables?",
+        answer:
+          "Mixins w Vue 2 są mechanizmem do współdzielenia kodu między komponentami, podczas gdy Composables w Vue 3 to wzorzec projektowy, który umożliwia tworzenie funkcji lub obiektów z logiką komponentów. Composables w Vue 3 zostały wprowadzone jako bardziej modularne i rekomendowane podejście do tworzenia ponownie używalnego kodu w Vue.js.",
+      },
+      {
         question: "Czym są komponenty asynchroniczne?",
         answer:
           "W Vue.js można tworzyć komponenty asynchroniczne za pomocą składni import() lub defineAsyncComponent(). Komponenty asynchroniczne są używane, gdy chcemy ładować komponenty dynamicznie w momencie, gdy są potrzebne, zamiast ładować je wraz z głównym plikiem aplikacji.const MyAsyncComponent = () => import('./MyAsyncComponent.vue').Składnia import() pozwala na dynamiczne ładowanie komponentu z pliku o podanej ścieżce. Gdy komponent jest zaimportowany, można go użyć w szablonie lub zarejestrować w komponencie nadrzędnym.Składnia defineAsyncComponent() jest dostępna od wersji Vue.js 3.2.0 i pozwala na definiowanie komponentów asynchronicznych bezpośrednio.const MyAsyncComponent = defineAsyncComponent(() => import('./MyAsyncComponent.vue'))",

@@ -131,7 +131,7 @@ export default {
       {
         question: "Czym jest tag article?",
         answer:
-          "Tag article określa niezależną i osobną treść. Najczęściej  używa się go na blogach.",
+          "służy do oznaczania niezależnego, samodzielnego fragmentu treści na stronie internetowej. Oznaczenie <article> wskazuje, że zawartość wewnątrz tego tagu stanowi odrębny artykuł, komentarz, wpis bloga lub inną samodzielną część strony.",
       },
       {
         question: "Objaśnij semantyczny html",
@@ -142,17 +142,17 @@ export default {
       {
         question: "to czego służy znacznik pre?",
         answer:
-          "Wprowadza tekst preformatowany, czyli napisany czcionką monotypiczną (o stałej szerokości znaku), który uwzględnia dodatkowe spacje, tabulację i znaki końca linii (nie trzeba stosować znaczników <br>) oraz nie jest automatycznie zawijany. Dzięki niemu możesz np. wkleić na stronę WWW tekst, wprost ze zwykłego edytora, bez stosowania dodatkowych znaczników (niestety informacje dotyczące formatowania zostaną pominięte).",
+          "Znacznik <pre> w języku HTML służy do oznaczania bloku tekstu jako preformatowanego. Wewnątrz tego tagu zawartość jest wyświetlana dokładnie w taki sposób, w jaki została zapisana w kodzie źródłowym, zachowując spację, tabulatory i znaki końca linii. Oznacza to, że tekst wewnątrz znacznika <pre> jest renderowany przy użyciu czcionki o stałej szerokości znaku, zwanej również czcionką monotypiczną.",
       },
       {
         question: "Do czego służy znacznik Main?",
         answer:
-          "Tag main określa główną treść dokumentu.Może to ułatwić korzystanie ze skrótów klawiszowych, przybliżaniu w przeglądarkach mobilnych i przy innych czynnościach.W dokumencie musi znajdować się jeden element main.Element main nie może być zagnieżdżony w żadnym z tych elementów: article, aside, footer, header lub nav.",
+          "Tag main określa główną treść dokumentu. Może to ułatwić korzystanie ze skrótów klawiszowych, przybliżaniu w przeglądarkach mobilnych i przy innych czynnościach.W dokumencie musi znajdować się jeden element main.Element main nie może być zagnieżdżony w żadnym z tych elementów: article, aside, footer, header lub nav.",
       },
       {
         question: "Do czego służy znacznik nav?",
         answer:
-          "Tag nav definiuje zestaw linków nawigacji. W tagu nav powinny się znaleźć podstawowe linki służące do nawigacji, a nie wszystkie linki na stronie.",
+          "Znacznik <nav> w języku HTML służy do oznaczania zestawu linków nawigacyjnych na stronie internetowej. Jest to semantyczny element, który informuje przeglądarki i narzędzia indeksujące, że zawartość wewnątrz znacznika stanowi menu lub sekcję z linkami nawigacyjnymi.",
       },
       {
         question: "Jaki jest cel używania sekcji aside w HTML5?",
@@ -162,32 +162,27 @@ export default {
       {
         question: "Czym są atrybuty niestandardowe w HTML5?",
         answer:
-          "Atrybuty niestandardowe rozpoczynają się od data- i będą nazywane na podstawie twoich preferencji. Składa się z dwóch atrybutów, data-subject oraz data-level. Użytkownik będzie mógł pobrać wartości tych atrybutów używając JavaScript lub css w podobny sposób jak w przypadku korzystania ze standardowych atrybutów.",
+          "Atrybuty niestandardowe (custom attributes) w HTML5 to atrybuty, które nie są zdefiniowane w specyfikacji HTML, ale można je dodawać do elementów HTML na podstawie własnych preferencji. Często używa się atrybutów niestandardowych w celu przechowywania dodatkowych informacji lub metadanych związanych z danym elementem.Aby utworzyć atrybut niestandardowy, konieczne jest rozpoczęcie jego nazwy od prefiksu 'data-', po którym możesz wpisać dowolną nazwę atrybutu zgodnie z własnymi preferencjami. Na przykład, atrybuty niestandardowe mogą być nazwane 'data-subject' i 'data-level'.",
       },
       {
         question: "Do czego służy znacznik footer?",
         answer:
-          "Tag footer definiuje stopkę dokumentu lub sekcji i powinien zawierać informacje o stronie, która go zawiera. Ten tag zwykle zawiera informacje o autorze, prawach autorskich, dane kontaktowe, mapę witryny,powrót do góry oraz linki do powiązanych dokumentów,",
-      },
-      {
-        question: "Czym jest Web Forms 2.0?",
-        answer:
-          "Jest to rozszerzenie funkcji formularzy z HTML4. Elementy formularza oraz atrybuty w HTML5 wprowadzają większy zakres semantyki niż miało to miejsce w HTML4 oraz usuwają potrzebę pisania długich skryptów oraz stylowania elementów, które było wymagane w HTML4.",
+          "Footer definiuje stopkę dokumentu lub sekcji i powinien zawierać informacje o stronie, która go zawiera. Ten tag zwykle zawiera informacje o autorze, prawach autorskich, dane kontaktowe, mapę witryny,powrót do góry oraz linki do powiązanych dokumentów,",
       },
       {
         question: "Do czego służy znacznik header?",
         answer:
-          "Tag header reprezentuje kontener na treść wprowadzającą lub zestaw linków nawigacyjnych. Zazwyczaj zawiera logo, linki nawigacyjne lub nagłówki.",
+          "Header reprezentuje kontener na treść wprowadzającą lub zestaw linków nawigacyjnych. Zazwyczaj zawiera logo, linki nawigacyjne lub nagłówki.",
       },
       {
         question: "przechowywanie sesji w HTML5?",
         answer:
-          "HTML5 przedstawił nowy atrybut sessionStorage , który może być wykorzystywany przez strony aby dodawać dane do sesji i będzie dostępny dla każdej strony otwartej w tym oknie, tj. jak tylko zamkniesz okno sesja będzie pusta.",
+          "sessionStorage pozwala na przechowywanie danych w pamięci sesji, która jest dostępna dla każdej strony otwartej w tym samym oknie przeglądarki. Oznacza to, że dane przechowywane w sessionStorage będą dostępne dla wszystkich podstron w ramach tego samego okna przeglądarki. Jednak gdy zamkniesz okno przeglądarki, sesja zostanie wyczyszczona, a dane w sessionStorage zostaną usunięte.",
       },
       {
-        question: "Czym jest accessibility?(dostępność)",
+        question: "Czym jest accessibility?",
         answer:
-          "Accessibility to tworzenie aplikacji w sposób który jest łatwy do interpretacji dla przeglądarki lub specjalnych urządzeń przystosowanych przez osoby niepełnosprawne. Po prostu przeglądarka wie kiedy ma do czynienia z obrazkiem, nawigacją czy artykułem.",
+          "Accessibility (dostępność) odnosi się do tworzenia aplikacji, stron internetowych i innych treści cyfrowych w sposób, który umożliwia osobom niepełnosprawnym pełny dostęp i korzystanie z tych zasobów. Celem dostępności jest zapewnienie, że osoby z różnymi niepełnosprawnościami, takimi jak wizualne, słuchowe, ruchowe, poznawcze czy neurologiczne, mogą odbierać, rozumieć i interakcjonować z treściami w sposób skuteczny i bezbarierowy.Accessibility to tworzenie aplikacji w sposób który jest łatwy do interpretacji dla przeglądarki",
       },
       {
         question: "Jakie są wady ciasteczek?",
@@ -205,10 +200,8 @@ export default {
   actions: {
     htmlQuestionLoop(context) {
       setInterval(() => {
-        if (state.timeToNextQuestion < 0) {
           context.commit("randomHtmlQuestion");
-        }
-      }, 5000);
+      }, 20000);
     },
     randomHtmlQuestion(context) {
       context.commit("randomHtmlQuestion");

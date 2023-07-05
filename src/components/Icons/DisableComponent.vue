@@ -1,7 +1,7 @@
 <template>
   <v-btn
     color="transparent"
-    @click="disableAnswers(); changeIcon();"
+    @click="disableAnswers(); changeIcon()"
   >
     <v-icon x-large>{{
       disableStatus ? "mdi-comment-off-outline" : "mdi-comment-outline"
@@ -12,7 +12,7 @@
 <script>
 import { mapActions } from "vuex";
 export default {
-  data() {
+  data: () => {
     return {
       disableStatus: true,
     };
