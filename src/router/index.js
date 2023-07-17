@@ -9,8 +9,8 @@ const routes = [
     name: "Home",
     component: () => import("../views/Home"),
     meta: {
-      title: "Front-end learning platform"
-    }
+      title: "Front-end learning platform",
+    },
   },
   {
     path: "/about/",
@@ -87,51 +87,51 @@ const routes = [
     component: () => import("../components/materials/Books/Book"),
     children: [
       {
-        path: 'html',
-        name: 'Html',
-        component: () => import("../components/materials/Books/HtmlBook")
+        path: "html",
+        name: "Html",
+        component: () => import("../components/materials/Books/HtmlBook"),
       },
       {
-        path: 'css',
-        name: 'Css',
-        component: () => import("../components/materials/Books/CssBook")
+        path: "css",
+        name: "Css",
+        component: () => import("../components/materials/Books/CssBook"),
       },
       {
-        path: 'javascript',
-        name: 'Javascript',
-        component: () => import("../components/materials/Books/JavascriptBook")
+        path: "javascript",
+        name: "Javascript",
+        component: () => import("../components/materials/Books/JavascriptBook"),
       },
       {
-        path: 'vue',
-        name: 'Vue',
-        component: () => import("../components/materials/Books/VueBook")
+        path: "vue",
+        name: "Vue",
+        component: () => import("../components/materials/Books/VueBook"),
       },
       {
-        path: 'react',
-        name: 'React',
-        component: () => import("../components/materials/Books/ReactBook")
+        path: "react",
+        name: "React",
+        component: () => import("../components/materials/Books/ReactBook"),
       },
       {
-        path: 'typescript',
-        name: 'Typescript',
-        component: () => import("../components/materials/Books/TypescriptBook")
+        path: "typescript",
+        name: "Typescript",
+        component: () => import("../components/materials/Books/TypescriptBook"),
       },
       {
-        path: 'git',
-        name: 'Git',
-        component: () => import("../components/materials/Books/GitBook")
+        path: "git",
+        name: "Git",
+        component: () => import("../components/materials/Books/GitBook"),
       },
       {
-        path: 'general',
-        name: 'General',
-        component: () => import("../components/materials/Books/GeneralBook")
+        path: "general",
+        name: "General",
+        component: () => import("../components/materials/Books/GeneralBook"),
       },
       {
-        path: 'tests',
-        name: 'Tests',
-        component: () => import("../components/materials/Books/TestBook")
+        path: "tests",
+        name: "Tests",
+        component: () => import("../components/materials/Books/TestBook"),
       },
-    ]
+    ],
   },
   {
     path: "/wideo",
@@ -151,7 +151,7 @@ const routes = [
   {
     path: "/signup",
     name: "SignUp",
-    component: () => import("../components/login/SignUp")
+    component: () => import("../components/login/SignUp"),
   },
   {
     path: "/login/",
@@ -172,15 +172,19 @@ const routes = [
         path: "messages",
         name: "Messages",
         component: () => import("../components/login/MessageSection"),
-      }
-    ]
+      },
+    ],
+  },
+  {
+    path: "/course",
+    name: "Course",
+    component: () => import("../views/Course.vue"),
   },
   {
     path: "/english",
     name: "English",
     component: () => import("../views/English"),
   },
-
 ];
 
 const router = new VueRouter({
@@ -189,9 +193,9 @@ const router = new VueRouter({
   routes,
 });
 
-router.beforeEach((to,from,next) => {
+router.beforeEach((to, from, next) => {
   document.title = `${to.meta.title}`;
   next();
-})
+});
 
 export default router;
