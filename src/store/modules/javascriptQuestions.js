@@ -476,17 +476,22 @@ export default {
       {
         question: "Jak działa metoda shift?",
         answer:
-          "Shift usuwa pierwszy element z tablicy",
+          "Metoda shift usuwa pierwszy element z tablicy i zwraca ten element jako wynik operacji. Pozostałe elementy tablicy są przesuwane, tak że następny element staje się pierwszym.",
+      },
+      {
+        question: "Czym jest metoda?",
+        answer:
+          "W języku JavaScript metoda jest funkcją, która jest powiązana z obiektem lub typem danych i może być wywołana na tym obiekcie lub typie danych. Metody umożliwiają wykonywanie określonych działań lub operacji na danym obiekcie lub typie danych. Mogą manipulować danymi, zwracać wartości, modyfikować stan obiektu lub wykonywać inne operacje zdefiniowane dla danego typu lub obiektu.",
       },
       {
         question: "Na czym polega destrukturyzacja?",
         answer:
-          "Umożliwia przypisanie własności tablicy lub obiektu do zmiennych z wykorzystaniem składni przypominającej składnię tablic czy literałów obiektowych.",
+          "Destrukturyzacja to proces wydobycia lub rozpakowania wartości z tablicy lub obiektu i przypisywania ich do oddzielnych zmiennych. Można to zrobić przy użyciu składni przypominającej strukturę tablicy lub obiektu, co pozwala łatwo dostępować do poszczególnych elementów lub właściwości.",
       },
       {
         question: "jakie są różnice między arrow function a regular function?",
         answer:
-          "Funkcja strzałkowa ma krótszą składnię niż zwykłe wyrażenie funkcji oraz nie posiada własnego this, argumentów, super, tudzież właściwości new.target. Taki sposób wyrażenia funkcji najlepiej wykorzystać przy tworzeniu funkcji bez metod, ponadto nie mogą zostać one użyte jako konstruktory.",
+          "Funkcja strzałkowa ma krótszą składnię niż zwykłe wyrażenie funkcji oraz nie posiada własnego this, argumentów, super, właściwości new.target. Taki sposób wyrażenia funkcji najlepiej wykorzystać przy tworzeniu funkcji bez metod, ponadto nie mogą zostać one użyte jako konstruktory.",
       },
     ],
   },
