@@ -192,6 +192,10 @@ const routes = [
     name: "English",
     component: () => import("../views/English"),
   },
+  {
+    path: "*",
+    component: () => import("../views/NotFound"),
+  },
 ];
 
 const router = new VueRouter({
