@@ -1,11 +1,14 @@
 <template>
-  <div>
-    <div v-for="course in courses" :key="course.id">
-        <p>{{ course.name }}</p>
-    </div>
+  <v-container fluid class="darkGradient full-height">
     <h2>Strefa kursów</h2>
-  </div>
+    <div class="course-container">
+      <router-link v-for="course in courses" :key="course.id" :to="course.linkToCourse" class="course-item">
+        <p color="red">{{ course.name }}</p>
+      </router-link>
+    </div>
+  </v-container>
 </template>
+
 
 <script>
 export default {
@@ -16,13 +19,13 @@ export default {
           name: "Podstawy Html",
           image: "",
           numberOfLessons: 5,
-          linkToCourse: "",
+          linkToCourse: "/course/podstawy-html",
         },
         {
           name: "Podstawy Css",
           image: "",
           numberOfLessons: 5,
-          linkToCourse: "",
+          linkToCourse: "/about",
         },
         {
           name: "Logika w JavaScript",
@@ -48,8 +51,14 @@ export default {
           numberOfLessons: 5,
           linkToCourse: "",
         },
-                {
+        {
           name: "Inne umiejętności ważne dla front-end developera",
+          image: "",
+          numberOfLessons: 5,
+          linkToCourse: "",
+        },
+                {
+          name: "Kurs typescript",
           image: "",
           numberOfLessons: 5,
           linkToCourse: "",
@@ -59,3 +68,18 @@ export default {
   },
 };
 </script>
+
+<style>
+.course-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.course-item {
+  flex: 1 0 calc(33.33% - 10px);
+  margin: 5px;
+  max-width: calc(33.33% - 10px);
+  height: 200px;
+  border: 2px solid red;
+}
+</style>

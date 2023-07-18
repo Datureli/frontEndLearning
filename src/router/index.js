@@ -179,6 +179,13 @@ const routes = [
     path: "/course",
     name: "Course",
     component: () => import("../views/Course.vue"),
+    children: [
+      {
+        path: "/podstawy-html",
+        name: "PodstawyHtml",
+        component: () => import("../components/courses/HtmlCourse.vue"),
+      },
+    ],
   },
   {
     path: "/english",
