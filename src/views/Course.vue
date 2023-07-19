@@ -2,7 +2,7 @@
   <v-container fluid class="darkGradient full-height">
     <h2>Strefa kursów</h2>
     <div class="course-container">
-      <router-link
+      <router-link 
         v-for="course in courses"
         :key="course.id"
         :to="course.linkToCourse"
@@ -26,7 +26,7 @@ export default {
           name: "Podstawy Html",
           image: require("../assets/it.webp"),
           numberOfLessons: 5,
-          linkToCourse: "course/podstawy-html",
+          linkToCourse: "/podstawy-html",
         },
         {
           name: "Podstawy Css",

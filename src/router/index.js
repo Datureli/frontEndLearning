@@ -180,12 +180,13 @@ const routes = [
     name: "Course",
     component: () => import("../views/Course.vue"),
     children: [
-        {
-          path: "/podstawy-html",
-          name: "HtmlCourse",
-          component: () => import("../components/courses/HtmlCourse.vue"),
-        },
+     
     ],
+  },
+  {
+    path: "/podstawy-html",
+    name: "HtmlCourse",
+    component: () => import("../components/courses/HtmlCourse.vue"),
   },
   {
     path: "/english",
