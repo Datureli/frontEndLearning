@@ -26,7 +26,7 @@
         <v-dialog
           v-model="dialog"
           fullscreen
-          @keydown.esc="dialog = false"
+            @keydown.esc="closeModal" 
           transition="dialog-bottom-transition"
         >
           <template v-slot:activator="{ on, attrs }">
@@ -52,6 +52,21 @@
   </v-container>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      dialog: false
+    };
+  },
+  methods: {
+    closeModal() {
+      this.dialog = false;
+    },
+  },
+};
+</script>
+
 <style scoped>
 .module {
   background: #222;
@@ -59,13 +74,4 @@
   color: white;
   padding: 2rem;
 }
-  .custom-styled-button {
-    /* Dodaj dowolne style, które chcesz zastosować dla przycisku */
-    /* Przykładowe style: */
-    background-color: #ff5722; /* Kolor tła przycisku */
-    color: #ffffff; /* Kolor tekstu na przycisku */
-    border-radius: 8px; /* Zaokrąglenie rogów przycisku */
-    padding: 10px 20px; /* Rozmiar wewnętrznego marginesu przycisku */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Cień przycisku */
-  }
 </style>
