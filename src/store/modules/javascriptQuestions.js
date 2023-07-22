@@ -166,7 +166,7 @@ export default {
       },
       {
         question: "Czym jest instrukcja switch?",
-        answer: `Instrukcja switch jest kolejnym sposobem tworzenia warunków - tym razem na zasadzie przyrównania wyniku do konkretnych wartości. Każdy przypadek kończy się słowem break, które kończy wykonywanie instrukcji switch. Jeżeli pominiemy to słowo, wtedy nawet przy pomyślnym przyrównaniu zostaną wykonane kolejne sprawdzenia, co często może powodować błędy.Dodatkowo instrukcja switch ma specjalny przypadek default który będzie wybierany, gdy wszystkie inne przypadki będą błędne (odpowiednik else w instrukcji if). Warto zaznaczyć, że instrukcja switch nie służy do testowania warunków, a do przyrównywania zmiennej do wartości`,
+        answer: `Instrukcja switch jest sposobem tworzenia warunków na zasadzie przyrównania wyniku do konkretnych wartości. Każdy przypadek kończy się słowem break, które kończy wykonywanie instrukcji switch. Jeżeli pominiemy to słowo, wtedy nawet przy pomyślnym przyrównaniu zostaną wykonane kolejne sprawdzenia, co często może powodować błędy. Dodatkowo instrukcja switch ma specjalny przypadek default który będzie wybierany, gdy wszystkie inne przypadki będą błędne (odpowiednik else w instrukcji if). Warto zaznaczyć, że instrukcja switch nie służy do testowania warunków, a do przyrównywania zmiennej do wartości`,
       },
       {
         question: "Omów pętle for",

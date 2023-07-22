@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="module full-height" style="height: 100vh">
     <v-row class="mt-12 ">
-      <v-col    >
+      <v-col>
         <v-card class="module">
           <img
             width="600"
@@ -12,7 +12,7 @@
           <h1 class="mt-3">Kurs podstaw html</h1>
         </v-card>
       </v-col>
-      <v-col    >
+      <v-col>
         <p class="text-left white--text font-weight-bold">
           Kurs podstaw HTML to wprowadzenie do języka znaczników używanego do
           tworzenia stron internetowych. W tym kursie uczestnicy zdobędą wiedzę
@@ -26,25 +26,49 @@
         <v-dialog
           v-model="dialog"
           fullscreen
-            @keydown.esc="closeModal" 
+          @keydown.esc="closeModal"
           transition="dialog-bottom-transition"
         >
           <template v-slot:activator="{ on, attrs }">
-            <v-btn width="100%" class="custom-styled-button font-weight-bold" color="#ff5722" dark v-bind="attrs" v-on="on">
+            <v-btn
+              width="100%"
+              class="custom-styled-button font-weight-bold"
+              color="#ff5722"
+              dark
+              v-bind="attrs"
+              v-on="on"
+            >
               Zacznij naukę
             </v-btn>
           </template>
           <v-card color="darkGradient">
-            <v-btn
-              x-large
-              style="right: 1%"
-              icon
-              dark
-              @click="closeModal"
-              absolute
+            <v-progress-linear
+              value="15"
+              bg-color="pink-lighten-3"
+              color="red"
+            ></v-progress-linear>
+            <div class="d-flex">
+              <p>course name</p>
+              <v-btn
+                x-large
+                style="right: 1%"
+                icon
+                dark
+                @click="closeModal"
+                absolute
+              >
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+            </div>
+
+            <v-container
+              class="mt-15 custom-height"
+              style="border: 1px solid black"
             >
-              <v-icon>mdi-close</v-icon>
-            </v-btn>
+              <p>dsadsadsa</p>
+            </v-container>
+
+             <v-divider class="mt-15"></v-divider>
           </v-card>
         </v-dialog>
       </v-col>
@@ -56,7 +80,7 @@
 export default {
   data() {
     return {
-      dialog: false
+      dialog: false,
     };
   },
   methods: {
@@ -73,5 +97,8 @@ export default {
   height: 420px;
   color: white;
   padding: 2rem;
+}
+.custom-height {
+  height: calc(70vh - 30px);
 }
 </style>
