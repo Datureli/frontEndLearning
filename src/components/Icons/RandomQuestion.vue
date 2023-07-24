@@ -15,23 +15,23 @@ export default {
   methods: {
     globalRandomQuestion() {
       switch (this.$route.path) {
-        case "/about/htmlquestions":
+        case "/recruitment-questions/htmlquestions":
           return this.randomHtmlQuestion();
-        case "/about/cssquestions":
+        case "/recruitment-questions/cssquestions":
           return this.randomCssQuestion();
-        case "/about/javascript":
+        case "/recruitment-questions/javascript":
           return this.randomJavascriptQuestion();
-        case "/about/vue":
+        case "/recruitment-questions/vue":
           return this.randomVueQuestion();
-        case "/about/react":
+        case "/recruitment-questions/react":
           return this.randomReactQuestion();
-        case "/about/typescript":
+        case "/recruitment-questions/typescript":
           return this.randomTypescriptQuestion();
-        case "/about/gitquestions":
+        case "/recruitment-questions/gitquestions":
           return this.randomGitQuestion();
-        case "/about/general":
+        case "/recruitment-questions/general":
           return this.randomGeneralQuestion();
-        case "/about/test":
+        case "/recruitment-questions/test":
           return this.randomTestQuestion();
       }
     },

@@ -96,7 +96,7 @@ export default {
   computed: {
     ...mapState(["favorite"]),
     color() {
-      const name  = this.$route.name;
+      const name = this.$route.name;
 
       switch (true) {
         case name === "Home":
@@ -106,6 +106,8 @@ export default {
           return "orange";
         case name === "RecruitmentQuestions":
           return "darkGradient";
+        case name === "HtmlCourse":
+          return "#222";
         default:
           return "darkGradient";
       }
