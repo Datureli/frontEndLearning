@@ -11,7 +11,7 @@
             firstColumn.icon
           }}</v-icon>
 
-          <v-list-item-title class="ml-5 text-h6">{{
+          <v-list-item-title class="ml-5 text-h7">{{
             firstColumn.title
           }}</v-list-item-title>
           <div class="text-center mr-10" v-if="firstColumn.title == null">

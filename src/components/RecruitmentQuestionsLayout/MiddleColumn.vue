@@ -6,7 +6,7 @@
       color="darkGradient"
       :elevation="elevation"
     >
-      <div v-if="$route.path === '/about'" class="pa-5">
+      <div v-if="$route.path === '/recruitment-questions'" class="pa-5">
         <div class="d-grid justify-center mt-15">
           <h1 class="text-h2 font-weight-black">
             Choose Category
@@ -16,7 +16,7 @@
       <RecruitmentQuestion />
 
     </v-sheet>
-    <IconComponent v-if="$route.path !== '/about'" class="mt-5" />
+    <IconComponent v-if="$route.path !== '/recruitment-questions'" class="mt-5" />
   </div>
 </template>
 <script>

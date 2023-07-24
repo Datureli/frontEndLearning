@@ -13,9 +13,9 @@ const routes = [
     },
   },
   {
-    path: "/about/",
-    name: "About",
-    component: () => import("../views/About"),
+    path: "/recruitment-questions/",
+    name: "RecruitmentQuestions",
+    component: () => import("../views/RecruitmentQuestions.vue"),
     children: [
       {
         path: "cssquestions",

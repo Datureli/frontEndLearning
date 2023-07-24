@@ -5,7 +5,7 @@ export default {
     firstColumn: [
       {
         title: "Html",
-        link: "/about/htmlquestions",
+        link: "/recruitment-questions/htmlquestions",
         bookLink: '/book/html',
         icon: "mdi-language-html5",
         color: "orange",
@@ -13,7 +13,7 @@ export default {
       },
       {
         title: "Css",
-        link: "/about/cssquestions",
+        link: "/recruitment-questions/cssquestions",
         bookLink: '/book/css',
         icon: "mdi-language-css3",
         color: "blue",
@@ -21,7 +21,7 @@ export default {
       },
       {
         title: "Javascript",
-        link: "/about/javascript",
+        link: "/recruitment-questions/javascript",
         bookLink: '/book/javascript',
         icon: "mdi-language-javascript",
         color: "yellow",
@@ -29,7 +29,7 @@ export default {
       },
       {
         title: "Vue",
-        link: "/about/vue",
+        link: "/recruitment-questions/vue",
         bookLink: '/book/vue',
         icon: "mdi-vuejs",
         color: "green",
@@ -37,7 +37,7 @@ export default {
       },
       {
         title: "React",
-        link: "/about/react",
+        link: "/recruitment-questions/react",
         bookLink: '/book/react',
         icon: "mdi-react",
         color: "blue",
@@ -45,7 +45,7 @@ export default {
       },
       {
         title: "Typescript",
-        link: "/about/typescript",
+        link: "/recruitment-questions/typescript",
         bookLink: '/book/typescript',
         icon: "mdi-language-typescript",
         color: "blue",
@@ -53,7 +53,7 @@ export default {
       },
       {
         title: "Git",
-        link: "/about/gitquestions",
+        link: "/recruitment-questions/gitquestions",
         bookLink: '/book/git',
         icon: "mdi-git",
         color: "black",
@@ -61,7 +61,7 @@ export default {
       },
       {
         title: "Ogólne",
-        link: "/about/general",
+        link: "/recruitment-questions/general",
         bookLink: '/book/general',
         icon: "mdi-account-circle",
         color: "white",
@@ -69,7 +69,7 @@ export default {
       },
       {
         title: "Testowanie",
-        link: "/about/test",
+        link: "/recruitment-questions/test",
         bookLink: '/book/tests',
         icon: "mdi-wrench-outline",
         color: "grey",

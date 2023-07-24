@@ -1,7 +1,11 @@
 <template>
   <v-container-fluid class="mx-auto overflow-hidden">
     <v-app-bar class="overflow-hidden" :color="color" elevation="0">
-      <v-app-bar-nav-icon id="test" color="white" @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon
+        id="test"
+        color="white"
+        @click.stop="drawer = !drawer"
+      />
       <v-spacer></v-spacer>
       <v-card color="transparent" outlined>
         <v-btn color="transparent" outlined>
@@ -41,7 +45,9 @@
             :key="index"
             :to="toolbarItem.link"
           >
-            <v-list-item-title id="navi">{{ toolbarItem.title }}</v-list-item-title>
+            <v-list-item-title id="navi">{{
+              toolbarItem.title
+            }}</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
@@ -66,7 +72,7 @@ export default {
       },
       {
         title: "Pytania rekrutacyjne",
-        link: "/about",
+        link: "/recruitment-questions",
       },
       {
         title: "Materiały",
@@ -78,8 +84,8 @@ export default {
       },
       {
         title: "Kurs front-end",
-        link: "/course"
-      }
+        link: "/course",
+      },
     ],
   }),
   watch: {
@@ -90,15 +96,19 @@ export default {
   computed: {
     ...mapState(["favorite"]),
     color() {
-      return this.$route.name === "Home" ||
-        this.$route.name === "Materials" ||
-        this.$route.path.charAt(1) === "b" ||
-        this.$route.path.charAt(1) === "w" ||
-        this.$route.path.charAt(2) === "e"
-        ? "black"
-        : this.$route.name === "English"
-        ? "orange"
-        : "darkGradient";
+      const name  = this.$route.name;
+
+      switch (true) {
+        case name === "Home":
+        case name === "Materials":
+          return "black";
+        case name === "English":
+          return "orange";
+        case name === "RecruitmentQuestions":
+          return "darkGradient";
+        default:
+          return "darkGradient";
+      }
     },
   },
   methods: {

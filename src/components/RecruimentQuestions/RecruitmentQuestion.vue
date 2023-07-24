@@ -89,23 +89,23 @@ export default {
     questions() {
       const path = this.$route.path;
       switch (path) {
-        case "/about/htmlquestions":
+        case "/recruitment-questions/htmlquestions":
           return this.htmlQuestions;
-        case "/about/cssquestions":
+        case "/recruitment-questions/cssquestions":
           return this.cssQuestions;
-        case "/about/javascript":
+        case "/recruitment-questions/javascript":
           return this.javascriptQuestions;
-        case "/about/vue":
+        case "/recruitment-questions/vue":
           return this.vueQuestions;
-        case "/about/react":
+        case "/recruitment-questions/react":
           return this.reactQuestions;
-        case "/about/typescript":
+        case "/recruitment-questions/typescript":
           return this.typescriptQuestions;
-        case "/about/gitquestions":
+        case "/recruitment-questions/gitquestions":
           return this.gitQuestions;
-        case "/about/general":
+        case "/recruitment-questions/general":
           return this.generalQuestions;
-        case "/about/test":
+        case "/recruitment-questions/test":
           return this.testQuestions;
         default:
           return null;
