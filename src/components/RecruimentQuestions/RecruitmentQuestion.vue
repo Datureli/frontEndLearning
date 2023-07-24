@@ -8,7 +8,6 @@
     <v-carousel-item
       v-for="(question, index) in questions"
       :key="index"
-      max-width="700"
       @shortkey="changeArrowDirection"
       v-shortkey="{ left: ['arrowleft'], right: ['arrowright'] }"
       class="mx-auto"
@@ -27,13 +26,23 @@
           >
 
           <v-list-item-subtitle
-            class="white--text text-justify text-h6 text-wrap"
+            class="white--text mr-8 ml-8 text-justify text-h6 text-wrap"
             :style="question.answer.length > 700 ? 'overflow-y: scroll;' : ''"
             v-show="disable"
           >
-            <p  style="height: 250px;">
-              {{ question.answer }}
-            </p>
+            <div class="d-flex">
+              <p style="height: 250px;">
+                {{ question.answer }}
+              </p>
+              <v-icon
+                x-large
+                class="mr-5"
+                v-if="question.answer.length > 700"
+                style="margin-top: auto; position: absolute; right: 0; bottom: 0; z-index: 19;"
+              >
+                mdi-arrow-down-bold
+              </v-icon>
+            </div>
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
