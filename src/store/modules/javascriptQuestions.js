@@ -6,7 +6,7 @@ export default {
       {
         question: "Jak zadeklarować zmienną w javascript?",
         answer:
-          "Aby zadeklarować zmienną, powinniśmy posłużyć się jednym ze słów kluczowych var, let lub const. Pod zmienne możemy podstawić dowolne wartości jakie będziemy chcieli. Zaleca się używanie let oraz const zamiast var. Dzięki nim nasze skrypty stają się bardziej optymalne pod względem zarządzania pamięcią, ale i potencjalnie unikamy niektórych problematycznych sytuacji.  Nazwa zmiennej nie może zaczynać się od cyfry, nie może zawierać spacji, kropki, przecinka ani myślnika (można natomiast używać podkreślenia), nazwą zmiennej nie może być słowo kluczowe zarezerwowane przez JavaScript",
+          "Aby zadeklarować zmienną, powinniśmy posłużyć się jednym ze słów kluczowych var, let lub const. Pod zmienne możemy podstawić dowolne wartości jakie będziemy chcieli. Zaleca się używanie let oraz const zamiast var. Dzięki nim nasze skrypty stają się bardziej optymalne pod względem zarządzania pamięcią, ale i potencjalnie unikamy niektórych problematycznych sytuacji. Nazwa zmiennej nie może zaczynać się od cyfry, nie może zawierać spacji, kropki, przecinka ani myślnika (można natomiast używać podkreślenia), nazwą zmiennej nie może być słowo kluczowe zarezerwowane przez JavaScript",
           hint: [
             'Zmienne o takiej samej nazwie,ale utworzone przy pomocy różnej wielkości liter to dwie różne zmienne.',
           ]
@@ -398,9 +398,9 @@ export default {
           "Proces normalizacji jest intensywnie wykorzystywany w każdym projekcie oprogramowania, ponieważ normalizacja danych ma duży wpływ na zmniejszenie redundancji danych.Dzięki niej zamiast zapętlać tablice,możemy uzyskać dostęp do obiektu poprzez wybrane id",
       },
       {
-        question: "czym jest redundancja danych?",
+        question: "Czym jest redundancja danych?",
         answer:
-          "Redundancja – nadmiarowość w stosunku do tego, co konieczne lub zwykłe. Określenie może odnosić się zarówno do nadmiaru zbędnego lub szkodliwego, niecelowo zużywającego zasoby, jak i do pożądanego zabezpieczenia na wypadek uszkodzenia części systemu.",
+          "Redundancja to nadmiarowość w stosunku do tego, co konieczne lub zwykłe. Określenie może odnosić się zarówno do nadmiaru zbędnego lub szkodliwego, niecelowo zużywającego zasoby, jak i do pożądanego zabezpieczenia na wypadek uszkodzenia części systemu.",
       },
       {
         question: "Czym jest transpilacja?",
@@ -415,17 +415,17 @@ export default {
       {
         question: "Co nowego pojawiło się es6?",
         answer:
-          "Klasy definiowane za pomocą Class, zmienne let oraz const oraz nowe podejście do zakresu (scope) zmiennych.Łańcuchy szablonowe plus możliwość tworzenia np. wieloliniowych String, przypisywanie wartości z użyciem Destructuring,Mechanizm Promises zapewniający nowe podejście do programowania asynchronicznego,Arrow functions – funkcje definiowanie z użyciem strzałki czyli =>,Natywne moduły,Nowe metody String, Math, Array czy Number",
+          "Klasy definiowane za pomocą Class, zmienne let oraz const oraz nowe podejście do zakresu zmiennych. Łańcuchy szablonowe plus możliwość tworzenia np. wieloliniowych String, przypisywanie wartości z użyciem Destructuring,Mechanizm Promises zapewniający nowe podejście do programowania asynchronicznego,Arrow functions funkcje definiowanie z użyciem strzałki =>,Natywne moduły,Nowe metody String, Math, Array czy Number",
       },
       {
         question: "różnice pomiędzy == a ===?",
         answer:
-          "== to operator równości, czyli zwraca prawdę, jeżeli wartości są sobie równe. Natomiast operator identyczności ("===") zwraca prawdę, jeżeli wartości są sobie równe, a zmienne są tego samego typu.W praktyce wykorzystuje się to często przy funkcjach które zwracają raz wartość liczbową a raz wartość boolean. jeżeli mamy '2' == 2 to JS zmieni typ pierwszego parametru na number. Jeśli pierwszy jest null a drugi undefined, zwróci true. ",
+          "== to operator równości, czyli zwraca prawdę, jeżeli wartości są sobie równe. Natomiast operator identyczności === zwraca prawdę, jeżeli wartości są sobie równe, a zmienne są tego samego typu. W praktyce wykorzystuje się to często przy funkcjach które zwracają raz wartość liczbową a raz wartość boolean. jeżeli mamy '2' == 2 to JS zmieni typ pierwszego parametru na number.",
       },
       {
         question: "Jak działa async?",
         answer:
-          "Aby JavaScript nie blokował drzewa renderowania można wykorzystać regułę async. Atrybut async powoduje, że kod JS jest wykonywany niezależnie od etapu ładowania się strony i nie wpływa na ścieżkę renderowania. Atrybut ten może być z powodzeniem zastosowany w przypadku skryptów do analityki internetowej,dodatkowych widgetów do strony.",
+          "Aby JavaScript nie blokował drzewa renderowania można wykorzystać regułę async. Atrybut async powoduje, że kod JS jest wykonywany niezależnie od etapu ładowania się strony i nie wpływa na ścieżkę renderowania.",
       },
       {
         question: "opisz atrybut defer?",
@@ -435,12 +435,7 @@ export default {
       {
         question: "różnice między splice vs slice",
         answer:
-          "Obie metody potrafią usuwać wybrane elementy, które następnie zwracają.splice – modyfikuje oryginalną tablicę.slice – tworzy i modyfikuje kopię oryginalnej tablicy.W przypadku slice po każdym jej wywołaniu uzyskujemy ten sam wynik ponieważ za każdym razem metoda tworzy sobie nową kopię oryginalnej tablicy i na niej pracuje. Z kolei metoda splice pracuje cały czas na tej samej tablicy. W naszym przykładzie najpierw wycina pierwszych dwóch bohaterów, zostają Quasimodo oraz Stich. Potem wycina kolejnych dwóch, nie zostaje już nikt, tablica jest pusta.   Co ważne – metoda splice potrafi również dodawać elementy do tablicy.",
-      },
-      {
-        question: "czym jest class?",
-        answer:
-          "Wyrażenie class jest kolejnym sposobem definiowania klasy. Wyrażenia class mogą być nazwane lub nienazwane. Nazwa przypisana nazwanemu wyrażeniu class jest lokalna dla ciała klasy.",
+          "Obie metody potrafią usuwać wybrane elementy, które następnie zwracają.splice modyfikuje oryginalną tablicę. Slice tworzy i modyfikuje kopię oryginalnej tablicy. W przypadku slice po każdym jej wywołaniu uzyskujemy ten sam wynik ponieważ za każdym razem metoda tworzy sobie nową kopię oryginalnej tablicy i na niej pracuje. Z kolei metoda splice pracuje cały czas na tej samej tablicy. Metoda splice potrafi również dodawać elementy do tablicy.",
       },
       {
         question: "Czym jest symbol w javascript?",
@@ -455,8 +450,7 @@ export default {
       {
         question: "Czym jest funkcja strzałkowa?",
         answer:
-          "Funkcja strzałkowa ma krótszą składnię niż zwykłe wyrażenie funkcji oraz nie posiada własnego this, argumentów, super, tudzież właściwości new.target. Taki sposób wyrażenia funkcji najlepiej wykorzystać przy tworzeniu funkcji bez metod, ponadto nie mogą zostać one użyte jako konstruktory.",
-      
+          "Funkcja strzałkowa ma krótszą składnię niż zwykłe wyrażenie funkcji oraz nie posiada własnego this, argumentów, super, właściwości new.target. Taki sposób wyrażenia funkcji najlepiej wykorzystać przy tworzeniu funkcji bez metod, ponadto nie mogą zostać one użyte jako konstruktory.",  
       },
       {
         question: "Czym jest wyrażenie funkcyjne?",
