@@ -413,6 +413,11 @@ export default {
           "Typ ten powstał po to aby operować na bardzo dużych liczbach, z którymi nie radzi sobie typ number. Mowa tu o liczbach większych niż 2^53. Wtedy typ number traci swoją precyzję i dlatego powstał typ bigint. Deklaruje się go używając litery n na końcu liczby",
       },
       {
+        question: "Co robi metoda includes?",
+        answer:
+          "Sprawdza, czy element istnieje w tablicy i zwraca wartość logiczną true lub false.",
+      },
+      {
         question: "Co nowego pojawiło się es6?",
         answer:
           "Klasy definiowane za pomocą Class, zmienne let oraz const oraz nowe podejście do zakresu zmiennych. Łańcuchy szablonowe plus możliwość tworzenia np. wieloliniowych String, przypisywanie wartości z użyciem Destructuring,Mechanizm Promises zapewniający nowe podejście do programowania asynchronicznego,Arrow functions funkcje definiowanie z użyciem strzałki =>,Natywne moduły,Nowe metody String, Math, Array czy Number",

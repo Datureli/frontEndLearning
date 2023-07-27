@@ -65,10 +65,11 @@
               class="mt-15 custom-height"
               style="border: 1px solid black"
             >
+              <HtmlCourseSlides />
               <p>dsadsadsa</p>
             </v-container>
 
-             <v-divider class="mt-15"></v-divider>
+            <v-divider class="mt-10"></v-divider>
           </v-card>
         </v-dialog>
       </v-col>
@@ -77,12 +78,15 @@
 </template>
 
 <script>
+import HtmlCourseSlides from "./HtmlCourseSlides.vue";
 export default {
   data() {
     return {
       dialog: false,
-
     };
+  },
+  components: {
+    HtmlCourseSlides,
   },
   methods: {
     closeModal() {
