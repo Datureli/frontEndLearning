@@ -1,6 +1,6 @@
 <template>
-  <v-container fluid class="module full-height" style="height: 100vh">
-    <v-row class="mt-12 ">
+  <v-container fluid class="module full-height" style="height: 90vh; ">
+    <v-row class="mt-12">
       <v-col>
         <v-card class="module">
           <img
@@ -63,7 +63,6 @@
 
             <v-container
               class="mt-15 custom-height"
-              style="border: 1px solid black"
             >
               <HtmlCourseSlides />
               <p>dsadsadsa</p>

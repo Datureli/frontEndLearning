@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="darkGradient full-height">
-    <h2>Strefa kursów</h2>
+    <h2 class="text-left text-h2 mb-5 ml-2">Strefa kursów</h2>
     <div class="course-container">
       <router-link 
         v-for="course in courses"

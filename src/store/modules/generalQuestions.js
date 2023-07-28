@@ -63,6 +63,11 @@ export default {
         answer:
           "Używanie kontenerów jest możliwe dzięki funkcjom izolowania procesów i wirtualizacji wbudowanym w jądro systemu Linux.te funkcje — np. grupy kontroli (cgroups) służące do przydzielania zasobów do procesów oraz przestrzenie nazw służące do ograniczania dostępu procesów do innych zasobów lub obszarów systemu albo wglądu w te zasoby lub obszary — pozwalają wielu komponentom aplikacji na współużytkowanie zasobów jednej instancji systemu operacyjnego hosta w sposób podobny do tego, w jaki hiperwizor pozwala wielu maszynom wirtualnym na współużytkowanie procesora, pamięci i innych zasobów pojedynczego serwera sprzętowego.",
       },
+      {
+        question: "Czym jest stos?",
+        answer:
+          "Koncepcyjnie stos jest strukturądanych, którąmożna po prostu opisaćjako listęLIFO – „last in, first out” (ostatnie na wejściu, pierwsze na wyjściu). Pozwala na dwie główne operacje: odłożenie jakichś danych na wierzch stosu („push”) i zdjęcie jakichś danych z wierzchu stosu („pop”),",
+      },
 
       {
         question: "Czym jest Solid?",

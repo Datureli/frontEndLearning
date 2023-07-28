@@ -403,6 +403,11 @@ export default {
           "Redundancja to nadmiarowość w stosunku do tego, co konieczne lub zwykłe. Określenie może odnosić się zarówno do nadmiaru zbędnego lub szkodliwego, niecelowo zużywającego zasoby, jak i do pożądanego zabezpieczenia na wypadek uszkodzenia części systemu.",
       },
       {
+        question: "Czym jest kolizja nazw?",
+        answer:
+          "Sytuacja, gdy dwie różne części aplikacji mają zdefiniowane zmienne globalne o tej samej nazwie, ale różnym przeznaczeniu.",
+      },
+      {
         question: "Czym jest transpilacja?",
         answer:
           "Transpilacja to proces konwersji kodu ES6 do wariantu ES5. Jest to technika, która z jednej strony umożliwia nam pisanie nowoczesnego kodu ES6 a z drugiej sprawia, że nasze aplikacje mogą być uruchamiane np. w starszych przeglądarkach, które tego najnowszego standardu JavaScript nie obsługują.",

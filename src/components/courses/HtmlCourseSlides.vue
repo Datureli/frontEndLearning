@@ -2,11 +2,10 @@
   <v-carousel
     ref="carousel"
     hide-delimiters
-    v-if="questions"
     progress="primary"
   >
     <v-carousel-item
-      v-for="(question, index) in questions"
+      v-for="( htmlSlides, index) in  htmlSlides"
       :key="index"
       @shortkey="changeArrowDirection"
       v-shortkey="{ left: ['arrowleft'], right: ['arrowright'] }"
@@ -22,17 +21,17 @@
                 : ['text-h2', 'mt-15', 'questionTextWithoutAnswer']
             "
             style="transition: 2s;"
-            >{{ question.question }}</v-list-item-title
+            >{{ htmlSlides.heading }}</v-list-item-title
           >
 
           <v-list-item-subtitle
             class="white--text mr-8 ml-8 text-justify text-h6 text-wrap"
-            :style="question.answer.length > 700 ? 'overflow-y: scroll;' : ''"
+           
             v-show="disable"
           >
             <div class="d-flex">
               <p style="height: 250px;">
-                {{ question.answer }}
+                {{ htmlSlides.heading }}
               </p>
             </div>
           </v-list-item-subtitle>
@@ -67,7 +66,7 @@ export default {
   },
 
   computed: {
-    ...mapState("htmlQuestions", ["htmlQuestions"]),
+    ...mapState("htmlCourse", ["htmlSlides"]),
     ...mapState("cssQuestions", ["cssQuestions"]),
     ...mapState("javascriptQuestions", ["javascriptQuestions"]),
     ...mapState("vueQuestions", ["vueQuestions"]),
@@ -82,7 +81,7 @@ export default {
       const path = this.$route.path;
       switch (path) {
         case "/podstawy-html":
-          return this.htmlQuestions;
+          return this.htmlSlides;
         case "/recruitment-questions/cssquestions":
           return this.cssQuestions;
         case "/recruitment-questions/javascript":
