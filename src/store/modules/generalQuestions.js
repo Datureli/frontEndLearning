@@ -68,7 +68,16 @@ export default {
         answer:
           "Koncepcyjnie stos jest strukturądanych, którąmożna po prostu opisaćjako listęLIFO – „last in, first out” (ostatnie na wejściu, pierwsze na wyjściu). Pozwala na dwie główne operacje: odłożenie jakichś danych na wierzch stosu („push”) i zdjęcie jakichś danych z wierzchu stosu („pop”),",
       },
-
+      {
+        question: "Czym jest odpytywanie http (HTTP Polling)?",
+        answer:
+          "Klient wysyła do serwera powtarzające się żądania i sprawdza, czy jest jakaś wiadomość do odebrania. Nie jest to zbyt wydajne. Zużywamy niepotrzebnie dużo zasobów, kolejnym problemem jest liczba nieudanych żądań.",
+      },
+      {
+        question: "Czym jest Long-Polling?",
+        answer:
+          "Long Polling polega na wysłaniu żądania HTTP do serwera, a następnie utrzymaniu otwartego połączenia, aby umożliwić serwerowi odpowiedź w późniejszym terminie (o czym decyduje serwer).Mimo że Long Polling działa, jest ona bardzo droga pod względem użycia procesora, pamięci i przepustowości (blokujemy zasoby, utrzymując połączenie aktywnym",
+      },
       {
         question: "Czym jest Solid?",
         answer:
@@ -262,6 +271,11 @@ export default {
         question: "Czym są eventy server-sent?",
         answer:
           "Server-sent events to API pozwalające na przekazywanie żądań w relacji serwer-klient, przy czym jako klienta należy rozumieć jako aplikację. API, w odróżnieniu od WebSocketów, pozwala na jednokierunkowe przesyłanie wiadomości, najczęściej komunikatów o konkretnych wydarzeniach, np. zmianach na backendzie lub statusie (końcu) przetwarzania danych elementów.",
+      },
+      {
+        question: "Jak dziala websocket?",
+        answer:
+          "WebSockets nie wymaga wysyłania żądania w celu udzielenia odpowiedzi. Pozwalają na dwukierunkowy przepływ danych, więc wystarczy “nasłuchiwać” danych. Możesz po prostu “słuchać” serwera, który wyśle Ci wiadomość, gdy będzie dostępna.",
       },
       {
         question: "Czym się różni prettier od eslint",

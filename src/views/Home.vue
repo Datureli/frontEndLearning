@@ -4,11 +4,14 @@
       fluid
       style="background: black; height: 100vh; overflow: hidden;"
     >
-      <v-parallax class="mx-auto" src="../assets/lightbulb.jpg">
+    <div style="height: 1200px">
+ <v-parallax class="mx-auto" src="../assets/lightbulb.jpg">
         <h1 class="white--text mt-15">
           First polish front-end learning platform
         </h1>
       </v-parallax>
+    </div>
+     
     </v-container>
 
     <v-container
@@ -30,6 +33,8 @@
   padding: 0;
 }
 .v-parallax__image-container {
-  
+    height:auto!important;
+    width:100%!important;
+    padding:65% 0 0;  
 }
 </style>
