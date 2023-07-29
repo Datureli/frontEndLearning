@@ -9,29 +9,23 @@
       :key="index"
       @shortkey="changeArrowDirection"
       v-shortkey="{ left: ['arrowleft'], right: ['arrowright'] }"
-      class="mx-auto"
     >
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title
-            class="font-weight-black text-wrap"
-            :class="
-              disable
-                ? 'text-h4'
-                : ['text-h2', 'mt-15', 'questionTextWithoutAnswer']
-            "
-            style="transition: 2s;"
+          width="100%"
+            class="font-weight-black text-wrap text-h3 text-left"
             >{{ htmlSlides.heading }}</v-list-item-title
           >
 
           <v-list-item-subtitle
-            class="white--text mr-8 ml-8 text-justify text-h6 text-wrap"
+            class="white--text text-justify text-h6 text-wrap"
            
             v-show="disable"
           >
             <div class="d-flex">
               <p style="height: 250px;">
-                {{ htmlSlides.heading }}
+                {{ htmlSlides.text }}
               </p>
             </div>
           </v-list-item-subtitle>

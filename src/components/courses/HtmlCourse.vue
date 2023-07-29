@@ -48,7 +48,7 @@
               color="red"
             ></v-progress-linear>
             <div class="d-flex">
-              <p>course name</p>
+              <CourseChapters />
               <v-btn
                 x-large
                 style="right: 1%"
@@ -61,9 +61,7 @@
               </v-btn>
             </div>
 
-            <v-container
-              class="mt-15 custom-height"
-            >
+            <v-container class="mt-5 custom-height">
               <HtmlCourseSlides />
               <p>dsadsadsa</p>
             </v-container>
@@ -77,7 +75,9 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import HtmlCourseSlides from "./HtmlCourseSlides.vue";
+import CourseChapters from "./CourseChapters.vue";
 export default {
   data() {
     return {
@@ -86,11 +86,15 @@ export default {
   },
   components: {
     HtmlCourseSlides,
+    CourseChapters,
   },
   methods: {
     closeModal() {
       this.dialog = false;
     },
+  },
+  computed: {
+    ...mapState("htmlCourse", ["htmlSlides"]),
   },
 };
 </script>

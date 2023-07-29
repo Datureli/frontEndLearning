@@ -13,23 +13,39 @@ export default {
     htmlSlides: [
       {
         heading: "Jak zrozumieć html?",
-        text: "",
-        chapters: [
-          {
-            chapterName: '',
-            chapterLink: ''
-          }
-        ]
+        text: "dsaddsasddas",
       },
       {
         heading: "Jak zrozumieć html?",
         text: "",
         chapters: [
           {
-            chapterName: '',
-            chapterLink: ''
-          }
-        ]
+            chapterName: "",
+            chapterLink: "",
+          },
+        ],
+      },
+    ],
+    chapters: [
+      {
+        chapterName: "Jak rozumieć html",
+        chapterLink: "",
+      },
+      {
+        chapterName: "Edytor tekstu",
+        chapterLink: "",
+      },
+      {
+        chapterName: "Wprowadzenie",
+        chapterLink: "",
+      },
+      {
+        chapterName: "Jak zrozumieć html",
+        chapterLink: "",
+      },
+      {
+        chapterName: "Jak zrozumieć html",
+        chapterLink: "",
       },
     ],
   },
