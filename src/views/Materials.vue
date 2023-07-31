@@ -1,20 +1,22 @@
 <template>
   <v-card height="540" class="d-flex" color="black">
-    <v-spacer></v-spacer>
-    <v-card class="d-flex mt-4" color="transparent">
-      <div v-for="card in cards" :key="card.name">
-        <router-link :to="{ name: card.routerName }">
-          <material-card class="" :margin-top="card.marginTop">
-            <Slot class="mx-auto text-h5">
-              <v-img :src="card.image"></v-img>
-              <p>{{ card.title }}</p></Slot
+    <v-card class="mx-auto mt-4" color="transparent">
+      <v-col class="d-flex" cols="12" md="8" lg="6">
+        <div v-for="card in cards" :key="card.name">
+          <router-link :to="{ name: card.routerName }">
+            <material-card
+              class=""
+              :style="{ marginTop: card.styles.marginTop }"
             >
-          </material-card>
-        </router-link>
-      </div>
+              <Slot class="mx-auto text-h5">
+                <v-img :src="card.image"></v-img>
+                <p>{{ card.title }}</p></Slot
+              >
+            </material-card>
+          </router-link>
+        </div>
+      </v-col>
     </v-card>
-
-    <v-spacer></v-spacer>
   </v-card>
 </template>
 
@@ -30,7 +32,7 @@ export default {
           image: require("../assets/book.jpg"),
           routerName: "Wideo",
           styles: {
-            marginTop: "5px",
+            marginTop: "10px",
           },
         },
         {
@@ -38,7 +40,7 @@ export default {
           image: require("../assets/book.jpg"),
           routerName: "Book",
           styles: {
-            marginTop: "5px",
+            marginTop: "35px",
           },
         },
         {
@@ -46,7 +48,7 @@ export default {
           image: require("../assets/book.jpg"),
           routerName: "Website",
           styles: {
-            marginTop: "5px",
+            marginTop: "55px",
           },
         },
       ],
