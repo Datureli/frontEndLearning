@@ -181,6 +181,11 @@ export default {
           "Getter to w JavaScript jest funkcja, która służy do pobierania (get) wartości z obiektu. Gettery pozwalają na dostęp do wartości prywatnych z innych części kodu, bez bezpośredniego manipulowania nimi.W kontekście frameworka Vue, gettery są często używane do uzyskiwania wartości właściwości z obiektów reaktywnych. Gettery są automatycznie generowane przez system reaktywności Vue i pozwalają na dostęp do wartości właściwości, które są reaktywnie śledzone.",
       },
       {
+        question: "Co robi modyfikator .prevent?",
+        answer:
+          "Zapobiega domyślnej akcji przeglądarki po kliknięciu",
+      },
+      {
         question: "Jakie są najważniejsze elementy Wzorca Zarządzania Stanem?",
         answer:
           "Nasza aplikacja jest oparta na stanie, który jest źródłem prawdy.Widok to nic więcej niż deklaratywne mapowanie stanu. Akcje są różnymi sposobami, w jakie stan może się zmieniać z powodu interakcji użytkownika z widokiem.",
