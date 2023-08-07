@@ -24,6 +24,9 @@ body {
   font-family: Georgia, Helvetica, Arial, sans-serif;
   text-align: center;
 }
+.container {
+  padding: 0;
+}
 
 .darkGradient {
   background-image: linear-gradient(107deg, #4d7e7f 0%, #2b81d7 0%);

@@ -19,12 +19,12 @@ export default {
         {
           title: "Grateful",
           artist: "Neffex",
-          src: require("@/assets/drake.mp3"),
+          src: require("@/assets/music/drake.mp3"),
         },
         {
           title: "Invincible",
           artist: "Deaf Kev",
-          src: require("@/assets/hack.mp3"),
+          src: require("@/assets/music/hack.mp3"),
         },
       ],
       player: new Audio(),
