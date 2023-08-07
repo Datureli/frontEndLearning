@@ -6,10 +6,10 @@
       </h1>
     </v-parallax>
 
-    <v-container class="text-container" fluid>
-      <v-row class="flex-md-row flex-column-reverse" >
+    <v-container class="text-container mx-auto" fluid>
+      <v-row class="flex-md-row flex-column-reverse ml-md-12" >
         <v-col cols="12" md="6">
-          <p class="ml-5 mt-5 text-left white--text ">
+          <p class="mt-5 text-left white--text mx-5 ">
             W tej poprawionej wersji kodu użyliśmy systemu siatek Vuetify, aby
             uczynić karty responsywne i dostosować ich układ w zależności od
             rozmiaru ekranu. Zastosowaliśmy pola cols na komponencie v-col do
@@ -33,9 +33,6 @@
 <style>
 .container {
   padding: 0;
-}
-.custom-container {
-  height: 100vh;
 }
 .text-container {
   background-color: rgb(27, 100, 190);

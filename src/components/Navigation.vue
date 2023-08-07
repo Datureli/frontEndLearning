@@ -1,17 +1,16 @@
 <template>
-  <v-container-fluid class="mx-auto">
-    <v-app-bar class="overflow-hidden" :color="color" elevation="0">
+  <v-container-fluid>
+    <v-app-bar
+      :style="{ position: changePositionProperty, top: 0, zIndex: 5 }"
+      :color="color"
+      elevation="0"
+    >
       <v-app-bar-nav-icon color="white" @click.stop="drawer = !drawer" />
       <v-spacer></v-spacer>
-      <v-card color="transparent" outlined>
-        <v-btn color="transparent" outlined>
-          <Login />
-        </v-btn>
+      <row>
+        <Login />
 
-        <v-btn color="transparent" outlined>
-          <SignUp />
-        </v-btn>
-
+        <SignUp />
         <v-btn @click="pushToFavorite" color="transparent">
           <v-icon color="red">mdi-heart</v-icon>
 
@@ -19,7 +18,7 @@
             {{ favorite.length }}
           </p>
         </v-btn>
-      </v-card>
+      </row>
     </v-app-bar>
     <v-navigation-drawer temporary v-model="drawer" absolute>
       <v-toolbar color="primary" elevation="0">
@@ -32,8 +31,8 @@
         </v-toolbar-items>
       </v-toolbar>
 
-      <v-list nav dense color="primary" height="520" class="green--text">
-        <v-list-item-group v-model="group">
+      <v-list nav color="primary" height="100vh">
+        <v-list-item-group>
           <v-list-item
             color="green"
             class="white--text text-h4"
@@ -41,9 +40,7 @@
             :key="index"
             :to="toolbarItem.link"
           >
-            <v-list-item-title id="navi">{{
-              toolbarItem.title
-            }}</v-list-item-title>
+            <v-list-item-title>{{ toolbarItem.title }}</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
@@ -85,7 +82,7 @@ export default {
     ],
   }),
   watch: {
-    $route(to, from) {
+    $route(newRouteState, oldRouteState) {
       this.drawer = false;
     },
   },
@@ -96,6 +93,7 @@ export default {
 
       switch (true) {
         case name === "Home":
+          return "transparent";
         case name === "Materials":
           return "black";
         case name === "English":
@@ -106,6 +104,14 @@ export default {
           return "#222";
         default:
           return "darkGradient";
+      }
+    },
+    changePositionProperty() {
+      const name = this.$route.name;
+      if (name === "Home") {
+        return "absolute";
+      } else {
+        return "relative";
       }
     },
   },
