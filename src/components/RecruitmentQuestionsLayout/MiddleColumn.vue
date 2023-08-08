@@ -7,26 +7,26 @@
       :elevation="elevation"
     >
       <div v-if="$route.path === '/recruitment-questions'" class="pa-5">
-        <div class="d-grid justify-center mt-15">
-          <h1 class="text-h2 font-weight-black">
-            Choose Category
-          </h1>
-        </div>
+        <h1 class="text-h2 font-weight-black justify-center mt-15">
+          Choose Category
+        </h1>
       </div>
       <RecruitmentQuestion />
-
     </v-sheet>
-    <IconComponent v-if="$route.path !== '/recruitment-questions'" class="mt-5" />
+    <IconComponent
+      v-if="$route.path !== '/recruitment-questions'"
+      class="mt-5"
+    />
   </div>
 </template>
 <script>
 import IconComponent from "../Icons/IconComponent";
-import RecruitmentQuestion from '../RecruimentQuestions/RecruitmentQuestion'
+import RecruitmentQuestion from "../RecruimentQuestions/RecruitmentQuestion";
 
 export default {
   components: {
     IconComponent,
-    RecruitmentQuestion
+    RecruitmentQuestion,
   },
   computed: {
     height() {

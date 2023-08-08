@@ -29,7 +29,7 @@ export default {
       cards: [
         {
           title: "Video",
-          image: require("../assets/book.jpg"),
+          image: require("../assets/images/aparat.jpg"),
           routerName: "Wideo",
           styles: {
             marginTop: "10px",
@@ -37,7 +37,7 @@ export default {
         },
         {
           title: "Książki",
-          image: require("../assets/book.jpg"),
+          image: require("../assets/images/book.jpg"),
           routerName: "Book",
           styles: {
             marginTop: "35px",
@@ -45,7 +45,7 @@ export default {
         },
         {
           title: "Strony",
-          image: require("../assets/book.jpg"),
+          image: require("../assets/images/book.jpg"),
           routerName: "Website",
           styles: {
             marginTop: "55px",

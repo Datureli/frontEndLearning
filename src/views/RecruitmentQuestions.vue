@@ -13,11 +13,9 @@
 </template>
 
 <script>
-import {
-  FirstColumn,
-  MiddleColumn,
-  RightColumn,
-} from "../components/RecruitmentQuestionsLayout";
+import FirstColumn from "../components/RecruitmentQuestionsLayout/FirstColumn.vue";
+import MiddleColumn from "../components/RecruitmentQuestionsLayout/MiddleColumn.vue";
+import RightColumn from "../components/RecruitmentQuestionsLayout/RightColumn";
 
 export default {
   components: {

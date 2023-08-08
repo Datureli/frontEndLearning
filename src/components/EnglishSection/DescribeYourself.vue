@@ -1,27 +1,27 @@
 <template>
-  <div>
-    <v-card
-      max-width="750"
-      max-height="300"
-      height="100%"
-      class="text-h6 text-left mx-auto pa-7"
-      color="orange"
-    >
-      <v-tooltip bottom max-width="750">
-        <template #activator="{ on }">
-          <div
-            v-for="englishSentence in [activeSentence]"
-            :key="englishSentence.id"
-            v-on="on"
-          >
-            {{ englishSentence.englishVersionOfSentence }}
-          </div>
-        </template>
-        <span class="mt-10" style="margin-top: 20rem;">{{ activeSentence.polishVersionOfSentence }}</span>
-      </v-tooltip>
-    </v-card>
+  <v-card
+    max-width="750"
+    max-height="300"
+    height="100%"
+    class="text-h6 text-left mx-auto pa-7"
+    color="orange"
+  >
+    <v-tooltip bottom max-width="750">
+      <template #activator="{ on }">
+        <div
+          v-for="englishSentence in [activeSentence]"
+          :key="englishSentence.id"
+          v-on="on"
+        >
+          {{ englishSentence.englishVersionOfSentence }}
+        </div>
+      </template>
+      <span class="mt-10" style="margin-top: 20rem;">{{
+        activeSentence.polishVersionOfSentence
+      }}</span>
+    </v-tooltip>
     <v-btn class="mt-1" @click="randomSentence">random</v-btn>
-  </div>
+  </v-card>
 </template>
 
 <script>
@@ -92,9 +92,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.v-tooltip {
-  background-color: red;
-}
-</style>

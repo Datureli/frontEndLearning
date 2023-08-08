@@ -6,7 +6,7 @@
           <img
             width="600"
             height="300"
-            src="../../assets/it.webp"
+            src="../../assets/images/it.webp"
             alt="Course Image"
           />
           <h1 class="mt-3">Kurs podstaw html</h1>

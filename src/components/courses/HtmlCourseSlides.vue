@@ -114,9 +114,6 @@ export default {
   margin-right: 5rem;
 }
 
-.questionTextWithoutAnswer {
-  width: 100vw;
-}
 ::-webkit-scrollbar {
   width: 10px;
 }
