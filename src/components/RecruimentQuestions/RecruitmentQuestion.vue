@@ -19,7 +19,7 @@
             :class="
               disable
                 ? 'text-h4'
-                : ['text-h2', 'mt-15', 'questionTextWithoutAnswer']
+                : ['text-h2', 'mt-15']
             "
             style="transition: 2s;"
             >{{ question.question }}</v-list-item-title
@@ -127,10 +127,6 @@ export default {
 
 .v-window__prev {
   margin-right: 5rem;
-}
-
-.questionTextWithoutAnswer {
-  width: 100vw;
 }
 ::-webkit-scrollbar {
   width: 10px;

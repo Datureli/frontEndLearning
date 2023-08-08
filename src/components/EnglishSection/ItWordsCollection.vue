@@ -58,9 +58,9 @@ export default {
   methods: {
     incrementCarouselCounter() {
       this.carouselCounter += 1;
-      for (let i = 0; i < this.itWords.length; i++) {
-        this.CheckKnowledgeQuestions.push(this.itWords[i]);
-      }
+      this.itWords.forEach((word) => {
+        this.CheckKnowledgeQuestions.push(word);
+      });
     },
     agreeToTest() {
       this.testAgreement = false;
