@@ -24,7 +24,7 @@ export default {
       {
         question: "Opisz typ bigInt?",
         answer:
-          "W JavaScript typ danych BigInt został wprowadzony w standardzie ECMAScript 2020 i służy do obsługi liczb całkowitych o dowolnej precyzji. Jest to przydatne w przypadkach, gdy potrzebujemy manipulować bardzo dużymi liczbami, które przekraczają limity typu Number.Aby zadeklarować liczbę jako BigInt, dodaj literał n na końcu liczby. Warto zauważyć, że operacje na liczbach BigInt różnią się od operacji na typach danych numerycznych, takich jak Number. Nie można na przykład używać operatorów arytmetycznych +, -, * i / do bezpośrednich operacji na liczbach BigInt. Zamiast tego, należy używać odpowiednich metod dostępnych dla typu BigInt, takich jak BigInt.add(), BigInt.subtract(), BigInt.multiply() i BigInt.divide().Warto również zauważyć, że nie można mieszać typu BigInt z typem Number w operacjach arytmetycznych. Jeśli próbujesz wykonać operację między BigInt a Number, będzie konieczne przekonwertowanie jednego z typów, na przykład za pomocą BigInt() lub Number().Warto również pamiętać, że BigInt nie jest obsługiwany w niektórych starszych przeglądarkach. Przed użyciem BigInt warto sprawdzić, czy jest obsługiwany w danym środowisku.",
+          "W JavaScript typ danych BigInt został wprowadzony w standardzie ECMAScript 2020 i służy do obsługi liczb całkowitych o dowolnej precyzji. Jest to przydatne w przypadkach, gdy potrzebujemy manipulować bardzo dużymi liczbami, które przekraczają limity typu Number.Aby zadeklarować liczbę jako BigInt, dodaj literał n na końcu liczby. Warto zauważyć, że operacje na liczbach BigInt różnią się od operacji na typach danych numerycznych, takich jak Number. Nie można na przykład używać operatorów arytmetycznych +, -, * i / do bezpośrednich operacji na liczbach BigInt. Zamiast tego, należy używać odpowiednich metod dostępnych dla typu BigInt, takich jak BigInt.add(), BigInt.subtract(), BigInt.multiply() i BigInt.divide().Warto również zauważyć, że nie można mieszać typu BigInt z typem Number w operacjach arytmetycznych. Jeśli próbujesz wykonać operację między BigInt a Number, będzie konieczne przekonwertowanie jednego z typów, na przykład za pomocą BigInt() lub Number().Warto również pamiętać, że BigInt nie jest obsługiwany w niektórych starszych przeglądarkach.",
       },
       {
         question: "Czym jest konstruktor?",
@@ -37,12 +37,12 @@ export default {
       },
       {
         question: "Czym jest delegacja zdarzeń?",
-        answer: "Delegacja zdarzeń (ang. event delegation) to technika programowania polegająca na przypisywaniu obsługi zdarzeń do elementu nadrzędnego, zamiast do każdego pojedynczego elementu potomnego. W efekcie, zdarzenia występujące na elementach potomnych są przechwytywane i obsługiwane przez element nadrzędny.Dzięki temu możemy oszczędzić kodu i zwiększyć wydajność, szczególnie w przypadku dużej liczby elementów potomnych.Mechanizm delegacji zdarzeń polega na sprawdzeniu, który element potomny wywołał dane zdarzenie (na podstawie informacji o elemencie źródłowym zdarzenia) i podjęciu odpowiednich działań w zależności od tego elementu. Może to być realizowane przy użyciu metod takich jak event.target lub event.currentTarget, które dostarczają informacje o elemencie, na którym zdarzenie zostało wywołane.",
+        answer: "Delegacja zdarzeń to technika programowania polegająca na przypisywaniu obsługi zdarzeń do elementu nadrzędnego, zamiast do każdego pojedynczego elementu potomnego. W efekcie, zdarzenia występujące na elementach potomnych są przechwytywane i obsługiwane przez element nadrzędny.Dzięki temu możemy oszczędzić kodu i zwiększyć wydajność, szczególnie w przypadku dużej liczby elementów potomnych.Mechanizm delegacji zdarzeń polega na sprawdzeniu, który element potomny wywołał dane zdarzenie (na podstawie informacji o elemencie źródłowym zdarzenia) i podjęciu odpowiednich działań w zależności od tego elementu. Może to być realizowane przy użyciu metod takich jak event.target lub event.currentTarget, które dostarczają informacje o elemencie, na którym zdarzenie zostało wywołane.",
       },
       {
         question: "Różnica między deklaracją funkcji a deklaracją klasy?",
         answer:
-          "Deklaracje funkcji są przenoszone na początek (hoisting) w procesie wykonywania kodu, co oznacza, że można je wywoływać przed ich faktyczną deklaracją w kodzie. W praktyce oznacza to, że możemy używać funkcji przed ich zdefiniowaniem w kodzie.Z drugiej strony, deklaracje klas nie są podnoszone (not hoisted). Oznacza to, że musimy zadeklarować klasę przed jej użyciem w kodzie. Jeśli próbujemy odwołać się do klasy przed jej deklaracją, spowoduje to błąd.Inna ważna różnica między deklaracją funkcji a deklaracją klasy dotyczy sposobu, w jaki są one używane. Funkcje są używane do definiowania bloków kodu, które można wywoływać wielokrotnie w różnych miejscach programu. Klasy natomiast służą do tworzenia obiektów, które mają określone właściwości i metody.",
+          "Deklaracje funkcji są przenoszone na początek (hoisting) w procesie wykonywania kodu, co oznacza, że można je wywoływać przed ich faktyczną deklaracją w kodzie. W praktyce oznacza to, że możemy używać funkcji przed ich zdefiniowaniem. Deklaracje klas nie są podnoszone. Oznacza to, że musimy zadeklarować klasę przed jej użyciem w kodzie. Jeśli próbujemy odwołać się do klasy przed jej deklaracją, spowoduje to błąd.Inna ważna różnica dotyczy sposobu, w jaki są one używane. Funkcje są używane do definiowania bloków kodu, które można wywoływać wielokrotnie w różnych miejscach programu. Klasy natomiast służą do tworzenia obiektów, które mają określone właściwości i metody.",
       },
       {
         question: "Czym jest super w javascript?",
@@ -52,7 +52,7 @@ export default {
       {
         question: "Czym jest instrukcja try i caych w api call?",
         answer:
-          "instrukcja try pozwala zdefiniować blok kodu, który ma być testowany pod kątem błędów podczas wykonywania. Instrukcja catch umożliwia zdefiniowanie bloku kodu, który ma zostać wykonany, jeśli w bloku try wystąpi błąd. Try służy do sprawdzania błędów, podczas gdy catch służy do obsługi błędu, jeśli taki wystąpi.",
+          "Instrukcja try pozwala zdefiniować blok kodu, który ma być testowany pod kątem błędów podczas wykonywania. Instrukcja catch umożliwia zdefiniowanie bloku kodu, który ma zostać wykonany, jeśli w bloku try wystąpi błąd. Try służy do sprawdzania błędów, podczas gdy catch służy do obsługi błędu.",
       },
       {
         question: "Czym jest funkcja some?",
@@ -62,7 +62,7 @@ export default {
       {
         question: "Czym jest funkcja reduce?",
         answer:
-          "Funkcja reduce jest jedną z funkcji dostępnych dla tablic w języku JavaScript. Służy do wykonania operacji na tablicy, redukując ją do pojedynczej wartości wynikowej. Funkcja reduce wykonuje iterację po elementach tablicy i używa funkcji zwrotnej (callback) do łączenia elementów w celu ostatecznego uzyskania wyniku.Funkcja zwrotna używana w reduce ma dwa parametry: akumulator (zwykle nazwany accumulator) i aktualny element (zwykle nazwany current). W pierwszej iteracji akumulator przyjmuje wartość początkową, która może być podana jako drugi argument metody reduce, lub jeśli pominięta, to pierwszy element tablicy staje się wartością początkową. Następnie funkcja zwrotna jest wywoływana dla każdego kolejnego elementu w tablicy, a jej wynik staje się nową wartością akumulatora dla kolejnej iteracji. Proces ten powtarza się, aż do przejścia przez wszystkie elementy tablicy, a ostateczny wynik jest zwracany.",
+          "Funkcja reduce jest jedną z funkcji dostępnych dla tablic w języku JavaScript. Służy do wykonania operacji na tablicy, redukując ją do pojedynczej wartości wynikowej. Funkcja reduce wykonuje iterację po elementach tablicy i używa funkcji zwrotnej (callback) do łączenia elementów w celu ostatecznego uzyskania wyniku.Funkcja zwrotna używana w reduce ma dwa parametry: akumulator i aktualny element. W pierwszej iteracji akumulator przyjmuje wartość początkową, która może być podana jako drugi argument metody reduce, lub jeśli pominięta, to pierwszy element tablicy staje się wartością początkową. Następnie funkcja zwrotna jest wywoływana dla każdego kolejnego elementu w tablicy, a jej wynik staje się nową wartością akumulatora dla kolejnej iteracji. Proces ten powtarza się, aż do przejścia przez wszystkie elementy tablicy, a ostateczny wynik jest zwracany.",
       },
       {
         question: "Czym jest funkcja map?",
@@ -82,7 +82,7 @@ export default {
       {
         question: "Czym są domknięcia?",
         answer:
-          "domknięcia są to funkcje, które mają dostęp do środowiska, w którym zostały zdefiniowane.",
+          "Są to funkcje, które 'zapamiętują' zakres zmiennych, w którym zostały zdefiniowane, nawet po zakończeniu wykonywania tego zakresu. To oznacza, że funkcja może uzyskać dostęp do zmiennych, które były dostępne w jej zakresie nadrzędnym, nawet jeśli ten zakres został już zakończony. Closures są przydatne w wielu aspektach programowania w JavaScript, w tym w obszarach takich jak zarządzanie stanem, obsługa zdarzeń i tworzenie funkcji zwrotnych.",
       },
       {
         question: "Czym są metody?",
@@ -92,7 +92,7 @@ export default {
       {
         question: "Czym jest obiekt w javascript?",
         answer:
-          "Obiekty JavaScript to kontenery dla nazwanych wartości, zwanych właściwościami i metodami. W JS prawie wszystko jest obiektem: Obiekty są zmiennymi, ale mogą zawierać wiele wartości.",
+          "Obiekty w JavaScript to kontenery dla nazwanych wartości, zwanych właściwościami i metodami. W JS prawie wszystko jest obiektem: Obiekty są zmiennymi, ale mogą zawierać wiele wartości.",
       },
       {
         question: "Jak możemy tworzyć obiekty w javascript?",

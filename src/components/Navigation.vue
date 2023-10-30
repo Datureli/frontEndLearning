@@ -35,7 +35,7 @@
         <v-list-item-group>
           <v-list-item
             color="green"
-            class="white--text text-h4"
+            class="white--text text-h6"
             v-for="(toolbarItem, index) in toolbarItems"
             :key="index"
             :to="toolbarItem.link"
@@ -82,7 +82,7 @@ export default {
     ],
   }),
   watch: {
-    $route(newRouteState, oldRouteState) {
+    $route() {
       this.drawer = false;
     },
   },
@@ -122,3 +122,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.v-navigation-drawer__content {
+  overflow: hidden !important;
+}
+</style>

@@ -19,6 +19,11 @@ export default {
           "Skupiają się na jednym zadaniu: stworzeniu plików HTML/CSS/JS przetwarzając dynamiczną zawartość na wynik będący stroną statyczną. Wszystko bez budowy architektury serwerowej.",
       },
       {
+        question: "Czym jest headless?",
+        answer:
+          "Oznacza działanie lub pracę systemu, aplikacji lub urządzenia bez interfejsu użytkownika (UI) lub ekranu. Jest to podejście, w którym aplikacja lub urządzenie działa w tle, bez potrzeby wyświetlania graficznego interfejsu.Headless jest szczególnie przydatny w automatyzacji, przetwarzaniu danych i dostarczaniu treści na różne platformy. Dzięki temu podejściu można zwiększyć elastyczność i skalowalność systemów oraz zintegrować je z innymi aplikacjami i usługami.",
+      },
+      {
         question: "Czym jest izomorfizm",
         answer:
           "Aplikacja izomorficzna to taka, która dzieli prawie cały swój kod między serwerem i klientem.",
