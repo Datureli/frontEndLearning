@@ -75,10 +75,6 @@ export default {
         title: "Angielski",
         link: "/english",
       },
-      {
-        title: "Kurs front-end",
-        link: "/course",
-      },
     ],
   }),
   watch: {
