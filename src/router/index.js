@@ -149,34 +149,6 @@ const routes = [
     component: () => import("../views/Materials"),
   },
   {
-    path: "/signup",
-    name: "SignUp",
-    component: () => import("../components/login/SignUp"),
-  },
-  {
-    path: "/login/",
-    name: "Login",
-    component: () => import("../components/login/Login"),
-    children: [
-      {
-        path: "favorite",
-        name: "Favorite",
-        component: () => import("../components/login/FavoriteSection"),
-      },
-      {
-        path: "password",
-        name: "Password",
-        component: () => import("../components/login/ChangePassword"),
-      },
-      {
-        path: "messages",
-        name: "Messages",
-        component: () => import("../components/login/MessageSection"),
-      },
-    ],
-  },
-
-  {
     path: "/podstawy-html",
     name: "HtmlCourse",
     component: () => import("../components/courses/HtmlCourse.vue"),

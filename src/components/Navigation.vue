@@ -6,19 +6,6 @@
       elevation="0"
     >
       <v-app-bar-nav-icon color="white" @click.stop="drawer = !drawer" />
-      <v-spacer></v-spacer>
-      <row>
-        <Login />
-
-        <SignUp />
-        <v-btn @click="pushToFavorite" color="transparent">
-          <v-icon color="red">mdi-heart</v-icon>
-
-          <p class="white--text" v-if="favorite.length > 0">
-            {{ favorite.length }}
-          </p>
-        </v-btn>
-      </row>
     </v-app-bar>
     <v-navigation-drawer temporary v-model="drawer" absolute>
       <v-toolbar color="primary" elevation="0">
@@ -52,10 +39,7 @@
 
 <script>
 import { mapState } from "vuex";
-import Login from "./login/Login.vue";
-import SignUp from "./login/SignUp.vue";
 export default {
-  components: { Login, SignUp },
   data: () => ({
     drawer: false,
     toolbarItems: [
