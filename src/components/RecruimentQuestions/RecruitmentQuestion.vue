@@ -3,7 +3,6 @@
     ref="carousel"
     hide-delimiters
     v-if="questions"
-    progress="primary"
   >
     <v-carousel-item
       v-for="(question, index) in questions"

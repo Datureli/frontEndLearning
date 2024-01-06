@@ -15,9 +15,14 @@ export default {
             PATCH - Metoda PATCH aktualizuje tylko istniejące dane i pozwala tylko na częściowe aktualizacje.`,
         },
         {
-          question: "Opisz słowo kluczowe distinct?",
+          question: "Jakie są statusy odpowiedzi http?",
           answer:
-            "słowo kluczowe DISTINCT, które wymusza na bazie danych zwrócenie jedynie różniących się między sobą wyników. Słowo kluczowe DISTINCT należy umieścić na początku listy nazw kolumn.",
+            "Odpowiedzi HTTP (kody statusu) są generowane przez serwer w odpowiedzi na żądania klienta przesyłane do serwera. Kody odpowiedzi HTTP są podzielone na pięć klas. Pierwsza cyfra kodu odpowiedzi definiuje klasę odpowiedzi, podczas gdy dwie ostatnie cyfry nie mają roli kategoryzacyjnej. Pięć różnych klas kodów odpowiedzi obejmuje:",
+            list:  `1xx - odpowiedź informacyjna - żądanie zostało odebrane i kontynuuje się w procesie.
+            2xx - sukces - żądanie zostało pomyślnie odebrane, zrozumiane i zaakceptowane przez serwer.
+            3xx - przekierowanie - żądanie jest niekompletne, i konieczne są pewne działania w celu jego ukończenia.
+            4xx - błąd klienta - żądanie zawiera błędną składnię.
+            5xx - błąd serwera - serwer nie był w stanie spełnić prawidłowego żądania.`
         },
         {
           question: "Jak ograniczyć liczbę zwracanych wyników?",

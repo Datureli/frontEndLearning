@@ -22,7 +22,6 @@
     "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@intlify/vue-i18n-loader": "^3.2.0",
     "@vue/cli-plugin-babel": "~4.5.15",
     "@vue/cli-plugin-router": "^4.5.15",
     "@vue/cli-plugin-unit-jest": "~5.0.0",
@@ -36,7 +35,6 @@
     "jest": "^27.5.1",
     "sass": "1.32",
     "sass-loader": "^10.1.1",
-    "vue-cli-plugin-i18n": "~2.3.1",
     "vue-cli-plugin-vuetify": "~2.4.5",
     "vue-cli-plugin-webpack": "~0.1.0",
     "vue-template-compiler": "^2.6.14",

@@ -1,37 +1,78 @@
 <template>
   <v-container-fluid>
-    <v-app-bar
-      :style="{ position: changePositionProperty, top: 0, zIndex: 5 }"
-      :color="color"
-      elevation="0"
-    >
-      <v-app-bar-nav-icon color="white" @click.stop="drawer = !drawer" />
-    </v-app-bar>
-    <v-navigation-drawer temporary v-model="drawer" absolute>
-      <v-toolbar color="primary" elevation="0">
-        <v-spacer></v-spacer>
-
-        <v-toolbar-items>
-          <v-btn id="closeButton" icon dark @click="closeModal">
-            <v-icon>mdi-close</v-icon>
-          </v-btn>
-        </v-toolbar-items>
-      </v-toolbar>
-
-      <v-list nav color="primary" height="100vh">
-        <v-list-item-group>
-          <v-list-item
-            color="green"
-            class="white--text text-h6"
-            v-for="(toolbarItem, index) in toolbarItems"
-            :key="index"
-            :to="toolbarItem.link"
-          >
-            <v-list-item-title>{{ toolbarItem.title }}</v-list-item-title>
+    <div class="d-flex">
+      <v-app-bar
+        :style="{ position: changePositionProperty, top: 0, zIndex: 5 }"
+        :color="color"
+        elevation="0"
+      >
+        <v-app-bar-nav-icon color="white" @click.stop="drawer = !drawer" />
+        <v-list
+          class="d-flex mx-auto justify-center pt-5 font-weight-bold"
+          color="transparent"
+          v-if="$route.path.startsWith('/recruitment-questions')"
+        >
+          <v-list-item>
+            <v-list-item-title
+              class="text-h5 font-weight-bold"
+              @click="openQuestionsModal"
+              >Kategoria pytań</v-list-item-title
+            >
           </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
+          <v-list-item>
+            <v-list-item-title
+              class="text-h5 font-weight-bold"
+              @click="openKnowledgeTestModal"
+              >Test wiedzy</v-list-item-title
+            >
+          </v-list-item>
+        </v-list>
+      </v-app-bar>
+      <v-navigation-drawer temporary v-model="drawer" absolute>
+        <v-toolbar color="primary" elevation="0">
+          <v-spacer></v-spacer>
+          <v-toolbar-items>
+            <v-btn id="closeButton" icon dark @click="closeModal">
+              <v-icon>mdi-close</v-icon>
+            </v-btn>
+          </v-toolbar-items>
+        </v-toolbar>
+
+        <v-list nav color="primary" height="100vh">
+          <v-list-item-group>
+            <v-list-item
+              color="green"
+              class="white--text text-h6"
+              v-for="(toolbarItem, index) in toolbarItems"
+              :key="index"
+              :to="toolbarItem.link"
+            >
+              <v-list-item-title>{{ toolbarItem.title }}</v-list-item-title>
+            </v-list-item>
+          </v-list-item-group>
+        </v-list>
+      </v-navigation-drawer>
+    </div>
+
+    <v-dialog v-model="isQuestionsModalOpen" max-width="600">
+      <v-card>
+        <v-card-title>Okno modalne dla Kategorii pytań</v-card-title>
+
+        <v-card-actions>
+          <v-btn @click="isQuestionsModalOpen = false">Zamknij</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
+    <v-dialog v-model="isDialogOpen" max-width="600">
+      <v-card>
+        <v-card-title>Okno modalne dla Testu wiedzy</v-card-title>
+
+        <v-card-actions>
+          <v-btn @click="isDialogOpen = false">Zamknij</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
 
     <router-view></router-view>
   </v-container-fluid>
@@ -42,6 +83,8 @@ import { mapState } from "vuex";
 export default {
   data: () => ({
     drawer: false,
+    isDialogOpen: false,
+    isQuestionsModalOpen: false,
     toolbarItems: [
       {
         title: "Home",
@@ -50,6 +93,10 @@ export default {
       {
         title: "Pytania rekrutacyjne",
         link: "/recruitment-questions",
+      },
+      {
+        title: "Test wiedzy",
+        link: "/knowledge-test",
       },
       {
         title: "Materiały",
@@ -98,6 +145,12 @@ export default {
   methods: {
     closeModal() {
       this.drawer = false;
+    },
+    openKnowledgeTestModal() {
+      this.isDialogOpen = true;
+    },
+    openQuestionsModal() {
+      this.isQuestionsModalOpen = true;
     },
   },
 };
