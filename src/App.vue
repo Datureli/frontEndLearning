@@ -9,7 +9,6 @@
 <script>
 import Navigation from "./components/Navigation.vue";
 export default {
-  name: "App",
   components: {
     Navigation,
   },
@@ -17,6 +16,11 @@ export default {
 </script>
 
 <style>
+html,
+body {
+  overflow: hidden;
+}
+
 #app {
   font-family: Georgia, Helvetica, Arial, sans-serif;
   text-align: center;
