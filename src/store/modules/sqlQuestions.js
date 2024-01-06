@@ -61,7 +61,11 @@ export default {
         question: "Jak wybrać konkretne kolumny?",
         answer:
           "Użycie klauzuli WHERE pozwala na odfiltrowanie części wierszy. W przypadku kolumn mechanizm jest podobny. Jeśli chcesz wybrać podzbiór kolumn, a nie wszystkie, to musisz wskazać te, które Cię interesują:",
-        code: "",
+        code: `SELECT invoicedate
+                      ,billingcity
+                      ,total
+                  FROM invoice
+                WHERE billingcountry = 'Poland';`,
       },
     ],
   },

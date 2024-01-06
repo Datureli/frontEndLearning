@@ -26,7 +26,7 @@
           >
 
           <v-list-item-subtitle
-            class="white--text mr-8 ml-8 text-justify text-h6 text-wrap"
+            class="white--text  mr-8 ml-8 text-justify text-h6 text-wrap"
             :style="question.answer.length > 700 ? 'overflow-y: scroll;' : ''"
             v-show="disable"
           >
