@@ -54,20 +54,20 @@
       </v-navigation-drawer>
     </div>
 
-    <v-dialog v-model="isQuestionsModalOpen" max-width="600">
+    <v-dialog v-model="isQuestionsModalOpen" max-width="900">
       <v-card>
-        <v-card-title>Okno modalne dla Kategorii pytań</v-card-title>
-
+        <v-card-title class="font-weight-bold">Wybierz kategorię pytań</v-card-title>
+        <FirstColumn />
         <v-card-actions>
           <v-btn @click="isQuestionsModalOpen = false">Zamknij</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
 
-    <v-dialog v-model="isDialogOpen" max-width="600">
+    <v-dialog v-model="isDialogOpen" max-width="900">
       <v-card>
-        <v-card-title>Okno modalne dla Testu wiedzy</v-card-title>
-
+        <v-card-title>Przetestuj swoją wiedze</v-card-title>
+        <RightColumn />
         <v-card-actions>
           <v-btn @click="isDialogOpen = false">Zamknij</v-btn>
         </v-card-actions>
@@ -79,6 +79,8 @@
 </template>
 
 <script>
+import FirstColumn from "../components/RecruitmentQuestionsLayout/FirstColumn.vue";
+import RightColumn from "../components/RecruitmentQuestionsLayout/RightColumn";
 import { mapState } from "vuex";
 export default {
   data: () => ({
@@ -93,10 +95,6 @@ export default {
       {
         title: "Pytania rekrutacyjne",
         link: "/recruitment-questions",
-      },
-      {
-        title: "Test wiedzy",
-        link: "/knowledge-test",
       },
       {
         title: "Materiały",
@@ -152,6 +150,10 @@ export default {
     openQuestionsModal() {
       this.isQuestionsModalOpen = true;
     },
+  },
+  components: {
+    RightColumn,
+    FirstColumn,
   },
 };
 </script>

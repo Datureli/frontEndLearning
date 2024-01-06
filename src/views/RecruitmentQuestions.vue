@@ -1,27 +1,17 @@
 <template>
-  <v-row class="darkGradient full-height">
-    <v-col v-if="$vuetify.breakpoint.mdAndUp" cols="12" sm="6" md="2">
-      <FirstColumn />
-    </v-col>
-    <v-col justify="center" cols="12" md="8">
-      <MiddleColumn />
-    </v-col>
-    <v-col v-if="$vuetify.breakpoint.mdAndUp" cols="12" sm="6" md="2">
-      <RightColumn />
+  <v-row class="darkGradient full-height" >
+    <v-col class="mx-auto"  cols="12" md="8">
+      <MiddleColumn  />
     </v-col>
   </v-row>
 </template>
 
 <script>
-import FirstColumn from "../components/RecruitmentQuestionsLayout/FirstColumn.vue";
 import MiddleColumn from "../components/RecruitmentQuestionsLayout/MiddleColumn.vue";
-import RightColumn from "../components/RecruitmentQuestionsLayout/RightColumn";
 
 export default {
   components: {
-    FirstColumn,
     MiddleColumn,
-    RightColumn,
   },
 };
 </script>
