@@ -8,7 +8,7 @@
       >
     </v-list-item>
 
-    <v-dialog v-model="isQuestionsModalOpen" max-width="900">
+    <v-dialog v-model="isQuestionsModalOpen" max-width="900"  >
       <v-card>
         <div class="d-flex">
           <v-card-title class="font-weight-bold"

@@ -12,14 +12,8 @@
           color="transparent"
           v-if="$route.path.startsWith('/recruitment-questions')"
         >
-           <FirstColumn />
-          <v-list-item>
-            <v-list-item-title
-              class="text-h5 font-weight-bold"
-              @click="openKnowledgeTestModal"
-              >Test wiedzy</v-list-item-title
-            >
-          </v-list-item>
+          <FirstColumn />
+          <RightColumn />
         </v-list>
       </v-app-bar>
       <v-navigation-drawer temporary v-model="drawer" absolute>
@@ -48,18 +42,6 @@
       </v-navigation-drawer>
     </div>
 
- 
-
-    <v-dialog v-model="isDialogOpen" max-width="900">
-      <v-card>
-        <v-card-title>Przetestuj swoją wiedze</v-card-title>
-        <RightColumn />
-        <v-card-actions>
-          <v-btn @click="isDialogOpen = false">Zamknij</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-
     <router-view></router-view>
   </v-container-fluid>
 </template>
@@ -71,7 +53,6 @@ import { mapState } from "vuex";
 export default {
   data: () => ({
     drawer: false,
-    isDialogOpen: false,
 
     toolbarItems: [
       {
@@ -129,9 +110,6 @@ export default {
   methods: {
     closeModal() {
       this.drawer = false;
-    },
-    openKnowledgeTestModal() {
-      this.isDialogOpen = true;
     },
   },
   components: {
