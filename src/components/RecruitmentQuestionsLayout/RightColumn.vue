@@ -19,19 +19,15 @@
           </v-card-actions>
         </div>
 
-        <v-form class="mt-10 mr-2 mx-auto pa-4" v-model="isFilled">
+        <v-form class="mt-10 mr-2 pa-4">
           <v-select
             v-for="selectItem in selectItems"
             :key="selectItem.key"
             v-model="selectItem.model"
-            :rules="selectItem.rules"
             :items="getItemsForSelect(selectItem)"
-            item-text="title"
             :label="selectItem.label"
-            persistent-hint
-            return-object
-            single-line
             class="mt-5"
+            @change="validateForm"
           ></v-select>
           <v-btn
             width="300"
@@ -53,61 +49,51 @@ import { mapState } from "vuex";
 export default {
   data() {
     return {
-      isFilled: false,
       isDialogOpen: false,
       selectItems: [
         {
           key: "category",
-          model: "category",
-          rules: "categoryRules",
+          model: null,
           label: "Category",
         },
         {
           key: "numberOfQuestions",
-          model: "numberOfQuestions",
-          rules: "numberOfQuestionsRules",
+          model: null,
           label: "Number of questions",
         },
         {
           key: "difficulty",
-          model: "difficulty",
-          rules: "difficultyRules",
+          model: null,
           label: "Difficulty level",
         },
         {
           key: "time",
-          model: "time",
-          rules: "timeRules",
+          model: null,
           label: "Time",
         },
       ],
+      isFilled: false,
     };
   },
   computed: {
     ...mapState("firstColumn", ["firstColumn"]),
-    ...mapState("rightColumn", [
-      "categoryRules",
-      "numberOfQuestionsRules",
-      "difficultyRules",
-      "timeRules",
-    ]),
   },
   methods: {
     openKnowledgeTestModal() {
       this.isDialogOpen = true;
     },
     getItemsForSelect(selectItem) {
-      // Dynamicznie zwracamy odpowiednie items dla danego selectItem
-      if (selectItem.key === "category") {
-        return this.firstColumn.map((item) => item.title);
-      } else if (selectItem.key === "numberOfQuestions") {
-        return ["1", "2", "3"]; // Przykładowe wartości, dostosuj do potrzeb
-      } else if (selectItem.key === "difficulty") {
-        return ["Easy", "Medium", "Hard"]; // Przykładowe wartości, dostosuj do potrzeb
-      } else if (selectItem.key === "time") {
-        return ["15 min", "30 min", "1 hour"]; // Przykładowe wartości, dostosuj do potrzeb
-      }
-      return [];
+      const keyToOptionsMap = {
+        category: this.firstColumn.map((item) => item.title),
+        numberOfQuestions: ["1", "2", "3"],
+        difficulty: ["Easy", "Medium", "Hard"],
+        time: ["15 min", "30 min", "1 hour"],
+      };
+
+      return keyToOptionsMap[selectItem.key] || [];
+    },
+    validateForm() {
+      this.isFilled = this.selectItems.every((item) => !!item.model);
     },
   },
 };
