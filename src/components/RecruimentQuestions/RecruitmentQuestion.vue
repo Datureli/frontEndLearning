@@ -11,7 +11,7 @@
         <v-list-item-content>
           <v-list-item-title
             class="font-weight-black text-wrap"
-            :class="disable ? 'text-h4' : ['text-h2', 'mt-15']"
+            :class="disable ? 'text-h4' : ['text-h3', 'mt-15']"
             style="transition: 2s"
             >{{ question.question }}</v-list-item-title
           >
@@ -20,11 +20,9 @@
             class="white--text mr-8 ml-8 text-justify text-h6 text-wrap"
             v-show="disable"
           >
-            <div class="d-flex">
-              <p style="height: 250px">
-                {{ question.answer }}
-              </p>
-            </div>
+            <p style="height: 250px">
+              {{ question.answer }}
+            </p>
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>

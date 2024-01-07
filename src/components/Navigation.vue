@@ -12,13 +12,7 @@
           color="transparent"
           v-if="$route.path.startsWith('/recruitment-questions')"
         >
-          <v-list-item>
-            <v-list-item-title
-              class="text-h5 font-weight-bold"
-              @click="openQuestionsModal"
-              >Kategoria pytań</v-list-item-title
-            >
-          </v-list-item>
+           <FirstColumn />
           <v-list-item>
             <v-list-item-title
               class="text-h5 font-weight-bold"
@@ -54,15 +48,7 @@
       </v-navigation-drawer>
     </div>
 
-    <v-dialog v-model="isQuestionsModalOpen" max-width="900">
-      <v-card>
-        <v-card-title class="font-weight-bold">Wybierz kategorię pytań</v-card-title>
-        <FirstColumn />
-        <v-card-actions>
-          <v-btn @click="isQuestionsModalOpen = false">Zamknij</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
+ 
 
     <v-dialog v-model="isDialogOpen" max-width="900">
       <v-card>
@@ -86,7 +72,7 @@ export default {
   data: () => ({
     drawer: false,
     isDialogOpen: false,
-    isQuestionsModalOpen: false,
+
     toolbarItems: [
       {
         title: "Home",
@@ -146,9 +132,6 @@ export default {
     },
     openKnowledgeTestModal() {
       this.isDialogOpen = true;
-    },
-    openQuestionsModal() {
-      this.isQuestionsModalOpen = true;
     },
   },
   components: {

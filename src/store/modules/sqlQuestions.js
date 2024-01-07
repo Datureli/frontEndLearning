@@ -67,6 +67,26 @@ export default {
                   FROM invoice
                 WHERE billingcountry = 'Poland';`,
       },
+      {
+        question: "Kolejność wyrażeń w sql?",
+        answer:
+          " Język SQL określa w jakiej kolejności powinny być one używane w zapytaniach. Kolejność ta zawsze wygląda następująco:",
+        code: ` SELECT ...
+          (    FROM ...)
+          (   WHERE ...)
+          (ORDER BY ...)
+          (   LIMIT ...)`,
+      },
+      {
+        question: "Jak ogranizcyć ilość wyników?",
+        answer:
+          "W takim przypadku z pomocą przychodzi wyrażenie LIMIT, które pozwala na ograniczenie liczby zwracanych wierszy.Do poprawnego stronicowania używa się także wyrażenia OFFSET, które pozwala na przeskoczenie odpowiedniej liczby wyników. Na przykład wyrażenie poniżej wyświetli pięć wierszy pomijając pierwsze dziesięć.",
+      },
+      {
+        question: "Jak w sql zwrócić jedynie uniknalne wiersze?",
+        answer:
+          "W przypadku tego typu zapytań z pomocą przychodzi wyrażenie DISTINCT. Pozwala ono na odfiltrowanie powielonych wierszy.Klauzulę DISTINCT możesz stosować także w przypadku wielu kolumn. Załóżmy, że chcesz uzyskać listę wszystkich krajów i miejscowości, w których dokonano zakupu. Aby uzyskać taki wynik wystarczy nieznacznie zmodyfikować poprzednie zapytanie:",
+      },
     ],
   },
 

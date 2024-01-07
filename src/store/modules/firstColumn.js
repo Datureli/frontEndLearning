@@ -64,7 +64,7 @@ export default {
         link: "/recruitment-questions/general",
         bookLink: '/book/general',
         icon: "mdi-account-circle",
-        color: "white",
+        color: "red",
         id: 8,
       },
       {
