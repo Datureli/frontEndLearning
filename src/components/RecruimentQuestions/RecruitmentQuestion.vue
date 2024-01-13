@@ -1,6 +1,6 @@
 <template>
-  <v-carousel  ref="carousel" hide-delimiters v-if="questions">
-    <v-carousel-item 
+  <v-carousel ref="carousel" hide-delimiters v-if="questions">
+    <v-carousel-item
       v-for="question in questions"
       :key="question.id"
       @shortkey="changeArrowDirection"
@@ -9,21 +9,29 @@
     >
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title
-            class="font-weight-black text-wrap"
-            :class="disable ? 'text-h4' : ['text-h3', 'mt-15']"
-            style="transition: 2s"
-            >{{ question.question }}</v-list-item-title
+          <v-col
+            :class="$vuetify.breakpoint.mdAndUp ? 'elevation-3' : ''"
+            class="mx-auto"
+            cols="12"
+            md="10"
+            style="height: 370px"
           >
+            <v-list-item-title
+              class="font-weight-black text-wrap"
+              :class="disable ? 'text-h4' : ['text-h3', 'mt-15']"
+              style="transition: 2s"
+              >{{ question.question }}</v-list-item-title
+            >
 
-          <v-list-item-subtitle
-            class="white--text mr-8 ml-8 text-justify text-h6 text-wrap"
-            v-show="disable"
-          >
-            <p style="height: 250px">
-              {{ question.answer }}
-            </p>
-          </v-list-item-subtitle>
+            <v-list-item-subtitle
+              class="white--text md-mr-8 md-ml-8 mt-3 text-justify text-h6 text-wrap"
+              v-show="disable"
+            >
+              <p style="height: 250px">
+                {{ question.answer }}
+              </p>
+            </v-list-item-subtitle>
+          </v-col>
         </v-list-item-content>
       </v-list-item>
     </v-carousel-item>
@@ -92,3 +100,16 @@ export default {
   },
 };
 </script>
+
+<style>
+.v-window__prev,
+.v-window__next {
+  top: 35%;
+}
+@media only screen and (max-width: 600px) {
+  .v-window__prev,
+  .v-window__next {
+    top: 90%;
+  }
+}
+</style>

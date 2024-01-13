@@ -1,7 +1,7 @@
 <template>
-  <v-row class="darkGradient full-height" >
-    <v-col class="mx-auto"  cols="12" md="8">
-      <MiddleColumn  />
+  <v-row class="darkGradient full-height">
+    <v-col class="mx-auto" cols="12" md="10">
+      <MiddleColumn />
     </v-col>
   </v-row>
 </template>

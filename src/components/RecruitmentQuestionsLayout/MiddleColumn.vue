@@ -4,7 +4,6 @@
       class="mt-md-10"
       :height="height"
       color="darkGradient"
-      :elevation="elevation"
     >
       <div v-if="$route.path === '/recruitment-questions'" class="pa-5">
         <h1 class="text-h2 font-weight-black justify-center mt-15">
@@ -33,9 +32,7 @@ export default {
     height() {
       return this.$vuetify.breakpoint.mdAndUp ? 390 : 410;
     },
-    elevation() {
-      return this.$vuetify.breakpoint.smAndDown ? 0 : 3;
-    },
+
     currentComponent() {
       const path = this.$route.path;
       return this.componentsTable[path] || null;
