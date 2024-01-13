@@ -39,7 +39,8 @@ export default {
           "ref jest funkcją, która służy do tworzenia reaktywnych referencji. Przyjmuje wartość początkową i zwraca reaktywną referencję do tej wartości. Referencje reaktywne są specjalnym rodzajem obiektów, które pozwalają na reaktywne śledzenie zmian wartości. Oznacza to, że jeśli wartość referencji reaktywnej zostanie zmieniona, to wszystkie komponenty lub części aplikacji korzystające z tej referencji zostaną automatycznie zaktualizowane.Ref to interfejs dostarczany przez Vue, który opisuje reaktywną referencję. Jest to rodzaj generycznego typu, który można zastosować do określenia typu wartości przechowywanej przez reaktywną referencję.W powyższym przykładzie Ref<number> oznacza, że count jest reaktywną referencją, która przechowuje wartość typu number. Dzięki temu TypeScript będzie w stanie wykryć błędy typów i udzielać podpowiedzi typów przy korzystaniu z tej referencji.Podsumowując, ref jest funkcją do tworzenia reaktywnych referencji, a Ref to typ interfejsu opisujący reaktywną referencję, który można zastosować do deklarowania typów wartości przechowywanych przez te referencje.",
       },
       {
-        question: "Deklarowanie zmiennych w composables przed oraz w środku funkcji?",
+        question:
+          "Deklarowanie zmiennych w composables przed oraz w środku funkcji?",
         answer:
           "Deklarowanie zmiennych przed funkcją: Jeśli zadeklarujesz zmienne przed funkcją w Vue 3 composables, są one dostępne w całym zakresie tego pliku. Oznacza to, że mogą być używane zarówno wewnątrz jak i na zewnątrz funkcji komponentu. Te zmienne są współdzielone między wszystkimi wywołaniami tej funkcji komponentu.Deklarowanie zmiennych w funkcji: Jeśli deklarujesz zmienne w funkcji w Vue 3 composables, są one związane z konkretnym wywołaniem tej funkcji. Oznacza to, że są tworzone na nowo przy każdym wywołaniu tej funkcji i mają swój własny zakres. Zmienne deklarowane w funkcji nie są widoczne poza tą funkcją ani nie są współdzielone między różnymi wywołaniami funkcji komponentu.",
       },
@@ -79,11 +80,6 @@ export default {
           "Vue.js to progresywny, open-source framework JavaScript, który został zaprojektowany z myślą o tworzeniu dynamicznych interfejsów użytkownika. Dzięki swojej łatwości w użyciu i integracji z innymi bibliotekami, Vue.js umożliwia szybkie i wydajne budowanie zaawansowanych aplikacji internetowych. Framework oparty jest na wzorcu projektowym Flux, co pozwala na efektywną organizację kodu i zarządzanie stanem aplikacji.",
       },
       {
-        question: "Czym jest atrybut ref?",
-        answer:
-          "Atrybut ref pozwala na przypisanie referencji ID do komponentu dziecka i uzyskanie bezpośredniego dostępu do jego instancji w JavaScript. Dzięki temu możemy skutecznie komunikować się między komponentami rodzica i dziecka oraz korzystać z funkcjonalności koponentu dziecka wewnątrz komponentu rodzica. Atrybut ref jest jednym z konceptów propsów i zdarzeń, które umożliwiają komunikację między komponentami w Vue.js.",
-      },
-      {
         question: "Wyjaśnij cykl życia w Vue",
         answer:
           "Cykl życia to proces instancji Vue, w którym uruchamiane są określone funkcje, przechodzące przez proces tworzenia i aktualizowania drzewa DOM. Dzięki cyklowi życia Vue możemy śledzić etapy tworzenia, aktualizowania i usuwania komponentów. Wszystkie etapy cyklu życia posiadają dostęp do 'this' przypisanego do instancji, dzięki czemu możemy uzyskać dostęp do danych, obliczanych wartości oraz metod.Cykl życia składa się z czterech głównych zdarzeń (oraz 8 głównych punktów zaczepienia): Tworzenie - uruchamia się przy tworzeniu komponentu; Montaż - uruchamia się, gdy komponent zostaje zamontowany w drzewie DOM; Aktualizacje - uruchamia się, gdy modyfikowane są dane reaktywne; Zniszczenie - uruchamia się tuż przed usunięciem komponentu.",
@@ -109,19 +105,21 @@ export default {
           "Scoped slots są rozwinięciem standardowych slotów w Vue.js, pozwalając na przekazywanie danych z komponentów podrzędnych do komponentów nadrzędnych poprzez sloty. W przeciwieństwie do standardowych slotów, scoped slots umożliwiają dostęp do właściwości komponentów dziecka w zawartości slot, dzięki czemu można przekazywać różne wartości i wykorzystywać je w kodzie rodzica. Scoped slots są szczególnie przydatne w sytuacjach, gdy chcemy umieścić w slotach niestandardową logikę lub przekazać do rodzica niestandardowe dane.",
       },
       {
-        question: "Jaka jest różnica między slotami a slotami w zakresie (scoped slots)?",
+        question:
+          "Jaka jest różnica między slotami a slotami w zakresie (scoped slots)?",
         answer:
           "Slot to miejsce w komponencie, gdzie możemy wstrzyknąć treść przekazaną od rodzica. Zwykły slot działa poprzez przekazanie treści od rodzica do komponentu podrzędnego, a następnie kompilację tej treści w kontekście rodzica. Nie można wtedy korzystać z właściwości komponentów podrzędnych w tej treści. Natomiast slot w zakresie (scoped slot) umożliwia przekazywanie danych z komponentów podrzędnych do zakresu nadrzędnego, co umożliwia korzystanie z tych danych w treści slotu.",
       },
       {
-        question: "Jakie są główne foldery i pliki w strukturze projektu w Nuxt.js?",
+        question:
+          "Jakie są główne foldery i pliki w strukturze projektu w Nuxt.js?",
         answer:
-          "assets - miejsce, w którym możemy przechowywać nieprzetworzone pliki, takie jak np. less czy sass. Nuxt.js wspiera wiele różnych preprocesorów i to jest dobre miejsce na trzymanie ich źródeł components - folder zawierający fundament działania Vue.js, a więc wszystkie nasze reużywalne komponenty.layouts i pages - tutaj znajdują się główne szablony naszego frontendu. Każda strona obsługiwana przez routing znajduje się w katalogu pages i jest opakowana przez główny szablon z katalogu layouts. Szablony te służą głównie do ustandaryzowania pewnych elementów na frontendzie dla wielu stron, takich jak wspólny nagłówek i stopka czy jednolite menu na każdej podstronie.middleware i plugins - jak sama nazwy wskazują, są to miejsca, w których przechowujemy kod, który wpływa na działanie naszej aplikacji w taki sposób, że rozszerza lub dodaje pewne mechanizmy lub modyfikuje zachowanie.server - tutaj znajduje się kod, który uruchamiany jest po stronie serwera. W przypadku Nuxt.js jest to konfiguracja instancji serwera Express. static - to miejsce, w którym znajdują się wszystkie pliki statyczne, takie jak js, css, img, fonts, itp. Co ważne, wszystkie pliki z tego katalogu są automatycznie udostępnione na świat. Możemy sobie wyobrazić je jako globalny rejestr, gdzie poszczególne elementy/komponenty naszego frontendu mają dostęp i mogą go odczytywać lub zmodyfikować jego stan podczas życia aplikacji, aby współdzielić pewne informacje.nuxt.config.js - główny plik z konfiguracją aplikacji Nuxt.js. .env - plik z konfiguracją naszej aplikacji."
+          "assets - miejsce, w którym możemy przechowywać nieprzetworzone pliki, takie jak np. less czy sass. Nuxt.js wspiera wiele różnych preprocesorów i to jest dobre miejsce na trzymanie ich źródeł components - folder zawierający fundament działania Vue.js, a więc wszystkie nasze reużywalne komponenty.layouts i pages - tutaj znajdują się główne szablony naszego frontendu. Każda strona obsługiwana przez routing znajduje się w katalogu pages i jest opakowana przez główny szablon z katalogu layouts. Szablony te służą głównie do ustandaryzowania pewnych elementów na frontendzie dla wielu stron, takich jak wspólny nagłówek i stopka czy jednolite menu na każdej podstronie.middleware i plugins - jak sama nazwy wskazują, są to miejsca, w których przechowujemy kod, który wpływa na działanie naszej aplikacji w taki sposób, że rozszerza lub dodaje pewne mechanizmy lub modyfikuje zachowanie.server - tutaj znajduje się kod, który uruchamiany jest po stronie serwera. W przypadku Nuxt.js jest to konfiguracja instancji serwera Express. static - to miejsce, w którym znajdują się wszystkie pliki statyczne, takie jak js, css, img, fonts, itp. Co ważne, wszystkie pliki z tego katalogu są automatycznie udostępnione na świat. Możemy sobie wyobrazić je jako globalny rejestr, gdzie poszczególne elementy/komponenty naszego frontendu mają dostęp i mogą go odczytywać lub zmodyfikować jego stan podczas życia aplikacji, aby współdzielić pewne informacje.nuxt.config.js - główny plik z konfiguracją aplikacji Nuxt.js. .env - plik z konfiguracją naszej aplikacji.",
       },
       {
         question: "Cykl życia w composition api",
         answer:
-          "W Vue 3, musimy zaimportować haki cyklu życia do naszego projektu, zanim będziemy mogli ich użyć. Ma to pomóc w utrzymaniu jak najmniejszych projektów. Oto lista haków cyklu życia w Composition API:,onBeforeMount - wywołane przed rozpoczęciem montażuonMounted - wywoływane, gdy komponent jest montowanyonBeforeUpdate - wywoływana, gdy reaktywne dane ulegają zmianie i przed ponownym renderowaniemonUpdated - wywołana po ponownym renderowaniuonBeforeUnmount - wywołana przed zniszczeniem instancji VueonUnmounted - wywoływana po zniszczeniu instancjionActivated - wywoływane, gdy aktywny jest komponentonDeactivated - wywoływana, gdy utrzymywany przy życiu komponent jest dezaktywowanyonErrorCaptured - wywoływana, gdy zostanie przechwycony błąd z komponentu potomnego."
+          "W Vue 3, musimy zaimportować haki cyklu życia do naszego projektu, zanim będziemy mogli ich użyć. Ma to pomóc w utrzymaniu jak najmniejszych projektów. Oto lista haków cyklu życia w Composition API:,onBeforeMount - wywołane przed rozpoczęciem montażuonMounted - wywoływane, gdy komponent jest montowanyonBeforeUpdate - wywoływana, gdy reaktywne dane ulegają zmianie i przed ponownym renderowaniemonUpdated - wywołana po ponownym renderowaniuonBeforeUnmount - wywołana przed zniszczeniem instancji VueonUnmounted - wywoływana po zniszczeniu instancjionActivated - wywoływane, gdy aktywny jest komponentonDeactivated - wywoływana, gdy utrzymywany przy życiu komponent jest dezaktywowanyonErrorCaptured - wywoływana, gdy zostanie przechwycony błąd z komponentu potomnego.",
       },
 
       {
@@ -137,12 +135,12 @@ export default {
       {
         question: "Jakie są ograniczenia wykrywania zmian w obiektach?",
         answer:
-        "Framework Vue nie jest w stanie wykryć zmian w obiekcie podczas dodawania lub usuwania jego właściwości. Aby zmusić framework do wykrycia zmian w obiekcie, należy użyć metody Vue.set() lub Vue.delete().",
+          "Framework Vue nie jest w stanie wykryć zmian w obiekcie podczas dodawania lub usuwania jego właściwości. Aby zmusić framework do wykrycia zmian w obiekcie, należy użyć metody Vue.set() lub Vue.delete().",
       },
       {
         question: "Czym są style vars?",
         answer:
-        "W Vue.js możemy używać tzw. stylowych zmiennych (style variables) w celu definiowania wartości stylów, które mogą być dynamicznie dostosowywane w zależności od stanu komponentu lub innych czynników. Są one szczególnie przydatne, gdy chcemy zastosować jedną wartość stylu w wielu miejscach w komponencie lub w całej aplikacji.",
+          "W Vue.js możemy używać tzw. stylowych zmiennych (style variables) w celu definiowania wartości stylów, które mogą być dynamicznie dostosowywane w zależności od stanu komponentu lub innych czynników. Są one szczególnie przydatne, gdy chcemy zastosować jedną wartość stylu w wielu miejscach w komponencie lub w całej aplikacji.",
       },
       {
         question: "Dlaczego używamy atrybutu klucza w dyrektywie v-for?",
@@ -182,8 +180,7 @@ export default {
       },
       {
         question: "Co robi modyfikator .prevent?",
-        answer:
-          "Zapobiega domyślnej akcji przeglądarki po kliknięciu",
+        answer: "Zapobiega domyślnej akcji przeglądarki po kliknięciu",
       },
       {
         question: "Jakie są najważniejsze elementy Wzorca Zarządzania Stanem?",
@@ -236,7 +233,8 @@ export default {
           "beforeDestroy hook to metoda w Vue.js, która jest wywoływana tuż przed zniszczeniem komponentu. W tym momencie komponent jest wciąż funkcjonalny, ale już nie będzie renderowany. Przy użyciu tej metody można wykonać operacje czyszczenia eventów lub reaktywnych obserwatorów, które zostały zainicjowane podczas tworzenia komponentu. Jest to dobry moment, aby zwolnić zasoby lub anulować subskrypcje. W przypadku renderowania na serwerze, ta metoda nie zostanie uruchomiona.",
       },
       {
-        question: "Jakie modyfikatory zdarzeń są dostępne w Vue.js i jakie są ich funkcje?",
+        question:
+          "Jakie modyfikatory zdarzeń są dostępne w Vue.js i jakie są ich funkcje?",
         answer:
           "W Vue.js mamy możliwość używania modyfikatorów zdarzeń, które są dodatkowymi atrybutami dyrektywy v-on i pozwalają na dostosowanie zachowania zdarzenia. Choć wewnątrz modułów obsługi zdarzeń standardowe metody JavaScript, takie jak event.preventDefault() lub event.stopPropagation() są dostępne, Vue.js udostępnia kilka dodatkowych modyfikatorów zdarzeń. Poniżej przedstawione są modyfikatory zdarzeń dla dyrektywy v-on..stop - zatrzymuje propagację zdarzenia, .prevent - zapobiega domyślnej akcji zdarzenia, .capture - obsługuje zdarzenie w trybie przechwytywania, .self - wywołuje obsługę zdarzenia tylko wtedy, gdy zdarzenie zostało wywołane przez element, na którym dyrektywa jest umieszczona, .once - uruchamia obsługę zdarzenia tylko raz, .passive - określa, że obsługa zdarzenia nie będzie wywoływać metod, które mogą spowolnić przetwarzanie zdarzeń przewijania (scrolling) na urządzeniach dotykowych. Wszystkie te modyfikatory są dostępne jako przyrostki dyrektywy v-on i umożliwiają dostosowanie sposobu działania obsługi zdarzeń.",
       },
@@ -293,19 +291,19 @@ export default {
       {
         question: "Wymień wady i zalety mixinów",
         answer:
-          "Mixiny umożliwiają nam współdzielenie logiki między komponentami. Kawałki kodu zdefiniowane w mixinach mogą być używane w komponencie tak, jakby były zdefiniowane w samym komponencie. Używanie więcej niż jednego mixinu w tym samym komponencie może jednak spowodować, że komponent stanie się trudny do zrozumienia i użycia. Bardziej praktycznym problemem, który może wystąpić podczas używania mixinów w Vue.js, jest kolizja nazw, co ma miejsce, gdy dwa lub więcej mixinów deklaruje te same nazwy."
+          "Mixiny umożliwiają nam współdzielenie logiki między komponentami. Kawałki kodu zdefiniowane w mixinach mogą być używane w komponencie tak, jakby były zdefiniowane w samym komponencie. Używanie więcej niż jednego mixinu w tym samym komponencie może jednak spowodować, że komponent stanie się trudny do zrozumienia i użycia. Bardziej praktycznym problemem, który może wystąpić podczas używania mixinów w Vue.js, jest kolizja nazw, co ma miejsce, gdy dwa lub więcej mixinów deklaruje te same nazwy.",
       },
       {
         question: "Co oznacza opcja immediate: true?",
         answer:
-          "W Vue 2, opcja immediate: true wewnątrz obiektu watch oznacza, że funkcja obsługi zostanie natychmiastowo wywołana po zdefiniowaniu obserwowanej właściwości.Domyślnie, gdy definiujemy obiekt watch w komponencie Vue, funkcja obsługi jest wywoływana tylko wtedy, gdy obserwowana właściwość ulegnie zmianie. Jednak dodając opcję immediate: true, funkcja obsługi zostanie wykonana również podczas inicjalizacji komponentu, nawet jeśli obserwowana właściwość nie uległa zmianie.Dzięki temu, jeśli w obiekcie watch mamy ustawione immediate: true dla danej właściwości, funkcja obsługi zostanie wykonana podczas inicjalizacji komponentu, co może być przydatne w przypadkach, gdy chcemy wykonać pewne operacje na początku, jeszcze przed zmianą obserwowanej właściwości."
+          "W Vue 2, opcja immediate: true wewnątrz obiektu watch oznacza, że funkcja obsługi zostanie natychmiastowo wywołana po zdefiniowaniu obserwowanej właściwości.Domyślnie, gdy definiujemy obiekt watch w komponencie Vue, funkcja obsługi jest wywoływana tylko wtedy, gdy obserwowana właściwość ulegnie zmianie. Jednak dodając opcję immediate: true, funkcja obsługi zostanie wykonana również podczas inicjalizacji komponentu, nawet jeśli obserwowana właściwość nie uległa zmianie.Dzięki temu, jeśli w obiekcie watch mamy ustawione immediate: true dla danej właściwości, funkcja obsługi zostanie wykonana podczas inicjalizacji komponentu, co może być przydatne w przypadkach, gdy chcemy wykonać pewne operacje na początku, jeszcze przed zmianą obserwowanej właściwości.",
       },
       {
         question: "Czym jest atrybut ref?",
         answer:
           "Atrybut ref w Vue.js pozwala nam uczynić dowolną zmienną reaktywną. Ref bierze argument i zwraca go owiniętego w obiekt z wartością, który może być później użyty do uzyskania dostępu lub zmiany wartości tej reaktywnej zmiennej. Innymi słowy, ref wytwarza reaktywną referencję dla naszej wartości.",
       },
-      
+
       {
         question: "Czym jest multi root template?",
         answer:
@@ -314,7 +312,7 @@ export default {
       {
         question: "Czym jest setup w composition api?",
         answer:
-          "W Vue Composition API, opcja setup jest nowym sposobem na definiowanie logiki komponentu. Jest to funkcja, która jest uruchamiana przed montażem komponentu i przed każdym przechwyceniem cyklu życia. Funkcja setup() przyjmuje dwa argumenty: pierwszy to props, a drugi context. Kontekst jest normalnym obiektem JS i nie jest reaktywny. Kod wewnątrz tagu <script setup> zostanie wykonany za każdym razem, gdy zostanie utworzona instancja komponentu, a wszystko zadeklarowane w kontekście <script setup> będzie dostępne w szablonie. Nie musimy już zwracać danych z funkcji setup() w celu udostępnienia ich w szablonie, ponieważ są one automatycznie reaktywne. Dzięki temu setup pozwala na bardziej modularne i czytelne definiowanie logiki komponentu."
+          "W Vue Composition API, opcja setup jest nowym sposobem na definiowanie logiki komponentu. Jest to funkcja, która jest uruchamiana przed montażem komponentu i przed każdym przechwyceniem cyklu życia. Funkcja setup() przyjmuje dwa argumenty: pierwszy to props, a drugi context. Kontekst jest normalnym obiektem JS i nie jest reaktywny. Kod wewnątrz tagu <script setup> zostanie wykonany za każdym razem, gdy zostanie utworzona instancja komponentu, a wszystko zadeklarowane w kontekście <script setup> będzie dostępne w szablonie. Nie musimy już zwracać danych z funkcji setup() w celu udostępnienia ich w szablonie, ponieważ są one automatycznie reaktywne. Dzięki temu setup pozwala na bardziej modularne i czytelne definiowanie logiki komponentu.",
       },
       {
         question: "Czym są filtry?",
@@ -329,7 +327,7 @@ export default {
       {
         question: "jakie są zalety nuxt.js?",
         answer:
-        "Nuxt.js oferuje wiele zalet, takich jak obsługa modelu SSR, co pozwala na tworzenie kodu, który działa zarówno po stronie serwera, jak i klienta, co jest istotne dla SEO. Dodatkowo, framework obsługuje model strony statycznej, co pozwala na tworzenie czystej strony w HTML dla wszystkich zaprogramowanych reguł routingu. Nuxt.js ma również domyślną obsługę i konfigurację wielu bibliotek interfejsu graficznego oraz ustrukturyzowaną budowę, dzięki czemu nie musimy martwić się, gdzie dany element powinien się znaleźć w strukturze katalogów.Framework zapewnia również pełną obsługę routingu, wielojęzyczności, kontroli dostępu oraz middlewares. Dodatkowo, Nuxt.js obsługuje kompilację ES6/ES7/ES8, co pozwala na uniknięcie konieczności posiadania szczegółowej znajomości narzędzi takich jak Webpack czy Babel oraz umożliwia działanie kodu na wszystkich przeglądarkach. Framework oferuje także analizator wygenerowanego kodu naszej aplikacji, który w przejrzysty sposób obrazuje, jak poszczególne moduły wpływają na rozmiar wynikowego kodu CSS oraz JS."
+          "Nuxt.js oferuje wiele zalet, takich jak obsługa modelu SSR, co pozwala na tworzenie kodu, który działa zarówno po stronie serwera, jak i klienta, co jest istotne dla SEO. Dodatkowo, framework obsługuje model strony statycznej, co pozwala na tworzenie czystej strony w HTML dla wszystkich zaprogramowanych reguł routingu. Nuxt.js ma również domyślną obsługę i konfigurację wielu bibliotek interfejsu graficznego oraz ustrukturyzowaną budowę, dzięki czemu nie musimy martwić się, gdzie dany element powinien się znaleźć w strukturze katalogów.Framework zapewnia również pełną obsługę routingu, wielojęzyczności, kontroli dostępu oraz middlewares. Dodatkowo, Nuxt.js obsługuje kompilację ES6/ES7/ES8, co pozwala na uniknięcie konieczności posiadania szczegółowej znajomości narzędzi takich jak Webpack czy Babel oraz umożliwia działanie kodu na wszystkich przeglądarkach. Framework oferuje także analizator wygenerowanego kodu naszej aplikacji, który w przejrzysty sposób obrazuje, jak poszczególne moduły wpływają na rozmiar wynikowego kodu CSS oraz JS.",
       },
       {
         question: "Czym jest framework Nuxt?",
@@ -373,7 +371,8 @@ export default {
       },
       {
         question: "Opisz dyrektywe v-for",
-        answer: "Dyrektywa v-for to wbudowana dyrektywa w Vue.js, która umożliwia iterowanie po elementach w tablicy lub obiekcie i dynamiczne generowanie treści na stronie internetowej. Aby użyć dyrektywy v-for, musimy przekazać do niej źródło danych, np. tablicę lub obiekt, oraz określić nazwę aliasu dla każdego elementu iterowanego w naszym szablonie.W tym przypadku, dla każdego elementu w tablicy 'items', Vue.js wygeneruje element li z tekstem odpowiadającym wartości elementu tablicy. W powyższym przykładzie, alias 'item' odnosi się do każdego elementu w tablicy 'items', a wartość '{{ item }}' wyświetla zawartość tego elementu na stronie internetowej.",
+        answer:
+          "Dyrektywa v-for to wbudowana dyrektywa w Vue.js, która umożliwia iterowanie po elementach w tablicy lub obiekcie i dynamiczne generowanie treści na stronie internetowej. Aby użyć dyrektywy v-for, musimy przekazać do niej źródło danych, np. tablicę lub obiekt, oraz określić nazwę aliasu dla każdego elementu iterowanego w naszym szablonie.W tym przypadku, dla każdego elementu w tablicy 'items', Vue.js wygeneruje element li z tekstem odpowiadającym wartości elementu tablicy. W powyższym przykładzie, alias 'item' odnosi się do każdego elementu w tablicy 'items', a wartość '{{ item }}' wyświetla zawartość tego elementu na stronie internetowej.",
       },
       {
         question: "Czym jest x-templates",
@@ -382,7 +381,8 @@ export default {
       },
       {
         question: "Opisz dyrektywe v-bind",
-        answer: "Dyrektywa v-bind w Vue.js pozwala na wiązanie danych do atrybutów elementów DOM. Jednakże, v-bind wiąże dane tylko w jeden sposób, co oznacza, że możemy przekazać dane do komponentu, ale jeśli zmienimy te dane wejściowe, to nasza pierwotna wartość nie zostanie zmieniona. To może wydawać się niewielką różnicą, ale może spowodować niezgodność danych, co może prowadzić do problemów. Dlatego należy zachować ostrożność przy wyborze między v-bind a innymi dyrektywami, takimi jak v-model.",
+        answer:
+          "Dyrektywa v-bind w Vue.js pozwala na wiązanie danych do atrybutów elementów DOM. Jednakże, v-bind wiąże dane tylko w jeden sposób, co oznacza, że możemy przekazać dane do komponentu, ale jeśli zmienimy te dane wejściowe, to nasza pierwotna wartość nie zostanie zmieniona. To może wydawać się niewielką różnicą, ale może spowodować niezgodność danych, co może prowadzić do problemów. Dlatego należy zachować ostrożność przy wyborze między v-bind a innymi dyrektywami, takimi jak v-model.",
       },
       {
         question: "Opisz dyrektywe v-model",
@@ -407,7 +407,8 @@ export default {
       },
       {
         question: "Jaka jest różnica w reaktywności dla vue 2 i 3",
-        answer: 'Vue 2 używał Object.defineProperty do monitorowania zmian w obiektach i właściwościach. W Vue 3 został wprowadzony Proxy, który oferuje bardziej efektywny sposób monitorowania zmian. Proxy pozwala na dynamiczną interakcję z obiektami i dostarcza więcej możliwości manipulacji i śledzenia zmian.W Vue 2 reaktywność na poziomie tablic była ograniczona. Trzeba było korzystać z dedykowanych metod, takich jak $set, aby dokonać reaktywnej zmiany w tablicy. Vue 3 wprowadził nowe metody tablicowe, takie jak push, pop, splice itp., które są reaktywne i automatycznie odzwierciedlają zmiany w widoku. W Vue 2, globalny stan aplikacji był trudny do zarządzania i aktualizacji. W Vue 3, dzięki wprowadzeniu funkcji reactive i ref, globalny stan może być łatwiej tworzony i zarządzany, co ułatwia współdzielenie danych między komponentami.'
+        answer:
+          "Vue 2 używał Object.defineProperty do monitorowania zmian w obiektach i właściwościach. W Vue 3 został wprowadzony Proxy, który oferuje bardziej efektywny sposób monitorowania zmian. Proxy pozwala na dynamiczną interakcję z obiektami i dostarcza więcej możliwości manipulacji i śledzenia zmian.W Vue 2 reaktywność na poziomie tablic była ograniczona. Trzeba było korzystać z dedykowanych metod, takich jak $set, aby dokonać reaktywnej zmiany w tablicy. Vue 3 wprowadził nowe metody tablicowe, takie jak push, pop, splice itp., które są reaktywne i automatycznie odzwierciedlają zmiany w widoku. W Vue 2, globalny stan aplikacji był trudny do zarządzania i aktualizacji. W Vue 3, dzięki wprowadzeniu funkcji reactive i ref, globalny stan może być łatwiej tworzony i zarządzany, co ułatwia współdzielenie danych między komponentami.",
       },
       {
         question: "Na czym polega reaktywność w vue",
@@ -437,7 +438,7 @@ export default {
       {
         question: "Co to są dyrektywy niestandardowe?",
         answer:
-          "Dyrektywy niestandardowe to polecenia, które możemy dodać do elementów DOM w celu wpływania na ich zachowanie lub stylowanie. Aby oznaczyć dyrektywę jako niestandardową, musimy dodać przedrostek 'v-' do nazwy dyrektywy. W celu zastosowania dyrektywy do elementu możemy użyć jej nazwy w atrybucie elementu, np. v-my-custom-directive. Dyrektywy niestandardowe są często używane w celu manipulacji DOM lub dostosowywania zachowania komponentów Vue."
+          "Dyrektywy niestandardowe to polecenia, które możemy dodać do elementów DOM w celu wpływania na ich zachowanie lub stylowanie. Aby oznaczyć dyrektywę jako niestandardową, musimy dodać przedrostek 'v-' do nazwy dyrektywy. W celu zastosowania dyrektywy do elementu możemy użyć jej nazwy w atrybucie elementu, np. v-my-custom-directive. Dyrektywy niestandardowe są często używane w celu manipulacji DOM lub dostosowywania zachowania komponentów Vue.",
       },
       {
         question: "Co to jest router i jakie są jego funkcje?",
@@ -497,6 +498,34 @@ export default {
           "Pinia to biblioteka store dla Vue, pozwala na udostępnianie stanu między komponentami / stronami..",
       },
       {
+        question: "Cykl życia w vue 2",
+        answer:
+          `beforeCreate:
+
+          Wywoływany przed utworzeniem komponentu.
+          created:
+          
+          Wywoływany po utworzeniu komponentu.
+          beforeMount:
+          
+          Wywoływany przed zamontowaniem komponentu.
+          mounted:
+          
+          Wywoływany po zamontowaniu komponentu.
+          beforeUpdate:
+          
+          Wywoływany przed aktualizacją komponentu.
+          updated:
+          
+          Wywoływany po aktualizacji komponentu.
+          beforeDestroy:
+          
+          Wywoływany przed odmontowaniem komponentu.
+          destroyed:
+          
+          Wywoływany po odmontowaniu komponentu`,
+      },
+      {
         question: "czym jest mvvm?",
         answer:
           "Wzorzec Model-View-ViewModel, opiera się na wydzieleniu odpowiednich warstw w systemie, w celu podziału zadań oraz zmniejszenia zależności pomiędzy klasami. Mamy więc klasy modelu danych, których zadaniem jest przechowywanie danych właśnie oraz ich ewentualną walidację. Klasy tej warstwy powinny być jak najprostsze pod względem budowy. Pod żadnym pozorem nie mogą odwoływać się do warstwy modelu widoku a tym bardziej do samego widoku.",
@@ -515,6 +544,73 @@ export default {
         question: "Jaka jest różnica między watch a watchEffect",
         answer:
           "Watch pozwala na obserwację konkretnej reaktywnej wartości lub listy wartości i wywołuje funkcję zwrotną tylko wtedy, gdy któraś z nich się zmieni. Daje nam to kontrolę nad tym, co dokładnie obserwujemy.Z drugiej strony, watchEffect obserwuje każdą reaktywną wartość w funkcji zwrotnej i wywołuje ją automatycznie, gdy któraś z nich ulegnie zmianie. Nie potrzebuje ona dodatkowej konfiguracji, co sprawia, że jest łatwiejsza w użyciu, ale może prowadzić do niepotrzebnego renderowania, jeśli nie jest używana ostrożnie Podsumowując, watch daje nam większą kontrolę nad tym, co obserwujemy, a watchEffect jest łatwiejszy w użyciu, ale może prowadzić do niepotrzebnego renderowania.",
+      },
+      {
+        question: "Podaj różnice między vue 2 i vue 3",
+        answer: `Vue 3 i API kompozycyjne
+          Najważniejszym ulepszeniem Nuxt 3 jest przyjęcie najnowszej wersji Vue 3, która wprowadza zaawansowane funkcje, takie jak API kompozycyjne i komposable, wyróżniające go spośród jego poprzednika. Komposable, funkcje, które można importować, mogą być bezproblemowo integrowane z dowolnym komponentem, wspierając lepszą ponowną używalność kodu i zmniejszając redundantność.Silnik Nitro i Szybsze Ponowne Ładowanie
+          Nowoczesny Silnik Nitro w Nuxt 3 podnosi praktycznie każdy aspekt frameworka deweloperskiego Vue.js.
+          Poprzez optymalizację wydajności, Silnik Nitro umożliwia błyskawiczne ładowanie aplikacji podczas procesu rozwoju oraz szybkie odświeżanie po wprowadzeniu zmian.
+          Vue 3 wprowadza innowacyjny system reaktywności z użyciem funkcji ref i reactive.
+          Nuxt 3 automatycznie identyfikuje i importuje te istotne funkcje podstawowe, eliminując konieczność ręcznych importów w każdym komponencie.`,
+      },
+      {
+        question: "Server side rendering w nuxt 3",
+        answer:
+          "Watch pozwala na obserwację konkretnej reaktywnej wartości lub listy wartości i wywołuje funkcję zwrotną tylko wtedy, gdy któraś z nich się zmieni. Daje nam to kontrolę nad tym, co dokładnie obserwujemy.Z drugiej strony, watchEffect obserwuje każdą reaktywną wartość w funkcji zwrotnej i wywołuje ją automatycznie, gdy któraś z nich ulegnie zmianie. Nie potrzebuje ona dodatkowej konfiguracji, co sprawia, że jest łatwiejsza w użyciu, ale może prowadzić do niepotrzebnego renderowania, jeśli nie jest używana ostrożnie Podsumowując, watch daje nam większą kontrolę nad tym, co obserwujemy, a watchEffect jest łatwiejszy w użyciu, ale może prowadzić do niepotrzebnego renderowania.",
+      },
+      {
+        question: "Czym jest hybdrid rendering w nuxt 3",
+        answer:
+          "Watch pozwala na obserwację konkretnej reaktywnej wartości lub listy wartości i wywołuje funkcję zwrotną tylko wtedy, gdy któraś z nich się zmieni. Daje nam to kontrolę nad tym, co dokładnie obserwujemy.Z drugiej strony, watchEffect obserwuje każdą reaktywną wartość w funkcji zwrotnej i wywołuje ją automatycznie, gdy któraś z nich ulegnie zmianie. Nie potrzebuje ona dodatkowej konfiguracji, co sprawia, że jest łatwiejsza w użyciu, ale może prowadzić do niepotrzebnego renderowania, jeśli nie jest używana ostrożnie Podsumowując, watch daje nam większą kontrolę nad tym, co obserwujemy, a watchEffect jest łatwiejszy w użyciu, ale może prowadzić do niepotrzebnego renderowania.",
+      },
+      {
+        question: "Czym jest hydratacja",
+        answer:
+          " termin 'hydratacja' odnosi się do procesu łączenia treści statycznej generowanej po stronie serwera z dynamicznym kodem JavaScript po stronie klienta.proces hydratacji odbywa się, gdy strona, która początkowo została dostarczona jako treść statyczna przez serwer, zostaje 'zhydratyzowana' przez kod JavaScript na klienta. To połączenie statycznej treści z dynamicznym kodem po stronie klienta pozwala na zachowanie interaktywności i funkcjonalności aplikacji internetowej.Podczas pierwszego żądania strony, serwer dostarcza statyczną treść, która jest natychmiast renderowana w przeglądarce. Następnie kod JavaScript na stronie klienta przejmuje kontrolę (hydratyzuje) i dodaje interaktywne funkcje. To połączenie statycznej treści z dynamicznym kodem pozwala na płynne przejście od statycznie generowanej treści do interaktywnej aplikacji.",
+      },
+      {
+        question: "Jakie są zalety server renderingu?",
+        answer:
+          "Użytkownicy mogą natychmiast uzyskać dostęp do treści strony, ponieważ przeglądarki potrafią wyświetlać statyczną treść znacznie szybciej niż treść generowana za pomocą JavaScript. Jednocześnie Nuxt zachowuje interaktywność aplikacji internetowej podczas procesu hydratacji. Optymalizacja dla Wyszukiwarek Internetowych: Uniwersalne renderowanie dostarcza całą treść HTML strony do przeglądarki jako klasycznej aplikacji serwerowej. Roboty internetowe mogą bezpośrednio indeksować treść strony, co sprawia, że uniwersalne renderowanie to doskonały wybór dla wszelkich treści, które chcesz szybko zindeksować.",
+      },
+      {
+        question: "Jakie są wady server renderingu?",
+        answer:
+          "Ograniczenia rozwojowe: Środowiska serwera i przeglądarki nie udostępniają tych samych interfejsów programistycznych (API), co może sprawić trudności w napisaniu kodu, który może działać jednocześnie po obu stronach. Na szczęście Nuxt udostępnia wytyczne i konkretne zmienne, które pomagają określić, gdzie kod jest wykonany. Koszty: Aby renderować strony na bieżąco, serwer musi być uruchomiony. To generuje miesięczne koszty, podobnie jak w przypadku tradycyjnego serwera. Jednak wywołania serwerowe są znacznie zredukowane dzięki uniwersalnemu renderowaniu, gdzie przeglądarka przejmuje nawigację po stronie klienta. Możliwa jest redukcja kosztów poprzez wykorzystanie renderowania po stronie krawędzi (edge-side-rendering).",
+      },
+      {
+        question: "Cykl życia w vue 3?",
+        answer: `setup:
+
+          Nowy etap w Vue 3.
+          Odpowiednik beforeCreate w Vue 2.
+          Wywoływany przed utworzeniem komponentu.
+          Wykorzystywany do inicjalizacji stanu komponentu, refów, itp.
+          onBeforeMount:
+          
+          Odpowiednik beforeMount w Vue 2.
+          Wywoływany przed zamontowaniem komponentu.
+          onMounted:
+          
+          Odpowiednik mounted w Vue 2.
+          Wywoływany po zamontowaniu komponentu.
+          onBeforeUpdate:
+          
+          Odpowiednik beforeUpdate w Vue 2.
+          Wywoływany przed aktualizacją komponentu.
+          onUpdated:
+          
+          Odpowiednik updated w Vue 2.
+          Wywoływany po aktualizacji komponentu.
+          onBeforeUnmount:
+          
+          Odpowiednik beforeDestroy w Vue 2.
+          Wywoływany przed odmontowaniem komponentu.
+          onUnmounted:
+          
+          Odpowiednik destroyed w Vue 2.
+          Wywoływany po odmontowaniu komponentu.`,
       },
     ],
   },

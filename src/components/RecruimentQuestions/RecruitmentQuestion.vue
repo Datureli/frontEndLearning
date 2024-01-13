@@ -1,6 +1,6 @@
 <template>
-  <v-carousel ref="carousel" hide-delimiters v-if="questions">
-    <v-carousel-item
+  <v-carousel  ref="carousel" hide-delimiters v-if="questions">
+    <v-carousel-item 
       v-for="question in questions"
       :key="question.id"
       @shortkey="changeArrowDirection"

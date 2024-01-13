@@ -87,6 +87,61 @@ export default {
         answer:
           "W przypadku tego typu zapytań z pomocą przychodzi wyrażenie DISTINCT. Pozwala ono na odfiltrowanie powielonych wierszy.Klauzulę DISTINCT możesz stosować także w przypadku wielu kolumn. Załóżmy, że chcesz uzyskać listę wszystkich krajów i miejscowości, w których dokonano zakupu. Aby uzyskać taki wynik wystarczy nieznacznie zmodyfikować poprzednie zapytanie:",
       },
+      {
+        question: "co robi IN?",
+        answer:
+          "W przypadku tego typu zapytań z pomocą przychodzi wyrażenie DISTINCT. Pozwala ono na odfiltrowanie powielonych wierszy.Klauzulę DISTINCT możesz stosować także w przypadku wielu kolumn. Załóżmy, że chcesz uzyskać listę wszystkich krajów i miejscowości, w których dokonano zakupu. Aby uzyskać taki wynik wystarczy nieznacznie zmodyfikować poprzednie zapytanie:",
+      },
+      {
+        question: "Jak działa orderBy?",
+        answer:
+          "W przypadku tego typu zapytań z pomocą przychodzi wyrażenie DISTINCT. Pozwala ono na odfiltrowanie powielonych wierszy.Klauzulę DISTINCT możesz stosować także w przypadku wielu kolumn. Załóżmy, że chcesz uzyskać listę wszystkich krajów i miejscowości, w których dokonano zakupu. Aby uzyskać taki wynik wystarczy nieznacznie zmodyfikować poprzednie zapytanie:",
+      },
+      {
+        question: "Funkcje grupujace",
+        answer:
+          "W przypadku tego typu zapytań z pomocą przychodzi wyrażenie DISTINCT. Pozwala ono na odfiltrowanie powielonych wierszy.Klauzulę DISTINCT możesz stosować także w przypadku wielu kolumn. Załóżmy, że chcesz uzyskać listę wszystkich krajów i miejscowości, w których dokonano zakupu. Aby uzyskać taki wynik wystarczy nieznacznie zmodyfikować poprzednie zapytanie:",
+      },
+      {
+        question: "Czym jest avg",
+        answer:
+          "W przypadku tego typu zapytań z pomocą przychodzi wyrażenie DISTINCT. Pozwala ono na odfiltrowanie powielonych wierszy.Klauzulę DISTINCT możesz stosować także w przypadku wielu kolumn. Załóżmy, że chcesz uzyskać listę wszystkich krajów i miejscowości, w których dokonano zakupu. Aby uzyskać taki wynik wystarczy nieznacznie zmodyfikować poprzednie zapytanie:",
+      },
+      {
+        question: "Opisz właściwość concat",
+        answer:
+          "W przypadku tego typu zapytań z pomocą przychodzi wyrażenie DISTINCT. Pozwala ono na odfiltrowanie powielonych wierszy.Klauzulę DISTINCT możesz stosować także w przypadku wielu kolumn. Załóżmy, że chcesz uzyskać listę wszystkich krajów i miejscowości, w których dokonano zakupu. Aby uzyskać taki wynik wystarczy nieznacznie zmodyfikować poprzednie zapytanie:",
+      },
+      {
+        question: "Jak działa groupBy?",
+        answer:
+          "W przypadku tego typu zapytań z pomocą przychodzi wyrażenie DISTINCT. Pozwala ono na odfiltrowanie powielonych wierszy.Klauzulę DISTINCT możesz stosować także w przypadku wielu kolumn. Załóżmy, że chcesz uzyskać listę wszystkich krajów i miejscowości, w których dokonano zakupu. Aby uzyskać taki wynik wystarczy nieznacznie zmodyfikować poprzednie zapytanie:",
+      },
+      {
+        question: "Czym jest polecenie INSERT?",
+        answer:
+          "W języku SQL, polecenie INSERT służy do dodawania nowych rekordów do tabeli w bazie danych. Po słowie kluczowym INSERT musimy dodać INTO. Po Into dodajemy nazwe tabeli a następnie kolumny",
+      },
+      {
+        question: "Do czego służy polecenie Update?",
+        answer:
+          "W języku SQL, polecenie UPDATE służy do aktualizowania istniejących rekordów w tabeli. Oto ogólna składnia polecenia UPDATE:. Po słówku Update używamy słowa set które wskazuje Wskazuje, które kolumny mają zostać zaktualizowane i jakie wartości mają przyjąć.",
+      },
+      {
+        question: "Do czego służy polecenie DELETE?",
+        answer:
+          "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
+      },
+      {
+        question: "Czym są podzapytania?",
+        answer:
+          "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
+      },
+      {
+        question: "Opisz instrukcje warunkowe Case?",
+        answer:
+          "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
+      },
     ],
   },
 

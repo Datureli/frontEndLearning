@@ -19,6 +19,7 @@
     />
   </div>
 </template>
+
 <script>
 import IconComponent from "../Icons/IconComponent";
 import RecruitmentQuestion from "../RecruimentQuestions/RecruitmentQuestion";
