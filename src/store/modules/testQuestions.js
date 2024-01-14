@@ -11,7 +11,7 @@ export default {
       {
         question: "Czym jest testowanie?",
         answer:
-          "testowanie oprogramowania to proces obejmujący czynności, które wykraczają poza samo wykonywanie testów.W skład procesu testowego wchodzą również takie czynności jak: planowanie, analiza, monitorowanie testów i nadzór nad testami, projektowanie i implementacja testów,  raportowanie o postępie i wynikach testów oraz dokonywanie oceny jakości przedmiotu testów. ",
+          "Testowanie to proces oceny oprogramowania w celu zapewnienia, że działa ono zgodnie z oczekiwaniami i spełnia określone wymagania. Jest to nieodzowna część cyklu życia projektu programistycznego, pomagająca zidentyfikować błędy, potwierdzić poprawność działania oraz zapewnić, że oprogramowanie spełnia określone standardy jakości.",
       },
       {
         question: "Czym jest testowanie dynamiczne?",

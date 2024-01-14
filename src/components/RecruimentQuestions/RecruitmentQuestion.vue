@@ -24,7 +24,7 @@
             >
 
             <v-list-item-subtitle
-              class="white--text md-mr-8 md-ml-8 mt-3 text-justify text-h6 text-wrap"
+              class="white--text mr-md-6 ml-md-6 mt-3 text-justify text-h6 text-wrap"
               v-show="disable"
             >
               <p style="height: 250px">

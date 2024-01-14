@@ -5,9 +5,9 @@
       :height="height"
       color="darkGradient"
     >
-      <div v-if="$route.path === '/recruitment-questions'" class="pa-5">
-        <h1 class="text-h2 font-weight-black justify-center mt-15">
-          Choose Category
+      <div v-if="$route.path === '/recruitment-questions'" class="pa-5 mt-15">
+        <h1 class="text-h3 font-weight-black justify-center mt-15">
+          Wybierz kategorię lub rozpocznij test wiedzy
         </h1>
       </div>
       <RecruitmentQuestion />

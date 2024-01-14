@@ -159,7 +159,7 @@ export default {
       },
       {
         question:
-          "Podaj różnicę między one-way-data flow a two-way data binding",
+          "Różnicę między one-way-data flow a two-way data binding",
         answer:
           "W przepływie jednostronnym (one-way data flow), dane przesyłane są z modelu do widoku, ale nie odwrotnie. To znaczy, że po wprowadzeniu zmian w modelu, widok nie aktualizuje się automatycznie. Aby zaktualizować widok, konieczne jest ręczne zaktualizowanie widoku.W przypadku dwukierunkowej wiązania danych (two-way data binding), zmiany dokonywane w modelu są automatycznie propagowane do widoku i na odwrót. Oznacza to, że zmiany w widoku są natychmiastowo odzwierciedlane w modelu, a zmiany w modelu są natychmiastowo odzwierciedlane w widoku.Przykłady użycia przepływu jednostronnego w Vue to np. dyrektywa v-bind, która łączy wartość atrybutu z modelem. Przykład użycia dwukierunkowego wiązania danych to dyrektywa v-model, która umożliwia bezpośrednie powiązanie pola formularza z wartością w modelu.",
       },
