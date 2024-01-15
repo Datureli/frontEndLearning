@@ -20,8 +20,27 @@ export default {
       },
       {
         question: "Czym jest piramida testów?",
-        answer:
-          "Piramida testów to model hierarchii różnych typów testów w ramach procesu testowania oprogramowania. Piramida ma na celu zrównoważenie ilości testów w zależności od ich kosztu, czasu wykonania i stabilności. Na niższym poziomie piramidy znajdują się testy, które są tańsze, szybsze i bardziej stabilne, dlatego powinno ich być wykonanych większa ilość - stanowią one fundament piramidy. Na szczycie piramidy znajdują się testy, które są bardziej czasochłonne, mniej stabilne i wymagają większego zaangażowania ludzkiego, dlatego są one mniej liczne. Ideą piramidy testów jest osiągnięcie odpowiedniego balansu pomiędzy automatyzacją testów na różnych poziomach a czasem potrzebnym do ich przeprowadzenia. Dzięki temu, piramida testów umożliwia efektywne zarządzanie procesem testowania, zapewniając odpowiednią jakość oprogramowania przy optymalnym wykorzystaniu zasobów.",
+        answer: `Piramida testów to model hierarchii różnych typów testów w ramach procesu testowania oprogramowania. Piramida ma na celu zrównoważenie ilości testów w zależności od ich kosztu, czasu wykonania i stabilności. Na niższym poziomie piramidy znajdują się testy, które są tańsze, szybsze i bardziej stabilne, dlatego powinno ich być wykonanych większa ilość - stanowią one fundament piramidy. Na szczycie piramidy znajdują się testy, które są bardziej czasochłonne, mniej stabilne i wymagają większego zaangażowania ludzkiego, dlatego są one mniej liczne. Dzięki temu, piramida testów umożliwia efektywne zarządzanie procesem testowania, zapewniając odpowiednią jakość oprogramowania przy optymalnym wykorzystaniu zasobów. Testy jednostkowe (Unit Tests):
+
+          Charakterystyka: Testy jednostkowe sprawdzają indywidualne jednostki kodu, takie jak funkcje, metody, czy klasy.
+          Częstotliwość: Bardzo często.
+          Cel: Zapewnienie, że pojedyncze elementy kodu działają zgodnie z oczekiwaniami.
+          Testy integracyjne (Integration Tests):
+          
+          Charakterystyka: Testy integracyjne sprawdzają współpracę między różnymi jednostkami kodu, a także integrację zewnętrznych zależności.
+          Częstotliwość: Regularnie, ale mniej często niż testy jednostkowe.
+          Cel: Upewnienie się, że komponenty działają poprawnie współpracując ze sobą.
+          Testy systemowe (System Tests):
+          
+          Charakterystyka: Testy systemowe oceniają kompletną funkcjonalność systemu w kontekście zdefiniowanych wymagań.
+          Częstotliwość: Mniej często niż testy integracyjne.
+          Cel: Zweryfikowanie, czy cały system działa zgodnie z oczekiwaniami.
+          Testy akceptacyjne (Acceptance Tests):
+          
+          Charakterystyka: Testy akceptacyjne sprawdzają, czy oprogramowanie spełnia oczekiwania użytkowników końcowych.
+          Częstotliwość: Najrzadziej, zazwyczaj przed wdrożeniem.
+          Cel: Potwierdzenie gotowości oprogramowania do dostarczenia klientowi.
+          `,
       },
       {
         question: "Jaka jest różnica pomiędzy firmware, a software?",
@@ -29,24 +48,30 @@ export default {
           "Oprogramowanie (software) odnosi się do ogólnego pojęcia programów komputerowych, które są zainstalowane na urządzeniach i wykonują różnorodne zadania. Są to aplikacje, systemy operacyjne, gry, edytory tekstowe i wiele innych. Oprogramowanie może być zainstalowane, aktualizowane i odinstalowywane przez użytkownika w celu zmiany funkcjonalności urządzenia.Natomiast firmware to specyficzny rodzaj oprogramowania wbudowanego w sprzęt, takiego jak urządzenia elektroniczne, komputery, smartfony, konsolki, routery itp. Firmware jest zwykle zapisane w pamięci stałej urządzenia, na przykład w mikrokontrolerze lub pamięci flash. Często jest to niskopoziomowe oprogramowanie kontrolujące podstawowe funkcje i zachowanie sprzętu. Przykładem firmware'u może być BIOS w komputerze lub firmware w systemie Android w smartfonie.",
       },
       {
-        question: 'Jakie metody testowania znałeś i stosowałeś w swojej pracy?',
-        answer: 'Testowanie funkcjonalne: Skupia się na weryfikacji, czy oprogramowanie spełnia określone wymagania funkcjonalne. Testy funkcjonalne sprawdzają, czy aplikacja działa zgodnie z oczekiwaniami, czy wykonuje określone akcje i generuje poprawne wyniki. Testowanie akceptacyjne: Wykonywane przez użytkowników końcowych lub interesariuszy w celu sprawdzenia, czy oprogramowanie spełnia ich wymagania, oczekiwania i standardy. Celem jest potwierdzenie, czy system jest gotowy do wdrożenia.'
+        question: "Jakie metody testowania znałeś i stosowałeś w swojej pracy?",
+        answer:
+          "Testowanie funkcjonalne: Skupia się na weryfikacji, czy oprogramowanie spełnia określone wymagania funkcjonalne. Testy funkcjonalne sprawdzają, czy aplikacja działa zgodnie z oczekiwaniami, czy wykonuje określone akcje i generuje poprawne wyniki. Testowanie akceptacyjne: Wykonywane przez użytkowników końcowych lub interesariuszy w celu sprawdzenia, czy oprogramowanie spełnia ich wymagania, oczekiwania i standardy. Celem jest potwierdzenie, czy system jest gotowy do wdrożenia.",
       },
       {
-        question: 'Jakie są różnice między testowaniem manualnym a automatycznym',
-        answer: 'Testy manualne Wykonywane są przez testerów, którzy ręcznie uruchamiają testy, wykonują kroki testowe i obserwują rezultaty, wymagają interakcji człowieka, który podejmuje decyzje i ocenia wyniki testów. Natomiast testy automatyczne wykorzystują narzędzia i skrypty do automatyzacji procesu testowania.Testy są pisane jako skrypty, które wykonują określone czynności i sprawdzają oczekiwane wyniki. Wykonuje testy szybciej i bardziej powtarzalnie niż testowanie manualne.'
+        question:
+          "Jakie są różnice między testowaniem manualnym a automatycznym",
+        answer:
+          "Testy manualne Wykonywane są przez testerów, którzy ręcznie uruchamiają testy, wykonują kroki testowe i obserwują rezultaty, wymagają interakcji człowieka, który podejmuje decyzje i ocenia wyniki testów. Natomiast testy automatyczne wykorzystują narzędzia i skrypty do automatyzacji procesu testowania.Testy są pisane jako skrypty, które wykonują określone czynności i sprawdzają oczekiwane wyniki. Wykonuje testy szybciej i bardziej powtarzalnie niż testowanie manualne.",
       },
       {
-        question: "Kiedy należy skończyć testować oprogramowanie? Podaj przykłady.",
+        question:
+          "Kiedy należy skończyć testować oprogramowanie? Podaj przykłady.",
         answer:
           "Wystarczające pokrycie wymagań: Testy zostały wykonane w wystarczającym stopniu, aby pokryć co najmniej 95% wszystkich ustalonych wymagań. Wszystkie podstawowe funkcje i scenariusze zostały przetestowane zgodnie z planem.Zagęszczenie defektów: Liczba defektów przypisanych do poszczególnych wymagań jest na akceptowalnie niskim poziomie. Na przykład, nie więcej niż 5 defektów przypisanych do każdego z rozdziału wymagań.Koszt: Testowanie trwa już od pewnego czasu, a dalsze testy generowałyby nieproporcjonalne koszty w porównaniu do oczekiwanych korzyści. Na podstawie analizy kosztów i zysków, decyduje się o zakończeniu testowania.Ramy czasowe: Testowanie jest zaplanowane na określony okres, na przykład 3 miesiące, i nie można go przekroczyć ze względu na ustalone ograniczenia czasowe projektu.",
       },
       {
-        question: 'Czym jest testowanie Nie-funkcjonalne?',
-        answer: 'Oczywiście, testowanie nie funkcjonalne to ważna część procesu testowania oprogramowania. Obejmuje ono sprawdzanie cech i atrybutów oprogramowania, które nie są związane bezpośrednio z jego funkcjonalnością, ale mają wpływ na jakość, wydajność, użyteczność i inne aspekty systemu. '
+        question: "Czym jest testowanie Nie-funkcjonalne?",
+        answer:
+          "Oczywiście, testowanie nie funkcjonalne to ważna część procesu testowania oprogramowania. Obejmuje ono sprawdzanie cech i atrybutów oprogramowania, które nie są związane bezpośrednio z jego funkcjonalnością, ale mają wpływ na jakość, wydajność, użyteczność i inne aspekty systemu. ",
       },
       {
-        question: "Co zrobić gdy nie jesteśmy pewni czy mamy do czynienia z błędem?",
+        question:
+          "Co zrobić gdy nie jesteśmy pewni czy mamy do czynienia z błędem?",
         answer:
           "Zawsze warto poszukać jakiś twardych dowodów na które możemy się powołać przy zgłaszaniu błędu. Można zasięgnąc wiedzy u programistów, project/product managera, product ownera i innych. Często bywa tak, że zastana sytuacja jest nie do zaakceptowania, np. oprogramowanie/strona www otwiera się minutę bądź dłużej ale nie znajdziemy w wymaganiach informacji o czasie potrzebnym na otwarcie. Pamiętajcie wtedy, że zawsze można zgłosić defekt powołując się na użytkownika ze zdrowym rozsądkiem (tzw. 'reasonable end user') który najnormalniej nie będzie czekał.",
       },
@@ -138,7 +163,8 @@ export default {
           "są dwa sposoby na integrację JESTa z Typescriptem, jeden sprawdza typy, drugi korzysta z wygenerowanych plików js. My oczywiście chcemy sprawdzać typy, więc użyjemy ts-jest!",
       },
       {
-        question: "Jakie są fazy testowania związane z cyklem życia testowania oprogramowania?",
+        question:
+          "Jakie są fazy testowania związane z cyklem życia testowania oprogramowania?",
         answer:
           "cykl życia oprogramowania: Okres czasu rozpoczynający się kiedy pojawił się pomysł na oprogramowanie i kończący się gdy oprogramowanie nie jest już dostępne do użytku. Zazwyczaj cykl życia oprogramowania zawiera fazę koncepcji, fazę wymagań, fazę projektowania, fazę implementacji, fazę testów, fazę instalacji i zastępowania, fazę wykorzystania produkcyjnego i pielęgnowania oraz czasami, fazę wycofania. Uwaga: te fazy mogą na siebie zachodzić lub mogą być wykonywane iteracyjnie.",
       },
@@ -201,12 +227,12 @@ export default {
         question: "Scenariusze w których testy automatyzujące są konieczne",
         answer:
           "Porównanie dwóch obrazów piksel po pikselu.Porównanie dwóch arkuszy kalkulacyjnych zawierających tysiące wierszy i kolumn.Testowanie aplikacji pod obciążeniem 100 000 użytkowników.Testy wydajności.Testowanie aplikacji w różnych przeglądarkach i równolegle w różnych systemach operacyjnych.",
-      },  
+      },
       {
         question: "Czym są testy regresji?",
         answer:
           "Testy regresji to rodzaj testów oprogramowania, które mają na celu sprawdzenie, czy wprowadzone zmiany w systemie nie powodują powstania nowych błędów ani nie naruszają istniejącej funkcjonalności. Są one wykonywane po wprowadzeniu modyfikacji lub poprawek w oprogramowaniu, takich jak nowe funkcje, poprawki defektów, zmiany w konfiguracji lub aktualizacje. Głównym celem testów regresji jest minimalizacja ryzyka wprowadzenia błędów lub defektów w systemie podczas modyfikacji. Choć zmiana może dotyczyć tylko określonych części kodu, istnieje możliwość, że wpłynie ona na inne obszary lub istniejące funkcje, które wcześniej działały poprawnie. Testy regresji pomagają wychwycić takie problemy, zapewniając, że istniejące funkcje są nadal sprawne po wprowadzeniu zmian.",
-      },  
+      },
       {
         question: "czym jest testowanie automatyzujące",
         answer:
@@ -278,12 +304,12 @@ export default {
         question: "Statusy Odpowiedzi HTTP",
         answer:
           "Statusy odpowiedzi HTTP to nic innego jak informacja wysłana nam przez serwer HTTP do aplikacji klienta. Kody odpowiedzi protokołu HTTP dzielimy na kilka kategorii. Kody informacyjne 1XX, kody powodzenia 2XX, kody przekierowań 3XX, kody błędu aplikacji klienta 4XX, oraz kody błędu serwera HTTP – 5XX.401	Unauthorized	Nieautoryzowany dostęp – żądanie zasobu, który wymaga uwierzytelniania.",
-      }, 
+      },
       {
         question: "Czym jest model V",
         answer:
           "Model V precyzyjnie pokazuje zależności między kolejnymi etapami projektu. Każdy etap projektowania kończy się stworzeniem danych wejściowych dla następnej fazy oraz do korespondującej z nim fazy weryfikacji.",
-      }, 
+      },
       {
         question: "Wymień typy testów wydajnościowych",
         answer:
@@ -293,26 +319,38 @@ export default {
         question: "Czym są testy dymne?",
         answer:
           "Testy dymne (z ang. smoke tests) to weryfikacja wszystkich kluczowych ścieżek, które potwierdzają, że najważniejsze funkcjonalności aplikacji czy oprogramowania działają prawidłowo. Testy te przebiegają szybko, dając korzyści w postaci niemal natychmiastowej informacji zwrotnej. Można wykonać je ręcznie lub z pomocą zautomatyzowanego narzędzia.",
-      },  
+      },
       {
         question: "Co oznacza skrót tdd?",
         answer:
           "TDD – Test-Driven Development jest sposobem czy podejściem do tworzenia oprogramowania w którym główną ideą jest stworzenie w pierwszej kolejności testów dla zaplanowanych funkcjonalności a następnie stworzenie kodu i implementacja tych funkcjonalności. ",
-      },  
+      },
       {
         question: "Co oznacza skrót bdd?",
         answer:
           "BDD czyli Behavior-Driven Development to podejście będące rozwinięciem TDD. Są to testy tworzone z wykorzystaniem składni danego języka, które wyrażają jakieś zachowanie oraz oczekiwane określone rezultaty. Takie testy tworzymy w formie scenariuszy i korzystają ze słów kluczowych w postaci:  Given – warunek początkowy  When – opis tego co będzie wykonywane  Then – oczekiwany rezultat  Zaletą tworzenia tego typu testów jest to, że są one zrozumiałe, również dla osób nietechnicznych. Tak sformułowane przypadki mogą stanowić dobrą podstawę zachowania aplikacji przy tworzeniu dokumentacji.",
-      },  
+      },
       {
         question: "Czy możliwe jest wykonanie kompletnego testu systemu?",
         answer:
           "Niestety nie. Testowanie kompletne, zwane też gruntownym, nie jest możliwe do wykonania. Ilość kombinacji dla każdej zmiennej jest praktycznie nieograniczona. Dodatkową przeszkodą do wykonania takiego zadania jest fakt, iż oprogramowanie zwykle działa na wielu urządzeniach w różnych konfiguracjach. To tym bardziej utrudnia kompleksowość działań.",
-      },  
+      },
       {
         question: "Jakie są korzyści z testowania automatycznego?",
         answer:
           "Korzyści z testowania automatycznego to płynna obsługa powtarzających się przypadków testowych, pomoc w testowaniu dużej matrycy testowej, możliwość wykonywania testów równoległych, zwiększona dokładność, poprzez minimalizację błędów generowane przez człowieka, a także oszczędność czasu i pieniędzy.",
+      },
+      {
+        question: "Czym są przypadki testowe?",
+        answer:
+          "Przypadki testowe to dokumentacja opisująca szczegółowo kroki do wykonania w celu przetestowania określonej funkcjonalności, elementu lub przypadku użycia systemu. Każdy przypadek testowy jest zaplanowany w taki sposób, aby pokryć różne scenariusze i warunki, a jego celem jest zweryfikowanie, czy dany element spełnia określone wymagania.",
+      },
+      {
+        question: "Czym są scenariusze testowe?",
+        answer: `
+          Scenariusz testowy to opis sekwencji kroków, działań lub zdarzeń, które mają być wykonane podczas testowania określonego przypadku użycia lub funkcjonalności systemu. W przeciwieństwie do pojedynczego przypadku testowego, który jest bardziej skoncentrowany na konkretnych krokach testowych i oczekiwanych rezultatach, scenariusz testowy obejmuje szerszy zakres i może obejmować kilka przypadków testowych.
+          
+          Ogólnie rzecz biorąc, scenariusz testowy opisuje interakcje użytkownika z systemem lub zachowanie systemu w konkretnej sytuacji. Jest to bardziej ogólna i elastyczna forma dokumentacji testowej, która może obejmować różne przypadki testowe, warunki i ścieżki.`,
       },
       {
         question: "Czym jest mockowanie?",
@@ -320,31 +358,97 @@ export default {
           "Mockowanie to technika izolowania obiektów testowych poprzez zastępowanie zależności obiektami, które można kontrolować i sprawdzać.",
       },
       {
+        question: "Czym jest planowanie testów?",
+        answer: `
+          Planowanie testów to kluczowy etap w procesie testowania oprogramowania, który pomaga ustalić zakres, cele, strategie i zasoby niezbędne do skutecznego przeprowadzenia testów. Poniżej znajdziesz kluczowe elementy planowania testów`,
+        list: `Zakres testów:
+
+          Określenie funkcji i modułów, które będą testowane.
+          Wybór poziomu testów (np. testy jednostkowe, integracyjne, systemowe, akceptacyjne).
+          Cele testów:
+          
+          Określenie celów testów, czyli oczekiwanych rezultatów i stanu systemu po zakończeniu testów.
+          Strategia testowania:
+          
+          Wybór strategii testowania, czyli ogólnego podejścia do przeprowadzania testów (np. testowanie czarnej skrzynki, białej skrzynki, testy obciążeniowe).
+          Określenie, czy testy będą przeprowadzane manualnie, automatycznie czy w połączeniu obu metod.
+          Zasoby:
+          
+          Przypisanie zasobów ludzkich, sprzętowych i programowych do wykonania testów.
+          Określenie odpowiedzialności członków zespołu testowego.
+          Harmonogram:
+          
+          Opracowanie planu testów, obejmującego daty rozpoczęcia i zakończenia poszczególnych etapów testów.
+          Zidentyfikowanie kluczowych terminów i kamieni milowych.
+          Środowisko testowe:
+          
+          Zaplanowanie środowiska testowego, w tym infrastruktury sprzętowej, oprogramowania, baz danych, konfiguracji.
+          Przypadki testowe:
+          
+          Tworzenie konkretnych przypadków testowych w oparciu o cele testów i zakres testów.
+          Dane testowe:
+          
+          Przygotowanie danych testowych potrzebnych do przeprowadzenia testów.
+          Raportowanie:
+          
+          Określenie, jakie raporty będą generowane podczas testów i kto będzie za nie odpowiedzialny.
+          Zarządzanie ryzykiem:
+          
+          Identyfikacja potencjalnych ryzyk związanych z testami i opracowanie strategii ich zarządzania.
+          Akceptacja interesariuszy:
+          
+          Zatwierdzenie planu testów przez interesariuszy projektu.
+          Metryki testów:
+          
+          Określenie metryk, które będą używane do oceny postępu i skuteczności testów.`,
+      },
+      {
         question: "Testy białoskrzynkowe a czarnoskrzynkowe",
         answer:
-          "Testy czarnoskrzynkowe (black box) bazują na specyfikacji, bez wnikania w kod programu. Dotyczą one “widocznego” zachowania aplikacji, a nie implementacji, do której wglądu nie ma użytkownik końcowy.Testy białoskrzynkowe (white box) wymagają analizy struktury aplikacji lub systemu. Dzięki takiemu rodzajowi testów określić stopień, w jakim dany element został przetestowany. Testy te mają na celu jak najlepsze pokrycie różnych ścieżek programu. ",
+          "Testy czarnoskrzynkowe bazują na specyfikacji, bez wnikania w kod programu. Dotyczą one widocznego zachowania aplikacji, a nie implementacji, do której wglądu nie ma użytkownik końcowy.Testy białoskrzynkowe wymagają analizy struktury aplikacji lub systemu. Dzięki takiemu rodzajowi testów określić stopień, w jakim dany element został przetestowany. Testy te mają na celu jak najlepsze pokrycie różnych ścieżek programu.",
       },
       {
         question: "Testy funkcjonalne a niefunkcjonalne",
         answer:
-          "Funkcjonalności to nic innego jak czynności wykonywane przez aplikacje. Testy funkcjonalne analizują zewnętrzne zachowanie oprogramowania, traktując je jako czarną skrzynkę.Testy niefunkcjonalne skupiają się na charakterystyce działania aplikacji i obejmują: testy wydajności, użyteczności, niezawodności, bezpieczeństwa oraz testy możliwości pracy na różnych platformach.  ",
+          "Funkcjonalności to nic innego jak czynności wykonywane przez aplikacje. Testy funkcjonalne analizują zewnętrzne zachowanie oprogramowania, traktując je jako czarną skrzynkę.Testy niefunkcjonalne skupiają się na charakterystyce działania aplikacji i obejmują: testy wydajności, użyteczności, niezawodności, bezpieczeństwa oraz testy możliwości pracy na różnych platformach.",
       },
       {
-        question: "Wyjaśnij, na czym polega cykl życia błędu",
+        question: "Wyjaśnij na czym polega cykl życia błędu",
         answer:
-          "Cykl życia błędu zaczyna się od etapu zgłoszenia przez testera. Wówczas otrzymuje on status „nowy”. W kolejnym kroku jest on przydzielany do dewelopera, który zajmie się jego naprawą. Na czas wprowadzania niezbędnych zmian, błąd otrzymuje status „w realizacji”. Po zakończeniu prac niezbędna jest ponowna weryfikacja błędu – wówczas jego status zmienia się na „do weryfikacji”. Dopiero po weryfikacji i stwierdzeniu, że defekt został naprawiony, cykl dobiega końca, a zgłoszenie otrzymuje status „zamknięte”. Trzeba jednak pamiętać, że cykl życia błędu może się różnić w zależności od organizacji czy charakteru projektu. Zdarza się, że niektóre z etapów są powtarzane nawet kilka razy, zanim osiągną kolejny",
+          "Cykl życia błędu zaczyna się od etapu zgłoszenia przez testera. Wówczas otrzymuje on status nowy. W kolejnym kroku jest on przydzielany do dewelopera, który zajmie się jego naprawą. Na czas wprowadzania niezbędnych zmian, błąd otrzymuje status „w realizacji”. Po zakończeniu prac niezbędna jest ponowna weryfikacja błędu, wówczas jego status zmienia się na „do weryfikacji”. Dopiero po weryfikacji i stwierdzeniu, że defekt został naprawiony, cykl dobiega końca, a zgłoszenie otrzymuje status „zamknięte”. Trzeba jednak pamiętać, że cykl życia błędu może się różnić w zależności od organizacji czy charakteru projektu. Zdarza się, że niektóre z etapów są powtarzane nawet kilka razy, zanim osiągną kolejny",
       },
       {
         question: "Czym jest page object model?",
+        answer: `
+          Page Object Model (POM) to wzorzec projektowania stosowany w testowaniu oprogramowania, zwłaszcza w testowaniu automatycznym interfejsów użytkownika. W skrócie, POM pomaga zorganizować i utrzymać kod testów, szczególnie gdy mamy do czynienia z aplikacjami webowymi.Podstawowe elementy Page Object Model to:
+
+          Page Classes (Klasy Stron): Każda strona w aplikacji ma swoją dedykowaną klasę, która zawiera elementy interfejsu użytkownika (np. pola tekstowe, przyciski) oraz metody do interakcji z tymi elementami.
+          
+          Test Classes (Klasy Testów): Klasy, które zawierają testy. Testy używają metod i elementów z klas Page Object.
+          
+          Test Data (Dane Testowe): Wartości, które są używane w testach, zazwyczaj przechowywane w osobnej warstwie, aby było łatwo je zmieniać w razie potrzeby.`,
+      },
+      {
+        question: `Jakie są korzyści z zastosowania metodyki testów zwanej "Behavior-Driven Development (BDD)`,
         answer:
-          "Cykl życia błędu zaczyna się od etapu zgłoszenia przez testera. Wówczas otrzymuje on status „nowy”. W kolejnym kroku jest on przydzielany do dewelopera, który zajmie się jego naprawą. Na czas wprowadzania niezbędnych zmian, błąd otrzymuje status „w realizacji”. Po zakończeniu prac niezbędna jest ponowna weryfikacja błędu – wówczas jego status zmienia się na „do weryfikacji”. Dopiero po weryfikacji i stwierdzeniu, że defekt został naprawiony, cykl dobiega końca, a zgłoszenie otrzymuje status „zamknięte”. Trzeba jednak pamiętać, że cykl życia błędu może się różnić w zależności od organizacji czy charakteru projektu. Zdarza się, że niektóre z etapów są powtarzane nawet kilka razy, zanim osiągną kolejny",
+          "BDD integruje praktyki programowania, testowania i analizy wymagań, poprawiając komunikację między zespołem programistycznym a zespołem testowym oraz zespołem biznesowym.",
+      },
+      {
+        question: `Jakie są trzy rodzaje testów wydajności?`,
+        answer:
+          "Rodzaje testów wydajności to testy obciążeniowe, testy wydajnościowe i testy skalowalności.",
+      },
+      {
+        question: `Czym różni się testowanie jednostkowe od testowania integracyjnego?`,
+        answer:
+          "Testowanie jednostkowe skupia się na testowaniu pojedynczych komponentów, podczas gdy testowanie integracyjne sprawdza, czy te komponenty współpracują ze sobą poprawnie jako całość.",
       },
     ],
   },
 
   mutations: {
     randomTestQuestion(state) {
-      state.testQuestions.sort(() => Math.floor( Math.random() - 0.5));
+      state.testQuestions.sort(() => Math.floor(Math.random() - 0.5));
     },
   },
   actions: {
