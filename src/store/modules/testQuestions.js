@@ -180,13 +180,35 @@ export default {
       },
       {
         question: "Różnice pomiędzy weryfikacją a walidacją?",
-        answer:
-          "Aby przetestować większość komponentów Vue, należy je zamontować na DOM aby w pełni potwierdzić, że działają.W rezultacie stworzono ramy testowania komponentów, aby dać użytkownikom możliwość wykonywania tego w sposób niezawodny, zapewniając jednocześnie udogodnienia specyficzne dla Vue, takie jak integracja z Vuex, routerem Vue i innymi wtyczkami Vue.",
+        answer: `Weryfikacja: Proces oceny produktu pod kątem zgodności z określonymi specyfikacjami i wymaganiami. To sprawdzenie, czy produkt jest zbudowany zgodnie z założeniami projektowymi.
+        Walidacja: Proces oceny produktu pod kątem spełnienia rzeczywistych potrzeb użytkownika i czy produkt spełnia zamierzone cele biznesowe. To sprawdzenie, czy zbudowany produkt jest tym, czego rzeczywiście potrzebuje klient.`,
       },
       {
         question: "Czym jest headless testing?",
         answer:
           "Headless testing to rodzaj testowania oprogramowania, w którym testy są wykonywane bez interfejsu graficznego (GUI). W tradycyjnym podejściu testowania, aplikacja jest uruchamiana w pełnym środowisku, a testy interakcji z nią są wykonywane poprzez manipulację GUI. Natomiast w headless testing, aplikacja jest uruchamiana w tle, bez wyświetlania interfejsu graficznego, a testy są wykonywane bezpośrednio na poziomie backendu lub za pomocą interfejsów programistycznych (API).",
+      },
+      {
+        question: "Od czego zależy response time w api?",
+        answer: `Obciążenie serwera: Im większe obciążenie serwera, tym dłuższy czas odpowiedzi. Wysokie obciążenie może prowadzić do opóźnień w obsłudze żądań.
+
+        Wydajność infrastruktury: Jakość i wydajność sprzętu, na którym uruchomiony jest serwer API, mogą wpływać na czas odpowiedzi. Szybkie dyski SSD, dużo pamięci RAM i moc obliczeniowa mają wpływ na wydajność.
+
+        Optymalizacja kodu: Efektywny, zoptymalizowany kod serwera API może skrócić czas odpowiedzi. Optymalizacje obejmują zoptymalizowane zapytania do bazy danych, minimalizację obliczeń i odpowiednie cache'owanie.
+
+        Szerokość pasma: Dla API dostępnego publicznie, szerokość pasma internetowego jest kluczowym czynnikiem. Ograniczenia przepustowości mogą wpływać na czas odpowiedzi.
+
+        Lokalizacja geograficzna: Odległość między klientem a serwerem API może wpływać na czas odpowiedzi. Serwery CDN (Content Delivery Network) mogą pomóc w minimalizacji tego wpływu.
+
+        Optymalizacja zapytań: Efektywne wykorzystanie zapytań, minimalizacja przesyłanych danych i stosowanie odpowiednich indeksów w bazie danych mogą przyspieszyć odpowiedzi API.
+
+        Cache'owanie: Używanie mechanizmów cache'owania, takich jak CDN lub lokalne pamięci podręczne, może skrócić czas odpowiedzi poprzez dostarczenie wcześniej zapisanych wyników.
+
+        Protokół komunikacyjny: Wybór protokołu komunikacyjnego, takiego jak HTTP/1.1, HTTP/2, czy HTTP/3, może wpływać na wydajność i czas odpowiedzi.
+
+        Zabezpieczenia: Skomplikowane mechanizmy bezpieczeństwa, takie jak autentykacja i autoryzacja, mogą wprowadzać dodatkowe opóźnienia w czasie odpowiedzi.
+
+        Przetwarzanie równoległe: Wykorzystanie przetwarzania równoległego, asynchronicznego przetwarzania i mikrousług może wpływać na efektywność obsługi wielu żądań jednocześnie.`,
       },
       {
         question: "Czym są testy integracji?",
@@ -442,6 +464,64 @@ export default {
         question: `Czym różni się testowanie jednostkowe od testowania integracyjnego?`,
         answer:
           "Testowanie jednostkowe skupia się na testowaniu pojedynczych komponentów, podczas gdy testowanie integracyjne sprawdza, czy te komponenty współpracują ze sobą poprawnie jako całość.",
+      },
+      {
+        question: `Jak przygotować środowisko testowe?`,
+        answer: `Przygotowanie środowiska do testów może różnić się w zależności od rodzaju testów (manualnych czy automatycznych) oraz technologii, którą używasz. Poniżej znajdziesz ogólne kroki, które mogą pomóc w przygotowaniu środowiska do testowania: 1. Zainstaluj Niezbędne Narzędzia:
+        Dla testów automatycznych: Zainstaluj frameworki do testowania (np. Jest, Cypress, Selenium, itp.) oraz odpowiednie biblioteki i narzędzia zależne od języka programowania (np. npm dla JavaScript, pip dla Python).
+        2. Skonfiguruj Środowisko Deweloperskie:
+        Utwórz lokalne lub zdalne środowisko deweloperskie, które będzie reprezentować produkcję.
+        Skonfiguruj bazę danych do testów, uwzględniając migracje i dane testowe.
+        3. Instalacja i Konfiguracja Przeglądarek:
+        Jeśli testujesz interfejs użytkownika, upewnij się, że masz zainstalowane przeglądarki, których zamierzasz używać (np. Chrome, Firefox).
+        Dla testów automatycznych interfejsu użytkownika, zainstaluj i skonfiguruj odpowiednie sterowniki (np. chromedriver).
+        4. Zarządzanie Zależnościami:
+        Skonfiguruj managera zależności, jeśli korzystasz z jakichś narzędzi zewnętrznych.
+        5. Skonfiguruj Narzędzia Do Continuous Integration (CI):
+        Utwórz skrypty do automatycznej kompilacji, testowania i wdrażania kodu.
+        Zintegruj swoje repozytorium z platformą CI (np. Jenkins, Travis CI, GitLab CI).
+        6. Testowanie API:
+        Skonfiguruj środowisko do testowania interfejsów API, uwzględniając autoryzację, tokeny dostępu itp.
+        7. Zarządzanie Testowymi Danymi:
+        Przygotuj dane testowe, które będą używane w trakcie testów.
+        Skonfiguruj środowisko tak, aby można było łatwo przywrócić bazę danych do stanu początkowego.
+        8. Testy Bezpieczeństwa (opcjonalnie):
+        Przeprowadź testy bezpieczeństwa, jeśli są one istotne dla Twojej aplikacji.
+        9. Dokumentacja:
+        Stwórz dokumentację dotyczącą konfiguracji środowiska testowego i procesu testowania.
+        10. Monitorowanie i Raportowanie:
+        Skonfiguruj mechanizmy monitorowania testów i raportowania wyników.
+        Pamiętaj, że powyższe kroki są ogólne, a konieczne kroki mogą się różnić w zależności od konkretnej technologii i narzędzi używanych w projekcie.`,
+      },
+      {
+        question: `Skąd wiemy, że aktualne zachowanie oprogramowania jest poprawne czy jest to błąd?`,
+        answer:
+          "Takie pytanie pomaga określić, czy kandydat odwołuje się do jakiejkolwiek dokumentacji. A co jeśli nie mamy oficjalnej dokumentacji? Być może ze względu na swoje doświadczenie i znajomość oprogramowania to tester określa co jest dobre a co nie Często w projektach agile dokumentacja jest na tyle uboga, że np. obecność na codziennych stand-up`ach to główne źródło wiedzy o aktualnych zmianach w oprogramowaniu.",
+      },
+      {
+        question: `Na co nalezy zwrócić uwagę przy zgłaszaniu błędu?`,
+        answer:
+          " jest to tytuł, kroki do zreprodukowania, aktualny rezultat, wersja oprogramowania itd. Warto tutaj wskazać na konfigurację środowiska na jakim występuje błąd, czy próbowaliśmy go zreprodukować w innym środowisku, byćmoże na innej wersji językowej oraz na dokładną wersję oprogramowania z możliwym zrzutem ekranu albo filmem.",
+      },
+      {
+        question: `Na co nalezy zwrócić uwagę przy zgłaszaniu błędu?`,
+        answer:
+          " jest to tytuł, kroki do zreprodukowania, aktualny rezultat, wersja oprogramowania itd. Warto tutaj wskazać na konfigurację środowiska na jakim występuje błąd, czy próbowaliśmy go zreprodukować w innym środowisku, byćmoże na innej wersji językowej oraz na dokładną wersję oprogramowania z możliwym zrzutem ekranu albo filmem.",
+      },
+      {
+        question: `jak postępować z informacją, że u mnie działa??`,
+        answer:
+          "Co zrobimy w takiej sytuacji? Z pewnościa nie pozostawimy bez odpowiedzi:) Dobrze jest upewnić się, czy programista reprodukuje defekt na tym samym środowisku i postępuje dokładnie krok po kroku z naszymi instrukcjami. Byćmoże jest jakas nieznaczna różnica która ma wpływ na ostateczny rezultat. Zdarza się też, że programiści nie używają wersji instalacyjnej oprogramowania, ale budują je z kodu. Niezależnie od tego, o ile to oczywiście możliwe, dobrze jest testować na środowisku które jest jaknajbardziej zbliżone do tego w którym pracuje klient.",
+      },
+      {
+        question: `Jakie wyróżniamy typy testów, czym się różnią?`,
+        answer:
+          "Często ludzie mylą rodzaje testów z poziomami testów i wymieniają tutaj testy modułowe, integracyjne, systemowe i akceptacyjne. W tym przypadku należy wymienić testy funkcjonalne (co oprogramowanie robi), niefunkcjonalne (jak oprogramowanie to robi), strukturalne (jak robi to co robi) i te związane ze zmianą (retesty + regresja).",
+      },
+      {
+        question: `Od czego zależy ryzyko projektowe i co się na nie składa?`,
+        answer:
+          "Często ludzie mylą rodzaje testów z poziomami testów i wymieniają tutaj testy modułowe, integracyjne, systemowe i akceptacyjne. W tym przypadku należy wymienić testy funkcjonalne (co oprogramowanie robi), niefunkcjonalne (jak oprogramowanie to robi), strukturalne (jak robi to co robi) i te związane ze zmianą (retesty + regresja).",
       },
     ],
   },
