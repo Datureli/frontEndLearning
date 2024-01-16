@@ -142,6 +142,53 @@ export default {
         answer:
           "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
       },
+      {
+        question: "złączenie zewnatrzne?",
+        answer:
+          "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
+      },
+      {
+        question: "różnica pomiedzy złączeniem zewnetrznym i wewnatrznym?",
+        answer:
+          "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
+      },
+      {
+        question: "Jak tworzyć aliasy w mysql?",
+        answer:
+          `Aby utworzyć alias w MySQL, możesz użyć klauzuli AS w zapytaniu SELECT. Oto przykład, jak to zrobić: SELECT kolumna1 AS alias1, kolumna2 AS alias2
+          FROM tabela;`,
+      },
+      {
+        question: "Czym jest self join??",
+        answer:
+          `Aby utworzyć alias w MySQL, możesz użyć klauzuli AS w zapytaniu SELECT. Oto przykład, jak to zrobić: SELECT kolumna1 AS alias1, kolumna2 AS alias2
+          FROM tabela;`,
+      },
+      {
+        question: "Jak połączyć tablice które nie są bezpośrednio połączone?",
+        answer:
+          "Musimy użyć tabeli łącznikowej. Jeżeli występuje sytuacja wiele do wielu  to ,żeby wyświetlić dane przy złączeniu powinniśmy wykorzystać tablice łącznikową",
+      },
+      {
+        question: "Czym jest left,right i full join?",
+        answer:
+          `RIGHT JOIN (lub RIGHT OUTER JOIN):
+          Zwraca wszystkie rekordy z drugiej (prawej) tabeli (tabeli po prawej stronie operatora RIGHT JOIN), a także wspólne rekordy z pierwszej (lewej) tabeli.
+          W przypadku, gdy nie ma dopasowań, wartości z lewej tabeli będą miały wartości NULL w kolumnach związanych z prawą tabelą.FULL JOIN (lub FULL OUTER JOIN):
+          Zwraca wszystkie rekordy z obu tabel, z dopasowanymi rekordami, jeśli takie istnieją.
+          Jeśli nie ma dopasowań, wartości z brakujących stron będą miały wartości NULL.`,
+      },
+      {
+        question: "Czym jest natural join?",
+        answer:
+          "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
+      },
+      {
+        question: "Czym się różni join od inner join??",
+        answer:
+          `
+          W kontekście języka zapytań SQL różnica między JOIN a INNER JOIN polega na tym, że INNER JOIN to forma bardziej precyzyjna. W praktyce są one często używane zamiennie, ponieważ większość baz danych traktuje obie frazy jako synonimy.Podstawowa różnica wynika z tego, że INNER JOIN jest bardziej explicite oznaczony, co pomaga zrozumieć, że chodzi o konkretne łączenie oparte na pasujących wartościach. Zapis JOIN sam w sobie może obejmować różne typy łączeń, takie jak INNER JOIN, LEFT JOIN, RIGHT JOIN, czy FULL JOIN.`,
+      },
     ],
   },
 
