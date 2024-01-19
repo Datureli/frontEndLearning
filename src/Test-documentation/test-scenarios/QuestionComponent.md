@@ -1,7 +1,7 @@
 ---
 id: #QUE001
 title: Sprawdź poprawność wyświetlania pytan rekrutacyjnych
-description: Walidacja to proces sprawdzania poprawności danych lub informacji w stosunku do określonych reguł lub kryteriów. W przypadku stron internetowycch najczęstszym zastosowaniem są formularze. Zarówno sam formularz całościowo jak i poszczególne pola tego formularza mogą podlegać walidacji.
+description: Komponent o pytania rekrutacyjne
 test Scenario: Poprawne przeglądanie pytań rekrutacyjnych
 Test Steps:
   - Sprawdź czy wyświetlają się pytania rekrutacyjne
@@ -14,12 +14,16 @@ Prerequisites: Pytania rekrutacyjne wyświetlają się
 Expected/Intended Results: Pytania wyświetlają się i można się między nimi przełączać
 ---
 
-## Sprawdź czy wyświetlają się pytania rekrutacyjne:
+## Przypadek: 1a: Sprawdź czy wyświetlają się pytania rekrutacyjne:
+Warunek wstępny: strona z url /recruitment-question oraz przycisk kategoria pytań muszą się wyświetlać
 
+Kroki testowe:
 - Wchodzimy na zakładkę pytania rekrutacyjne
 - Kliknij przycisk "kategoria pytań" na środku paska nawigacyjnego
 - Wybierz jedną z kategorii którą chcesz przetestować
 - Sprawdź czy po kliknięciu poprawnie wyświetliło się pytanie,odpowiedź oraz strzałki nawigacyjne
+
+Oczekiwany rezultat: Pytania rekrutacyjne wyświetlają się poprawnie
 
 ## Sprawdź Poprawność Wyświetlania Pytań rekrutacyjnych:
 
@@ -40,8 +44,7 @@ Expected/Intended Results: Pytania wyświetlają się i można się między nimi
 - Kliknij przycisk "kategoria pytań" na środku paska nawigacyjnego
 - Sprawdź czy poprawnie wyświetla się lista z wszystkimi kategoriami pytań
 - Sprawdź czy po kliknięciu poprawnie wyświetliło się pytanie,odpowiedź oraz strzałki nawigacyjne. Powtórz dla każdej kategorii
-- Sprawdź czy po wybraniu kategorii i ponownym kliknięciu przycisku kategoria pytań podświetla aktualnie wyświetlaną kategorię za pomocą właściwości background-color: green;
--
+- Sprawdź czy po wybraniu kategorii i ponownym kliknięciu przycisku kategoria pytań podświetla aktualnie wyświetlaną kategorię za pomocą właściwości background-color: green
 
 ## Spróbuj użyć strzałek nawigacyjnych (left/right), aby przejść między kolejnymi pytaniami.
 

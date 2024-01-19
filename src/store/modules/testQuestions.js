@@ -14,6 +14,15 @@ export default {
           "Testowanie to proces oceny oprogramowania w celu zapewnienia, że działa ono zgodnie z oczekiwaniami i spełnia określone wymagania. Jest to nieodzowna część cyklu życia projektu programistycznego, pomagająca zidentyfikować błędy, potwierdzić poprawność działania oraz zapewnić, że oprogramowanie spełnia określone standardy jakości.",
       },
       {
+        question: "pozytywne i negatywne przypadki testowe?",
+        answer:
+          `Pozytywne przypadki testowe sprawdzają, czy oprogramowanie działa zgodnie z wymaganiami i jak reaguje na pozytywne dane wejściowe. Celem tych testów jest upewnienie się, że oprogramowanie działa poprawnie w normalnych warunkach.
+
+          Negatywne przypadki testowe sprawdzają, jak oprogramowanie reaguje na negatywne dane wejściowe lub nieoczekiwane sytuacje. Celem tych testów jest upewnienie się, że oprogramowanie jest odpornie na błędy i że może poprawnie radzić sobie z trudnymi sytuacjami.
+          
+          Ważne jest, aby uwzględniać zarówno pozytywne, jak i negatywne przypadki testowe w procesie testowania oprogramowania, aby upewnić się, że oprogramowanie działa poprawnie w każdych warunkach.`,
+      },
+      {
         question: "Czym jest testowanie dynamiczne?",
         answer:
           "Testowanie dynamiczne polega na konieczności uruchomienia testowanego modułu lub systemu. Jest to proces, który pozwala na sprawdzenie zachowania i funkcjonalności systemu w czasie rzeczywistym. Przez testowanie dynamiczne można zidentyfikować potencjalne błędy i problemy, które mogą wystąpić podczas działania systemu. Jest to ważna część procesu testowania oprogramowania, umożliwiająca weryfikację, czy system działa zgodnie z oczekiwaniami.",
@@ -89,6 +98,29 @@ export default {
         question: "Czym jest testowanie statyczne?",
         answer:
           "Można również wykonywać testy bez uruchamiania testowanego obiektu – takie testowanie nazywa się testowaniem statycznym, a zatem testowanie obejmuje również przegląd produktów pracy takich jak: wymagania, historyjki użytkownika i kod źródłowy.   ",
+      },
+      {
+        question: "Wymień strategie testowania?",
+        answer:
+          `Black box testing – Testuje funkcjonalność oprogramowania bez zaglądania w wewnętrzną strukturę kodu.
+
+          White box testing – Testuje wewnętrzną strukturę kodu i logikę oprogramowania.
+          
+          Unit testing – Testuje indywidualne jednostki lub komponenty oprogramowania, aby upewnić się, że działają zgodnie z zamierzeniem.
+          
+          Integration testing – Testuje integrację różnych komponentów oprogramowania, aby upewnić się, że współpracują jako system.
+          
+          Functional testing – Testuje funkcjonalne wymagania oprogramowania, aby upewnić się, że są spełnione.
+          
+          System testing – Testuje kompletny system oprogramowania, aby upewnić się, że spełnia określone wymagania.
+          
+          Acceptance testing – Testuje oprogramowanie, aby upewnić się, że spełnia oczekiwania klienta lub użytkownika końcowego.
+          
+          Regression testing – Testuje oprogramowanie po dokonaniu zmian lub modyfikacji, aby upewnić się, że zmiany nie wprowadziły nowych błędów.
+          
+          Performance testing – Testuje oprogramowanie, aby określić jego cechy wydajnościowe, takie jak szybkość, skalowalność i stabilność.
+          
+          Security testing – Testuje oprogramowanie w celu zidentyfikowania podatności i zapewnienia, że spełnia wymagania dotyczące bezpieczeństwa.`,
       },
       {
         question: "Jakie są cele testowania?",

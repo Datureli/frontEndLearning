@@ -1,8 +1,8 @@
 <template>
   <v-carousel ref="carousel" hide-delimiters v-if="questions">
     <v-carousel-item
-      v-for="question in questions"
-      :key="question.id"
+      v-for="(question, index) in questions"
+      :key="index"
       @shortkey="changeArrowDirection"
       v-shortkey="{ left: ['arrowleft'], right: ['arrowright'] }"
       class="mx-auto"
