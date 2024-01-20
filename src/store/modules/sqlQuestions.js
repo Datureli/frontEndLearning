@@ -165,6 +165,12 @@ export default {
           FROM tabela;`,
       },
       {
+        question: "Bazy relacyjne a nierelacyjne?",
+        answer:
+          `Aby utworzyć alias w MySQL, możesz użyć klauzuli AS w zapytaniu SELECT. Oto przykład, jak to zrobić: SELECT kolumna1 AS alias1, kolumna2 AS alias2
+          FROM tabela;`,
+      },
+      {
         question: "Jak połączyć tablice które nie są bezpośrednio połączone?",
         answer:
           "Musimy użyć tabeli łącznikowej. Jeżeli występuje sytuacja wiele do wielu  to ,żeby wyświetlić dane przy złączeniu powinniśmy wykorzystać tablice łącznikową",

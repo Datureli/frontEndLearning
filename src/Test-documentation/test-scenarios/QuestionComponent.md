@@ -52,6 +52,7 @@ Oczekiwany rezultat: Pytania rekrutacyjne wyświetlają się poprawnie
 - Sprawdź czy nawiguje do poprzedniego pytania
 - Kliknij strzałke z ikonką arrow right
 - Sprawdź czy nawiguje do następnego pytania
+- przejdź do następnego pytania a następnie cofnij się do poprzedniego i zobacz czy te same pytania zostają wyświetlone
 
 ## Sprawdź nawigacje pomiędzy komponentami za pomocą przycisków na klawiaturze lewo/prawo
 

@@ -15,8 +15,7 @@ export default {
       },
       {
         question: "pozytywne i negatywne przypadki testowe?",
-        answer:
-          `Pozytywne przypadki testowe sprawdzają, czy oprogramowanie działa zgodnie z wymaganiami i jak reaguje na pozytywne dane wejściowe. Celem tych testów jest upewnienie się, że oprogramowanie działa poprawnie w normalnych warunkach.
+        answer: `Pozytywne przypadki testowe sprawdzają, czy oprogramowanie działa zgodnie z wymaganiami i jak reaguje na pozytywne dane wejściowe. Celem tych testów jest upewnienie się, że oprogramowanie działa poprawnie w normalnych warunkach.
 
           Negatywne przypadki testowe sprawdzają, jak oprogramowanie reaguje na negatywne dane wejściowe lub nieoczekiwane sytuacje. Celem tych testów jest upewnienie się, że oprogramowanie jest odpornie na błędy i że może poprawnie radzić sobie z trudnymi sytuacjami.
           
@@ -29,27 +28,25 @@ export default {
       },
       {
         question: "Czym jest piramida testów?",
-        answer: `Piramida testów to model hierarchii różnych typów testów w ramach procesu testowania oprogramowania. Piramida ma na celu zrównoważenie ilości testów w zależności od ich kosztu, czasu wykonania i stabilności. Na niższym poziomie piramidy znajdują się testy, które są tańsze, szybsze i bardziej stabilne, dlatego powinno ich być wykonanych większa ilość - stanowią one fundament piramidy. Na szczycie piramidy znajdują się testy, które są bardziej czasochłonne, mniej stabilne i wymagają większego zaangażowania ludzkiego, dlatego są one mniej liczne. Dzięki temu, piramida testów umożliwia efektywne zarządzanie procesem testowania, zapewniając odpowiednią jakość oprogramowania przy optymalnym wykorzystaniu zasobów. Testy jednostkowe (Unit Tests):
-
-          Charakterystyka: Testy jednostkowe sprawdzają indywidualne jednostki kodu, takie jak funkcje, metody, czy klasy.
-          Częstotliwość: Bardzo często.
-          Cel: Zapewnienie, że pojedyncze elementy kodu działają zgodnie z oczekiwaniami.
-          Testy integracyjne (Integration Tests):
-          
-          Charakterystyka: Testy integracyjne sprawdzają współpracę między różnymi jednostkami kodu, a także integrację zewnętrznych zależności.
-          Częstotliwość: Regularnie, ale mniej często niż testy jednostkowe.
-          Cel: Upewnienie się, że komponenty działają poprawnie współpracując ze sobą.
-          Testy systemowe (System Tests):
-          
-          Charakterystyka: Testy systemowe oceniają kompletną funkcjonalność systemu w kontekście zdefiniowanych wymagań.
-          Częstotliwość: Mniej często niż testy integracyjne.
-          Cel: Zweryfikowanie, czy cały system działa zgodnie z oczekiwaniami.
-          Testy akceptacyjne (Acceptance Tests):
-          
-          Charakterystyka: Testy akceptacyjne sprawdzają, czy oprogramowanie spełnia oczekiwania użytkowników końcowych.
-          Częstotliwość: Najrzadziej, zazwyczaj przed wdrożeniem.
-          Cel: Potwierdzenie gotowości oprogramowania do dostarczenia klientowi.
+        answer: `Piramida testów to model hierarchii różnych typów testów w ramach procesu testowania. Piramida ma na celu zrównoważenie ilości testów w zależności od ich kosztu, czasu wykonania i stabilności. Na niższym poziomie piramidy znajdują się testy, które są tańsze, szybsze i bardziej stabilne, dlatego powinno ich być wykonanych większa ilość. Na szczycie piramidy znajdują się testy, które są bardziej czasochłonne, mniej stabilne i wymagają większego zaangażowania ludzkiego, dlatego są one mniej liczne. Dzięki temu, piramida testów umożliwia efektywne zarządzanie procesem testowania, zapewniając odpowiednią jakość oprogramowania przy optymalnym wykorzystaniu zasobów. 
           `,
+      },
+      {
+        question: "Częstotliwość w piramidzie testów",
+        answer: `Testy jednostkowe sprawdzają indywidualne jednostki kodu, takie jak funkcje, metody, czy klasy. Częstotliwość: Bardzo często.
+        Cel: Zapewnienie, że pojedyncze elementy kodu działają zgodnie z oczekiwaniami.
+        Testy integracyjne:
+        sprawdzają współpracę między różnymi jednostkami kodu, a także integrację zewnętrznych zależności.
+        Częstotliwość: Regularnie, ale mniej często niż testy jednostkowe.
+        Cel: Upewnienie się, że komponenty działają poprawnie współpracując ze sobą.
+        Testy systemowe
+        oceniają kompletną funkcjonalność systemu w kontekście zdefiniowanych wymagań.
+        Częstotliwość: Mniej często niż testy integracyjne.
+        Cel: Zweryfikowanie, czy cały system działa zgodnie z oczekiwaniami.
+        Testy akceptacyjne:
+        sprawdzają, czy oprogramowanie spełnia oczekiwania użytkowników końcowych.
+        Częstotliwość: Najrzadziej, zazwyczaj przed wdrożeniem.
+        Cel: Potwierdzenie gotowości oprogramowania do dostarczenia klientowi.`,
       },
       {
         question: "Jaka jest różnica pomiędzy firmware, a software?",
@@ -65,29 +62,41 @@ export default {
         question:
           "Jakie są różnice między testowaniem manualnym a automatycznym",
         answer:
-          "Testy manualne Wykonywane są przez testerów, którzy ręcznie uruchamiają testy, wykonują kroki testowe i obserwują rezultaty, wymagają interakcji człowieka, który podejmuje decyzje i ocenia wyniki testów. Natomiast testy automatyczne wykorzystują narzędzia i skrypty do automatyzacji procesu testowania.Testy są pisane jako skrypty, które wykonują określone czynności i sprawdzają oczekiwane wyniki. Wykonuje testy szybciej i bardziej powtarzalnie niż testowanie manualne.",
+          "Testy manualne Wykonywane są przez testerów, którzy ręcznie uruchamiają testy, wykonują kroki testowe i obserwują rezultaty, wymagają interakcji człowieka, który podejmuje decyzje i ocenia wyniki testów. Natomiast testy automatyczne wykorzystują narzędzia i skrypty do automatyzacji procesu testowania.Testy są pisane jako skrypty, które wykonują określone czynności i sprawdzają oczekiwane wyniki. Wykonują testy szybciej i bardziej powtarzalnie niż testowanie manualne.",
       },
       {
-        question:
-          "Kiedy należy skończyć testować oprogramowanie? Podaj przykłady.",
+        question: "Czym są historyjki użytkownika",
+        answer: `
+          Historie użytkownika, znane również jako epiki, są techniką stosowaną w zarządzaniu projektami i rozwijaniu oprogramowania. Służą do opisywania funkcji lub wymagań z perspektywy użytkownika końcowego. Historyjki użytkownika pomagają zrozumieć, jak użytkownicy będą korzystać z systemu, jakie mają potrzeby i jakie cele chcą osiągnąć.Typowa historia użytkownika obejmuje kilka kluczowych elementów:
+
+          Rola Użytkownika: Określenie, kto jest użytkownikiem końcowym danego systemu lub funkcji. Może to być klient, pracownik, czy inna grupa interesariuszy.
+          
+          Cel: Opis, co użytkownik chce osiągnąć, korzystając z danego systemu lub funkcji. Często jest to przedstawione jako zdanie opisujące cel w prosty sposób.
+          
+          Opis: Szczegółowy opis, jak użytkownik przechodzi przez interakcję z systemem, aby osiągnąć swój cel. Może zawierać kroki, warunki brzegowe, a także ewentualne problemy lub błędy, z którymi użytkownik może się spotkać.
+          
+          Wartość Biznesowa: Wskazanie, dlaczego ta historia użytkownika ma wartość dla biznesu. Jakie cele biznesowe lub korzyści przyniesie jej realizacja.`,
+      },
+      {
+        question: "Kiedy należy skończyć testować oprogramowanie?",
         answer:
-          "Wystarczające pokrycie wymagań: Testy zostały wykonane w wystarczającym stopniu, aby pokryć co najmniej 95% wszystkich ustalonych wymagań. Wszystkie podstawowe funkcje i scenariusze zostały przetestowane zgodnie z planem.Zagęszczenie defektów: Liczba defektów przypisanych do poszczególnych wymagań jest na akceptowalnie niskim poziomie. Na przykład, nie więcej niż 5 defektów przypisanych do każdego z rozdziału wymagań.Koszt: Testowanie trwa już od pewnego czasu, a dalsze testy generowałyby nieproporcjonalne koszty w porównaniu do oczekiwanych korzyści. Na podstawie analizy kosztów i zysków, decyduje się o zakończeniu testowania.Ramy czasowe: Testowanie jest zaplanowane na określony okres, na przykład 3 miesiące, i nie można go przekroczyć ze względu na ustalone ograniczenia czasowe projektu.",
+          "Wystarczające pokrycie wymagań: Testy zostały wykonane w wystarczającym stopniu, aby pokryć co najmniej 95% wszystkich ustalonych wymagań. Zagęszczenie defektów: Liczba defektów przypisanych do poszczególnych wymagań jest na akceptowalnie niskim poziomie. Na przykład, nie więcej niż 5 defektów przypisanych do każdego z rozdziału wymagań.Koszt: Testowanie trwa już od pewnego czasu, a dalsze testy generowałyby nieproporcjonalne koszty w porównaniu do oczekiwanych korzyści. Ramy czasowe: Testowanie jest zaplanowane na określony okres, na przykład 3 miesiące, i nie można go przekroczyć ze względu na ustalone ograniczenia czasowe projektu.",
       },
       {
         question: "Czym jest testowanie Nie-funkcjonalne?",
         answer:
-          "Oczywiście, testowanie nie funkcjonalne to ważna część procesu testowania oprogramowania. Obejmuje ono sprawdzanie cech i atrybutów oprogramowania, które nie są związane bezpośrednio z jego funkcjonalnością, ale mają wpływ na jakość, wydajność, użyteczność i inne aspekty systemu. ",
+          "Testowanie nie-funkcjonalne to rodzaj testowania oprogramowania, które ocenia aspekty jakościowe systemu, które nie są związane bezpośrednio z jego funkcjonalnością. Obejmuje ono różne cechy i charakterystyki systemu, które wpływają na jego wydajność, niezawodność, bezpieczeństwo, skalowalność, użyteczność i inne aspekty.kilka głównych obszarów testowania nie-funkcjonalnego: Wydajność (Performance Testing):,Bezpieczeństwo (Security Testing):,Dostępność (Availability Testing):,Niezawodność (Reliability Testing):,Użyteczność (Usability Testing): ,Testy Obciążeniowe (Stress Testing):Testowanie Kompatybilności z Wydajnością (Performance Compatibility Testing): Sprawdza, czy system zachowuje się zgodnie z oczekiwaniami w różnych środowiskach, konfiguracjach sprzętowych i sieciowych.",
       },
       {
         question:
           "Co zrobić gdy nie jesteśmy pewni czy mamy do czynienia z błędem?",
         answer:
-          "Zawsze warto poszukać jakiś twardych dowodów na które możemy się powołać przy zgłaszaniu błędu. Można zasięgnąc wiedzy u programistów, project/product managera, product ownera i innych. Często bywa tak, że zastana sytuacja jest nie do zaakceptowania, np. oprogramowanie/strona www otwiera się minutę bądź dłużej ale nie znajdziemy w wymaganiach informacji o czasie potrzebnym na otwarcie. Pamiętajcie wtedy, że zawsze można zgłosić defekt powołując się na użytkownika ze zdrowym rozsądkiem (tzw. 'reasonable end user') który najnormalniej nie będzie czekał.",
+          "Zawsze warto poszukać jakiś twardych dowodów na które możemy się powołać przy zgłaszaniu błędu. Można zasięgnąc wiedzy u programistów, project/product managera, product ownera i innych. Często bywa tak, że zastana sytuacja jest nie do zaakceptowania, np. oprogramowanie/strona www otwiera się minutę bądź dłużej ale nie znajdziemy w wymaganiach informacji o czasie potrzebnym na otwarcie. Zawsze można zgłosić defekt powołując się na użytkownika ze zdrowym rozsądkiem.",
       },
       {
         question: "Od czego zależy ryzyko projektowe i co się na nie składa?",
         answer:
-          "Trzeba w tym miejscu wymienić wpływ i możliwość wystąpienia błędu. Ocena wpływu to zadanie analityka testów (business value) podczas gdy ocena możliwości wystąpienia błędu to zadanie dla technicznego analityka testów (technical impact). Dobrze jest tu także opisać jak wygląda identyfikacja ryzyk, różnice pomiędzy ryzykiem projektowym, a produktowym i co robimy żeby je zminimalizować.",
+          "Wpływ i możliwość wystąpienia błędu. Ocena wpływu to zadanie analityka testów (business value) podczas gdy ocena możliwości wystąpienia błędu to zadanie dla technicznego analityka testów (technical impact). Dobrze jest tu także opisać jak wygląda identyfikacja ryzyk, różnice pomiędzy ryzykiem projektowym, a produktowym i co robimy żeby je zminimalizować.",
       },
       {
         question: "Jak postępować z informacją, że u mnie działa?",
@@ -96,15 +105,12 @@ export default {
       },
       {
         question: "Czym jest testowanie statyczne?",
-        answer:
-          "Można również wykonywać testy bez uruchamiania testowanego obiektu – takie testowanie nazywa się testowaniem statycznym, a zatem testowanie obejmuje również przegląd produktów pracy takich jak: wymagania, historyjki użytkownika i kod źródłowy.   ",
+        answer: `
+          Testowanie statyczne to rodzaj testowania oprogramowania, które odbywa się bez konieczności uruchamiania programu. Testowanie statyczne ma na celu identyfikację problemów we wczesnych fazach cyklu życia projektu, zanim kod zostanie uruchomiony.  `,
       },
       {
         question: "Wymień strategie testowania?",
-        answer:
-          `Black box testing – Testuje funkcjonalność oprogramowania bez zaglądania w wewnętrzną strukturę kodu.
-
-          White box testing – Testuje wewnętrzną strukturę kodu i logikę oprogramowania.
+        answer: `Black box testing - Testuje funkcjonalność oprogramowania bez zaglądania w wewnętrzną strukturę kodu. White box testing – Testuje wewnętrzną strukturę kodu i logikę oprogramowania.
           
           Unit testing – Testuje indywidualne jednostki lub komponenty oprogramowania, aby upewnić się, że działają zgodnie z zamierzeniem.
           
@@ -125,49 +131,55 @@ export default {
       {
         question: "Jakie są cele testowania?",
         answer:
-          "zapobieganie defektom poprzez dokonywanie oceny produktów pracy, takich jak: wymagania, historyjki użytkownika, projekt i kod; • weryfikacja, czy zostały spełnione wszystkie wyspecyfikowane wymagania; • sprawdzanie, czy przedmiot testów jest kompletny i walidowanie, czy działa zgodnie z oczekiwaniami użytkowników i innych interesariuszy; • budowanie zaufania do poziomu jakości przedmiotu testów; • wykrywanie defektów i awarii, a tym samym zmniejszenie poziomu ryzyka związanego z niedostateczną jakością oprogramowania; • dostarczanie interesariuszom informacji niezbędnych do podejmowania świadomych decyzji (dotyczących zwłaszcza poziomu jakości przedmiotu testów);",
+          "zapobieganie defektom poprzez dokonywanie oceny produktów pracy, takich jak: wymagania, historyjki użytkownika, projekt i kod, weryfikacja, czy zostały spełnione wszystkie wymagania, sprawdzanie, czy przedmiot testów jest kompletny i walidowanie, czy działa zgodnie z oczekiwaniami użytkowników i innych interesariuszy, budowanie zaufania do poziomu jakości przedmiotu testów, wykrywanie defektów i awarii, a tym samym zmniejszenie poziomu ryzyka związanego z niedostateczną jakością oprogramowania, dostarczanie interesariuszom informacji niezbędnych do podejmowania świadomych decyzji.",
       },
 
       {
         question: "Co to są testy jednostkowe?",
         answer:
-          "Testy jednostkowe są to testy sprawdzające małe części kodu(funkcje,metody).Każdy test jest niezależny od poprzedniego oraz w jak najmniejszym stopniu opiera się na zewnętrznych zależnościach (wręcz nie powinno ich być!). Test może zakończyć się sukcesem lub porażką (ang. fail).",
-        secondAnswer: "",
+          "Testy jednostkowe są to testy sprawdzające małe części kodu(funkcje,metody).Każdy test jest niezależny od poprzedniego oraz w jak najmniejszym stopniu opiera się na zewnętrznych zależnościach.",
       },
       {
         question: "Opisz działanie funkcji expect",
         answer:
-          "TZwraca ona obiekt z metodami, które umożliwiają wybranie wygodnego operatora logicznego oraz tego co dokładnie będziemy porównywać.",
+          "Jej głównym zadaniem jest tworzenie obiektu, na którym można wywoływać różne metody asercji, pozwalające na sprawdzenie, czy określone warunki są spełnione w trakcie testowania. ",
       },
       {
         question: "różnica pomiędzy testowaniem a debugowaniem",
         answer:
-          "Testowanie i debugowanie to dwie różne czynności. Wykonywanie testów pozwala ujawnić awarie, które  są skutkiem defektów w oprogramowaniu, natomiast debugowanie to czynność związana  z wytwarzaniem oprogramowania, która polega na znajdowaniu, analizowaniu i usuwaniu tych  defektów",
-      },
-      {
-        question: "Czym są testy jednostkowe w Vue",
-        answer:
-          "to zestaw funkcji użytkowych mających na celu uproszczenie testowania komponentów Vue.js. Zapewnia pewne metody montowania i interakcji z komponentami Vue w izolowany sposób.",
+          "Celem testowania jest sprawdzenie, czy oprogramowanie spełnia określone wymagania i czy działa poprawnie. Testy mają na celu zapewnienie, że aplikacja wykonuje się zgodnie z oczekiwaniami, a wszelkie błędy są wykrywane i poprawiane. Celem debugowania jest identyfikacja, lokalizacja i naprawa błędów w kodzie. Debugowanie jest procesem analizy i eliminowania problemów, które zostały wykryte podczas testowania lub użytkowania aplikacji. Testowanie: Jest wykonywane przed wdrożeniem aplikacji lub jej części Debugowanie: Zachodzi po wykryciu problemu, czy to podczas testowania, czy w trakcie użytkowania aplikacji. Debugowanie ma miejsce po wystąpieniu błędu w celu zrozumienia jego źródła i skorygowania. Wynikiem testowania jest ocena jakości oprogramowania, identyfikacja ewentualnych błędów i potwierdzenie, czy spełnia ono określone wymagania. Debugowanie: Wynikiem debugowania jest poprawa i naprawa błędów w kodzie. Celem jest zrozumienie, dlaczego dany błąd wystąpił, i wprowadzenie zmian w kodzie w celu jego usunięcia",
       },
       {
         question: "Dlaczego testowanie jest niezbędne?",
         answer:
-          "Rygorystyczne testowanie modułów i systemów oraz związanej z nimi dokumentacji może pomóc w zmniejszeniu ryzyka wystąpienia awarii podczas eksploatacji oprogramowania. Wykrycie, a następnie usunięcie defektów, przyczynia się do podniesienia jakości modułów lub systemów. Ponadto testowanie oprogramowania może być niezbędne do spełnienia wymagań wynikających z umów, przepisów prawa bądź norm/standardów branżowych.",
+          "Testowanie pozwala zweryfikować, czy oprogramowanie spełnia określone wymagania i standardy jakości.Testowanie umożliwia wczesne wykrywanie błędów i problemów w oprogramowaniu. Dobre pokrycie testami daje pewność, że oprogramowanie działa poprawnie w różnych warunkach i sytuacjach. To zwiększa zaufanie użytkowników do produktu. Testowanie ułatwia zarządzanie zmianami w oprogramowaniu. Przy wprowadzaniu nowych funkcji lub modyfikacjach testy pomagają sprawdzić, czy istniejące funkcjonalności nie zostały naruszone. esty wydajnościowe pozwalają zidentyfikować obszary, które mogą wymagać optymalizacji. To kluczowe dla zapewnienia, że oprogramowanie działa sprawnie nawet przy dużej liczbie użytkowników. estowanie sprawdza, czy oprogramowanie spełnia określone wymagania biznesowe i funkcjonalne.  ",
       },
       {
         question: "Czym jest framework Jest",
-        answer:
-          "Jest to framework testowy JavaScript, który koncentruje się na prostocie. Jedną z jego unikalnych cech jest możliwość robienia migawek testów w celu zapewnienia alternatywnego sposobu weryfikacji jednostek Twojej aplikacji.",
+        answer: `
+          Jest to popularny framework do testowania aplikacji w języku JavaScript i TypeScript. Framework automatycznie znajduje i wykonuje testy, co eliminuje potrzebę konfiguracji ręcznej.  Jest umożliwia tworzenie "snapshotów" komponentów, które są zapisywane i porównywane z wynikami kolejnych testów, ułatwiając wychwycenie nieoczekiwanych zmian. Jest obsługuje testy asynchroniczne poprzez ułatwienie pracy z funkcjami zwrotnymi (callbacks), obietnicami (promises) i asynchronicznymi funkcjami. Zapewnia narzędzia do prostego mockowania funkcji, co umożliwia izolowanie testowanych fragmentów kodu.`,
+      },
+      {
+        question: "Czym jest mockowanie",
+        answer: `
+          
+        Mockowanie to technika stosowana w testowaniu oprogramowania, w której tworzone są sztuczne obiekty lub moduły, aby zasymulować rzeczywiste obiekty lub funkcje w systemie. Mocki są używane do testowania interakcji między różnymi komponentami oprogramowania, a także do izolowania jednostek testujących od zależności zewnętrznych.`,
+      },
+      {
+        question: "Jaka jest różnica między błędem,bugiem i awarią",
+        answer: `
+          
+        Mockowanie to technika stosowana w testowaniu oprogramowania, w której tworzone są sztuczne obiekty lub moduły, aby zasymulować rzeczywiste obiekty lub funkcje w systemie. Mocki są używane do testowania interakcji między różnymi komponentami oprogramowania, a także do izolowania jednostek testujących od zależności zewnętrznych.`,
       },
       {
         question: "siedem zasad testowania",
         answer:
-          "1. Testowanie ujawnia usterki, ale nie może dowieść ich braku Testowanie może wykazać obecność defektów, ale nie może dowieść, że oprogramowanie jest od nich wolne. Tym samym testowanie zmniejsza prawdopodobieństwo, że w oprogramowaniu pozostaną niewykryte defekty, ale sam fakt niewykrycia defektów nie stanowi dowodu poprawności oprogramowania. Testowanie gruntowne jest niemożliwe   Przetestowanie wszystkiego (tj. wszystkich kombinacji danych wejściowych i warunków wstępnych) jest   możliwe tylko w najprostszych przypadkach. W związku z tym, wysiłki w testowaniu powinny być   ukierunkowane raczej na analizę ryzyka, techniki testowania i priorytetyzację niż dążenie do testowania.3Wczesne testowanie oszczędza czas i pieniądze          ",
+          "Testowanie ujawnia usterki, ale nie może dowieść ich braku Testowanie może wykazać obecność defektów, ale nie może dowieść, że oprogramowanie jest od nich wolne. Tym samym testowanie zmniejsza prawdopodobieństwo, że w oprogramowaniu pozostaną niewykryte defekty, ale sam fakt niewykrycia defektów nie stanowi dowodu poprawności oprogramowania. Testowanie gruntowne jest niemożliwe Przetestowanie wszystkiego jest możliwe tylko w najprostszych przypadkach.Wczesne testowanie oszczędza czas i pieniądze",
       },
       {
         question: "Z jakich powodów mogą powstawać błędy?",
         answer:
-          "Pomyłki mogą pojawiać się z wielu powodów, takich jak: presja czasu; • omylność człowieka; • brak doświadczenia lub niedostateczne umiejętności uczestników projektu; • problemy związane z wymianą informacji między uczestnikami projektu (w tym nieporozumienia dotyczące rozumienia wymagań i dokumentacji projektowej); • złożoność kodu, projektu, architektury, rozwiązywanego problemu i/lub wykorzystywanej technologii; • nieporozumienia dotyczące interfejsów wewnątrz systemu i między systemami, zwłaszcza w przypadku dużej liczby tych systemów; • stosowanie nowych, nieznanych technologii.",
+          "Pomyłki mogą pojawiać się z wielu powodów, takich jak: presja czasu; • omylność człowieka, brak doświadczenia lub niedostateczne umiejętności uczestników projektu, problemy związane z wymianą informacji między uczestnikami projektu (w tym nieporozumienia dotyczące rozumienia wymagań i dokumentacji projektowej), złożoność kodu, projektu, architektury, rozwiązywanego problemu lub wykorzystywanej technologii, nieporozumienia dotyczące interfejsów wewnątrz systemu i między systemami, zwłaszcza w przypadku dużej liczby tych systemów; • stosowanie nowych, nieznanych technologii.",
       },
       {
         question: "Pomyłki, defekty i awarie",
