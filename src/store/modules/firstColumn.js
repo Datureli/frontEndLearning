@@ -9,7 +9,6 @@ export default {
         bookLink: '/book/html',
         icon: "mdi-language-html5",
         color: "orange",
-        id: 1,
       },
       {
         title: "Css",
@@ -17,7 +16,6 @@ export default {
         bookLink: '/book/css',
         icon: "mdi-language-css3",
         color: "blue",
-        id: 2,
       },
       {
         title: "Javascript",
@@ -25,7 +23,6 @@ export default {
         bookLink: '/book/javascript',
         icon: "mdi-language-javascript",
         color: "yellow",
-        id: 3,
       },
       {
         title: "Vue",
@@ -33,7 +30,6 @@ export default {
         bookLink: '/book/vue',
         icon: "mdi-vuejs",
         color: "green",
-        id: 4,
       },
       {
         title: "React",
@@ -41,7 +37,6 @@ export default {
         bookLink: '/book/react',
         icon: "mdi-react",
         color: "blue",
-        id: 5,
       },
       {
         title: "Typescript",
@@ -49,7 +44,6 @@ export default {
         bookLink: '/book/typescript',
         icon: "mdi-language-typescript",
         color: "blue",
-        id: 6,
       },
       {
         title: "Git",
@@ -57,7 +51,6 @@ export default {
         bookLink: '/book/git',
         icon: "mdi-git",
         color: "black",
-        id: 7,
       },
       {
         title: "Ogólne",
@@ -65,7 +58,6 @@ export default {
         bookLink: '/book/general',
         icon: "mdi-account-circle",
         color: "red",
-        id: 8,
       },
       {
         title: "Testowanie",
@@ -73,7 +65,6 @@ export default {
         bookLink: '/book/tests',
         icon: "mdi-wrench-outline",
         color: "grey",
-        id: 9,
       },
     ],
   },
