@@ -78,6 +78,36 @@ const routes = [
           import("../components/RecruimentQuestions/TestYourKnowledge"),
         name: "TestYourKnowledge",
       },
+      {
+        path: "cypress",
+        component: () =>
+          import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
+        name: "Cypress",
+      },
+      {
+        path: "postman",
+        component: () =>
+          import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
+        name: "Postman",
+      },
+      {
+        path: "sql",
+        component: () =>
+          import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
+        name: "Sql",
+      },
+      {
+        path: "wordpress",
+        component: () =>
+          import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
+        name: "Wordpress",
+      },
+      {
+        path: "cybersecurity",
+        component: () =>
+          import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
+        name: "Cybersecurity",
+      },
     ],
   },
 

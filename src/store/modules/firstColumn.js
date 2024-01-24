@@ -66,6 +66,36 @@ export default {
         icon: "mdi-wrench-outline",
         color: "grey",
       },
+      {
+        title: "Cypress",
+        link: "/recruitment-questions/cypress",
+        icon: "mdi-wrench-outline",
+        color: "grey",
+      },
+      {
+        title: "Postman",
+        link: "/recruitment-questions/postman",
+        icon: "mdi-wrench-outline",
+        color: "grey",
+      },
+      {
+        title: "Sql",
+        link: "/recruitment-questions/sql",
+        icon: "mdi-wrench-outline",
+        color: "grey",
+      },
+      {
+        title: "Wordpress",
+        link: "/recruitment-questions/wordpress",
+        icon: "mdi-wrench-outline",
+        color: "grey",
+      },
+      {
+        title: "Cybersecurity",
+        link: "/recruitment-questions/cybersecurity",
+        icon: "mdi-lock",
+        color: "grey",
+      },
     ],
   },
 };

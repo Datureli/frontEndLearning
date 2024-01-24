@@ -72,6 +72,11 @@ export default {
     ...mapState("gitQuestions", ["gitQuestions"]),
     ...mapState("generalQuestions", ["generalQuestions"]),
     ...mapState("testQuestions", ["testQuestions"]),
+    ...mapState("cypressQuestions", ["cypressQuestions"]),
+    ...mapState("postmanQuestions", ["postmanQuestions"]),
+    ...mapState("sqlQuestions", ["sqlQuestions"]),
+    ...mapState("wordpressQuestions", ["wordpressQuestions"]),
+    ...mapState("cybersecurityQuestions", ["cybersecurityQuestions"]),
     ...mapState(["disable"]),
 
     questions() {
@@ -90,6 +95,11 @@ export default {
           gitquestions: this.gitQuestions,
           general: this.generalQuestions,
           test: this.testQuestions,
+          postman: this.postmanQuestions,
+          cypress: this.cypressQuestions,
+          sql: this.sqlQuestions,
+          wordpress: this.wordpressQuestions,
+          cybersecurity: this.cybersecurityQuestions
         };
 
         return questionCategories[category] || null;
