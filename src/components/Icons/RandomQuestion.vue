@@ -33,6 +33,16 @@ export default {
           return this.randomGeneralQuestion();
         case "/recruitment-questions/test":
           return this.randomTestQuestion();
+        case "/recruitment-questions/cypress":
+          return this.randomCypressQuestion();
+        case "/recruitment-questions/postman":
+          return this.randomPostmanQuestion();
+        case "/recruitment-questions/sql":
+          return this.randomSqlQuestion();
+        case "/recruitment-questions/Wordpress":
+          return this.randomWordpressQuestion();
+        case "/recruitment-questions/cybersecurity":
+          return this.randomCyberSecurityQuestion();
       }
     },
     ...mapActions("htmlQuestions", ["randomHtmlQuestion"]),
@@ -43,7 +53,11 @@ export default {
     ...mapActions("reactQuestions", ["randomReactQuestion"]),
     ...mapActions("typescriptQuestions", ["randomTypescriptQuestion"]),
     ...mapActions("vueQuestions", ["randomVueQuestion"]),
-    ...mapActions("testQuestions", ["randomTestQuestion"]),
+    ...mapActions("cypressQuestions", ["randomCypressQuestion"]),
+    ...mapActions("postmanQuestions", ["randomPostmanQuestion"]),
+    ...mapActions("sqlQuestions", ["randomSqlQuestion"]),
+    ...mapActions("wordpressQuestions", ["randomWordpressQuestion"]),
+    ...mapActions("cybersecurityQuestions", ["randomCybersecurityQuestion"]),
   },
 };
 </script>

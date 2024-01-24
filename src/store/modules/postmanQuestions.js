@@ -87,14 +87,14 @@ export default {
       },
     },
     actions: {
-      sqlQuestionLoop(context) {
+      postmanQuestionLoop(context) {
         setInterval(() => {
-          context.commit("randomSqlQuestion");
+          context.commit("randomPostmanQuestion");
         }, 5000);
       },
   
-      randomSqlQuestion(context) {
-        context.commit("randomSqlQuestion");
+      randomPostmanQuestion(context) {
+        context.commit("randomPostmanQuestion");
       },
     },
   };

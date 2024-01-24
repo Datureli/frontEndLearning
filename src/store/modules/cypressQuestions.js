@@ -2,7 +2,7 @@ export default {
   namespaced: true,
 
   state: {
-    testQuestions: [
+    cypressQuestions: [
       {
         question: "Jak uruchomić testy Cypress?",
         answer:
@@ -194,19 +194,19 @@ export default {
   },
 
   mutations: {
-    randomTestQuestion(state) {
-      state.testQuestions.sort(() => Math.floor(Math.random() - 0.5));
+    randomCypressQuestion(state) {
+      state.cypressQuestions.sort(() => Math.floor(Math.random() - 0.5));
     },
   },
   actions: {
-    testQuestionLoop(context) {
+    cypressQuestionLoop(context) {
       setInterval(() => {
-        context.commit("randomTestQuestion");
+        context.commit("randomCypressQuestion");
       }, 5000);
     },
 
-    randomTestQuestion(context) {
-      context.commit("randomTestQuestion");
+    randomCypressQuestion(context) {
+      context.commit("randomCypressQuestion");
     },
   },
 };

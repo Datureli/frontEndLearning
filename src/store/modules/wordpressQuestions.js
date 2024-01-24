@@ -36,18 +36,18 @@ export default {
       ],
     },
     mutations: {
-      randomVueQuestion(state) {
+      randomWordpressQuestion(state) {
         state.wordpressQuestions.sort(() => Math.floor(Math.random() - 0.5));
       },
     },
     actions: {
-      vueQuestionLoop(context) {
+      wordpressQuestionLoop(context) {
         setInterval(() => {
-          context.commit("randomVueQuestion");
+          context.commit("randomWordpressQuestion");
         }, 5000);
       },
-      randomVueQuestion(context) {
-        context.commit("randomVueQuestion");
+      randomWordpressQuestion(context) {
+        context.commit("randomWordpressQuestion");
       },
     },
   };

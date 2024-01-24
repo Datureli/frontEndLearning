@@ -36,18 +36,18 @@ export default {
       ],
     },
     mutations: {
-      randomVueQuestion(state) {
+      randomCybersecurityQuestion(state) {
         state.cyberSecurityQuestions.sort(() => Math.floor(Math.random() - 0.5));
       },
     },
     actions: {
-      vueQuestionLoop(context) {
+      cybersecurityQuestionLoop(context) {
         setInterval(() => {
-          context.commit("randomVueQuestion");
+          context.commit("randomCybersecurityQuestion");
         }, 5000);
       },
-      randomVueQuestion(context) {
-        context.commit("randomVueQuestion");
+      randomCybersecurityQuestion(context) {
+        context.commit("randomCybersecurityQuestion");
       },
     },
   };
