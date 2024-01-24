@@ -1,34 +1,18 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import javascriptQuestions from "./modules/javascriptQuestions";
-import htmlQuestions from "./modules/htmlQuestions";
-import cssQuestions from "./modules/cssQuestions";
-import vueQuestions from "./modules/vueQuestions";
-import gitQuestions from "./modules/gitQuestions";
-import reactQuestions from "./modules/reactQuestions";
-import generalQuestions from "./modules/generalQuestions";
-import firstColumn from "./modules/firstColumn";
-import typescriptQuestions from "./modules/typescriptQuestions";
-import testQuestions from "./modules/testQuestions";
-import cypressQuestions from "./modules/cypressQuestions";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  modules: {
-    javascriptQuestions,
-    htmlQuestions,
-    cssQuestions,
-    vueQuestions,
-    gitQuestions,
-    reactQuestions,
-    generalQuestions,
-    typescriptQuestions,
-    firstColumn,
-    testQuestions,
-    cypressQuestions,
-  },
+const requireModule = require.context("./modules", false, /\.js$/);
+const modules = {};
 
+requireModule.keys().forEach((fileName) => {
+  const moduleName = fileName.replace(/(\.\/|\.js)/g, "");
+  modules[moduleName] = requireModule(fileName).default || requireModule(fileName);
+});
+
+export default new Vuex.Store({
+  modules,
   state: {
     disable: true,
     favorite: [],
