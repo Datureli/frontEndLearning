@@ -10,7 +10,6 @@ import generalQuestions from "./modules/generalQuestions";
 import firstColumn from "./modules/firstColumn";
 import typescriptQuestions from "./modules/typescriptQuestions";
 import testQuestions from "./modules/testQuestions";
-import htmlCourse from "./courses/htmlCourse";
 import cypressQuestions from "./modules/cypressQuestions";
 
 Vue.use(Vuex);
@@ -27,7 +26,7 @@ export default new Vuex.Store({
     typescriptQuestions,
     firstColumn,
     testQuestions,
-    htmlCourse,
+
     cypressQuestions,
   },
 

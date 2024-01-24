@@ -149,11 +149,6 @@ const routes = [
     component: () => import("../views/Materials"),
   },
   {
-    path: "/podstawy-html",
-    name: "HtmlCourse",
-    component: () => import("../components/courses/HtmlCourse.vue"),
-  },
-  {
     path: "/english",
     name: "English",
     component: () => import("../views/English"),
