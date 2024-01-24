@@ -286,8 +286,8 @@ export default {
       },
       {
         question: "Co to jest suma kontrolna?",
-        answer:
-          "Suma kontrolna (ang. checksum) to liczba wygenerowana na podstawie danych, których poprawnośćma ona potwierdzićw przyszłości.Ów ciąg znaków generuje sięna przyk ład dla plików wymiany danych pomiędzy systemami. Plik z sumąkontrolnąprzekazywany jest wraz ze zbiorem głównym danych. Aplikacja odbierająca (wczytująca) otrzymany plik źródłowy równieżgeneruje sumękontrolnąi porównuje jąz plikiem sumy otrzymanej z zewnętrznego systemu. Jeżeli obie sumy sięzgadzają, to można przyjąć, że dane w trakcie przesyłania nie uległy uszkodzeniu. W przypadku wykrycia niegodności należy przyjąć, że dane uległy przekłamaniu. Specyficznym rodzajem sumy kontrolnej sąliczby kontrolne na przykład w numerze PESEL lub NIP.",
+        answer: `
+          Suma kontrolna to wartość numeryczna lub sekwencja bitów, która jest obliczana w oparciu o dane, aby sprawdzić, czy dane te są poprawne i nie uległy zmianie podczas transmisji, zapisu lub przechowywania. Jest to technika używana w testowaniu oraz w zagadnieniach związanych z bezpieczeństwem danych.`,
       },
       {
         question: "Scenariusze w których testy automatyzujące są konieczne",
@@ -300,14 +300,14 @@ export default {
           "Testy regresji to rodzaj testów oprogramowania, które mają na celu sprawdzenie, czy wprowadzone zmiany w systemie nie powodują powstania nowych błędów ani nie naruszają istniejącej funkcjonalności. Są one wykonywane po wprowadzeniu modyfikacji lub poprawek w oprogramowaniu, takich jak nowe funkcje, poprawki defektów, zmiany w konfiguracji lub aktualizacje. Głównym celem testów regresji jest minimalizacja ryzyka wprowadzenia błędów lub defektów w systemie podczas modyfikacji. Choć zmiana może dotyczyć tylko określonych części kodu, istnieje możliwość, że wpłynie ona na inne obszary lub istniejące funkcje, które wcześniej działały poprawnie. Testy regresji pomagają wychwycić takie problemy, zapewniając, że istniejące funkcje są nadal sprawne po wprowadzeniu zmian.",
       },
       {
-        question: "czym jest testowanie automatyzujące",
+        question: "czym jest testowanie automatyczne",
         answer:
-          "Testowanie automatyczne to technika testowania oprogramowania służąca do testowania i porównywania rzeczywistych wyników z oczekiwanymi.Koszty automatyzacji są początkowo naprawdę wyższe. Obejmuje koszt narzędzia, następnie koszt zasobu testującego automatyzację i jego szkolenie.Ale kiedy skrypty są gotowe, można je wykonywać setki razy wielokrotnie z tą samą dokładnością i dość szybko. Pozwoli to zaoszczędzić wiele godzin ręcznego testowania. Tak więc koszt stopniowo maleje i ostatecznie staje się opłacalną metodą Testowanie regresji .",
+          "Testowanie automatyczne to technika testowania oprogramowania służąca do testowania i porównywania rzeczywistych wyników z oczekiwanymi.Koszty automatyzacji są początkowo naprawdę wyższe. Obejmuje koszt narzędzia, następnie koszt zasobu testującego automatyzację i jego szkolenie.Ale kiedy skrypty są gotowe, można je wykonywać setki razy wielokrotnie z tą samą dokładnością i dość szybko. Pozwoli to zaoszczędzić wiele godzin ręcznego testowania.",
       },
       {
         question: "Czym jest BDD i TDD. Omów te dwa pojęcia",
         answer:
-          "TDD (Test-Driven Development) jest podejściem do tworzenia oprogramowania, w którym główną ideą jest w pierwszej kolejności pisanie testów do nieistniejącej funkcjonalności, a dopiero potem napisanie kodu implementującego tę funkcjonalność. BDD (Behavior-Driven Development) to podejście będące rozwinięciem TDD. Testy pisane z wykorzystaniem składni języka naturalnego (np. zdań w języku angielskim), które wyrażają zachowanie i oczekiwane rezultaty. Kryteria akceptacyjne są pisane w formie scenariuszy i korzystają ze słów kluczowych Given (początkowy warunek), When (opis występującego zdarzenia) oraz Then (oczekiwany rezultat). Dużą zaletą podejścia BDD jest to, że testy zrozumiałe są dla pracowników nietechnicznych. Mogą one również stanowić swego rodzaju dokumentację systemu.",
+          "TDD (Test-Driven Development) jest podejściem do tworzenia oprogramowania, w którym główną ideą jest w pierwszej kolejności pisanie testów do nieistniejącej funkcjonalności, a dopiero potem napisanie kodu implementującego tę funkcjonalność. BDD (Behavior-Driven Development) to podejście będące rozwinięciem TDD. Testy pisane z wykorzystaniem składni języka naturalnego (np. zdań w języku angielskim), które wyrażają zachowanie i oczekiwane rezultaty. Kryteria akceptacyjne są pisane w formie scenariuszy i korzystają ze słów kluczowych Given (początkowy warunek), When (opis występującego zdarzenia) oraz Then (oczekiwany rezultat).",
       },
       {
         question: "Jakie są rodzaje testów",
@@ -315,26 +315,19 @@ export default {
           "Testy funkcjonalne (czarnoskrzynkowe) analizują zewnętrzne zachowanie oprogramowania, traktując je jak czarną skrzynkę, Testy niefunkcjonalne – określają parametry oprogramowania takie jak: wydajność, użyteczność, zdolność do pracy na różnych platformach, Testy białoskrzynkowe (strukturalne) – testy te mogą być oparte na architekturze systemu lub kodzie źródłowym aplikacji. Bazują na budowie wewnętrznej, która jest zwykle „ukryta” przed użytkownikiem końcowym, Testy regresji – ponowne przetestowanie programu po dokonaniu w nim modyfikacji, w celu sprawdzenia, że w wyniku zmian nie powstały nowe defekty lub nie ujawniły się istniejące wcześniej.",
       },
       {
-        question: "Czym są i kto tworzy testy jednostkowe?",
+        question: "Czym są testy jednostkowe?",
         answer:
           "Testy jednostkowe (unit tests) to zbiór testów, które weryfikują, czy jednostka kodu (np. metoda, klasa, serwis) działa zgodnie z oczekiwaniami. Są one zwykle tworzone przez programistów w ramach wytwarzania oprogramowania. Testy te uruchamiane są w izolacji, co oznacza, że nie jesteśmy w żaden sposób związani z innymi elementami systemu. Testy jednostkowe są nieodłącznym elementem wytwarzania oprogramowania w podejściu TDD (Test Driven Development).",
       },
       {
         question: "Jakie informacje powinny się znaleźć w zgłoszeniu defektu?",
         answer:
-          "Szczegóły zgłoszenia często zależą od narzędzia (tzw. bugtrackera) lub od przyjętego podejścia w danej organizacji. Można jednak wskazać kilka elementów, które zwykle są niezbędne do zreprodukowania i naprawienia defektu. nazwa/tytuł (często ze wskazaniem jakiego obszaru lub jakiej aplikacji dotyczy defekt) kroki do zreprodukowania  aktualny oraz oczekiwany rezultat wersja oprogramowania/branch informacja o środowisku informacja, czy występuje na innym (wyższym) środowisku data i czas wystąpienia  zrzut ekranu lub film",
+          "Szczegóły zgłoszenia często zależą od narzędzia (tzw. bugtrackera) lub od przyjętego podejścia w danej organizacji. Można jednak wskazać kilka elementów, które zwykle są niezbędne do zreprodukowania i naprawienia defektu. nazwa/tytuł (często ze wskazaniem jakiego obszaru lub jakiej aplikacji dotyczy defekt) kroki do zreprodukowania  aktualny oraz oczekiwany rezultat wersja oprogramowania/branch informacja o środowisku informacja, czy występuje na innym (wyższym) środowisku data i czas wystąpienia zrzut ekranu lub film",
       },
       {
         question: "Czym są testy end-to-end?",
         answer:
-          "Podczas gdy testy jednostkowe zapewniają programistom pewien stopień pewności, testy jednostkowe i modułowe mają ograniczone możliwości zapewnienia całościowego pokrycia aplikacji po wdrożeniu w środowisku produkcyjnym.W rezultacie testy end-to-end (E2E) zapewniają pokrycie tego, co jest prawdopodobnie najważniejszym aspektem aplikacji: co się dzieje, gdy użytkownicy faktycznie korzystają z twoich aplikacji. Innymi słowy, testy E2E weryfikują wszystkie warstwy w Twojej aplikacji.",
-        secondAnswer:
-          "obejmuje nie tylko kod frontendu, ale wszystkie powiązane usługi i infrastrukturę backendu, które są bardziej reprezentatywne dla środowiska, w którym będą znajdować się Twoi użytkownicy. Testując, jak działania użytkowników wpływają na Twoją aplikację, testy E2E są często kluczem do większej pewności, czy aplikacja działa poprawnie, czy nie.",
-      },
-      {
-        question: "Wymień kategorie testów",
-        answer:
-          "Testy jednostkowe - Testy jednostkowe umożliwiają testowanie poszczególnych jednostek kodu.Pisząc dokładne, znaczące testy, zyskujesz pewność, że w miarę tworzenia nowych funkcji lub refaktoryzacji kodu Twoja aplikacja pozostanie funkcjonalna i stabilna.  Celem testów jednostkowych jest zapewnienie programistom zaufania do ich kodu.,testy komponentów,testy end-to-end",
+          "Testy end-to-end to rodzaj testów funkcjonalnych, które sprawdzają, czy cały system działa zgodnie z oczekiwaniami, a także czy różne jego części (komponenty, funkcje) współpracują ze sobą poprawnie. Te testy symulują rzeczywiste scenariusze użytkownika, sprawdzając, czy aplikacja działa poprawnie od początku do końca, jakby była używana przez końcowego użytkownika.",
       },
       {
         question: "Jakie są cele testów?",
@@ -344,7 +337,15 @@ export default {
       {
         question: "Od czego zależy ryzyko projektowe i co się na nie składa?",
         answer:
-          "Trzeba w tym miejscu wymienić wpływ i możliwość wystąpienia błędu. Ocena wpływu to zadanie analityka testów (business value) podczas gdy ocena możliwości wystąpienia błędu to zadanie dla technicznego analityka testów (technical impact). Dobrze jest tu także opisać jak wygląda identyfikacja ryzyk, różnice pomiędzy ryzykiem projektowym, a produktowym i co robimy żeby je zminimalizować.",
+          `Złożoność projektu: Im bardziej skomplikowany projekt, tym większe ryzyko związane z jego realizacją.Długość trwania projektu: Dłuższe projekty są bardziej podatne na zmiany warunków zewnętrznych, takie jak zmiany w technologii, strategii biznesowej czy rynek konkurencyjny.Zaawansowanie technologiczne: Korzystanie z nowoczesnych, ale nieznanych technologii może zwiększyć ryzyko projektu. Jednocześnie, technologie przestarzałe mogą być trudne do utrzymania, co również wpływa na ryzyko.Dostępność zasobów: Brak dostępu do odpowiednich zasobów, takich jak wykwalifikowana kadra, sprzęt czy oprogramowanie, może zwiększyć ryzyko projektu.Zmiany w zakresie projektu: Częste zmiany w zakresie projektu, zwłaszcza w trakcie jego realizacji, mogą prowadzić do niezamierzonych konsekwencji i zwiększać ryzyko opóźnień oraz niepowodzeń.Brak planu zarządzania ryzykiem: Projekt bez adekwatnego planu zarządzania ryzykiem jest bardziej podatny na nieoczekiwane trudności.Elementy składające się na zarządzanie ryzykiem projektowym obejmują:
+
+          Identyfikacja ryzyka: Rozpoznawanie potencjalnych zagrożeń i szans związanych z projektem.
+          
+          Analiza ryzyka: Ocena wpływu i prawdopodobieństwa wystąpienia każdego ryzyka oraz jego konsekwencji.
+          
+          Planowanie odpowiedzi na ryzyko: Określenie strategii zarządzania ryzykiem, czyli planu działania w przypadku wystąpienia konkretnego zagrożenia.
+          
+          Monitorowanie i kontrola ryzyka: Śledzenie zmian w projekcie i skutków ryzyka oraz dostosowywanie planu zarządzania ryzykiem w miarę potrzeb.`,
       },
       {
         question: "Co to są testy wydajnościowe",
