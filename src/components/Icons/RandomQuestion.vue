@@ -53,6 +53,7 @@ export default {
     ...mapActions("reactQuestions", ["randomReactQuestion"]),
     ...mapActions("typescriptQuestions", ["randomTypescriptQuestion"]),
     ...mapActions("vueQuestions", ["randomVueQuestion"]),
+    ...mapActions("testQuestions", ["randomTestQuestion"]),
     ...mapActions("cypressQuestions", ["randomCypressQuestion"]),
     ...mapActions("postmanQuestions", ["randomPostmanQuestion"]),
     ...mapActions("sqlQuestions", ["randomSqlQuestion"]),

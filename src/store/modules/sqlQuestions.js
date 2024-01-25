@@ -4,19 +4,19 @@ export default {
   state: {
     sqlQuestions: [
       {
-        question: "Czym jest order by?",
+        question: "Jak działa klauzula 'ORDER BY'",
         answer:
-          "Klauzula order by pozwala nam na sortowanie kolumn.Możemy sortować wiele kolumn jednocześnie.Na początku wynik sortowany jest po pierwszym wyrażeniu. Jeśli występują w nim duplikaty są one sortowane po drugim wyrażeniu",
+          "Klauzula 'ORDER BY' jest używana do sortowania wyników zapytania w bazie danych. Pozwala na określenie jednej lub wielu kolumn, według których wyniki mają zostać posortowane. Kiedy używamy 'ORDER BY', wyniki są najpierw sortowane według pierwszej kolumny, a w przypadku duplikatów, są one dalej sortowane według kolejnych kolumn. Jest to przydatne narzędzie do organizowania danych zwracanych przez zapytania.",
       },
       {
-        question: "Opisz słowo kluczowe distinct?",
+        question: "Jak działa słowo kluczowe 'DISTINCT'",
         answer:
-          "słowo kluczowe DISTINCT, które wymusza na bazie danych zwrócenie jedynie różniących się między sobą wyników. Słowo kluczowe DISTINCT należy umieścić na początku listy nazw kolumn.",
+          "Słowo kluczowe 'DISTINCT' jest używane w zapytaniach do bazy danych w celu uzyskania tylko unikalnych wyników. Wymusza ono, aby baza danych zwróciła jedynie różniące się między sobą rekordy. Słowo kluczowe 'DISTINCT' należy umieścić na początku listy nazw kolumn w zapytaniu, aby uzyskać tylko unikalne wartości dla określonych kolumn.",
       },
       {
         question: "Jak ograniczyć liczbę zwracanych wyników?",
         answer:
-          "Polecenie SELECT zwraca wszystkie pasujące wiersze, czyli w wielu sytuacjach wszystkie wiersze tabeli. Co zrobić, jeśli chcemy zwrócić tylko pierwszy wiersz lub  pewien podzbiór wierszy? Zadanie jest wykonalne, ale niestety to jedna z tych  sytuacji, gdy poszczególne implementacje SQL-a różniąsięstosowanąskładnią. W systemie Microsoft SQL Server możemy użyćsłowa kluczowego TOP, by ograniczyć liczbę pobieranych wierszy. Oto przykład",
+          "Polecenie SELECT zwraca wszystkie pasujące wiersze, co w wielu sytuacjach oznacza wszystkie wiersze tabeli. Gdy chcemy ograniczyć wyniki do jednego wiersza lub określonego podzbioru, używamy słowa kluczowego LIMIT.",
       },
       {
         question: "Jak pobrać wiele kolumn>",
@@ -129,51 +129,42 @@ export default {
       },
       {
         question: "Do czego służy polecenie DELETE?",
-        answer:
-          "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
+        answer: "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
       },
       {
         question: "Czym są podzapytania?",
-        answer:
-          "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
+        answer: "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
       },
       {
         question: "Opisz instrukcje warunkowe Case?",
-        answer:
-          "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
+        answer: "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
       },
       {
         question: "złączenie zewnatrzne?",
-        answer:
-          "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
+        answer: "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
       },
       {
         question: "różnica pomiedzy złączeniem zewnetrznym i wewnatrznym?",
-        answer:
-          "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
+        answer: "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
       },
       {
         question: "Jak tworzyć aliasy w mysql?",
-        answer:
-          `Aby utworzyć alias w MySQL, możesz użyć klauzuli AS w zapytaniu SELECT. Oto przykład, jak to zrobić: SELECT kolumna1 AS alias1, kolumna2 AS alias2
+        answer: `Aby utworzyć alias w MySQL, możesz użyć klauzuli AS w zapytaniu SELECT. Oto przykład, jak to zrobić: SELECT kolumna1 AS alias1, kolumna2 AS alias2
           FROM tabela;`,
       },
       {
         question: "Czym jest self join??",
-        answer:
-          `Aby utworzyć alias w MySQL, możesz użyć klauzuli AS w zapytaniu SELECT. Oto przykład, jak to zrobić: SELECT kolumna1 AS alias1, kolumna2 AS alias2
+        answer: `Aby utworzyć alias w MySQL, możesz użyć klauzuli AS w zapytaniu SELECT. Oto przykład, jak to zrobić: SELECT kolumna1 AS alias1, kolumna2 AS alias2
           FROM tabela;`,
       },
       {
         question: "Bazy relacyjne a nierelacyjne?",
-        answer:
-          `Aby utworzyć alias w MySQL, możesz użyć klauzuli AS w zapytaniu SELECT. Oto przykład, jak to zrobić: SELECT kolumna1 AS alias1, kolumna2 AS alias2
+        answer: `Aby utworzyć alias w MySQL, możesz użyć klauzuli AS w zapytaniu SELECT. Oto przykład, jak to zrobić: SELECT kolumna1 AS alias1, kolumna2 AS alias2
           FROM tabela;`,
       },
       {
         question: "indexy w sql?",
-        answer:
-          `Aby utworzyć alias w MySQL, możesz użyć klauzuli AS w zapytaniu SELECT. Oto przykład, jak to zrobić: SELECT kolumna1 AS alias1, kolumna2 AS alias2
+        answer: `Aby utworzyć alias w MySQL, możesz użyć klauzuli AS w zapytaniu SELECT. Oto przykład, jak to zrobić: SELECT kolumna1 AS alias1, kolumna2 AS alias2
           FROM tabela;`,
       },
       {
@@ -183,8 +174,7 @@ export default {
       },
       {
         question: "Czym jest left,right i full join?",
-        answer:
-          `RIGHT JOIN (lub RIGHT OUTER JOIN):
+        answer: `RIGHT JOIN (lub RIGHT OUTER JOIN):
           Zwraca wszystkie rekordy z drugiej (prawej) tabeli (tabeli po prawej stronie operatora RIGHT JOIN), a także wspólne rekordy z pierwszej (lewej) tabeli.
           W przypadku, gdy nie ma dopasowań, wartości z lewej tabeli będą miały wartości NULL w kolumnach związanych z prawą tabelą.FULL JOIN (lub FULL OUTER JOIN):
           Zwraca wszystkie rekordy z obu tabel, z dopasowanymi rekordami, jeśli takie istnieją.
@@ -192,13 +182,11 @@ export default {
       },
       {
         question: "Czym jest natural join?",
-        answer:
-          "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
+        answer: "Nie można usunąć jednej kolumny, usuwa się zawsze cały rekord",
       },
       {
         question: "Czym się różni join od inner join??",
-        answer:
-          `
+        answer: `
           W kontekście języka zapytań SQL różnica między JOIN a INNER JOIN polega na tym, że INNER JOIN to forma bardziej precyzyjna. W praktyce są one często używane zamiennie, ponieważ większość baz danych traktuje obie frazy jako synonimy.Podstawowa różnica wynika z tego, że INNER JOIN jest bardziej explicite oznaczony, co pomaga zrozumieć, że chodzi o konkretne łączenie oparte na pasujących wartościach. Zapis JOIN sam w sobie może obejmować różne typy łączeń, takie jak INNER JOIN, LEFT JOIN, RIGHT JOIN, czy FULL JOIN.`,
       },
     ],
