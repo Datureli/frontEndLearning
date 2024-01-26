@@ -96,7 +96,7 @@ export default {
       {
         question: "Od czego zależy ryzyko projektowe i co się na nie składa?",
         answer:
-          "Wpływ i możliwość wystąpienia błędu. Ocena wpływu to zadanie analityka testów (business value) podczas gdy ocena możliwości wystąpienia błędu to zadanie dla technicznego analityka testów (technical impact). Dobrze jest tu także opisać jak wygląda identyfikacja ryzyk, różnice pomiędzy ryzykiem projektowym, a produktowym i co robimy żeby je zminimalizować.",
+          "Wpływ i możliwość wystąpienia błędu. Dobrze jest tu także opisać jak wygląda identyfikacja ryzyk, różnice pomiędzy ryzykiem projektowym, a produktowym i co robimy żeby je zminimalizować.",
       },
       {
         question: "Jak postępować z informacją, że u mnie działa?",
@@ -497,11 +497,11 @@ export default {
       {
         question: "Czym jest page object model?",
         answer: `
-          Page Object Model (POM) to wzorzec projektowania stosowany w testowaniu oprogramowania, zwłaszcza w testowaniu automatycznym interfejsów użytkownika. W skrócie, POM pomaga zorganizować i utrzymać kod testów, szczególnie gdy mamy do czynienia z aplikacjami webowymi.Podstawowe elementy Page Object Model to:
+          Page Object Model to wzorzec projektowania stosowany w testowaniu, zwłaszcza w testowaniu automatycznym interfejsów użytkownika. POM pomaga zorganizować i utrzymać kod testów, szczególnie gdy mamy do czynienia z aplikacjami webowymi.Podstawowe elementy Page Object Model to:
 
-          Page Classes (Klasy Stron): Każda strona w aplikacji ma swoją dedykowaną klasę, która zawiera elementy interfejsu użytkownika (np. pola tekstowe, przyciski) oraz metody do interakcji z tymi elementami.
+          Klasy Stron: Każda strona w aplikacji ma swoją dedykowaną klasę, która zawiera elementy interfejsu użytkownika (np. pola tekstowe, przyciski) oraz metody do interakcji z tymi elementami.
           
-          Test Classes (Klasy Testów): Klasy, które zawierają testy. Testy używają metod i elementów z klas Page Object.
+          Klasy Testów: Klasy, które zawierają testy. Testy używają metod i elementów z klas Page Object.
           
           Test Data (Dane Testowe): Wartości, które są używane w testach, zazwyczaj przechowywane w osobnej warstwie, aby było łatwo je zmieniać w razie potrzeby.Oto dwie główne korzyści z korzystania z Modelu Obiektu Strony (Page Object Model):
 
