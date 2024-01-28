@@ -19,6 +19,7 @@ export default {
 html,
 body {
   overflow: hidden;
+  height: 100%;
 }
 
 #app {

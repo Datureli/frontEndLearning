@@ -30,8 +30,7 @@ export default {
       },
       {
         question: "Wymień przykłady testów dynamicznych?",
-        answer:
-          `Testowanie jednostkowe (Dynamiczne): Skupia się na testowaniu poszczególnych komponentów (jednostek) kodu źródłowego w izolacji. Testy jednostkowe wykonują funkcje, metody lub klasy, sprawdzając, czy zachowują się zgodnie z oczekiwaniami.
+        answer: `Testowanie jednostkowe (Dynamiczne): Skupia się na testowaniu poszczególnych komponentów (jednostek) kodu źródłowego w izolacji. Testy jednostkowe wykonują funkcje, metody lub klasy, sprawdzając, czy zachowują się zgodnie z oczekiwaniami.
 
           Testowanie integracyjne (Dynamiczne): Ocena interakcji między różnymi jednostkami kodu. Testowanie integracyjne sprawdza, czy poszczególne komponenty współpracują ze sobą poprawnie.
           
@@ -343,9 +342,54 @@ export default {
           "Testy end-to-end to rodzaj testów funkcjonalnych, które sprawdzają, czy cały system działa zgodnie z oczekiwaniami, a także czy różne jego części (komponenty, funkcje) współpracują ze sobą poprawnie. Te testy symulują rzeczywiste scenariusze użytkownika, sprawdzając, czy aplikacja działa poprawnie od początku do końca, jakby była używana przez końcowego użytkownika.",
       },
       {
+        question: "Czym jest dług techniczny?",
+        answer: `Długi techniczny (ang. technical debt) to metafora używana w branży IT, oznaczająca zobowiązania techniczne wynikające z wyborów projektowych, decyzji programistycznych czy innych działań, które wymagają późniejszego rozwiązania lub poprawy. Jest to forma kumulacji zaległości w zakresie utrzymania oprogramowania lub projektu.zybkość implementacji kosztem jakości: Czasami, aby spełnić krótkoterminowe cele projektowe, programiści mogą zdecydować się na szybkie, ale mniej zrównoważone rozwiązania.
+
+          Brak dokumentacji: Zaniedbanie dokumentacji kodu i projektu może prowadzić do długu technicznego. Brak odpowiedniej dokumentacji sprawia, że zrozumienie i utrzymanie kodu stają się trudniejsze.
+          
+          Zaniedbanie testów: Pominięcie lub niewystarczająca ilość testów jednostkowych i testów integracyjnych może prowadzić do powstawania błędów, które są trudniejsze do zidentyfikowania i naprawienia w przyszłości.
+          
+          Nieefektywne rozwiązania: Wybieranie łatwiejszych, ale mniej efektywnych rozwiązań technologicznych może prowadzić do utworzenia długu technicznego.
+          
+          Brak aktualizacji technologicznych: Nieprzeprowadzanie regularnych aktualizacji technologicznych i utrzymanie przestarzałych bibliotek czy narzędzi może prowadzić do zaległości technicznych. Dług techniczny ma tendencję do narastania, a jego zaniedbywanie może prowadzić do problemów w dłuższej perspektywie. Dlatego ważne jest, aby zespoły programistyczne regularnie przeglądały i zarządzały długiem technicznym, podejmując świadome decyzje, planując refaktoryzację i utrzymując dobry standard jakościowy kodu.`,
+      },
+      {
         question: "Jakie są cele testów?",
         answer:
           "Wśród głównych celów testowania wymienić należy znajdowanie błędów oraz zapobieganie defektom.Rzetelnie przeprowadzony proces testowania wpływa pozytywnie na jakość wytworzonego oprogramowania oraz dostarcza deweloperom informacji niezbędnych do dalszego rozwoju produktu.",
+      },
+      {
+        question: "Jakie są sposoby deploymentu?",
+        answer: `Local Deployment (Lokalny Deployment):
+
+        Oprogramowanie jest wdrożone i uruchamiane na jednym komputerze lub lokalnej sieci. Jest to często używane podczas developowania i testowania aplikacji.
+        On-Premises Deployment (Deployment Wewnętrzny):
+        
+        Oprogramowanie jest wdrożone na serwerach znajdujących się w fizycznych lokalizacjach firmy lub organizacji. Organizacje mają pełną kontrolę nad infrastrukturą.
+        Cloud Deployment (Deployment w Chmurze):
+        
+        Oprogramowanie jest wdrożone w chmurze, co oznacza, że działa na infrastrukturze chmurowej dostarczanej przez dostawcę usług chmurowych. To podejście umożliwia skalowalność, elastyczność i dostępność.
+        Hybrid Deployment (Hybrydowy Deployment):
+        
+        Kombinuje lokalne i chmurowe elementy, umożliwiając organizacjom elastyczność w wyborze, które usługi są utrzymywane w chmurze, a które w lokalnej infrastrukturze.
+        Staging Deployment (Deployment na Etapie Testowym):
+        
+        Wdrożenie w środowisku testowym (staging) przed przeniesieniem na środowisko produkcyjne. Pozwala to na przetestowanie i debugowanie aplikacji w kontrolowanym środowisku przed dostarczeniem jej użytkownikom końcowym.
+        Rolling Deployment:
+        
+        Wprowadzanie aktualizacji lub nowej wersji oprogramowania, stopniowo zastępując stare wersje. Minimalizuje to ewentualne problemy, gdy tylko część systemu jest zaktualizowana w danym czasie.
+        Blue-Green Deployment:
+        
+        Wersje aplikacji (Blue i Green) są utrzymywane równocześnie. Ruch użytkowników jest kierowany do jednej z wersji. Gdy nowa wersja jest gotowa, ruch może być przełączany między wersjami.
+        Canary Deployment:
+        
+        Nowa wersja oprogramowania jest stopniowo wdrażana na niewielką grupę użytkowników przed pełnym wdrożeniem. Pozwala to na wcześniejsze wykrycie potencjalnych problemów.
+        Zero-Downtime Deployment:
+        
+        Wprowadzanie zmian bez przerwy w działaniu aplikacji. Minimalizuje to wpływ na dostępność systemu dla użytkowników końcowych.
+        Feature Toggle Deployment:
+        
+        Nowe funkcje są wprowadzane, ale są ukrywane lub dezaktywowane dla użytkowników. Funkcje są aktywowane lub dezaktywowane zdalnie, co pozwala na kontrolę nad ich wdrażaniem.`,
       },
       {
         question: "Od czego zależy ryzyko projektowe i co się na nie składa?",
@@ -362,7 +406,12 @@ export default {
       {
         question: "Co to są testy wydajnościowe",
         answer:
-          "Są to testy przeprowadzane w celu oceny czy nasza aplikacja spełnia wymagania dokumentacji w zakresie możliwego jej obciążenia. Celem przeprowadzenia takich testów będzie weryfikacja czy nasza aplikacja działa dobrze (w określony sposób) pod danych obciążeniem. Przy weryfikacji wydajności aplikacji koniecznie trzeba zwrócić uwagę na czasy odpowiedzi aplikacji, czas reakcji, niezawodność, wykorzystanie zasobów czy jej skalowalność. Celem takich testów jest znalezienie tzw. „wąskich gardeł”. ",
+          "Są to testy przeprowadzane w celu oceny czy nasza aplikacja spełnia wymagania dokumentacji w zakresie możliwego jej obciążenia. Celem przeprowadzenia takich testów będzie weryfikacja czy nasza aplikacja działa dobrze pod danych obciążeniem. Przy weryfikacji wydajności aplikacji koniecznie trzeba zwrócić uwagę na czasy odpowiedzi aplikacji, czas reakcji, niezawodność, wykorzystanie zasobów czy jej skalowalność. Celem takich testów jest znalezienie tzw. wąskich gardeł. ",
+      },
+      {
+        question: "Czym są wąskie gardła",
+        answer:
+          "W kontekście informatyki i technologii, termin wąskie gardło odnosi się do punktu lub komponentu w systemie, który ogranicza ogólną wydajność lub przepustowość systemu. To jest miejsce, które działa najwolniej w porównaniu do innych elementów systemu, co wpływa na ogólną wydajność systemu.",
       },
       {
         question: "Co to jest przypadek testowy?",
@@ -372,7 +421,13 @@ export default {
       {
         question: "czym jest FIRST?",
         answer:
-          "Fast oznacza, że uruchomienie testów powinno być szybkie, a dzięki temu informacja zwrotna o wyniku testów jest również przekazana w szybkim czasie.Isolated oznacza, że testy nie powinny zależeć od siebie. Dzięki temu testy można uruchamiać osobno w całym zestawie i zawsze dają te same wyniki.Repeatable oznacza, że testy powinny być powtarzalne w każdych warunkach. Wobec tego powinny one zależeć tyko od kodu, który testują. Self-validating oznacza, że każdy test powinien dać klarowną informację o tym, czy przeszedł pozytywnie czy nie. Jeśli nie przeszedł pozytywnie, to powinien dać informację co się stało oraz dlaczego nie przeszedł.Timely oznacza, żeby testy były pisane razem z nowym kodem, czyli aby były dostarczone na czas. Niedopuszczalna jest sytuacja, że testy powstają po jakimś czasie.   ",
+          `W kontekście testowania oprogramowania, FIRST to skrót od pięciu zasad, które są zalecane w podejściu do pisania dobrych testów jednostkowych. Te zasady są często stosowane w ramach podejścia znanego jako Test-Driven Development. Fast: Testy jednostkowe powinny być szybkie w wykonaniu. Szybkość testów jest istotna, ponieważ programiści często uruchamiają je często w trakcie pracy nad kodem, a im szybciej dostaną informacje zwrotne, tym lepiej. Isolated/Independent (Izolowane/Niezależne): Każdy test jednostkowy powinien być niezależny od innych testów. Wynik jednego testu nie powinien wpływać na wyniki innych testów. Izolacja testów pomaga unikać sytuacji, w których błędy jednego testu wpływają na błędy w innych.
+          
+          Repeatable (Powtarzalne): Testy jednostkowe powinny dawać te same wyniki za każdym razem, gdy są uruchamiane. To oznacza, że nie powinny zależeć od zewnętrznych czynników, takich jak stan bazy danych czy sieć.
+          
+          Self-Validating (Samodzielne): Wynik testu jednostkowego powinien być łatwy do zinterpretowania. Nie powinno być konieczne ręczne sprawdzanie rezultatów testów. Wynik powinien być automatycznie oceniany jako sukces lub porażka.
+          
+          Timely (Punktualne): Testy jednostkowe powinny być pisane na tyle wcześnie, aby programiści mogli je uruchamiać regularnie podczas procesu rozwoju. Pisanie testów jednostkowych późno w procesie może prowadzić do trudności w dodawaniu testów do już istniejącego kodu.`,
       },
       {
         question: "soap vs rest?",

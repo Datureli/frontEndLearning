@@ -1,5 +1,5 @@
 <template>
-  <v-btn color="transparent" width="50">
+  <v-btn color="transparent" width="50" elevation="0">
     <v-tooltip bottom>
       <template v-slot:activator="{ on, attrs }">
         <v-btn color="transparent" outlined v-bind="attrs" v-on="on">

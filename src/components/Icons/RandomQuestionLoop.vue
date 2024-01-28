@@ -1,6 +1,7 @@
 <template>
   <div>
     <v-btn
+      elevation="0"
       v-shortkey="['2']"
       @shortkey="
         randomLoop();

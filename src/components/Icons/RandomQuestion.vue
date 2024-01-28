@@ -1,6 +1,7 @@
 <template>
   <v-btn
     color="transparent"
+    elevation="0"
     v-shortkey="['1']"
     @shortkey="globalRandomQuestion"
     @click="globalRandomQuestion"

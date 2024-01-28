@@ -1,7 +1,11 @@
 <template>
   <v-btn
+    elevation="0"
     color="transparent"
-    @click="disableAnswers(); changeIcon()"
+    @click="
+      disableAnswers();
+      changeIcon();
+    "
   >
     <v-icon x-large>{{
       disableStatus ? "mdi-comment-off-outline" : "mdi-comment-outline"

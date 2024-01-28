@@ -18,9 +18,37 @@ export default {
         answer: `Możesz użyć polecenia cy.get('input-selector').type('wprowadzany-tekst') do wprowadzania tekstu do pola input.`,
       },
       {
+        question: "Czym jest zrównolegnanie testów?",
+        answer: `Zrównoleglenie testów to proces uruchamiania wielu testów jednocześnie, co pozwala przyspieszyć proces testowania. W Cypress, możesz zrównoleglać testy, korzystając z narzędzi i platform do zarządzania testami. Oto ogólny sposób, w jaki możesz to zrobić:Cypress Dashboard: Cypress oferuje płatne rozwiązanie o nazwie Cypress Dashboard, które umożliwia zrównoleglanie testów na ich infrastrukturze. Możesz uzyskać dostęp do ich narzędzi do zrównoleglania i monitorowania wyników.
+        Testowanie równoległe w CI/CD: Jeśli używasz systemu CI/CD, takiego jak Jenkins, GitLab CI, czy GitHub Actions, możesz skonfigurować równoległe uruchamianie testów na różnych maszynach.`,
+      },
+      {
         question: "Jak sprawdzić, czy element jest widoczny na stronie?",
         answer:
           "Cypress oferuje polecenie should('be.visible'), które można użyć, aby sprawdzić widoczność elementu.",
+      },
+      {
+        question: "Na czym polegają problemy z iframe?",
+        answer: `Ograniczenia Same-Origin Policy:
+
+          Problem: Zasada jednego pochodzenia (Same-Origin Policy) może powodować problemy w dostępie do zawartości iframu, jeśli strony pochodzą z różnych domen.
+          Rozwiązanie: Upewnij się, że strony w iframie są z tego samego źródła co strona nadrzędna. Jeśli nie jest to możliwe, możesz użyć odpowiednich komend Cypressa do pracy z zawartością iframu.
+          Błąd Braku Wsparcia dla Niektórych Zdarzeń:
+          
+          Problem: Niektóre przeglądarki i Cypress mogą nie wspierać pewnych zdarzeń, takich jak mouseover czy mouseout, w przypadku elementów w iframie.
+          Rozwiązanie: Wypróbuj różne zdarzenia, takie jak click czy invoke, a także sprawdź dokumentację Cypressa, aby dowiedzieć się, które zdarzenia są obsługiwane.
+          Brak Wsparcia dla window.postMessage w iframie:
+          
+          Problem: Jeśli strona w iframie korzysta z window.postMessage do komunikacji, Cypress może nie obsługiwać tego mechanizmu w sposób bezpośredni.
+          Rozwiązanie: Skonsultuj dokumentację Cypressa, aby sprawdzić, czy są dostępne specjalne komendy do obsługi postMessage. Możesz także rozważyć dostosowanie kodu strony w iframie do pracy z Cypressem.
+          Problemy z Oczekiwaniem na Elementy w iframie:
+          
+          Problem: Standardowe komendy Cypressa do oczekiwania na elementy mogą nie działać poprawnie w iframie.
+          Rozwiązanie: Spróbuj użyć komend specyficznych dla iframu, takich jak cy.frameLoaded(), cy.iframe().find(), aby lepiej zarządzać oczekiwaniem na elementy w iframie.
+          Brak Obsługi Niektórych Zdarzeń JavaScript:
+          
+          Problem: Niektóre zdarzenia JavaScript, takie jak zmiana historii przeglądarki (window.history), mogą być problematyczne w iframie.
+          Rozwiązanie: W przypadku takich zdarzeń, możesz rozważyć modyfikację kodu strony w iframie w celu przetestowania jego działania w środowisku Cypress.`,
       },
       {
         question: "Jak obsłużyć oczekiwanie w teście Cypress?",
@@ -28,8 +56,18 @@ export default {
             `,
       },
       {
+        question: "Czym jest iframe?",
+        answer: `
+        Iframe (Inline Frame) to element HTML używany do osadzania jednej strony internetowej wewnątrz innej. Element ten pozwala na wyświetlanie jednej strony internetowej wewnątrz innej, tworząc ramkę lub okno wewnątrz strony nadrzędnej.Iframe pozwala na osadzanie innej strony internetowej w bieżącej stronie. Może to być przydatne, gdy chcemy wyświetlić treści z innej domeny lub pochodzące z różnych źródeł. Iframe jest często używane do osadzania wewnętrznych stron, aplikacji lub widżetów w ramach strony głównej. Na przykład, można by użyć iframu, aby osadzić mapę Google, kalendarz lub formularz logowania.Ze względów bezpieczeństwa, polityka jednego pochodzenia (Same-Origin Policy) ogranicza dostęp do zawartości iframu. Strony w iframie muszą pochodzić z tego samego źródła, aby uniknąć problemów z dostępem do dokumentu iframu.JavaScript na stronie nadrzędnej może modyfikować zawartość iframu, a także odwrotnie. To umożliwia dynamiczną interakcję między zawartością strony nadrzędnej a osadzoną w iframie. 
+            `,
+      },
+      {
         question: "Jak sprawdzić, czy element ma określoną klasę CSS?",
         answer: `Użyj polecenia should('have.class', 'nazwa-klasy'), aby sprawdzić, czy element ma określoną klasę.`,
+      },
+      {
+        question: "co to są flaky tests?",
+        answer: ` to termin odnoszący się do testów jednostkowych lub testów automatycznych, które wykazują niestabilne zachowanie. Flaky tests to te, które czasami przechodzą pomyślnie, a innym razem nie, nawet bez zmian w kodzie źródłowym aplikacji.`,
       },
       {
         question:
