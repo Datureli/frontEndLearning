@@ -5,26 +5,39 @@ export default {
     testQuestions: [
       {
         question: "Po co testujemy aplikacje?",
-        answer:
-          "Testowanie oprogramowania ma na celu sprawdzenie jego poprawnego działania oraz zebranie informacji na jego temat. Gdy testy zakończą się niepowodzeniem, bardzo ważne jest, aby struktura testów jednostkowych zawierała przydatne błędy.Testowanie oprogramowania pozwala ocenić jego jakość i zmniejszyć ryzyko wystąpienia awarii podczas eksploatacji.",
+        answer: `
+          Testowanie aplikacji ma na celu sprawdzenie poprawności działania oprogramowania, identyfikację potencjalnych błędów oraz zbieranie informacji na temat jego jakości. Gdy testy wykryją nieprawidłowości, umożliwiają programistom poprawienie błędów przed wdrożeniem aplikacji. Testy pomagają również zapewnić, że aplikacja spełnia określone wymagania funkcjonalne i jakościowe, co przekłada się na lepsze doświadczenia użytkowników oraz zwiększa stabilność i niezawodność oprogramowania w czasie eksploatacji.`,
+      },
+      {
+        question: "Co to jest równoważnikowa metoda testowania?",
+        answer: `Równoważnikowa metoda testowania (ang. equivalence partitioning) to technika projektowania testów, która dzieli przestrzeń wejściową programu na grupy równoważnych klas, gdzie każda klasa powinna być przetestowana na podstawie tych samych kryteriów. Celem tej metody jest zminimalizowanie liczby testów, jednocześnie zapewniając, że każda klasa równoważności zostanie poddana przynajmniej jednemu testowi.Przykładem może być sytuacja, w której dane wejściowe są wymagane w postaci liczb całkowitych, a zakres akceptowalnych wartości to od 1 do 100. Równoważnikowa metoda testowania podzieliłaby przestrzeń wejściową na grupy, takie jak: Wartości poniżej 1
+          Wartości od 1 do 100
+          Wartości powyżej 100  Następnie wystarczy przetestować jedną wartość z każdej klasy równoważności, aby upewnić się, że program poprawnie obsługuje całą klasę. Dzięki temu metoda ta pozwala oszczędzić czas i zasoby przy jednoczesnym zapewnieniu skutecznego pokrycia różnych przypadków testowych.`,
       },
       {
         question: "Czym jest testowanie?",
         answer:
-          "Testowanie to proces oceny oprogramowania w celu zapewnienia, że działa ono zgodnie z oczekiwaniami i spełnia określone wymagania. Jest to nieodzowna część cyklu życia projektu programistycznego, pomagająca zidentyfikować błędy, potwierdzić poprawność działania oraz zapewnić, że oprogramowanie spełnia określone standardy jakości.",
+          "Testowanie to proces oceny oprogramowania w celu zidentyfikowania różnic między oczekiwanym a rzeczywistym stanem produktu oraz sprawdzenia, czy spełnia ono określone wymagania. Testowanie ma na celu poprawę jakości oprogramowania, zapewnienie jego niezawodności, zgodności z wymaganiami i zminimalizowanie ryzyka wystąpienia błędów podczas eksploatacji.",
       },
       {
         question: "pozytywne i negatywne przypadki testowe?",
-        answer: `Pozytywne przypadki testowe sprawdzają, czy oprogramowanie działa zgodnie z wymaganiami i jak reaguje na pozytywne dane wejściowe. Celem tych testów jest upewnienie się, że oprogramowanie działa poprawnie w normalnych warunkach.
-
-          Negatywne przypadki testowe sprawdzają, jak oprogramowanie reaguje na negatywne dane wejściowe lub nieoczekiwane sytuacje. Celem tych testów jest upewnienie się, że oprogramowanie jest odpornie na błędy i że może poprawnie radzić sobie z trudnymi sytuacjami.
-          
-          Ważne jest, aby uwzględniać zarówno pozytywne, jak i negatywne przypadki testowe w procesie testowania oprogramowania, aby upewnić się, że oprogramowanie działa poprawnie w każdych warunkach.`,
+        answer: `Pozytywne przypadki testowe sprawdzają, czy oprogramowanie działa zgodnie z wymaganiami i jak reaguje na pozytywne dane wejściowe. Celem tych testów jest upewnienie się, że oprogramowanie działa poprawnie w normalnych warunkach. Negatywne przypadki testowe sprawdzają, jak oprogramowanie reaguje na negatywne dane wejściowe lub nieoczekiwane sytuacje. Celem tych testów jest upewnienie się, że oprogramowanie jest odpornie na błędy i że może poprawnie radzić sobie z trudnymi sytuacjami. Ważne jest, aby uwzględniać zarówno pozytywne, jak i negatywne przypadki testowe w procesie testowania oprogramowania, aby upewnić się, że oprogramowanie działa poprawnie w każdych warunkach.`,
       },
       {
         question: "Czym jest testowanie dynamiczne?",
         answer:
-          "Testowanie dynamiczne polega na konieczności uruchomienia testowanego modułu lub systemu. Jest to proces, który pozwala na sprawdzenie zachowania i funkcjonalności systemu w czasie rzeczywistym. Przez testowanie dynamiczne można zidentyfikować potencjalne błędy i problemy, które mogą wystąpić podczas działania systemu. Jest to ważna część procesu testowania oprogramowania, umożliwiająca weryfikację, czy system działa zgodnie z oczekiwaniami.",
+          "Testowanie dynamiczne to rodzaj testowania oprogramowania, które polega na wykonaniu kodu programu w celu oceny jego zachowania w różnych warunkach. Proces ten obejmuje uruchamianie aplikacji i przeprowadzanie testów na żywo, co pozwala na ocenę rzeczywistego zachowania oprogramowania podczas jego działania.",
+      },
+      {
+        question: "Wymień przykłady testów dynamicznych?",
+        answer:
+          `Testowanie jednostkowe (Dynamiczne): Skupia się na testowaniu poszczególnych komponentów (jednostek) kodu źródłowego w izolacji. Testy jednostkowe wykonują funkcje, metody lub klasy, sprawdzając, czy zachowują się zgodnie z oczekiwaniami.
+
+          Testowanie integracyjne (Dynamiczne): Ocena interakcji między różnymi jednostkami kodu. Testowanie integracyjne sprawdza, czy poszczególne komponenty współpracują ze sobą poprawnie.
+          
+          Testowanie systemowe (Dynamiczne): Sprawdza kompletny system pod kątem zgodności z wymaganiami i spełnienia oczekiwań użytkownika. Testy systemowe oceniają, czy cała aplikacja działa zgodnie z oczekiwaniami w różnych scenariuszach.
+          
+          Testowanie akceptacyjne (Dynamiczne): Ocena gotowego produktu pod kątem akceptacji przez użytkownika końcowego. Testy akceptacyjne sprawdzają, czy produkt spełnia wymagania biznesowe i jest gotowy do wdrożenia.`,
       },
       {
         question: "Czym jest piramida testów?",
@@ -51,7 +64,7 @@ export default {
       {
         question: "Jaka jest różnica pomiędzy firmware, a software?",
         answer:
-          "Oprogramowanie (software) odnosi się do ogólnego pojęcia programów komputerowych, które są zainstalowane na urządzeniach i wykonują różnorodne zadania. Są to aplikacje, systemy operacyjne, gry, edytory tekstowe i wiele innych. Oprogramowanie może być zainstalowane, aktualizowane i odinstalowywane przez użytkownika w celu zmiany funkcjonalności urządzenia.Natomiast firmware to specyficzny rodzaj oprogramowania wbudowanego w sprzęt, takiego jak urządzenia elektroniczne, komputery, smartfony, konsolki, routery itp. Firmware jest zwykle zapisane w pamięci stałej urządzenia, na przykład w mikrokontrolerze lub pamięci flash. Często jest to niskopoziomowe oprogramowanie kontrolujące podstawowe funkcje i zachowanie sprzętu. Przykładem firmware'u może być BIOS w komputerze lub firmware w systemie Android w smartfonie.",
+          "Firmware: Jest to rodzaj oprogramowania, które jest wbudowane bezpośrednio w urządzenie sprzętowe, zazwyczaj na stałe. Często jest przechowywane w pamięci nieulotnej, takiej jak pamięć flash. To ogólny termin obejmujący aplikacje, systemy operacyjne, sterowniki i inne programy komputerowe. Oprogramowanie jest zazwyczaj przechowywane na dyskach twardych, pamięciach RAM lub innych nośnikach danych.",
       },
       {
         question: "Jakie metody testowania znałeś i stosowałeś w swojej pracy?",
@@ -265,9 +278,9 @@ export default {
           "Model cyklu życia oprogramowania opisuje rodzaje czynności wykonywanych na poszczególnych etapach projektu wytwarzania oprogramowania oraz powiązania logiczne i chronologiczne między tymi  czynnościami. Istnieje wiele różnych modeli cyklu życia oprogramowania, a każdy z nich wymaga  innego podejścia do testowania",
       },
       {
-        question: "Czym są smoke testy (testy dymne)?",
+        question: "Czym są testy dymne?",
         answer:
-          "Smoke Testy to wybrany podzbiór wszystkich przypadków testowych, które pokrywają główne funkcjonalności. Selekcja takich testów umożliwia szybką weryfikację, czy kluczowe funkcjonalności programu działają poprawnie – ma to duże znaczenie w automatyzacji.",
+          "testy dymne to wybrany podzbiór wszystkich przypadków testowych, które pokrywają główne funkcjonalności. Selekcja takich testów umożliwia szybką weryfikację, czy kluczowe funkcjonalności programu działają poprawnie – ma to duże znaczenie w automatyzacji.",
       },
       {
         question: "Czym są wartości brzegowe?",
@@ -336,8 +349,7 @@ export default {
       },
       {
         question: "Od czego zależy ryzyko projektowe i co się na nie składa?",
-        answer:
-          `Złożoność projektu: Im bardziej skomplikowany projekt, tym większe ryzyko związane z jego realizacją.Długość trwania projektu: Dłuższe projekty są bardziej podatne na zmiany warunków zewnętrznych, takie jak zmiany w technologii, strategii biznesowej czy rynek konkurencyjny.Zaawansowanie technologiczne: Korzystanie z nowoczesnych, ale nieznanych technologii może zwiększyć ryzyko projektu. Jednocześnie, technologie przestarzałe mogą być trudne do utrzymania, co również wpływa na ryzyko.Dostępność zasobów: Brak dostępu do odpowiednich zasobów, takich jak wykwalifikowana kadra, sprzęt czy oprogramowanie, może zwiększyć ryzyko projektu.Zmiany w zakresie projektu: Częste zmiany w zakresie projektu, zwłaszcza w trakcie jego realizacji, mogą prowadzić do niezamierzonych konsekwencji i zwiększać ryzyko opóźnień oraz niepowodzeń.Brak planu zarządzania ryzykiem: Projekt bez adekwatnego planu zarządzania ryzykiem jest bardziej podatny na nieoczekiwane trudności.Elementy składające się na zarządzanie ryzykiem projektowym obejmują:
+        answer: `Złożoność projektu: Im bardziej skomplikowany projekt, tym większe ryzyko związane z jego realizacją.Długość trwania projektu: Dłuższe projekty są bardziej podatne na zmiany warunków zewnętrznych, takie jak zmiany w technologii, strategii biznesowej czy rynek konkurencyjny.Zaawansowanie technologiczne: Korzystanie z nowoczesnych, ale nieznanych technologii może zwiększyć ryzyko projektu. Jednocześnie, technologie przestarzałe mogą być trudne do utrzymania, co również wpływa na ryzyko.Dostępność zasobów: Brak dostępu do odpowiednich zasobów, takich jak wykwalifikowana kadra, sprzęt czy oprogramowanie, może zwiększyć ryzyko projektu.Zmiany w zakresie projektu: Częste zmiany w zakresie projektu, zwłaszcza w trakcie jego realizacji, mogą prowadzić do niezamierzonych konsekwencji i zwiększać ryzyko opóźnień oraz niepowodzeń.Brak planu zarządzania ryzykiem: Projekt bez adekwatnego planu zarządzania ryzykiem jest bardziej podatny na nieoczekiwane trudności.Elementy składające się na zarządzanie ryzykiem projektowym obejmują:
 
           Identyfikacja ryzyka: Rozpoznawanie potencjalnych zagrożeń i szans związanych z projektem.
           
