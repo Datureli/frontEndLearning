@@ -164,7 +164,7 @@ export default {
       {
         question: "Dlaczego testowanie jest niezbędne?",
         answer:
-          "Testowanie pozwala zweryfikować, czy oprogramowanie spełnia określone wymagania i standardy jakości.Testowanie umożliwia wczesne wykrywanie błędów i problemów w oprogramowaniu. Dobre pokrycie testami daje pewność, że oprogramowanie działa poprawnie w różnych warunkach i sytuacjach. To zwiększa zaufanie użytkowników do produktu. Testowanie ułatwia zarządzanie zmianami w oprogramowaniu. Przy wprowadzaniu nowych funkcji lub modyfikacjach testy pomagają sprawdzić, czy istniejące funkcjonalności nie zostały naruszone. esty wydajnościowe pozwalają zidentyfikować obszary, które mogą wymagać optymalizacji. To kluczowe dla zapewnienia, że oprogramowanie działa sprawnie nawet przy dużej liczbie użytkowników. estowanie sprawdza, czy oprogramowanie spełnia określone wymagania biznesowe i funkcjonalne.  ",
+          "Testowanie pozwala zweryfikować, czy oprogramowanie spełnia określone wymagania i standardy jakości. Umożliwia wczesne wykrywanie błędów i problemów w oprogramowaniu. Dobre pokrycie testami daje pewność, że oprogramowanie działa poprawnie w różnych warunkach i sytuacjach. To zwiększa zaufanie użytkowników do produktu. Testowanie ułatwia zarządzanie zmianami w oprogramowaniu. Przy wprowadzaniu nowych funkcji lub modyfikacjach testy pomagają sprawdzić, czy istniejące funkcjonalności nie zostały naruszone. Testy wydajnościowe pozwalają zidentyfikować obszary, które mogą wymagać optymalizacji. To kluczowe dla zapewnienia, że oprogramowanie działa sprawnie nawet przy dużej liczbie użytkowników.",
       },
       {
         question: "Czym jest framework Jest",
@@ -414,9 +414,15 @@ export default {
           "W kontekście informatyki i technologii, termin wąskie gardło odnosi się do punktu lub komponentu w systemie, który ogranicza ogólną wydajność lub przepustowość systemu. To jest miejsce, które działa najwolniej w porównaniu do innych elementów systemu, co wpływa na ogólną wydajność systemu.",
       },
       {
-        question: "Co to jest przypadek testowy?",
+        question: "Czym jes wzorzec AAA",
         answer:
-          "Przypadek testowy to nic innego jak zestaw warunków lub zmiennych, w ramach których tester ustala, czy testowany system spełnia wymagania lub działa poprawnie.",
+          `Wzorzec AAA w testowaniu odnosi się do trzech kluczowych faz, które często występują w strukturze testów jednostkowych. Te fazy to:
+
+          Arrange (Przygotuj): W tej fazie przygotowujesz wszystkie niezbędne warunki i dane dla testu. To obejmuje inicjalizację obiektów, ustawienie danych wejściowych i inne przygotowania.
+          
+          Act (Działaj): W tej fazie wykonujesz właściwą operację lub akcję, którą chcesz przetestować. To jest część, w której występuje główne wykonanie testu.
+          
+          Assert (Potwierdź): W tej fazie sprawdzasz, czy wyniki działania testu są zgodne z oczekiwaniami. Jeśli wyniki są zgodne z oczekiwaniami, test jest uznawany za udany; w przeciwnym razie, test jest uważany za nieudany.`,
       },
       {
         question: "czym jest FIRST?",

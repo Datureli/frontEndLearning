@@ -32,7 +32,7 @@
           <v-btn
             width="300"
             :disabled="!isFilled"
-            :to="'/about/test-knowledge'"
+            :to="'/recruitment-questions/test-knowledge'"
             rounded
             color="primary"
             >Start</v-btn

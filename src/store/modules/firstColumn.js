@@ -96,6 +96,12 @@ export default {
         icon: "mdi-lock",
         color: "blue",
       },
+      {
+        title: "Cloud",
+        link: "/recruitment-questions/cloud",
+        icon: "mdi-lock",
+        color: "blue",
+      },
     ],
   },
 };

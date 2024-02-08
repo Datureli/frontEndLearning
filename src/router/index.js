@@ -108,6 +108,12 @@ const routes = [
           import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
         name: "Cybersecurity",
       },
+      {
+        path: "cloud",
+        component: () =>
+          import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
+        name: "Cloud",
+      },
     ],
   },
 

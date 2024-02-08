@@ -8,11 +8,12 @@
       >
         <h1 class="text-h3 font-weight-black mt-15 mb-5">Wybierz kategorię</h1>
         <span class="text-h3 font-weight-black mt-15 mb-5">lub</span>
-        <h1 class="text-h3 font-weight-black mt-5">
-          rozpocznij test wiedzy
-        </h1>
+        <h1 class="text-h3 font-weight-black mt-5">rozpocznij test wiedzy</h1>
       </div>
       <RecruitmentQuestion />
+      <div v-if="$route.path === '/recruitment-questions/test-knowledge'">
+        <TestYourKnowledge />
+      </div>
     </v-sheet>
     <IconComponent
       v-if="$route.path !== '/recruitment-questions'"
@@ -23,12 +24,14 @@
 
 <script>
 import IconComponent from "../Icons/IconComponent";
+import TestYourKnowledge from "../RecruimentQuestions/TestYourKnowledge"
 import RecruitmentQuestion from "../RecruimentQuestions/RecruitmentQuestion";
 
 export default {
   components: {
     IconComponent,
     RecruitmentQuestion,
+    TestYourKnowledge
   },
   computed: {
     height() {

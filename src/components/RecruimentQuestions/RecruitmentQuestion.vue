@@ -77,6 +77,7 @@ export default {
     ...mapState("sqlQuestions", ["sqlQuestions"]),
     ...mapState("wordpressQuestions", ["wordpressQuestions"]),
     ...mapState("cybersecurityQuestions", ["cybersecurityQuestions"]),
+    ...mapState("cloudQuestions", ["cloudQuestions"]),
     ...mapState(["disable"]),
 
     questions() {
@@ -99,7 +100,8 @@ export default {
           cypress: this.cypressQuestions,
           sql: this.sqlQuestions,
           wordpress: this.wordpressQuestions,
-          cybersecurity: this.cybersecurityQuestions
+          cybersecurity: this.cybersecurityQuestions,
+          cloud: this.cloudQuestions
         };
 
         return questionCategories[category] || null;
