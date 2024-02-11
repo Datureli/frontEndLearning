@@ -1,7 +1,10 @@
 <template>
-  <v-container fluid class="d-flex flex-column align-center justify-center fill-height">
-    <v-img src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg">
-      <div class="d-flex flex-column align-center justify-center" style="height: 500px;">
+  <v-container fluid class="fill-height">
+    <v-img
+      src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+      class="fill-height"
+    >
+      <div class="d-flex flex-column align-center justify-center fill-height">
         <h1 class="white--text mt-15 text-center">
           Pierwsza w Polsce platforma do nauki front-endu
         </h1>
@@ -43,3 +46,8 @@ export default {
   },
 };
 </script>
+<style>
+.v-img {
+  height:100vh !important;
+}
+</style>
