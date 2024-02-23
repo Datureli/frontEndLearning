@@ -204,6 +204,21 @@ export default {
           "pierwszym argumentem jest opis testu, kolejnym funkcja w której wywołujemy expect sprawdzającą poprawność wartości.",
       },
       {
+        question: "Kiedy automatyzować testy?",
+        answer:
+          "Automatyzację testu warto rozważyć, gdy test jest powtarzalny, zachowanie przetestowanej funkcji rzadko ulega zmianom, jego wykonanie wymaga czasu od ludzkiego testera, obejmuje skomplikowane obliczenia i służy potwierdzeniu, że nowe zmiany nie wpływają negatywnie na istniejącą funkcjonalność.",
+      },
+      {
+        question: "W jakich sytuacjach unikasz testów automatycznych?",
+        answer:
+          "programowanie lub testowana funkcjonalność ulega częstym zmianom. Oznacza to konieczność częstego aktualizowania testów automatycznych, aby pozostały one aktualne. W rezultacie testy mogą szybko stać się przestarzałe i przestawać być przydatne. Testowanie eksploracyjne również nie jest odpowiednie do automatyzacji. Ludzki tester może znacznie bardziej dogłębnie zbadać oprogramowanie niż komputer.",
+      },
+      {
+        question: "Po co nam cross-browser testing?",
+        answer: `
+          Testowanie cross-browserowe jest niezbędne, ponieważ użytkownicy korzystają z aplikacji internetowych na różnych przeglądarkach, platformach i urządzeniach. Ponieważ nie masz kontroli nad preferencjami użytkowników, zapewnienie spójności działania aplikacji internetowej na różnych przeglądarkach staje się kluczowe. Testowanie cross-browserowe pozwala zweryfikować, czy Twoja aplikacja działa sprawnie na różnych platformach i urządzeniach, nawet gdy korzysta się z różnych wersji popularnych przeglądarek internetowych. To zapewnia lepsze doświadczenia użytkownika i pomaga zidentyfikować oraz rozwiązać problemy z zgodnością, które mogą wystąpić w różnych środowiskach przeglądania..`,
+      },
+      {
         question: "paradoks pestycydów",
         answer:
           "Ciągłe powtarzanie tych samych testów prowadzi do sytuacji, w której przestają one w pewnym momencie wykrywać nowe defekty. Aby móc wykrywać nowe defekty, może być konieczne zmodyfikowanie dotychczasowych testów i danych testowych, a także napisanie nowych testów. Niezmieniane testy tracą z czasem zdolność do wykrywania defektów, podobnie jak pestycydy po pewnym czasie nie są zdolne do eliminowania szkodników. W niektórych przypadkach — takich jak automatyczne testowanie regresji — paradoks pestycydów może być korzystny, ponieważ pozwala potwierdzić, że liczba defektów związanych z regresją jest niewielka",
@@ -214,9 +229,67 @@ export default {
           "Nie wszystkie nieoczekiwane wyniki testów oznaczają awarie. Wynik fałszywie pozytywny może być,między innymi, skutkiem błędów związanych z wykonaniem testów, defektów w danych testowych,środowisku testowym, w innych testaliach itp. Podobne problemy mogą być przyczyną sytuacjiodwrotnej – wyniku fałszywie negatywnego, czyli sytuacji, w której testy nie wykrywają defektu, którypowinny wykryć. Wyniki fałszywie pozytywne są raportowane jako defekty, których w rzeczywistości nie ma",
       },
       {
+        question: "Jakie są dobre praktyki w testach automatycznych?",
+        answer:
+          "Wybieraj testy do automatyzacji na podstawie ich powtarzalności, krytyczności i stabilności funkcji. Nie wszystko trzeba automatyzować, więc skup się na kluczowych obszarach.Zapisuj wyniki testów automatycznych w bazie błędów, aby umożliwić łatwe śledzenie postępu, identyfikowanie problemów i szybkie reagowanie na defekty.W miarę jak projekt rozwija się, dostosuj testy automatyczne do zmian w funkcjonalności i wymaganiach. Regularne aktualizacje pomagają utrzymać zgodność testów z aktualnym stanem oprogramowania.Regularnie monitoruj wyniki testów automatycznych. Analizuj wyniki, identyfikuj trendów i podejmuj działania korygujące w przypadku pojawienia się problemów.",
+      },
+      {
         question: "Jak połączyć jest z typescriptem?",
         answer:
           "są dwa sposoby na integrację JESTa z Typescriptem, jeden sprawdza typy, drugi korzysta z wygenerowanych plików js. My oczywiście chcemy sprawdzać typy, więc użyjemy ts-jest!",
+      },
+      {
+        question: "Czym jest docker?",
+        answer:
+          " Docker pozwala nam na uruchamianie dowolnych aplikacji w wyizolowanym środowisku. Zajmuje przy tym niewiele zasobów (w porównaniu np. do maszyny wirtualnej). ",
+      },
+      {
+        question: "Czym jest stub?",
+        answer:
+          "Stub to obiekt, który w testach służy do imitowania właściwej implementacji. Jego zadaniem jest wyłącznie zwrócenie zadanej wartości. Przykładowy test jednostkowy używający kilku obiektów typu stub może wyglądać następująco:",
+      },
+      {
+        question: "czym jest Flake Detection?",
+        answer: `"Flake detection" odnosi się do procesu identyfikowania "flake'ów" w kontekście testowania oprogramowania. Flake to termin używany, gdy testy automatyczne są niestabilne i dają różne wyniki podczas różnych uruchomień, pomimo braku zmian w kodzie lub funkcjonalności aplikacji.
+
+          Flake detection jest praktyką mającą na celu identyfikację testów, które są podatne na flakiness, czyli te, które nie zawsze kończą się tym samym wynikiem przy każdym uruchomieniu. Flake'y mogą powodować problemy w procesie ciągłej integracji i dostawy (CI/CD), ponieważ utrudniają wiarygodne monitorowanie jakości kodu i automatycznego wdrażania.
+          
+          Aby wykryć flake'y, organizacje stosują różne strategie, takie jak:
+          
+          Powtarzalność testów: Testy powinny być powtarzalne, co oznacza, że powinny dawać te same wyniki przy wielokrotnym uruchomieniu. Jeśli testy są niestabilne, warto zidentyfikować czynniki wpływające na tę niestabilność.
+          
+          Analiza wyników: Regularna analiza wyników testów pozwala zidentyfikować te, które są podatne na flakiness. Warto zbadać przypadki testowe, które zwracają różne wyniki w różnych sytuacjach.
+          
+          Debugowanie testów: Wdrażanie mechanizmów debugowania dla testów automatycznych może pomóc w zidentyfikowaniu problemów i źródeł flakiness.
+          
+          Automatyczne ponowne uruchamianie: W niektórych przypadkach organizacje decydują się automatycznie ponownie uruchamiać testy, które zakończą się niepowodzeniem. Jeśli testy są flakiness, to ponowne uruchamianie może pomóc w uzyskaniu poprawnych wyników.
+          
+          Znalezienie i rozwiązanie flake'ów jest kluczowym krokiem w utrzymaniu stabilnych i efektywnych procesów testowania automatycznego.`,
+      },
+      {
+        question: "Wymień zalety cypressa?",
+        answer:
+          "Automatic Waiting, Flake Detection, Network Traffic Control, Screenshots and Videos, Debuggability, real time reloard, ).",
+      },
+      {
+        question: "Jak prawidłowo opisac błąd?",
+        answer:
+          "Automatic Waiting, Flake Detection, Network Traffic Control, Screenshots and Videos, Debuggability, real time reloard, ).",
+      },
+      {
+        question: "Jaka jest roznica miedzy retestem a regresją?",
+        answer:
+          "Retest to ponowne przeprowadzenie testów ktore wykazały błąd, natomaist regresja jest przetestowanie poprzednich funkcjonalonosci w celu potwierdzenia ze caly system nie zawiera nowych błędów w przypadku gdyby ktos implementowal nową funkcjonalność",
+      },
+      {
+        question: "Co jeżeli bład nie wystepuje u innych?",
+        answer:
+          "Trzeba dokladnie sprawdzić opis błędu,dzielenie ekranu wraz z programistą, wziałbym pod uwagę odemienne środowiska pracy takie jak wersja system,system operacyjny,wersja przeglądarki,dokumentacja i przeglad kodu",
+      },
+      {
+        question: "Cykl życia błędu?",
+        answer:
+          "Trzeba dokladnie sprawdzić opis błędu,dzielenie ekranu wraz z programistą, wziałbym pod uwagę odemienne środowiska pracy takie jak wersja system,system operacyjny,wersja przeglądarki,dokumentacja i przeglad kodu",
       },
       {
         question:
@@ -415,8 +488,7 @@ export default {
       },
       {
         question: "Czym jes wzorzec AAA",
-        answer:
-          `Wzorzec AAA w testowaniu odnosi się do trzech kluczowych faz, które często występują w strukturze testów jednostkowych. Te fazy to:
+        answer: `Wzorzec AAA w testowaniu odnosi się do trzech kluczowych faz, które często występują w strukturze testów jednostkowych. Te fazy to:
 
           Arrange (Przygotuj): W tej fazie przygotowujesz wszystkie niezbędne warunki i dane dla testu. To obejmuje inicjalizację obiektów, ustawienie danych wejściowych i inne przygotowania.
           
@@ -426,8 +498,7 @@ export default {
       },
       {
         question: "czym jest FIRST?",
-        answer:
-          `W kontekście testowania oprogramowania, FIRST to skrót od pięciu zasad, które są zalecane w podejściu do pisania dobrych testów jednostkowych. Te zasady są często stosowane w ramach podejścia znanego jako Test-Driven Development. Fast: Testy jednostkowe powinny być szybkie w wykonaniu. Szybkość testów jest istotna, ponieważ programiści często uruchamiają je często w trakcie pracy nad kodem, a im szybciej dostaną informacje zwrotne, tym lepiej. Isolated/Independent (Izolowane/Niezależne): Każdy test jednostkowy powinien być niezależny od innych testów. Wynik jednego testu nie powinien wpływać na wyniki innych testów. Izolacja testów pomaga unikać sytuacji, w których błędy jednego testu wpływają na błędy w innych.
+        answer: `W kontekście testowania oprogramowania, FIRST to skrót od pięciu zasad, które są zalecane w podejściu do pisania dobrych testów jednostkowych. Te zasady są często stosowane w ramach podejścia znanego jako Test-Driven Development. Fast: Testy jednostkowe powinny być szybkie w wykonaniu. Szybkość testów jest istotna, ponieważ programiści często uruchamiają je często w trakcie pracy nad kodem, a im szybciej dostaną informacje zwrotne, tym lepiej. Isolated/Independent (Izolowane/Niezależne): Każdy test jednostkowy powinien być niezależny od innych testów. Wynik jednego testu nie powinien wpływać na wyniki innych testów. Izolacja testów pomaga unikać sytuacji, w których błędy jednego testu wpływają na błędy w innych.
           
           Repeatable (Powtarzalne): Testy jednostkowe powinny dawać te same wyniki za każdym razem, gdy są uruchamiane. To oznacza, że nie powinny zależeć od zewnętrznych czynników, takich jak stan bazy danych czy sieć.
           
@@ -495,7 +566,7 @@ export default {
       {
         question: "Czym jest mockowanie?",
         answer:
-          "Mockowanie to technika izolowania obiektów testowych poprzez zastępowanie zależności obiektami, które można kontrolować i sprawdzać.",
+          "Mock to obiekt, którego używa się zamiast rzeczywistej implementacji w trakcie testów jednostkowych. Pozwala on na określenie jakich interakcji spodziewamy się w trakcie testów. Następnie można sprawdzić czy spodziewane interakcje rzeczywiście wystąpiły.",
       },
       {
         question: "Czym jest planowanie testów?",
@@ -556,6 +627,73 @@ export default {
         question: "Czym są lokatory",
         answer:
           "Funkcjonalności to nic innego jak czynności wykonywane przez aplikacje. Testy funkcjonalne analizują zewnętrzne zachowanie oprogramowania, traktując je jako czarną skrzynkę.Testy niefunkcjonalne skupiają się na charakterystyce działania aplikacji i obejmują: testy wydajności, użyteczności, niezawodności, bezpieczeństwa oraz testy możliwości pracy na różnych platformach.",
+      },
+      {
+        question: "Rodzaje testowania niefunkcjonalnego",
+        answer:
+          "testy wydajności,bezpieczeństwa kompatybilności, użyteczności,dostepnosci,przeciążeniowe,obciążeniowe,skalowalności",
+      },
+      {
+        question: "Czym Iaac",
+        answer:
+          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+      },
+      {
+        question: "czym jest komunikacja po CDP w playwrith",
+        answer:
+          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+      },
+      {
+        question:
+          "Czym się różni playwrith od od bibliotek takich jak Cypress czy Selenium (wbudowana komunikacja, webdriver, CDP, webdriver BIDI",
+        answer:
+          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+      },
+      {
+        question:
+          "Czym się różni playwrith od od bibliotek takich jak Cypress czy Selenium (wbudowana komunikacja, webdriver, CDP, webdriver BIDI",
+        answer:
+          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+      },
+      {
+        question: "Do jakich testow nie nadaje sie playwrith",
+        answer:
+          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+      },
+      {
+        question:
+          "Jakie są znane integracje Playwright do testów niefuncjonalnych (dostępność, wydajność backend, frontend, bezpieczeństwo)",
+        answer:
+          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+      },
+      {
+        question:
+          "Wyjaśnienie, jak zarządzać timeoutami i jakie mogą być konsekwencje niewłaściwych ustawień.",
+        answer:
+          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+      },
+      {
+        question:
+          "Na czym polega dynamiczne czekanie, jak to wiąże się z webFirstAssertions",
+        answer:
+          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+      },
+      {
+        question:
+          "Zalety i wady stosowania np. dataTestID, filtrowania i zagnieżdżenia lokatorów",
+        answer:
+          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+      },
+      {
+        question:
+          "Zarządzanie sesją, różnice między logowaniem GUI a API, pliki sesji, tokeny",
+        answer:
+          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+      },
+      {
+        question: "Testy obciążeniowe vs przeciążeniowe",
+        answer:
+          "testy wydajności,bezpieczeństwa kompatybilności, użyteczności,dostepnosci,przeciążeniowe,obciążeniowe,skalowalności",
       },
       {
         question: "Opisz wzorzec wrapper pattern",

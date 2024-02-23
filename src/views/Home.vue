@@ -3,6 +3,7 @@
     <v-img
       src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
       class="fill-height"
+      style="transition: 5s;"
     >
       <div class="d-flex flex-column align-center justify-center fill-height">
         <h1 class="white--text mt-15 text-center">

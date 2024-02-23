@@ -14,6 +14,7 @@
         >
           <FirstColumn />
           <RightColumn />
+          <TestingCourse />
         </v-list>
       </v-app-bar>
       <v-navigation-drawer temporary v-model="drawer" absolute>
@@ -49,6 +50,7 @@
 <script>
 import FirstColumn from "../components/RecruitmentQuestionsLayout/FirstColumn.vue";
 import RightColumn from "../components/RecruitmentQuestionsLayout/RightColumn";
+import TestingCourse from "../components/RecruitmentQuestionsLayout/TestingCourse.vue";
 import { mapState } from "vuex";
 export default {
   data: () => ({
@@ -115,6 +117,7 @@ export default {
   components: {
     RightColumn,
     FirstColumn,
+    TestingCourse,
   },
 };
 </script>
