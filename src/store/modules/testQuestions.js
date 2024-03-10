@@ -10,9 +10,14 @@ export default {
       },
       {
         question: "Co to jest równoważnikowa metoda testowania?",
-        answer: `Równoważnikowa metoda testowania (ang. equivalence partitioning) to technika projektowania testów, która dzieli przestrzeń wejściową programu na grupy równoważnych klas, gdzie każda klasa powinna być przetestowana na podstawie tych samych kryteriów. Celem tej metody jest zminimalizowanie liczby testów, jednocześnie zapewniając, że każda klasa równoważności zostanie poddana przynajmniej jednemu testowi.Przykładem może być sytuacja, w której dane wejściowe są wymagane w postaci liczb całkowitych, a zakres akceptowalnych wartości to od 1 do 100. Równoważnikowa metoda testowania podzieliłaby przestrzeń wejściową na grupy, takie jak: Wartości poniżej 1
-          Wartości od 1 do 100
-          Wartości powyżej 100  Następnie wystarczy przetestować jedną wartość z każdej klasy równoważności, aby upewnić się, że program poprawnie obsługuje całą klasę. Dzięki temu metoda ta pozwala oszczędzić czas i zasoby przy jednoczesnym zapewnieniu skutecznego pokrycia różnych przypadków testowych.`,
+        answer: `Metoda równoważnikowa w testowaniu oprogramowania to technika projektowania testów, która dzieli przestrzeń wejściową programu na grupy równoważnych klas. Każda klasa jest testowana na podstawie tych samych kryteriów, a celem tej metody jest zminimalizowanie liczby testów, jednocześnie zapewniając, że każda klasa równoważności zostanie poddana przynajmniej jednemu testowi.
+
+        Przykładem może być sytuacja, w której dane wejściowe są wymagane w postaci liczb całkowitych, a zakres akceptowalnych wartości to od 1 do 100. Metoda równoważnikowa podzieliłaby przestrzeń wejściową na grupy, takie jak:
+        
+        Wartości poniżej 1
+        Wartości od 1 do 100
+        Wartości powyżej 100
+        Następnie wystarczy przetestować jedną wartość z każdej klasy równoważności, aby upewnić się, że program poprawnie obsługuje całą klasę. Dzięki temu metoda ta pozwala oszczędzać czas i zasoby przy jednoczesnym zapewnieniu skutecznego pokrycia różnych przypadków testowych.`,
       },
       {
         question: "Czym jest testowanie?",
@@ -30,13 +35,12 @@ export default {
       },
       {
         question: "Wymień przykłady testów dynamicznych?",
-        answer: `Testowanie jednostkowe (Dynamiczne): Skupia się na testowaniu poszczególnych komponentów (jednostek) kodu źródłowego w izolacji. Testy jednostkowe wykonują funkcje, metody lub klasy, sprawdzając, czy zachowują się zgodnie z oczekiwaniami.
-
-          Testowanie integracyjne (Dynamiczne): Ocena interakcji między różnymi jednostkami kodu. Testowanie integracyjne sprawdza, czy poszczególne komponenty współpracują ze sobą poprawnie.
+        answer: `Testowanie jednostkowe Skupia się na testowaniu poszczególnych komponentów (jednostek) kodu źródłowego w izolacji. 
+        Testowanie integracyjne Ocena interakcji między różnymi jednostkami kodu. Testowanie integracyjne sprawdza, czy poszczególne komponenty współpracują ze sobą poprawnie.
           
-          Testowanie systemowe (Dynamiczne): Sprawdza kompletny system pod kątem zgodności z wymaganiami i spełnienia oczekiwań użytkownika. Testy systemowe oceniają, czy cała aplikacja działa zgodnie z oczekiwaniami w różnych scenariuszach.
+          Testowanie systemowe Sprawdza kompletny system pod kątem zgodności z wymaganiami i spełnienia oczekiwań użytkownika. Testy systemowe oceniają, czy cała aplikacja działa zgodnie z oczekiwaniami w różnych scenariuszach.
           
-          Testowanie akceptacyjne (Dynamiczne): Ocena gotowego produktu pod kątem akceptacji przez użytkownika końcowego. Testy akceptacyjne sprawdzają, czy produkt spełnia wymagania biznesowe i jest gotowy do wdrożenia.`,
+          Testowanie akceptacyjne Ocena gotowego produktu pod kątem akceptacji przez użytkownika końcowego. Testy akceptacyjne sprawdzają, czy produkt spełnia wymagania biznesowe i jest gotowy do wdrożenia.`,
       },
       {
         question: "Czym jest piramida testów?",
@@ -64,6 +68,10 @@ export default {
         question: "Jaka jest różnica pomiędzy firmware, a software?",
         answer:
           "Firmware: Jest to rodzaj oprogramowania, które jest wbudowane bezpośrednio w urządzenie sprzętowe, zazwyczaj na stałe. Często jest przechowywane w pamięci nieulotnej, takiej jak pamięć flash. To ogólny termin obejmujący aplikacje, systemy operacyjne, sterowniki i inne programy komputerowe. Oprogramowanie jest zazwyczaj przechowywane na dyskach twardych, pamięciach RAM lub innych nośnikach danych.",
+      },
+      {
+        question: "Czym są testy migawek ( snapshot testing )?",
+        answer: `testy migawkowe nie mają na celu bezpośredniego sprawdzenia poprawnego zachowania aplikacji. Mają one wiele form, ale zazwyczaj odnoszą się do weryfikacji względem wcześniej wykonanych zrzutów danych, zrzutów ekranów, zamrożonych plików dyskowych itp.Bazują one na porównaniu wyników, konfrontując aktualne dane (obrazy) wyjściowe z zapisanym wcześniej poprawnym wzorcem tych danych (obrazów), ale bez sprawdzania, czy zachowanie aplikacji generujące aktualny rezultat było poprawne.`,
       },
       {
         question: "Jakie metody testowania znałeś i stosowałeś w swojej pracy?",
@@ -116,6 +124,12 @@ export default {
           "Dobrze jest upewnić się, czy programista reprodukuje defekt na tym samym środowisku i postępuje dokładnie krok po kroku z naszymi instrukcjami. Byćmoże jest jakas nieznaczna różnica która ma wpływ na ostateczny rezultat. Zdarza się też, że programiści nie używają wersji instalacyjnej oprogramowania, ale budują je z kodu. Niezależnie od tego, o ile to oczywiście możliwe, dobrze jest testować na środowisku które jest jaknajbardziej zbliżone do tego w którym pracuje klient.",
       },
       {
+        question:
+          "Jak wykryć bugi związane z wolnym połączeniem internetowym albo nawet z jego brakiem?",
+        answer:
+          "Zamiast wyłączać router, możemy przejść do zakładki Network i zasymulować takie połączenie internetowe, na jakim chcemy przetestować aplikację:",
+      },
+      {
         question: "Czym jest testowanie statyczne?",
         answer: `
           Testowanie statyczne to rodzaj testowania oprogramowania, które odbywa się bez konieczności uruchamiania programu. Testowanie statyczne ma na celu identyfikację problemów we wczesnych fazach cyklu życia projektu, zanim kod zostanie uruchomiony.  `,
@@ -159,7 +173,7 @@ export default {
       {
         question: "różnica pomiędzy testowaniem a debugowaniem",
         answer:
-          "Celem testowania jest sprawdzenie, czy oprogramowanie spełnia określone wymagania i czy działa poprawnie. Testy mają na celu zapewnienie, że aplikacja wykonuje się zgodnie z oczekiwaniami, a wszelkie błędy są wykrywane i poprawiane. Celem debugowania jest identyfikacja, lokalizacja i naprawa błędów w kodzie. Debugowanie jest procesem analizy i eliminowania problemów, które zostały wykryte podczas testowania lub użytkowania aplikacji. Testowanie: Jest wykonywane przed wdrożeniem aplikacji lub jej części Debugowanie: Zachodzi po wykryciu problemu, czy to podczas testowania, czy w trakcie użytkowania aplikacji. Debugowanie ma miejsce po wystąpieniu błędu w celu zrozumienia jego źródła i skorygowania. Wynikiem testowania jest ocena jakości oprogramowania, identyfikacja ewentualnych błędów i potwierdzenie, czy spełnia ono określone wymagania. Debugowanie: Wynikiem debugowania jest poprawa i naprawa błędów w kodzie. Celem jest zrozumienie, dlaczego dany błąd wystąpił, i wprowadzenie zmian w kodzie w celu jego usunięcia",
+          "Celem testowania jest sprawdzenie, czy oprogramowanie spełnia określone wymagania i czy działa poprawnie. Testy mają na celu zapewnienie, że aplikacja wykonuje się zgodnie z oczekiwaniami. Celem debugowania jest identyfikacja, lokalizacja i naprawa błędów w kodzie. Testowanie: Jest wykonywane przed wdrożeniem aplikacji lub jej części Debugowanie: Zachodzi po wykryciu problemu, czy to podczas testowania, czy w trakcie użytkowania aplikacji. Debugowanie ma miejsce po wystąpieniu błędu w celu zrozumienia jego źródła i skorygowania. Wynikiem testowania jest ocena jakości oprogramowania, identyfikacja ewentualnych błędów i potwierdzenie, czy spełnia ono określone wymagania. Debugowanie: Wynikiem debugowania jest poprawa i naprawa błędów w kodzie.",
       },
       {
         question: "Dlaczego testowanie jest niezbędne?",
@@ -357,22 +371,61 @@ export default {
       {
         question: "Czym są wartości brzegowe?",
         answer:
-          "Analizęi ustalenie wartości brzegowych wykonuje sięw celu zaprojektowania testu celującego bezpośrednio w krawędzie przedziału (warunku) z uwagi na to, że jest to miejsce szczególnie narażone na błędy.Aplikacja zawiera filtr, który używa zakresu dat do zawężenia prezentowanych wyników (wyszukiwanie). Załóżmy, że filtr oferuje opcje wyszukiwania: bieżący miesiąc, bieżący rok, poprzedni rok. Trudno sobie wyobrazić, że tester będzie wprowadzał 059d85d3d9ef86c601f68775a9b1e31c059d85d3d9ef86c601f68775a9b1e31c 132 Testowanie oprogramowania. Podręcznik dla początkujących (generował) co najmniej 365x2 (2 lata — historia) wartości w celu weryfikacji zachowania aplikacji. Bywa, że warunek ilościowy nie jest jedynym i dodatkowo należy zróżnicowaćdane, co zwielokrotniłoby ilośćwierszy. W tym celu należy posłużyćsię analiząwartości brzegowych, tzn. maksymalnymi i minimalnymi wartościami, które  będą wykorzystywane w decyzyjnym warunku filtra.",
+          "W analizie i ustalaniu wartości brzegowych wykonuje się to w celu zaprojektowania testu, który skupia się bezpośrednio na krawędziach przedziału (warunku), ponieważ są to miejsca szczególnie narażone na błędy. Przykładowo, jeśli aplikacja zawiera filtr, który używa zakresu dat do zawężenia prezentowanych wyników (np. wyszukiwania), wartości brzegowe mogą być istotne. Załóżmy, że filtr oferuje opcje wyszukiwania takie jak bieżący miesiąc, bieżący rok i poprzedni rok. Tester może skupić się na wartościach brzegowych, eliminując konieczność wprowadzania każdej możliwej daty. Analiza wartości brzegowych obejmuje maksymalne i minimalne wartości, które są używane w decyzyjnych warunkach filtra, co pozwala zoptymalizować proces testowania.",
       },
       {
         question: "kiedy nie automatyzować?",
         answer:
-          "Nie powinniśmy próbować automatyzacji testy negatywne lub awaryjne , ponieważ w przypadku tych testów testerzy muszą myśleć analitycznie, a testy negatywne nie są naprawdę proste, aby dać wynik pozytywny lub negatywny, który może nam pomóc.",
+          "Automatyzacji testów nie zaleca się przede wszystkim w przypadku testów negatywnych lub awaryjnych. W sytuacjach, gdy konieczne jest analityczne myślenie testerów, a testy negatywne są zbyt złożone, aby jednoznacznie określić wynik pozytywny lub negatywny, automatyzacja może być mniej skuteczna i trudniejsza do osiągnięcia pożądanych rezultatów.",
+      },
+      {
+        question: "tablica deccyzycja?",
+        answer:
+          "Automatyzacji testów nie zaleca się przede wszystkim w przypadku testów negatywnych lub awaryjnych. W sytuacjach, gdy konieczne jest analityczne myślenie testerów, a testy negatywne są zbyt złożone, aby jednoznacznie określić wynik pozytywny lub negatywny, automatyzacja może być mniej skuteczna i trudniejsza do osiągnięcia pożądanych rezultatów.",
+      },
+      {
+        question: "Czym jest request i response",
+        answer:
+          "Automatyzacji testów nie zaleca się przede wszystkim w przypadku testów negatywnych lub awaryjnych. W sytuacjach, gdy konieczne jest analityczne myślenie testerów, a testy negatywne są zbyt złożone, aby jednoznacznie określić wynik pozytywny lub negatywny, automatyzacja może być mniej skuteczna i trudniejsza do osiągnięcia pożądanych rezultatów.",
+      },
+      {
+        question: "Rodzaje odpowiedzi http",
+        answer:
+          "1xx (Informacyjne): Odpowiedzi informacyjne to informacje tylko dla klienta i oznaczają, że żądanie zostało przyjęte i serwer nadal przetwarza je. 2xx (Sukces): Odpowiedzi sukcesu oznaczają, że żądanie klienta zostało przyjęte i zrozumiane oraz zostało pomyślnie zrealizowane. 3xx (Przekierowanie): Odpowiedzi przekierowania informują klienta, że powinien on wykonać dodatkowe działania w celu ukończenia żądania. 4xx (Błąd klienta): Odpowiedzi błędów klienta informują, że żądanie klienta było błędne lub nie może zostać zrealizowane przez serwer. 5xx (Błąd serwera): Odpowiedzi błędów serwera informują, że serwer napotkał błąd lub nie jest w stanie zrealizować poprawnie żądania klienta.",
+      },
+      {
+        question: "Czym jest json web token",
+        answer:
+          "Automatyzacji testów nie zaleca się przede wszystkim w przypadku testów negatywnych lub awaryjnych. W sytuacjach, gdy konieczne jest analityczne myślenie testerów, a testy negatywne są zbyt złożone, aby jednoznacznie określić wynik pozytywny lub negatywny, automatyzacja może być mniej skuteczna i trudniejsza do osiągnięcia pożądanych rezultatów.",
+      },
+      {
+        question: "Czym jest flaky tests",
+        answer: `"Flaky tests" to termin używany w kontekście testowania oprogramowania, aby opisać testy, które nie zawsze przechodzą lub nie przechodzą zawsze zgodnie z oczekiwaniami. Flaky tests są uważane za problematyczne, ponieważ utrudniają pewność co do stabilności aplikacji i mogą prowadzić do błędnych raportów o jakości oprogramowania. Przyczyny flaky tests mogą być różne, takie jak:
+
+          Stan zewnętrzny: Testy, które zależą od stanu zewnętrznego, takiego jak baza danych, zasoby sieciowe, itp., mogą być flaky, gdy te zasoby są niestabilne lub zmieniają się.
+          
+          Zależności między testami: Jeśli testy zależą od siebie nawzajem, zmiany w jednym teście mogą wpływać na wyniki innych testów.
+          
+          Asynchroniczność: Testy, które zawierają asynchroniczne operacje, takie jak żądania do API lub oczekiwanie na animacje, mogą być flaky, jeśli nie są odpowiednio zarządzane.
+          
+          Nieprzewidywalne czynniki zewnętrzne: Niektóre flaky tests mogą być spowodowane przez nieprzewidywalne czynniki zewnętrzne, takie jak opóźnienia w sieci, problemy z infrastrukturą testową, itp.
+          
+          Rozwiązanie problemu flaky tests może obejmować:
+          
+          Izolacja testów: Upewnij się, że testy są od siebie niezależne, aby zmiany w jednym teście nie wpływały na inne.
+          
+          Stabilne środowisko testowe: Zapewnij, że środowisko testowe jest stabilne i zawsze dostępne dla testów.
+          
+          Odpowiednie zarządzanie asynchronicznością: Skorzystaj z funkcji, które pozwalają na synchronizację testów z asynchronicznymi operacjami.
+          
+          Regularne sprawdzanie i utrzymanie testów: Regularnie sprawdzaj testy pod kątem flaky behavior i aktualizuj je w miarę potrzeb.
+          
+          Rozwiązanie problemu flaky tests jest kluczowe dla utrzymania zaufania do procesu testowania i jakości oprogramowania.`,
       },
       {
         question: "Czym są testy Uat?",
         answer:
-          "Testy UAT (User Acceptance Testing) są rodzajem testów oprogramowania, które są przeprowadzane, aby sprawdzić, czy system lub aplikacja spełnia wymagania i oczekiwania użytkowników. Jest to końcowy etap testowania przed wdrożeniem systemu lub aplikacji do użytku przez rzeczywistych użytkowników.Celem testów UAT jest zapewnienie, że system działa zgodnie z oczekiwaniami użytkowników i spełnia określone kryteria akceptacji. Testy te są zazwyczaj przeprowadzane przez rzeczywistych użytkowników, którzy mają wiedzę i doświadczenie w korzystaniu z systemu lub aplikacji w kontekście swojej pracy lub działalności.",
-      },
-      {
-        question: "Co to jest suma kontrolna?",
-        answer: `
-          Suma kontrolna to wartość numeryczna lub sekwencja bitów, która jest obliczana w oparciu o dane, aby sprawdzić, czy dane te są poprawne i nie uległy zmianie podczas transmisji, zapisu lub przechowywania. Jest to technika używana w testowaniu oraz w zagadnieniach związanych z bezpieczeństwem danych.`,
+          "Testy akceptacyjne są rodzajem testów oprogramowania, które są przeprowadzane, aby sprawdzić, czy system lub aplikacja spełnia wymagania i oczekiwania użytkowników. Jest to końcowy etap testowania przed wdrożeniem systemu lub aplikacji do użytku przez rzeczywistych użytkowników.Celem testów UAT jest zapewnienie, że system działa zgodnie z oczekiwaniami użytkowników i spełnia określone kryteria akceptacji. Testy te są zazwyczaj przeprowadzane przez rzeczywistych użytkowników, którzy mają wiedzę i doświadczenie w korzystaniu z systemu lub aplikacji w kontekście swojej pracy lub działalności.",
       },
       {
         question: "Scenariusze w których testy automatyzujące są konieczne",
@@ -397,12 +450,12 @@ export default {
       {
         question: "Jakie są rodzaje testów",
         answer:
-          "Testy funkcjonalne (czarnoskrzynkowe) analizują zewnętrzne zachowanie oprogramowania, traktując je jak czarną skrzynkę, Testy niefunkcjonalne – określają parametry oprogramowania takie jak: wydajność, użyteczność, zdolność do pracy na różnych platformach, Testy białoskrzynkowe (strukturalne) – testy te mogą być oparte na architekturze systemu lub kodzie źródłowym aplikacji. Bazują na budowie wewnętrznej, która jest zwykle „ukryta” przed użytkownikiem końcowym, Testy regresji – ponowne przetestowanie programu po dokonaniu w nim modyfikacji, w celu sprawdzenia, że w wyniku zmian nie powstały nowe defekty lub nie ujawniły się istniejące wcześniej.",
+          "Testy funkcjonalne (czarnoskrzynkowe) analizują zewnętrzne zachowanie oprogramowania, traktując je jak czarną skrzynkę, Testy niefunkcjonalne - określają parametry oprogramowania takie jak: wydajność, użyteczność, zdolność do pracy na różnych platformach, Testy białoskrzynkowe (strukturalne) - testy te mogą być oparte na architekturze systemu lub kodzie źródłowym aplikacji. Bazują na budowie wewnętrznej, która jest zwykle „ukryta” przed użytkownikiem końcowym, Testy regresji - ponowne przetestowanie programu po dokonaniu w nim modyfikacji, w celu sprawdzenia, że w wyniku zmian nie powstały nowe defekty lub nie ujawniły się istniejące wcześniej.",
       },
       {
         question: "Czym są testy jednostkowe?",
         answer:
-          "Testy jednostkowe (unit tests) to zbiór testów, które weryfikują, czy jednostka kodu (np. metoda, klasa, serwis) działa zgodnie z oczekiwaniami. Są one zwykle tworzone przez programistów w ramach wytwarzania oprogramowania. Testy te uruchamiane są w izolacji, co oznacza, że nie jesteśmy w żaden sposób związani z innymi elementami systemu. Testy jednostkowe są nieodłącznym elementem wytwarzania oprogramowania w podejściu TDD (Test Driven Development).",
+          "Testy jednostkowe to zbiór testów, które weryfikują, czy jednostka kodu (np. metoda, klasa, serwis) działa zgodnie z oczekiwaniami. Testy te uruchamiane są w izolacji, co oznacza, że nie jesteśmy w żaden sposób związani z innymi elementami systemu. Testy jednostkowe są nieodłącznym elementem wytwarzania oprogramowania w podejściu TDD ",
       },
       {
         question: "Jakie informacje powinny się znaleźć w zgłoszeniu defektu?",
@@ -416,7 +469,7 @@ export default {
       },
       {
         question: "Czym jest dług techniczny?",
-        answer: `Długi techniczny (ang. technical debt) to metafora używana w branży IT, oznaczająca zobowiązania techniczne wynikające z wyborów projektowych, decyzji programistycznych czy innych działań, które wymagają późniejszego rozwiązania lub poprawy. Jest to forma kumulacji zaległości w zakresie utrzymania oprogramowania lub projektu.zybkość implementacji kosztem jakości: Czasami, aby spełnić krótkoterminowe cele projektowe, programiści mogą zdecydować się na szybkie, ale mniej zrównoważone rozwiązania.
+        answer: `Długi techniczny to metafora używana w branży IT, oznaczająca zobowiązania techniczne wynikające z wyborów projektowych, decyzji programistycznych czy innych działań, które wymagają późniejszego rozwiązania lub poprawy. Jest to forma kumulacji zaległości w zakresie utrzymania oprogramowania lub projektu.szybkość implementacji kosztem jakości: Czasami, aby spełnić krótkoterminowe cele projektowe, programiści mogą zdecydować się na szybkie, ale mniej zrównoważone rozwiązania.
 
           Brak dokumentacji: Zaniedbanie dokumentacji kodu i projektu może prowadzić do długu technicznego. Brak odpowiedniej dokumentacji sprawia, że zrozumienie i utrzymanie kodu stają się trudniejsze.
           
@@ -429,7 +482,7 @@ export default {
       {
         question: "Jakie są cele testów?",
         answer:
-          "Wśród głównych celów testowania wymienić należy znajdowanie błędów oraz zapobieganie defektom.Rzetelnie przeprowadzony proces testowania wpływa pozytywnie na jakość wytworzonego oprogramowania oraz dostarcza deweloperom informacji niezbędnych do dalszego rozwoju produktu.",
+          "Wśród głównych celów testowania wymienić należy znajdowanie błędów oraz zapobieganie defektom. Rzetelnie przeprowadzony proces testowania wpływa pozytywnie na jakość wytworzonego oprogramowania oraz dostarcza deweloperom informacji niezbędnych do dalszego rozwoju produktu.",
       },
       {
         question: "Jakie są sposoby deploymentu?",
@@ -488,23 +541,17 @@ export default {
       },
       {
         question: "Czym jes wzorzec AAA",
-        answer: `Wzorzec AAA w testowaniu odnosi się do trzech kluczowych faz, które często występują w strukturze testów jednostkowych. Te fazy to:
-
-          Arrange (Przygotuj): W tej fazie przygotowujesz wszystkie niezbędne warunki i dane dla testu. To obejmuje inicjalizację obiektów, ustawienie danych wejściowych i inne przygotowania.
-          
-          Act (Działaj): W tej fazie wykonujesz właściwą operację lub akcję, którą chcesz przetestować. To jest część, w której występuje główne wykonanie testu.
-          
-          Assert (Potwierdź): W tej fazie sprawdzasz, czy wyniki działania testu są zgodne z oczekiwaniami. Jeśli wyniki są zgodne z oczekiwaniami, test jest uznawany za udany; w przeciwnym razie, test jest uważany za nieudany.`,
+        answer: `Wzorzec AAA w testowaniu odnosi się do trzech kluczowych faz, które często występują w strukturze testów jednostkowych.
+        Arrange (Przygotuj): W tej fazie przygotowujesz wszystkie niezbędne warunki i dane dla testu. To obejmuje inicjalizację obiektów, ustawienie danych wejściowych i inne przygotowania.
+        Act (Działaj): W tej fazie wykonujesz właściwą operację lub akcję, którą chcesz przetestować. To jest część, w której występuje główne wykonanie testu.
+        Assert (Potwierdź): W tej fazie sprawdzasz, czy wyniki działania testu są zgodne z oczekiwaniami. Jeśli wyniki są zgodne z oczekiwaniami, test jest uznawany za udany;`,
       },
       {
         question: "czym jest FIRST?",
-        answer: `W kontekście testowania oprogramowania, FIRST to skrót od pięciu zasad, które są zalecane w podejściu do pisania dobrych testów jednostkowych. Te zasady są często stosowane w ramach podejścia znanego jako Test-Driven Development. Fast: Testy jednostkowe powinny być szybkie w wykonaniu. Szybkość testów jest istotna, ponieważ programiści często uruchamiają je często w trakcie pracy nad kodem, a im szybciej dostaną informacje zwrotne, tym lepiej. Isolated/Independent (Izolowane/Niezależne): Każdy test jednostkowy powinien być niezależny od innych testów. Wynik jednego testu nie powinien wpływać na wyniki innych testów. Izolacja testów pomaga unikać sytuacji, w których błędy jednego testu wpływają na błędy w innych.
-          
-          Repeatable (Powtarzalne): Testy jednostkowe powinny dawać te same wyniki za każdym razem, gdy są uruchamiane. To oznacza, że nie powinny zależeć od zewnętrznych czynników, takich jak stan bazy danych czy sieć.
-          
-          Self-Validating (Samodzielne): Wynik testu jednostkowego powinien być łatwy do zinterpretowania. Nie powinno być konieczne ręczne sprawdzanie rezultatów testów. Wynik powinien być automatycznie oceniany jako sukces lub porażka.
-          
-          Timely (Punktualne): Testy jednostkowe powinny być pisane na tyle wcześnie, aby programiści mogli je uruchamiać regularnie podczas procesu rozwoju. Pisanie testów jednostkowych późno w procesie może prowadzić do trudności w dodawaniu testów do już istniejącego kodu.`,
+        answer: `FIRST to skrót od pięciu zasad, które są zalecane w podejściu do pisania dobrych testów jednostkowych. Te zasady są często stosowane w ramach podejścia znanego jako Test-Driven Development. Fast: Testy jednostkowe powinny być szybkie w wykonaniu. Szybkość testów jest istotna, ponieważ programiści często uruchamiają je często w trakcie pracy nad kodem, a im szybciej dostaną informacje zwrotne, tym lepiej. Isolated/Independent (Izolowane/Niezależne): Każdy test jednostkowy powinien być niezależny od innych testów. Wynik jednego testu nie powinien wpływać na wyniki innych testów. Izolacja testów pomaga unikać sytuacji, w których błędy jednego testu wpływają na błędy w innych.
+        Repeatable (Powtarzalne): Testy jednostkowe powinny dawać te same wyniki za każdym razem, gdy są uruchamiane. To oznacza, że nie powinny zależeć od zewnętrznych czynników, takich jak stan bazy danych czy sieć.
+        Self-Validating (Samodzielne): Wynik testu jednostkowego powinien być łatwy do zinterpretowania. Nie powinno być konieczne ręczne sprawdzanie rezultatów testów. Wynik powinien być automatycznie oceniany jako sukces lub porażka.
+        Timely (Punktualne): Testy jednostkowe powinny być pisane na tyle wcześnie, aby programiści mogli je uruchamiać regularnie podczas procesu rozwoju. Pisanie testów jednostkowych późno w procesie może prowadzić do trudności w dodawaniu testów do już istniejącego kodu.`,
       },
       {
         question: "soap vs rest?",
@@ -514,22 +561,17 @@ export default {
       {
         question: "Statusy Odpowiedzi HTTP",
         answer:
-          "Statusy odpowiedzi HTTP to nic innego jak informacja wysłana nam przez serwer HTTP do aplikacji klienta. Kody odpowiedzi protokołu HTTP dzielimy na kilka kategorii. Kody informacyjne 1XX, kody powodzenia 2XX, kody przekierowań 3XX, kody błędu aplikacji klienta 4XX, oraz kody błędu serwera HTTP – 5XX.401	Unauthorized	Nieautoryzowany dostęp – żądanie zasobu, który wymaga uwierzytelniania.",
-      },
-      {
-        question: "Czym jest model V",
-        answer:
-          "Model V precyzyjnie pokazuje zależności między kolejnymi etapami projektu. Każdy etap projektowania kończy się stworzeniem danych wejściowych dla następnej fazy oraz do korespondującej z nim fazy weryfikacji.",
+          "Statusy odpowiedzi HTTP to nic innego jak informacja wysłana nam przez serwer HTTP do aplikacji klienta. Kody odpowiedzi protokołu HTTP dzielimy na kilka kategorii. Kody informacyjne 1XX, kody powodzenia 2XX, kody przekierowań 3XX, kody błędu aplikacji klienta 4XX, oraz kody błędu serwera HTTP  5XX.401	Unauthorized	Nieautoryzowany dostęp - żądanie zasobu, który wymaga uwierzytelniania.",
       },
       {
         question: "Wymień typy testów wydajnościowych",
         answer:
-          "Load testing – czyli sprawdzenie zdolności działania aplikacji przy oczekiwanym ruchu użytkowników.  Stress testy – polegają na testowaniu aplikacji przy użyciu obciążenia znacznie większego aniżeli założono w dokumentacji. Celem tego jest weryfikacja jak aplikacja radzi sobie z dużym ruchem i przetwarzaniem danych. Tutaj możemy określić punkty krytyczne aplikacji. W jakim celu – skorzystamy tylko z dwóch słów – Black Friday.   Endurance testing – mają na celu weryfikację i upewnienie się, że oprogramowanie może wytrzymać oczekiwane i określone obciążenie przez długi czas. Spike testy – tym sposobem testujemy sobie reakcję aplikacji na nagłe duże skoki obciążenia generowane przez użytkowników. Przykład – jesteśmy firmą dostarczającą relacje z wydarzeń sportowych – finał Mistrzostw Świata i Polska zdobywa bramkę w finale. Wówczas możemy spodziewać się znacznego (większego niż normalnie ruchu).  Scalability tests – czyli tzw. testy skalowalności. Testy sprawdzające zachowanie aplikacji na zwiększony ruch. Tutaj chcemy wydobyć informację na temat skuteczności aplikacji do zwiększania skali przy zwiększaniu się obciążenia. ",
+          "Load testing - czyli sprawdzenie zdolności działania aplikacji przy oczekiwanym ruchu użytkowników. Stress testy - polegają na testowaniu aplikacji przy użyciu obciążenia znacznie większego aniżeli założono w dokumentacji. Celem tego jest weryfikacja jak aplikacja radzi sobie z dużym ruchem i przetwarzaniem danych. Tutaj możemy określić punkty krytyczne aplikacji. W jakim celu - skorzystamy tylko z dwóch słów - Black Friday. Endurance testing - mają na celu weryfikację i upewnienie się, że oprogramowanie może wytrzymać oczekiwane i określone obciążenie przez długi czas. Spike testy – tym sposobem testujemy sobie reakcję aplikacji na nagłe duże skoki obciążenia generowane przez użytkowników. Przykład – jesteśmy firmą dostarczającą relacje z wydarzeń sportowych – finał Mistrzostw Świata i Polska zdobywa bramkę w finale. Wówczas możemy spodziewać się znacznego (większego niż normalnie ruchu).  Scalability tests – czyli tzw. testy skalowalności. Testy sprawdzające zachowanie aplikacji na zwiększony ruch. Tutaj chcemy wydobyć informację na temat skuteczności aplikacji do zwiększania skali przy zwiększaniu się obciążenia. ",
       },
       {
         question: "Czym są testy dymne?",
         answer:
-          "Testy dymne (z ang. smoke tests) to weryfikacja wszystkich kluczowych ścieżek, które potwierdzają, że najważniejsze funkcjonalności aplikacji czy oprogramowania działają prawidłowo. Testy te przebiegają szybko, dając korzyści w postaci niemal natychmiastowej informacji zwrotnej. Można wykonać je ręcznie lub z pomocą zautomatyzowanego narzędzia.",
+          "Testy dymne to weryfikacja wszystkich kluczowych ścieżek, które potwierdzają, że najważniejsze funkcjonalności aplikacji czy oprogramowania działają prawidłowo. Testy te przebiegają szybko, dając korzyści w postaci niemal natychmiastowej informacji zwrotnej. Można wykonać je ręcznie lub z pomocą zautomatyzowanego narzędzia.",
       },
       {
         question: "Co oznacza skrót tdd?",
@@ -739,15 +781,14 @@ export default {
       },
       {
         question: `Jak przygotować środowisko testowe?`,
-        answer: `Przygotowanie środowiska do testów może różnić się w zależności od rodzaju testów (manualnych czy automatycznych) oraz technologii, którą używasz. Poniżej znajdziesz ogólne kroki, które mogą pomóc w przygotowaniu środowiska do testowania: 1. Zainstaluj Niezbędne Narzędzia:
-        Dla testów automatycznych: Zainstaluj frameworki do testowania (np. Jest, Cypress, Selenium, itp.) oraz odpowiednie biblioteki i narzędzia zależne od języka programowania (np. npm dla JavaScript, pip dla Python).
-        2. Skonfiguruj Środowisko Deweloperskie:
+        answer: `Przygotowanie środowiska do testów może różnić się w zależności od rodzaju testów (manualnych czy automatycznych) oraz technologii, którą używasz.Zainstaluj Niezbędne Narzędzia:
+        Dla testów automatycznych: Zainstaluj frameworki do testowania oraz odpowiednie biblioteki i narzędzia zależne od języka programowania,Skonfiguruj Środowisko Deweloperskie:
         Utwórz lokalne lub zdalne środowisko deweloperskie, które będzie reprezentować produkcję.
         Skonfiguruj bazę danych do testów, uwzględniając migracje i dane testowe.
         3. Instalacja i Konfiguracja Przeglądarek:
-        Jeśli testujesz interfejs użytkownika, upewnij się, że masz zainstalowane przeglądarki, których zamierzasz używać (np. Chrome, Firefox).
+        Jeśli testujesz interfejs użytkownika, upewnij się, że masz zainstalowane przeglądarki, których zamierzasz używać.
         Dla testów automatycznych interfejsu użytkownika, zainstaluj i skonfiguruj odpowiednie sterowniki (np. chromedriver).
-        4. Zarządzanie Zależnościami:
+       Zarządzanie Zależnościami:
         Skonfiguruj managera zależności, jeśli korzystasz z jakichś narzędzi zewnętrznych.
         5. Skonfiguruj Narzędzia Do Continuous Integration (CI):
         Utwórz skrypty do automatycznej kompilacji, testowania i wdrażania kodu.

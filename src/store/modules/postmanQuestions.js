@@ -25,64 +25,82 @@ export default {
             5xx - błąd serwera - serwer nie był w stanie spełnić prawidłowego żądania.`
         },
         {
-          question: "Jak ograniczyć liczbę zwracanych wyników?",
+          question: "Jakie są główne funkcje Postmana?",
           answer:
-            "Polecenie SELECT zwraca wszystkie pasujące wiersze, czyli w wielu sytuacjach wszystkie wiersze tabeli. Co zrobić, jeśli chcemy zwrócić tylko pierwszy wiersz lub  pewien podzbiór wierszy? Zadanie jest wykonalne, ale niestety to jedna z tych  sytuacji, gdy poszczególne implementacje SQL-a różniąsięstosowanąskładnią. W systemie Microsoft SQL Server możemy użyćsłowa kluczowego TOP, by ograniczyć liczbę pobieranych wierszy. Oto przykład",
+            "Postman oferuje funkcje takie jak tworzenie i wysyłanie zapytań HTTP, automatyzacja testów API, monitorowanie wydajności API, generowanie dokumentacji API, udostępnianie kolekcji zespołowi, a także integracje z innymi narzędziami deweloperskimi.",
         },
         {
-          question: "Jak pobrać wiele kolumn>",
+          question: "Jakie są różnice między zapytaniem GET a zapytaniem POST?",
           answer:
-            "Aby pobraćwiele kolumn z tabeli, stosuje siętęsamąinstrukcjęSELECT. Jedyna różnica polega na tym, iżpo słowie kluczowym SELECT wymienia się oddzielone przecinkami nazwy kolumn.W momencie pobierania kilku kolumn, należy umieścićprzecinki między nazwami kolumn. Trzeba jednak pamiętać, że po nazwie ostatniej kolumny nie można umieścićprzecinka — jeśli to sięzdarzy, pojawi siękomunikat o błędzie. Jeżeli chcemy pobrać wszystkie kolumny to możemy skorzystać z symbolu gwiazdki '*'",
+            "Zapytanie GET służy do pobierania danych z serwera, podczas gdy zapytanie POST jest używane do przesyłania danych do serwera w celu utworzenia nowego zasobu.",
         },
         {
-          question: "Czym jest instrukcja select?",
+          question: "Jakie są korzyści korzystania z funkcji testów w Postmanie?",
           answer:
-            "Aby użyć polecenia SELECT do pobrania danych, trzeba podać przynajmniej dwie informacje — co chce się pobrać i skąd. SELECT prod_nazwa FROM Produkty; Przedstawione zapytanie używa instrukcji SELECT do pobrania jednej kolumny o nazwie prod_nazwa z tabeli Produkty. Nazwa kolumny pojawia się zaraz za słowem kluczowym SELECT; natomiast po słowie kluczowym FROM pojawia się nazwa tabeli, z której należy pobrać dane.",
+            "Funkcje testów w Postmanie pozwalają automatyzować procesy testowania API, sprawdzając, czy odpowiedzi spełniają oczekiwania, co przyspiesza proces weryfikacji funkcjonalności.",
         },
         {
-          question: "Opisz język sql",
+          question: "Jak można współpracować zespołowo w Postmanie?",
           answer:
-            "Język SQL (skrót od Structured Query Language) zostałspecjalnie zaprojekto- wany do komunikacji z bazami danych.  W odróżnieniu od innych języków (zarówno naturalnych jak i języków pro-  gramowania takich jak Java, C lub PHP) SQL składa siętylko z kilku słów. Nie  jest to jednak wadą. Język ten zostałzaprojektowany wyłącznie w jednym celu —jego zadaniem jest proste i wydajne odczytywanie i zapisywanie  danych w bazie.",
+            "Postman umożliwia współpracę zespołową poprzez udostępnianie kolekcji, zarządzanie dostępem do kolekcji, korzystanie z funkcji komentarzy i integracje z systemami kontroli wersji.",
         },
         {
-          question: "Czym jest klucz główny?",
+          question: "Jakie są zalety korzystania z Postmana podczas tworzenia dokumentacji API?",
           answer:
-            "Kolumna (lub zbiór kolumn), która jednoznacznie identyfikuje każdy wiersz tabeli, nazywana jest kluczem głównym (ang. primary key). Służy on do wyboru jednego, konkretnego wiersza. Bez klucza głównego aktualizacja lub usuwanie konkretnej kolumny staje siębardzo trudne, ponieważwtedy nie mamy  gwarancji, iżodnosimy siętylko do interesującego nas wiersza. Choćich wskazanie nie jest wymuszane przez systemy zarządzania baz danych, większośćprojektantów tworzy takie klucze dla każdej tabeli, aby ułatwićprzyszłąmodyfikacjędanych.",
+            "Postman pozwala automatycznie generować dokumentację API na podstawie wykonanych zapytań. To ułatwia tworzenie zrozumiałej i aktualnej dokumentacji.",
         },
         {
-          question: "Czym jest klauzula where?",
+          question: "Jak można użyć zmiennych w Postmanie?",
           answer:
-            "Aby filtrować dane zwracane przez zapytanie musisz użyć słowa kluczowego WHERE i warunków, które filtrują dane.Pobieranie całej tabeli nie zawsze jest przydatne.",
+            "Postman umożliwia korzystanie z zmiennych do dynamicznego dostosowywania zapytań. Mogą być one definiowane globalnie, lokalnie lub nawet na poziomie środowiska.",
         },
         {
-          question: "Co oznacza znak * po słowie select?",
-          answer: "Znak * w tym kontekście oznacza “pobierz wszystkie",
+          question: "Jak obsłużyć autentykację w Postmanie?",
+          answer: "Postman obsługuje różne metody autentykacji, takie jak Basic Auth, OAuth czy tokeny. W ustawieniach zapytania można zdefiniować odpowiednie dane autentykacyjne.",
         },
         {
-          question: "AND I OR  w sql",
+          question: "Jakie są różnice między kolekcją a środowiskiem w Postmanie?",
           answer:
-            "Słowo kluczowe AND ma wyższy priorytet niż OR. Oznacza to, że warunki pomiędzy AND wykonywane są wcześniej niż OR. Dla przykładu w konstrukcji:",
+            "Kolekcja to zbiór zapytań, a środowisko to zestaw zmiennych środowiskowych. Kolekcje pomagają w organizacji i grupowaniu zapytań, podczas gdy środowiska umożliwiają dostosowywanie zmiennych, takich jak adresy URL czy tokeny autoryzacyjne.",
         },
         {
-          question: "wartość null w sql",
+          question: "Co to jest status HTTP 404?",
           answer:
-            "Każdy wiersz w tabeli może mieć wartość, która pasuje do typu przechowywanego przez daną kolumnę. W SQL jest jeszcze specjalna wartość. Jest nią NULL. Możesz ją porównać do pustej wartości w językach programowania.Istotne jest rozróżnienie pomiędzy pustą wartością a NULL. Na przykład pusty łańcuch znaków to zupełnie coś innego niż NULL. Wartość ta jest traktowana w specyficzny sposób w przypadku porównań. Do sprawdzania czy kolumna w wierszu ma wartość NULL służy wyrażenie IS NULL. Aby sprawdzić, czy dana kolumna nie ma wartości NULL używa się wyrażenia IS NOT NULL.",
+            "Status HTTP 404 oznacza 'Not Found' i jest zwracany, gdy serwer nie może odnaleźć żądanego zasobu. Jest to sygnalizacja, że strona lub zasób nie istnieje na serwerze.",
         },
         {
-          question: "Jak wybrać konkretne kolumny?",
+          question: "Jakie są główne rodzaje autentykacji w HTTP?",
           answer:
-            "Użycie klauzuli WHERE pozwala na odfiltrowanie części wierszy. W przypadku kolumn mechanizm jest podobny. Jeśli chcesz wybrać podzbiór kolumn, a nie wszystkie, to musisz wskazać te, które Cię interesują:",
-          code: `SELECT invoicedate
-                        ,billingcity
-                        ,total
-                    FROM invoice
-                  WHERE billingcountry = 'Poland';`,
+            `Basic Authentication: Polega na przesyłaniu loginu i hasła w nagłówku żądania, zakodowanym w formie Base64.
+            Token-based Authentication: Używa tokenów, które są generowane i przesyłane w celu uwierzytelnienia klienta.
+            OAuth: Standardowy protokół autoryzacyjny, umożliwiający bezpieczne ograniczanie dostępu do zasobów.`,
+        },
+        {
+          question: "Co to jest format JSON?",
+          answer:
+            `JSON, czyli JavaScript Object Notation, to lekki format danych. Jest to sposób przedstawiania struktur danych w formie tekstowej, oparty na składni obiektów w języku JavaScript.`,
+        },
+        {
+          question: "Jakie są różnice między PUT a PATCH w HTTP?",
+          answer:
+            `PUT: Używane jest do aktualizacji pełnych zasobów. Wymaga przesłania całej reprezentacji zasobu.
+            PATCH: Służy do aktualizacji częściowych zasobów. Pozwala przesyłać tylko te dane, które mają zostać zmienione.`,
+        },
+        {
+          question: "Jakie są zalety stosowania nagłówków HTTP?",
+          answer:
+            `Nagłówki HTTP pozwalają na przesyłanie dodatkowych informacji między klientem a serwerem, takich jak dane autentykacyjne, formaty MIME czy informacje o cache. Pozwalają także na kontrolę przesyłanych danych.`,
+        },
+        {
+          question: "Co to jest URI?",
+          answer:
+            `URI (Uniform Resource Identifier) to identyfikator zasobu, który zapewnia unikalną lokalizację zasobu w sieci. Składa się z URL (Uniform Resource Locator) oraz URN (Uniform Resource Name). URL identyfikuje zasób poprzez jego lokalizację, natomiast URN identyfikuje go poprzez nazwę.`,
         },
       ],
     },
   
     mutations: {
-      randomSqlQuestion(state) {
+      randomPostmanQuestion(state) {
         state.postmanQuestions.sort(() => Math.floor(Math.random() - 0.5));
       },
     },
