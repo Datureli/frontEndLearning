@@ -244,7 +244,7 @@ export default {
           "Kluczowe modyfikatory to specjalne modyfikatory, które są używane z dyrektywą v-on w Vue.js do obsługi zdarzeń klawiatury. Przykładem może być zdarzenie keyup dla konkretnego klawisza, takiego jak Enter. W Vue.js istnieje kilka kluczowych modyfikatorów, które ułatwiają obsługę zdarzeń związanych z klawiaturą. enter - odpowiada za klawisz Enter, .tab - odpowiada za klawisz Tab,  .delete - odpowiada za klawisze 'Delete' i 'Backspace',  .esc - odpowiada za klawisz Escape,  .space - odpowiada za klawisz spacji,  .up - odpowiada za strzałkę w górę,  .down - odpowiada za strzałkę w dół,  .left - odpowiada za strzałkę w lewo,  .right - odpowiada za strzałkę w prawo.",
       },
       {
-        question: "Co to jest destroyed hook w Vue.js i kiedy jest wywoływany?",
+        question: "Co to jest destroyed hook i kiedy jest wywoływany?",
         answer:
           "Destroyed hook w Vue.js jest to hook, który jest wywoływany, gdy komponent został zniszczony i nie istnieje już w drzewie komponentów Vue. W tym momencie nie pozostaje praktycznie nic w komponencie. Wszystkie event listenery i subskrypcje, które zostały utworzone przez komponent, są usuwane, a także wszystkie referencje do elementów DOM, które zostały utworzone przez komponent, są zwalniane z pamięci. Używamy tego hooka, gdy chcemy wyczyścić zasoby, które zostały utworzone przez komponent lub poinformować serwer, że komponent został usunięty. Jest to ostatni hook cyklu życia komponentu w Vue.js i po jego wywołaniu komponent jest usuwany z drzewa komponentów Vue",
       },

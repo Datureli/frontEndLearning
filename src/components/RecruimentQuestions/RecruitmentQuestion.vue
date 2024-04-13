@@ -27,7 +27,7 @@
               class="white--text mr-md-6 ml-md-6 mt-3 text-justify text-h6 text-wrap"
               v-show="disable"
             >
-              <p style="height: 250px">
+              <p style="height: 250px; word-break: break-all">
                 {{ question.answer }}
               </p>
             </v-list-item-subtitle>
@@ -101,7 +101,7 @@ export default {
           sql: this.sqlQuestions,
           wordpress: this.wordpressQuestions,
           cybersecurity: this.cybersecurityQuestions,
-          cloud: this.cloudQuestions
+          cloud: this.cloudQuestions,
         };
 
         return questionCategories[category] || null;
