@@ -5,7 +5,6 @@
       :key="index"
       @shortkey="changeArrowDirection"
       v-shortkey="{ left: ['arrowleft'], right: ['arrowright'] }"
-      class="mx-auto"
     >
       <v-list-item>
         <v-list-item-content>
