@@ -27,7 +27,14 @@
               class="white--text mr-md-6 ml-md-6 mt-3 text-justify text-h6 text-wrap"
               v-show="disable"
             >
-              <p style="height: 250px; word-break: break-all">
+              <p
+                style="
+                  word-spacing: -2px;
+                  word-break: break-word;
+                  hyphens: auto;
+                  overflow-wrap: break-word;
+                "
+              >
                 {{ question.answer }}
               </p>
             </v-list-item-subtitle>

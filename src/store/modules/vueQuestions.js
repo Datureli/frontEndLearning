@@ -57,7 +57,7 @@ export default {
       {
         question: "Czym są mixiny?",
         answer:
-          "mixiny to funkcje które pozwalają nam na reużywalność kodu pomiędzy komponentami w vue. Jest to objekt javascript który może zawierać każdą opcję jaką zawiera komponent.Mixiny są pisane w odrebnym pliku i mogą być dzielone pomiędzy komponentami",
+          "Mixiny to funkcje, które umożliwiają ponowne wykorzystanie kodu pomiędzy komponentami Są to obiekty JavaScript, które mogą zawierać dowolną opcję dostępną w komponencie. Mixiny są zazwyczaj pisane w osobnych plikach i mogą być współdzielone między różnymi komponentami.",
       },
       {
         question: "Do czego nam plik main.js w vue?",
@@ -246,7 +246,7 @@ export default {
       {
         question: "Co to jest destroyed hook i kiedy jest wywoływany?",
         answer:
-          "Destroyed hook w Vue.js jest to hook, który jest wywoływany, gdy komponent został zniszczony i nie istnieje już w drzewie komponentów Vue. W tym momencie nie pozostaje praktycznie nic w komponencie. Wszystkie event listenery i subskrypcje, które zostały utworzone przez komponent, są usuwane, a także wszystkie referencje do elementów DOM, które zostały utworzone przez komponent, są zwalniane z pamięci. Używamy tego hooka, gdy chcemy wyczyścić zasoby, które zostały utworzone przez komponent lub poinformować serwer, że komponent został usunięty. Jest to ostatni hook cyklu życia komponentu w Vue.js i po jego wywołaniu komponent jest usuwany z drzewa komponentów Vue",
+          "Jest wywoływany, gdy komponent został zniszczony i nie istnieje już w drzewie komponentów. W tym momencie nie pozostaje praktycznie nic w komponencie. Wszystkie event listenery i subskrypcje, które zostały utworzone przez komponent, są usuwane, a także wszystkie referencje do elementów DOM, które zostały utworzone przez komponent, są zwalniane z pamięci. Używamy tego hooka, gdy chcemy wyczyścić zasoby, które zostały utworzone przez komponent lub poinformować serwer, że komponent został usunięty. Jest to ostatni hook cyklu życia komponentu w Vue.js i po jego wywołaniu komponent jest usuwany z drzewa komponentów Vue",
       },
       {
         question: "Do czego służą hooki activated i deactivated w Vue.js",
