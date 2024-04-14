@@ -42,12 +42,18 @@ export default {
         question:
           "Deklarowanie zmiennych w composables przed oraz w środku funkcji?",
         answer:
-          "Deklarowanie zmiennych przed funkcją: Jeśli zadeklarujesz zmienne przed funkcją w Vue 3 composables, są one dostępne w całym zakresie tego pliku. Oznacza to, że mogą być używane zarówno wewnątrz jak i na zewnątrz funkcji komponentu. Te zmienne są współdzielone między wszystkimi wywołaniami tej funkcji komponentu.Deklarowanie zmiennych w funkcji: Jeśli deklarujesz zmienne w funkcji w Vue 3 composables, są one związane z konkretnym wywołaniem tej funkcji. Oznacza to, że są tworzone na nowo przy każdym wywołaniu tej funkcji i mają swój własny zakres. Zmienne deklarowane w funkcji nie są widoczne poza tą funkcją ani nie są współdzielone między różnymi wywołaniami funkcji komponentu.",
+          `Deklarowanie zmiennych przed funkcją:
+          Jeśli zadeklarujesz zmienne przed funkcją w kompozycjach Vue 3, są one dostępne w całym zakresie tego pliku. Oznacza to, że mogą być używane zarówno wewnątrz jak i na zewnątrz funkcji komponentu. Te zmienne są współdzielone między wszystkimi wywołaniami tej funkcji komponentu.
+          
+          Deklarowanie zmiennych w funkcji:
+          Jeśli deklarujesz zmienne w funkcji w kompozycjach Vue 3, są one związane z konkretnym wywołaniem tej funkcji. Oznacza to, że są tworzone na nowo przy każdym wywołaniu tej funkcji i mają swój własny zakres. Zmienne deklarowane w funkcji nie są widoczne poza tą funkcją ani nie są współdzielone między różnymi wywołaniami funkcji komponentu.`,
       },
       {
         question: "Jaka jest różnica między vue a nuxt?",
         answer:
-          "Nuxt.js i Vue.js obsługują logikę w różny sposób.Główna różnica polega na tym,że vue zawsze działa po stronie klienta,nuxt nie.Nuxt używa plików cookie w pamięci lokalnej — ponieważ są one zawsze dostępne.Z Vue nie mamy tego rodzaju problemów, ponieważ zawsze działa po stronie klienta.Nuxt generuje własny router w oparciu o strukturę folderów, podczas gdy w przypadku vue należy to zrobić ręcznie.Automatycznie generowane zalety routera polegają na tym, że łatwiej i szybciej go utworzyć. Po prostu tworzysz katalog i pliki, a Nuxt wykonuje całą pracę.",
+          `Główną różnicą między Nuxt.js a Vue.js jest sposób, w jaki obsługują logikę. Vue zawsze działa po stronie klienta, podczas gdy Nuxt może działać również po stronie serwera. Nuxt używa plików cookie w pamięci lokalnej, co zapewnia dostępność danych nawet w przypadku odświeżenia strony. Vue, działając po stronie klienta, nie ma tego rodzaju problemów.
+
+          Inną różnicą jest generowanie routera. Nuxt automatycznie generuje router na podstawie struktury folderów, podczas gdy w przypadku Vue trzeba to zrobić ręcznie. Automatyczne generowanie routera przez Nuxt ułatwia i przyspiesza ten proces, wystarczy utworzyć odpowiednią strukturę folderów, a Nuxt zajmie się resztą pracy.`,
       },
       {
         question: "Czym są komponenty funkcyjne",
@@ -102,7 +108,7 @@ export default {
       {
         question: "Czym są scoped slots?",
         answer:
-          "Scoped slots są rozwinięciem standardowych slotów w Vue.js, pozwalając na przekazywanie danych z komponentów podrzędnych do komponentów nadrzędnych poprzez sloty. W przeciwieństwie do standardowych slotów, scoped slots umożliwiają dostęp do właściwości komponentów dziecka w zawartości slot, dzięki czemu można przekazywać różne wartości i wykorzystywać je w kodzie rodzica. Scoped slots są szczególnie przydatne w sytuacjach, gdy chcemy umieścić w slotach niestandardową logikę lub przekazać do rodzica niestandardowe dane.",
+          "To zaawansowane sloty które rozszerzają standardową funkcjonalność slotów. Pozwalają one na przekazywanie danych z komponentów podrzędnych do komponentów nadrzędnych za pomocą slotów. W odróżnieniu od standardowych slotów, scoped slots umożliwiają dostęp do właściwości komponentów dzieci wewnątrz zawartości slotu, co pozwala na przekazywanie różnych wartości i korzystanie z nich w kodzie rodzica. Scoped slots są szczególnie użyteczne w sytuacjach, gdy potrzebujemy umieścić w slotach niestandardową logikę lub przekazać do rodzica niestandardowe dane",
       },
       {
         question:
@@ -382,12 +388,12 @@ export default {
       {
         question: "Opisz dyrektywe v-bind",
         answer:
-          "Dyrektywa v-bind w Vue.js pozwala na wiązanie danych do atrybutów elementów DOM. Jednakże, v-bind wiąże dane tylko w jeden sposób, co oznacza, że możemy przekazać dane do komponentu, ale jeśli zmienimy te dane wejściowe, to nasza pierwotna wartość nie zostanie zmieniona. To może wydawać się niewielką różnicą, ale może spowodować niezgodność danych, co może prowadzić do problemów. Dlatego należy zachować ostrożność przy wyborze między v-bind a innymi dyrektywami, takimi jak v-model.",
+          "Umożliwia przypisywanie danych do atrybutów elementów DOM. Jednakże, v-bind działa w sposób jednokierunkowy, co oznacza, że możemy przekazać dane do komponentu, ale jeśli zmienimy te dane wejściowe, to oryginalna wartość nie zostanie automatycznie zaktualizowana.",
       },
       {
         question: "Opisz dyrektywe v-model",
         answer:
-          "Pozwala na dwukierunkowe wiązanie danych między elementami formularza w HTML a danymi w obiekcie data w instancji Vue. Oznacza to, że gdy użytkownik wprowadza zmiany w polu formularza, zmieniają się również dane w obiekcie data, a gdy dane w obiekcie data są zmienione programowo, zmiany te są automatycznie propagowane do pól formularza. Dyrektywa v-model jest szczególnie przydatna w przypadku tworzenia formularzy, ponieważ pozwala na łatwe zarządzanie stanem formularza. Jest również często używana do włączania i wyłączania elementów interfejsu użytkownika na podstawie stanu danych.",
+          "Umożliwia dwukierunkowe powiązanie danych między elementami formularza w HTML a danymi w obiekcie danych w instancji Vue. To oznacza, że gdy użytkownik dokonuje zmian w polu formularza, zmieniają się również dane w obiekcie danych, a gdy dane w obiekcie danych są modyfikowane programowo, zmiany te automatycznie propagują się do pól formularza. Dyrektywa v-model jest szczególnie przydatna przy tworzeniu formularzy, ułatwiając zarządzanie ich stanem. Często jest również stosowana do włączania i wyłączania elementów interfejsu użytkownika na podstawie stanu danych.",
       },
       {
         question: "Jakie są obsługiwane modyfikatory w v-model?",
@@ -557,7 +563,7 @@ export default {
       {
         question: "Server side rendering w nuxt 3",
         answer:
-          "Watch pozwala na obserwację konkretnej reaktywnej wartości lub listy wartości i wywołuje funkcję zwrotną tylko wtedy, gdy któraś z nich się zmieni. Daje nam to kontrolę nad tym, co dokładnie obserwujemy.Z drugiej strony, watchEffect obserwuje każdą reaktywną wartość w funkcji zwrotnej i wywołuje ją automatycznie, gdy któraś z nich ulegnie zmianie. Nie potrzebuje ona dodatkowej konfiguracji, co sprawia, że jest łatwiejsza w użyciu, ale może prowadzić do niepotrzebnego renderowania, jeśli nie jest używana ostrożnie Podsumowując, watch daje nam większą kontrolę nad tym, co obserwujemy, a watchEffect jest łatwiejszy w użyciu, ale może prowadzić do niepotrzebnego renderowania.",
+          "To technika renderowania aplikacji Vue.js po stronie serwera przed wysłaniem jej do przeglądarki klienta. Dzięki temu użytkownicy otrzymują od razu wyrenderowaną stronę, co przyspiesza czas ładowania i poprawia SEO. Jest to szczególnie przydatne w przypadku aplikacji o dużym zaangażowaniu na stronie serwerowej",
       },
       {
         question: "Czym jest hybdrid rendering w nuxt 3",
