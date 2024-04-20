@@ -19,8 +19,7 @@
               class="font-weight-black text-wrap"
               :class="disable ? 'text-h4' : ['text-h3', 'mt-15']"
               style="transition: 2s"
-              >{{ question.question }}</v-list-item-title
-            >
+            >{{ question.question }}</v-list-item-title>
 
             <v-list-item-subtitle
               class="white--text mr-md-6 ml-md-6 mt-3 text-justify text-h6 text-wrap"
@@ -37,6 +36,10 @@
                 {{ question.answer }}
               </p>
             </v-list-item-subtitle>
+            <button @click="openCodeDialog = true">Otwórz przykład</button>
+            <v-dialog v-model="openCodeDialog" max-width="900">
+              <pre class="mr-auto"><code class="language-html">{{ question.code }}</code></pre>
+            </v-dialog>
           </v-col>
         </v-list-item-content>
       </v-list-item>
@@ -47,6 +50,11 @@
 <script>
 import { mapState } from "vuex";
 export default {
+  data() {
+    return {
+      openCodeDialog: false,
+    };
+  },
   methods: {
     previousQuestion() {
       this.$refs.carousel.prev();
@@ -124,6 +132,39 @@ export default {
 .v-window__next {
   top: 35%;
 }
+
+/* Dodaj kolorowanie dla tokenów HTML */
+.language-html .token.tag {
+  color: blue; /* kolor tagów HTML */
+}
+
+.language-html .token.attr-name {
+  color: red; /* kolor atrybutów HTML */
+}
+
+.language-html .token.attr-value {
+  color: green; /* kolor wartości atrybutów HTML */
+}
+
+/* Dodaj style dla centrowania tekstu */
+pre {
+  background-color: black; /* czarne tło */
+  color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  overflow-x: auto;
+  text-align: left; /* ustawienie tekstu na lewo */
+}
+
+pre code {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: white; /* biały kolor tekstu */
+}
+
 @media only screen and (max-width: 600px) {
   .v-window__prev,
   .v-window__next {

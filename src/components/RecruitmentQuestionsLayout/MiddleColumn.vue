@@ -1,10 +1,10 @@
 <template>
   <div>
     <v-sheet class="mt-md-10" :height="height" color="darkGradient">
-      <RecruitmentQuestion />
+      <RecruitmentQuestion /> <!--
       <div v-if="$route.path === '/recruitment-questions/test-knowledge'">
-        <TestYourKnowledge />
-      </div>
+       <TestYourKnowledge />
+      </div> -->
     </v-sheet>
     <IconComponent
       v-if="$route.path !== '/recruitment-questions'"
