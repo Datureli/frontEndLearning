@@ -19,7 +19,8 @@
               class="font-weight-black text-wrap"
               :class="disable ? 'text-h4' : ['text-h3', 'mt-15']"
               style="transition: 2s"
-            >{{ question.question }}</v-list-item-title>
+              >{{ question.question }}</v-list-item-title
+            >
 
             <v-list-item-subtitle
               class="white--text mr-md-6 ml-md-6 mt-3 text-justify text-h6 text-wrap"
@@ -36,9 +37,14 @@
                 {{ question.answer }}
               </p>
             </v-list-item-subtitle>
+
             <button @click="openCodeDialog = true">Otwórz przykład</button>
+
             <v-dialog v-model="openCodeDialog" max-width="900">
-              <pre class="mr-auto"><code class="language-html">{{ question.code }}</code></pre>
+              <code-highlight language="javascript">
+                <pre><div>{{ question.code }}
+                  </div></pre>
+              </code-highlight>
             </v-dialog>
           </v-col>
         </v-list-item-content>
@@ -48,12 +54,18 @@
 </template>
 
 <script>
+import CodeHighlight from "vue-code-highlight/src/CodeHighlight.vue";
+import "vue-code-highlight/themes/duotone-sea.css";
+import "vue-code-highlight/themes/window.css";
 import { mapState } from "vuex";
 export default {
   data() {
     return {
       openCodeDialog: false,
     };
+  },
+  components: {
+    CodeHighlight,
   },
   methods: {
     previousQuestion() {
@@ -132,20 +144,6 @@ export default {
 .v-window__next {
   top: 35%;
 }
-
-/* Dodaj kolorowanie dla tokenów HTML */
-.language-html .token.tag {
-  color: blue; /* kolor tagów HTML */
-}
-
-.language-html .token.attr-name {
-  color: red; /* kolor atrybutów HTML */
-}
-
-.language-html .token.attr-value {
-  color: green; /* kolor wartości atrybutów HTML */
-}
-
 /* Dodaj style dla centrowania tekstu */
 pre {
   background-color: black; /* czarne tło */

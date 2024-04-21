@@ -1,5 +1,5 @@
 <template>
-  <v-container-fluid>
+  <v-container fluid>
     <div class="d-flex">
       <v-app-bar
         :style="{ position: changePositionProperty, top: 0, zIndex: 5 }"
@@ -44,7 +44,7 @@
     </div>
 
     <router-view></router-view>
-  </v-container-fluid>
+  </v-container>
 </template>
 
 <script>
