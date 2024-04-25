@@ -38,9 +38,9 @@
               </p>
             </v-list-item-subtitle>
 
-            <button @click="openCodeDialog = true">Otwórz przykład</button>
+            <button v-if="question.code" @click="openCodeDialog = true">Otwórz przykład</button>
 
-            <v-dialog v-model="openCodeDialog" max-width="900">
+            <v-dialog  v-model="openCodeDialog" max-width="900">
               <code-highlight language="javascript">
                 <pre><div>{{ question.code }}
                   </div></pre>
