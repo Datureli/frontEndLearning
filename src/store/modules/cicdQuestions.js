@@ -9,8 +9,7 @@ export default {
       },
       {
         question: "Wyjaśnij cel CI?",
-        answer: `CI to praktyka, w której programiści regularnie łączą swoje zmiany kodu w jedno wspólne repozytorium. Po każdym takim połączeniu system automatycznego CI przeprowadza zestaw testów, aby upewnić się, że wprowadzone zmiany nie wpływają negatywnie na istniejący kod.
-            Zapewnia, że zmiany kodu są weryfikowane i testowane automatycznie po ich wprowadzeniu, co pomaga w wykrywaniu błędów i konfliktów wcześnie.`,
+        answer: `CI to praktyka, w której programiści regularnie łączą swoje zmiany kodu w jedno wspólne repozytorium. Po każdym takim połączeniu system automatycznego CI przeprowadza zestaw testów, aby upewnić się, że wprowadzone zmiany nie wpływają negatywnie na istniejący kod.Zapewnia, że zmiany kodu są weryfikowane i testowane automatycznie po ich wprowadzeniu, co pomaga w wykrywaniu błędów i konfliktów.`,
       },
       {
         question: "Wyjaśnij cel CD?",
@@ -62,19 +61,19 @@ export default {
   },
 
   mutations: {
-    randomTestQuestion(state) {
-      state.testQuestions.sort(() => Math.floor(Math.random() - 0.5));
+    randomCiCdQuestion(state) {
+      state.cicdQuestions.sort(() => Math.floor(Math.random() - 0.5));
     },
   },
   actions: {
-    testQuestionLoop(context) {
+    cicdQuestionLoop(context) {
       setInterval(() => {
-        context.commit("randomTestQuestion");
+        context.commit("randomCiCdQuestion");
       }, 5000);
     },
 
-    randomTestQuestion(context) {
-      context.commit("randomTestQuestion");
+    randomCiCdQuestion(context) {
+      context.commit("randomCiCdQuestion");
     },
   },
 };

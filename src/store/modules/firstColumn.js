@@ -102,6 +102,12 @@ export default {
         icon: "mdi-lock",
         color: "blue",
       },
+      {
+        title: "Ci/Cd",
+        link: "/recruitment-questions/cicd",
+        icon: "mdi-lock",
+        color: "gray",
+      },
     ],
   },
 };

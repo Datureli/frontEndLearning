@@ -87,9 +87,7 @@ export default {
       {
         question: "Czym są historyjki użytkownika",
         answer: `
-          Historie użytkownika, znane również jako epiki, są techniką stosowaną w zarządzaniu projektami i rozwijaniu oprogramowania. Służą do opisywania funkcji lub wymagań z perspektywy użytkownika końcowego. Historyjki użytkownika pomagają zrozumieć, jak użytkownicy będą korzystać z systemu, jakie mają potrzeby i jakie cele chcą osiągnąć.Typowa historia użytkownika obejmuje kilka kluczowych elementów:
-
-          Rola Użytkownika: Określenie, kto jest użytkownikiem końcowym danego systemu lub funkcji. Może to być klient, pracownik, czy inna grupa interesariuszy.
+          Historie użytkownika są techniką stosowaną w zarządzaniu projektami i rozwijaniu oprogramowania. Służą do opisywania funkcji lub wymagań z perspektywy użytkownika końcowego. Historyjki użytkownika pomagają zrozumieć, jak użytkownicy będą korzystać z systemu, Określenie, kto jest użytkownikiem końcowym danego systemu lub funkcji. Może to być klient, pracownik, czy inna grupa interesariuszy.
           
           Cel: Opis, co użytkownik chce osiągnąć, korzystając z danego systemu lub funkcji. Często jest to przedstawione jako zdanie opisujące cel w prosty sposób.
           
@@ -136,23 +134,21 @@ export default {
       },
       {
         question: "Wymień strategie testowania?",
-        answer: `Black box testing - Testuje funkcjonalność oprogramowania bez zaglądania w wewnętrzną strukturę kodu. White box testing – Testuje wewnętrzną strukturę kodu i logikę oprogramowania.
+        answer: `Black box testing - Testuje funkcjonalność oprogramowania bez zaglądania w wewnętrzną strukturę kodu. White box testing testuje wewnętrzną strukturę kodu i logikę oprogramowania.Unit testing testuje indywidualne jednostki lub komponenty oprogramowania, aby upewnić się, że działają zgodnie z zamierzeniem.
           
-          Unit testing – Testuje indywidualne jednostki lub komponenty oprogramowania, aby upewnić się, że działają zgodnie z zamierzeniem.
+          Integration testing testuje integrację różnych komponentów oprogramowania, aby upewnić się, że współpracują jako system.
           
-          Integration testing – Testuje integrację różnych komponentów oprogramowania, aby upewnić się, że współpracują jako system.
+          Functional testing testuje funkcjonalne wymagania oprogramowania, aby upewnić się, że są spełnione.
           
-          Functional testing – Testuje funkcjonalne wymagania oprogramowania, aby upewnić się, że są spełnione.
+          System testing testuje kompletny system oprogramowania, aby upewnić się, że spełnia określone wymagania.
           
-          System testing – Testuje kompletny system oprogramowania, aby upewnić się, że spełnia określone wymagania.
+          Acceptance testing testuje oprogramowanie, aby upewnić się, że spełnia oczekiwania klienta lub użytkownika końcowego.
           
-          Acceptance testing – Testuje oprogramowanie, aby upewnić się, że spełnia oczekiwania klienta lub użytkownika końcowego.
+          Regression testing testuje oprogramowanie po dokonaniu zmian lub modyfikacji, aby upewnić się, że zmiany nie wprowadziły nowych błędów.
           
-          Regression testing – Testuje oprogramowanie po dokonaniu zmian lub modyfikacji, aby upewnić się, że zmiany nie wprowadziły nowych błędów.
+          Performance testing testuje oprogramowanie, aby określić jego cechy wydajnościowe, takie jak szybkość, skalowalność i stabilność.
           
-          Performance testing – Testuje oprogramowanie, aby określić jego cechy wydajnościowe, takie jak szybkość, skalowalność i stabilność.
-          
-          Security testing – Testuje oprogramowanie w celu zidentyfikowania podatności i zapewnienia, że spełnia wymagania dotyczące bezpieczeństwa.`,
+          Security testing testuje oprogramowanie w celu zidentyfikowania podatności i zapewnienia, że spełnia wymagania dotyczące bezpieczeństwa.`,
       },
       {
         question: "Jakie są cele testowania?",
@@ -386,7 +382,8 @@ export default {
       {
         question: "Czym jest request i response",
         answer:
-          "Automatyzacji testów nie zaleca się przede wszystkim w przypadku testów negatywnych lub awaryjnych. W sytuacjach, gdy konieczne jest analityczne myślenie testerów, a testy negatywne są zbyt złożone, aby jednoznacznie określić wynik pozytywny lub negatywny, automatyzacja może być mniej skuteczna i trudniejsza do osiągnięcia pożądanych rezultatów.",
+          `Request (żądanie): Jest to komunikat wysłany przez klienta do serwera, zawierający zazwyczaj informacje na temat tego, czego klient oczekuje od serwera. Żądanie może zawierać różne rodzaje danych, w zależności od rodzaju zapytania i protokołu komunikacyjnego używanego w danym systemie. Na przykład, w przypadku przeglądarki internetowej, kiedy wpisujesz adres URL i naciskasz Enter, twoja przeglądarka wysyła żądanie do serwera internetowego, prosząc o dostęp do strony internetowej.
+          Response (odpowiedź): Jest to komunikat wysłany przez serwer do klienta w odpowiedzi na otrzymane żądanie. Odpowiedź zawiera zazwyczaj odpowiednie dane lub informacje, na które klient czekał. Odpowiedź może zawierać różne rodzaje danych, takie jak treść strony internetowej, plik do pobrania, komunikat o błędzie, itp. Na przykład, gdy wysyłasz żądanie o dostęp do strony internetowej, serwer odpowiada przeglądarce zwracając HTML, CSS, JavaScript i inne zasoby, które są potrzebne do wyświetlenia strony w przeglądarce.`,
       },
       {
         question: "Rodzaje odpowiedzi http",
@@ -548,10 +545,10 @@ export default {
       },
       {
         question: "czym jest FIRST?",
-        answer: `FIRST to skrót od pięciu zasad, które są zalecane w podejściu do pisania dobrych testów jednostkowych. Te zasady są często stosowane w ramach podejścia znanego jako Test-Driven Development. Fast: Testy jednostkowe powinny być szybkie w wykonaniu. Szybkość testów jest istotna, ponieważ programiści często uruchamiają je często w trakcie pracy nad kodem, a im szybciej dostaną informacje zwrotne, tym lepiej. Isolated/Independent (Izolowane/Niezależne): Każdy test jednostkowy powinien być niezależny od innych testów. Wynik jednego testu nie powinien wpływać na wyniki innych testów. Izolacja testów pomaga unikać sytuacji, w których błędy jednego testu wpływają na błędy w innych.
-        Repeatable (Powtarzalne): Testy jednostkowe powinny dawać te same wyniki za każdym razem, gdy są uruchamiane. To oznacza, że nie powinny zależeć od zewnętrznych czynników, takich jak stan bazy danych czy sieć.
-        Self-Validating (Samodzielne): Wynik testu jednostkowego powinien być łatwy do zinterpretowania. Nie powinno być konieczne ręczne sprawdzanie rezultatów testów. Wynik powinien być automatycznie oceniany jako sukces lub porażka.
-        Timely (Punktualne): Testy jednostkowe powinny być pisane na tyle wcześnie, aby programiści mogli je uruchamiać regularnie podczas procesu rozwoju. Pisanie testów jednostkowych późno w procesie może prowadzić do trudności w dodawaniu testów do już istniejącego kodu.`,
+        answer: `FIRST to skrót od pięciu zasad, które są zalecane w podejściu do pisania dobrych testów jednostkowych. Fast: Testy jednostkowe powinny być szybkie w wykonaniu. Szybkość testów jest istotna, ponieważ programiści często uruchamiają je w trakcie pracy nad kodem.. Isolated/Independent: Każdy test jednostkowy powinien być niezależny od innych testów. Wynik jednego testu nie powinien wpływać na wyniki innych testów. Izolacja testów pomaga unikać sytuacji, w których błędy jednego testu wpływają na błędy w innych.
+        Repeatable: Testy jednostkowe powinny dawać te same wyniki za każdym razem, gdy są uruchamiane. To oznacza, że nie powinny zależeć od zewnętrznych czynników, takich jak stan bazy danych czy sieć.
+        Self-Validating: Wynik powinien być łatwy do zinterpretowania. Nie powinno być konieczne ręczne sprawdzanie rezultatów testów. Wynik powinien być automatycznie oceniany jako sukces lub porażka.
+        Timely: powinny być pisane na tyle wcześnie, aby programiści mogli je uruchamiać regularnie podczas procesu rozwoju. Pisanie testów jednostkowych późno w procesie może prowadzić do trudności w dodawaniu testów do już istniejącego kodu.`,
       },
       {
         question: "soap vs rest?",
@@ -820,11 +817,6 @@ export default {
         question: `Na co nalezy zwrócić uwagę przy zgłaszaniu błędu?`,
         answer:
           " jest to tytuł, kroki do zreprodukowania, aktualny rezultat, wersja oprogramowania itd. Warto tutaj wskazać na konfigurację środowiska na jakim występuje błąd, czy próbowaliśmy go zreprodukować w innym środowisku, byćmoże na innej wersji językowej oraz na dokładną wersję oprogramowania z możliwym zrzutem ekranu albo filmem.",
-      },
-      {
-        question: `jak postępować z informacją, że u mnie działa??`,
-        answer:
-          "Co zrobimy w takiej sytuacji? Z pewnościa nie pozostawimy bez odpowiedzi:) Dobrze jest upewnić się, czy programista reprodukuje defekt na tym samym środowisku i postępuje dokładnie krok po kroku z naszymi instrukcjami. Byćmoże jest jakas nieznaczna różnica która ma wpływ na ostateczny rezultat. Zdarza się też, że programiści nie używają wersji instalacyjnej oprogramowania, ale budują je z kodu. Niezależnie od tego, o ile to oczywiście możliwe, dobrze jest testować na środowisku które jest jaknajbardziej zbliżone do tego w którym pracuje klient.",
       },
       {
         question: `Jakie wyróżniamy typy testów, czym się różnią?`,

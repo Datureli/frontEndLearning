@@ -114,6 +114,12 @@ const routes = [
           import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
         name: "Cloud",
       },
+      {
+        path: "cicd",
+        component: () =>
+          import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
+        name: "Cicd",
+      },
     ],
   },
 

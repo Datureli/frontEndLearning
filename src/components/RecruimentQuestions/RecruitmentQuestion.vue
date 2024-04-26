@@ -38,9 +38,11 @@
               </p>
             </v-list-item-subtitle>
 
-            <button v-if="question.code" @click="openCodeDialog = true">Otwórz przykład</button>
+            <button v-if="question.code" @click="openCodeDialog = true">
+              Otwórz przykład
+            </button>
 
-            <v-dialog  v-model="openCodeDialog" max-width="900">
+            <v-dialog v-model="openCodeDialog" max-width="900">
               <code-highlight language="javascript">
                 <pre><div>{{ question.code }}
                   </div></pre>
@@ -104,6 +106,7 @@ export default {
     ...mapState("wordpressQuestions", ["wordpressQuestions"]),
     ...mapState("cybersecurityQuestions", ["cybersecurityQuestions"]),
     ...mapState("cloudQuestions", ["cloudQuestions"]),
+    ...mapState("cicdQuestions", ["cicdQuestions"]),
     ...mapState(["disable"]),
 
     questions() {
@@ -128,6 +131,7 @@ export default {
           wordpress: this.wordpressQuestions,
           cybersecurity: this.cybersecurityQuestions,
           cloud: this.cloudQuestions,
+          cicd: this.cicdQuestions
         };
 
         return questionCategories[category] || null;
@@ -144,14 +148,14 @@ export default {
 .v-window__next {
   top: 35%;
 }
-/* Dodaj style dla centrowania tekstu */
+
 pre {
-  background-color: black; /* czarne tło */
+  background-color: black; 
   color: white;
   padding: 10px;
   border: 1px solid #ccc;
   overflow-x: auto;
-  text-align: left; /* ustawienie tekstu na lewo */
+  text-align: left;
 }
 
 pre code {
@@ -160,7 +164,7 @@ pre code {
   margin: 0;
   font-size: 14px;
   line-height: 1.5;
-  color: white; /* biały kolor tekstu */
+  color: white;
 }
 
 @media only screen and (max-width: 600px) {
