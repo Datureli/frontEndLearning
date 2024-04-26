@@ -105,8 +105,8 @@ export default {
       {
         title: "Ci/Cd",
         link: "/recruitment-questions/cicd",
-        icon: "mdi-lock",
-        color: "gray",
+        icon: "mdi-home-automation",
+        color: "brown",
       },
     ],
   },
