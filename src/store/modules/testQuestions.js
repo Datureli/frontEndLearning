@@ -103,7 +103,7 @@ export default {
       {
         question: "Czym jest testowanie Nie-funkcjonalne?",
         answer:
-          "Testowanie nie-funkcjonalne to rodzaj testowania oprogramowania, które ocenia aspekty jakościowe systemu, które nie są związane bezpośrednio z jego funkcjonalnością. Obejmuje ono różne cechy i charakterystyki systemu, które wpływają na jego wydajność, niezawodność, bezpieczeństwo, skalowalność, użyteczność i inne aspekty.kilka głównych obszarów testowania nie-funkcjonalnego: Wydajność (Performance Testing):,Bezpieczeństwo (Security Testing):,Dostępność (Availability Testing):,Niezawodność (Reliability Testing):,Użyteczność (Usability Testing): ,Testy Obciążeniowe (Stress Testing):Testowanie Kompatybilności z Wydajnością (Performance Compatibility Testing): Sprawdza, czy system zachowuje się zgodnie z oczekiwaniami w różnych środowiskach, konfiguracjach sprzętowych i sieciowych.",
+          "To rodzaj testowania oprogramowania, które ocenia aspekty jakościowe systemu, które nie są związane bezpośrednio z jego funkcjonalnością. Obejmuje ono różne cechy i charakterystyki systemu, które wpływają na jego wydajność, niezawodność, bezpieczeństwo, skalowalność, użyteczność i inne aspekty. kilka głównych obszarów testowania nie-funkcjonalnego: Wydajność,Bezpieczeństwo,,Dostępność,Niezawodność (Reliability Testing):,Użyteczność (Usability Testing): ,Testy Obciążeniowe (Stress Testing):Testowanie Kompatybilności z Wydajnością (Performance Compatibility Testing): Sprawdza, czy system zachowuje się zgodnie z oczekiwaniami w różnych środowiskach, konfiguracjach sprzętowych i sieciowych.",
       },
       {
         question:
@@ -256,7 +256,8 @@ export default {
       {
         question: "Czym jest stub?",
         answer:
-          "Stub to obiekt, który w testach służy do imitowania właściwej implementacji. Jego zadaniem jest wyłącznie zwrócenie zadanej wartości. Przykładowy test jednostkowy używający kilku obiektów typu stub może wyglądać następująco:",
+          `
+          Stub (ang. kikut) w kontekście testowania to prosta implementacja lub symulacja fragmentu kodu lub interfejsu, która zwraca z góry zdefiniowane wartości lub zachowania. Stuby są używane podczas testowania jednostkowego do zastępowania zależności, które nie są istotne dla testowanego kodu. Na przykład, w testowaniu jednostkowym funkcji, która pobiera dane z bazy danych, można użyć stuba do zwracania sztucznie utworzonych danych zamiast rzeczywistych danych z bazy danych. Jest to przydatne, gdy chcemy izolować testowany kod od zewnętrznych zależności, co pozwala na bardziej precyzyjne i niezawodne testowanie.:`,
       },
       {
         question: "czym jest Flake Detection?",
@@ -292,16 +293,6 @@ export default {
           "Retest to ponowne przeprowadzenie testów ktore wykazały błąd, natomaist regresja jest przetestowanie poprzednich funkcjonalonosci w celu potwierdzenia ze caly system nie zawiera nowych błędów w przypadku gdyby ktos implementowal nową funkcjonalność",
       },
       {
-        question: "Co jeżeli bład nie wystepuje u innych?",
-        answer:
-          "Trzeba dokladnie sprawdzić opis błędu,dzielenie ekranu wraz z programistą, wziałbym pod uwagę odemienne środowiska pracy takie jak wersja system,system operacyjny,wersja przeglądarki,dokumentacja i przeglad kodu",
-      },
-      {
-        question: "Cykl życia błędu?",
-        answer:
-          "Trzeba dokladnie sprawdzić opis błędu,dzielenie ekranu wraz z programistą, wziałbym pod uwagę odemienne środowiska pracy takie jak wersja system,system operacyjny,wersja przeglądarki,dokumentacja i przeglad kodu",
-      },
-      {
         question:
           "Jakie są fazy testowania związane z cyklem życia testowania oprogramowania?",
         answer:
@@ -315,18 +306,18 @@ export default {
       {
         question: "Czym jest component testing?",
         answer:
-          "Aby przetestować większość komponentów Vue, należy je zamontować na DOM aby w pełni potwierdzić, że działają.W rezultacie stworzono ramy testowania komponentów, aby dać użytkownikom możliwość wykonywania tego w sposób niezawodny, zapewniając jednocześnie udogodnienia specyficzne dla Vue, takie jak integracja z Vuex, routerem Vue i innymi wtyczkami Vue.",
+          `Testowanie komponentów to proces testowania pojedynczych komponentów interfejsu użytkownika (UI) aplikacji. Component testing koncentruje się na testowaniu zachowania i funkcjonalności poszczególnych komponentów.omponenty są testowane w izolacji od innych komponentów i często od całości aplikacji. Testy skupiają się na weryfikacji działania pojedynczego komponentu niezależnie od innych części systemu. Dzięki izolacji i skoncentrowaniu się na pojedynczych komponentach, testy komponentów ułatwiają diagnozowanie i naprawianie błędów w interfejsie użytkownika.Testy komponentów mogą być reużywalne dla różnych części aplikacji, co pozwala zaoszczędzić czas i wysiłek przy tworzeniu testów dla różnych scenariuszy użycia.`,
       },
       {
         question: "Różnice pomiędzy weryfikacją a walidacją?",
-        answer: `Weryfikacja: Proces oceny produktu pod kątem zgodności z określonymi specyfikacjami i wymaganiami. To sprawdzenie, czy produkt jest zbudowany zgodnie z założeniami projektowymi.
-        Walidacja: Proces oceny produktu pod kątem spełnienia rzeczywistych potrzeb użytkownika i czy produkt spełnia zamierzone cele biznesowe. To sprawdzenie, czy zbudowany produkt jest tym, czego rzeczywiście potrzebuje klient.`,
+        answer: `Weryfikacja dotyczy sprawdzenia czy produkt został zbudowany poprawnie zgodnie z określonymi specyfikacjami, podczas gdy walidacja dotyczy potwierdzenia czy produkt spełnia rzeczywiste potrzeby użytkowników i czy jest użyteczny oraz skuteczny w rozwiązaniu problemów.`,
       },
       {
         question: "Czym jest headless testing?",
         answer:
           "Headless testing to rodzaj testowania oprogramowania, w którym testy są wykonywane bez interfejsu graficznego (GUI). W tradycyjnym podejściu testowania, aplikacja jest uruchamiana w pełnym środowisku, a testy interakcji z nią są wykonywane poprzez manipulację GUI. Natomiast w headless testing, aplikacja jest uruchamiana w tle, bez wyświetlania interfejsu graficznego, a testy są wykonywane bezpośrednio na poziomie backendu lub za pomocą interfejsów programistycznych (API).",
       },
+  
       {
         question: "Od czego zależy response time w api?",
         answer: `Obciążenie serwera: Im większe obciążenie serwera, tym dłuższy czas odpowiedzi. Wysokie obciążenie może prowadzić do opóźnień w obsłudze żądań.
@@ -393,7 +384,8 @@ export default {
       {
         question: "Czym jest json web token",
         answer:
-          "Automatyzacji testów nie zaleca się przede wszystkim w przypadku testów negatywnych lub awaryjnych. W sytuacjach, gdy konieczne jest analityczne myślenie testerów, a testy negatywne są zbyt złożone, aby jednoznacznie określić wynik pozytywny lub negatywny, automatyzacja może być mniej skuteczna i trudniejsza do osiągnięcia pożądanych rezultatów.",
+          `
+          JSON Web Token (JWT) to otwarty standard (RFC 7519) definiujący kompaktowy i samowystarczalny sposób reprezentacji informacji między stronami w formie obiektów JSON. JWT może być używany do bezpiecznej transmisji informacji między dwoma stronami jako obiekt JSON. Składa się z trzech części: nagłówka (header), dane (payload) i podpis (signature).JWT jest często używany do autoryzacji i uwierzytelniania użytkowników w aplikacjach internetowych. Po zalogowaniu użytkownik otrzymuje JWT, który jest następnie dołączany do każdego żądania HTTP jako nagłówek Authorization. Serwer następnie weryfikuje poprawność tokenu i na jego podstawie podejmuje decyzję o udzieleniu dostępu do zasobów. JWT są również wykorzystywane do przesyłania informacji o uwierzytelnieniu użytkownika między mikroserwisami w architekturze opartej na usługach.`,
       },
       {
         question: "Czym jest flaky tests",
@@ -538,10 +530,23 @@ export default {
       },
       {
         question: "Czym jes wzorzec AAA",
-        answer: `Wzorzec AAA w testowaniu odnosi się do trzech kluczowych faz, które często występują w strukturze testów jednostkowych.
-        Arrange (Przygotuj): W tej fazie przygotowujesz wszystkie niezbędne warunki i dane dla testu. To obejmuje inicjalizację obiektów, ustawienie danych wejściowych i inne przygotowania.
-        Act (Działaj): W tej fazie wykonujesz właściwą operację lub akcję, którą chcesz przetestować. To jest część, w której występuje główne wykonanie testu.
-        Assert (Potwierdź): W tej fazie sprawdzasz, czy wyniki działania testu są zgodne z oczekiwaniami. Jeśli wyniki są zgodne z oczekiwaniami, test jest uznawany za udany;`,
+        answer: `Odnosi się do trzech kluczowych faz, które często występują w strukturze testów jednostkowych.
+        Arrange: W tej fazie przygotowujesz wszystkie niezbędne warunki i dane dla testu. To obejmuje inicjalizację obiektów, ustawienie danych wejściowych i inne przygotowania.
+        Act: W tej fazie wykonujesz właściwą operację lub akcję, którą chcesz przetestować. To jest część, w której występuje główne wykonanie testu.
+        Assert: W tej fazie sprawdzasz, czy wyniki działania testu są zgodne z oczekiwaniami. Jeśli wyniki są zgodne z oczekiwaniami, test jest uznawany za udany;`,
+        code: `// Test dla funkcji dodawania
+        test('Addition function should return correct sum', () => {
+          // Arrange
+          const a = 3;
+          const b = 5;
+        
+          // Act
+          const result = add(a, b);
+        
+          // Assert
+          expect(result).toBe(8);
+        });
+        `
       },
       {
         question: "czym jest FIRST?",
@@ -553,7 +558,7 @@ export default {
       {
         question: "soap vs rest?",
         answer:
-          "Które rozwiązanie jest najbardziej wydajne? Okazuje się, że REST. Ze względu na swój mały rozmiar wymaga mniejszej przepustowości łącza niż SOAP. Co więcej, dla takiej samej ilości danych wymaga mniejszej mocy obliczeniowej. Dzięki temu działa szybciej, nawet o kilkadziesiąt procent, od SOAP. Wydajność różni się także ze względu na cache’owanie wywołań API, które, w przeciwieństwie do SOAP, umożliwia REST.Jeśli zależy Ci na dużej liczbie formatów, powinieneś zdecydować się na REST. Dzięki niemu dane można wymieniać w formacie JSON, XML, HTML, YAML, a także jako zwykły tekst. Daje więc Ci to duże pole manewru.  SOAP umożliwia komunikację tylko przy użyciu XML. Jednak dostępny jest dla zdecydowanie większej ilości protokołów niż REST, który uwzględnia jedynie HTTP. Tak więc SOAP wykorzystasz łącznie z SMTP, UDP i oczywiście z HTTP.  ",
+          "REST ze względu na swój mały rozmiar wymaga mniejszej przepustowości łącza niż SOAP. Co więcej, dla takiej samej ilości danych wymaga mniejszej mocy obliczeniowej. Dzięki temu działa szybciej, nawet o kilkadziesiąt procent. Wydajność różni się także ze względu na cacheowanie wywołań API, które, w przeciwieństwie do SOAP, umożliwia REST.REST Dzięki niemu dane można wymieniać w formacie JSON, XML, HTML, YAML, a także jako zwykły tekst. SOAP umożliwia komunikację tylko przy użyciu XML. Jednak dostępny jest dla zdecydowanie większej ilości protokołów niż REST, który uwzględnia jedynie HTTP. Tak więc SOAP wykorzystasz łącznie z SMTP, UDP i oczywiście z HTTP.  ",
       },
       {
         question: "Statusy Odpowiedzi HTTP",
@@ -563,7 +568,11 @@ export default {
       {
         question: "Wymień typy testów wydajnościowych",
         answer:
-          "Load testing - czyli sprawdzenie zdolności działania aplikacji przy oczekiwanym ruchu użytkowników. Stress testy - polegają na testowaniu aplikacji przy użyciu obciążenia znacznie większego aniżeli założono w dokumentacji. Celem tego jest weryfikacja jak aplikacja radzi sobie z dużym ruchem i przetwarzaniem danych. Tutaj możemy określić punkty krytyczne aplikacji. W jakim celu - skorzystamy tylko z dwóch słów - Black Friday. Endurance testing - mają na celu weryfikację i upewnienie się, że oprogramowanie może wytrzymać oczekiwane i określone obciążenie przez długi czas. Spike testy – tym sposobem testujemy sobie reakcję aplikacji na nagłe duże skoki obciążenia generowane przez użytkowników. Przykład – jesteśmy firmą dostarczającą relacje z wydarzeń sportowych – finał Mistrzostw Świata i Polska zdobywa bramkę w finale. Wówczas możemy spodziewać się znacznego (większego niż normalnie ruchu).  Scalability tests – czyli tzw. testy skalowalności. Testy sprawdzające zachowanie aplikacji na zwiększony ruch. Tutaj chcemy wydobyć informację na temat skuteczności aplikacji do zwiększania skali przy zwiększaniu się obciążenia. ",
+          `Testy obciążeniowe (load testing) - sprawdzają zdolność aplikacji do obsługi oczekiwanego ruchu użytkowników.
+          Testy stresowe (stress testing) - badają zachowanie aplikacji pod znacznym obciążeniem, np. w czasie Black Friday.
+          Testy wytrzymałościowe (endurance testing) - oceniają zdolność oprogramowania do wytrzymywania długotrwałego obciążenia.
+          Testy szczytowe (spike testing) - sprawdzają reakcję aplikacji na nagłe duże skoki obciążenia.
+          Testy skalowalności (scalability testing) - badają zachowanie aplikacji pod względem zwiększonego ruchu i skalowalności.`,
       },
       {
         question: "Czym są testy dymne?",
@@ -594,6 +603,22 @@ export default {
         question: "Czym są przypadki testowe?",
         answer:
           "Przypadki testowe to dokumentacja opisująca szczegółowo kroki do wykonania w celu przetestowania określonej funkcjonalności, elementu lub przypadku użycia systemu. Każdy przypadek testowy jest zaplanowany w taki sposób, aby pokryć różne scenariusze i warunki, a jego celem jest zweryfikowanie, czy dany element spełnia określone wymagania.",
+          code: `
+          Oto prosty przykład przypadku testowego dla funkcji logowania na stronie internetowej:
+          Nazwa testu: Logowanie użytkownika
+
+          Warunki wstępne: Użytkownik jest na stronie logowania.
+
+          Kroki testowe:
+
+          Wpisz nazwę użytkownika "example_user" w pole tekstowe "Nazwa użytkownika".
+          Wpisz hasło "example_password" w pole tekstowe "Hasło".
+          Kliknij przycisk "Zaloguj się".
+          Oczekiwane rezultaty:
+
+          Po wykonaniu kroków 1-3, użytkownik powinien być przekierowany do strony głównej aplikacji.
+          Na stronie głównej powinien być widoczny komunikat powitalny dla użytkownika "example_user".
+`
       },
       {
         question: "Czym są scenariusze testowe?",
@@ -670,40 +695,29 @@ export default {
       {
         question: "Rodzaje testowania niefunkcjonalnego",
         answer:
-          "testy wydajności,bezpieczeństwa kompatybilności, użyteczności,dostepnosci,przeciążeniowe,obciążeniowe,skalowalności",
-      },
-      {
-        question: "Czym Iaac",
-        answer:
-          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+          "testy wydajności, bezpieczeństwa, kompatybilności, użyteczności, dostepnosci,przeciążeniowe, obciążeniowe, skalowalności",
       },
       {
         question: "czym jest komunikacja po CDP w playwrith",
         answer:
-          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+          "Komunikacja po CDP (Chrome DevTools Protocol) w Playwright odnosi się do sposobu, w jaki Playwright komunikuje się z przeglądarką internetową poprzez interfejs programistyczny Chrome DevTools Protocol. CDP umożliwia programistom interakcję z przeglądarką oraz kontrolę nad jej zachowaniem i funkcjonalnościami.Poprzez CDP, Playwright może wykonywać różnorodne operacje, takie jak nawigacja po stronach internetowych, wykonanie akcji użytkownika (np. kliknięcie, wpisanie tekstu), pobieranie informacji o stronie (np. elementy DOM, atrybuty) oraz monitorowanie zdarzeń i sieci. ",
       },
       {
         question:
-          "Czym się różni playwrith od od bibliotek takich jak Cypress czy Selenium (wbudowana komunikacja, webdriver, CDP, webdriver BIDI",
+          "Czym się różni playwright od od bibliotek takich jak Cypress czy Selenium",
         answer:
-          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+          "Playwright obsługuje wiele przeglądarek, w tym Chromium, Firefox i WebKit, co pozwala na testowanie aplikacji na różnych silnikach renderujących. Playwright oferuje interfejsy API dla różnych języków programowania, takich jak JavaScript, TypeScript, Python, C# i Java, co umożliwia programistom pisanie testów w ich ulubionym języku. Playwright został zaprojektowany z myślą o obsłudze asynchroniczności,Playwright umożliwia emulację urządzeń mobilnych, co jest przydatne podczas testowania responsywności aplikacji na różnych urządzeniach.laywright automatycznie zarządza procesami przeglądarki, co eliminuje potrzebę ręcznego uruchamiania i zamykania przeglądarek podczas testowania.Wsparcie dla testów równoległych: Playwright obsługuje testy równoległe, co pozwala na szybsze wykonywanie testów w środowiskach CI/CD.",
       },
       {
-        question:
-          "Czym się różni playwrith od od bibliotek takich jak Cypress czy Selenium (wbudowana komunikacja, webdriver, CDP, webdriver BIDI",
-        answer:
-          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
-      },
-      {
-        question: "Do jakich testow nie nadaje sie playwrith",
+        question: "Do jakich testow nie nadaje sie playwright",
         answer:
           "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
       },
       {
         question:
-          "Jakie są znane integracje Playwright do testów niefuncjonalnych (dostępność, wydajność backend, frontend, bezpieczeństwo)",
+          "Jakie są znane integracje Playwright do testów niefuncjonalnych",
         answer:
-          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+          "Integracja z CI/CD: Playwright może być łatwo zintegrowany z popularnymi narzędziami do CI/CD, takimi jak Jenkins, CircleCI, Travis CI, GitLab CI/CD czy GitHub Actions. Integracja z narzędziami do monitorowania wydajności: Playwright może być wykorzystany do automatyzacji testów wydajnościowych, a wyniki tych testów mogą być monitorowane i analizowane za pomocą narzędzi takich jak New Relic, Datadog, czy Dynatrace. Integracja z narzędziami do testowania bezpieczeństwa: Playwright może być również używany do automatyzacji testów bezpieczeństwa aplikacji, a wyniki tych testów mogą być analizowane za pomocą narzędzi do testowania penetracyjnego, takich jak OWASP ZAP, Burp Suite czy NessusIntegracja z narzędziami do monitorowania frontendu: Playwright może być wykorzystany do automatyzacji testów interfejsu użytkownika (UI), a wyniki tych testów mogą być monitorowane i analizowane za pomocą narzędzi do monitorowania frontendu, takich jak Sentry, Raygun czy Rollbar.Integracja z narzędziami do testowania API: Chociaż Playwright jest głównie przeznaczony do testowania interfejsu użytkownika, może być również używany do testowania API za pomocą odpowiednich bibliotek do wysyłania żądań HTTP, takich jak Axios czy Superagent.",
       },
       {
         question:
@@ -715,24 +729,31 @@ export default {
         question:
           "Na czym polega dynamiczne czekanie, jak to wiąże się z webFirstAssertions",
         answer:
-          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+          `
+          Dynamiczne czekanie to strategia oczekiwania na określone zdarzenie lub stan elementu na stronie internetowej przed wykonaniem kolejnych akcji w teście automatycznym.ebFirstAssertions to podejście, które zakłada, że w testach automatycznych należy najpierw przeprowadzić asercję dotyczącą obiektu na stronie internetowej, zanim wykonamy jakiekolwiek inne akcje. Oznacza to, że przed kliknięciem, wprowadzeniem tekstu czy nawigacją po stronie, należy upewnić się, że oczekiwany element jest obecny i znajduje się w oczekiwanym stanie.`,
       },
       {
         question:
           "Zalety i wady stosowania np. dataTestID, filtrowania i zagnieżdżenia lokatorów",
         answer:
-          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+          "Playwright umożliwia łatwe odnajdywanie elementów na stronie internetowej poprzez atrybuty data-test-id, co może ułatwić tworzenie testów automatycznych.Playwright oferuje różne metody lokalizowania elementów na stronie, co daje elastyczność w wyborze najlepszej strategii lokalizacji dla danej sytuacji.",
+      },
+      {
+        question:
+          "Czym jest zestaw testowy",
+        answer:
+          "Zestaw testowy to zbiorowy termin używany w dziedzinie testowania oprogramowania, który odnosi się do kompletnego zestawu testów, procedur i danych potrzebnych do przeprowadzenia testów na określonym systemie lub aplikacji. Zestaw testowy zawiera wszystkie elementy niezbędne do przeprowadzenia testów, w tym przypadki testowe, scenariusze testowe, dane testowe, narzędzia testowe oraz wszelkie inne zasoby potrzebne do przeprowadzenia testów.",
       },
       {
         question:
           "Zarządzanie sesją, różnice między logowaniem GUI a API, pliki sesji, tokeny",
         answer:
-          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+          "W przypadku logowania przez interfejs graficzny użytkownika, użytkownik dostarcza swoje dane uwierzytelniające (np. nazwę użytkownika i hasło) poprzez formularz na stronie internetowej.Dane uwierzytelniające są przesyłane do serwera, który sprawdza ich poprawność, a następnie tworzy sesję dla użytkownika.Sesja jest zazwyczaj identyfikowana przez unikalny identyfikator sesji, który jest przechowywany w pliku cookie lub przesyłany w nagłówku HTTP. Logowanie przez interfejs programistyczny aplikacji zazwyczaj polega na przesyłaniu danych uwierzytelniających w formie żądania HTTP, zwykle w formacie JSON lub XML. Pliki sesji są często używane w logowaniu przez interfejs graficzny użytkownika. Tokeny są powszechnie używane w logowaniu przez interfejs programistyczny aplikacji.",
       },
       {
         question: "Testy obciążeniowe vs przeciążeniowe",
         answer:
-          "testy wydajności,bezpieczeństwa kompatybilności, użyteczności,dostepnosci,przeciążeniowe,obciążeniowe,skalowalności",
+          "Podsumowując, testy obciążeniowe oceniają wydajność systemu w warunkach normalnego obciążenia, podczas gdy testy przeciążeniowe oceniają zachowanie systemu w warunkach skrajnego obciążenia, które mogą prowadzić do awarii lub degradacji wydajności. ",
       },
       {
         question: "Opisz wzorzec wrapper pattern",
@@ -762,7 +783,7 @@ export default {
           Tworząc Model Obiektu Strony, tworzymy oddzielną warstwę dla stron, dzięki czemu możemy oddzielić metody i lokalizatory związane z daną stroną od scenariuszy testowych, które znajdują się w warstwie testowej. W ten sposób możemy utrzymywać kod związany z przepływem testowym w warstwie testowej, a cały kod związany z lokalizatorami i metodami może być utrzymywany przez warstwę Modelu Obiektu Strony.`,
       },
       {
-        question: `Jakie są korzyści z zastosowania metodyki testów zwanej "Behavior-Driven Development (BDD)`,
+        question: `Jakie są korzyści z zastosowania metodyki testów zwanej "Behavior-Driven Development`,
         answer:
           "BDD integruje praktyki programowania, testowania i analizy wymagań, poprawiając komunikację między zespołem programistycznym a zespołem testowym oraz zespołem biznesowym.",
       },
