@@ -4,9 +4,9 @@ export default {
   state: {
     sqlQuestions: [
       {
-        question: "Jak działa klauzula 'ORDER BY'",
+        question: "Jak działa klauzula ORDER BY",
         answer:
-          "Klauzula 'ORDER BY' jest używana do sortowania wyników zapytania w bazie danych. Pozwala na określenie jednej lub wielu kolumn, według których wyniki mają zostać posortowane. Kiedy używamy 'ORDER BY', wyniki są najpierw sortowane według pierwszej kolumny, a w przypadku duplikatów, są one dalej sortowane według kolejnych kolumn. Jest to przydatne narzędzie do organizowania danych zwracanych przez zapytania.",
+          "Klauzula ORDER BY jest używana do sortowania wyników zapytania w bazie danych. Pozwala na określenie jednej lub wielu kolumn, według których wyniki mają zostać posortowane. Kiedy używamy ORDER BY, wyniki są najpierw sortowane według pierwszej kolumny, a w przypadku duplikatów, są one dalej sortowane według kolejnych kolumn. Jest to przydatne narzędzie do organizowania danych zwracanych przez zapytania.",
       },
       {
         question: "Jak działa słowo kluczowe 'DISTINCT'",
@@ -91,12 +91,7 @@ export default {
         question: "co robi IN?",
         answer:
           "W przypadku tego typu zapytań z pomocą przychodzi wyrażenie DISTINCT. Pozwala ono na odfiltrowanie powielonych wierszy.Klauzulę DISTINCT możesz stosować także w przypadku wielu kolumn. Załóżmy, że chcesz uzyskać listę wszystkich krajów i miejscowości, w których dokonano zakupu. Aby uzyskać taki wynik wystarczy nieznacznie zmodyfikować poprzednie zapytanie:",
-      },
-      {
-        question: "Jak działa orderBy?",
-        answer:
-          "W przypadku tego typu zapytań z pomocą przychodzi wyrażenie DISTINCT. Pozwala ono na odfiltrowanie powielonych wierszy.Klauzulę DISTINCT możesz stosować także w przypadku wielu kolumn. Załóżmy, że chcesz uzyskać listę wszystkich krajów i miejscowości, w których dokonano zakupu. Aby uzyskać taki wynik wystarczy nieznacznie zmodyfikować poprzednie zapytanie:",
-      },
+      }, 
       {
         question: "Funkcje grupujace",
         answer:
