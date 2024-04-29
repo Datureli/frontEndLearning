@@ -112,20 +112,18 @@ export default {
           "Zawsze warto poszukać jakiś twardych dowodów na które możemy się powołać przy zgłaszaniu błędu. Można zasięgnąc wiedzy u programistów, project/product managera, product ownera i innych. Często bywa tak, że zastana sytuacja jest nie do zaakceptowania, np. oprogramowanie/strona www otwiera się minutę bądź dłużej ale nie znajdziemy w wymaganiach informacji o czasie potrzebnym na otwarcie. Zawsze można zgłosić defekt powołując się na użytkownika ze zdrowym rozsądkiem.",
       },
       {
-        question: "Od czego zależy ryzyko projektowe i co się na nie składa?",
-        answer:
-          "Wpływ i możliwość wystąpienia błędu. Dobrze jest tu także opisać jak wygląda identyfikacja ryzyk, różnice pomiędzy ryzykiem projektowym, a produktowym i co robimy żeby je zminimalizować.",
-      },
-      {
         question: "Jak postępować z informacją, że u mnie działa?",
         answer:
           "Dobrze jest upewnić się, czy programista reprodukuje defekt na tym samym środowisku i postępuje dokładnie krok po kroku z naszymi instrukcjami. Byćmoże jest jakas nieznaczna różnica która ma wpływ na ostateczny rezultat. Zdarza się też, że programiści nie używają wersji instalacyjnej oprogramowania, ale budują je z kodu. Niezależnie od tego, o ile to oczywiście możliwe, dobrze jest testować na środowisku które jest jaknajbardziej zbliżone do tego w którym pracuje klient.",
       },
       {
         question:
-          "Jak wykryć bugi związane z wolnym połączeniem internetowym albo nawet z jego brakiem?",
+          "Jak wykryć bugi związane z wolnym połączeniem internetowym?",
         answer:
-          "Zamiast wyłączać router, możemy przejść do zakładki Network i zasymulować takie połączenie internetowe, na jakim chcemy przetestować aplikację:",
+          `Testowanie w warunkach z ograniczonym pasmem: Symulowanie wolnego połączenia internetowego podczas testów może być pomocne w wykryciu problemów z responsywnością i wydajnością aplikacji. Istnieją narzędzia, które pozwalają na symulację różnych prędkości łącza internetowego, co umożliwia zrozumienie zachowania aplikacji w warunkach ograniczonego pasma.
+          Monitorowanie czasów odpowiedzi: Podczas testowania aplikacji z wolnym połączeniem warto monitorować czasy odpowiedzi na żądania HTTP i odpowiedzi z serwera. Długie czasy odpowiedzi mogą wskazywać na potencjalne problemy z wydajnością lub nieoptymalizowanym kodem.
+          Testowanie aplikacji offline: Warto sprawdzić, czy aplikacja zachowuje się poprawnie, gdy połączenie internetowe jest całkowicie wyłączone lub bardzo wolne. Niektóre aplikacje muszą działać w trybie offline, więc ważne jest, aby upewnić się, że wszystkie funkcje są nadal dostępne i działają poprawnie.
+          Testowanie zachowania aplikacji podczas utraty połączenia: Podczas korzystania z aplikacji z wolnym połączeniem internetowym, warto zwrócić uwagę na to, jak aplikacja reaguje na utratę połączenia i próbuje ponownie się połączyć. Wszelkie nieprawidłowości w zachowaniu się aplikacji podczas tego procesu mogą wskazywać na potencjalne problemy.`,
       },
       {
         question: "Czym jest testowanie statyczne?",
@@ -155,19 +153,13 @@ export default {
         answer:
           "zapobieganie defektom poprzez dokonywanie oceny produktów pracy, takich jak: wymagania, historyjki użytkownika, projekt i kod, weryfikacja, czy zostały spełnione wszystkie wymagania, sprawdzanie, czy przedmiot testów jest kompletny i walidowanie, czy działa zgodnie z oczekiwaniami użytkowników i innych interesariuszy, budowanie zaufania do poziomu jakości przedmiotu testów, wykrywanie defektów i awarii, a tym samym zmniejszenie poziomu ryzyka związanego z niedostateczną jakością oprogramowania, dostarczanie interesariuszom informacji niezbędnych do podejmowania świadomych decyzji.",
       },
-
-      {
-        question: "Co to są testy jednostkowe?",
-        answer:
-          "Testy jednostkowe są to testy sprawdzające małe części kodu(funkcje,metody).Każdy test jest niezależny od poprzedniego oraz w jak najmniejszym stopniu opiera się na zewnętrznych zależnościach.",
-      },
       {
         question: "Opisz działanie funkcji expect",
         answer:
           "Jej głównym zadaniem jest tworzenie obiektu, na którym można wywoływać różne metody asercji, pozwalające na sprawdzenie, czy określone warunki są spełnione w trakcie testowania. ",
       },
       {
-        question: "różnica pomiędzy testowaniem a debugowaniem",
+        question: "Różnica pomiędzy testowaniem a debugowaniem",
         answer:
           "Celem testowania jest sprawdzenie, czy oprogramowanie spełnia określone wymagania i czy działa poprawnie. Testy mają na celu zapewnienie, że aplikacja wykonuje się zgodnie z oczekiwaniami. Celem debugowania jest identyfikacja, lokalizacja i naprawa błędów w kodzie. Testowanie: Jest wykonywane przed wdrożeniem aplikacji lub jej części Debugowanie: Zachodzi po wykryciu problemu, czy to podczas testowania, czy w trakcie użytkowania aplikacji. Debugowanie ma miejsce po wystąpieniu błędu w celu zrozumienia jego źródła i skorygowania. Wynikiem testowania jest ocena jakości oprogramowania, identyfikacja ewentualnych błędów i potwierdzenie, czy spełnia ono określone wymagania. Debugowanie: Wynikiem debugowania jest poprawa i naprawa błędów w kodzie.",
       },
@@ -179,22 +171,20 @@ export default {
       {
         question: "Czym jest framework Jest",
         answer: `
-          Jest to popularny framework do testowania aplikacji w języku JavaScript i TypeScript. Framework automatycznie znajduje i wykonuje testy, co eliminuje potrzebę konfiguracji ręcznej.  Jest umożliwia tworzenie "snapshotów" komponentów, które są zapisywane i porównywane z wynikami kolejnych testów, ułatwiając wychwycenie nieoczekiwanych zmian. Jest obsługuje testy asynchroniczne poprzez ułatwienie pracy z funkcjami zwrotnymi (callbacks), obietnicami (promises) i asynchronicznymi funkcjami. Zapewnia narzędzia do prostego mockowania funkcji, co umożliwia izolowanie testowanych fragmentów kodu.`,
+          Jest to popularny framework do testowania aplikacji w języku JavaScript i TypeScript. Framework automatycznie znajduje i wykonuje testy, co eliminuje potrzebę konfiguracji ręcznej. Jest umożliwia tworzenie "snapshotów" komponentów, które są zapisywane i porównywane z wynikami kolejnych testów, ułatwiając wychwycenie nieoczekiwanych zmian. Jest obsługuje testy asynchroniczne poprzez ułatwienie pracy z funkcjami zwrotnymi, obietnicami i asynchronicznymi funkcjami. Zapewnia narzędzia do prostego mockowania funkcji, co umożliwia izolowanie testowanych fragmentów kodu.`,
       },
       {
         question: "Czym jest mockowanie",
-        answer: `
-          
-        Mockowanie to technika stosowana w testowaniu oprogramowania, w której tworzone są sztuczne obiekty lub moduły, aby zasymulować rzeczywiste obiekty lub funkcje w systemie. Mocki są używane do testowania interakcji między różnymi komponentami oprogramowania, a także do izolowania jednostek testujących od zależności zewnętrznych.`,
+        answer: `Mockowanie to technika stosowana w testowaniu oprogramowania, w której tworzone są sztuczne obiekty lub moduły, aby zasymulować rzeczywiste obiekty lub funkcje w systemie. Mocki są używane do testowania interakcji między różnymi komponentami oprogramowania, a także do izolowania jednostek testujących od zależności zewnętrznych.`,
       },
       {
         question: "Jaka jest różnica między błędem,bugiem i awarią",
-        answer: `
-          
-        Mockowanie to technika stosowana w testowaniu oprogramowania, w której tworzone są sztuczne obiekty lub moduły, aby zasymulować rzeczywiste obiekty lub funkcje w systemie. Mocki są używane do testowania interakcji między różnymi komponentami oprogramowania, a także do izolowania jednostek testujących od zależności zewnętrznych.`,
+        answer: `Błąd (defect): Błąd to ogólny termin odnoszący się do każdego rodzaju nieprawidłowości lub problemu w oprogramowaniu, który powoduje niewłaściwe działanie aplikacji. Może to być wynik niepoprawnej implementacji funkcji, niewłaściwego przetwarzania danych lub błędnej logiki programu. Błąd może być odkryty przez programistę podczas testowania, przez użytkownika w trakcie użytkowania aplikacji lub nawet po długim czasie od uruchomienia.
+        Bug: Termin "bug" jest często używany zamiennie z "błędem", ale niekiedy ma nieco węższe znaczenie. Bug odnosi się do błędu w oprogramowaniu, który został zidentyfikowany przez użytkownika lub testerów. Pochodzenie tego słowa sięga czasów, gdy fizyczne usterki w urządzeniach elektronicznych były czasami spowodowane owadami (bugami) wpadającymi do maszyny i zakłócającymi jej działanie. Bug może być odkryty w trakcie testów, po wdrożeniu produktu lub nawet po dostarczeniu go do użytkowników.
+        Awaria (failure): Awaria występuje, gdy oprogramowanie lub system przestaje działać zgodnie z oczekiwaniami użytkownika lub specyfikacją. Może to być wynik błędu w kodzie, niewłaściwej konfiguracji, problemu sprzętowego lub innego czynnika. Awaria może prowadzić do niedostępności systemu, utraty danych lub innych negatywnych konsekwencji. Awaria jest bardziej zaawansowanym etapem niż sama obserwacja błędu lub bugu - jest to faktyczne zauważenie problemu w działaniu systemu przez użytkowników lub administratorów..`,
       },
       {
-        question: "siedem zasad testowania",
+        question: "Wymień siedem zasad testowania",
         answer:
           "Testowanie ujawnia usterki, ale nie może dowieść ich braku Testowanie może wykazać obecność defektów, ale nie może dowieść, że oprogramowanie jest od nich wolne. Tym samym testowanie zmniejsza prawdopodobieństwo, że w oprogramowaniu pozostaną niewykryte defekty, ale sam fakt niewykrycia defektów nie stanowi dowodu poprawności oprogramowania. Testowanie gruntowne jest niemożliwe Przetestowanie wszystkiego jest możliwe tylko w najprostszych przypadkach.Wczesne testowanie oszczędza czas i pieniądze",
       },
@@ -206,12 +196,7 @@ export default {
       {
         question: "Pomyłki, defekty i awarie",
         answer:
-          "Na skutek pomyłki (błędu) człowieka w kodzie oprogramowania lub w innym związanym z nim produkciepracy może powstać defekt (inaczej zwany usterką lub pluskwą). Pomyłka skutkująca wprowadzeniemdefektu w jednym produkcie pracy może spowodować błąd skutkujący wprowadzeniem defektu winnym, powiązanym produkcie pracy. Przykładem takiej sytuacji jest pomyłka popełniona podczaspozyskiwania wymagań, która może prowadzić do defektu   w wymaganiach, co spowoduje pomyłkę programisty skutkującą wprowadzeniem defektu w kodzie.Wykonanie kodu zawierającego defekt może spowodować awarię, ale nie musi dziać się tak        ",
-      },
-      {
-        question: "Jak działają testy jest",
-        answer:
-          "pierwszym argumentem jest opis testu, kolejnym funkcja w której wywołujemy expect sprawdzającą poprawność wartości.",
+          "Na skutek pomyłki (błędu) człowieka w kodzie oprogramowania lub w innym związanym z nim produkciepracy może powstać defekt. Pomyłka skutkująca wprowadzeniem defektu w jednym produkcie pracy może spowodować błąd skutkujący wprowadzeniem defektu winnym, powiązanym produkcie pracy. Przykładem takiej sytuacji jest pomyłka popełniona podczaspozyskiwania wymagań, która może prowadzić do defektu   w wymaganiach, co spowoduje pomyłkę programisty skutkującą wprowadzeniem defektu w kodzie.Wykonanie kodu zawierającego defekt może spowodować awarię, ale nie musi dziać się tak        ",
       },
       {
         question: "Kiedy automatyzować testy?",
@@ -246,24 +231,22 @@ export default {
       {
         question: "Jak połączyć jest z typescriptem?",
         answer:
-          "są dwa sposoby na integrację JESTa z Typescriptem, jeden sprawdza typy, drugi korzysta z wygenerowanych plików js. My oczywiście chcemy sprawdzać typy, więc użyjemy ts-jest!",
+          "Są dwa sposoby na integrację Jesta z Typescriptem, jeden sprawdza typy, drugi korzysta z wygenerowanych plików js. My oczywiście chcemy sprawdzać typy, więc użyjemy ts-jest!",
       },
       {
-        question: "Czym jest docker?",
+        question: "Czym jest Docker?",
         answer:
-          " Docker pozwala nam na uruchamianie dowolnych aplikacji w wyizolowanym środowisku. Zajmuje przy tym niewiele zasobów (w porównaniu np. do maszyny wirtualnej). ",
+          "Docker pozwala nam na uruchamianie dowolnych aplikacji w wyizolowanym środowisku. Zajmuje przy tym niewiele zasobów (w porównaniu np. do maszyny wirtualnej). ",
       },
       {
         question: "Czym jest stub?",
         answer:
           `
-          Stub (ang. kikut) w kontekście testowania to prosta implementacja lub symulacja fragmentu kodu lub interfejsu, która zwraca z góry zdefiniowane wartości lub zachowania. Stuby są używane podczas testowania jednostkowego do zastępowania zależności, które nie są istotne dla testowanego kodu. Na przykład, w testowaniu jednostkowym funkcji, która pobiera dane z bazy danych, można użyć stuba do zwracania sztucznie utworzonych danych zamiast rzeczywistych danych z bazy danych. Jest to przydatne, gdy chcemy izolować testowany kod od zewnętrznych zależności, co pozwala na bardziej precyzyjne i niezawodne testowanie.:`,
+          Stub w kontekście testowania to prosta implementacja lub symulacja fragmentu kodu lub interfejsu, która zwraca z góry zdefiniowane wartości lub zachowania. Stuby są używane podczas testowania jednostkowego do zastępowania zależności, które nie są istotne dla testowanego kodu. Na przykład, w testowaniu jednostkowym funkcji, która pobiera dane z bazy danych, można użyć stuba do zwracania sztucznie utworzonych danych zamiast rzeczywistych danych z bazy danych. Jest to przydatne, gdy chcemy izolować testowany kod od zewnętrznych zależności, co pozwala na bardziej precyzyjne i niezawodne testowanie.:`,
       },
       {
         question: "czym jest Flake Detection?",
-        answer: `"Flake detection" odnosi się do procesu identyfikowania "flake'ów" w kontekście testowania oprogramowania. Flake to termin używany, gdy testy automatyczne są niestabilne i dają różne wyniki podczas różnych uruchomień, pomimo braku zmian w kodzie lub funkcjonalności aplikacji.
-
-          Flake detection jest praktyką mającą na celu identyfikację testów, które są podatne na flakiness, czyli te, które nie zawsze kończą się tym samym wynikiem przy każdym uruchomieniu. Flake'y mogą powodować problemy w procesie ciągłej integracji i dostawy (CI/CD), ponieważ utrudniają wiarygodne monitorowanie jakości kodu i automatycznego wdrażania.
+        answer: `"Flake detection" odnosi się do procesu identyfikowania "flake'ów" w kontekście testowania oprogramowania. Flake to termin używany, gdy testy automatyczne są niestabilne i dają różne wyniki podczas różnych uruchomień, pomimo braku zmian w kodzie lub funkcjonalności aplikacji. Flake detection jest praktyką mającą na celu identyfikację testów, które są podatne na flakiness, czyli te, które nie zawsze kończą się tym samym wynikiem przy każdym uruchomieniu. Flake'y mogą powodować problemy w procesie ciągłej integracji i dostawy (CI/CD), ponieważ utrudniają wiarygodne monitorowanie jakości kodu i automatycznego wdrażania.
           
           Aby wykryć flake'y, organizacje stosują różne strategie, takie jak:
           
@@ -283,11 +266,6 @@ export default {
           "Automatic Waiting, Flake Detection, Network Traffic Control, Screenshots and Videos, Debuggability, real time reloard, ).",
       },
       {
-        question: "Jak prawidłowo opisac błąd?",
-        answer:
-          "Automatic Waiting, Flake Detection, Network Traffic Control, Screenshots and Videos, Debuggability, real time reloard, ).",
-      },
-      {
         question: "Jaka jest roznica miedzy retestem a regresją?",
         answer:
           "Retest to ponowne przeprowadzenie testów ktore wykazały błąd, natomaist regresja jest przetestowanie poprzednich funkcjonalonosci w celu potwierdzenia ze caly system nie zawiera nowych błędów w przypadku gdyby ktos implementowal nową funkcjonalność",
@@ -296,7 +274,7 @@ export default {
         question:
           "Jakie są fazy testowania związane z cyklem życia testowania oprogramowania?",
         answer:
-          "cykl życia oprogramowania: Okres czasu rozpoczynający się kiedy pojawił się pomysł na oprogramowanie i kończący się gdy oprogramowanie nie jest już dostępne do użytku. Zazwyczaj cykl życia oprogramowania zawiera fazę koncepcji, fazę wymagań, fazę projektowania, fazę implementacji, fazę testów, fazę instalacji i zastępowania, fazę wykorzystania produkcyjnego i pielęgnowania oraz czasami, fazę wycofania. Uwaga: te fazy mogą na siebie zachodzić lub mogą być wykonywane iteracyjnie.",
+          "Cykl życia oprogramowania: Okres czasu rozpoczynający się kiedy pojawił się pomysł na oprogramowanie i kończący się gdy oprogramowanie nie jest już dostępne do użytku. Zazwyczaj cykl życia oprogramowania zawiera fazę koncepcji, fazę wymagań, fazę projektowania, fazę implementacji, fazę testów, fazę instalacji i zastępowania, fazę wykorzystania produkcyjnego i pielęgnowania oraz czasami, fazę wycofania. Uwaga: te fazy mogą na siebie zachodzić lub mogą być wykonywane iteracyjnie.",
       },
       {
         question: "Czym jest Mocha",
@@ -348,12 +326,7 @@ export default {
       {
         question: "Modele cyklu życia oprogramowania?",
         answer:
-          "Model cyklu życia oprogramowania opisuje rodzaje czynności wykonywanych na poszczególnych etapach projektu wytwarzania oprogramowania oraz powiązania logiczne i chronologiczne między tymi  czynnościami. Istnieje wiele różnych modeli cyklu życia oprogramowania, a każdy z nich wymaga  innego podejścia do testowania",
-      },
-      {
-        question: "Czym są testy dymne?",
-        answer:
-          "testy dymne to wybrany podzbiór wszystkich przypadków testowych, które pokrywają główne funkcjonalności. Selekcja takich testów umożliwia szybką weryfikację, czy kluczowe funkcjonalności programu działają poprawnie – ma to duże znaczenie w automatyzacji.",
+          "Model cyklu życia oprogramowania opisuje rodzaje czynności wykonywanych na poszczególnych etapach projektu wytwarzania oprogramowania oraz powiązania logiczne i chronologiczne między tymi czynnościami. Istnieje wiele różnych modeli cyklu życia oprogramowania, a każdy z nich wymaga  innego podejścia do testowania",
       },
       {
         question: "Czym są wartości brzegowe?",
@@ -368,7 +341,13 @@ export default {
       {
         question: "tablica deccyzycja?",
         answer:
-          "Automatyzacji testów nie zaleca się przede wszystkim w przypadku testów negatywnych lub awaryjnych. W sytuacjach, gdy konieczne jest analityczne myślenie testerów, a testy negatywne są zbyt złożone, aby jednoznacznie określić wynik pozytywny lub negatywny, automatyzacja może być mniej skuteczna i trudniejsza do osiągnięcia pożądanych rezultatów.",
+          `Tablica decyzyjna, nazywana także tablicą decyzyjną decyzji (ang. decision table), to narzędzie używane w analizie systemów, zarządzaniu projektem oraz testowaniu oprogramowania. Służy do zapisania wszystkich możliwych kombinacji warunków i działań, co ułatwia zrozumienie logiki decyzyjnej systemu.Podstawowe elementy tablicy decyzyjnej to:
+
+          Warunki: Są to czynniki lub zdarzenia, które mogą mieć wpływ na podejmowanie decyzji. Warunki mogą być spełnione (true) lub niespełnione (false).
+          Działania: Są to akcje, które zostaną wykonane w zależności od spełnienia określonych warunków. Działania mogą być różne w zależności od kombinacji warunków.
+          Kombinacje warunków: Tablica decyzyjna zawiera wszystkie możliwe kombinacje warunków, które mogą wystąpić w systemie.
+          Działania decyzyjne: Są to wyniki lub akcje podejmowane na podstawie spełnienia określonych warunków. Każda kombinacja warunków ma przypisaną akcję decyzyjną.
+          Tablica decyzyjna jest szczególnie przydatna w przypadku systemów, w których istnieje wiele warunków i możliwych działań, co sprawia, że analiza logiki decyzyjnej byłaby trudna w tradycyjny sposób. Używając tablicy decyzyjnej, można łatwo zidentyfikować wszystkie przypadki testowe i zapewnić, że wszystkie możliwe kombinacje warunków są sprawdzane.`,
       },
       {
         question: "Czym jest request i response",
@@ -385,19 +364,16 @@ export default {
         question: "Czym jest json web token",
         answer:
           `
-          JSON Web Token (JWT) to otwarty standard (RFC 7519) definiujący kompaktowy i samowystarczalny sposób reprezentacji informacji między stronami w formie obiektów JSON. JWT może być używany do bezpiecznej transmisji informacji między dwoma stronami jako obiekt JSON. Składa się z trzech części: nagłówka (header), dane (payload) i podpis (signature).JWT jest często używany do autoryzacji i uwierzytelniania użytkowników w aplikacjach internetowych. Po zalogowaniu użytkownik otrzymuje JWT, który jest następnie dołączany do każdego żądania HTTP jako nagłówek Authorization. Serwer następnie weryfikuje poprawność tokenu i na jego podstawie podejmuje decyzję o udzieleniu dostępu do zasobów. JWT są również wykorzystywane do przesyłania informacji o uwierzytelnieniu użytkownika między mikroserwisami w architekturze opartej na usługach.`,
+          JSON Web Token to otwarty standard (RFC 7519) definiujący kompaktowy i samowystarczalny sposób reprezentacji informacji między stronami w formie obiektów JSON. JWT może być używany do bezpiecznej transmisji informacji między dwoma stronami jako obiekt JSON. Składa się z trzech części: nagłówka (header), dane (payload) i podpis (signature).JWT jest często używany do autoryzacji i uwierzytelniania użytkowników w aplikacjach internetowych. Po zalogowaniu użytkownik otrzymuje JWT, który jest następnie dołączany do każdego żądania HTTP jako nagłówek Authorization. Serwer następnie weryfikuje poprawność tokenu i na jego podstawie podejmuje decyzję o udzieleniu dostępu do zasobów. JWT są również wykorzystywane do przesyłania informacji o uwierzytelnieniu użytkownika między mikroserwisami w architekturze opartej na usługach.`,
       },
       {
         question: "Czym jest flaky tests",
-        answer: `"Flaky tests" to termin używany w kontekście testowania oprogramowania, aby opisać testy, które nie zawsze przechodzą lub nie przechodzą zawsze zgodnie z oczekiwaniami. Flaky tests są uważane za problematyczne, ponieważ utrudniają pewność co do stabilności aplikacji i mogą prowadzić do błędnych raportów o jakości oprogramowania. Przyczyny flaky tests mogą być różne, takie jak:
-
-          Stan zewnętrzny: Testy, które zależą od stanu zewnętrznego, takiego jak baza danych, zasoby sieciowe, itp., mogą być flaky, gdy te zasoby są niestabilne lub zmieniają się.
+        answer: `To termin używany w kontekście testowania oprogramowania, aby opisać testy, które nie zawsze przechodzą lub nie przechodzą zawsze zgodnie z oczekiwaniami. Flaky tests są uważane za problematyczne, ponieważ utrudniają pewność co do stabilności aplikacji i mogą prowadzić do błędnych raportów o jakości oprogramowania. Przyczyny flaky tests mogą być różne, takie jak:
+        Stan zewnętrzny: Testy, które zależą od stanu zewnętrznego, takiego jak baza danych, zasoby sieciowe mogą być flaky, gdy te zasoby są niestabilne lub zmieniają się.
+        Zależności między testami: Jeśli testy zależą od siebie nawzajem, zmiany w jednym teście mogą wpływać na wyniki innych testów.
+        Asynchroniczność: Testy, które zawierają asynchroniczne operacje, takie jak żądania do API lub oczekiwanie na animacje, mogą być flaky, jeśli nie są odpowiednio zarządzane.
           
-          Zależności między testami: Jeśli testy zależą od siebie nawzajem, zmiany w jednym teście mogą wpływać na wyniki innych testów.
-          
-          Asynchroniczność: Testy, które zawierają asynchroniczne operacje, takie jak żądania do API lub oczekiwanie na animacje, mogą być flaky, jeśli nie są odpowiednio zarządzane.
-          
-          Nieprzewidywalne czynniki zewnętrzne: Niektóre flaky tests mogą być spowodowane przez nieprzewidywalne czynniki zewnętrzne, takie jak opóźnienia w sieci, problemy z infrastrukturą testową, itp.
+          Nieprzewidywalne czynniki zewnętrzne: Niektóre testy mogą być spowodowane przez nieprzewidywalne czynniki zewnętrzne, takie jak opóźnienia w sieci, problemy z infrastrukturą testową.
           
           Rozwiązanie problemu flaky tests może obejmować:
           
@@ -449,7 +425,7 @@ export default {
       {
         question: "Jakie informacje powinny się znaleźć w zgłoszeniu defektu?",
         answer:
-          "Szczegóły zgłoszenia często zależą od narzędzia (tzw. bugtrackera) lub od przyjętego podejścia w danej organizacji. Można jednak wskazać kilka elementów, które zwykle są niezbędne do zreprodukowania i naprawienia defektu. nazwa/tytuł (często ze wskazaniem jakiego obszaru lub jakiej aplikacji dotyczy defekt) kroki do zreprodukowania  aktualny oraz oczekiwany rezultat wersja oprogramowania/branch informacja o środowisku informacja, czy występuje na innym (wyższym) środowisku data i czas wystąpienia zrzut ekranu lub film",
+          "Szczegóły zgłoszenia często zależą od narzędzia lub od przyjętego podejścia w danej organizacji. Można jednak wskazać kilka elementów, które zwykle są niezbędne do zreprodukowania i naprawienia defektu. nazwa/tytuł (często ze wskazaniem jakiego obszaru lub jakiej aplikacji dotyczy defekt) kroki do zreprodukowania  aktualny oraz oczekiwany rezultat wersja oprogramowania/branch informacja o środowisku informacja, czy występuje na innym (wyższym) środowisku data i czas wystąpienia zrzut ekranu lub film",
       },
       {
         question: "Czym są testy end-to-end?",
@@ -458,15 +434,13 @@ export default {
       },
       {
         question: "Czym jest dług techniczny?",
-        answer: `Długi techniczny to metafora używana w branży IT, oznaczająca zobowiązania techniczne wynikające z wyborów projektowych, decyzji programistycznych czy innych działań, które wymagają późniejszego rozwiązania lub poprawy. Jest to forma kumulacji zaległości w zakresie utrzymania oprogramowania lub projektu.szybkość implementacji kosztem jakości: Czasami, aby spełnić krótkoterminowe cele projektowe, programiści mogą zdecydować się na szybkie, ale mniej zrównoważone rozwiązania.
-
-          Brak dokumentacji: Zaniedbanie dokumentacji kodu i projektu może prowadzić do długu technicznego. Brak odpowiedniej dokumentacji sprawia, że zrozumienie i utrzymanie kodu stają się trudniejsze.
+        answer: `Długi techniczny to metafora używana w branży IT, oznaczająca zobowiązania techniczne wynikające z wyborów projektowych, decyzji programistycznych czy innych działań, które wymagają późniejszego rozwiązania lub poprawy.szybkość implementacji kosztem jakości: Czasami, aby spełnić krótkoterminowe cele projektowe, programiści mogą zdecydować się na szybkie, ale mniej zrównoważone rozwiązania.Brak dokumentacji: Zaniedbanie dokumentacji kodu i projektu może prowadzić do długu technicznego.
           
           Zaniedbanie testów: Pominięcie lub niewystarczająca ilość testów jednostkowych i testów integracyjnych może prowadzić do powstawania błędów, które są trudniejsze do zidentyfikowania i naprawienia w przyszłości.
           
           Nieefektywne rozwiązania: Wybieranie łatwiejszych, ale mniej efektywnych rozwiązań technologicznych może prowadzić do utworzenia długu technicznego.
           
-          Brak aktualizacji technologicznych: Nieprzeprowadzanie regularnych aktualizacji technologicznych i utrzymanie przestarzałych bibliotek czy narzędzi może prowadzić do zaległości technicznych. Dług techniczny ma tendencję do narastania, a jego zaniedbywanie może prowadzić do problemów w dłuższej perspektywie. Dlatego ważne jest, aby zespoły programistyczne regularnie przeglądały i zarządzały długiem technicznym, podejmując świadome decyzje, planując refaktoryzację i utrzymując dobry standard jakościowy kodu.`,
+          Brak aktualizacji technologicznych: Nieprzeprowadzanie regularnych aktualizacji technologicznych i utrzymanie przestarzałych bibliotek czy narzędzi może prowadzić do zaległości technicznych. Dług techniczny ma tendencję do narastania, a jego zaniedbywanie może prowadzić do problemów w dłuższej perspektywie. Dlatego ważne jest, aby zespoły programistyczne regularnie przeglądały i zarządzały długiem technicznym.`,
       },
       {
         question: "Jakie są cele testów?",
@@ -475,13 +449,10 @@ export default {
       },
       {
         question: "Jakie są sposoby deploymentu?",
-        answer: `Local Deployment (Lokalny Deployment):
-
-        Oprogramowanie jest wdrożone i uruchamiane na jednym komputerze lub lokalnej sieci. Jest to często używane podczas developowania i testowania aplikacji.
-        On-Premises Deployment (Deployment Wewnętrzny):
-        
+        answer: `Lokalny Deployment: Oprogramowanie jest wdrożone i uruchamiane na jednym komputerze lub lokalnej sieci.
+        Deployment Wewnętrzny:
         Oprogramowanie jest wdrożone na serwerach znajdujących się w fizycznych lokalizacjach firmy lub organizacji. Organizacje mają pełną kontrolę nad infrastrukturą.
-        Cloud Deployment (Deployment w Chmurze):
+        Deployment w Chmurze:
         
         Oprogramowanie jest wdrożone w chmurze, co oznacza, że działa na infrastrukturze chmurowej dostarczanej przez dostawcę usług chmurowych. To podejście umożliwia skalowalność, elastyczność i dostępność.
         Hybrid Deployment (Hybrydowy Deployment):
@@ -550,15 +521,15 @@ export default {
       },
       {
         question: "czym jest FIRST?",
-        answer: `FIRST to skrót od pięciu zasad, które są zalecane w podejściu do pisania dobrych testów jednostkowych. Fast: Testy jednostkowe powinny być szybkie w wykonaniu. Szybkość testów jest istotna, ponieważ programiści często uruchamiają je w trakcie pracy nad kodem.. Isolated/Independent: Każdy test jednostkowy powinien być niezależny od innych testów. Wynik jednego testu nie powinien wpływać na wyniki innych testów. Izolacja testów pomaga unikać sytuacji, w których błędy jednego testu wpływają na błędy w innych.
+        answer: `FIRST to skrót od pięciu zasad, które są zalecane w podejściu do pisania dobrych testów jednostkowych. Fast: Testy jednostkowe powinny być szybkie w wykonaniu.  Isolated/Independent: Każdy test jednostkowy powinien być niezależny od innych testów. Wynik jednego testu nie powinien wpływać na wyniki innych testów.
         Repeatable: Testy jednostkowe powinny dawać te same wyniki za każdym razem, gdy są uruchamiane. To oznacza, że nie powinny zależeć od zewnętrznych czynników, takich jak stan bazy danych czy sieć.
         Self-Validating: Wynik powinien być łatwy do zinterpretowania. Nie powinno być konieczne ręczne sprawdzanie rezultatów testów. Wynik powinien być automatycznie oceniany jako sukces lub porażka.
-        Timely: powinny być pisane na tyle wcześnie, aby programiści mogli je uruchamiać regularnie podczas procesu rozwoju. Pisanie testów jednostkowych późno w procesie może prowadzić do trudności w dodawaniu testów do już istniejącego kodu.`,
+        Timely: powinny być pisane na tyle wcześnie, aby programiści mogli je uruchamiać regularnie podczas procesu rozwoju.`,
       },
       {
         question: "soap vs rest?",
         answer:
-          "REST ze względu na swój mały rozmiar wymaga mniejszej przepustowości łącza niż SOAP. Co więcej, dla takiej samej ilości danych wymaga mniejszej mocy obliczeniowej. Dzięki temu działa szybciej, nawet o kilkadziesiąt procent. Wydajność różni się także ze względu na cacheowanie wywołań API, które, w przeciwieństwie do SOAP, umożliwia REST.REST Dzięki niemu dane można wymieniać w formacie JSON, XML, HTML, YAML, a także jako zwykły tekst. SOAP umożliwia komunikację tylko przy użyciu XML. Jednak dostępny jest dla zdecydowanie większej ilości protokołów niż REST, który uwzględnia jedynie HTTP. Tak więc SOAP wykorzystasz łącznie z SMTP, UDP i oczywiście z HTTP.  ",
+          "Rest ze względu na swój mały rozmiar wymaga mniejszej przepustowości łącza niż soap. Co więcej, dla takiej samej ilości danych wymaga mniejszej mocy obliczeniowej. Dzięki temu działa szybciej, nawet o kilkadziesiąt procent. Wydajność różni się także ze względu na cacheowanie wywołań API, które, w przeciwieństwie do SOAP, umożliwia REST.REST Dzięki niemu dane można wymieniać w formacie JSON, XML, HTML, YAML, a także jako zwykły tekst. SOAP umożliwia komunikację tylko przy użyciu XML. Jednak dostępny jest dla zdecydowanie większej ilości protokołów niż REST, który uwzględnia jedynie HTTP. Tak więc SOAP wykorzystasz łącznie z SMTP, UDP i oczywiście z HTTP.  ",
       },
       {
         question: "Statusy Odpowiedzi HTTP",
@@ -568,36 +539,36 @@ export default {
       {
         question: "Wymień typy testów wydajnościowych",
         answer:
-          `Testy obciążeniowe (load testing) - sprawdzają zdolność aplikacji do obsługi oczekiwanego ruchu użytkowników.
-          Testy stresowe (stress testing) - badają zachowanie aplikacji pod znacznym obciążeniem, np. w czasie Black Friday.
-          Testy wytrzymałościowe (endurance testing) - oceniają zdolność oprogramowania do wytrzymywania długotrwałego obciążenia.
-          Testy szczytowe (spike testing) - sprawdzają reakcję aplikacji na nagłe duże skoki obciążenia.
-          Testy skalowalności (scalability testing) - badają zachowanie aplikacji pod względem zwiększonego ruchu i skalowalności.`,
+          `Testy obciążeniowe - sprawdzają zdolność aplikacji do obsługi oczekiwanego ruchu użytkowników.
+          Testy stresowe - badają zachowanie aplikacji pod znacznym obciążeniem, np. w czasie Black Friday.
+          Testy wytrzymałościowe - oceniają zdolność oprogramowania do wytrzymywania długotrwałego obciążenia.
+          Testy szczytowe - sprawdzają reakcję aplikacji na nagłe duże skoki obciążenia.
+          Testy skalowalności - badają zachowanie aplikacji pod względem zwiększonego ruchu i skalowalności.`,
       },
       {
         question: "Czym są testy dymne?",
         answer:
-          "Testy dymne to weryfikacja wszystkich kluczowych ścieżek, które potwierdzają, że najważniejsze funkcjonalności aplikacji czy oprogramowania działają prawidłowo. Testy te przebiegają szybko, dając korzyści w postaci niemal natychmiastowej informacji zwrotnej. Można wykonać je ręcznie lub z pomocą zautomatyzowanego narzędzia.",
+          "Testy dymne, zwane również testami dymnymi lub testami wdychanymi (ang. smoke tests), są rodzajem testów funkcjonalnych, które służą do szybkiego sprawdzenia podstawowej funkcjonalności aplikacji lub systemu po wprowadzeniu zmian lub przed wdrożeniem na środowisko produkcyjne.",
       },
       {
         question: "Co oznacza skrót tdd?",
         answer:
-          "TDD – Test-Driven Development jest sposobem czy podejściem do tworzenia oprogramowania w którym główną ideą jest stworzenie w pierwszej kolejności testów dla zaplanowanych funkcjonalności a następnie stworzenie kodu i implementacja tych funkcjonalności. ",
+          "Test-Driven Development jest sposobem czy podejściem do tworzenia oprogramowania w którym główną ideą jest stworzenie w pierwszej kolejności testów dla zaplanowanych funkcjonalności a następnie stworzenie kodu i implementacja tych funkcjonalności. ",
       },
       {
         question: "Co oznacza skrót bdd?",
         answer:
-          "BDD czyli Behavior-Driven Development to podejście będące rozwinięciem TDD. Są to testy tworzone z wykorzystaniem składni danego języka, które wyrażają jakieś zachowanie oraz oczekiwane określone rezultaty. Takie testy tworzymy w formie scenariuszy i korzystają ze słów kluczowych w postaci:  Given – warunek początkowy  When – opis tego co będzie wykonywane  Then – oczekiwany rezultat  Zaletą tworzenia tego typu testów jest to, że są one zrozumiałe, również dla osób nietechnicznych. Tak sformułowane przypadki mogą stanowić dobrą podstawę zachowania aplikacji przy tworzeniu dokumentacji.",
+          "BDD czyli Behavior-Driven Development to podejście będące rozwinięciem TDD. Są to testy tworzone z wykorzystaniem składni danego języka, które wyrażają jakieś zachowanie oraz oczekiwane określone rezultaty. Takie testy tworzymy w formie scenariuszy i korzystają ze słów kluczowych w postaci:  Given warunek początkowy  When opis tego co będzie wykonywane  Then – oczekiwany rezultat  Zaletą tworzenia tego typu testów jest to, że są one zrozumiałe, również dla osób nietechnicznych. Tak sformułowane przypadki mogą stanowić dobrą podstawę zachowania aplikacji przy tworzeniu dokumentacji.",
       },
       {
         question: "Czy możliwe jest wykonanie kompletnego testu systemu?",
         answer:
-          "Niestety nie. Testowanie kompletne, zwane też gruntownym, nie jest możliwe do wykonania. Ilość kombinacji dla każdej zmiennej jest praktycznie nieograniczona. Dodatkową przeszkodą do wykonania takiego zadania jest fakt, iż oprogramowanie zwykle działa na wielu urządzeniach w różnych konfiguracjach. To tym bardziej utrudnia kompleksowość działań.",
+          "Testowanie kompletne, zwane też gruntownym, nie jest możliwe do wykonania. Ilość kombinacji dla każdej zmiennej jest praktycznie nieograniczona. Dodatkową przeszkodą do wykonania takiego zadania jest fakt, iż oprogramowanie zwykle działa na wielu urządzeniach w różnych konfiguracjach. To tym bardziej utrudnia kompleksowość działań.",
       },
       {
         question: "Jakie są korzyści z testowania automatycznego?",
         answer:
-          "Korzyści z testowania automatycznego to płynna obsługa powtarzających się przypadków testowych, pomoc w testowaniu dużej matrycy testowej, możliwość wykonywania testów równoległych, zwiększona dokładność, poprzez minimalizację błędów generowane przez człowieka, a także oszczędność czasu i pieniędzy.",
+          "Płynna obsługa powtarzających się przypadków testowych, pomoc w testowaniu dużej matrycy testowej, możliwość wykonywania testów równoległych, zwiększona dokładność, poprzez minimalizację błędów generowane przez człowieka, a także oszczędność czasu i pieniędzy.",
       },
       {
         question: "Czym są przypadki testowe?",
@@ -623,9 +594,7 @@ export default {
       {
         question: "Czym są scenariusze testowe?",
         answer: `
-          Scenariusz testowy to opis sekwencji kroków, działań lub zdarzeń, które mają być wykonane podczas testowania określonego przypadku użycia lub funkcjonalności systemu. W przeciwieństwie do pojedynczego przypadku testowego, który jest bardziej skoncentrowany na konkretnych krokach testowych i oczekiwanych rezultatach, scenariusz testowy obejmuje szerszy zakres i może obejmować kilka przypadków testowych.
-          
-          Ogólnie rzecz biorąc, scenariusz testowy opisuje interakcje użytkownika z systemem lub zachowanie systemu w konkretnej sytuacji. Jest to bardziej ogólna i elastyczna forma dokumentacji testowej, która może obejmować różne przypadki testowe, warunki i ścieżki.`,
+          Scenariusz testowy to opis sekwencji kroków, działań lub zdarzeń, które mają być wykonane podczas testowania określonego przypadku użycia lub funkcjonalności systemu. W przeciwieństwie do pojedynczego przypadku testowego, który jest bardziej skoncentrowany na konkretnych krokach testowych i oczekiwanych rezultatach, scenariusz testowy obejmuje szerszy zakres i może obejmować kilka przypadków testowych. Ogólnie rzecz biorąc, scenariusz testowy opisuje interakcje użytkownika z systemem lub zachowanie systemu w konkretnej sytuacji. Jest to bardziej ogólna i elastyczna forma dokumentacji testowej, która może obejmować różne przypadki testowe, warunki i ścieżki.`,
       },
       {
         question: "Czym jest mockowanie?",
@@ -636,7 +605,7 @@ export default {
         question: "Czym jest planowanie testów?",
         answer: `
           Planowanie testów to kluczowy etap w procesie testowania oprogramowania, który pomaga ustalić zakres, cele, strategie i zasoby niezbędne do skutecznego przeprowadzenia testów. Poniżej znajdziesz kluczowe elementy planowania testów`,
-        list: `Zakres testów:
+        code: `Zakres testów:
 
           Określenie funkcji i modułów, które będą testowane.
           Wybór poziomu testów (np. testy jednostkowe, integracyjne, systemowe, akceptacyjne).
@@ -690,7 +659,7 @@ export default {
       {
         question: "Czym są lokatory",
         answer:
-          "Funkcjonalności to nic innego jak czynności wykonywane przez aplikacje. Testy funkcjonalne analizują zewnętrzne zachowanie oprogramowania, traktując je jako czarną skrzynkę.Testy niefunkcjonalne skupiają się na charakterystyce działania aplikacji i obejmują: testy wydajności, użyteczności, niezawodności, bezpieczeństwa oraz testy możliwości pracy na różnych platformach.",
+          "Lokatory są często wykorzystywanymi narzędziami w testach automatycznych interfejsu użytkownika. Służą do odnajdywania i identyfikowania elementów interfejsu użytkownika, takich jak przyciski, pola tekstowe czy linki, na podstawie ich atrybutów lub położenia na stronie. Istnieją różne rodzaje lokatorów, zależnie od używanej technologii i narzędzi automatyzacji testów. Oto kilka przykładów najczęściej spotykanych rodzajów lokatorów:",
       },
       {
         question: "Rodzaje testowania niefunkcjonalnego",
@@ -698,7 +667,7 @@ export default {
           "testy wydajności, bezpieczeństwa, kompatybilności, użyteczności, dostepnosci,przeciążeniowe, obciążeniowe, skalowalności",
       },
       {
-        question: "czym jest komunikacja po CDP w playwrith",
+        question: "czym jest komunikacja po CDP w playwright",
         answer:
           "Komunikacja po CDP (Chrome DevTools Protocol) w Playwright odnosi się do sposobu, w jaki Playwright komunikuje się z przeglądarką internetową poprzez interfejs programistyczny Chrome DevTools Protocol. CDP umożliwia programistom interakcję z przeglądarką oraz kontrolę nad jej zachowaniem i funkcjonalnościami.Poprzez CDP, Playwright może wykonywać różnorodne operacje, takie jak nawigacja po stronach internetowych, wykonanie akcji użytkownika (np. kliknięcie, wpisanie tekstu), pobieranie informacji o stronie (np. elementy DOM, atrybuty) oraz monitorowanie zdarzeń i sieci. ",
       },
@@ -706,31 +675,28 @@ export default {
         question:
           "Czym się różni playwright od od bibliotek takich jak Cypress czy Selenium",
         answer:
-          "Playwright obsługuje wiele przeglądarek, w tym Chromium, Firefox i WebKit, co pozwala na testowanie aplikacji na różnych silnikach renderujących. Playwright oferuje interfejsy API dla różnych języków programowania, takich jak JavaScript, TypeScript, Python, C# i Java, co umożliwia programistom pisanie testów w ich ulubionym języku. Playwright został zaprojektowany z myślą o obsłudze asynchroniczności,Playwright umożliwia emulację urządzeń mobilnych, co jest przydatne podczas testowania responsywności aplikacji na różnych urządzeniach.laywright automatycznie zarządza procesami przeglądarki, co eliminuje potrzebę ręcznego uruchamiania i zamykania przeglądarek podczas testowania.Wsparcie dla testów równoległych: Playwright obsługuje testy równoległe, co pozwala na szybsze wykonywanie testów w środowiskach CI/CD.",
-      },
-      {
-        question: "Do jakich testow nie nadaje sie playwright",
-        answer:
-          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+          "Playwright obsługuje wiele przeglądarek, w tym Chromium, Firefox i WebKit, co pozwala na testowanie aplikacji na różnych silnikach renderujących. Playwright oferuje interfejsy API dla różnych języków programowania, takich jak JavaScript, TypeScript, Python, C# i Java, co umożliwia pisanie testów w ich ulubionym języku. Playwright został zaprojektowany z myślą o obsłudze asynchroniczności,Playwright umożliwia emulację urządzeń mobilnych, co jest przydatne podczas testowania responsywności aplikacji na różnych urządzeniach.laywright automatycznie zarządza procesami przeglądarki, co eliminuje potrzebę ręcznego uruchamiania i zamykania przeglądarek podczas testowania.Wsparcie dla testów równoległych: Playwright obsługuje testy równoległe, co pozwala na szybsze wykonywanie testów w środowiskach CI/CD.",
       },
       {
         question:
           "Jakie są znane integracje Playwright do testów niefuncjonalnych",
         answer:
-          "Integracja z CI/CD: Playwright może być łatwo zintegrowany z popularnymi narzędziami do CI/CD, takimi jak Jenkins, CircleCI, Travis CI, GitLab CI/CD czy GitHub Actions. Integracja z narzędziami do monitorowania wydajności: Playwright może być wykorzystany do automatyzacji testów wydajnościowych, a wyniki tych testów mogą być monitorowane i analizowane za pomocą narzędzi takich jak New Relic, Datadog, czy Dynatrace. Integracja z narzędziami do testowania bezpieczeństwa: Playwright może być również używany do automatyzacji testów bezpieczeństwa aplikacji, a wyniki tych testów mogą być analizowane za pomocą narzędzi do testowania penetracyjnego, takich jak OWASP ZAP, Burp Suite czy NessusIntegracja z narzędziami do monitorowania frontendu: Playwright może być wykorzystany do automatyzacji testów interfejsu użytkownika (UI), a wyniki tych testów mogą być monitorowane i analizowane za pomocą narzędzi do monitorowania frontendu, takich jak Sentry, Raygun czy Rollbar.Integracja z narzędziami do testowania API: Chociaż Playwright jest głównie przeznaczony do testowania interfejsu użytkownika, może być również używany do testowania API za pomocą odpowiednich bibliotek do wysyłania żądań HTTP, takich jak Axios czy Superagent.",
+          "Playwright może być łatwo zintegrowany z popularnymi narzędziami do CI/CD, takimi jak Jenkins, CircleCI, Travis CI, GitLab CI/CD czy GitHub Actions, może być wykorzystany do automatyzacji testów wydajnościowych, a wyniki tych testów mogą być monitorowane i analizowane za pomocą narzędzi takich jak New Relic, Datadog, czy Dynatrace, również używany do automatyzacji testów bezpieczeństwa aplikacji, a wyniki tych testów mogą być analizowane za pomocą narzędzi do testowania penetracyjnego, takich jak OWASP ZAP, Burp Suite czy NessusIntegracja z narzędziami do monitorowania frontendu: Playwright może być wykorzystany do automatyzacji testów interfejsu użytkownika (UI), a wyniki tych testów mogą być monitorowane i analizowane za pomocą narzędzi do monitorowania frontendu, takich jak Sentry, Raygun czy Rollbar.Integracja z narzędziami do testowania API: Chociaż Playwright jest głównie przeznaczony do testowania interfejsu użytkownika, może być również używany do testowania API za pomocą odpowiednich bibliotek do wysyłania żądań HTTP, takich jak Axios czy Superagent.",
       },
       {
         question:
           "Wyjaśnienie, jak zarządzać timeoutami i jakie mogą być konsekwencje niewłaściwych ustawień.",
         answer:
-          "IaaC (Infrastructure as a Code), czyli przechowywania całej konfiguracji maszyn/systemów w postaci kodu.",
+          `zewnętrznych zasobów, takich jak bazy danych, API lub usługi sieciowe. Zarządzanie nimi może mieć istotny wpływ na wydajność i stabilność Twojej aplikacji. Oto kilka wyjaśnień dotyczących zarządzania timeoutami i potencjalnych konsekwencji niewłaściwych ustawień:Timeout to maksymalny czas oczekiwania na odpowiedź od zewnętrznego zasobu. Jeśli odpowiedź nie zostanie otrzymana w określonym czasie, operacja jest przerywana, a może zostać wygenerowany błąd. Konsekwencje niewłaściwych ustawień timeoutów:
+          Opóźnienia w działaniu aplikacji: Zbyt długi timeout może powodować opóźnienia w działaniu aplikacji, szczególnie gdy zasób zewnętrzny nie odpowiada w oczekiwanym czasie.
+          Zwolnienie zasobów: Zbyt długi timeout może skutkować zajęciem zasobów przez operacje oczekujące na odpowiedź, co może prowadzić do wycieku pamięci lub braku dostępnych zasobów.
+          Brak reakcji: Zbyt krótki timeout może skutkować przerywaniem operacji, nawet gdy zasób zewnętrzny jest nadal aktywny, co może prowadzić do błędów i niekompletnych operacji.`,
       },
       {
         question:
           "Na czym polega dynamiczne czekanie, jak to wiąże się z webFirstAssertions",
         answer:
-          `
-          Dynamiczne czekanie to strategia oczekiwania na określone zdarzenie lub stan elementu na stronie internetowej przed wykonaniem kolejnych akcji w teście automatycznym.ebFirstAssertions to podejście, które zakłada, że w testach automatycznych należy najpierw przeprowadzić asercję dotyczącą obiektu na stronie internetowej, zanim wykonamy jakiekolwiek inne akcje. Oznacza to, że przed kliknięciem, wprowadzeniem tekstu czy nawigacją po stronie, należy upewnić się, że oczekiwany element jest obecny i znajduje się w oczekiwanym stanie.`,
+          `Dynamiczne czekanie to strategia oczekiwania na określone zdarzenie lub stan elementu na stronie internetowej przed wykonaniem kolejnych akcji w teście automatycznym. WebFirstAssertions to podejście, które zakłada, że w testach automatycznych należy najpierw przeprowadzić asercję dotyczącą obiektu na stronie internetowej, zanim wykonamy jakiekolwiek inne akcje. Oznacza to, że przed kliknięciem, wprowadzeniem tekstu czy nawigacją po stronie, należy upewnić się, że oczekiwany element jest obecny i znajduje się w oczekiwanym stanie.`,
       },
       {
         question:
@@ -748,28 +714,27 @@ export default {
         question:
           "Zarządzanie sesją, różnice między logowaniem GUI a API, pliki sesji, tokeny",
         answer:
-          "W przypadku logowania przez interfejs graficzny użytkownika, użytkownik dostarcza swoje dane uwierzytelniające (np. nazwę użytkownika i hasło) poprzez formularz na stronie internetowej.Dane uwierzytelniające są przesyłane do serwera, który sprawdza ich poprawność, a następnie tworzy sesję dla użytkownika.Sesja jest zazwyczaj identyfikowana przez unikalny identyfikator sesji, który jest przechowywany w pliku cookie lub przesyłany w nagłówku HTTP. Logowanie przez interfejs programistyczny aplikacji zazwyczaj polega na przesyłaniu danych uwierzytelniających w formie żądania HTTP, zwykle w formacie JSON lub XML. Pliki sesji są często używane w logowaniu przez interfejs graficzny użytkownika. Tokeny są powszechnie używane w logowaniu przez interfejs programistyczny aplikacji.",
+          "W przypadku logowania przez interfejs graficzny użytkownika, użytkownik dostarcza swoje dane uwierzytelniające poprzez formularz na stronie internetowej.Dane uwierzytelniające są przesyłane do serwera, który sprawdza ich poprawność, a następnie tworzy sesję dla użytkownika. Sesja jest zazwyczaj identyfikowana przez unikalny identyfikator sesji, który jest przechowywany w pliku cookie lub przesyłany w nagłówku HTTP. Logowanie przez interfejs programistyczny aplikacji zazwyczaj polega na przesyłaniu danych uwierzytelniających w formie żądania HTTP, zwykle w formacie JSON lub XML. Pliki sesji są często używane w logowaniu przez interfejs graficzny użytkownika. Tokeny są powszechnie używane w logowaniu przez interfejs programistyczny aplikacji.",
       },
       {
         question: "Testy obciążeniowe vs przeciążeniowe",
         answer:
-          "Podsumowując, testy obciążeniowe oceniają wydajność systemu w warunkach normalnego obciążenia, podczas gdy testy przeciążeniowe oceniają zachowanie systemu w warunkach skrajnego obciążenia, które mogą prowadzić do awarii lub degradacji wydajności. ",
+          "Testy obciążeniowe oceniają wydajność systemu w warunkach normalnego obciążenia, podczas gdy testy przeciążeniowe oceniają zachowanie systemu w warunkach skrajnego obciążenia, które mogą prowadzić do awarii lub degradacji wydajności. ",
       },
       {
         question: "Opisz wzorzec wrapper pattern",
         answer:
-          "Funkcjonalności to nic innego jak czynności wykonywane przez aplikacje. Testy funkcjonalne analizują zewnętrzne zachowanie oprogramowania, traktując je jako czarną skrzynkę.Testy niefunkcjonalne skupiają się na charakterystyce działania aplikacji i obejmują: testy wydajności, użyteczności, niezawodności, bezpieczeństwa oraz testy możliwości pracy na różnych platformach.",
+          `Wzorzec Wrapper (inaczej nazywany Adapter lub Decorator) jest strukturalnym wzorcem projektowym, który pozwala na dodanie nowej funkcjonalności do istniejącego obiektu poprzez opakowanie go w nowy obiekt, który implementuje tę funkcjonalność. Ten wzorzec jest szczególnie przydatny, gdy chcemy zmodyfikować zachowanie istniejącego obiektu bez konieczności zmiany jego struktury.`,
       },
       {
         question: "Wyjaśnij na czym polega cykl życia błędu",
         answer:
-          "Cykl życia błędu zaczyna się od etapu zgłoszenia przez testera. Wówczas otrzymuje on status nowy. W kolejnym kroku jest on przydzielany do dewelopera, który zajmie się jego naprawą. Na czas wprowadzania niezbędnych zmian, błąd otrzymuje status „w realizacji”. Po zakończeniu prac niezbędna jest ponowna weryfikacja błędu, wówczas jego status zmienia się na „do weryfikacji”. Dopiero po weryfikacji i stwierdzeniu, że defekt został naprawiony, cykl dobiega końca, a zgłoszenie otrzymuje status „zamknięte”. Trzeba jednak pamiętać, że cykl życia błędu może się różnić w zależności od organizacji czy charakteru projektu. Zdarza się, że niektóre z etapów są powtarzane nawet kilka razy, zanim osiągną kolejny",
+          "Cykl życia błędu zaczyna się od etapu zgłoszenia przez testera. Wówczas otrzymuje on status nowy. W kolejnym kroku jest on przydzielany do dewelopera, który zajmie się jego naprawą. Na czas wprowadzania niezbędnych zmian, błąd otrzymuje status „w realizacji”. Po zakończeniu prac niezbędna jest ponowna weryfikacja błędu, wówczas jego status zmienia się na „do weryfikacji”. Dopiero po weryfikacji i stwierdzeniu, że defekt został naprawiony, cykl dobiega końca, a zgłoszenie otrzymuje status „zamknięte”.",
       },
       {
         question: "Czym jest page object model?",
         answer: `
           Page Object Model to wzorzec projektowania stosowany w testowaniu, zwłaszcza w testowaniu automatycznym interfejsów użytkownika. POM pomaga zorganizować i utrzymać kod testów, szczególnie gdy mamy do czynienia z aplikacjami webowymi.Podstawowe elementy Page Object Model to:
-
           Klasy Stron: Każda strona w aplikacji ma swoją dedykowaną klasę, która zawiera elementy interfejsu użytkownika (np. pola tekstowe, przyciski) oraz metody do interakcji z tymi elementami.
           
           Klasy Testów: Klasy, które zawierają testy. Testy używają metod i elementów z klas Page Object.
@@ -779,7 +744,7 @@ export default {
           Możliwość Ponownego Użycia Kodu (Code Reusability):
           Główną korzyścią z użycia Modelu Obiektu Strony jest możliwość ponownego użycia kodu. Ponieważ używamy różnych klas do oddzielnego reprezentowania stron, zamiast używać zduplikowanych lokalizatorów i metod, możemy używać lokalizatorów i metod odpowiedniej klasy dla strony w różnych rodzajach scenariuszy testowych, po prostu tworząc obiekt klasy strony w klasie testowej lub importując klasę do klasy testowej.
           
-          Łatwość Utrzymania Kodu (Code Maintainability):
+          Łatwość Utrzymania Kodu:
           Tworząc Model Obiektu Strony, tworzymy oddzielną warstwę dla stron, dzięki czemu możemy oddzielić metody i lokalizatory związane z daną stroną od scenariuszy testowych, które znajdują się w warstwie testowej. W ten sposób możemy utrzymywać kod związany z przepływem testowym w warstwie testowej, a cały kod związany z lokalizatorami i metodami może być utrzymywany przez warstwę Modelu Obiektu Strony.`,
       },
       {
@@ -827,27 +792,16 @@ export default {
       {
         question: `Skąd wiemy, że aktualne zachowanie oprogramowania jest poprawne czy jest to błąd?`,
         answer:
-          "Takie pytanie pomaga określić, czy kandydat odwołuje się do jakiejkolwiek dokumentacji. A co jeśli nie mamy oficjalnej dokumentacji? Być może ze względu na swoje doświadczenie i znajomość oprogramowania to tester określa co jest dobre a co nie Często w projektach agile dokumentacja jest na tyle uboga, że np. obecność na codziennych stand-up`ach to główne źródło wiedzy o aktualnych zmianach w oprogramowaniu.",
+          `Oczekiwania użytkownika: Jeśli zachowanie oprogramowania spełnia oczekiwania użytkownika, jest to poprawne. W przeciwnym razie może to wskazywać na błąd.
+          Wymagania funkcjonalne: Zachowanie oprogramowania powinno być zgodne z określonymi wymaganiami i specyfikacją. Niezgodność może wskazywać na błąd.
+          Normy i standardy: Oprogramowanie powinno przestrzegać odpowiednich norm i standardów. Niezgodność może wskazywać na błąd.
+          Stabilność i spójność: Poprawne oprogramowanie działa stabilnie i spójnie w różnych sytuacjach. Niż stabilność lub spójność mogą wskazywać na błąd.
+          Testowanie i weryfikacja: Oprogramowanie powinno być przetestowane i zweryfikowane przed wdrożeniem. Jeśli testy potwierdzają poprawność, jest to dobre. Być może ze względu na swoje doświadczenie i znajomość oprogramowania to tester określa co jest dobre a co nie Często w projektach agile dokumentacja jest na tyle uboga, że np. obecność na codziennych stand-upach to główne źródło wiedzy o aktualnych zmianach w oprogramowaniu.`,
       },
       {
         question: `Na co nalezy zwrócić uwagę przy zgłaszaniu błędu?`,
         answer:
-          " jest to tytuł, kroki do zreprodukowania, aktualny rezultat, wersja oprogramowania itd. Warto tutaj wskazać na konfigurację środowiska na jakim występuje błąd, czy próbowaliśmy go zreprodukować w innym środowisku, byćmoże na innej wersji językowej oraz na dokładną wersję oprogramowania z możliwym zrzutem ekranu albo filmem.",
-      },
-      {
-        question: `Na co nalezy zwrócić uwagę przy zgłaszaniu błędu?`,
-        answer:
-          " jest to tytuł, kroki do zreprodukowania, aktualny rezultat, wersja oprogramowania itd. Warto tutaj wskazać na konfigurację środowiska na jakim występuje błąd, czy próbowaliśmy go zreprodukować w innym środowisku, byćmoże na innej wersji językowej oraz na dokładną wersję oprogramowania z możliwym zrzutem ekranu albo filmem.",
-      },
-      {
-        question: `Jakie wyróżniamy typy testów, czym się różnią?`,
-        answer:
-          "Często ludzie mylą rodzaje testów z poziomami testów i wymieniają tutaj testy modułowe, integracyjne, systemowe i akceptacyjne. W tym przypadku należy wymienić testy funkcjonalne (co oprogramowanie robi), niefunkcjonalne (jak oprogramowanie to robi), strukturalne (jak robi to co robi) i te związane ze zmianą (retesty + regresja).",
-      },
-      {
-        question: `Od czego zależy ryzyko projektowe i co się na nie składa?`,
-        answer:
-          "Często ludzie mylą rodzaje testów z poziomami testów i wymieniają tutaj testy modułowe, integracyjne, systemowe i akceptacyjne. W tym przypadku należy wymienić testy funkcjonalne (co oprogramowanie robi), niefunkcjonalne (jak oprogramowanie to robi), strukturalne (jak robi to co robi) i te związane ze zmianą (retesty + regresja).",
+          "Jest to tytuł, kroki do zreprodukowania, aktualny rezultat, wersja oprogramowania, oczekiwne zachowanie, zrzuty ekranu. Warto tutaj wskazać na konfigurację środowiska na jakim występuje błąd, czy próbowaliśmy go zreprodukować w innym środowisku, być może na innej wersji językowej oraz na dokładną wersję oprogramowania z możliwym zrzutem ekranu albo filmem.",
       },
     ],
   },
