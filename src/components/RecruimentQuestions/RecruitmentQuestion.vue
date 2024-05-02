@@ -25,6 +25,7 @@
             <v-list-item-subtitle
               class="white--text mr-md-6 ml-md-6 mt-3 text-justify text-h6 text-wrap"
               v-show="disable"
+              style="max-height: 270px; overflow-y: auto; padding-right: 15px;"
             >
               <p
                 style="
@@ -107,6 +108,7 @@ export default {
     ...mapState("cybersecurityQuestions", ["cybersecurityQuestions"]),
     ...mapState("cloudQuestions", ["cloudQuestions"]),
     ...mapState("cicdQuestions", ["cicdQuestions"]),
+    ...mapState("backendQuestions", ["backendQuestions"]),
     ...mapState(["disable"]),
 
     questions() {
@@ -131,7 +133,8 @@ export default {
           wordpress: this.wordpressQuestions,
           cybersecurity: this.cybersecurityQuestions,
           cloud: this.cloudQuestions,
-          cicd: this.cicdQuestions
+          cicd: this.cicdQuestions,
+          backend: this.backendQuestions
         };
 
         return questionCategories[category] || null;

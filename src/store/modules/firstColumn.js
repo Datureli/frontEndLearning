@@ -108,6 +108,13 @@ export default {
         icon: "mdi-home-automation",
         color: "brown",
       },
+      {
+        title: "Backend",
+        link: "/recruitment-questions/backend",
+        icon: "mdi-home-automation",
+        color: "brown",
+      },
+
     ],
   },
 };

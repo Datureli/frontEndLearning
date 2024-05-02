@@ -3,22 +3,16 @@
     <v-btn
       elevation="0"
       v-shortkey="['2']"
-      @shortkey="
-        randomLoop();
-        changeStatus();
-      "
+      @shortkey="toggleLoop"
       v-if="disableLoop"
-      @click="
-        randomLoop();
-        changeStatus();
-      "
+      @click="toggleLoop"
       color="transparent"
     >
       <v-icon x-large>mdi-autorenew</v-icon>
     </v-btn>
-    <v-btn v-else @click="resetInterval" color="transparent"
-      ><v-icon x-large color="green">mdi-autorenew</v-icon></v-btn
-    >
+    <v-btn v-else @click="resetInterval" color="transparent">
+      <v-icon x-large color="green">mdi-autorenew</v-icon>
+    </v-btn>
   </div>
 </template>
 
@@ -32,10 +26,13 @@ export default {
   },
   methods: {
     resetInterval() {
-      this.disableLoop = !this.disableLoop;
+      this.toggleLoop();
     },
-    changeStatus() {
+    toggleLoop() {
       this.disableLoop = !this.disableLoop;
+      if (!this.disableLoop) {
+        this.randomLoop();
+      }
     },
     randomLoop() {
       switch (this.$route.path) {

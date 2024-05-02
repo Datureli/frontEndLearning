@@ -30,7 +30,6 @@ export default {
       {
         question: "Na czym polegają problemy z iframe?",
         answer: `Ograniczenia Same-Origin Policy:
-
           Problem: Zasada jednego pochodzenia (Same-Origin Policy) może powodować problemy w dostępie do zawartości iframu, jeśli strony pochodzą z różnych domen.
           Rozwiązanie: Upewnij się, że strony w iframie są z tego samego źródła co strona nadrzędna. Jeśli nie jest to możliwe, możesz użyć odpowiednich komend Cypressa do pracy z zawartością iframu.
           Błąd Braku Wsparcia dla Niektórych Zdarzeń:
@@ -127,7 +126,7 @@ export default {
         answer: `Użyj polecenia cy.route() do przechwytywania żądań i symulowania błędu serwera.`,
       },
       {
-        question: "Jak ustawiać i sprawdzać ciasteczka w teście Cypress?",
+        question: "Jak ustawiać ciasteczka w teście Cypress?",
         answer:
           "Użyj polecenia cy.setCookie() do ustawiania ciasteczek i cy.getCookie() do sprawdzania ich wartości.",
       },
@@ -143,7 +142,7 @@ export default {
           "Możesz użyć narzędzi takich jak cypress-multi-reporters lub mochawesome do generowania rozbudowanych raportów z testów Cypress.",
       },
       {
-        question: " Jak obsłużyć okna modalne (popup) w testach Cypress?",
+        question: " Jak obsłużyć okna modalne w testach Cypress?",
         answer:
           "Użyj polecenia cy.get() z odpowiednim selektorem, aby zidentyfikować okno modalne, a następnie wykonaj na nim odpowiednie operacje.",
       },

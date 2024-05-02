@@ -34,6 +34,7 @@ const routes = [
       "cybersecurity",
       "cloud",
       "cicd",
+      "backend"
     ]),
   },
   {

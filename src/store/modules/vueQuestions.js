@@ -580,12 +580,11 @@ export default {
       },
       {
         question: "Podaj różnice między vue 2 i vue 3",
-        answer: `Vue 3 i API kompozycyjne
-          Najważniejszym ulepszeniem Nuxt 3 jest przyjęcie najnowszej wersji Vue 3, która wprowadza zaawansowane funkcje, takie jak API kompozycyjne i komposable, wyróżniające go spośród jego poprzednika. Komposable, funkcje, które można importować, mogą być bezproblemowo integrowane z dowolnym komponentem, wspierając lepszą ponowną używalność kodu i zmniejszając redundantność.Silnik Nitro i Szybsze Ponowne Ładowanie
-          Nowoczesny Silnik Nitro w Nuxt 3 podnosi praktycznie każdy aspekt frameworka deweloperskiego Vue.js.
-          Poprzez optymalizację wydajności, Silnik Nitro umożliwia błyskawiczne ładowanie aplikacji podczas procesu rozwoju oraz szybkie odświeżanie po wprowadzeniu zmian.
-          Vue 3 wprowadza innowacyjny system reaktywności z użyciem funkcji ref i reactive.
-          Nuxt 3 automatycznie identyfikuje i importuje te istotne funkcje podstawowe, eliminując konieczność ręcznych importów w każdym komponencie.`,
+        answer: `Najważniejszym ulepszeniem Nuxt 3 jest przyjęcie najnowszej wersji Vue 3, która wprowadza zaawansowane funkcje, takie jak API kompozycyjne i komposable, wyróżniające go spośród jego poprzednika. Komposable, funkcje, które można importować, mogą być bezproblemowo integrowane z dowolnym komponentem, wspierając lepszą ponowną używalność kodu i zmniejszając redundantność. Silnik Nitro i Szybsze Ponowne Ładowanie
+        Nowoczesny Silnik Nitro w Nuxt 3 podnosi praktycznie każdy aspekt frameworka deweloperskiego Vue.js.
+        Poprzez optymalizację wydajności, Silnik Nitro umożliwia błyskawiczne ładowanie aplikacji podczas procesu rozwoju oraz szybkie odświeżanie po wprowadzeniu zmian.
+        Vue 3 wprowadza innowacyjny system reaktywności z użyciem funkcji ref i reactive.
+        Nuxt 3 automatycznie identyfikuje i importuje te istotne funkcje podstawowe, eliminując konieczność ręcznych importów w każdym komponencie.`,
       },
       {
         question: "Server side rendering w nuxt 3",
@@ -600,7 +599,7 @@ export default {
       {
         question: "Czym jest hydratacja",
         answer:
-          " termin 'hydratacja' odnosi się do procesu łączenia treści statycznej generowanej po stronie serwera z dynamicznym kodem JavaScript po stronie klienta.proces hydratacji odbywa się, gdy strona, która początkowo została dostarczona jako treść statyczna przez serwer, zostaje 'zhydratyzowana' przez kod JavaScript na klienta. To połączenie statycznej treści z dynamicznym kodem po stronie klienta pozwala na zachowanie interaktywności i funkcjonalności aplikacji internetowej.Podczas pierwszego żądania strony, serwer dostarcza statyczną treść, która jest natychmiast renderowana w przeglądarce. Następnie kod JavaScript na stronie klienta przejmuje kontrolę (hydratyzuje) i dodaje interaktywne funkcje. To połączenie statycznej treści z dynamicznym kodem pozwala na płynne przejście od statycznie generowanej treści do interaktywnej aplikacji.",
+          " termin hydratacja odnosi się do procesu łączenia treści statycznej generowanej po stronie serwera z dynamicznym kodem JavaScript po stronie klienta.proces hydratacji odbywa się, gdy strona, która początkowo została dostarczona jako treść statyczna przez serwer, zostaje 'zhydratyzowana' przez kod JavaScript na klienta. To połączenie statycznej treści z dynamicznym kodem po stronie klienta pozwala na zachowanie interaktywności i funkcjonalności aplikacji internetowej.Podczas pierwszego żądania strony, serwer dostarcza statyczną treść, która jest natychmiast renderowana w przeglądarce. Następnie kod JavaScript na stronie klienta przejmuje kontrolę (hydratyzuje) i dodaje interaktywne funkcje. To połączenie statycznej treści z dynamicznym kodem pozwala na płynne przejście od statycznie generowanej treści do interaktywnej aplikacji.",
       },
       {
         question: "Jakie są zalety server renderingu?",

@@ -194,14 +194,14 @@ export default {
 
   mutations: {
     randomHtmlQuestion(state) {
-      state.htmlQuestions.sort(() => Math.floor(Math.random() - 0.5));
+      state.htmlQuestions.sort(() => Math.random() - 0.5);
     },
   },
   actions: {
     htmlQuestionLoop(context) {
       setInterval(() => {
           context.commit("randomHtmlQuestion");
-      }, 20000);
+      }, 4000);
     },
     randomHtmlQuestion(context) {
       context.commit("randomHtmlQuestion");

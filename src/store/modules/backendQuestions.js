@@ -114,18 +114,18 @@ export default {
       ],
     },
     mutations: {
-      randomVueQuestion(state) {
+      randomBackendQuestions(state) {
         state.backendQuestions.sort(() => Math.floor(Math.random() - 0.5));
       },
     },
     actions: {
-      vueQuestionLoop(context) {
+      backendQuestionsLoop(context) {
         setInterval(() => {
-          context.commit("randomVueQuestion");
+          context.commit("randomBackendQuestions");
         }, 5000);
       },
-      randomVueQuestion(context) {
-        context.commit("randomVueQuestion");
+      randomBackendQuestions(context) {
+        context.commit("randomBackendQuestions");
       },
     },
   };
