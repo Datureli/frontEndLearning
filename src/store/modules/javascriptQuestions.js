@@ -14,7 +14,7 @@ export default {
       {
         question: "Czym jest debugowanie?",
         answer:
-          "Debugowanie to proces znajdowania i eliminowania błędów w kodzie programu. Oznacza to analizowanie, testowanie i śledzenie działania kodu w celu zidentyfikowania i zrozumienia problemów, które prowadzą do nieoczekiwanych zachowań lub awarii aplikacji. Celem debugowania jest zapewnienie, że program działa zgodnie z oczekiwaniami i spełnia wymagania funkcjonalne i niefunkcjonalne. Poprawne debugowanie pozwala programistom zidentyfikować i naprawić błędy, usunąć nieprawidłowe działanie aplikacji oraz poprawić wydajność i jakość kodu."
+          "Debugowanie to proces znajdowania i eliminowania błędów w kodzie programu. Oznacza to analizowanie, testowanie i śledzenie działania kodu w celu zidentyfikowania i zrozumienia problemów, które prowadzą do nieoczekiwanych zachowań lub awarii aplikacji. Celem debugowania jest zapewnienie, że program działa zgodnie z oczekiwaniami i spełnia wymagania funkcjonalne i niefunkcjonalne."
       },
       {
         question: "Jak działa słowo kluczowe new?",
@@ -33,7 +33,7 @@ export default {
       },
       {
         question: "Czym jest metoda GET?",
-        answer: "Metoda GET jest jednym z podstawowych rodzajów żądań HTTP używanych do pobierania danych z interfejsu API. Przesyłanie żądania GET oznacza, że klient (np. przeglądarka internetowa) prosi serwer o zwrócenie określonego zasobu.Podczas użycia metody GET, żądanie jest przesyłane do serwera w formie URL (Uniform Resource Locator) z parametrami, jeśli są potrzebne. Serwer odczytuje te parametry, przetwarza żądanie i zwraca odpowiedź zawierającą żądane dane. Odpowiedź serwera może być w formacie HTML, JSON, XML lub innym, zależnie od tego, jak skonfigurowany jest interfejs API.",
+        answer: "Metoda GET jest jednym z podstawowych rodzajów żądań HTTP używanych do pobierania danych z interfejsu API. Przesyłanie żądania GET oznacza, że klient (np. przeglądarka internetowa) prosi serwer o zwrócenie określonego zasobu.Podczas użycia metody GET, żądanie jest przesyłane do serwera w formie URL z parametrami, jeśli są potrzebne. Serwer odczytuje te parametry, przetwarza żądanie i zwraca odpowiedź zawierającą żądane dane. Odpowiedź serwera może być w formacie HTML, JSON, XML lub innym, zależnie od tego, jak skonfigurowany jest interfejs API.",
       },
       {
         question: "Czym jest delegacja zdarzeń?",
@@ -62,7 +62,7 @@ export default {
       {
         question: "Czym jest funkcja reduce?",
         answer:
-          "Funkcja reduce jest jedną z funkcji dostępnych dla tablic w języku JavaScript. Służy do wykonania operacji na tablicy, redukując ją do pojedynczej wartości wynikowej. Funkcja reduce wykonuje iterację po elementach tablicy i używa funkcji zwrotnej (callback) do łączenia elementów w celu ostatecznego uzyskania wyniku.Funkcja zwrotna używana w reduce ma dwa parametry: akumulator i aktualny element. W pierwszej iteracji akumulator przyjmuje wartość początkową, która może być podana jako drugi argument metody reduce, lub jeśli pominięta, to pierwszy element tablicy staje się wartością początkową. Następnie funkcja zwrotna jest wywoływana dla każdego kolejnego elementu w tablicy, a jej wynik staje się nową wartością akumulatora dla kolejnej iteracji. Proces ten powtarza się, aż do przejścia przez wszystkie elementy tablicy, a ostateczny wynik jest zwracany.",
+          "Służy do wykonania operacji na tablicy, redukując ją do pojedynczej wartości wynikowej. Funkcja reduce wykonuje iterację po elementach tablicy i używa funkcji zwrotnej do łączenia elementów w celu ostatecznego uzyskania wyniku.Funkcja zwrotna używana w reduce ma dwa parametry: akumulator i aktualny element. W pierwszej iteracji akumulator przyjmuje wartość początkową, która może być podana jako drugi argument metody reduce, lub jeśli pominięta, to pierwszy element tablicy staje się wartością początkową. Następnie funkcja zwrotna jest wywoływana dla każdego kolejnego elementu w tablicy, a jej wynik staje się nową wartością akumulatora dla kolejnej iteracji. Proces ten powtarza się, aż do przejścia przez wszystkie elementy tablicy, a ostateczny wynik jest zwracany.",
       },
       {
         question: "Czym jest funkcja map?",
@@ -178,7 +178,7 @@ export default {
       },
       {
         question: "Czym jest dependency injection?",
-        answer: `to wzorzec projektowy polegający na tym, że obiekt nie inicjalizuje swoich zależności sam, tylko przyjmuje je z zewnątrz poprzez tzw. „wstrzykiwanie”. Główną zaletą takiego podejścia jest między innymi łatwiejsze pisanie testów jednostkowych. Użycie DI może również sprawić, że nasze obiekty będą ze sobą luźniej powiązane (ang. loose coupling).`,
+        answer: `to wzorzec projektowy polegający na tym, że obiekt nie inicjalizuje swoich zależności sam, tylko przyjmuje je z zewnątrz poprzez tzw. „wstrzykiwanie”. Główną zaletą takiego podejścia jest między innymi łatwiejsze pisanie testów jednostkowych. Użycie DI może również sprawić, że nasze obiekty będą ze sobą luźniej powiązane.`,
       },
       {
         question: "Czym jest deklaracja przestrzeni nazw?",
@@ -190,12 +190,12 @@ export default {
       },
       {
         question: "Czym jest garbage collector?",
-        answer: `Garbage Collector (GC) to mechanizm automatycznego zarządzania pamięcią, który jest dostępny w niektórych językach programowania, takich jak C# i Java. Jego głównym celem jest odciążenie programisty od ręcznego zarządzania pamięcią i zwalniania nieużywanych zasobów.Podstawowym zadaniem Garbage Collectora jest śledzenie i identyfikowanie obiektów w programie, które nie są już dostępne i nie są używane przez żadną część programu. Te nieużywane obiekty nazywane są "śmieciami" (garbage). Głównym powodem, dla którego obiekty stają się "śmieciami", jest utrata referencji do nich przez program.w JavaScript również występuje mechanizm Garbage Collectora. JavaScript jest językiem programowania z automatycznym zarządzaniem pamięcią, co oznacza, że programista nie musi ręcznie zarządzać alokacją i zwalnianiem pamięci.`,
+        answer: `Garbage Collector to mechanizm automatycznego zarządzania pamięcią, który jest dostępny w niektórych językach programowania, takich jak C# i Java. Jego głównym celem jest odciążenie programisty od ręcznego zarządzania pamięcią i zwalniania nieużywanych zasobów.Podstawowym zadaniem Garbage Collectora jest śledzenie i identyfikowanie obiektów w programie, które nie są już dostępne i nie są używane przez żadną część programu. Głównym powodem, dla którego obiekty stają się "śmieciami", jest utrata referencji do nich przez program.w JavaScript również występuje mechanizm Garbage Collectora. JavaScript jest językiem programowania z automatycznym zarządzaniem pamięcią, co oznacza, że programista nie musi ręcznie zarządzać alokacją i zwalnianiem pamięci.`,
       },
       {
         question: "Jak działa pętle while",
         answer:
-          "W Pętli while warunek zakończenia pętli jest na początku instrukcji.Jeżeli warunek od razu jest fałszywy, nie zostanie wykonana żadna operacja. Oczywiście, jeżeli znowu wstawimy do instrukcji while stałą wartość true to otrzymamy nieskończoną pętlę. W pętli tego typu nie definiujemy ani początkowego licznika, ani nie definiujemy zmiany licznika. Musimy te rzeczy zrobić ręcznie. Pętlę while zazwyczaj stosuje się w sytuacjach, kiedy nie wiemy dokładnie, ile iteracji ma się wykonać.Wyobraź sobie, że chcesz wygenerować unikalny numer ID albo jakąś liczbę.Generujesz więc daną rzecz, następnie sprawdzasz czy wynik pasuje do założeń. Jak nie pasuje, generujesz dalej. I tak do skutku aż trafisz.",
+          "W Pętli while warunek zakończenia pętli jest na początku instrukcji.Jeżeli warunek od razu jest fałszywy, nie zostanie wykonana żadna operacja. Oczywiście, jeżeli znowu wstawimy do instrukcji while stałą wartość true to otrzymamy nieskończoną pętlę. W pętli tego typu nie definiujemy ani początkowego licznika, ani nie definiujemy zmiany licznika. Musimy te rzeczy zrobić ręcznie. Pętlę while zazwyczaj stosuje się w sytuacjach, kiedy nie wiemy dokładnie, ile iteracji ma się wykonać.",
       },
       {
         question: "Jak działa pętla do while",
@@ -268,14 +268,14 @@ export default {
       },
       {
         question:
-          "Czym jest podwójny wykrzyknik w javascript?(double exclamation mark)",
+          "Czym jest podwójny wykrzyknik w javascript?",
         answer:
           "Jest to skrócona wersja sprawdzenia czy zmienna to Boolean(true albo false)",
       },
       {
         question: "pętla for in vs for of",
         answer:
-          "Pętla for...of używana jest do iterowania po obiektach iterowalnych jak string, tablice, struktury danych jak Map czy Set. Pętla for...in jest używana głównie do iterowania po właściwościach obiektów i najlepiej użyć jej właśnie tylko do tego.Iterując w pętli for of po stringu np 'hey' zostaną zwrócone nam litery h-e-y,natomiast pętla for in nie jest zalecana do wartości string,zwróciłaby nam w tym przypadku 0,1,2.Jeżeli stworzymy sobie obiekt, nie możemy po nim iterować tak po prostu używając pętli for...of i pobrać jego wartości. Do tego powstała właśnie pętla for...in:Przy takie iteracji pobieramy tylko i wyłącznie właściwości poszczególnych obiektów, inaczej mówiąc klucze tych obiektów.pętla for...of idealnie nadaje się do iterowania po stringach, tablicach, strukturach jak Set i Map, nie nadaje się za to do iterowania po obiektachpętla for...in idealnie nadaje się do iterowania po obiektach, dzięki niej pobieramy kolejne właściwości obiektu.w tych pętlach też można użyć break oraz continue",
+          "Pętla for of używana jest do iterowania po obiektach iterowalnych jak string, tablice, struktury danych jak Map czy Set. Pętla for in jest używana głównie do iterowania po właściwościach obiektów. Iterując w pętli for of po stringu np 'hey' zostaną zwrócone nam litery h-e-y,natomiast pętla for in nie jest zalecana do wartości string,zwróciłaby nam w tym przypadku 0,1,2.",
       },
       {
         question: "Czym jest IIFE?",

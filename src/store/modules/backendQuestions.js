@@ -6,20 +6,18 @@ export default {
         {
           question: "Czym jest HATEOAS?",
           answer:
-            `
-            HATEOAS to akronim od Hypermedia As The Engine Of Application State. To koncepcja, zgodnie z którą, podczas przesyłania informacji za pośrednictwem interfejsu API RESTful, dokument otrzymany powinien zawierać wszystko, co klient potrzebuje do analizy i wykorzystania danych. Innymi słowy, klient nie musi kontaktować się z żadnym innym punktem końcowym, który nie został wyraźnie wymieniony w dokumencie.`,
+            `HATEOAS to akronim od Hypermedia As The Engine Of Application State. To koncepcja, zgodnie z którą, podczas przesyłania informacji za pośrednictwem interfejsu API RESTful, dokument otrzymany powinien zawierać wszystko, co klient potrzebuje do analizy i wykorzystania danych. Innymi słowy, klient nie musi kontaktować się z żadnym innym punktem końcowym, który nie został wyraźnie wymieniony w dokumencie.`,
         },
         {
           question: "Open api spec?",
           answer:
-            `
-            Specyfikacja OpenAPI (OAS) definiuje standardowy, językowo niezależny interfejs dla interfejsów API RESTful. Pozwala zarówno ludziom, jak i komputerom odkrywać i zrozumieć możliwości usługi bez dostępu do kodu źródłowego, dokumentacji lub śledzenia ruchu sieciowego. Kiedy jest właściwie zdefiniowana, konsument może zrozumieć i współdziałać z zdalną usługą przy minimalnej ilości logiki implementacyjnej. Definicję OpenAPI można następnie wykorzystać za pomocą narzędzi do generowania dokumentacji, aby wyświetlać API, narzędzi do generowania kodu do generowania serwerów i klientów w różnych językach programowania, narzędzi do testowania i wielu innych przypadków użycia.`,
+            `Specyfikacja OpenAPI definiuje standardowy, językowo niezależny interfejs dla interfejsów API RESTful. Pozwala zarówno ludziom, jak i komputerom odkrywać i zrozumieć możliwości usługi bez dostępu do kodu źródłowego, dokumentacji lub śledzenia ruchu sieciowego. Kiedy jest właściwie zdefiniowana, konsument może zrozumieć i współdziałać z zdalną usługą przy minimalnej ilości logiki implementacyjnej. Definicję OpenAPI można następnie wykorzystać za pomocą narzędzi do generowania dokumentacji, aby wyświetlać API, narzędzi do generowania kodu do generowania serwerów i klientów w różnych językach programowania, narzędzi do testowania i wielu innych przypadków użycia.`,
         },
         {
           question: "Czym są cdn?",
           answer:
             `
-            Usługa Content Delivery Network (CDN) ma na celu zapewnienie wysokiej dostępności i poprawy wydajności stron internetowych. Osiąga się to szybkim dostarczaniem zasobów i treści witryny, zazwyczaj poprzez punkty końcowe geograficznie bliższe żądaniom klienta. Tradycyjne komercyjne usługi CDN (takie jak Amazon CloudFront, Akamai, CloudFlare i Fastly) udostępniają serwery na całym świecie, które można wykorzystać w tym celu. Dostarczanie zasobów i treści za pośrednictwem CDN redukuje przepustowość na hostingu witryny, zapewnia dodatkową warstwę buforowania w celu ograniczenia potencjalnych przerw oraz może poprawić bezpieczeństwo witryny.`,
+            Usługa Content Delivery Network (CDN) ma na celu zapewnienie wysokiej dostępności i poprawy wydajności stron internetowych. Osiąga się to szybkim dostarczaniem zasobów i treści witryny, zazwyczaj poprzez punkty końcowe geograficznie bliższe żądaniom klienta. Dostarczanie zasobów i treści za pośrednictwem CDN redukuje przepustowość na hostingu witryny, zapewnia dodatkową warstwę buforowania w celu ograniczenia potencjalnych przerw oraz może poprawić bezpieczeństwo witryny.`,
         },
         {
           question: "Czym jest potok",
