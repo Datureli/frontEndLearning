@@ -117,7 +117,7 @@ export default {
   components: {
     RightColumn,
     FirstColumn,
-    TestingCourse,
+   // TestingCourse,
   },
 };
 </script>
