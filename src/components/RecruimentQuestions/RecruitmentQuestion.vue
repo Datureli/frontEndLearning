@@ -25,7 +25,7 @@
             <v-list-item-subtitle
               class="white--text mr-md-6 ml-md-6 mt-3 text-justify text-h6 text-wrap"
               v-show="disable"
-              style="max-height: 270px; overflow-y: auto; padding-right: 15px;"
+              style="max-height: 260px; overflow-y: auto; padding-right: 15px;"
             >
               <p
                 style="

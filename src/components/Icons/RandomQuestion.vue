@@ -12,54 +12,50 @@
 
 <script>
 import { mapActions } from "vuex";
+
 export default {
   methods: {
     globalRandomQuestion() {
-      switch (this.$route.path) {
-        case "/recruitment-questions/htmlquestions":
-          return this.randomHtmlQuestion();
-        case "/recruitment-questions/cssquestions":
-          return this.randomCssQuestion();
-        case "/recruitment-questions/javascript":
-          return this.randomJavascriptQuestion();
-        case "/recruitment-questions/vue":
-          return this.randomVueQuestion();
-        case "/recruitment-questions/react":
-          return this.randomReactQuestion();
-        case "/recruitment-questions/typescript":
-          return this.randomTypescriptQuestion();
-        case "/recruitment-questions/gitquestions":
-          return this.randomGitQuestion();
-        case "/recruitment-questions/general":
-          return this.randomGeneralQuestion();
-        case "/recruitment-questions/test":
-          return this.randomTestQuestion();
-        case "/recruitment-questions/cypress":
-          return this.randomCypressQuestion();
-        case "/recruitment-questions/postman":
-          return this.randomPostmanQuestion();
-        case "/recruitment-questions/sql":
-          return this.randomSqlQuestion();
-        case "/recruitment-questions/Wordpress":
-          return this.randomWordpressQuestion();
-        case "/recruitment-questions/cybersecurity":
-          return this.randomCyberSecurityQuestion();
+      const path = this.$route.path;
+      const categoryMap = {
+        "html": "html",
+        "css": "css",
+        "javascript": "javascript",
+        "vue": "vue",
+        "react": "react",
+        "typescript": "typescript",
+        "git": "git",
+        "general": "general",
+        "test": "test",
+        "cypress": "cypress",
+        "postman": "postman",
+        "sql": "sql",
+        "wordpress": "wordpress",
+        "cybersecurity": "cybersecurity"
+      };
+      const category = path.substring(path.lastIndexOf("/") + 1);
+      const action = categoryMap[category] + "Questions/random" + category.charAt(0).toUpperCase() + category.slice(1) + "Question";
+
+      if (action) {
+        this.$store.dispatch(action);
       }
     },
-    ...mapActions("htmlQuestions", ["randomHtmlQuestion"]),
-    ...mapActions("cssQuestions", ["randomCssQuestion"]),
-    ...mapActions("generalQuestions", ["randomGeneralQuestion"]),
-    ...mapActions("gitQuestions", ["randomGitQuestion"]),
-    ...mapActions("javascriptQuestions", ["randomJavascriptQuestion"]),
-    ...mapActions("reactQuestions", ["randomReactQuestion"]),
-    ...mapActions("typescriptQuestions", ["randomTypescriptQuestion"]),
-    ...mapActions("vueQuestions", ["randomVueQuestion"]),
-    ...mapActions("testQuestions", ["randomTestQuestion"]),
-    ...mapActions("cypressQuestions", ["randomCypressQuestion"]),
-    ...mapActions("postmanQuestions", ["randomPostmanQuestion"]),
-    ...mapActions("sqlQuestions", ["randomSqlQuestion"]),
-    ...mapActions("wordpressQuestions", ["randomWordpressQuestion"]),
-    ...mapActions("cybersecurityQuestions", ["randomCybersecurityQuestion"]),
+    ...mapActions([
+      "htmlQuestions/randomHtmlQuestion",
+      "cssQuestions/randomCssQuestion",
+      "javascriptQuestions/randomJavascriptQuestion",
+      "vueQuestions/randomVueQuestion",
+      "reactQuestions/randomReactQuestion",
+      "typescriptQuestions/randomTypescriptQuestion",
+      "gitQuestions/randomGitQuestion",
+      "generalQuestions/randomGeneralQuestion",
+      "testQuestions/randomTestQuestion",
+      "cypressQuestions/randomCypressQuestion",
+      "postmanQuestions/randomPostmanQuestion",
+      "sqlQuestions/randomSqlQuestion",
+      "wordpressQuestions/randomWordpressQuestion",
+      "cybersecurityQuestions/randomCybersecurityQuestion"
+    ]),
   },
 };
 </script>

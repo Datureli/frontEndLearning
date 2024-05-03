@@ -7,28 +7,6 @@ export default {
         question: "Czym jest Vuex?",
         answer:
           `Vuex to wzorzec zarządzania stanem i biblioteka dla aplikacji Vue. Dzięki Vuex możemy przechowywać stan naszej aplikacji vue w centralnej lokalizacji. Pozwala nam pobierać i ustawiać stan współdzielenia oraz automatycznie propagować wszelkie zmiany dokonane we wspólnym stanie do wszystkich komponentów.  `,
-          code: `public class TypyReferencyjne {
-            public static void main(String[] args) {
-                // Przykład typu wartościowego - liczba całkowita (int)
-                int liczba1 = 5;
-                int liczba2 = liczba1; // Przypisanie wartości liczby1 do liczby2
-        
-                // Modyfikacja liczby2 nie wpływa na liczbe1
-                liczba2 = 10;
-                System.out.println("Liczba1: " + liczba1); // Wyświetli: 5
-                System.out.println("Liczba2: " + liczba2); // Wyświetli: 10
-        
-                // Przykład typu referencyjnego - obiekt String
-                String tekst1 = "Hello";
-                String tekst2 = tekst1; // Przypisanie referencji tekst1 do tekst2
-        
-                // Modyfikacja tekst2 wpływa również na tekst1
-                tekst2 += ", world!";
-                System.out.println("Tekst1: " + tekst1); // Wyświetli: Hello
-                System.out.println("Tekst2: " + tekst2); // Wyświetli: Hello, world!
-            }
-        }
-        `
       },
       {
         question: "Czym jest created hook",

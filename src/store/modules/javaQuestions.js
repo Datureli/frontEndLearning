@@ -6,7 +6,7 @@ export default {
       {
         question: "Czym jest java?",
         answer:
-          "Java to obiektowy, ogólnego przeznaczenia język programowania, który został stworzony przez firmę Sun Microsystems (obecnie należy do Oracle Corporation) i po raz pierwszy wydany w 1995 roku.",
+          "Java to obiektowy, ogólnego przeznaczenia język programowania, który został stworzony przez firmę Sun Microsystems i po raz pierwszy wydany w 1995 roku.",
       },
       {
         question: "Co to są typy referencyjne?",
@@ -15,6 +15,27 @@ export default {
           Typy referencyjne to koncepcja w programowaniu, która odnosi się do sposobu, w jaki wartości są przechowywane i przekazywane w programie. W językach programowania można wyróżnić dwa podstawowe typy przechowywania wartości: typy wartościowe (value types) i typy referencyjne (reference types). Przykłady typów wartościowych to liczby całkowite (integers), liczby zmiennoprzecinkowe (floats), znaki (chars) czy struktury (structs). Natomiast typy referencyjne przechowują referencje (wskaźniki) do danych przechowywanych gdzie indziej w pamięci. Przykłady typów referencyjnych to obiektyW przykładzie powyżej zmienna liczba1 przechowuje typ wartościowy (liczbę całkowitą), więc po przypisaniu jej wartości do liczba2 zmiana wartości liczba2 nie wpływa na liczba1.
 
           Natomiast zmienne tekst1 i tekst2 przechowują typ referencyjny (obiekt typu String). Przypisanie referencji tekst1 do tekst2 oznacza, że obie zmienne wskazują na ten sam obiekt w pamięci. Dlatego modyfikując tekst2, zmienia się również tekst1.`,
+          code: `public class TypyReferencyjne {
+            public static void main(String[] args) {
+                // Przykład typu wartościowego - liczba całkowita (int)
+                int liczba1 = 5;
+                int liczba2 = liczba1; // Przypisanie wartości liczby1 do liczby2
+        
+                // Modyfikacja liczby2 nie wpływa na liczbe1
+                liczba2 = 10;
+                System.out.println("Liczba1: " + liczba1); // Wyświetli: 5
+                System.out.println("Liczba2: " + liczba2); // Wyświetli: 10
+        
+                // Przykład typu referencyjnego - obiekt String
+                String tekst1 = "Hello";
+                String tekst2 = tekst1; // Przypisanie referencji tekst1 do tekst2
+        
+                // Modyfikacja tekst2 wpływa również na tekst1
+                tekst2 += ", world!";
+                System.out.println("Tekst1: " + tekst1); // Wyświetli: Hello
+                System.out.println("Tekst2: " + tekst2); // Wyświetli: Hello, world!
+            }
+        }`
       },
       {
         question: "Co się stanie jeśli przekroczymy dopuszczalny zakres typu int?",

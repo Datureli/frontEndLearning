@@ -49,7 +49,7 @@ export default {
       },
       {
         question: `Jakie są typy selektorów w css?`,
-        answer: `selektor uniwersalny: selektor uniwersalny oznacza wszystkie elementy na stronie. Selektor typu element:Ten selektor dopasowuje jeden lub więcej elementów html o tym samym imieniu. id selector:ten selektor dopasowuje każdy element html którego id posiada taką samą wartość jak selektor, class selektor: Ten selektor dopasowuje każdy element na stronie który zawiera atrybut klasy przypisany do tej samej wartości co klasa.kombinator potomstwa: pozwala łączyć dwa lub więcej selektorów co pozwala bardziej sprecyzować metode selekcji.Child combinator:A selector that uses the child combinator służy do wskazania elementu, który jest dzieckiem innego elementu. Kombinator dziecka jest znakiem większości (U+003E, >) i oddziela dwa selektory złożone. Białe znaki wokół > są opcjonalne i nie mają specjalnego znaczenia.`,
+        answer: `Sselektor uniwersalny oznacza wszystkie elementy na stronie. Selektor typu element dopasowuje jeden lub więcej elementów html o tym samym imieniu. id selector dopasowuje każdy element html którego id posiada taką samą wartość jak selektor, class selektor dopasowuje każdy element na stronie który zawiera atrybut klasy przypisany do tej samej wartości co klasa.kombinator potomstwa: pozwala łączyć dwa lub więcej selektorów co pozwala bardziej sprecyzować metode selekcji.Child combinator służy do wskazania elementu, który jest dzieckiem innego elementu. Kombinator dziecka jest znakiem większości (U+003E, >) i oddziela dwa selektory złożone.`,
       },
       {
         question: `Jakie są ograniczenia w css?`,
