@@ -14,7 +14,7 @@
         >
           <FirstColumn />
           <RightColumn />
-          <TestingCourse />
+       <!--   <TestingCourse /> -->
         </v-list>
       </v-app-bar>
       <v-navigation-drawer temporary v-model="drawer" absolute>

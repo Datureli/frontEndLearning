@@ -18,10 +18,22 @@
 
 <script>
 import { mapActions } from "vuex";
+
 export default {
   data() {
     return {
       disableLoop: true,
+      categoryMap: {
+        "html": "html",
+        "css": "css",
+        "javascript": "javascript",
+        "vue": "vue",
+        "react": "react",
+        "typescript": "typescript",
+        "git": "git",
+        "general": "general",
+        "bootstrap": "general", // Mapowanie na tę samą akcję
+      },
     };
   },
   methods: {
@@ -32,47 +44,37 @@ export default {
       this.disableLoop = !this.disableLoop;
       if (!this.disableLoop) {
         this.randomLoop();
+      } else {
+        this.stopLoop();
       }
     },
     randomLoop() {
-      switch (this.$route.path) {
-        case "/about/htmlquestions":
-          this.htmlQuestionLoop();
-          break;
-        case "/about/cssquestions":
-          this.cssQuestionLoop();
-          break;
-        case "/about/javascript":
-          this.javascriptQuestionLoop();
-          break;
-        case "/about/vue":
-          this.vueQuestionLoop();
-          break;
-        case "/about/react":
-          this.reactQuestionLoop();
-          break;
-        case "/about/typescript":
-          this.typescriptQuestionLoop();
-          break;
-        case "/about/gitQuestions":
-          this.gitQuestionLoop();
-          break;
-        case "/about/general":
-          this.generalQuestionLoop();
-          break;
-        case "/about/bootstrap":
-          this.GeneralQuestion();
-          break;
+      const path = this.$route.path;
+      const category = path.substring(path.lastIndexOf("/") + 1);
+      const action = this.categoryMap[category] + "QuestionLoop";
+      if (action && this[action]) {
+        this[action]();
       }
     },
-    ...mapActions("htmlQuestions", ["htmlQuestionLoop"]),
-    ...mapActions("cssQuestions", ["cssQuestionLoop", "clearLoop"]),
-    ...mapActions("generalQuestions", ["generalQuestionLoop"]),
-    ...mapActions("gitQuestions", ["gitQuestionLoop"]),
-    ...mapActions("javascriptQuestions", ["javascriptQuestionLoop"]),
-    ...mapActions("reactQuestions", ["reactQuestionLoop"]),
-    ...mapActions("typescriptQuestions", ["typescriptQuestionLoop"]),
-    ...mapActions("vueQuestions", ["vueQuestionLoop"]),
+    stopLoop() {
+      const path = this.$route.path;
+      const category = path.substring(path.lastIndexOf("/") + 1);
+      const action = this.categoryMap[category] + "QuestionStop";
+      if (action && this[action]) {
+        this[action]();
+      }
+    },
+    ...mapActions({
+      htmlQuestionLoop: "htmlQuestions/htmlQuestionLoop",
+      cssQuestionLoop: "cssQuestions/cssQuestionLoop",
+      generalQuestionLoop: "generalQuestions/generalQuestionLoop",
+      generalQuestionStop: "generalQuestions/generalQuestionStop", // Akcja do zatrzymania pętli
+      gitQuestionLoop: "gitQuestions/gitQuestionLoop",
+      javascriptQuestionLoop: "javascriptQuestions/javascriptQuestionLoop",
+      reactQuestionLoop: "reactQuestions/reactQuestionLoop",
+      typescriptQuestionLoop: "typescriptQuestions/typescriptQuestionLoop",
+      vueQuestionLoop: "vueQuestions/vueQuestionLoop",
+    }),
   },
 };
 </script>
