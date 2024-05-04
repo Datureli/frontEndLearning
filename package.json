@@ -4,9 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "test": "jest"
+    "build": "vue-cli-service build"
   },
   "dependencies": {
     "chromedriver": "^101.0.0",

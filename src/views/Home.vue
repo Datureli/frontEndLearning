@@ -1,9 +1,8 @@
 <template>
-  <v-container fluid class="fill-height">
+  <v-container fluid>
     <v-img
       src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-      class="fill-height"
-      style="transition: 5s;"
+      class="fill-width fill-height"
     >
       <div class="d-flex flex-column align-center justify-center fill-height">
         <h1 class="white--text mt-15 text-center">
@@ -14,16 +13,10 @@
             <v-btn
               width="300"
               x-large
-              :color="loading ? 'transparent' : 'blue'"
-              class="my-styled-btn white--text font-weight-bold"
-              :loading="loading"
-              @click="loading = !loading"
+              color="blue"
+              class="white--text font-weight-bold"
             >
               Ucz się pytań
-
-              <template v-slot:loader>
-                <v-progress-linear indeterminate></v-progress-linear>
-              </template>
             </v-btn>
           </router-link>
         </div>
@@ -32,23 +25,12 @@
   </v-container>
 </template>
 
-<script>
-export default {
-  data: () => ({
-    loading: false,
-  }),
-
-  watch: {
-    loading(val) {
-      if (!val) return;
-
-      setTimeout(() => (this.loading = false), 2000);
-    },
-  },
-};
-</script>
 <style>
-.v-img {
-  height:100vh !important;
+.fill-width {
+  width: 100vw !important;
+}
+
+.fill-height {
+  height: 100vh !important;
 }
 </style>
