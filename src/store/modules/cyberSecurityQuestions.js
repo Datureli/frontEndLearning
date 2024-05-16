@@ -6,7 +6,7 @@ export default {
       {
         question: "Czym jest Hackthebox?",
         answer:
-          "Hack The Box (HTB) to platforma treningowa i społeczność skupiająca się na testowaniu penetracyjnym (penetration testing) oraz bezpieczeństwie informatycznym. Jest to platforma online, która umożliwia użytkownikom doskonalenie swoich umiejętności związanych z hackingiem etycznym poprzez praktyczne wyzwania i zadania.Wyzwania i maszyny: Hack The Box oferuje różnorodne wyzwania i maszyny, które można próbować włamać. Te maszyny są wirtualnymi środowiskami, które symulują realistyczne scenariusze ataków i pozwalają użytkownikom testować swoje umiejętności w bezpiecznym środowisku.",
+          "To platforma treningowa i społeczność skupiająca się na testowaniu penetracyjnym  oraz bezpieczeństwie informatycznym. Jest to platforma online, która umożliwia użytkownikom doskonalenie swoich umiejętności związanych z hackingiem etycznym poprzez praktyczne wyzwania i zadania.Wyzwania i maszyny: Hack The Box oferuje różnorodne wyzwania i maszyny, które można próbować włamać. Te maszyny są wirtualnymi środowiskami, które symulują realistyczne scenariusze ataków i pozwalają użytkownikom testować swoje umiejętności w bezpiecznym środowisku.",
       },
       {
         question: "Czym jest wifi?",

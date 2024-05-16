@@ -34,24 +34,13 @@ const routes = [
       "cybersecurity",
       "cloud",
       "cicd",
-      "backend"
+      "backend",
     ]),
   },
   {
     path: "/book/",
     name: "Book",
     component: () => import("../components/materials/Books/Book"),
-    children: [
-      { path: "html", name: "Html", component: () => import("../components/materials/Books/HtmlBook") },
-      { path: "css", name: "Css", component: () => import("../components/materials/Books/CssBook") },
-      { path: "javascript", name: "Javascript", component: () => import("../components/materials/Books/JavascriptBook") },
-      { path: "vue", name: "Vue", component: () => import("../components/materials/Books/VueBook") },
-      { path: "react", name: "React", component: () => import("../components/materials/Books/ReactBook") },
-      { path: "typescript", name: "Typescript", component: () => import("../components/materials/Books/TypescriptBook") },
-      { path: "git", name: "Git", component: () => import("../components/materials/Books/GitBook") },
-      { path: "general", name: "General", component: () => import("../components/materials/Books/GeneralBook") },
-      { path: "tests", name: "Tests", component: () => import("../components/materials/Books/TestBook") },
-    ],
   },
   {
     path: "/wideo",
@@ -93,9 +82,10 @@ router.beforeEach((to, from, next) => {
 export default router;
 
 function generateRecruitmentQuestionRoutes(categories) {
-  return categories.map(category => ({
+  return categories.map((category) => ({
     path: category,
-    component: () => import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
+    component: () =>
+      import("../components/RecruimentQuestions/RecruitmentQuestion.vue"),
     name: capitalizeFirstLetter(category) + "Questions",
   }));
 }

@@ -33,30 +33,8 @@
   </v-container>
 </template>
 <script>
-import {
-  HtmlBook,
-  CssBook,
-  JavascriptBook,
-  VueBook,
-  ReactBook,
-  TypescriptBook,
-  GitBook,
-  GeneralBook,
-  TestBook,
-} from "./index";
 import { mapState } from "vuex";
 export default {
-  components: {
-    HtmlBook,
-    CssBook,
-    JavascriptBook,
-    VueBook,
-    ReactBook,
-    TypescriptBook,
-    GitBook,
-    GeneralBook,
-    TestBook,
-  },
   computed: {
     ...mapState("firstColumn", ["firstColumn"]),
   },
