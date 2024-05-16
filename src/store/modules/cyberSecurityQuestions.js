@@ -2,7 +2,7 @@ export default {
     namespaced: true,
   
     state: {
-      cyberSecurityQuestions: [
+      cybersecurityQuestions: [
         {
           question: "Czym jest Hackthebox?",
           answer:
@@ -37,7 +37,7 @@ export default {
     },
     mutations: {
       randomCybersecurityQuestion(state) {
-        state.cyberSecurityQuestions.sort(() => Math.floor(Math.random() - 0.5));
+        state.cybersecurityQuestions.sort(() => Math.floor(Math.random() - 0.5));
       },
     },
     actions: {

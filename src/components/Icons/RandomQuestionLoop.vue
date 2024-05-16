@@ -32,13 +32,14 @@ export default {
         "typescript": "typescript",
         "git": "git",
         "general": "general",
-        "bootstrap": "general", // Mapowanie na tę samą akcję
+        "bootstrap": "general",
       },
     };
   },
   methods: {
     resetInterval() {
-      this.toggleLoop();
+      this.stopLoop(); // Zatrzymujemy pętlę
+      this.disableLoop = true; // Ustawiamy disableLoop na true, aby przycisk pokazywał opcję uruchomienia pętli
     },
     toggleLoop() {
       this.disableLoop = !this.disableLoop;
@@ -68,7 +69,7 @@ export default {
       htmlQuestionLoop: "htmlQuestions/htmlQuestionLoop",
       cssQuestionLoop: "cssQuestions/cssQuestionLoop",
       generalQuestionLoop: "generalQuestions/generalQuestionLoop",
-      generalQuestionStop: "generalQuestions/generalQuestionStop", // Akcja do zatrzymania pętli
+      generalQuestionStop: "generalQuestions/generalQuestionStop",
       gitQuestionLoop: "gitQuestions/gitQuestionLoop",
       javascriptQuestionLoop: "javascriptQuestions/javascriptQuestionLoop",
       reactQuestionLoop: "reactQuestions/reactQuestionLoop",
