@@ -607,6 +607,195 @@ export default {
         answer:
           "Wyzwania związane z bezpieczeństwem w rozproszonych systemach obejmują: zarządzanie dostępem do zasobów, monitorowanie aktywności użytkowników, zapewnienie integralności i poufności danych w środowisku rozproszonym, oraz ochronę przed atakami na poziomie sieci. Mogą być one rozwiązywane poprzez stosowanie zabezpieczeń wielopoziomowych, szyfrowanie danych, zarządzanie tożsamościami, oraz stosowanie zasad least privilege.",
       },
+      {
+        question: "Uwierzytelnianie vs autoryzacja",
+        answer:
+          "Uwierzytelnianie to proces weryfikacji tożsamości użytkownika, natomiast autoryzacja dotyczy nadania użytkownikowi praw do wykonania określonych operacji lub dostępu do konkretnych zasobów.",
+      },
+      {
+        question: "Gdzie prowadzi adres 127.0.0.1?",
+        answer:
+          "Adres 127.0.0.1 prowadzi do interfejsu pętli zwrotnej (loopback), co oznacza, że komunikacja z tym adresem odbywa się wewnątrz danego hosta.",
+      },
+      {
+        question: "Czym różni się szyfrowanie symetryczne od asymetrycznego?",
+        answer:
+          "W szyfrowaniu symetrycznym używany jest ten sam klucz do zarówno szyfrowania, jak i deszyfrowania danych, podczas gdy w szyfrowaniu asymetrycznym korzysta się z pary kluczy: publicznego do szyfrowania i prywatnego do deszyfrowania.",
+      },
+      {
+        question: "Różnica między szyfrowaniem a haszowaniem",
+        answer:
+          "Szyfrowanie to proces zamiany tekstu jawnego na zaszyfrowany, który można odszyfrować przy użyciu klucza. Haszowanie to proces przekształcenia danych na unikalny ciąg znaków (hasz), który nie może zostać odwrócony, służy głównie do weryfikacji integralności danych.",
+      },
+      {
+        question: "Co oznacza, że HTTP jest protokołem bezstanowym?",
+        answer:
+          "HTTP jest protokołem bezstanowym, co oznacza, że nie zachowuje żadnych informacji o poprzednich transakcjach. Każde żądanie jest rozpatrywane niezależnie od innych.",
+      },
+      {
+        question: "Z jakich elementów składa się żądanie HTTP?",
+        answer:
+          "Żądanie HTTP składa się z metody, adresu, wersji protokołu oraz nagłówków.",
+      },
+      {
+        question: "Czym różni się kod błędu 503 od 404 i 301?",
+        answer:
+          "Kod błędu 503 oznacza usługę niedostępną, 404 - strona nie istnieje, a 301 - przekierowanie trwałe.",
+      },
+      {
+        question: "Czym różni się plik /etc/passwd od /etc/shadow?",
+        answer:
+          "Plik /etc/passwd zawiera podstawowe informacje o użytkownikach, natomiast /etc/shadow przechowuje hasła w postaci zahaszowanej oraz inne informacje związane z hasłami.",
+      },
+      {
+        question: "TCP vs UDP",
+        answer:
+          "TCP jest wysoce niezawodnym protokołem, który wykorzystuje trójfazowy handshake, natomiast UDP jest protokołem bezpołączeniowym, gdzie nadawca nie oczekuje na potwierdzenie odbioru pakietów.",
+      },
+      {
+        question: "Co jest głównym powodem błędów typu SQL Injection?",
+        answer:
+          "Głównym powodem błędów typu SQL Injection jest brak odpowiedniego zabezpieczenia zapytań SQL, co umożliwia potencjalnym atakującym wstrzyknięcie dodatkowych instrukcji SQL do zapytań aplikacji.",
+      },
+      {
+        question: "Na czym polega zasada najmniejszego uprzywilejowania?",
+        answer:
+          "Zasada najmniejszego uprzywilejowania zakłada, że każdy element systemu powinien mieć dostęp tylko do tych informacji oraz zasobów, które są niezbędne do wykonania swoich konkretnych zadań lub celów, minimalizując tym samym ryzyko naruszenia bezpieczeństwa.",
+      },
+      {
+        question: "Jakie znasz rodzaje ataków XSS?",
+        answer:
+          "Rodzaje ataków XSS obejmują: Reflected XSS, Stored XSS oraz DOM-based XSS. Reflected XSS polega na umieszczeniu złośliwego kodu w linku, Stored XSS występuje, gdy złośliwy kod jest przechowywany na serwerze i wyświetlany dla użytkowników, a DOM-based XSS wykorzystuje niebezpieczne funkcje JavaScript w celu wykonania ataku na stronę.",
+      },
+      {
+        question: "Gdzie możemy natrafić na błąd typu Race Condition?",
+        answer:
+          "Błąd typu Race Condition może wystąpić na przykład podczas korzystania z aplikacji internetowej obsługującej kupony rabatowe, gdzie kilka równoczesnych żądań może spowodować nieprzewidywalne efekty, takie jak podwójne wykorzystanie tego samego kuponu.",
+      },
+      {
+        question: "Czy korzystałeś z Damn Vulnerable Web Application?",
+        answer:
+          "Damn Vulnerable Web Application to specjalnie przygotowana aplikacja, która zawiera wiele luk bezpieczeństwa. Jest wykorzystywana do celów szkoleniowych i testowania umiejętności w dziedzinie bezpieczeństwa aplikacji internetowych.",
+      },
+      {
+        question: "Czym są numery CVE?",
+        answer:
+          "CVE (Common Vulnerabilities and Exposures) to numer identyfikacyjny przypisywany powszechnie znanym podatnościom, co umożliwia jednoznaczną identyfikację i wymianę informacji o tych podatnościach. Firmy i organizacje używają numery CVE w swoich komunikatach oraz raportach dotyczących podatności. Exploit Database to jedno z miejsc, gdzie można znaleźć informacje na temat podatności oznaczonych numerami CVE.",
+      },
+
+      {
+        question: "Czym jest Bug Bounty?",
+        answer:
+          "Bug Bounty to program, w ramach którego organizacje formalnie zapraszają społeczność do zgłaszania odnalezionych podatności w ich systemach. W ramach tego programu często oferowane są nagrody, w tym nagrody finansowe, za znalezienie i zgłoszenie błędów. Popularne platformy do przeprowadzania programów Bug Bounty to m.in. HackerOne i BugCrowd.",
+      },
+
+      {
+        question: "Co oznacza pojęcie Google Dorks?",
+        answer:
+          "Google Dorks to specjalnie sformułowane zapytania wyszukiwarki Google, które pozwalają na odnalezienie konkretnych informacji w Internecie. Wykorzystuje się je w celu wyszukiwania różnych rodzajów danych, w tym potencjalnie poufnych lub wrażliwych.",
+      },
+
+      {
+        question: "Czym różni się test black box od white box?",
+        answer:
+          "Testy black box polegają na testowaniu systemu bez znajomości jego wewnętrznej struktury czy kodu źródłowego, podczas gdy testy white box zakładają dostęp do kodu źródłowego i wiedzy na temat jego wewnętrznej budowy. Istnieje także podejście grey box, które łączy elementy obu metod.",
+      },
+      {
+        question: "Dlaczego phishing jest niebezpieczny?",
+        answer:
+          "Phishing jest niebezpieczny, ponieważ umożliwia przestępcom pozyskanie poufnych informacji, takich jak loginy, hasła czy dane finansowe, co może prowadzić do kradzieży tożsamości, oszustw finansowych oraz naruszenia prywatności.",
+      },
+      {
+        question: "Czy oprogramowanie open source jest bezpieczne?",
+        answer:
+          "Oprogramowanie open source nie gwarantuje bezpieczeństwa, ale dzięki otwartemu kodowi źródłowemu społeczność może weryfikować i poprawiać ewentualne błędy, co może przyczynić się do zwiększenia bezpieczeństwa.",
+      },
+      {
+        question: "Jakie informacje można znaleźć w certyfikacie SSL?",
+        answer:
+          "Certyfikat SSL zawiera informacje takie jak data ważności, numer seryjny, dane o podmiocie, adres listy CRL oraz dane wystawcy. Jest to kluczowy element w zapewnianiu bezpieczeństwa komunikacji w sieci poprzez szyfrowanie danych.",
+      },
+      {
+        question: "Po co szyfrujemy dyski twarde?",
+        answer:
+          "Szyfrowanie dysków twardych jest ważne, ponieważ chroni dane przechowywane na komputerach przed dostępem osób nieuprawnionych, szczególnie w przypadku kradzieży urządzenia. Zapobiega to wyciekom informacji i naruszeniom prywatności.",
+      },
+      {
+        question: "Wyjaśnij mechanizm SOP.",
+        answer:
+          "Same-Origin Policy (SOP) to mechanizm bezpieczeństwa, który kontroluje, jak dokumenty lub skrypty jednego pochodzenia (origin) mogą komunikować się z zasobami innego pochodzenia. Ma to na celu ograniczenie potencjalnych ataków poprzez izolację niebezpiecznych dokumentów.",
+      },
+      {
+        question: "Jakich narzędzi używasz na co dzień?",
+        answer:
+          "Codziennie korzystam z narzędzi takich jak Burp, ZAP, Metasploit, NMAP, WireShark, HashCAT, SQLmap, DirBuster, WFUZZ, IDA oraz Ghidra. Te narzędzia są niezbędne do różnorodnych zadań związanych z analizą bezpieczeństwa i testowaniem penetracyjnym.",
+      },
+      {
+        question: "Czy adres URL może zawierać login i hasło?",
+        answer:
+          "Tak, adres URL może zawierać login i hasło. Można to zrobić poprzez umieszczenie ich bezpośrednio w adresie URL, tak jak w podanym przykładzie: http://hans:geheim@www.example.org:8080/demo/example.cgi?land=de&stadt=aa. Jednakże, praktyka ta jest obecnie rzadko stosowana ze względów bezpieczeństwa, ponieważ dane uwierzytelniające mogą być łatwo przechwycone.",
+      },
+      {
+        question: "Wymień popularne numery portów",
+        answer:
+          "Kilka przykładów popularnych numerów portów to: 20 - FTP, 22 - SSH, 53 - DNS, 80 - HTTP, 443 - HTTPS, 445 - SMB, 3306 - MySQL. Zrozumienie portów jest istotne dla identyfikacji usług działających na serwerach i urządzeniach sieciowych.",
+      },
+      {
+        question: "Co oznacza privilege escalation?",
+        answer:
+          "Privilege escalation to proces uzyskiwania dodatkowych uprawnień, które normalnie nie są dostępne dla użytkownika. Może to obejmować przejęcie konta administratora lub uzyskanie dostępu do zasobów, do których użytkownik nie ma uprawnień.",
+      },
+      {
+        question: "Jak chronisz swoje bezpieczeństwo?",
+        answer:
+          "Aby chronić swoje bezpieczeństwo, regularnie korzystam z menedżera haseł, aktywuję dwuskładnikową autentykację (2FA), korzystam z programu antywirusowego, regularnie aktualizuję oprogramowanie, stosuję izolację przy użyciu maszyn wirtualnych i firewalla. Dodatkowo, jestem świadomy potencjalnych zagrożeń związanych z bezpieczeństwem poczty elektronicznej i podejmuję odpowiednie środki ostrożności.",
+      },
+      {
+        question: "Jak przetestować stronę logowania?",
+        answer:
+          "Podczas testowania strony logowania należy sprawdzić następujące elementy: czy strona posiada captcha lub rate limiting, czy wspiera autentykację dwuskładnikową (2FA/U2F), jak działa resetowanie hasła, jak działa proces rejestracji (np. czy można wykorzystać tzw. ticket trick), czy istnieje możliwość sprawdzenia, kto posiada konto na stronie, jakie komunikaty błędów są zwracane (np. czy są podatne na reflected XSS), czy strona jest podatna na ataki typu SQL Injection/NoSQL Injection, oraz w jaki sposób przechowywane są hasła. Jest to pytanie otwarte, które pozwala na zbadanie wiedzy i zrozumienia procesu testowania strony logowania.",
+      },
+      {
+        question: "Opisz błąd, który Cię zainteresował",
+        answer:
+          "Błąd, który mnie zainteresował to ... (tutaj opis błędu, który wywołał moją uwagę podczas nauki lub praktyki, np. błąd podatności na XSS, SQL Injection, CSRF, etc.). Zainteresował mnie ten błąd, ponieważ ... (uzasadnienie dlaczego błąd ten był dla mnie interesujący lub pouczający).",
+      },
+      {
+        question: "Jak szukać błędów CSRF?",
+        answer:
+          "Do szukania błędów CSRF wykorzystuje się przeglądarkę internetową oraz narzędzia do testowania zabezpieczeń, takie jak Burp Suite. Proces ten polega na wysłaniu żądania HTTP do serwera, próbując wykonać akcję w imieniu zalogowanego użytkownika, i sprawdzenie, czy serwis wykorzystuje odpowiednie nagłówki/parametry anty CSRF do zabezpieczenia przed takimi atakami. Następnie, wysyła się zmodyfikowane żądanie, aby sprawdzić, czy atak CSRF jest możliwy.",
+      },
+      {
+        question: "Jakie języki są podatne na niebezpieczną deserializację?",
+        answer:
+          "Niektóre języki programowania podatne na niebezpieczną deserializację to Java, Python, PHP i .NET. Deserializacja jest procesem konwersji strumienia bajtów na obiekty programu. Ataki deserializacyjne mogą prowadzić do wykonania kodu zdalnego lub wykradania danych z systemu.",
+      },
+      {
+        question: "Jak przetestujesz aplikację mobilną?",
+        answer:
+          "Do testowania aplikacji mobilnej można użyć różnych narzędzi, takich jak dekompilatory aplikacji, dodawanie nowych certyfikatów do urządzenia, przekierowanie ruchu przez zewnętrzny serwer proxy (np. Burp Suite). Testowanie aplikacji mobilnych wymaga specjalistycznej wiedzy i umiejętności, ponieważ aplikacje te działają w innym środowisku niż aplikacje webowe.",
+      },
+      {
+        question: "Jak sprawdzić czy strona jest podatna na path traversal?",
+        answer:
+          "Aby sprawdzić, czy strona jest podatna na atak typu path traversal, można spróbować wstrzyknąć sekwencje takie jak '../' lub '..' w adres URL, aby próbować uzyskać dostęp do plików znajdujących się poza katalogiem publicznym. Przekłada się to na próbę nawigacji po systemie plików serwera. W podatności tej attacker próbuje uzyskać dostęp do plików i katalogów na serwerze, do których nie powinien mieć dostępu.",
+      },
+      {
+        question: "Co mówi Ci MS08-067?",
+        answer:
+          "MS08-067 to numer identyfikacyjny błędu, który został wykorzystany w ataku znanym jako Conficker. Był to błąd w protokole RPC w systemach operacyjnych Microsoft Windows. Choć atak ten jest już historią, wciąż warto znać numery identyfikacyjne i historię znanych błędów, aby lepiej zrozumieć zagrożenia bezpieczeństwa.",
+      },
+      {
+        question:
+          "Jak uruchomisz Linuxowe narzędzia jeśli korzystasz z Windowsa?",
+        answer:
+          "Jeśli korzystam z systemu Windows i chcę uruchomić narzędzia przeznaczone dla systemu Linux, mogę użyć jednej z następujących metod: uruchomić maszynę wirtualną z systemem Linux, skorzystać z Windows Subsystem for Linux (WSL) lub uruchomić narzędzia za pomocą kontenerów Docker.",
+      },
+      {
+        question: "Co powinien zawierać raport z pentestów?",
+        answer:
+          "Raport z pentestów powinien zawierać m.in.: wagę błędu, nazwę podatności, opis, przykładowe żądania, rekomendacje naprawy. Jest to ważny dokument podsumowujący wyniki testów penetracyjnych i zalecenia dotyczące poprawy bezpieczeństwa.",
+      },
     ],
   },
   mutations: {
