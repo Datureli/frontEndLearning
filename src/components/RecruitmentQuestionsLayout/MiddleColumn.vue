@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-sheet class="mt-md-10" :height="height" color="darkGradient">
+    <v-sheet class="mt-md-5" :height="height" color="darkGradient">
       <RecruitmentQuestion /> <!--
       <div v-if="$route.path === '/recruitment-questions/test-knowledge'">
        <TestYourKnowledge />

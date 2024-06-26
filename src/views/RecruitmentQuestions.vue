@@ -1,10 +1,14 @@
 <template>
-  <v-row class="darkGradient full-height">
-    <v-col class="mx-auto" cols="12" md="10">
-      <MiddleColumn />
-    </v-col>
-    <FullscreenButton />
-  </v-row>
+  <v-container fluid class="darkGradient full-height">
+    <v-row class="d-flex justify-center align-center full-height">
+      <v-col cols="12" md="10" class="text-center">
+        <MiddleColumn />
+      </v-col>
+      <v-col cols="12" class="text-center">
+        <FullscreenButton />
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
@@ -21,6 +25,6 @@ export default {
 
 <style scoped>
 .full-height {
-  height: 100dvh;
+  height: 100vh;
 }
 </style>
