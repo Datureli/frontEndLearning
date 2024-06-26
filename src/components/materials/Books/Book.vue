@@ -20,15 +20,7 @@
           }}</v-icon>
         </v-list-item>
       </v-list-item-group>
-      <HtmlBook v-if="this.$route.path === '/book/html'" />
-      <CssBook v-if="this.$route.path === '/book/css'" />
-      <JavascriptBook v-if="this.$route.path === '/book/javascript'" />
-      <VueBook v-if="this.$route.path === '/book/vue'" />
-      <ReactBook v-if="this.$route.path === '/book/react'" />
-      <TypescriptBook v-if="this.$route.path === '/book/typescript'" />
-      <GitBook v-if="this.$route.path === '/book/git'" />
-      <GeneralBook v-if="this.$route.path === '/book/general'" />
-      <TestBook v-if="this.$route.path === '/book/tests'" />
+
     </v-card>
   </v-container>
 </template>
