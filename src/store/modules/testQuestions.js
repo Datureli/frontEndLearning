@@ -70,8 +70,8 @@ export default {
           "Firmware: Jest to rodzaj oprogramowania, które jest wbudowane bezpośrednio w urządzenie sprzętowe, zazwyczaj na stałe. Często jest przechowywane w pamięci nieulotnej, takiej jak pamięć flash. To ogólny termin obejmujący aplikacje, systemy operacyjne, sterowniki i inne programy komputerowe. Oprogramowanie jest zazwyczaj przechowywane na dyskach twardych, pamięciach RAM lub innych nośnikach danych.",
       },
       {
-        question: "Czym są testy migawek ( snapshot testing )?",
-        answer: `testy migawkowe nie mają na celu bezpośredniego sprawdzenia poprawnego zachowania aplikacji. Mają one wiele form, ale zazwyczaj odnoszą się do weryfikacji względem wcześniej wykonanych zrzutów danych, zrzutów ekranów, zamrożonych plików dyskowych itp.Bazują one na porównaniu wyników, konfrontując aktualne dane (obrazy) wyjściowe z zapisanym wcześniej poprawnym wzorcem tych danych (obrazów), ale bez sprawdzania, czy zachowanie aplikacji generujące aktualny rezultat było poprawne.`,
+        question: "Czym są testy migawek?",
+        answer: `Testy migawkowe polegają na porównywaniu aktualnego stanu aplikacji z zapisanym wcześniej wzorcem, czyli migawką. Zamiast sprawdzać, czy aplikacja działa poprawnie, porównują, czy aktualny wynik jest taki sam jak wcześniej zapisany. Mogą one dotyczyć danych, zrzutów ekranów czy plików. Jeśli coś się zmieniło w wyniku działania aplikacji, test migawkowy wskaże różnicę, ale nie powie, czy zmiana była poprawna czy błędna.`,
       },
       {
         question: "Jakie metody testowania znałeś i stosowałeś w swojej pracy?",
@@ -101,9 +101,9 @@ export default {
           "Wystarczające pokrycie wymagań: Testy zostały wykonane w wystarczającym stopniu, aby pokryć co najmniej 95% wszystkich ustalonych wymagań. Zagęszczenie defektów: Liczba defektów przypisanych do poszczególnych wymagań jest na akceptowalnie niskim poziomie. Na przykład, nie więcej niż 5 defektów przypisanych do każdego z rozdziału wymagań.Koszt: Testowanie trwa już od pewnego czasu, a dalsze testy generowałyby nieproporcjonalne koszty w porównaniu do oczekiwanych korzyści. Ramy czasowe: Testowanie jest zaplanowane na określony okres, na przykład 3 miesiące, i nie można go przekroczyć ze względu na ustalone ograniczenia czasowe projektu.",
       },
       {
-        question: "Czym jest testowanie Nie-funkcjonalne?",
+        question: "Czym jest testowanie niefunkcjonalne?",
         answer:
-          "To rodzaj testowania oprogramowania, które ocenia aspekty jakościowe systemu, które nie są związane bezpośrednio z jego funkcjonalnością. Obejmuje ono różne cechy i charakterystyki systemu, które wpływają na jego wydajność, niezawodność, bezpieczeństwo, skalowalność, użyteczność i inne aspekty. kilka głównych obszarów testowania nie-funkcjonalnego: Wydajność,Bezpieczeństwo,,Dostępność,Niezawodność (Reliability Testing):,Użyteczność (Usability Testing): ,Testy Obciążeniowe (Stress Testing):Testowanie Kompatybilności z Wydajnością (Performance Compatibility Testing): Sprawdza, czy system zachowuje się zgodnie z oczekiwaniami w różnych środowiskach, konfiguracjach sprzętowych i sieciowych.",
+          "To rodzaj testowania oprogramowania, które ocenia aspekty jakościowe systemu, które nie są związane bezpośrednio z jego funkcjonalnością. Obejmuje ono różne cechy i charakterystyki systemu, które wpływają na jego wydajność, niezawodność, bezpieczeństwo, skalowalność, użyteczność i inne aspekty.Sprawdza, czy system zachowuje się zgodnie z oczekiwaniami w różnych środowiskach, konfiguracjach sprzętowych i sieciowych.",
       },
       {
         question:
@@ -117,10 +117,8 @@ export default {
           "Dobrze jest upewnić się, czy programista reprodukuje defekt na tym samym środowisku i postępuje dokładnie krok po kroku z naszymi instrukcjami. Byćmoże jest jakas nieznaczna różnica która ma wpływ na ostateczny rezultat. Zdarza się też, że programiści nie używają wersji instalacyjnej oprogramowania, ale budują je z kodu. Niezależnie od tego, o ile to oczywiście możliwe, dobrze jest testować na środowisku które jest jaknajbardziej zbliżone do tego w którym pracuje klient.",
       },
       {
-        question:
-          "Jak wykryć bugi związane z wolnym połączeniem internetowym?",
-        answer:
-          `Testowanie w warunkach z ograniczonym pasmem: Symulowanie wolnego połączenia internetowego podczas testów może być pomocne w wykryciu problemów z responsywnością i wydajnością aplikacji. Istnieją narzędzia, które pozwalają na symulację różnych prędkości łącza internetowego, co umożliwia zrozumienie zachowania aplikacji w warunkach ograniczonego pasma.
+        question: "Jak wykryć bugi związane z wolnym połączeniem internetowym?",
+        answer: `Testowanie w warunkach z ograniczonym pasmem: Symulowanie wolnego połączenia internetowego podczas testów może być pomocne w wykryciu problemów z responsywnością i wydajnością aplikacji. Istnieją narzędzia, które pozwalają na symulację różnych prędkości łącza internetowego, co umożliwia zrozumienie zachowania aplikacji w warunkach ograniczonego pasma.
           Monitorowanie czasów odpowiedzi: Podczas testowania aplikacji z wolnym połączeniem warto monitorować czasy odpowiedzi na żądania HTTP i odpowiedzi z serwera. Długie czasy odpowiedzi mogą wskazywać na potencjalne problemy z wydajnością lub nieoptymalizowanym kodem.
           Testowanie aplikacji offline: Warto sprawdzić, czy aplikacja zachowuje się poprawnie, gdy połączenie internetowe jest całkowicie wyłączone lub bardzo wolne. Niektóre aplikacje muszą działać w trybie offline, więc ważne jest, aby upewnić się, że wszystkie funkcje są nadal dostępne i działają poprawnie.
           Testowanie zachowania aplikacji podczas utraty połączenia: Podczas korzystania z aplikacji z wolnym połączeniem internetowym, warto zwrócić uwagę na to, jak aplikacja reaguje na utratę połączenia i próbuje ponownie się połączyć. Wszelkie nieprawidłowości w zachowaniu się aplikacji podczas tego procesu mogą wskazywać na potencjalne problemy.`,
@@ -186,7 +184,7 @@ export default {
       {
         question: "Wymień siedem zasad testowania",
         answer:
-          "Testowanie ujawnia usterki, ale nie może dowieść ich braku Testowanie może wykazać obecność defektów, ale nie może dowieść, że oprogramowanie jest od nich wolne. Tym samym testowanie zmniejsza prawdopodobieństwo, że w oprogramowaniu pozostaną niewykryte defekty, ale sam fakt niewykrycia defektów nie stanowi dowodu poprawności oprogramowania. Testowanie gruntowne jest niemożliwe Przetestowanie wszystkiego jest możliwe tylko w najprostszych przypadkach.Wczesne testowanie oszczędza czas i pieniądze",
+          "Testowanie ujawnia usterki, ale nie może dowieść ich braku Testowanie może wykazać obecność defektów, ale nie może dowieść, że oprogramowanie jest od nich wolne. Tym samym testowanie zmniejsza prawdopodobieństwo, że w oprogramowaniu pozostaną niewykryte defekty, ale sam fakt niewykrycia defektów nie stanowi dowodu poprawności oprogramowania. Testowanie gruntowne jest niemożliwe Przetestowanie wszystkiego jest możliwe tylko w najprostszych przypadkach.Wczesne testowanie oszczędza czas i pieniądze. Zasada paradygmatu Pesticide: Stosowanie tych samych testów wielokrotnie przestaje być skuteczne, ponieważ po pewnym czasie nie ujawniają one nowych błędów. Testy należy regularnie przeglądać i modyfikować, aby były skuteczne. Kumulowanie się defektów Zwykle większość defektów wykrytych podczas testowania przed przekazaniem oprogramowania do eksploatacji lub większość awarii występujących w fazie eksploatacji występuje lub ma swoje źródło w niewielkiej liczbie modułów. W rezultacie przewidywane skupiska defektów i skupiska defektów faktycznie zaobserwowane na etapie testowania lub eksploatacji są ważnym elementem analizy ryzyka, którą przeprowadza się w celu odpowiedniego ukierunkowania wysiłków związanych z testowaniem (o czym wspomniano w zasadzie nr 2.).",
       },
       {
         question: "Z jakich powodów mogą powstawać błędy?",
@@ -229,19 +227,13 @@ export default {
           "Wybieraj testy do automatyzacji na podstawie ich powtarzalności, krytyczności i stabilności funkcji. Nie wszystko trzeba automatyzować, więc skup się na kluczowych obszarach.Zapisuj wyniki testów automatycznych w bazie błędów, aby umożliwić łatwe śledzenie postępu, identyfikowanie problemów i szybkie reagowanie na defekty.W miarę jak projekt rozwija się, dostosuj testy automatyczne do zmian w funkcjonalności i wymaganiach. Regularne aktualizacje pomagają utrzymać zgodność testów z aktualnym stanem oprogramowania.Regularnie monitoruj wyniki testów automatycznych. Analizuj wyniki, identyfikuj trendów i podejmuj działania korygujące w przypadku pojawienia się problemów.",
       },
       {
-        question: "Jak połączyć jest z typescriptem?",
-        answer:
-          "Są dwa sposoby na integrację Jesta z Typescriptem, jeden sprawdza typy, drugi korzysta z wygenerowanych plików js. My oczywiście chcemy sprawdzać typy, więc użyjemy ts-jest!",
-      },
-      {
         question: "Czym jest Docker?",
         answer:
           "Docker pozwala nam na uruchamianie dowolnych aplikacji w wyizolowanym środowisku. Zajmuje przy tym niewiele zasobów (w porównaniu np. do maszyny wirtualnej). ",
       },
       {
         question: "Czym jest stub?",
-        answer:
-          `
+        answer: `
           Stub w kontekście testowania to prosta implementacja lub symulacja fragmentu kodu lub interfejsu, która zwraca z góry zdefiniowane wartości lub zachowania. Stuby są używane podczas testowania jednostkowego do zastępowania zależności, które nie są istotne dla testowanego kodu. Na przykład, w testowaniu jednostkowym funkcji, która pobiera dane z bazy danych, można użyć stuba do zwracania sztucznie utworzonych danych zamiast rzeczywistych danych z bazy danych. Jest to przydatne, gdy chcemy izolować testowany kod od zewnętrznych zależności, co pozwala na bardziej precyzyjne i niezawodne testowanie.:`,
       },
       {
@@ -283,8 +275,7 @@ export default {
       },
       {
         question: "Czym jest component testing?",
-        answer:
-          `Testowanie komponentów to proces testowania pojedynczych komponentów interfejsu użytkownika (UI) aplikacji. Component testing koncentruje się na testowaniu zachowania i funkcjonalności poszczególnych komponentów.omponenty są testowane w izolacji od innych komponentów i często od całości aplikacji. Testy skupiają się na weryfikacji działania pojedynczego komponentu niezależnie od innych części systemu. Dzięki izolacji i skoncentrowaniu się na pojedynczych komponentach, testy komponentów ułatwiają diagnozowanie i naprawianie błędów w interfejsie użytkownika.Testy komponentów mogą być reużywalne dla różnych części aplikacji, co pozwala zaoszczędzić czas i wysiłek przy tworzeniu testów dla różnych scenariuszy użycia.`,
+        answer: `Testowanie komponentów to proces testowania pojedynczych komponentów interfejsu użytkownika (UI) aplikacji. Component testing koncentruje się na testowaniu zachowania i funkcjonalności poszczególnych komponentów.omponenty są testowane w izolacji od innych komponentów i często od całości aplikacji. Testy skupiają się na weryfikacji działania pojedynczego komponentu niezależnie od innych części systemu. Dzięki izolacji i skoncentrowaniu się na pojedynczych komponentach, testy komponentów ułatwiają diagnozowanie i naprawianie błędów w interfejsie użytkownika.Testy komponentów mogą być reużywalne dla różnych części aplikacji, co pozwala zaoszczędzić czas i wysiłek przy tworzeniu testów dla różnych scenariuszy użycia.`,
       },
       {
         question: "Różnice pomiędzy weryfikacją a walidacją?",
@@ -295,7 +286,7 @@ export default {
         answer:
           "Headless testing to rodzaj testowania oprogramowania, w którym testy są wykonywane bez interfejsu graficznego (GUI). W tradycyjnym podejściu testowania, aplikacja jest uruchamiana w pełnym środowisku, a testy interakcji z nią są wykonywane poprzez manipulację GUI. Natomiast w headless testing, aplikacja jest uruchamiana w tle, bez wyświetlania interfejsu graficznego, a testy są wykonywane bezpośrednio na poziomie backendu lub za pomocą interfejsów programistycznych (API).",
       },
-  
+
       {
         question: "Od czego zależy response time w api?",
         answer: `Obciążenie serwera: Im większe obciążenie serwera, tym dłuższy czas odpowiedzi. Wysokie obciążenie może prowadzić do opóźnień w obsłudze żądań.
@@ -340,8 +331,7 @@ export default {
       },
       {
         question: "tablica deccyzycja?",
-        answer:
-          `Tablica decyzyjna, nazywana także tablicą decyzyjną decyzji (ang. decision table), to narzędzie używane w analizie systemów, zarządzaniu projektem oraz testowaniu oprogramowania. Służy do zapisania wszystkich możliwych kombinacji warunków i działań, co ułatwia zrozumienie logiki decyzyjnej systemu.Podstawowe elementy tablicy decyzyjnej to:
+        answer: `Tablica decyzyjna, nazywana także tablicą decyzyjną decyzji (ang. decision table), to narzędzie używane w analizie systemów, zarządzaniu projektem oraz testowaniu oprogramowania. Służy do zapisania wszystkich możliwych kombinacji warunków i działań, co ułatwia zrozumienie logiki decyzyjnej systemu.Podstawowe elementy tablicy decyzyjnej to:
 
           Warunki: Są to czynniki lub zdarzenia, które mogą mieć wpływ na podejmowanie decyzji. Warunki mogą być spełnione (true) lub niespełnione (false).
           Działania: Są to akcje, które zostaną wykonane w zależności od spełnienia określonych warunków. Działania mogą być różne w zależności od kombinacji warunków.
@@ -351,8 +341,7 @@ export default {
       },
       {
         question: "Czym jest request i response",
-        answer:
-          `Request (żądanie): Jest to komunikat wysłany przez klienta do serwera, zawierający zazwyczaj informacje na temat tego, czego klient oczekuje od serwera. Żądanie może zawierać różne rodzaje danych, w zależności od rodzaju zapytania i protokołu komunikacyjnego używanego w danym systemie. Na przykład, w przypadku przeglądarki internetowej, kiedy wpisujesz adres URL i naciskasz Enter, twoja przeglądarka wysyła żądanie do serwera internetowego, prosząc o dostęp do strony internetowej.
+        answer: `Request (żądanie): Jest to komunikat wysłany przez klienta do serwera, zawierający zazwyczaj informacje na temat tego, czego klient oczekuje od serwera. Żądanie może zawierać różne rodzaje danych, w zależności od rodzaju zapytania i protokołu komunikacyjnego używanego w danym systemie. Na przykład, w przypadku przeglądarki internetowej, kiedy wpisujesz adres URL i naciskasz Enter, twoja przeglądarka wysyła żądanie do serwera internetowego, prosząc o dostęp do strony internetowej.
           Response (odpowiedź): Jest to komunikat wysłany przez serwer do klienta w odpowiedzi na otrzymane żądanie. Odpowiedź zawiera zazwyczaj odpowiednie dane lub informacje, na które klient czekał. Odpowiedź może zawierać różne rodzaje danych, takie jak treść strony internetowej, plik do pobrania, komunikat o błędzie, itp. Na przykład, gdy wysyłasz żądanie o dostęp do strony internetowej, serwer odpowiada przeglądarce zwracając HTML, CSS, JavaScript i inne zasoby, które są potrzebne do wyświetlenia strony w przeglądarce.`,
       },
       {
@@ -362,8 +351,7 @@ export default {
       },
       {
         question: "Czym jest json web token",
-        answer:
-          `
+        answer: `
           JSON Web Token to otwarty standard (RFC 7519) definiujący kompaktowy i samowystarczalny sposób reprezentacji informacji między stronami w formie obiektów JSON. JWT może być używany do bezpiecznej transmisji informacji między dwoma stronami jako obiekt JSON. Składa się z trzech części: nagłówka (header), dane (payload) i podpis (signature).JWT jest często używany do autoryzacji i uwierzytelniania użytkowników w aplikacjach internetowych. Po zalogowaniu użytkownik otrzymuje JWT, który jest następnie dołączany do każdego żądania HTTP jako nagłówek Authorization. Serwer następnie weryfikuje poprawność tokenu i na jego podstawie podejmuje decyzję o udzieleniu dostępu do zasobów. JWT są również wykorzystywane do przesyłania informacji o uwierzytelnieniu użytkownika między mikroserwisami w architekturze opartej na usługach.`,
       },
       {
@@ -478,17 +466,14 @@ export default {
         Nowe funkcje są wprowadzane, ale są ukrywane lub dezaktywowane dla użytkowników. Funkcje są aktywowane lub dezaktywowane zdalnie, co pozwala na kontrolę nad ich wdrażaniem.`,
       },
       {
-        question: "Od czego zależy ryzyko projektowe i co się na nie składa?",
-        answer: `Złożoność projektu: Im bardziej skomplikowany projekt, tym większe ryzyko związane z jego realizacją.Długość trwania projektu: Dłuższe projekty są bardziej podatne na zmiany warunków zewnętrznych, takie jak zmiany w technologii, strategii biznesowej czy rynek konkurencyjny.Zaawansowanie technologiczne: Korzystanie z nowoczesnych, ale nieznanych technologii może zwiększyć ryzyko projektu. Jednocześnie, technologie przestarzałe mogą być trudne do utrzymania, co również wpływa na ryzyko.Dostępność zasobów: Brak dostępu do odpowiednich zasobów, takich jak wykwalifikowana kadra, sprzęt czy oprogramowanie, może zwiększyć ryzyko projektu.Zmiany w zakresie projektu: Częste zmiany w zakresie projektu, zwłaszcza w trakcie jego realizacji, mogą prowadzić do niezamierzonych konsekwencji i zwiększać ryzyko opóźnień oraz niepowodzeń.Brak planu zarządzania ryzykiem: Projekt bez adekwatnego planu zarządzania ryzykiem jest bardziej podatny na nieoczekiwane trudności.Elementy składające się na zarządzanie ryzykiem projektowym obejmują:
-
-          Identyfikacja ryzyka: Rozpoznawanie potencjalnych zagrożeń i szans związanych z projektem.
-          
-          Analiza ryzyka: Ocena wpływu i prawdopodobieństwa wystąpienia każdego ryzyka oraz jego konsekwencji.
-          
-          Planowanie odpowiedzi na ryzyko: Określenie strategii zarządzania ryzykiem, czyli planu działania w przypadku wystąpienia konkretnego zagrożenia.
-          
-          Monitorowanie i kontrola ryzyka: Śledzenie zmian w projekcie i skutków ryzyka oraz dostosowywanie planu zarządzania ryzykiem w miarę potrzeb.`,
-      },
+        question: "Od czego zależy ryzyko projektowe?",
+        answer: `Złożoność projektu: Im bardziej skomplikowany projekt, tym większe ryzyko związane z jego realizacją.
+        Długość trwania projektu: Długie projekty są bardziej narażone na zmiany zewnętrzne, takie jak nowe technologie, zmiany w strategii biznesowej lub konkurencję na rynku.
+        Zaawansowanie technologiczne: Korzystanie z nowoczesnych, ale mało znanych technologii może zwiększyć ryzyko. Z kolei przestarzałe technologie mogą być trudne do utrzymania, co również wpływa na ryzyko.
+        Dostępność zasobów: Brak dostępu do wykwalifikowanej kadry, sprzętu lub oprogramowania może zwiększyć ryzyko projektu.
+        Zmiany w zakresie projektu: Częste zmiany w trakcie realizacji projektu mogą prowadzić do nieprzewidzianych konsekwencji, opóźnień i niepowodzeń.
+        Brak planu zarządzania ryzykiem: Projekty bez odpowiedniego planu zarządzania ryzykiem są bardziej podatne na nieoczekiwane trudności.`,
+      },  
       {
         question: "Co to są testy wydajnościowe",
         answer:
@@ -517,7 +502,7 @@ export default {
           // Assert
           expect(result).toBe(8);
         });
-        `
+        `,
       },
       {
         question: "czym jest FIRST?",
@@ -538,8 +523,7 @@ export default {
       },
       {
         question: "Wymień typy testów wydajnościowych",
-        answer:
-          `Testy obciążeniowe - sprawdzają zdolność aplikacji do obsługi oczekiwanego ruchu użytkowników.
+        answer: `Testy obciążeniowe - sprawdzają zdolność aplikacji do obsługi oczekiwanego ruchu użytkowników.
           Testy stresowe - badają zachowanie aplikacji pod znacznym obciążeniem, np. w czasie Black Friday.
           Testy wytrzymałościowe - oceniają zdolność oprogramowania do wytrzymywania długotrwałego obciążenia.
           Testy szczytowe - sprawdzają reakcję aplikacji na nagłe duże skoki obciążenia.
@@ -548,7 +532,7 @@ export default {
       {
         question: "Czym są testy dymne?",
         answer:
-          "Testy dymne, zwane również testami dymnymi lub testami wdychanymi (ang. smoke tests), są rodzajem testów funkcjonalnych, które służą do szybkiego sprawdzenia podstawowej funkcjonalności aplikacji lub systemu po wprowadzeniu zmian lub przed wdrożeniem na środowisko produkcyjne.",
+          "Testy dymne to szybkie i proste testy wykonywane po zbudowaniu nowej wersji oprogramowania, mające na celu sprawdzenie, czy najważniejsze funkcje działają poprawnie. Oto bardziej szczegółowe wyjaśnienie Podstawowa weryfikacja: Testy dymne sprawdzają, czy podstawowe funkcje aplikacji działają, na przykład czy aplikacja się uruchamia, czy można zalogować się do systemu, czy główne menu działa poprawnie. 1 Wczesne wykrywanie błędów: Umożliwiają szybkie wykrycie krytycznych błędów, które mogłyby uniemożliwić dalsze testowanie. Dzięki temu można szybko zidentyfikować i naprawić poważne problemy. 2. Oszczędność czasu: Dzięki testom dymnym można szybko ocenić stabilność nowej wersji oprogramowania, co pozwala zaoszczędzić czas i zasoby, które byłyby potrzebne do przeprowadzenia pełnych testów. 3. Automatyzacja: Testy dymne są często zautomatyzowane, co pozwala na ich szybkie i powtarzalne wykonanie przy każdej nowej wersji oprogramowania."
       },
       {
         question: "Co oznacza skrót tdd?",
@@ -574,7 +558,7 @@ export default {
         question: "Czym są przypadki testowe?",
         answer:
           "Przypadki testowe to dokumentacja opisująca szczegółowo kroki do wykonania w celu przetestowania określonej funkcjonalności, elementu lub przypadku użycia systemu. Każdy przypadek testowy jest zaplanowany w taki sposób, aby pokryć różne scenariusze i warunki, a jego celem jest zweryfikowanie, czy dany element spełnia określone wymagania.",
-          code: `
+        code: `
           Oto prosty przykład przypadku testowego dla funkcji logowania na stronie internetowej:
           Nazwa testu: Logowanie użytkownika
 
@@ -589,7 +573,7 @@ export default {
 
           Po wykonaniu kroków 1-3, użytkownik powinien być przekierowany do strony głównej aplikacji.
           Na stronie głównej powinien być widoczny komunikat powitalny dla użytkownika "example_user".
-`
+`,
       },
       {
         question: "Czym są scenariusze testowe?",
@@ -664,7 +648,7 @@ export default {
       {
         question: "Rodzaje testowania niefunkcjonalnego",
         answer:
-          "testy wydajności, bezpieczeństwa, kompatybilności, użyteczności, dostepnosci,przeciążeniowe, obciążeniowe, skalowalności",
+          "testy wydajności,bezpieczeństwa, kompatybilności, użyteczności, dostepnosci,przeciążeniowe, obciążeniowe, skalowalności",
       },
       {
         question: "czym jest komunikacja po CDP w playwright",
@@ -685,18 +669,13 @@ export default {
       },
       {
         question:
-          "Wyjaśnienie, jak zarządzać timeoutami i jakie mogą być konsekwencje niewłaściwych ustawień.",
-        answer:
-          `zewnętrznych zasobów, takich jak bazy danych, API lub usługi sieciowe. Zarządzanie nimi może mieć istotny wpływ na wydajność i stabilność Twojej aplikacji. Oto kilka wyjaśnień dotyczących zarządzania timeoutami i potencjalnych konsekwencji niewłaściwych ustawień:Timeout to maksymalny czas oczekiwania na odpowiedź od zewnętrznego zasobu. Jeśli odpowiedź nie zostanie otrzymana w określonym czasie, operacja jest przerywana, a może zostać wygenerowany błąd. Konsekwencje niewłaściwych ustawień timeoutów:
-          Opóźnienia w działaniu aplikacji: Zbyt długi timeout może powodować opóźnienia w działaniu aplikacji, szczególnie gdy zasób zewnętrzny nie odpowiada w oczekiwanym czasie.
-          Zwolnienie zasobów: Zbyt długi timeout może skutkować zajęciem zasobów przez operacje oczekujące na odpowiedź, co może prowadzić do wycieku pamięci lub braku dostępnych zasobów.
-          Brak reakcji: Zbyt krótki timeout może skutkować przerywaniem operacji, nawet gdy zasób zewnętrzny jest nadal aktywny, co może prowadzić do błędów i niekompletnych operacji.`,
+          "jak zarządzać timeoutami?",
+        answer: `Timeouty są używane do określenia maksymalnego czasu oczekiwania na odpowiedź od zewnętrznych zasobów, takich jak bazy danych, API czy usługi sieciowe. Zarządzanie timeoutami ma istotny wpływ na wydajność i stabilność aplikacji. Oto kilka kluczowych punktów dotyczących zarządzania timeoutami i konsekwencje niewłaściwych ustawień: Zbyt długi timeout: Aplikacja może działać wolniej, jeśli czeka za długo na odpowiedź. Może też zużywać więcej zasobów, co prowadzi do problemów z pamięcią. Zbyt krótki timeout: Może przerwać operacje, które jeszcze mogłyby się zakończyć sukcesem, co prowadzi do błędów i niekompletnych działań.`,
       },
       {
         question:
           "Na czym polega dynamiczne czekanie, jak to wiąże się z webFirstAssertions",
-        answer:
-          `Dynamiczne czekanie to strategia oczekiwania na określone zdarzenie lub stan elementu na stronie internetowej przed wykonaniem kolejnych akcji w teście automatycznym. WebFirstAssertions to podejście, które zakłada, że w testach automatycznych należy najpierw przeprowadzić asercję dotyczącą obiektu na stronie internetowej, zanim wykonamy jakiekolwiek inne akcje. Oznacza to, że przed kliknięciem, wprowadzeniem tekstu czy nawigacją po stronie, należy upewnić się, że oczekiwany element jest obecny i znajduje się w oczekiwanym stanie.`,
+        answer: `Dynamiczne czekanie to strategia oczekiwania na określone zdarzenie lub stan elementu na stronie internetowej przed wykonaniem kolejnych akcji w teście automatycznym. WebFirstAssertions to podejście, które zakłada, że w testach automatycznych należy najpierw przeprowadzić asercję dotyczącą obiektu na stronie internetowej, zanim wykonamy jakiekolwiek inne akcje. Oznacza to, że przed kliknięciem, wprowadzeniem tekstu czy nawigacją po stronie, należy upewnić się, że oczekiwany element jest obecny i znajduje się w oczekiwanym stanie.`,
       },
       {
         question:
@@ -705,8 +684,7 @@ export default {
           "Playwright umożliwia łatwe odnajdywanie elementów na stronie internetowej poprzez atrybuty data-test-id, co może ułatwić tworzenie testów automatycznych.Playwright oferuje różne metody lokalizowania elementów na stronie, co daje elastyczność w wyborze najlepszej strategii lokalizacji dla danej sytuacji.",
       },
       {
-        question:
-          "Czym jest zestaw testowy",
+        question: "Czym jest zestaw testowy",
         answer:
           "Zestaw testowy to zbiorowy termin używany w dziedzinie testowania oprogramowania, który odnosi się do kompletnego zestawu testów, procedur i danych potrzebnych do przeprowadzenia testów na określonym systemie lub aplikacji. Zestaw testowy zawiera wszystkie elementy niezbędne do przeprowadzenia testów, w tym przypadki testowe, scenariusze testowe, dane testowe, narzędzia testowe oraz wszelkie inne zasoby potrzebne do przeprowadzenia testów.",
       },
@@ -723,8 +701,7 @@ export default {
       },
       {
         question: "Opisz wzorzec wrapper pattern",
-        answer:
-          `Wzorzec Wrapper (inaczej nazywany Adapter lub Decorator) jest strukturalnym wzorcem projektowym, który pozwala na dodanie nowej funkcjonalności do istniejącego obiektu poprzez opakowanie go w nowy obiekt, który implementuje tę funkcjonalność. Ten wzorzec jest szczególnie przydatny, gdy chcemy zmodyfikować zachowanie istniejącego obiektu bez konieczności zmiany jego struktury.`,
+        answer: `Wzorzec Wrapper (inaczej nazywany Adapter lub Decorator) jest strukturalnym wzorcem projektowym, który pozwala na dodanie nowej funkcjonalności do istniejącego obiektu poprzez opakowanie go w nowy obiekt, który implementuje tę funkcjonalność. Ten wzorzec jest szczególnie przydatny, gdy chcemy zmodyfikować zachowanie istniejącego obiektu bez konieczności zmiany jego struktury.`,
       },
       {
         question: "Wyjaśnij na czym polega cykl życia błędu",
@@ -746,11 +723,6 @@ export default {
           
           Łatwość Utrzymania Kodu:
           Tworząc Model Obiektu Strony, tworzymy oddzielną warstwę dla stron, dzięki czemu możemy oddzielić metody i lokalizatory związane z daną stroną od scenariuszy testowych, które znajdują się w warstwie testowej. W ten sposób możemy utrzymywać kod związany z przepływem testowym w warstwie testowej, a cały kod związany z lokalizatorami i metodami może być utrzymywany przez warstwę Modelu Obiektu Strony.`,
-      },
-      {
-        question: `Jakie są korzyści z zastosowania metodyki testów zwanej "Behavior-Driven Development`,
-        answer:
-          "BDD integruje praktyki programowania, testowania i analizy wymagań, poprawiając komunikację między zespołem programistycznym a zespołem testowym oraz zespołem biznesowym.",
       },
       {
         question: `Jakie są trzy rodzaje testów wydajności?`,
@@ -790,13 +762,12 @@ export default {
         Pamiętaj, że powyższe kroki są ogólne, a konieczne kroki mogą się różnić w zależności od konkretnej technologii i narzędzi używanych w projekcie.`,
       },
       {
-        question: `Skąd wiemy, że aktualne zachowanie oprogramowania jest poprawne czy jest to błąd?`,
-        answer:
-          `Oczekiwania użytkownika: Jeśli zachowanie oprogramowania spełnia oczekiwania użytkownika, jest to poprawne. W przeciwnym razie może to wskazywać na błąd.
-          Wymagania funkcjonalne: Zachowanie oprogramowania powinno być zgodne z określonymi wymaganiami i specyfikacją. Niezgodność może wskazywać na błąd.
-          Normy i standardy: Oprogramowanie powinno przestrzegać odpowiednich norm i standardów. Niezgodność może wskazywać na błąd.
-          Stabilność i spójność: Poprawne oprogramowanie działa stabilnie i spójnie w różnych sytuacjach. Niż stabilność lub spójność mogą wskazywać na błąd.
-          Testowanie i weryfikacja: Oprogramowanie powinno być przetestowane i zweryfikowane przed wdrożeniem. Jeśli testy potwierdzają poprawność, jest to dobre. Być może ze względu na swoje doświadczenie i znajomość oprogramowania to tester określa co jest dobre a co nie Często w projektach agile dokumentacja jest na tyle uboga, że np. obecność na codziennych stand-upach to główne źródło wiedzy o aktualnych zmianach w oprogramowaniu.`,
+        question: `Skąd wiemy, że aktualne zachowanie oprogramowania jest poprawne?`,
+        answer: `Oczekiwania użytkownika: Jeśli oprogramowanie działa zgodnie z tym, czego oczekuje użytkownik, to znaczy, że działa poprawnie. Jeśli nie, to może być błąd.
+        Wymagania funkcjonalne: Oprogramowanie powinno spełniać wymagania i specyfikacje opisane na początku projektu. Jeśli coś się nie zgadza, to jest błąd.
+        Normy i standardy: Oprogramowanie powinno przestrzegać odpowiednich zasad i standardów. Jeśli ich nie spełnia, to jest błąd.
+        Stabilność i spójność: Poprawne oprogramowanie działa bez problemów w różnych sytuacjach. Jeśli się zawiesza lub działa inaczej w różnych momentach, to może być błąd.
+        Testowanie i weryfikacja: Przed wdrożeniem oprogramowanie powinno być dokładnie przetestowane. Testy potwierdzają, że wszystko działa poprawnie. Często testerzy, dzięki swojemu doświadczeniu, wiedzą, co jest poprawne, a co nie. W metodologii agile, gdzie dokumentacja może być skromna, codzienne spotkania zespołu są ważnym źródłem informacji o zmianach w oprogramowaniu.`,
       },
       {
         question: `Na co nalezy zwrócić uwagę przy zgłaszaniu błędu?`,

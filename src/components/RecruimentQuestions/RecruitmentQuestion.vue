@@ -23,9 +23,9 @@
             >
 
             <v-list-item-subtitle
-              class="white--text mr-md-6 ml-md-6 mt-3 text-justify text-h6 text-wrap"
+              class="white--text  mt-3 text-justify text-h6 text-wrap"
               v-show="disable"
-              style="max-height: 260px; overflow-y: auto; padding-right: 15px;"
+              style="max-height: 260px; overflow-y: auto; padding-right: 22px; padding-left: 25px"
             >
               <p
                 style="
@@ -134,7 +134,7 @@ export default {
           cybersecurity: this.cybersecurityQuestions,
           cloud: this.cloudQuestions,
           cicd: this.cicdQuestions,
-          backend: this.backendQuestions
+          backend: this.backendQuestions,
         };
 
         return questionCategories[category] || null;
@@ -153,7 +153,7 @@ export default {
 }
 
 pre {
-  background-color: black; 
+  background-color: black;
   color: white;
   padding: 10px;
   border: 1px solid #ccc;
@@ -168,6 +168,20 @@ pre code {
   font-size: 14px;
   line-height: 1.5;
   color: white;
+}
+::-webkit-scrollbar {
+  overflow: auto;
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #335682;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1f4a7f;
 }
 
 @media only screen and (max-width: 600px) {
